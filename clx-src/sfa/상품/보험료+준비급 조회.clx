@@ -321,14 +321,21 @@
       </cl:output>
       <cl:group std:sid="group-799c377d" id="grpNavi" class="breadcrumbs">
         <cl:formdata std:sid="f-data-b5509d70" row="0" col="1"/>
-        <cl:button std:sid="button-dea1fb63" class="btn-primary04 btn-md" value="이전">
-          <cl:listener std:sid="listener-d2e559d5" name="click" handler="onButtonClick"/>
-          <cl:flowlayoutdata std:sid="f-data-1f22eb5a" width="49px" height="26px" autosize="width"/>
-        </cl:button>
-        <cl:button std:sid="button-3e35a8af" class="btn-primary04 btn-md" value="다음">
-          <cl:listener std:sid="listener-ec8aa9f0" name="click" handler="onButtonClick2"/>
-          <cl:flowlayoutdata std:sid="f-data-b9172e0e" width="49px" height="26px" autosize="width"/>
-        </cl:button>
+        <cl:output std:sid="output-dbbcce1a" class="home" value="">
+          <cl:flowlayoutdata std:sid="f-data-1cd87bb6" width="20px" height="20px"/>
+        </cl:output>
+        <cl:output std:sid="output-d5e11268" class="breadcrumb-item" value="1Depth">
+          <cl:flowlayoutdata std:sid="f-data-3beb2f65" width="45px" height="17px" autosize="width"/>
+        </cl:output>
+        <cl:output std:sid="output-6e79a920" class="breadcrumb-item" value="2Depth">
+          <cl:flowlayoutdata std:sid="f-data-e5e89842" width="45px" height="17px" autosize="width"/>
+        </cl:output>
+        <cl:output std:sid="output-a3f90a9b" class="breadcrumb-item" value="3Depth">
+          <cl:flowlayoutdata std:sid="f-data-81618497" width="45px" height="17px" autosize="width"/>
+        </cl:output>
+        <cl:output std:sid="output-6a18b375" class="breadcrumb-item" value="4Depth">
+          <cl:flowlayoutdata std:sid="f-data-94258ced" width="45px" height="17px" autosize="width"/>
+        </cl:output>
         <cl:flowlayout std:sid="f-layout-ce38801e" scrollable="false" hspacing="5" vspacing="0" halign="right" valign="middle" linewrap="false"/>
       </cl:group>
       <cl:formlayout std:sid="f-layout-2de29e5a" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">

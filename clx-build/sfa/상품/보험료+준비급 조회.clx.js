@@ -78,16 +78,16 @@
 					{"name": "column25"}
 				],
 				"rows": [
-					{"column1": "I15153", "column2": "15", "column3": "1", "column4": "10", "column5": "15", "column6": "0", "column7": "0", "column8": "0", "column9": "0", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "1", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0"},
-					{"column1": "I15153", "column2": "15", "column3": "1", "column4": "10", "column5": "15", "column6": "0", "column7": "0", "column8": "0", "column9": "0", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "1", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0"},
-					{"column1": "I15153", "column2": "15", "column3": "1", "column4": "10", "column5": "15", "column6": "0", "column7": "0", "column8": "0", "column9": "0", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "1", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0"},
-					{"column1": "I15153", "column2": "15", "column3": "1", "column4": "10", "column5": "15", "column6": "0", "column7": "0", "column8": "0", "column9": "0", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "1", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0"},
-					{"column1": "I15153", "column2": "15", "column3": "1", "column4": "10", "column5": "15", "column6": "0", "column7": "0", "column8": "0", "column9": "0", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "1", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0"},
-					{"column1": "I15153", "column2": "15", "column3": "1", "column4": "10", "column5": "15", "column6": "0", "column7": "0", "column8": "0", "column9": "0", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "1", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0"},
-					{"column1": "I15153", "column2": "15", "column3": "1", "column4": "10", "column5": "15", "column6": "0", "column7": "0", "column8": "0", "column9": "0", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "1", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0"},
-					{"column1": "I15153", "column2": "15", "column3": "1", "column4": "10", "column5": "15", "column6": "0", "column7": "0", "column8": "0", "column9": "0", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "1", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0"},
-					{"column1": "I15153", "column2": "15", "column3": "1", "column4": "10", "column5": "15", "column6": "0", "column7": "0", "column8": "0", "column9": "0", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "1", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0"},
-					{"column1": "I15153", "column2": "15", "column3": "1", "column4": "10", "column5": "15", "column6": "0", "column7": "0", "column8": "0", "column9": "0", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "1", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0"}
+					{"column1": "I15153", "column2": "20년만기", "column3": "월납", "column4": "10년납", "column5": "15", "column6": "0", "column7": "0", "column8": "0", "column9": "비위험", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "1", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0"},
+					{"column1": "I15153", "column2": "60세만기", "column3": "월납", "column4": "10년납", "column5": "15", "column6": "0", "column7": "0", "column8": "0", "column9": "비위험", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "1", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0"},
+					{"column1": "I15153", "column2": "80세만기", "column3": "월납", "column4": "전기납", "column5": "15", "column6": "0", "column7": "0", "column8": "0", "column9": "비위험", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "1", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0"},
+					{"column1": "I15153", "column2": "20년만기", "column3": "월납", "column4": "20년납", "column5": "15", "column6": "0", "column7": "0", "column8": "0", "column9": "비위험", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "1", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0"},
+					{"column1": "I15153", "column2": "20년만기", "column3": "월납", "column4": "10년납", "column5": "15", "column6": "0", "column7": "0", "column8": "0", "column9": "비위험", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "1", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0"},
+					{"column1": "I15153", "column2": "80세만기", "column3": "월납", "column4": "20년납", "column5": "15", "column6": "0", "column7": "0", "column8": "0", "column9": "비위험", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "1", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0"},
+					{"column1": "I15153", "column2": "20년만기", "column3": "월납", "column4": "전기납", "column5": "15", "column6": "0", "column7": "0", "column8": "0", "column9": "비위험", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "1", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0"},
+					{"column1": "I15153", "column2": "60세만기", "column3": "월납", "column4": "전기납", "column5": "15", "column6": "0", "column7": "0", "column8": "0", "column9": "비위험", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "1", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0"},
+					{"column1": "I15153", "column2": "20년만기", "column3": "월납", "column4": "10년납", "column5": "15", "column6": "0", "column7": "0", "column8": "0", "column9": "비위험", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "1", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0"},
+					{"column1": "I15153", "column2": "60세만기", "column3": "월납", "column4": "20년납", "column5": "15", "column6": "0", "column7": "0", "column8": "0", "column9": "비위험", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "1", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0"}
 				]
 			});
 			app.register(dataSet_1);
@@ -216,10 +216,26 @@
 						output_2.style.setClasses(["label"]);
 						container.addChild(output_2, {
 							"colIndex": 0,
-							"rowIndex": 0
+							"rowIndex": 0,
+							"colSpan": 1,
+							"rowSpan": 1
 						});
 						var searchInput_1 = new cpr.controls.SearchInput();
 						searchInput_1.value = "15153";
+						searchInput_1.style.css({
+							"border-right-style" : "dashed",
+							"border-top-width" : "3px",
+							"border-bottom-color" : "red",
+							"border-left-style" : "dashed",
+							"border-right-width" : "3px",
+							"border-bottom-width" : "3px",
+							"border-left-color" : "red",
+							"border-top-color" : "red",
+							"border-bottom-style" : "dashed",
+							"border-right-color" : "red",
+							"border-left-width" : "3px",
+							"border-top-style" : "dashed"
+						});
 						container.addChild(searchInput_1, {
 							"colIndex": 1,
 							"rowIndex": 0
