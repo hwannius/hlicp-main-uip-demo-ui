@@ -1,0 +1,422 @@
+@import "../custom-settings.part.less";
+
+/************************************************
+ * 버튼 유틸
+ ************************************************/
+
+.cl-button.btn-sm {
+	font-size: 11px;
+	font-weight: @font-weight-medium;
+}
+
+.cl-button.btn-md {
+	font-size: @font-size-base;
+	font-weight: @font-weight-medium;
+}
+
+.cl-button.btn-lg {
+	font-size: @font-size-md;
+	font-weight: @font-weight-medium;
+	padding: 0px 12px;
+}
+
+.cl-button.btn-p-0 {
+	padding: 0px;
+}
+
+.cl-button.btn-p-sm {
+	padding: 0px 5px;
+}
+
+.cl-button.btn-transparent {
+	background-color: @transparent;
+	border: none;
+	border-radius: @component-border-radius-0;
+	padding: 0px;
+	
+	&:not(.cl-disabled):hover {
+ 		background-color: @transparent;
+ 	}
+ 	
+ 	&:focus,
+ 	&.cl-focus {
+ 		background-color: @transparent;
+ 	}
+ 	
+ 	&:not(.cl-disabled).cl-activated,
+ 	&:not(.cl-disabled):active {
+ 		background-color: @transparent;
+ 	}
+}
+
+/************************************************
+ * 기본 버튼
+ ************************************************/
+
+.cl-button.btn-primary01 {
+	background-color: #f01e92;
+	border-color: #f01e92;
+	color: @white;
+	
+	&:not(.cl-disabled):hover,
+	&:focus, &.cl-focus {
+		background-color: #f562b3;
+		border-color: #f562b3;
+		color: @white;
+	}
+
+	&:not(.cl-disabled).cl-activated, &:not(.cl-disabled):active {
+		background-color: #d81b83;
+		border-color: #d81b83;
+		color: @white;
+	}
+	
+	&.cl-disabled {
+		background-color: @btn-disabled-background-color;
+		border-color: @btn-disabled-border-color;
+		color: @btn-disabled-text-color;
+	}
+}
+
+.cl-button.btn-primary02 {
+	background-color: #50a2d1;
+	border-color: #50a2d1;
+	color: @white;
+	
+	&:not(.cl-disabled):hover,
+	&:focus, &.cl-focus {
+		background-color: #85bedf;
+		border-color: #85bedf;
+		color: @white;
+	}
+
+	&:not(.cl-disabled).cl-activated, &:not(.cl-disabled):active {
+		background-color: #4892bc;
+		border-color: #4892bc;
+		color: @white;
+	}
+	
+	&.cl-disabled {
+		background-color: @btn-disabled-background-color;
+		border-color: @btn-disabled-border-color;
+		color: @btn-disabled-text-color;
+	}
+}
+
+.cl-button.btn-primary03 {
+	background-color: @indigo;
+	border-color: @indigo;
+	color: @white;
+	
+	&:not(.cl-disabled):hover,
+	&:focus, &.cl-focus {
+		background-color: #6e738b;
+		border-color: #6e738b;
+		color: @white;
+	}
+
+	&:not(.cl-disabled).cl-activated, &:not(.cl-disabled):active {
+		background-color: #2a3150;
+		border-color: #2a3150;
+		color: @white;
+	}
+	
+	&.cl-disabled {
+		background-color: @btn-disabled-background-color;
+		border-color: @btn-disabled-border-color;
+		color: @btn-disabled-text-color;
+	}
+}
+
+.cl-button.btn-primary04 {
+	background-color: #7e85c1;
+	border-color: #7e85c1;
+	color: @white;
+	
+	&:not(.cl-disabled):hover,
+	&:focus, &.cl-focus {
+		background-color: #aeb2da;
+		border-color: #aeb2da;
+		color: @white;
+	}
+
+	&:not(.cl-disabled).cl-activated, &:not(.cl-disabled):active {
+		background-color: #7d82b5;
+		border-color: #7d82b5;
+		color: @white;
+	}
+	
+	&.cl-disabled {
+		background-color: @btn-disabled-background-color;
+		border-color: @btn-disabled-border-color;
+		color: @btn-disabled-text-color;
+	}
+}
+
+/************************************************
+ * 라인 버튼
+ ************************************************/
+ 
+.cl-button.btn-secondary01 {
+	background-color: @transparent;
+	border-color: #8b91ca;
+	color: #8b91ca;
+	
+	&:not(.cl-disabled):hover,
+	&:focus, &.cl-focus {
+		background-color: @transparent;
+		border-color: #aeb2da;
+		color: #8b91ca;
+	}
+
+	&:not(.cl-disabled).cl-activated, &:not(.cl-disabled):active {
+		background-color: rgba(0, 0, 0, 0.1);
+		border-color: #7d82b5;
+		color: #8b91ca;
+	}
+	
+	&.cl-disabled {
+		background-color: @transparent; //@btn-disabled-background-color;
+		border-color: @btn-disabled-border-color;
+		color: @gray-400; //@btn-disabled-text-color;
+	}
+}
+
+// 배경이 어두운 경우 사용하는 라인 버튼
+.cl-button.btn-secondary02 {
+	background-color: @transparent;
+	border-color: @gray-400;
+	color: @gray-400;
+	
+	&:not(.cl-disabled):hover,
+	&:focus, &.cl-focus {
+		background-color: rgba(255, 255, 255, 0.3);
+		border-color: #dddddd;
+		color: @gray-400;
+	}
+
+	&:not(.cl-disabled).cl-activated, &:not(.cl-disabled):active {
+		background-color: rgba(0, 0, 0, 0.1);
+		border-color: #b9b9b9;
+		color: @gray-400;
+	}
+	
+	&.cl-disabled {
+		background-color: @transparent; //@btn-disabled-background-color;
+		border-color: @btn-disabled-border-color;
+		color: @gray-400; //@btn-disabled-text-color;
+	}
+}
+
+/************************************************
+ * 아이콘 버튼
+ ************************************************/
+
+.cl-button.btn-search {
+	background-image: url("../images/controls/button/research-w-12.png");
+	background-position: 6px center;
+	background-color: @indigo;
+	border-color: @indigo;
+	color: @white;
+	padding-left: 21px;
+	padding-right: 6px;
+	
+	&:not(.cl-disabled):hover,
+	&:focus, &.cl-focus {
+		background-color: #6e738b;
+		border-color: #6e738b;
+		color: @white;
+	}
+
+	&:not(.cl-disabled).cl-activated, &:not(.cl-disabled):active {
+		background-image: url("../images/controls/button/research-w-12.png");
+		background-color: #2a3150;
+		border-color: #2a3150;
+		color: @white;
+	}
+	
+	&.cl-disabled {
+		background-color: @btn-disabled-background-color;
+		border-color: @btn-disabled-border-color;
+		color: @btn-disabled-text-color;
+	}
+	
+	&.center {
+		background-position: center;
+		padding: 0;
+	}
+}
+
+.cl-button.btn-reset {
+	background-image: url("../images/controls/button/ico-comm-refresh-14.png");
+	background-color: #7e85c1;
+	border-color: #7e85c1;
+	color: @white;
+	padding: 0px;
+	
+	&:not(.cl-disabled):hover,
+	&:focus, &.cl-focus {
+		background-color: #aeb2da;
+		border-color: #aeb2da;
+		color: @white;
+	}
+
+	&:not(.cl-disabled).cl-activated, &:not(.cl-disabled):active {
+		background-image: url("../images/controls/button/ico-comm-refresh-14.png");
+		background-color: #7d82b5;
+		border-color: #7d82b5;
+		color: @white;
+	}
+	
+	&.cl-disabled {
+		background-color: @btn-disabled-background-color;
+		border-color: @btn-disabled-border-color;
+		color: @btn-disabled-text-color;
+	}
+}
+
+.cl-button.btn-collapse {
+	background-image: url("../images/controls/button/ico-lnb-01-arrow-down-12.png");
+	background-color: #7e85c1;
+	border-color: #7e85c1;
+	color: @white;
+	padding: 0px;
+	
+	&.reverse {
+		transform: rotate(180deg);
+	}
+	
+	&:not(.cl-disabled):hover,
+	&:focus, &.cl-focus {
+		background-color: #aeb2da;
+		border-color: #aeb2da;
+		color: @white;
+	}
+
+	&:not(.cl-disabled).cl-activated, &:not(.cl-disabled):active {
+		background-image: url("../images/controls/button/ico-lnb-01-arrow-down-12.png");
+		background-color: #7d82b5;
+		border-color: #7d82b5;
+		color: @white;
+	}
+	
+	&.cl-disabled {
+		background-color: @btn-disabled-background-color;
+		border-color: @btn-disabled-border-color;
+		color: @btn-disabled-text-color;
+	}
+}
+
+.cl-button.btn-more {
+	background-image: url("../images/controls/button/ico-comm-down-01-arrow-8.png");
+	background-position: calc(50% + 22px) center;
+	background-color: #eff0f5;
+	border: none;
+	color: @component-text-color;
+	padding: 0px;
+	
+	&.close {
+		background-image: url("../images/controls/button/ico-comm-up-01-arrow-8.png");
+	
+		&:not(.cl-disabled).cl-activated, &:not(.cl-disabled):active {
+			background-image: url("../images/controls/button/ico-comm-up-01-arrow-8.png");
+		}
+	}
+	
+	&:not(.cl-disabled):hover,
+	&:focus, &.cl-focus {
+		background-color: #eff0f5;
+		color: @component-text-color;
+	}
+
+	&:not(.cl-disabled).cl-activated, &:not(.cl-disabled):active {
+		background-image: url("../images/controls/button/ico-comm-down-01-arrow-8.png");
+		background-color: #eff0f5;
+		color: @component-text-color;
+	}
+	
+	&.cl-disabled {
+		background-color: @btn-disabled-background-color;
+		border-color: @btn-disabled-border-color;
+		color: @btn-disabled-text-color;
+	}
+}
+
+/************************************************
+ * 하이퍼링크 버튼
+ ************************************************/
+ 
+.cl-button.btn-hyper-text {
+	background-color: @transparent;
+	border: none;
+	border-radius: @component-border-radius-0;
+	color: @component-text-color;
+	padding: 0px !important;
+	text-decoration: underline;
+	
+	&:not(.cl-disabled):hover,
+ 	&:focus,
+ 	&.cl-focus,
+ 	&:not(.cl-disabled).cl-activated,
+ 	&:not(.cl-disabled):active {
+ 		background-color: @transparent;
+		color: @component-text-color;
+ 	}
+ 	
+ 	&.btn-fs-sm {
+ 		font-size: 11px;
+ 	}
+ 	
+ 	&.btn-fs-md {
+ 		font-size: 13px;
+ 	}
+}
+
+/************************************************
+ * 기타 버튼
+ ************************************************/
+
+.cl-button.btn-dim {
+	background-color: @primary-dim;
+	border: none;
+	border-radius: @border-radius-circle;
+	color: @component-text-color;
+	padding: 0px 20px;
+	
+	&:not(.cl-disabled):hover,
+	&:focus, &.cl-focus {
+		background-color: @primary-dim;
+		color: @component-text-color;
+	}
+
+	&:not(.cl-disabled).cl-activated, &:not(.cl-disabled):active {
+		background-color: @primary-dim;
+		color: @component-text-color;
+	}
+	
+	&.cl-disabled {
+		background-color: @btn-disabled-background-color;
+		color: @btn-disabled-text-color;
+	}
+}
+
+/************************************************
+ * 버튼 그룹
+ ************************************************/
+ 
+.cl-container.button-table-area {
+	//Table 하단 좌측 버튼 영역
+	.button-table-bottom-left-area {
+	}
+	//Table 하단 중앙 버튼 영역
+	.button-table-bottom-center-area {
+		padding: 0px 20px;
+	}
+	//Table 하단 우측 버튼 영역
+	.button-table-bottom-right-area {
+	}
+}
+ 
+.cl-container.button-float-area {
+	background-color: #eae8eb;
+}

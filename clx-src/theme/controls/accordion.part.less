@@ -1,0 +1,95 @@
+@import "../custom-settings.part.less";
+
+/* 아코디언 */
+.cl-accordion {
+	font: @font-base;
+	background-color: #fff;
+	border: none;
+	color: @component-text-color;
+	padding: 0px;
+	
+	/** 아코디언의 각 헤더 */
+	.cl-accordion-header {
+		background-color: #5d6881;
+		border: none;
+		border-radius: @component-border-radius-0;
+		color: @white;
+		font-size: @h2-font-size;
+		font-weight: @font-weight-bold;
+		height: 40px;
+		padding: 10px;
+
+		&.cl-title-collapse:focus {
+			text-decoration: none;
+		}
+
+		/** 아코디언 펼침 버튼 */
+		.cl-accordion-expander {
+			background-image: url("../images/controls/accordion/union-41.png");
+			background-size: auto;
+			width: 13px;
+		}
+
+		/* 아코디언 헤더에 마우스가 호버되었을 떄의 스타일 */
+		&:hover:not(.cl-disabled){			
+			background-color: #5d6881;			
+		}
+
+		&.cl-disabled {
+			background-color: @component-disabled-background-color;
+			border-color: @component-disabled-border-color;
+			color: @component-disabled-text-color;
+		}
+		/* 아코디언 헤더를 클릭했을 때의 스타일 */
+		&.cl-activated {
+			background-color: #5d6881;
+			color: @white;
+			
+			/* 클릭된 헤더의 펼침 버튼 아이콘 */
+			.cl-accordion-expander{
+				background-image: url("../images/controls/accordion/union-17.png");
+			}
+		}
+	}
+
+	.cl-accordion-section:not(.cl-accordion-placeholder) {
+		/* 아코디언 컨텐츠 */
+		.cl-accordion-content {
+			border: none;
+			> .cl-container {
+				border: solid 1px #5d6881;
+			}
+		}
+	}
+
+	.cl-accordion-section+.cl-accordion-header {
+		/* 아코디언 섹션간의 간격 */
+		margin-top: 1px;
+		
+		&.cl-first{
+			// margin-top: 0px;
+		}
+	}	
+}
+ 
+/* Disabled 상태의 아코디언 */
+.cl-accordion.cl-disabled {
+	/* 선택된 헤더 */
+	.cl-accordion-header {
+		&.cl-activated {
+			background-color: @component-disabled-selected-background-color;
+			color: @component-disabled-selected-text-color;
+		}
+		
+		&:hover {
+			// background-color: #F2F4F5;
+		}
+	}
+
+	.cl-accordion-section:not(.cl-accordion-placeholder) {
+		/* 선택된 바디 */
+		.cl-accordion-content {
+			border-color: @component-disabled-border-color;
+		}
+	}
+}

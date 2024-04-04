@@ -1,0 +1,87 @@
+@import "../custom-settings.part.less";
+
+/************************************************
+ * 캡션
+ * --> 설명 문구
+ ************************************************/
+
+.cl-output.caption {
+	color: @gray-700;
+	font-size: @h5-font-size;
+}
+
+.cl-output.info-caption {
+	color: @teal;
+	font-size: @h5-font-size;
+}
+
+/************************************************
+ * 링크성 아웃풋
+ ************************************************/
+ 
+.cl-output.hyper-text {
+	color : @black;
+	text-decoration : underline;
+	cursor : pointer;
+}
+
+.cl-output.text-link {
+	cursor : pointer;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+
+/************************************************
+ * 불릿 텍스트
+ ************************************************/
+ 
+.cl-output.blt-txt {
+	padding-left: 7px;
+	
+	.cl-text {
+		padding: 0px !important;
+	}
+	
+	&:before {
+		content: "";
+		position: absolute;
+		width: 2px;
+		height: 2px;
+		left: 0px;
+		top: 6px;
+		background-color: @black;
+		border-radius: @border-radius-circle;
+	}
+}
+
+
+/************************************************
+ * 그리드 및 폼 타이틀
+ ************************************************/
+ 
+.cl-output.grid-title {
+	color: @headings-text-color;
+	font-size: 13px;
+	font-weight: @font-weight-bold;
+}
+
+.cl-output.form-title {
+	color: @headings-text-color;
+	font-size: 13px;
+	font-weight: @font-weight-bold;
+}
+
+/************************************************
+ * 섹션 제목
+ ************************************************/
+ 
+.cl-output.docs-tit {
+	background-color: @secondary-dim;
+	border: 1px solid @gray-500;
+	font-size: 13px;
+	font-weight: @font-weight-bold;
+	text-align: center;
+}

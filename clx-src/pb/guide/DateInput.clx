@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-e5e93fcf" version="1.0.3918">
+  <head std:sid="head-f02fe831">
+    <screen std:sid="screen-8280dfa7" id="default" name="default" minwidth="1644px" width="1644px" height="903px"/>
+    <screen std:sid="screen-985873a3" id="tablet" name="tablet" maxwidth="1643px" width="1541px" height="903px"/>
+    <cl:model std:sid="model-75350161"/>
+    <cl:appspec title="[디자인가이드] 데이트 인풋"/>
+  </head>
+  <body std:sid="body-b2facdbb" class="pb-body">
+    <cl:group std:sid="group-b655417b" class="pb-content">
+      <cl:verticaldata std:sid="v-data-b31424d6" width="1644px" height="242px" autosize="height"/>
+      <cl:udc std:sid="ud-control-27c2a286" type="udc.hk.pb.Breadcrumbs">
+        <cl:verticaldata std:sid="v-data-d3766577" width="1544px" height="174px" autosize="height"/>
+      </cl:udc>
+      <cl:output std:sid="output-75a1799d" class="text-red" value="※ 기타 지시문 작성">
+        <cl:verticaldata std:sid="v-data-c42713a6" width="100px" height="20px" syncminheight="true" autosize="height"/>
+      </cl:output>
+      <cl:verticallayout std:sid="v-layout-30aa5659" scrollable="false" spacing="20" leftmargin="50" rightmargin="50" topmargin="0" bottommargin="20"/>
+    </cl:group>
+    <cl:group std:sid="group-110042a3" class="pb-content">
+      <cl:verticaldata std:sid="v-data-9180b520" width="1644px" height="931px" autosize="height"/>
+      <cl:group std:sid="group-694ca9c8">
+        <cl:verticaldata std:sid="v-data-31e11d2b" width="1544px" height="170px" autosize="height"/>
+        <cl:udc std:sid="ud-control-5fef28af" type="udc.hk.pb.SectionTitle">
+          <cl:verticaldata std:sid="v-data-e284631d" width="1544px" height="29px"/>
+          <cl:property name="title" value="데이트인풋" type="string"/>
+        </cl:udc>
+        <cl:group std:sid="group-d8efb203" class="pb-form">
+          <cl:verticaldata std:sid="v-data-8f834020" width="400px" height="115px" autosize="height"/>
+          <cl:output std:sid="output-4b15ac47" class="label" value="Inactive">
+            <cl:formdata std:sid="f-data-8c446361" row="0" col="0"/>
+          </cl:output>
+          <cl:dateinput std:sid="d-input-05ee492b">
+            <cl:formdata std:sid="f-data-5a907b9e" halign="FILL" width="140" row="0" col="1"/>
+          </cl:dateinput>
+          <cl:output std:sid="output-ab87a618" class="label" value="Focused">
+            <cl:formdata std:sid="f-data-58e96735" row="0" col="2"/>
+          </cl:output>
+          <cl:dateinput std:sid="d-input-c58d884f" class="cl-focus">
+            <cl:formdata std:sid="f-data-bb14f3db" halign="FILL" width="140" row="0" col="3"/>
+          </cl:dateinput>
+          <cl:output std:sid="output-6d78ff85" class="label" value="Disabled">
+            <cl:formdata std:sid="f-data-cdcc4d73" row="0" col="4"/>
+          </cl:output>
+          <cl:dateinput std:sid="d-input-d4f13556" enabled="false">
+            <cl:formdata std:sid="f-data-966479ac" halign="FILL" width="140" row="0" col="5"/>
+          </cl:dateinput>
+          <cl:formlayout std:sid="f-layout-f39be684" scrollable="false" hspace="8px" vspace="10px" top-margin="26px" right-margin="0px" bottom-margin="26px" left-margin="0px">
+            <cl:rows length="26" unit="PIXEL" autoSizing="false" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="68" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="59" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="58" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-816480d1" scrollable="false" spacing="14"/>
+      </cl:group>
+      <cl:group std:sid="group-1c24c0db">
+        <cl:verticaldata std:sid="v-data-555b309b" width="1544px" height="588px" autosize="height"/>
+        <cl:udc std:sid="ud-control-d67fed68" type="udc.hk.pb.SectionTitle">
+          <cl:verticaldata std:sid="v-data-55f62aa9" width="1544px" height="29px" autosize="none"/>
+          <cl:property name="title" value="기본속성" type="string"/>
+          <cl:property name="subText" value="● = 사용 / ○ = 미사용 / △ = 상황에 따라 사용 / ★ = 필수로 작성" type="string"/>
+          <cl:property name="subTextStyle" value="text-red" type="enumeration"/>
+        </cl:udc>
+        <cl:group std:sid="group-bedd990d" class="pb-table">
+          <cl:verticaldata std:sid="v-data-2e6e8d4c" width="400px" height="446px" autosize="height"/>
+          <cl:output std:sid="output-320c8d70" class="pb-label" value="속성명">
+            <cl:formdata std:sid="f-data-1338aeee" row="0" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-33b27228" class="pb-label" value="사용여부">
+            <cl:formdata std:sid="f-data-39ff7db1" row="0" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-f0eb8307" class="pb-label" value="적용값">
+            <cl:formdata std:sid="f-data-ace6223d" row="0" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-cd4281cf" class="pb-label" value="내용">
+            <cl:formdata std:sid="f-data-f62ab68c" row="0" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-fe39a97e" class="pb-label" value="buttonFocusable" unselectable="false">
+            <cl:formdata std:sid="f-data-a5011ccb" row="1" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-9bb507d7" class="text-center" value="△">
+            <cl:formdata std:sid="f-data-de971aa0" row="1" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-6de6e61c" class="text-center" value="(개발 공통에 따름)">
+            <cl:formdata std:sid="f-data-edb14204" row="1" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-6bac81bf" value="버튼의 포커스 동작 여부 설정">
+            <cl:formdata std:sid="f-data-0cdbc0c1" row="1" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-c89867e4" class="pb-label" value="buttonPosition" unselectable="false">
+            <cl:formdata std:sid="f-data-99567d1c" row="2" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-3436c187" class="text-center" value="●">
+            <cl:formdata std:sid="f-data-234f8459" row="2" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-8829afba" class="text-center" value="&quot;right&quot;">
+            <cl:formdata std:sid="f-data-15e23253" row="2" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-e2158fe5" value="데이트 인풋의 버튼을 오른쪽에 표시">
+            <cl:formdata std:sid="f-data-ed36e740" row="2" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-49d321ac" class="pb-label" value="calendarType" unselectable="false">
+            <cl:formdata std:sid="f-data-f151b783" row="3" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-a6d9b15c" class="text-center" value="●">
+            <cl:formdata std:sid="f-data-6febbb01" row="3" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-074e92b6" class="text-center" value="&quot;yearmonthdate&quot; | &quot;yearmonth&quot; | &quot;year&quot;">
+            <cl:formdata std:sid="f-data-f441f434" row="3" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-44b41e39" value="캘린더 날짜 형식">
+            <cl:formdata std:sid="f-data-953f09ce" row="3" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-90bf151d" class="pb-label" value="fieldLabel" unselectable="false">
+            <cl:formdata std:sid="f-data-bf4d6266" row="4" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-369274d4" class="text-center" value="★">
+            <cl:formdata std:sid="f-data-bfbb6cf3" row="4" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-75a637d1" class="text-center" value="(논리적 레이블 값)">
+            <cl:formdata std:sid="f-data-ad65904f" row="4" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-b50def24" value="폼인 경우 1:1로 대응하는 레이블(라벨)의 값을 입력하거나 컨트롤에서 입력되는 값의 논리적인 레이블(라벨)의 값을 입력">
+            <cl:formdata std:sid="f-data-81921255" row="4" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-b84eeb79" class="pb-label" value="footerVisible" unselectable="false">
+            <cl:formdata std:sid="f-data-6f0b7661" row="5" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-1fa0a465" class="text-center" value="○">
+            <cl:formdata std:sid="f-data-aa99253b" row="5" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-9b05816e" class="text-center" value="false">
+            <cl:formdata std:sid="f-data-f3a17cd5" row="5" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-1a4494f0" value="오늘 날짜를 표시하는 캘린더 푸터를 사용하지 않음">
+            <cl:formdata std:sid="f-data-3b85b339" row="5" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-51ecf4a4" class="pb-label" value="format" unselectable="false">
+            <cl:formdata std:sid="f-data-1774bd7c" row="6" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-7be3b62d" class="text-center" value="●">
+            <cl:formdata std:sid="f-data-7af38fb7" row="6" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-d6834011" class="text-center" value="(개발공통에 따름)">
+            <cl:formdata std:sid="f-data-46b91402" row="6" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-0d532326" value="값을 저장하는 포맷 형식">
+            <cl:formdata std:sid="f-data-2d9943de" row="6" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-28761d16" class="pb-label" value="headerButtons" unselectable="false">
+            <cl:formdata std:sid="f-data-fa2c045e" row="7" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-38deb975" class="text-center" value="●">
+            <cl:formdata std:sid="f-data-cf629413" row="7" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-27adda12" class="text-center" value="[&quot;prevYear&quot;, &quot;prev&quot;, &quot;title&quot;, &quot;next&quot;, &quot;nextYear&quot;]">
+            <cl:formdata std:sid="f-data-171bab07" row="7" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-9e3357bc" value="클리어 버튼 사용하지 않음">
+            <cl:formdata std:sid="f-data-94bbb922" row="7" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-c28b99e4" class="pb-label" value="hideButton" unselectable="false">
+            <cl:formdata std:sid="f-data-bad4d3bf" row="8" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-0950cdb6" class="text-center" value="△">
+            <cl:formdata std:sid="f-data-769ad05a" row="8" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-835304b5" class="text-center" value="true | false">
+            <cl:formdata std:sid="f-data-101efaa9" row="8" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-da83987a" value="경우에 따라 데이트 인풋 버튼을 표시하지 않아도 되는 경우 설정">
+            <cl:formdata std:sid="f-data-181862a0" row="8" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-ed423b44" class="pb-label" value="mask" unselectable="false">
+            <cl:formdata std:sid="f-data-00625ac6" row="9" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-f742e6f8" class="text-center" value="●">
+            <cl:formdata std:sid="f-data-bbf7b4d7" row="9" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-97ab1a27" class="text-center" value="(개발공통에 따름)">
+            <cl:formdata std:sid="f-data-534990d8" row="9" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-b3fcf5a5" value="입력 받을 날짜 형식">
+            <cl:formdata std:sid="f-data-080ac785" row="9" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-b4001323" class="pb-label" value="showClearButton" unselectable="false">
+            <cl:formdata std:sid="f-data-e0fc5470" row="10" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-4ce78463" class="text-center" value="○">
+            <cl:formdata std:sid="f-data-7fb8a100" row="10" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-2f41d053" class="text-center" value="false">
+            <cl:formdata std:sid="f-data-aadfef72" row="10" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-77106621" value="값을 초기화하는 버튼 표시 여부">
+            <cl:formdata std:sid="f-data-efecda5c" row="10" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-08031371" class="pb-label" value="spinButton" unselectable="false">
+            <cl:formdata std:sid="f-data-1460cdbf" row="11" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-4d87eaea" class="text-center" value="△">
+            <cl:formdata std:sid="f-data-b007b2b9" row="11" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-f1cb7b5d" class="text-center" value="true | false">
+            <cl:formdata std:sid="f-data-41dadbd3" row="11" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-e90ab565" value="날짜를 조작하는 스핀 버튼 표시 여부">
+            <cl:formdata std:sid="f-data-7e557e13" row="11" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-16382fbb" class="pb-label" value="tooltip" unselectable="false">
+            <cl:formdata std:sid="f-data-614165d4" row="12" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-97ab53e3" class="text-center" value="△">
+            <cl:formdata std:sid="f-data-1c2e7796" row="12" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-d723d75e" class="text-center" value="(컨트롤의 힌트값)">
+            <cl:formdata std:sid="f-data-c510711d" row="12" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-ab56ca87" value="마우스 오버 시 인풋박스에 대한 힌트 제공 필요할 때 사용. 해당 속성을 작성하면 title 속성으로 적용됨">
+            <cl:formdata std:sid="f-data-d04b392a" row="12" col="3"/>
+          </cl:output>
+          <cl:formlayout std:sid="f-layout-a8d12b64" scrollable="false" hspace="8px" vspace="8px" top-margin="4px" right-margin="4px" bottom-margin="4px" left-margin="4px" hseparatorwidth="1" hseparatortype="BY_CLASS" vseparatorwidth="1" vseparatortype="BY_CLASS">
+            <cl:rows length="28" unit="PIXEL" autoSizing="false" hidden="false" shadetype="BY_CLASS" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="150" unit="PIXEL" autoSizing="false" hidden="false" shadetype="BY_CLASS" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="60" unit="PIXEL" autoSizing="false" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="280" unit="PIXEL" autoSizing="false" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-c1dfc9fb" scrollable="false" spacing="14"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-a1c44b73" scrollable="false" spacing="40" leftmargin="50" rightmargin="50" topmargin="50" bottommargin="50"/>
+    </cl:group>
+    <cl:group std:sid="group-7cb234c2" class="pb-content">
+      <cl:verticaldata std:sid="v-data-df3f07b1" width="1644px" height="244px" autosize="height"/>
+      <cl:group std:sid="group-f6178776">
+        <cl:verticaldata std:sid="v-data-49f0c3b4" width="1544px" height="153px" autosize="height"/>
+        <cl:udc std:sid="ud-control-117da149" type="udc.hk.pb.SectionTitle">
+          <cl:verticaldata std:sid="v-data-d8325add" width="1544px" height="29px" autosize="none"/>
+          <cl:property name="title" value="클래스" type="string"/>
+        </cl:udc>
+        <cl:group std:sid="group-918ea678" class="pb-table">
+          <cl:verticaldata std:sid="v-data-93783db2" width="400px" height="106px" autosize="height"/>
+          <cl:output std:sid="output-a1971fb5" class="pb-label" value="클래스명">
+            <cl:formdata std:sid="f-data-c17a0936" row="0" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-a24898b0" class="pb-label" value="적용">
+            <cl:formdata std:sid="f-data-ea1720c0" row="0" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-cef8f656" class="pb-label" value="내용">
+            <cl:formdata std:sid="f-data-f9992e14" row="0" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-c2f05b3a" class="pb-label" value="" unselectable="false">
+            <cl:formdata std:sid="f-data-bb6e4a24" row="1" col="0"/>
+          </cl:output>
+          <cl:dateinput std:sid="d-input-159160f2">
+            <cl:formdata std:sid="f-data-a93facc2" halign="FILL" width="120" row="1" col="1"/>
+          </cl:dateinput>
+          <cl:output std:sid="output-6d9159fb">
+            <cl:formdata std:sid="f-data-f2f1a39e" row="1" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-cdced74d" class="pb-label" value="" unselectable="false">
+            <cl:formdata std:sid="f-data-ed1472b4" row="2" col="0"/>
+          </cl:output>
+          <cl:dateinput std:sid="d-input-4bf3a3fb">
+            <cl:formdata std:sid="f-data-f3633cf6" halign="FILL" width="120" row="2" col="1"/>
+          </cl:dateinput>
+          <cl:output std:sid="output-caf15d48">
+            <cl:formdata std:sid="f-data-d955e345" row="2" col="2"/>
+          </cl:output>
+          <cl:formlayout std:sid="f-layout-4cd845f8" scrollable="false" hspace="8px" vspace="8px" top-margin="4px" right-margin="4px" bottom-margin="4px" left-margin="4px" hseparatorwidth="1" hseparatortype="BY_CLASS" vseparatorwidth="1" vseparatortype="BY_CLASS">
+            <cl:rows length="28" unit="PIXEL" autoSizing="false" hidden="false" shadetype="BY_CLASS" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:columns length="150" unit="PIXEL" autoSizing="false" hidden="false" shadetype="BY_CLASS" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="140" unit="PIXEL" autoSizing="false" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-d3967e57" scrollable="false" spacing="14"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-8604e0b0" scrollable="false" spacing="40" leftmargin="50" rightmargin="50" topmargin="50" bottommargin="50"/>
+    </cl:group>
+    <cl:group std:sid="group-fd7217e0" class="pb-content">
+      <cl:verticaldata std:sid="v-data-ed52d183" width="1644px" height="383px" autosize="height"/>
+      <cl:group std:sid="group-61e2023c">
+        <cl:verticaldata std:sid="v-data-1a596781" width="1544px" height="300px" autosize="height"/>
+        <cl:udc std:sid="ud-control-d5ed4900" type="udc.hk.pb.SectionTitle">
+          <cl:verticaldata std:sid="v-data-547efdac" width="1544px" height="29px" autosize="none"/>
+          <cl:property name="title" value="데이트인풋 너비" type="string"/>
+        </cl:udc>
+        <cl:group std:sid="group-1e8fd8c5" class="pb-table">
+          <cl:verticaldata std:sid="v-data-e8ac9791" width="400px" height="242px" autosize="height"/>
+          <cl:output std:sid="output-305756db" class="pb-label" value="포맷">
+            <cl:formdata std:sid="f-data-c4e22ac4" row="0" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-25479fbb" class="pb-label" value="너비">
+            <cl:formdata std:sid="f-data-62cabbef" row="0" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-56ecf97f" class="pb-label" value="적용">
+            <cl:formdata std:sid="f-data-10669b3f" row="0" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-7e22a68e" class="pb-label" value="적용">
+            <cl:formdata std:sid="f-data-b92624e8" row="0" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-4edd0000" class="pb-label" value="년-월-일" unselectable="false">
+            <cl:formdata std:sid="f-data-292e2481" row="1" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-2136e8f4" class="text-center" value="120px">
+            <cl:formdata std:sid="f-data-84688096" row="1" col="1"/>
+          </cl:output>
+          <cl:dateinput std:sid="d-input-6972bba9" class="require">
+            <cl:formdata std:sid="f-data-c38d6628" halign="LEFT" width="120" row="1" col="2"/>
+          </cl:dateinput>
+          <cl:output std:sid="output-f135f8e1">
+            <cl:formdata std:sid="f-data-c8cbb715" row="1" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-05c4abb2" class="pb-label" value="년-월" unselectable="false">
+            <cl:formdata std:sid="f-data-1e32948b" row="2" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-acefb0c3" class="text-center" value="100px">
+            <cl:formdata std:sid="f-data-b44e4881" row="2" col="1"/>
+          </cl:output>
+          <cl:dateinput std:sid="d-input-027b908d" calendartype="yearmonth" mask="YYYY-MM" format="YYYYMM">
+            <cl:formdata std:sid="f-data-792f4a21" halign="LEFT" width="100" row="2" col="2"/>
+          </cl:dateinput>
+          <cl:output std:sid="output-e72adc8d">
+            <cl:formdata std:sid="f-data-2171b35f" row="2" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-b6f24299" class="pb-label" value="년" unselectable="false">
+            <cl:formdata std:sid="f-data-7c7b9b11" row="3" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-a3c6713b" class="text-center" value="80px">
+            <cl:formdata std:sid="f-data-f9968067" row="3" col="1"/>
+          </cl:output>
+          <cl:dateinput std:sid="d-input-40d14ff1" calendartype="year" mask="YYYY" format="YYYY">
+            <cl:formdata std:sid="f-data-8a06bdfb" halign="LEFT" width="80" row="3" col="2"/>
+          </cl:dateinput>
+          <cl:output std:sid="output-26f55beb">
+            <cl:formdata std:sid="f-data-84722ad3" row="3" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-a79d39de" class="pb-label" value="시:분:초" unselectable="false">
+            <cl:formdata std:sid="f-data-bb66fc4f" row="4" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-fa2c5915" class="text-center" value="100px">
+            <cl:formdata std:sid="f-data-c3cb9f38" row="4" col="1"/>
+          </cl:output>
+          <cl:dateinput std:sid="d-input-57c59ebb" hidebutton="true" mask="HH:mm:ss" format="HHmmss">
+            <cl:formdata std:sid="f-data-c08c9b31" halign="LEFT" row="4" col="2"/>
+          </cl:dateinput>
+          <cl:output std:sid="output-f724d279" value="시/분/초만 입력하는 경우 데이트 인풋 버튼은 표시하지 않음">
+            <cl:formdata std:sid="f-data-0209288f" row="4" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-994333b1" class="pb-label" value="년-월-일 시:분:초" unselectable="false">
+            <cl:formdata std:sid="f-data-1436150a" row="5" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-8f98ee35" class="text-center" value="180px">
+            <cl:formdata std:sid="f-data-14541969" row="5" col="1"/>
+          </cl:output>
+          <cl:dateinput std:sid="d-input-fb7f99f7" mask="YYYY-MM-DD HH:mm:ss" format="YYYYMMDDHHmmss">
+            <cl:formdata std:sid="f-data-b27d87d2" halign="LEFT" width="180" row="5" col="2"/>
+          </cl:dateinput>
+          <cl:output std:sid="output-777f1a19">
+            <cl:formdata std:sid="f-data-82044abd" row="5" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-92167b45" class="pb-label" value="년-월-일 + 스핀버튼" unselectable="false">
+            <cl:formdata std:sid="f-data-c3a713ca" row="6" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-0bb80940" class="text-center" value="130px">
+            <cl:formdata std:sid="f-data-6345c30a" row="6" col="1"/>
+          </cl:output>
+          <cl:dateinput std:sid="d-input-ee118372" spinbutton="true">
+            <cl:formdata std:sid="f-data-ee5bb9c9" halign="LEFT" width="130" row="6" col="2"/>
+          </cl:dateinput>
+          <cl:output std:sid="output-3b356cb2" value="포맷에 따른 너비로 적용">
+            <cl:formdata std:sid="f-data-d1134188" row="6" col="3"/>
+          </cl:output>
+          <cl:formlayout std:sid="f-layout-51ae130b" scrollable="false" hspace="8px" vspace="8px" top-margin="4px" right-margin="4px" bottom-margin="4px" left-margin="4px" hseparatorwidth="1" hseparatortype="BY_CLASS" vseparatorwidth="1" vseparatortype="BY_CLASS">
+            <cl:rows length="28" unit="PIXEL" autoSizing="false" hidden="false" shadetype="BY_CLASS" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:columns length="150" unit="PIXEL" autoSizing="false" hidden="false" shadetype="BY_CLASS" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="60" unit="PIXEL" autoSizing="false" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="180" unit="PIXEL" autoSizing="false" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-68df9b53" scrollable="false" spacing="14"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-42328ea3" scrollable="false" spacing="40" leftmargin="50" rightmargin="50" topmargin="50" bottommargin="50"/>
+    </cl:group>
+    <cl:group std:sid="group-429ddff2" class="pb-content">
+      <cl:verticaldata std:sid="v-data-ef6d9c17" width="1644px" height="244px" autosize="height"/>
+      <cl:group std:sid="group-c220bc3f">
+        <cl:verticaldata std:sid="v-data-168aca3b" width="1544px" height="133px" autosize="height"/>
+        <cl:udc std:sid="ud-control-553e7c04" type="udc.hk.pb.SectionTitle">
+          <cl:verticaldata std:sid="v-data-d2a4766b" width="1544px" height="29px"/>
+          <cl:property name="title" value="확장 데이트인풋" type="string"/>
+        </cl:udc>
+        <cl:group std:sid="group-6295833f" class="pb-form">
+          <cl:verticaldata std:sid="v-data-b7a546ce" width="400px" height="79px" autosize="height"/>
+          <cl:output std:sid="output-f2ab3f51" class="label" value="SpinButton">
+            <cl:formdata std:sid="f-data-e1b3dae8" row="0" col="0"/>
+          </cl:output>
+          <cl:dateinput std:sid="d-input-048bdfbe" class="require" spinbutton="true">
+            <cl:formdata std:sid="f-data-7db867df" halign="LEFT" width="130" row="0" col="1"/>
+          </cl:dateinput>
+          <cl:output std:sid="output-0d1ed6a7" class="label" value="Mark">
+            <cl:formdata std:sid="f-data-5c5c9d6d" row="0" col="2"/>
+          </cl:output>
+          <cl:group std:sid="group-acaef6cc">
+            <cl:formdata std:sid="f-data-0d9254de" row="0" col="3"/>
+            <cl:output std:sid="output-0f0cebdd" class="text-center" value="-">
+              <cl:formdata std:sid="f-data-f35c84d2" row="0" col="1"/>
+            </cl:output>
+            <cl:dateinput std:sid="d-input-a001dd05">
+              <cl:formdata std:sid="f-data-2706a7ac" row="0" col="0"/>
+            </cl:dateinput>
+            <cl:dateinput std:sid="d-input-6a915daf">
+              <cl:formdata std:sid="f-data-0e1afaa3" row="0" col="2"/>
+            </cl:dateinput>
+            <cl:formlayout std:sid="f-layout-4f9a3612" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION" autoSizing="false" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+              <cl:columns length="10" unit="PIXEL" autoSizing="false" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+              <cl:columns length="1" unit="FRACTION" autoSizing="false" hidden="false" minlength="0"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-a847bedc" scrollable="false" hspace="8px" vspace="10px" top-margin="26px" right-margin="0px" bottom-margin="26px" left-margin="0px">
+            <cl:rows length="26" unit="PIXEL" autoSizing="false" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="81" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="32" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-33f0ad2d" scrollable="false" spacing="14"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-aac8a958" scrollable="false" spacing="40" leftmargin="50" rightmargin="50" topmargin="50" bottommargin="50"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-78d7fe5b" spacing="14"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

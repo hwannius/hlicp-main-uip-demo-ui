@@ -1,0 +1,35 @@
+@import "../custom-settings.part.less";
+
+.cl-progress {
+	/* 프로그레스 바 루트 */
+	background-image: @component-background-image;
+	background-color: @gray-500;
+	border: none;
+	border-radius: 6px;
+	min-width: 50px;
+
+	.cl-progress-bar {
+		/* 진행 바 */
+		background-image: @component-background-image;
+		background-color: @pink;
+		border-radius: 6px;
+		min-height: 12px;
+	}
+
+	.cl-text {
+		/* 진행 바에 표시되는 텍스트 */
+		color: @white;
+		text-shadow: none;
+	}
+}
+
+.cl-progress.cl-disabled {
+	/* 프로그레스 바 - disabled */
+	background-image: @component-background-image;
+
+	.cl-progress-bar {
+		/* 진행 바 - disabled */
+		background-image: @component-background-image;
+		background-color: @gray-600;
+	}
+}

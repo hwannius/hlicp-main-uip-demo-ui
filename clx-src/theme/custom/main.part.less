@@ -1,0 +1,1874 @@
+@import "../custom-settings.part.less";
+
+/************************************************
+ * 헤더
+ ************************************************/
+
+.cl-container.header {
+	background-color: @white;
+	
+	/* 전체검색 검색필드 */
+	.cl-searchinput.global-search {
+		border: 2px solid @transparent;
+		border-radius: @border-radius-0;
+		font-size: @h1-font-size;
+		padding: 0px 25px;
+		
+		.cl-text {
+			&:not(.cl-placeholder) {
+				border: none;
+			}
+			
+			&.cl-placeholder {
+				color: @gray-500 !important;
+			}
+		}
+		
+		.cl-searchinput-search {
+			background-image: url("../images/com/main/ico-top-research-20.png");
+			background-color: @transparent;
+			width: 20px;
+		}
+		
+		&.cl-focus {
+			border-color: @input-focus-border-color;
+		}
+	}
+	
+	/* 상담고객 검색필드 */
+	.cl-searchinput.customer-search {
+		background-color: @secondary-dim;
+		border-radius: @border-radius-circle;
+		
+		.cl-text {
+			&:not(.cl-placeholder) {
+				border: none;
+			}
+		}
+		
+		.cl-searchinput-search {
+			background-image: url("../images/com/main/ico-comm-research-12.png");
+			background-position: left center;
+			background-color: @transparent;
+			width: 22px;
+		}
+		
+		.cl-searchinput-clear {
+			background-image: url("../images/com/main/ico-mdi-close-14.png");
+			background-position: left center;
+			width: 19px;
+		}
+		
+		// 에러상태
+		&.error {
+			color: @teal;
+			
+			.cl-text {
+				&.cl-placeholder {
+					color: @teal !important;
+				}
+			}
+		}
+	}
+	
+	/* 증권번호 콤보박스 */
+	.cl-combobox.poly-combo {
+		background-color: @secondary-dim;
+		border: none;
+		border-radius: @border-radius-circle;
+		
+	}
+	
+	/* 접속시간 */
+	.cl-output.time-badge {
+		background-color: @secondary-dim;
+		border-radius: @border-radius-circle;
+		color: @gray-900;
+		font-size: 11px;
+		text-align: center;
+	}
+	
+	/* 알람 배지 */
+	.cl-output.alarm-badge {
+		background-color: @primary;
+		border-radius: @border-radius-circle;
+		color: @white;
+		font-size: @font-size-sm;
+		text-align: center;
+		cursor: pointer;
+	}
+	
+	/* 헤더 버튼 */
+	.cl-button.btn-nav-search {
+		background-image: url("../images/com/main/ico-top-research-20.png");
+		border-radius: @border-radius-circle;
+		
+		&:not(.cl-disabled):hover,
+	 	&:focus,
+	 	&.cl-focus,
+	 	&:not(.cl-disabled).cl-activated,
+	 	&:not(.cl-disabled):active {
+	 		background-color: rgba(0, 0, 0, .08);
+	 	}
+	}
+	
+	.cl-button.btn-nav-pin {
+		background-image: url("../images/com/main/ico-top-pin-20.png");
+		
+		&.on {
+			background-image: url("../images/com/main/ico-top-unpin-20.png");
+		}
+	}
+	
+	.cl-button.btn-nav-setting {
+		background-image: url("../images/com/main/ico-top-setting-20.png");
+	}
+	
+	.cl-button.btn-nav-extend {
+		background-image: url("../images/com/main/ico-top-time-20.png");
+	}
+	
+	.cl-button.btn-nav-logout {
+		background-image: url("../images/com/main/ico-top-logout-20.png");
+	}
+	
+	.cl-button.btn-nav-alarm {
+		background-image: url("../images/com/main/ico-top-allarm-20.png");
+	}
+	
+	.cl-button.btn-nav-split {
+		background-image: url("../images/com/main/ico-top-screen-20.png");
+		border-radius: @btn-border-radius @btn-border-radius @component-border-radius-0 @component-border-radius-0;
+		
+		&:not(.cl-disabled):hover,
+	 	&:focus,
+	 	&.cl-focus,
+	 	&:not(.cl-disabled).cl-activated,
+	 	&:not(.cl-disabled):active {
+	 		background-color: rgba(0, 0, 0, .08);
+	 	}
+		
+		&.on {
+			background-color: #555e89;
+			
+			&:not(.cl-disabled):hover,
+		 	&:focus,
+		 	&.cl-focus,
+		 	&:not(.cl-disabled).cl-activated,
+		 	&:not(.cl-disabled):active {
+				background-color: #555e89;
+		 	}
+		}
+	}
+	
+	.cl-button.btn-nav-relatedwork {
+		background-image: url("../images/com/main/ico-top-related-20.png");
+		border-radius: @btn-border-radius @btn-border-radius @component-border-radius-0 @component-border-radius-0;
+		
+		&:not(.cl-disabled):hover,
+	 	&:focus,
+	 	&.cl-focus,
+	 	&:not(.cl-disabled).cl-activated,
+	 	&:not(.cl-disabled):active {
+	 		background-color: rgba(0, 0, 0, .08);
+	 	}
+		
+		&.on {
+			background-color: #555e89;
+			
+			&:not(.cl-disabled):hover,
+		 	&:focus,
+		 	&.cl-focus,
+		 	&:not(.cl-disabled).cl-activated,
+		 	&:not(.cl-disabled):active {
+				background-color: #555e89;
+		 	}
+		}
+	}
+}
+
+.cl-container.navbar {
+	background-color: @lighter;
+	
+	.cl-navigationbar {
+		background-color: @transparent;
+		border: none;
+		color: @secondary;
+		font-size: @font-size-md;
+		font-weight: @font-weight-medium;
+		
+		.cl-navigationbar-bar {
+			margin: 0px auto;
+			
+			.cl-navigationbar-item {
+				border-radius: @border-radius-circle;
+				padding: 6px 20px;
+				
+				&.cl-hover {
+					background-color: @white;
+					color: @secondary;
+				}
+				
+				&:not(.cl-disabled) {
+					&:not(.cl-selected):hover,
+					&.cl-hover {
+						background-color: @white;
+						color: @secondary;
+					}
+				}
+				
+				&.cl-selected {
+					background-color: @white;
+					color: @primary;
+				}
+			}
+		}
+	}
+}
+
+.cl-combobox-list.poly-combo {
+}
+
+/************************************************
+ * 어사이드
+ ************************************************/
+
+.cl-container.aside {
+	background-color: #171f46;
+	
+	.cl-sidenavigation.sidemenu {
+		background-color: @transparent;
+		border: none;
+		border-radius: @component-border-radius-0;
+		color: @white;
+		
+		.cl-sidenavigation-item {
+			background-repeat: no-repeat;
+			min-height: 18px;
+			padding: 0px;
+			
+			.cl-text {
+				padding: @input-padding-0 @input-padding-0 @input-padding-0 @input-padding-x;
+			}
+			
+			.cl-expand-icon {
+				background-position: center;
+				width: 14px;
+			}
+			
+			/* 배지가 텍스트가 있는 부분만 스타일 적용하기 위해 추가함 -- 아이템 스타일러 바인딩 필요함 */
+			&.has-badge {
+				.cl-badge {
+					background-color: @white;
+					border-radius: @border-radius-circle;
+					color: #2f3659;
+					font-size: @h4-font-size;
+					padding: 2px 5px;
+				}
+			}
+			
+			&:hover, &.cl-hover, &:focus,
+			&.cl-selected {
+				background-color: @list-item-hover-background-color;
+				color: @white;
+			}
+			
+			&:not(.cl-level-2) {
+				.cl-expand-icon {
+					display: none;
+				}
+			}
+			
+			/* 1Depth Item -- 루트 메뉴 */
+			&.cl-level-1 {
+				background-image: none;
+				font-size: @h1-font-size;
+				font-weight: @font-weight-medium;
+				padding: 12px 20px;
+				min-height: 45px;
+				
+				.cl-icon {
+					background-image: url("../images/com/main/ico-lnb-tit-14.png");
+				}
+				
+				&:hover, &.cl-hover, &:focus,
+				&.cl-selected {
+					background-color: @transparent;
+				}
+				
+				&.cl-last {
+					margin-bottom: 9px;
+				}
+				
+				+ .cl-list {
+//					margin: 9px 20px 0px 20px;
+					background-color: @transparent;
+					border-top: 1px solid #585e7c;
+					padding: 0px;
+				}
+			}
+			
+			/* 2Depth Item -- 두번째 메뉴 */
+			&.cl-level-2 {
+				background-image: linear-gradient(#363f5a, #363f5a);
+				background-position: center bottom;
+				background-size: calc(100% - 40px) 1px;
+				font-size: @h3-font-size;
+				font-weight: @font-weight-medium;
+				padding: 12px 20px;
+				min-height: 42px;
+				
+				.cl-icon {
+					display: none;
+				}
+				
+				.cl-text {
+					padding-left: 5px;
+				}
+				
+				&.cl-folder {
+					&.cl-expanded .cl-expand-icon {
+						background-image: url("../images/com/main/ico-lnb-01-arrow-up-12.png");
+					}
+					&.cl-collapsed .cl-expand-icon {
+						background-image: url("../images/com/main/ico-lnb-01-arrow-open-12.png");
+					}
+				}
+				
+				+ .cl-list {
+					background-color: #2f3659;
+					padding: 10px 20px;
+				}
+			}
+			
+			/* 3Depth Item -- 해당 아이템 기준 다음 뎁스부터 라인표시 */
+			&.cl-level-3 {
+				font-size: 13px;
+				font-weight: @font-weight-bold;
+				padding: 8px 10px;
+				min-height: 32px;
+				
+				.cl-icon {
+					background-image: url("../images/com/main/ico-lnb-rectangle-9.png");
+					width: 9px;
+				}
+				
+				.cl-text {
+					padding-left: 8px;
+				}
+				
+				&.cl-folder {
+					&.cl-expanded {
+						background-image: url("../images/com/main/line-3-depth-01.png");
+						background-position: 14px bottom;
+						
+						.cl-icon {
+							background-image: url("../images/com/main/ico-lnb-rectangle-minus-9.png");
+						}
+					} 
+					
+					&.cl-collapsed {
+						.cl-icon {
+							background-image: url("../images/com/main/ico-lnb-rectangle-plus-9.png");
+						}
+					} 
+				}
+				
+				&:hover, &.cl-hover, &:focus,
+				&.cl-selected {
+					background-color: #84779b;
+				}
+				
+				+ .cl-list {
+					padding-bottom: 5px;
+				}
+			}
+			
+			/* 4 Depth Item -- 라인 시작 */
+			&.cl-level-4 {
+				font-size: @h4-font-size;
+				font-weight: @font-weight-medium;
+				padding: 0px 10px 0px 14px;
+				min-height: 26px;
+				
+				.cl-icon {
+					background-image: url("../images/com/main/line-3-depth-02.png");
+					background-size: 10px 27px;
+					background-position: 0px center;
+					width: 10px;
+					height: 100%;
+				}
+
+				&.cl-last {
+					.cl-icon {
+						background-image: url("../images/com/main/line-3-depth-03.png");
+						background-size: 10px 14px;
+						background-position: 0px top;
+					}
+				}
+				
+				.cl-text {
+					padding-left: 4px;
+				}
+				
+				&.cl-leaf {
+					&:hover, &.cl-hover, &:focus,
+					&.cl-selected {
+						background-color: #84779b;
+					}
+				}
+				
+				&.cl-folder {
+					.cl-icon {
+						background-size: auto, 10px 27px;
+						background-position: right center, 0px center;
+						width: 23px;
+					}
+					
+					&.cl-expanded {
+						background-image: url("../images/com/main/line-4-depth-01.png");
+						background-position: 32px bottom;
+						
+						.cl-icon {
+							background-image: url("../images/com/main/ico-lnb-close-9.png"), url("../images/com/main/line-3-depth-02.png");
+						}
+						
+						// 중간에 해당하는 아이템이 펼쳐지면 필요한 중간 라인 처리
+						&:not(.cl-last) + .cl-list {
+							background-image: url("../images/com/main/line-3-depth-01.png");
+							background-repeat: repeat-y;
+							background-position: 14px 0px;
+							
+							.cl-sidenavigation-item.cl-level-5 {
+								background-image: url("../images/com/main/line-3-depth-01.png");
+								background-repeat: repeat-y;
+								background-position: 14px 0px;
+							}
+						}
+					}
+					
+					&.cl-collapsed {
+						.cl-icon {
+							background-image: url("../images/com/main/ico-lnb-open-9.png"), url("../images/com/main/line-3-depth-02.png");
+						}
+					}
+					
+					&.cl-last {
+						.cl-icon {
+							background-size: auto, auto;
+							background-position: right center, 0px top;
+						}
+						
+						&.cl-expanded {
+							.cl-icon {
+								background-image: url("../images/com/main/ico-lnb-close-9.png"), url("../images/com/main/line-3-depth-03.png");
+							}
+						}
+						
+						&.cl-collapsed {
+							.cl-icon {
+								background-image: url("../images/com/main/ico-lnb-open-9.png"), url("../images/com/main/line-3-depth-03.png");
+							}
+						}
+					}
+				}
+				
+				+ .cl-list {
+					padding-bottom: 8px;
+				}
+			}
+			
+			/* 5 Depth Item -- 최하위 아이템 */
+			&.cl-level-5 {
+				font-size: @h5-font-size;
+				padding: 0px 32px;
+				min-height: 18px;
+				
+				.cl-icon {
+					background-image: url("../images/com/main/line-4-depth-02.png");
+					background-size: 6px 19px;
+					background-position: left center;
+					width: 6px;
+					height: 100%;
+				}
+				
+				&.cl-last {
+					.cl-icon {
+						background-image: url("../images/com/main/line-4-depth-03.png");
+						background-size: auto;
+						background-position: left top;
+					}
+				}
+				
+				.cl-text {
+					padding-left: 5px;
+				}
+				
+				&:hover, &.cl-hover, &:focus,
+				&.cl-selected {
+					background-color: #84779b;
+				}
+			}
+		}
+	} // 사이드 메뉴 끝
+}
+
+.cl-container.menubar {
+	background-color: #171f46;
+	
+	.cl-button.btn-nav-print {
+		background-image: url("../images/com/main/ico-lnb-print-12.png");
+	}
+	
+	.cl-button.btn-nav-manual {
+		background-image: url("../images/com/main/ico-lnb-book-12.png");
+	}
+	
+	.cl-button.btn-nav-sitemap {
+		background-image: url("../images/com/main/ico-lnb-menu-12.png");
+	}
+	
+	.cl-button.btn-nav-family {
+		background-image: url("../images/com/main/ico-lnb-family-12.png");
+	}
+}
+
+.cl-checkbox.lnb-toggle {
+	background-color: #171f46;
+	border-radius: 0px 4px 4px 0px;
+	
+	.cl-checkbox-icon {
+		background-image: url("../images/com/main/ico-lnb-menu-right-12.png");
+		width: 20px;
+		height: 40px;
+		margin: 0px;
+	}
+	
+	&.cl-checked {
+		.cl-checkbox-icon {
+			background-image: url("../images/com/main/ico-lnb-menu-left-12.png");
+		}
+	}
+}
+
+/************************************************
+ * 콘텐트 (MDI)
+ ************************************************/
+ 
+.cl-mdifolder.tab-content {
+	> .content {
+		.cl-tabfolder-header.content {
+			background-color: @primary;
+			height: 32px;
+			padding: 0px 17px 0px 20px;
+			
+			.cl-empty-area {
+				border-bottom: none;
+			}
+			
+			.cl-tabfolder-prev,
+			.cl-tabfolder-next {
+				background-color: @transparent;
+				border: none !important;
+				width: 24px;
+				
+				&.cl-disabled {
+					background-color: @transparent;
+				}
+			}
+			
+			.cl-tabfolder-prev {
+				background-image: url("../images/com/main/ico-mdi-left-arrow-12.png");
+				margin-left: 10px;
+			}
+			
+			.cl-tabfolder-next {
+				background-image: url("../images/com/main/ico-mdi-right-arrow-12.png");
+			}
+			
+			.cl-tabfolder-item {
+				background-repeat: no-repeat;
+				background-position: center bottom;
+				background-color: @transparent;
+				border: none;
+				box-shadow: none;
+				color: @white;
+				font-weight: @font-weight-regular;
+				padding: 8px 16px 9px 16px;
+				position: relative;
+				text-align: left;
+				
+				// 양쪽 라인
+				&:before {
+					content: "";
+					position: absolute;
+					left: 0px;
+					top: calc(50% - 6px);
+					width: 1px;
+					height: 12px;
+					background-color: @white;
+				}
+				
+				&.cl-last:not(.cl-selected) {
+					&:after {
+						content: "";
+						position: absolute;
+						right: 0px;
+						top: calc(50% - 6px);
+						width: 1px;
+						height: 12px;
+						background-color: @white;
+					}
+				}
+				
+				.cl-checkbox {
+					margin-right: 10px;
+					
+					.cl-checkbox-icon {
+						background-image: url("../images/com/main/ico-mdi-unlock-10.png");
+						width: 10px;
+						min-height: 10px;
+						margin: 0px;
+					}
+					
+					&.cl-checked {
+						.cl-checkbox-icon {
+							background-image: url("../images/com/main/ico-mdi-lock-10.png");
+						}
+					}
+				}
+				
+				.cl-tabfolder-button {
+					background-image: url("../images/com/main/ico-mdi-close-8.png");
+					background-size: auto;
+					background-position: center;
+					border-radius: @border-radius-circle;
+					width: 14px;
+					height: 14px;
+				}
+				
+				&:not(.cl-selected):hover {
+					background-image: url("../images/com/main/mdi-page-bg-on.png");
+					
+					&:before {
+						content: none;
+					}
+					
+					.cl-tabfolder-button {
+						background-color: rgba(0, 0, 0, .25);
+					}
+					
+					+ .cl-tabfolder-item {
+						&:before {
+							content: none;
+						}
+					}
+				}
+				
+				&.cl-selected {
+					background-image: url("../images/com/main/mdi-page-bg.png");
+					background-color: @transparent;
+					color: @primary;
+					font-weight: @font-weight-bold;
+					
+					&:before {
+						content: none;
+					}
+					
+					+ .cl-tabfolder-item {
+						&:before {
+							content: none;
+						}
+					}
+					
+					.cl-checkbox {
+						.cl-checkbox-icon {
+							background-image: url("../images/com/main/ico-mdi-unlock-01-10.png");
+						}
+						
+						&.cl-checked {
+							.cl-checkbox-icon {
+								background-image: url("../images/com/main/ico-mdi-lock-01-10.png");
+							}
+						}
+					}
+					
+					.cl-tabfolder-button {
+						background-image: url("../images/com/main/ico-mdi-close-01-8.png");
+					}
+				}
+			}
+		}
+	}
+}
+
+/* 대시보드(홈) 버튼 */
+.cl-button.btn-tab-home {
+	background-image: url("../images/com/main/ico-mdi-home-12.png");
+	background-color: @transparent;
+	border: none;
+	border-radius: @border-radius-circle !important;
+	
+	&:not(.cl-disabled):hover,
+ 	&:focus,
+ 	&.cl-focus,
+ 	&:not(.cl-disabled).cl-activated,
+ 	&:not(.cl-disabled):active {
+		background-image: url("../images/com/main/ico-mdi-home-12.png");
+		background-color: rgba(0, 0, 0, .25);
+ 	}
+}
+
+/* 탭 아이템 추가 버튼 */
+.cl-button.btn-tab-plus {
+	background-image: url("../images/com/main/ico-mdi-plus-10.png");
+	background-color: @transparent;
+	border: none;
+	
+	&:not(.cl-disabled):hover,
+ 	&:focus,
+ 	&.cl-focus,
+ 	&:not(.cl-disabled).cl-activated,
+ 	&:not(.cl-disabled):active {
+		background-image: url("../images/com/main/ico-mdi-plus-10.png");
+		background-color: @transparent;
+ 	}
+}
+
+.cl-container.tab-utils {
+	.cl-button {
+		border: none;
+		border-radius: @component-border-radius-0;
+		padding: 0px;
+		
+		&:not(.cl-disabled):hover,
+	 	&:focus,
+	 	&.cl-focus,
+	 	&:not(.cl-disabled).cl-activated,
+	 	&:not(.cl-disabled):active {
+			background-color: rgba(0, 0, 0, .25);
+	 	}
+	}
+	
+	.cl-button.btn-content-list {
+		background-image: url("../images/com/main/ico-mdi-screen-12.png");
+	}
+	
+	.cl-button.btn-content-zoom {
+		background-image: url("../images/com/main/ico-mdi-100-12.png");
+	}
+	
+	.cl-button.btn-content-close {
+		background-image: url("../images/com/main/ico-mdi-allclose-12.png");
+	}
+	
+	.cl-button.btn-content-left,
+	.cl-button.btn-content-right {
+		background-color: rgba(0, 0, 0, .45);
+		border-radius: @btn-border-radius;
+		
+		&:not(.cl-disabled):hover,
+	 	&:focus,
+	 	&.cl-focus,
+	 	&:not(.cl-disabled).cl-activated,
+	 	&:not(.cl-disabled):active {
+			background-color: rgba(0, 0, 0, .45);
+	 	}
+	}
+	
+	.cl-button.btn-content-left {
+		background-image: url("../images/com/main/ico-comm-left-03-arrow-10.png");
+	}
+	
+	.cl-button.btn-content-right {
+		background-image: url("../images/com/main/ico-comm-right-03-arrow-10.png");
+	}
+}
+
+.cl-container.floating-content-area {
+	background-color: #b4176e;
+	
+	/* 확대 및 축소 버튼 */
+	.cl-button.zoom-plus,
+	.cl-button.zoom-minus,
+	.cl-button.btn-close {
+		background-color: rgba(0, 0, 0, .25);
+		border: none;
+		border-radius: @border-radius-circle;
+		padding: 0px;
+		
+		&:not(.cl-disabled):hover,
+	 	&:focus,
+	 	&.cl-focus,
+	 	&:not(.cl-disabled).cl-activated,
+	 	&:not(.cl-disabled):active {
+			background-color: rgba(0, 0, 0, .25);
+	 	}
+	}
+	
+	.cl-button.zoom-plus {
+		background-image: url("../images/com/main/ico-mdi-plus-10.png");
+	}
+	
+	.cl-button.zoom-minus {
+		background-image: url("../images/com/main/ico-mdi-minus-10.png");
+	}
+	
+	/* 화면리스트 */
+	.cl-container.list-item {
+		.cl-output {
+			color: @white;
+		}
+		
+		.cl-button.btn-close {
+			background-image: url("../images/com/main/ico-mdi-close-8.png");
+		}
+		
+		&:hover, &.on {
+			background-color: rgba(0, 0, 0, .25);
+		}
+	}
+}
+
+/************************************************
+ * 테마 작업
+ ************************************************/
+
+//TODO 북마크
+.is-dark {
+	.cl-container.header {
+		background-color: #414659;
+		
+		.cl-output {
+			color: @white;
+			
+			&.text-gray-900 {
+				color: @white !important;
+			}
+			
+			&.text-gray-500 {
+				color: #7a7d8b !important;
+			}
+			
+			&.bg-gray-500 {
+				background-color: #7a7d8b !important;
+			}
+		}
+		
+		.cl-searchinput.global-search {
+			background-color: @transparent;
+			color: @white;
+		}
+		
+		.cl-searchinput.customer-search {
+			background-color: #eceef0;
+		}
+		
+		.cl-combobox.poly-combo {
+			background-color: #eceef0;
+		}
+		
+		.cl-output.time-badge {
+			color: @gray-900;
+		}
+		
+		/* 알람 배지 */
+		.cl-output.alarm-badge {
+			background-color: #f16197;
+		}
+		
+		/* 헤더 버튼 */
+		.cl-button.btn-nav-search {
+			
+			&:not(.cl-disabled):hover,
+		 	&:focus,
+		 	&.cl-focus,
+		 	&:not(.cl-disabled).cl-activated,
+		 	&:not(.cl-disabled):active {
+		 		background-color: rgba(255, 255, 255, .1);
+		 	}
+		}
+		
+		.cl-button.btn-nav-pin {
+			&.on {
+			}
+		}
+		
+		.cl-button.btn-nav-setting {
+		}
+		
+		.cl-button.btn-nav-extend {
+		}
+		
+		.cl-button.btn-nav-logout {
+		}
+		
+		.cl-button.btn-nav-alarm {
+		}
+		
+		.cl-button.btn-nav-split {
+			
+			&:not(.cl-disabled):hover,
+		 	&:focus,
+		 	&.cl-focus,
+		 	&:not(.cl-disabled).cl-activated,
+		 	&:not(.cl-disabled):active {
+		 		background-color: rgba(255, 255, 255, .08);
+		 	}
+			
+			&.on {
+				background-color: #a38892;
+				
+				&:not(.cl-disabled):hover,
+			 	&:focus,
+			 	&.cl-focus,
+			 	&:not(.cl-disabled).cl-activated,
+			 	&:not(.cl-disabled):active {
+					background-color: #a38892;
+			 	}
+			}
+		}
+		
+		.cl-button.btn-nav-relatedwork {
+			
+			&:not(.cl-disabled):hover,
+		 	&:focus,
+		 	&.cl-focus,
+		 	&:not(.cl-disabled).cl-activated,
+		 	&:not(.cl-disabled):active {
+		 		background-color: rgba(255, 255, 255, .08);
+		 	}
+			
+			&.on {
+				background-color: #a38892;
+				
+				&:not(.cl-disabled):hover,
+			 	&:focus,
+			 	&.cl-focus,
+			 	&:not(.cl-disabled).cl-activated,
+			 	&:not(.cl-disabled):active {
+					background-color: #a38892;
+			 	}
+			}
+		}
+	}
+	
+	.cl-container.navbar {
+		background-color: #eeedef;
+		
+		.cl-navigationbar {
+			.cl-navigationbar-bar {
+				.cl-navigationbar-item {
+					color: #444444;
+	
+					&.cl-hover {
+						background-color: @white;
+						color: #444444;
+					}
+					
+					&:not(.cl-disabled) {
+						&:not(.cl-selected):hover,
+						&.cl-hover {
+							background-color: @white;
+							color: #444444;
+						}
+					}
+					
+					&.cl-selected {
+						background-color: #a38892;
+						color: @white;
+					}
+				}
+			}
+		}
+	}
+	
+	.cl-combobox-list.poly-combo {
+	}
+	
+	
+	.cl-container.aside {
+		background-color: #414659;
+		
+		.cl-sidenavigation.sidemenu {
+			.cl-sidenavigation-item {
+				&.has-badge {
+					.cl-badge {
+						color: #f16197;
+					}
+				}
+	
+				/* 1Depth Item -- 루트 메뉴 */
+				&.cl-level-1 {
+					+ .cl-list {
+						background-color: @transparent;
+						border-top: 1px solid #585e7c;
+						padding: 0px;
+					}
+				}
+				
+				/* 2Depth Item -- 두번째 메뉴 */
+				&.cl-level-2 {
+					background-image: none;
+					
+					&.cl-folder {
+						&.cl-collapsed .cl-expand-icon {
+							background-image: url("../images/com/main/dark/ico-lnb-01-arrow-open-12.png");
+						}
+					}
+					
+					+ .cl-list {
+						background-color: #575c70;
+					}
+				}
+				
+				/* 3Depth Item -- 해당 아이템 기준 다음 뎁스부터 라인표시 */
+				&.cl-level-3 {
+					.cl-icon {
+						background-image: url("../images/com/main/ico-lnb-rectangle-9.png");
+					}
+					
+					&.cl-folder {
+						&.cl-expanded {
+							background-image: url("../images/com/main/line-3-depth-01.png");
+							
+							.cl-icon {
+								background-image: url("../images/com/main/dark/ico-lnb-rectangle-minus-9.png");
+							}
+						} 
+						
+						&.cl-collapsed {
+							.cl-icon {
+								background-image: url("../images/com/main/ico-lnb-rectangle-plus-9.png");
+							}
+						} 
+					}
+					
+					&:hover, &.cl-hover, &:focus,
+					&.cl-selected {
+						background-color: #a38892;
+					}
+				}
+				
+				/* 4 Depth Item -- 라인 시작 */
+				&.cl-level-4 {
+					font-size: @h4-font-size;
+					font-weight: @font-weight-medium;
+					padding: 0px 10px 0px 14px;
+					min-height: 26px;
+	
+					&.cl-leaf {
+						&:hover, &.cl-hover, &:focus,
+						&.cl-selected {
+							background-color: #a38892;
+						}
+					}
+					
+					&.cl-folder {
+						.cl-icon {
+						}
+						
+						&.cl-expanded {
+							background-image: url("../images/com/main/line-4-depth-01.png");
+							
+							.cl-icon {
+								background-image: url("../images/com/main/dark/ico-lnb-rectangle-minus-9.png"), url("../images/com/main/line-3-depth-02.png");
+							}
+						}
+						
+						&.cl-collapsed {
+							.cl-icon {
+								background-image: url("../images/com/main/ico-lnb-rectangle-plus-9.png"), url("../images/com/main/line-3-depth-02.png");
+							}
+						}
+						
+						&.cl-last {
+							.cl-icon {
+							}
+							
+							&.cl-expanded {
+								.cl-icon {
+									background-image: url("../images/com/main/dark/ico-lnb-rectangle-minus-9.png"), url("../images/com/main/line-3-depth-03.png");
+								}
+							}
+							
+							&.cl-collapsed {
+								.cl-icon {
+									background-image: url("../images/com/main/ico-lnb-rectangle-plus-9.png"), url("../images/com/main/line-3-depth-03.png");
+								}
+							}
+						}
+					}
+				}
+				
+				/* 5 Depth Item -- 최하위 아이템 */
+				&.cl-level-5 {
+					&:hover, &.cl-hover, &:focus,
+					&.cl-selected {
+						background-color: #a38892;
+					}
+				}
+			}
+		} // 사이드 메뉴 끝
+	}
+	
+	.cl-container.menubar {
+		background-color: #414659;
+	}
+	
+	.cl-checkbox.lnb-toggle {
+		background-color: #414659;
+	}
+	
+	.cl-mdifolder.tab-content {
+		> .content {
+			.cl-tabfolder-header.content {
+				background-color: #eeedef;
+				border-bottom: 2px solid #a38892;
+				
+				.cl-tabfolder-prev,
+				.cl-tabfolder-next {
+					background-color: @transparent;
+					
+					&.cl-disabled {
+						background-color: @transparent;
+					}
+				}
+				
+				.cl-tabfolder-prev {
+					background-image: url("../images/com/main/dark/ico-mdi-left-arrow-12.png");
+				}
+				
+				.cl-tabfolder-next {
+					background-image: url("../images/com/main/dark/ico-mdi-right-arrow-12.png");
+				}
+				
+				.cl-tabfolder-item {
+					background-color: #f9f9f9;
+					border: 1px solid #d8d8d8;
+					border-radius: 4px 4px 0px 0px;
+					color: #444444;
+					padding: 8px 7px 9px 9px;
+					
+					// 양쪽 라인
+					&:before {
+						content: none;
+					}
+					
+					&.cl-last:not(.cl-selected) {
+						&:after {
+							content: none;
+						}
+					}
+					
+					.cl-checkbox {
+						.cl-checkbox-icon {
+							background-image: url("../images/com/main/dark/ico-mdi-unlock-10.png");
+						}
+						
+						&.cl-checked {
+							.cl-checkbox-icon {
+								background-image: url("../images/com/main/dark/ico-mdi-lock-10.png");
+							}
+						}
+					}
+					
+					.cl-tabfolder-button {
+						background-image: url("../images/com/main/dark/ico-mdi-close-8.png");
+					}
+					
+					&:not(.cl-selected):hover {
+						background-image: none;
+						background-color: #ebe7e8;
+						
+						&:before {
+							content: none;
+						}
+						
+						.cl-tabfolder-button {
+							background-color: rgba(0, 0, 0, .06);
+						}
+						
+						+ .cl-tabfolder-item {
+							&:before {
+								content: none;
+							}
+						}
+					}
+					
+					&.cl-selected {
+						background-image: none;
+						background-color: #a38892;
+						border-color: #a38892;
+						color: @white;
+						
+						&:before {
+							content: none;
+						}
+						
+						+ .cl-tabfolder-item {
+							&:before {
+								content: none;
+							}
+						}
+						
+						.cl-checkbox {
+							.cl-checkbox-icon {
+								background-image: url("../images/com/main/ico-mdi-unlock-10.png");
+							}
+							
+							&.cl-checked {
+								.cl-checkbox-icon {
+									background-image: url("../images/com/main/dark/ico-mdi-lock-01-10.png");
+								}
+							}
+						}
+						
+						.cl-tabfolder-button {
+							background-image: url("../images/com/main/ico-mdi-close-8.png");
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	/* 대시보드(홈) 버튼 */
+	.cl-button.btn-tab-home {
+		background-image: url("../images/com/main/dark/ico-mdi-home-12.png");
+		
+		&:not(.cl-disabled):hover,
+	 	&:focus,
+	 	&.cl-focus,
+	 	&:not(.cl-disabled).cl-activated,
+	 	&:not(.cl-disabled):active {
+			background-image: url("../images/com/main/dark/ico-mdi-home-12.png");
+			background-color: rgba(0, 0, 0, .15) !important;
+	 	}
+	}
+	
+	/* 탭 아이템 추가 버튼 */
+	.cl-button.btn-tab-plus {
+		background-image: url("../images/com/main/dark/ico-mdi-plus-10.png");
+		
+		&:not(.cl-disabled):hover,
+	 	&:focus,
+	 	&.cl-focus,
+	 	&:not(.cl-disabled).cl-activated,
+	 	&:not(.cl-disabled):active {
+			background-image: url("../images/com/main/dark/ico-mdi-plus-10.png");
+	 	}
+	}
+	
+	.cl-container.tab-utils {
+		.cl-button {
+			background-color: @transparent;
+			
+			&:not(.cl-disabled):hover,
+		 	&:focus,
+		 	&.cl-focus,
+		 	&:not(.cl-disabled).cl-activated,
+		 	&:not(.cl-disabled):active {
+				background-color: #a38892;
+		 	}
+		}
+		
+		.cl-button.btn-content-list {
+			background-image: url("../images/com/main/dark/ico-mdi-screen-12.png");
+			
+			&:not(.cl-disabled):hover,
+		 	&:focus,
+		 	&.cl-focus,
+		 	&:not(.cl-disabled).cl-activated,
+		 	&:not(.cl-disabled):active {
+				background-image: url("../images/com/main/ico-mdi-screen-12.png");
+		 	}
+		}
+		
+		.cl-button.btn-content-zoom {
+			background-image: url("../images/com/main/dark/ico-mdi-100-12.png");
+			
+			&:not(.cl-disabled):hover,
+		 	&:focus,
+		 	&.cl-focus,
+		 	&:not(.cl-disabled).cl-activated,
+		 	&:not(.cl-disabled):active {
+				background-image: url("../images/com/main/ico-mdi-100-12.png");
+		 	}
+		}
+		
+		.cl-button.btn-content-close {
+			background-image: url("../images/com/main/dark/ico-mdi-allclose-12.png");
+			
+			&:not(.cl-disabled):hover,
+		 	&:focus,
+		 	&.cl-focus,
+		 	&:not(.cl-disabled).cl-activated,
+		 	&:not(.cl-disabled):active {
+				background-image: url("../images/com/main/ico-mdi-allclose-12.png");
+		 	}
+		}
+		
+		.cl-button.btn-content-left,
+		.cl-button.btn-content-right {
+			background-color: rgba(0, 0, 0, .45);
+			
+			&:not(.cl-disabled):hover,
+		 	&:focus,
+		 	&.cl-focus,
+		 	&:not(.cl-disabled).cl-activated,
+		 	&:not(.cl-disabled):active {
+				background-color: rgba(0, 0, 0, .45);
+		 	}
+		}
+		
+		.cl-button.btn-content-left {
+		}
+		
+		.cl-button.btn-content-right {
+		}
+	}
+	
+	.cl-container.floating-content-area {
+		background-color: #a38892;
+		
+		/* 확대 및 축소 버튼 */
+		.cl-button.zoom-plus,
+		.cl-button.zoom-minus,
+		.cl-button.btn-close {
+			background-color: rgba(0, 0, 0, .25);
+			
+			&:not(.cl-disabled):hover,
+		 	&:focus,
+		 	&.cl-focus,
+		 	&:not(.cl-disabled).cl-activated,
+		 	&:not(.cl-disabled):active {
+				background-color: rgba(0, 0, 0, .25);
+		 	}
+		}
+		
+		.cl-button.zoom-plus {
+			background-image: url("../images/com/main/ico-mdi-plus-10.png");
+		}
+		
+		.cl-button.zoom-minus {
+			background-image: url("../images/com/main/ico-mdi-minus-10.png");
+		}
+		
+		/* 화면리스트 */
+		.cl-container.list-item {
+			.cl-output {
+				color: @white;
+			}
+			
+			.cl-button.btn-close {
+				background-image: url("../images/com/main/ico-mdi-close-8.png");
+			}
+			
+			&:hover, &.on {
+				background-color: rgba(0, 0, 0, .25);
+			}
+		}
+	}
+	
+	.cl-container.related-panel {
+
+		&.has-border {
+			border-left: 1px solid @gray-500;
+		}
+		
+		.cl-container.panel-header {
+			background-color: #9689a5;
+	
+			.cl-button.btn-nav-pin {
+				&.on {
+					background-image: url("../images/com/main/ico-comm-pin-off-12.png");
+					background-color: rgba(255, 255, 255, .08);
+				}
+			}
+		}
+		
+		.cl-container.panel-body {
+			.cl-container.item-header {
+				background-color: #c9c1d3;
+				
+				.cl-output {
+					color: @component-text-color;
+					font-size: @font-size-base;
+					font-weight: @font-weight-bold;
+				}
+			}
+			
+			.cl-accordion {
+				.cl-accordion-header {
+					background-color: #c9c1d3;
+				}
+			}
+			
+			/* 콜센터 버튼 */
+			.cl-button {
+				span.btn-badge {
+					background-color: @white;
+					border-radius: @border-radius-circle;
+					color: @secondary;
+					padding: 3px 6px;
+					margin-left: 5px;
+				}
+			}
+			
+			.cl-button.btn-waiting,
+			.cl-button.btn-call,
+			.cl-button.btn-hangup,
+			.cl-button.btn-hold {
+				background-position: 10px center;
+				font-weight: @font-weight-medium;
+				padding: 0px 0px 0px 27px;
+				text-align: left;
+			}
+			
+			.cl-button.btn-waiting {
+				background-image: url("../images/com/related/ico-comm-time-01-12.png");	
+			}
+			
+			.cl-button.btn-call {
+				background-image: url("../images/com/related/ico-comm-call-01-12.png");	
+			}
+			
+			.cl-button.btn-hangup {
+				background-image: url("../images/com/related/04-ico-comm-hangup-01-12.png");	
+			}
+			
+			.cl-button.btn-hold {
+				background-image: url("../images/com/related/04-ico-comm-hold-01-12.png");
+				background-position: 12px center;
+				padding-left: 25px;
+			}
+		}
+	}
+} // .is-dark
+
+
+
+/************************************************
+ * 연관업무
+ ************************************************/
+ 
+.cl-container.related-panel {
+	background-color: @white;
+	
+	&.has-border {
+		border-left: 1px solid @gray-500;
+	}
+	
+	.cl-container.panel-header {
+		background-color: #555e89;
+
+		.cl-button.btn-nav-pin {
+			background-image: url("../images/com/main/ico-comm-pin-on-12.png");
+			background-color: @transparent;
+			border: none;
+			border-radius: @border-radius-circle;
+			padding: 0px;
+							
+			&.on {
+				background-image: url("../images/com/main/ico-comm-pin-off-12.png");
+				background-color: rgba(255, 255, 255, .08);
+			}
+		}
+	}
+	
+	.cl-container.panel-body {
+		.cl-container.item-header {
+			background-color: #b4b8d1;
+			
+			.cl-output {
+				color: @component-text-color;
+				font-size: @font-size-base;
+				font-weight: @font-weight-bold;
+			}
+		}
+		
+		.cl-accordion {
+			.cl-accordion-header {
+				background-color: #b4b8d1;
+				color: @component-text-color;
+				font-size: @font-size-base;
+				font-weight: @font-weight-bold;
+				height: 32px;
+				padding: 4px 16px;
+				
+				.cl-accordion-expander {
+					background-image: url("../images/com/main/ico-comm-down-02-arrow-12.png");
+				}
+				
+				&.cl-activated {
+					.cl-accordion-expander {
+						background-image: url("../images/com/main/ico-comm-up-02-arrow-12.png");
+					}
+				}
+			}
+			.cl-accordion-section:not(.cl-accordion-placeholder) {
+				.cl-accordion-content {
+					border: none;
+					> .cl-container {
+						border: none;
+						
+						.cl-tabfolder {
+							.cl-tabfolder-header {
+								height: 30px;
+								
+								.cl-tabfolder-item {
+									padding: 7px 0px 8px;
+								}
+							}
+							
+							.cl-tabfolder-body {
+								border: none;
+							}
+						}
+					}
+				}
+			}
+			
+			.cl-accordion-section+.cl-accordion-header {
+				margin-top: 2px;
+			}	
+		}
+		
+		/* 즐겨찾기 체크박스 */
+		.cl-checkbox.favorite {
+			.cl-checkbox-icon {
+				background-image: url("../images/com/main/ico-comm-favorites-01-12.png");
+			}
+			
+			&.cl-checked {
+				.cl-checkbox-icon {
+					background-image: url("../images/com/main/ico-comm-favorites-02-12.png");
+				}
+			}
+		}
+		
+		/* 수정 및 접기 버튼 */
+		.cl-button.btn-modify {
+			background-image: url("../images/com/main/ico-comm-modify-12.png");
+			background-position: left center;
+			color: @teal;
+			font-size: @h5-font-size;
+			padding: 0px 0px 0px 15px;
+		}
+		
+		.cl-button.btn-fold {
+			background-image: url("../images/com/main/ico-comm-close-9.png");
+			background-position: left center;
+			color: @teal;
+			font-size: @h5-font-size;
+			padding: 0px 0px 0px 12px;
+		}
+		
+		/* 텍스트 */
+		.cl-output.txt {
+			color: @gray-700;
+			font-size: @h5-font-size;
+		}
+		
+		/* 카드 확장 */
+		.cl-container.card {
+			border: none;
+			cursor: pointer;
+			
+			&.active {
+				background-color: @gray-100;
+			}
+		}
+		
+		.cl-container {
+			.cl-layout-wrap.row {
+				.cl-container.card {
+					background-image: linear-gradient(@gray-300, @gray-300);
+					background-repeat: no-repeat;
+					background-position: center top;
+					background-size: calc(100% - 30px) 1px;	
+				}
+				
+				&.cl-last-row {
+					.cl-container.card {
+						background-image: linear-gradient(@gray-300, @gray-300), linear-gradient(@gray-300, @gray-300);
+						background-position: center top, center bottom;
+					}
+				}
+				
+				&.border-top-0.cl-first-row {
+					.cl-container.card {
+						background-image: none;
+					}
+				}
+			}
+		}
+		
+		.cl-container {
+			.cl-layout-wrap.border-with-top {
+				border-top: 1px solid @gray-300;
+			}
+			
+			.cl-layout-wrap.border-with-bottom {
+				border-bottom: 1px solid @gray-300;
+			}
+			
+			.cl-layout-wrap.border-with-middle {
+				&:not(.cl-first-row) {
+					border-top: 1px solid @gray-300;
+				}
+			}
+			
+			.cl-layout-wrap.border-with-all {
+				border-top: 1px solid @gray-300;
+				
+				&.cl-last-row {
+					border-bottom: 1px solid @gray-300;
+				}
+			}
+		}
+		
+		/* 공지사항 배지 */
+		.cl-output.notice-badge {
+			background-color: @blue;
+			border-radius: @border-radius-circle;
+			color: @white;
+			text-align: center;
+		}
+		
+		/* 즐겨찾기 텍스트 */
+		.cl-output.dot-txt {
+			color: @gray-700;
+			font-size: @h5-font-size;
+			padding-left: 7px;
+			
+			&:before {
+				content: "";
+				position: absolute;
+				width: 2px;
+				height: 2px;
+				left: 0px;
+				top: 6px;
+				background-color: @black;
+				border-radius: @border-radius-circle;
+			}
+		}
+		
+		/* 콜센터 버튼 */
+		.cl-button {
+			span.btn-badge {
+				background-color: @white;
+				border-radius: @border-radius-circle;
+				color: @secondary;
+				padding: 3px 6px;
+				margin-left: 5px;
+			}
+		}
+		
+		.cl-button.btn-waiting,
+		.cl-button.btn-call,
+		.cl-button.btn-hangup,
+		.cl-button.btn-hold {
+			background-position: 10px center;
+			font-weight: @font-weight-medium;
+			padding: 0px 0px 0px 27px;
+			text-align: left;
+		}
+		
+		.cl-button.btn-waiting {
+			background-image: url("../images/com/related/ico-comm-time-01-12.png");	
+		}
+		
+		.cl-button.btn-call {
+			background-image: url("../images/com/related/ico-comm-call-01-12.png");	
+		}
+		
+		.cl-button.btn-hangup {
+			background-image: url("../images/com/related/04-ico-comm-hangup-01-12.png");	
+		}
+		
+		.cl-button.btn-hold {
+			background-image: url("../images/com/related/04-ico-comm-hold-01-12.png");
+			background-position: 12px center;
+			padding-left: 25px;
+		}
+	}
+}
+
+
+/************************************************
+ * 기타 연관업무
+ ************************************************/
+ 
+.cl-container.quickbar {
+	background-color: @white;
+	border-left: 1px solid @gray-500;
+	
+	.cl-button {
+		&.btn-primary04,
+		&.btn-primary03,
+		&.btn-primary02 {
+			border-radius: @border-radius;
+			padding: 0px;
+			
+			.cl-text {
+				line-height: 18px !important;
+			}
+		}
+		
+		&:not(.btn-primary04) {
+			font-size: @font-size-base;
+		}
+	}
+	
+	.cl-button.btn-memo,
+	.cl-button.btn-pinpad,
+	.cl-button.btn-record {
+		background-color: @transparent;
+		background-position: left center;
+		border: none;
+		border-radius: @border-radius-0;
+		color: #8b91ca;
+		font-size: @h5-font-size;
+		font-weight: @font-weight-medium;
+		padding: 0px 0px 0px 31px;
+		text-align: left;
+	}
+	
+	.cl-button.btn-memo {
+		background-image: url("../images/com/related/ico-comm-memo-26.png");
+	}
+	
+	.cl-button.btn-pinpad {
+		background-image: url("../images/com/related/ico-comm-lock-26.png");
+	}
+	
+	.cl-button.btn-record {
+		background-image: url("../images/com/related/ico-comm-mic-26.png");
+	}
+}
+
+
+/************************************************
+ * 통합설계 대시보드
+ ************************************************/
+ 
+.SFA0000100 {
+	background-image: url("../images/com/dashboard/main-img-01.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	.cl-container.box {
+		background-color: @component-background-color;
+		border-radius: @border-radius-lg;
+		
+		.cl-output {
+			font-size: @font-size-md;
+		}
+		
+		// 보험 설명 영역 (상품 안내)
+		&.intro {
+			.cl-output.tit {
+				font-size: 32px;
+				font-weight: @font-weight-bold;
+			}
+		}
+		
+		&.sub-intro-01,
+		&.sub-intro-02 {
+			.cl-output {
+				color: @white;
+				font-size: @font-size-base;
+			}
+		}
+		
+		&.sub-intro-01 {
+			background-color: #6ecaff;
+		}
+		
+		&.sub-intro-02 {
+			background-color: #9ea5ef;
+		}
+		
+		// 퀵 가설이력
+		&.quick-list {
+			.cl-container.card {
+				background-color: @success-dim;
+				border: none;
+				border-radius: 20px;
+				
+				.cl-output.tit {
+					font-size: 18px;
+					font-weight: @font-weight-bold;
+				}
+			}
+		}
+		
+		// 오늘의 할 일
+		&.todo {
+			.cl-button {
+				background-color: @transparent;
+				border: none;
+				border-radius: @border-radius-0;
+				color: @black;
+				font-size: @font-size-md;
+				padding: 0px;
+				
+				.cl-icon {
+					background-color: @success-dim;
+					background-size: auto;
+					background-position: center;
+					border-radius: 24px;
+					width: 84px;
+					height: 84px;
+				}
+				
+				&.cl-icon-align-top {
+					.cl-icon {
+						margin-bottom: 7px;
+					}
+				}
+				
+				&.ic-01 {
+					.cl-icon {
+						background-image: url("../images/com/dashboard/today-icon-01.png") !important;
+					}
+				}
+				
+				&.ic-02 {
+					.cl-icon {
+						background-image: url("../images/com/dashboard/today-icon-02.png") !important;
+					}
+				}
+				
+				&.ic-03 {
+					.cl-icon {
+						background-image: url("../images/com/dashboard/today-icon-03.png") !important;
+					}
+				}
+				
+				&.ic-04 {
+					.cl-icon {
+						background-image: url("../images/com/dashboard/today-icon-04.png") !important;
+					}
+				}
+				
+				&.ic-05 {
+					.cl-icon {
+						background-image: url("../images/com/dashboard/today-icon-05.png") !important;
+					}
+				}
+			}
+		}
+		
+		// 서비스 바로가기 및 안내사항
+		&.shortcut {
+			.cl-output.blt-txt {
+				&:before {
+					top: 8px;
+				}
+			}
+		}
+	}
+}

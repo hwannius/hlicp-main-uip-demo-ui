@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-beecd941" version="1.0.4074">
+  <head std:sid="head-1d5453e2">
+    <std:metadata>
+      <std:property key="template-file" value="templates/팝업/0.알림/알림_확인형.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-2784b9e3" id="Hlicp-WIDE" name="Hlicp-WIDE" minwidth="3160px" width="3160px" height="954px" active="false"/>
+    <screen std:sid="screen-aa0e04dd" id="Hlicp-FULL" name="Hlicp-FULL" minwidth="1600px" maxwidth="3159px" width="1600px" height="954px"/>
+    <screen std:sid="screen-b1ad96e5" id="Hlicp-DIV" name="Hlicp-DIV" minwidth="790px" maxwidth="1599px" width="790px" height="954px"/>
+    <screen std:sid="screen-d50d5a11" id="Hlicp-POP" name="Hlicp-POP" maxwidth="789px" width="767px" height="400px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="400" active="true"/>
+    <cl:model std:sid="model-97922849"/>
+    <cl:appspec/>
+  </head>
+  <body std:sid="body-0e047db6" class="pop-content-body">
+    <cl:group std:sid="group-375497a8">
+      <cl:verticaldata std:sid="v-data-53ee6da0" width="400px" height="408px" autosize="height"/>
+      <cl:group std:sid="group-ac0d1df6" class="form-normal">
+        <std:metadata>
+          <std:property key="template-uuid" value="4c531756-7ed2-433a-b263-15d23c5c30e1"/>
+          <std:property key="template-rev" value="7"/>
+        </std:metadata>
+        <cl:verticaldata std:sid="v-data-e7517748" width="1150px" height="126px" autosize="height"/>
+        <cl:output std:sid="output-7974807a" class="label" value="구강암">
+          <cl:formdata std:sid="f-data-3b639dcd" row="0" col="0" rowspan="1" colspan="2"/>
+        </cl:output>
+        <cl:output std:sid="output-96e7c632" class="text-center" value="사고일자">
+          <cl:formdata std:sid="f-data-b27a5e0b" row="1" col="0"/>
+        </cl:output>
+        <cl:output std:sid="output-51d4792c" class="text-center" value="2021-02">
+          <cl:formdata std:sid="f-data-408d9fd3" row="1" col="1"/>
+        </cl:output>
+        <cl:output std:sid="output-8506a19a" class="text-center" value="치료방법">
+          <cl:formdata std:sid="f-data-75c2af35" row="2" col="0"/>
+        </cl:output>
+        <cl:output std:sid="output-06398cb8" class="text-center" value="수술">
+          <cl:formdata std:sid="f-data-974654f6" row="2" col="1"/>
+        </cl:output>
+        <cl:group std:sid="group-4cea69c1">
+          <cl:formdata std:sid="f-data-4a284f85" row="3" col="0" rowspan="1" colspan="2"/>
+          <cl:button std:sid="button-fc76a47f" id="btn2" class="btn-primary03" value="삭제">
+            <cl:formdata std:sid="f-data-fccc346b" row="0" col="1"/>
+          </cl:button>
+          <cl:button std:sid="button-c461abd4" id="btn3" class="btn-primary02" value="수정">
+            <cl:formdata std:sid="f-data-cac29bf8" row="0" col="0"/>
+          </cl:button>
+          <cl:formlayout std:sid="f-layout-4d6ab3fe" scrollable="false" hspace="11px" vspace="5px" hseparatorwidth="1" vseparatorwidth="1">
+            <cl:rows length="26" unit="PIXEL" autoSizing="true"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-696fed60" scrollable="false" hspace="11px" vspace="5px" top-margin="2px" right-margin="5px" bottom-margin="2px" left-margin="5px" hseparatorwidth="1" hseparatortype="BY_CLASS" vseparatorwidth="1" vseparatortype="BY_CLASS">
+          <cl:rows length="26" unit="PIXEL" autoSizing="true" shadetype="BY_CLASS"/>
+          <cl:rows length="26" unit="PIXEL" autoSizing="true"/>
+          <cl:rows length="26" unit="PIXEL" autoSizing="true"/>
+          <cl:rows length="26" unit="PIXEL" autoSizing="true"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:group std:sid="group-e28889b2" class="form-normal">
+        <std:metadata>
+          <std:property key="template-uuid" value="4c531756-7ed2-433a-b263-15d23c5c30e1"/>
+          <std:property key="template-rev" value="7"/>
+        </std:metadata>
+        <cl:verticaldata std:sid="v-data-212c90b6" width="362px" height="126px" autosize="height"/>
+        <cl:output std:sid="output-0d67c2a9" class="label" value="합병증 동반한 당뇨">
+          <cl:formdata std:sid="f-data-21b2f8d4" row="0" col="0" rowspan="1" colspan="2"/>
+        </cl:output>
+        <cl:output std:sid="output-c56518b7" class="text-center" value="사고일자">
+          <cl:formdata std:sid="f-data-ea24fe33" row="1" col="0"/>
+        </cl:output>
+        <cl:output std:sid="output-cf17aba0" class="text-center" value="2021-02">
+          <cl:formdata std:sid="f-data-d1d308e6" row="1" col="1"/>
+        </cl:output>
+        <cl:output std:sid="output-764b52ff" class="text-center" value="치료방법">
+          <cl:formdata std:sid="f-data-3c27105e" row="2" col="0"/>
+        </cl:output>
+        <cl:output std:sid="output-4bdd35bb" class="text-center" value="수술">
+          <cl:formdata std:sid="f-data-715dd300" row="2" col="1"/>
+        </cl:output>
+        <cl:group std:sid="group-d88bda08">
+          <cl:formdata std:sid="f-data-ef6794d6" row="3" col="0" rowspan="1" colspan="2"/>
+          <cl:button std:sid="button-a3d6567a" id="btn5" class="btn-primary03" value="삭제">
+            <cl:formdata std:sid="f-data-b5b880ab" row="0" col="1"/>
+          </cl:button>
+          <cl:button std:sid="button-c98c7c51" id="btn4" class="btn-primary02" value="수정">
+            <cl:formdata std:sid="f-data-22a6d87a" row="0" col="0"/>
+          </cl:button>
+          <cl:formlayout std:sid="f-layout-e32324da" scrollable="false" hspace="11px" vspace="5px" hseparatorwidth="1" vseparatorwidth="1">
+            <cl:rows length="26" unit="PIXEL" autoSizing="true"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-9698d3fe" scrollable="false" hspace="11px" vspace="5px" top-margin="2px" right-margin="5px" bottom-margin="2px" left-margin="5px" hseparatorwidth="1" hseparatortype="BY_CLASS" vseparatorwidth="1" vseparatortype="BY_CLASS">
+          <cl:rows length="26" unit="PIXEL" autoSizing="true" shadetype="BY_CLASS"/>
+          <cl:rows length="26" unit="PIXEL" autoSizing="true"/>
+          <cl:rows length="26" unit="PIXEL" autoSizing="true"/>
+          <cl:rows length="26" unit="PIXEL" autoSizing="true"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:group std:sid="group-34db3748" class="form-normal">
+        <std:metadata>
+          <std:property key="template-uuid" value="4c531756-7ed2-433a-b263-15d23c5c30e1"/>
+          <std:property key="template-rev" value="7"/>
+        </std:metadata>
+        <cl:verticaldata std:sid="v-data-8361c9a1" width="362px" height="126px" autosize="height"/>
+        <cl:output std:sid="output-d7a244b7" class="label" value="알츠하이머 치매">
+          <cl:formdata std:sid="f-data-fca8769d" row="0" col="0" rowspan="1" colspan="2"/>
+        </cl:output>
+        <cl:output std:sid="output-b65daeaa" class="text-center" value="사고일자">
+          <cl:formdata std:sid="f-data-18b4ac06" row="1" col="0"/>
+        </cl:output>
+        <cl:output std:sid="output-2071bf83" class="text-center" value="2021-02">
+          <cl:formdata std:sid="f-data-14a426fd" row="1" col="1"/>
+        </cl:output>
+        <cl:output std:sid="output-54c3298a" class="text-center" value="치료방법">
+          <cl:formdata std:sid="f-data-0fae6fac" row="2" col="0"/>
+        </cl:output>
+        <cl:output std:sid="output-eb0de37b" class="text-center" value="수술">
+          <cl:formdata std:sid="f-data-1a1d3257" row="2" col="1"/>
+        </cl:output>
+        <cl:group std:sid="group-bd6a8d5a">
+          <cl:formdata std:sid="f-data-a594b063" row="3" col="0" rowspan="1" colspan="2"/>
+          <cl:button std:sid="button-dcfdbf57" id="btn6" class="btn-primary03" value="삭제">
+            <cl:formdata std:sid="f-data-33531f79" row="0" col="1"/>
+          </cl:button>
+          <cl:button std:sid="button-97331aa2" id="btn8" class="btn-primary02" value="수정">
+            <cl:formdata std:sid="f-data-80b9d8b4" row="0" col="0"/>
+          </cl:button>
+          <cl:formlayout std:sid="f-layout-5b176bb5" scrollable="false" hspace="11px" vspace="5px" hseparatorwidth="1" vseparatorwidth="1">
+            <cl:rows length="26" unit="PIXEL" autoSizing="true"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-a7cead9a" scrollable="false" hspace="11px" vspace="5px" top-margin="2px" right-margin="5px" bottom-margin="2px" left-margin="5px" hseparatorwidth="1" hseparatortype="BY_CLASS" vseparatorwidth="1" vseparatortype="BY_CLASS">
+          <cl:rows length="26" unit="PIXEL" autoSizing="true" shadetype="BY_CLASS"/>
+          <cl:rows length="26" unit="PIXEL" autoSizing="true"/>
+          <cl:rows length="26" unit="PIXEL" autoSizing="true"/>
+          <cl:rows length="26" unit="PIXEL" autoSizing="true"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-d1113772" spacing="15"/>
+    </cl:group>
+    <cl:group std:sid="group-f5a9fdc0" class="button-table-area">
+      <cl:verticaldata std:sid="v-data-cee7764e" width="727px" height="30px" autosize="height"/>
+      <cl:group std:sid="group-20b8d0aa" class="button-table-bottom-left-area">
+        <cl:formdata std:sid="f-data-7f575d86" row="0" col="0"/>
+        <cl:flowlayout std:sid="f-layout-5fb1d0db" scrollable="false" hspacing="10" vspacing="0" linewrap="false"/>
+      </cl:group>
+      <cl:group std:sid="group-9d84ea4c" class="button-table-bottom-center-area">
+        <cl:formdata std:sid="f-data-71b9d8fa" row="0" col="1"/>
+        <cl:button std:sid="button-34a36e06" class="btn-primary01 btn-md" value="추가병력 고지">
+          <cl:flowlayoutdata std:sid="f-data-98749e39" width="101px" height="30px" autosize="width"/>
+        </cl:button>
+        <cl:flowlayout std:sid="f-layout-60c2852b" scrollable="false" hspacing="10" vspacing="0" halign="center"/>
+      </cl:group>
+      <cl:group std:sid="group-5aa6c261" class="button-table-bottom-right-area">
+        <cl:formdata std:sid="f-data-811afdad" row="0" col="2"/>
+        <cl:flowlayout std:sid="f-layout-872f1d8d" scrollable="false" hspacing="10" vspacing="0" halign="right" linewrap="false"/>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-c22db278" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="170" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" minlength="43" syncminlength="false"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-bca14e22" spacing="20"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler>
+      <std:guide position="380"/>
+    </std:vruler>
+  </std:studiosetting>
+</html>

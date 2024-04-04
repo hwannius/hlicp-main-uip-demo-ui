@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-38143dca" version="1.0.3985">
+  <head std:sid="head-8580dac1">
+    <screen std:sid="screen-12255827" id="default" name="default" minwidth="1644px" width="1644px" height="903px"/>
+    <screen std:sid="screen-b806cfc5" id="tablet" name="tablet" maxwidth="1643px" width="1541px" height="903px"/>
+    <cl:model std:sid="model-ec87b654"/>
+    <cl:appspec title="[디자인가이드] 파일업로드"/>
+  </head>
+  <body std:sid="body-7e28324f" class="pb-body">
+    <cl:group std:sid="group-b655417b" class="pb-content">
+      <cl:verticaldata std:sid="v-data-4fee3788" width="1644px" height="242px" autosize="height"/>
+      <cl:udc std:sid="ud-control-27c2a286" type="udc.hk.pb.Breadcrumbs">
+        <cl:verticaldata std:sid="v-data-d3766577" width="1544px" height="174px" autosize="height"/>
+      </cl:udc>
+      <cl:output std:sid="output-75a1799d" class="text-red" value="※ 기타 지시문 작성">
+        <cl:verticaldata std:sid="v-data-c42713a6" width="100px" height="20px" syncminheight="true" autosize="height"/>
+      </cl:output>
+      <cl:verticallayout std:sid="v-layout-30aa5659" scrollable="false" spacing="20" leftmargin="50" rightmargin="50" topmargin="0" bottommargin="20"/>
+    </cl:group>
+    <cl:group std:sid="group-110042a3" class="pb-content">
+      <cl:verticaldata std:sid="v-data-aa09dc49" width="1644px" height="1133px" autosize="height"/>
+      <cl:group std:sid="group-694ca9c8">
+        <cl:verticaldata std:sid="v-data-31e11d2b" width="1544px" height="243px" autosize="height"/>
+        <cl:udc std:sid="ud-control-5fef28af" type="udc.hk.pb.SectionTitle">
+          <cl:verticaldata std:sid="v-data-e284631d" width="1544px" height="29px"/>
+          <cl:property name="title" value="파일업로드" type="string"/>
+        </cl:udc>
+        <cl:group std:sid="group-e80078da">
+          <cl:verticaldata std:sid="v-data-0407a835" width="400px" height="200px" autosize="height"/>
+          <cl:fileupload std:sid="f-upload-1fa7208e">
+            <cl:flowlayoutdata std:sid="f-data-f3d6fcfe" width="500px" height="200px"/>
+          </cl:fileupload>
+          <cl:flowlayout std:sid="f-layout-7347acbb" scrollable="false" hspacing="30" vspacing="10"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-816480d1" scrollable="false" spacing="14"/>
+      </cl:group>
+      <cl:group std:sid="group-1c24c0db">
+        <cl:verticaldata std:sid="v-data-a1fbb020" width="1544px" height="741px" autosize="height"/>
+        <cl:udc std:sid="ud-control-d67fed68" type="udc.hk.pb.SectionTitle">
+          <cl:verticaldata std:sid="v-data-55f62aa9" width="1544px" height="29px" autosize="none"/>
+          <cl:property name="title" value="기본속성" type="string"/>
+          <cl:property name="subText" value="● = 사용 / ○ = 미사용 / △ = 상황에 따라 사용 / ★ = 필수로 작성" type="string"/>
+          <cl:property name="subTextStyle" value="text-red" type="enumeration"/>
+        </cl:udc>
+        <cl:group std:sid="group-bedd990d" class="pb-table">
+          <cl:verticaldata std:sid="v-data-2e6e8d4c" width="400px" height="480px" autosize="height"/>
+          <cl:output std:sid="output-320c8d70" class="pb-label" value="속성명">
+            <cl:formdata std:sid="f-data-1338aeee" row="0" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-33b27228" class="pb-label" value="사용여부">
+            <cl:formdata std:sid="f-data-39ff7db1" row="0" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-9680275b" class="pb-label" value="적용값">
+            <cl:formdata std:sid="f-data-a286c660" row="0" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-cd4281cf" class="pb-label" value="내용">
+            <cl:formdata std:sid="f-data-f62ab68c" row="0" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-fe39a97e" class="pb-label" value="buttons">
+            <cl:formdata std:sid="f-data-a5011ccb" row="1" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-9bb507d7" class="text-center" value="●">
+            <cl:formdata std:sid="f-data-de971aa0" row="1" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-f482122b" class="text-center" value="[&quot;add&quot;, &quot;remove&quot;, &quot;send&quot;]">
+            <cl:formdata std:sid="f-data-61a9453b" row="1" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-6bac81bf" value="컨트롤에 표시할 버튼 설정">
+            <cl:formdata std:sid="f-data-0cdbc0c1" row="1" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-667fd02b" class="pb-label" value="droppableFile">
+            <cl:formdata std:sid="f-data-5170d53c" row="2" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-c3507cc2" class="text-center" value="△">
+            <cl:formdata std:sid="f-data-5fc4e6b6" row="2" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-b33338a5" class="text-center" value="(개발공통에 따름)">
+            <cl:formdata std:sid="f-data-d2006137" row="2" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-d30cf35f" value="파일 드롭 가능 여부">
+            <cl:formdata std:sid="f-data-d15eb577" row="2" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-e726aea6" class="pb-label" value="emptyMessage">
+            <cl:formdata std:sid="f-data-29f6248c" row="3" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-133dd64d" class="text-center" value="●">
+            <cl:formdata std:sid="f-data-6c5bb47f" row="3" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-90a93b0f" class="text-center" value="&quot;Double click or Drag Drop&quot;">
+            <cl:formdata std:sid="f-data-5ae982f2" row="3" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-7858e463" value="빈 값일 때 표시되는 텍스트">
+            <cl:formdata std:sid="f-data-9809887d" row="3" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-bbe5225f" class="pb-label" value="extensions">
+            <cl:formdata std:sid="f-data-10efe71a" row="4" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-ce257a01" class="text-center" value="●">
+            <cl:formdata std:sid="f-data-0b1c86af" row="4" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-eee27e6d" class="text-center" value="(개발공통에 따름)">
+            <cl:formdata std:sid="f-data-76d38a35" row="4" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-07234358" value="파일 열기 창에서 보여줄 파일 형식">
+            <cl:formdata std:sid="f-data-87f51300" row="4" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-90bf151d" class="pb-label" value="fieldLabel">
+            <cl:formdata std:sid="f-data-bf4d6266" row="5" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-369274d4" class="text-center" value="★">
+            <cl:formdata std:sid="f-data-bfbb6cf3" row="5" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-80c99d61" class="text-center" value="(논리적 레이블 값)">
+            <cl:formdata std:sid="f-data-31bf82cb" row="5" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-b50def24" value="폼인 경우 1:1로 대응하는 레이블(라벨)의 값을 입력하거나 컨트롤에서 입력되는 값의 논리적인 레이블(라벨)의 값을 입력">
+            <cl:formdata std:sid="f-data-81921255" row="5" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-94e72634" class="pb-label" value="footerVisible">
+            <cl:formdata std:sid="f-data-ce478e37" row="6" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-39e91e4c" class="text-center" value="●">
+            <cl:formdata std:sid="f-data-7cd95d09" row="6" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-dd7d0859" class="text-center" value="true">
+            <cl:formdata std:sid="f-data-6b9659e3" row="6" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-01b6207c" value="파일업로드 푸터 표시 여부">
+            <cl:formdata std:sid="f-data-d91103a5" row="6" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-7c908fa6" class="pb-label" value="headerVisible">
+            <cl:formdata std:sid="f-data-0d0234ff" row="7" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-430eb0c6" class="text-center" value="●">
+            <cl:formdata std:sid="f-data-27cd0aeb" row="7" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-daa7d2af" class="text-center" value="true">
+            <cl:formdata std:sid="f-data-05f0d8f9" row="7" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-a414780c" value="파일업로드 헤더 표시 여부">
+            <cl:formdata std:sid="f-data-020e0c55" row="7" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-265639b0" class="pb-label" value="limitFileSize">
+            <cl:formdata std:sid="f-data-1ae8af2a" row="8" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-9eb1a964" class="text-center" value="●">
+            <cl:formdata std:sid="f-data-2b1fc9ab" row="8" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-1c6c45f2" class="text-center" value="(개발공통에 따름)">
+            <cl:formdata std:sid="f-data-11b935a9" row="8" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-d2359b11" value="업로드할 수 있는 파일의 최대 데이터 크기">
+            <cl:formdata std:sid="f-data-20757e06" row="8" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-2922559c" class="pb-label" value="limitFileSizeUnit">
+            <cl:formdata std:sid="f-data-dce4e0a8" row="9" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-7470796d" class="text-center" value="●">
+            <cl:formdata std:sid="f-data-0f8d08d9" row="9" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-78146760" class="text-center" value="(개발공통에 따름)">
+            <cl:formdata std:sid="f-data-7858ed9a" row="9" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-d060beaa" value="파일 데이터 크기에 대한 단위">
+            <cl:formdata std:sid="f-data-39acf714" row="9" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-43041e0c" class="pb-label" value="limitFilePerSize">
+            <cl:formdata std:sid="f-data-98ab5988" row="10" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-0f41eb86" class="text-center" value="●">
+            <cl:formdata std:sid="f-data-6a1065f5" row="10" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-4de369c1" class="text-center" value="(개발공통에 따름)">
+            <cl:formdata std:sid="f-data-be0113b4" row="10" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-3f5fb265" value="파일당 업로드할 수 있는 최대 데이터 크기">
+            <cl:formdata std:sid="f-data-2936b149" row="10" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-a903ac0c" class="pb-label" value="limitFileSizePerUnit">
+            <cl:formdata std:sid="f-data-8ebbea66" row="11" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-cfd3fd76" class="text-center" value="●">
+            <cl:formdata std:sid="f-data-3c4f7056" row="11" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-637896ff" class="text-center" value="(개발공통에 따름)">
+            <cl:formdata std:sid="f-data-aeb226d1" row="11" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-582708df" value="파일당 데이터 크기에 대한 단위">
+            <cl:formdata std:sid="f-data-2aebee0c" row="11" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-8fd0653d" class="pb-label" value="maxFileCount">
+            <cl:formdata std:sid="f-data-bd99c322" row="12" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-782cc569" class="text-center" value="△">
+            <cl:formdata std:sid="f-data-e114ec46" row="12" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-26fdf0e8" class="text-center" value="(개발공통에 따름)">
+            <cl:formdata std:sid="f-data-bad8ad64" row="12" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-a38b14bb" value="최대로 업로드할 수 있는 파일의 개수. &quot;-1&quot;로 설정 시 파일 개수를 제한하지 않음">
+            <cl:formdata std:sid="f-data-fa033944" row="12" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-16382fbb" class="pb-label" value="tooltip">
+            <cl:formdata std:sid="f-data-614165d4" row="13" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-97ab53e3" class="text-center" value="△">
+            <cl:formdata std:sid="f-data-1c2e7796" row="13" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-5ffc2ed7" class="text-center" value="(컨트롤의 힌트)">
+            <cl:formdata std:sid="f-data-1131ad47" row="13" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-ab56ca87" value="마우스 오버 시 인풋박스에 대한 힌트 제공 필요할 때 사용. 해당 속성을 작성하면 title 속성으로 적용됨">
+            <cl:formdata std:sid="f-data-d04b392a" row="13" col="3"/>
+          </cl:output>
+          <cl:formlayout std:sid="f-layout-a8d12b64" scrollable="false" hspace="8px" vspace="8px" top-margin="4px" right-margin="4px" bottom-margin="4px" left-margin="4px" hseparatorwidth="1" hseparatortype="BY_CLASS" vseparatorwidth="1" vseparatortype="BY_CLASS">
+            <cl:rows length="28" unit="PIXEL" autoSizing="false" hidden="false" shadetype="BY_CLASS" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="150" unit="PIXEL" autoSizing="false" hidden="false" shadetype="BY_CLASS" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="60" unit="PIXEL" autoSizing="false" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="220" unit="PIXEL" autoSizing="false" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-c1dfc9fb" scrollable="false" spacing="14"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-a1c44b73" scrollable="false" spacing="40" leftmargin="50" rightmargin="50" topmargin="50" bottommargin="50"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-3ab014a3" spacing="14"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

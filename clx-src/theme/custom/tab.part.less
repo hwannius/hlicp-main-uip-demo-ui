@@ -1,0 +1,99 @@
+@import "../custom-settings.part.less";
+
+/************************************************
+ * 통합가입설계 탭 헤더 디테일
+ ************************************************/
+ 
+.cl-tabfolder {
+	.cl-tabfolder-header.has-detail {
+		height: 61px;
+		
+		.cl-empty-area {
+			border-bottom: none;
+		}
+		
+		.cl-tabfolder-item {
+			background-image: linear-gradient(@gray-500, @gray-500);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: calc(100% - 40px) 1px;
+			padding: 0px 20px 0px 20px;
+			
+			.cl-text {
+				padding-left: 8px;
+				
+				span.caption {
+					color: @component-text-color;
+					display: block;
+					font-size: @font-size-base;
+					font-weight: @font-weight-regular;
+				}
+			}
+			
+			.cl-tabfolder-button {
+				background-position: center top;
+				margin: 11px 0px auto 0px;
+			}
+			
+		}
+		
+		+ .cl-tabfolder-body {
+			border: none;
+		}
+	}
+}
+
+/************************************************
+ * 탭폴더에 버튼이 배치되는 경우
+ ************************************************/
+ 
+.cl-tabfolder {
+	.cl-tabfolder-header:not(.has-detail) {
+		.button-table-top-area {
+			border-bottom: 1px solid #a0a9b4;
+		}
+	}
+}
+
+
+/************************************************
+ * 탭 헤더 컨트롤 trailing
+ ************************************************/
+
+.cl-button.btn-tab-trailing {
+	background-image: url("../images/controls/tabfolder/ico-mdi-plus-10.png");
+	background-position: calc(50% - 20px);
+	background-color: @tab-item-background-color;
+	border: @tab-item-border-base;
+	border-left: none;
+	border-radius: @tab-item-border-radius;
+	color: @tab-item-text-color;
+	font-size: @font-size-base;
+	font-weight: @font-weight-bold;
+	
+	&:not(.cl-disabled):hover,
+ 	&:focus,
+ 	&.cl-focus,
+ 	&:not(.cl-disabled).cl-activated,
+ 	&:not(.cl-disabled):active {
+		background-image: url("../images/controls/tabfolder/ico-mdi-plus-10.png");
+ 		background-color: @tab-item-hover-background-color;
+ 		border-color: @tab-item-hover-border-color;
+ 		color: @tab-item-hover-text-color;
+ 	}
+}
+
+
+/************************************************
+ * 탭 아이템에 닫기 버튼을 사용하는 경우
+ ************************************************/
+ 
+.cl-tabfolder.use-closable {
+	.cl-tabfolder-header {
+		.cl-tabfolder-item {
+			.cl-text {
+				padding-left: 17px;
+			}
+		}
+	}
+}

@@ -1,0 +1,409 @@
+@import "../custom-settings.part.less";
+
+/************************************************
+ * 인풋 계열 및 셀렉션 계열 컨트롤 스타일
+ ************************************************/
+
+
+/************************************************
+ * [컴포넌트] 콤보박스
+ ************************************************/
+ 
+.cl-combobox.btn-dropdown-primary01 {
+	background-color: @teal;
+	border-color: @teal;
+	color: @white;
+	
+	.cl-text {
+		&.cl-placeholder {
+			color: @info-dim !important;
+		}
+	}
+	
+	.cl-combobox-button {
+		background-image: url("../images/controls/combobox/ico-input-up-01-arrow-8.png");
+	}
+	
+	&.cl-opened {
+		&.cl-focus {
+			border-color: @teal;
+		}
+
+		.cl-combobox-button {
+			background-image: url("../images/controls/combobox/ico-input-up-01-arrow-8.png");
+		}
+		
+		&.cl-opened-top {
+			.cl-combobox-button {
+				background-image: url("../images/controls/combobox/ico-input-down-01-arrow-8.png");
+			}
+		}
+	}
+	
+	&.cl-focus {
+		border-color: @info-dim;
+	}
+	
+	&.cl-disabled {
+		color: #91c2eb;
+	}
+}
+
+.cl-combobox-list.btn-dropdown-primary01 {
+	background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+	background-repeat: no-repeat;
+	background-size: 100% 1px;
+	background-color: @teal;
+	border: none;
+	color: @white;
+	
+	&.cl-top {
+		background-position: left bottom;
+	}
+	
+	&.cl-bottom {
+		background-position: left top;
+	}
+	
+	.cl-combobox-item {
+		&.cl-selected {
+			background-color: rgba(255, 255, 255, 0.3);
+			color: @white;
+		}
+		
+		&:not(.cl-disabled) {
+			&:not(.cl-selected):hover, &:not(.cl-selected).cl-hover{
+				background-color: @list-item-hover-background-color;
+				color: @white; //@list-item-hover-text-color;
+			}
+		}
+	}
+}
+ 
+.cl-combobox.btn-dropdown-primary02 {
+	border-color: #a0a2a4;
+	
+	&.cl-opened {
+		&.cl-focus {
+			border-color: #a0a2a4;
+		}
+		
+		&.cl-opened-top {
+		}
+		
+		&.cl-opened-bottom {
+			.cl-combobox-button {
+				background-image: url("../images/controls/combobox/ico_input_up01_arrow_8.png");
+			}
+		}
+	}
+	
+	&.cl-focus {
+		border-color: @gray-300;
+	}
+}
+
+.cl-combobox-list.btn-dropdown-primary02 {
+	border-color: #a0a9b4;
+	color: @gray-600;
+	
+	.cl-combobox-item {
+		&.cl-selected {
+			background-color: rgba(255, 255, 255, 0.3);
+			color: @gray-600;
+		}
+		
+		&:not(.cl-disabled) {
+			&:not(.cl-selected):hover, &:not(.cl-selected).cl-hover{
+				background-color: @list-item-hover-background-color;
+				color: @gray-600; //@list-item-hover-text-color;
+			}
+		}
+	}
+}
+
+
+/************************************************
+ * [컴포넌트] 체크박스
+ * --> 토글
+ ************************************************/
+ 
+.cl-checkbox.switch01 {
+	font-size: 0px;
+	
+	.cl-checkbox-icon {
+		background-image: url("../images/controls/checkbox/toggle-01-default.png");
+		width: 60px;
+		min-height: 26px;
+		margin: 0px;
+	}
+	
+	&.cl-checked {
+		.cl-checkbox-icon {
+			background-image: url("../images/controls/checkbox/toggle-01-selective.png");
+		}
+	}
+	
+	&.cl-focus {
+		.cl-checkbox-icon {
+			outline: none;
+		}
+	}
+}
+ 
+.cl-checkbox.switch02 {
+	font-size: 0px;
+	
+	.cl-checkbox-icon {
+		background-image: url("../images/controls/checkbox/toggle-03-default.png");
+		width: 38px;
+		min-height: 16px;
+		margin: 0px;
+	}
+	
+	&.cl-checked {
+		.cl-checkbox-icon {
+			background-image: url("../images/controls/checkbox/toggle-03-selective.png");
+		}
+	}
+	
+	&.cl-focus {
+		.cl-checkbox-icon {
+			outline: none;
+		}
+	}
+}
+ 
+.cl-checkbox.switch03 {
+	background-color: #cecece;
+	border-radius: @border-radius-circle;
+	color: @white;
+	font-weight: @font-weight-bold;
+	padding: 2px 8px 2px 2px;
+	text-align: left;
+	
+	.cl-text {
+		width: 100%;
+		text-align: right;
+	}
+	
+	.cl-checkbox-icon {
+		background-image: @component-background-image;
+		background-color: @white;
+		border-radius: @border-radius-circle;
+		width: 22px;
+		min-height: 22px;
+		margin: 0px;
+	}
+	
+	&.cl-checked {
+		background-color: @teal;
+		padding: 2px 2px 2px 8px;
+		text-align: right;
+		
+		.cl-text {
+			text-align: left;
+		}
+		
+		.cl-checkbox-icon {
+			background-image: @component-background-image;
+		}
+	}
+	
+	&.cl-focus {
+		.cl-checkbox-icon {
+			outline: none;
+		}
+	}
+}
+
+/************************************************
+ * [컴포넌트] 라디오버튼
+ * --> 토글
+ ************************************************/
+
+.cl-radiobutton.toggle {
+	border-radius: @component-border-radius;
+	box-shadow: inset 0px 0px 0px 1px @component-border-color;
+	color: @gray-600;
+	
+	.cl-radiobutton-item {
+		min-height: 26px;
+		
+		.cl-radiobutton-field {
+			height: 100%;	
+		}
+		
+		.cl-text {
+			padding: 0px 10px;
+		}
+		
+		&.cl-selected {
+			border: 1px solid #7e85c1;
+			color: #7e85c1;
+		}
+	}
+}
+
+
+/************************************************
+ * [컴포넌트] 아코디언
+ * 2Depth
+ ************************************************/
+
+.cl-accordion {
+	.cl-accordion.subaccordion {
+		.cl-accordion-section + .cl-accordion-header {
+			margin-top: 1px;
+		}	
+	}
+}
+
+.cl-accordion.subaccordion {
+	.cl-accordion-header {
+		background-color: #98a3b9;
+		padding: 6px 10px;
+		height: 30px;
+		font-size: 13px;
+		
+		&.cl-activated {
+			background-color: #98a3b9;
+		}
+	}
+	
+	.cl-accordion-section:not(.cl-accordion-placeholder) {
+		.cl-accordion-content {
+			> .cl-container {
+				border: 1px solid #98a3b9;
+			}
+		}
+	}
+	
+	.cl-accordion-section + .cl-accordion-header {
+		margin-top: 12px;
+	}	
+}
+
+
+/************************************************
+ * [컴포넌트] 이미지 컨트롤 (아이템 에어리어)
+ ************************************************/
+ 
+.cl-image {
+	.cl-image-area-item {
+		stroke: none;
+	}
+}
+
+.cl-output.tooltip {
+	background-color: @white;
+	border: 1px solid @black;
+	border-radius: @border-radius;
+	padding: 5px 8px;
+	
+	&:before, &:after {
+		content: "";
+		position: absolute;
+	}
+	
+	&.arrow-left {
+		&:before {
+			border-right: 5px solid #000000;
+			border-top: 4px solid transparent;
+			border-bottom: 4px solid transparent;
+			left: -5px;
+			top: calc(50% - 4px);
+		}
+		
+		&:after {
+			border-right: 5px solid #ffffff;
+			border-top: 3px solid transparent;
+			border-bottom: 3px solid transparent;
+			left: -4px;
+			top: calc(50% - 3px);
+		}
+	}
+	
+	&.arrow-right {
+		&:before {
+			border-left: 5px solid #000000;
+			border-top: 4px solid transparent;
+			border-bottom: 4px solid transparent;
+			right: -5px;
+			top: calc(50% - 4px);
+		}
+		
+		&:after {
+			border-left: 5px solid #ffffff;
+			border-top: 3px solid transparent;
+			border-bottom: 3px solid transparent;
+			right: -4px;
+			top: calc(50% - 3px);
+		}
+	}
+}
+
+
+/************************************************
+ * [컴포넌트] 프로그레스
+ ************************************************/
+ 
+.cl-progress.progress {
+	border-radius: 13px;
+	
+	.cl-progress-bar {
+		border-radius: 13px;
+	}
+}
+
+/************************************************
+ * [컴포넌트] 패널 아코디언
+ ************************************************/
+.cl-accordion.pannel {
+	.cl-accordion-header {
+		background-color: #b4b8d1;
+		color: @component-text-color;
+		font-size: @font-size-base;
+		font-weight: @font-weight-bold;
+		height: 32px;
+		padding: 4px 16px;
+		
+		.cl-accordion-expander {
+			background-image: url("../images/com/main/ico-comm-down-02-arrow-12.png");
+		}
+		
+		&.cl-activated {
+			.cl-accordion-expander {
+				background-image: url("../images/com/main/ico-comm-up-02-arrow-12.png");
+			}
+		}
+	}
+	
+	.cl-accordion-section:not(.cl-accordion-placeholder) {
+		.cl-accordion-content {
+			border: none;
+			
+			> .cl-container {
+				border: none;
+				
+				.cl-tabfolder {
+					.cl-tabfolder-header {
+						height: 30px;
+						
+						.cl-tabfolder-item {
+							padding: 7px 0px 8px;
+						}
+					}
+					
+					.cl-tabfolder-body {
+						border: none;
+					}
+				}
+			}
+		}
+	}
+	
+	.cl-accordion-section + .cl-accordion-header {
+		margin-top: 2px;
+	}
+}

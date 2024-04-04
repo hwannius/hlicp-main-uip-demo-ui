@@ -1,0 +1,153 @@
+@import "../custom-settings.part.less";
+
+/************************************************
+ * 그리드 유틸
+ ************************************************/
+
+.cl-grid {
+	.cl-grid-detail {
+		.cl-grid-row {
+			// 호버 색상
+			&:hover, &.cl-hover {
+				background-color: @table-row-hover-background-color;
+				color: @table-row-hover-text-color;
+				
+				.cl-grid-cell {
+					background-color: @transparent;
+				}
+			}
+			
+			// 선택 색상
+			&.cl-selected {
+				.cl-grid-cell {
+					background-color: @transparent;
+				}
+			}
+			
+			.cl-grid-cell {
+				.cl-control {
+					&.cl-output, &.cl-htmlsnippet {
+						padding: (@input-padding-y + 2px) @input-padding-x;
+					}
+				}
+			}
+		}
+	}
+	
+	.cl-grid-header {
+		.cl-grid-cell {
+			&.required {
+				.cl-text {
+					&:after {
+						content: "*";
+						position: relative;
+						height: 100%;
+						color: #e53b4c;
+						margin: 0 0 0 2px;
+					}
+				}
+			}
+		}
+	}	
+	
+	// 강조 컬럼 또는 강조 셀
+	.cl-grid-header .cl-grid-cell,
+	.cl-grid-footer .cl-grid-cell {
+		&.highlight {
+			background-color: @info-dim !important;
+			color: @table-text-color;
+			font-weight: @font-weight-regular;
+			
+			.cl-control {
+				font-weight: @font-weight-regular;
+			}
+		}
+	}
+	
+	// 그리드 셀 내 여백이 적용되는 경우
+	.cl-grid-detail {
+		.cl-grid-row {
+			.cl-grid-cell {
+				.cl-control:not(.cl-border-none) {
+					&.cl-inputbox, &.cl-searchinput, &.cl-maskeditor, &.cl-numbereditor, &.cl-dateinput, &.cl-combobox, &.cl-textarea {
+						background-color: @component-background-color;
+					}
+				}				
+			}
+		}
+	}
+}
+
+
+/************************************************
+ * 그리드 푸터
+ ************************************************/
+ 
+.cl-grid {
+	.cl-grid-footer {
+		.cl-grid-cell {
+			&.sub-footer {
+				background-color: #f2fcff;
+				color: @table-text-color;
+				font-weight: @font-weight-regular;
+				
+				.cl-control {
+					font-weight: @font-weight-regular;
+				}
+			}
+		}
+	}
+}
+
+
+/************************************************
+ * 그리드 홀수행 제거
+ ************************************************/
+
+.cl-grid.table-no-stripe {
+	.cl-grid-detail {
+		.cl-grid-row {
+			&.cl-viewing {
+				&.cl-odd-row,
+				&.cl-even-row {
+					background-color: inherit;
+					
+					&.cl-selected, &.cl-editing, &:hover, &.cl-hover {
+						background-color: @table-row-selected-background-color;
+						color: @table-row-selected-text-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/************************************************
+ * 그리드 자동 높이
+ ************************************************/
+
+.cl-grid.table-at {
+	//border-bottom: none;
+	min-height: 127px;
+}
+
+/************************************************
+ * 그리드 디테일 셀 강조
+ ************************************************/
+ 
+.highlight-cell-01 {
+	background-color: @gray-100;
+}
+ 
+.highlight-cell-02 {
+	background-color: @danger-dim;
+}
+ 
+.highlight-cell-03 {
+	background-color: @primary-dim;
+}
+ 
+.highlight-cell-04 {
+	background-color: @success-dim;
+}

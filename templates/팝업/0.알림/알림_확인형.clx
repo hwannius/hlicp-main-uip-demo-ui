@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-beecd941" version="1.0.4074">
+  <head std:sid="head-1d5453e2">
+    <screen std:sid="screen-6cb1eac3" id="Hlicp-WIDE" name="Hlicp-WIDE" minwidth="3160px" width="3160px" height="954px" active="false"/>
+    <screen std:sid="screen-f54d23dd" id="Hlicp-FULL" name="Hlicp-FULL" minwidth="1600px" maxwidth="3159px" width="1600px" height="954px"/>
+    <screen std:sid="screen-db289a06" id="Hlicp-DIV" name="Hlicp-DIV" minwidth="790px" maxwidth="1599px" width="790px" height="954px"/>
+    <screen std:sid="screen-4f53ed84" id="Hlicp-POP" name="Hlicp-POP" maxwidth="789px" width="767px" height="400px" active="true"/>
+    <cl:model std:sid="model-97922849"/>
+    <cl:appspec/>
+  </head>
+  <body std:sid="body-0e047db6" class="pop-content-body">
+    <cl:group std:sid="group-375497a8">
+      <cl:verticaldata std:sid="v-data-53ee6da0" width="400px" height="310px" autosize="height"/>
+      <cl:output std:sid="output-7af1ec85" class="text-center fs-md" value="완료 관련 메세지를 입력하세요">
+        <cl:verticaldata std:sid="v-data-8e6f96f1" width="100px" height="20px" autosize="height"/>
+      </cl:output>
+      <cl:output std:sid="output-a838c19f" class="h2 text-center" value="확인 내용을 작성하세요.&#xA;확인 내용을 작성하세요.">
+        <cl:verticaldata std:sid="v-data-05e5c9d4" width="100px" height="40px" autosize="height"/>
+      </cl:output>
+      <cl:output std:sid="output-513ad1c9" class="text-center" value="메세지를 입력하세요">
+        <cl:verticaldata std:sid="v-data-a681e72c" width="100px" height="20px" autosize="height"/>
+      </cl:output>
+      <cl:verticallayout std:sid="v-layout-d1113772" spacing="15"/>
+    </cl:group>
+    <cl:group std:sid="group-f5a9fdc0" class="button-table-area">
+      <cl:verticaldata std:sid="v-data-cee7764e" width="727px" height="30px" autosize="height"/>
+      <cl:group std:sid="group-20b8d0aa" class="button-table-bottom-left-area">
+        <cl:formdata std:sid="f-data-7f575d86" row="0" col="0"/>
+        <cl:flowlayout std:sid="f-layout-5fb1d0db" scrollable="false" hspacing="10" vspacing="0" linewrap="false"/>
+      </cl:group>
+      <cl:group std:sid="group-9d84ea4c" class="button-table-bottom-center-area">
+        <cl:formdata std:sid="f-data-71b9d8fa" row="0" col="1"/>
+        <cl:button std:sid="button-34a36e06" class="btn-primary01 btn-md" value="예">
+          <cl:flowlayoutdata std:sid="f-data-98749e39" width="34px" height="30px" autosize="width"/>
+        </cl:button>
+        <cl:button std:sid="button-96146787" class="btn-primary04 btn-md" value="아니오">
+          <cl:flowlayoutdata std:sid="f-data-04015d80" width="56px" height="30px" autosize="width"/>
+        </cl:button>
+        <cl:flowlayout std:sid="f-layout-60c2852b" scrollable="false" hspacing="10" vspacing="0" halign="center"/>
+      </cl:group>
+      <cl:group std:sid="group-5aa6c261" class="button-table-bottom-right-area">
+        <cl:formdata std:sid="f-data-811afdad" row="0" col="2"/>
+        <cl:flowlayout std:sid="f-layout-872f1d8d" scrollable="false" hspacing="10" vspacing="0" halign="right" linewrap="false"/>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-c22db278" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="170" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" minlength="43" syncminlength="false"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-bca14e22" spacing="20"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler>
+      <std:guide position="380"/>
+    </std:vruler>
+  </std:studiosetting>
+</html>

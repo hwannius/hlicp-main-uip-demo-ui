@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-00cf82c1" version="1.0.4074">
+  <head std:sid="head-3f07acb7">
+    <std:metadata>
+      <std:property key="template-file" value="templates/일반/2.그리드/그리드_수정X.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-3a89bed2" id="Hlicp-WIDE" name="Hlicp-WIDE" width="3160px" height="954px" active="false"/>
+    <screen std:sid="screen-a6f3b061" id="Hlicp-FULL" name="Hlicp-FULL" width="1600px" height="954px" active="true"/>
+    <screen std:sid="screen-17725fb1" id="Hlicp-DIV" name="Hlicp-DIV" width="790px" height="954px"/>
+    <screen std:sid="screen-fc2442ad" id="Hlicp-POP" name="Hlicp-POP" width="767px" height="400px"/>
+    <cl:model std:sid="model-ba211fda">
+      <cl:dataset std:sid="d-set-3bedfc5e" id="ds1">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="설계/증권번호" std:sid="d-column-bcd005af" name="column1"/>
+          <cl:datacolumn comment="상품명" std:sid="d-column-4999d1da" name="column2"/>
+          <cl:datacolumn comment="심사결과" std:sid="d-column-56f0c081" name="column3"/>
+          <cl:datacolumn comment="처리일시" std:sid="d-column-91e61140" name="column4"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="column1">2012122333333</cl:datavalue>
+            <cl:datavalue columnname="column2">(무)흥국생명...</cl:datavalue>
+            <cl:datavalue columnname="column3">인수</cl:datavalue>
+            <cl:datavalue columnname="column4">202201030906</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1">2022012211111</cl:datavalue>
+            <cl:datavalue columnname="column2">(무)흥국생명...</cl:datavalue>
+            <cl:datavalue columnname="column3">거절</cl:datavalue>
+            <cl:datavalue columnname="column4">202202111202</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1">2022011222226</cl:datavalue>
+            <cl:datavalue columnname="column2">(무)흥국생명...</cl:datavalue>
+            <cl:datavalue columnname="column3">대안설계승낙</cl:datavalue>
+            <cl:datavalue columnname="column4">202211091003</cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="과거고지조회"/>
+  </head>
+  <body std:sid="body-89c09349" class="grid-window-body">
+    <cl:group std:sid="group-f6cc10a5" id="grpAppTitle" class="app-title">
+      <cl:verticaldata std:sid="v-data-ef7e8ea1" width="1150px" height="35px" autosize="height"/>
+      <cl:output std:sid="output-c6ce190d" id="optTitle" class="navi-left" value="과거고지조회">
+        <cl:formdata std:sid="f-data-fbb0cc9f" row="0" col="0"/>
+      </cl:output>
+      <cl:formlayout std:sid="f-layout-2de29e5a" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-aff2fa45" id="grpBody" class="grid-content-body">
+      <cl:verticaldata std:sid="v-data-8b536d24" width="1560px" height="899px" autosize="height"/>
+      <cl:group std:sid="group-4b1c96c0">
+        <cl:verticaldata std:sid="v-data-da0458ba" width="1560px" height="499px" autosize="height"/>
+        <cl:group std:sid="group-9bf65007" id="grpBodyGroundGrid" class="grid-box box-spacing-free">
+          <cl:verticaldata std:sid="v-data-df642346" width="1560px" height="499px" autosize="height"/>
+          <cl:grid std:sid="grid-a1f930f1" id="grd1" class="list-normal" readonly="true" datasetid="ds1" autofit="1, 2, 3, 4" resizablecolumns="all" columnMovable="true">
+            <cl:listener std:sid="listener-df50f5ff" name="row-dblclick" handler="onGrd1RowDblclick"/>
+            <cl:verticaldata std:sid="v-data-b0a4b4c7" width="400px" height="250px"/>
+            <cl:gridcolumn std:sid="g-column-e0aa1bc0" width="48px" visible="false"/>
+            <cl:gridcolumn std:sid="g-column-a05e70b9"/>
+            <cl:gridcolumn std:sid="g-column-fe8f56be" width="200px"/>
+            <cl:gridcolumn std:sid="g-column-df2535ff" width="80px"/>
+            <cl:gridcolumn std:sid="g-column-4c2469c1"/>
+            <cl:gridheader std:sid="gh-band-19277189">
+              <cl:gridrow std:sid="g-row-2db90732" height="31px"/>
+              <cl:gridcell std:sid="gh-cell-9b73b0e3" rowindex="0" colindex="0" sortable="false" filterable="false" text="NO"/>
+              <cl:gridcell std:sid="gh-cell-1fc6a52d" rowindex="0" colindex="1" targetcolumnname="column1" sortable="false" filterable="false" text="설계/증권번호"/>
+              <cl:gridcell std:sid="gh-cell-cebaff3d" rowindex="0" colindex="2" targetcolumnname="column2" sortable="false" filterable="false" text="상품명"/>
+              <cl:gridcell std:sid="gh-cell-3a6880f1" rowindex="0" colindex="3" targetcolumnname="column3" sortable="false" filterable="false" text="심사결과"/>
+              <cl:gridcell std:sid="gh-cell-2cb1b275" rowindex="0" colindex="4" targetcolumnname="column4" sortable="false" filterable="false" text="처리일시"/>
+            </cl:gridheader>
+            <cl:griddetail std:sid="gd-band-39e35eb4">
+              <cl:gridrow std:sid="g-row-43822d2d" height="31px"/>
+              <cl:gridcell std:sid="gd-cell-61dd80e4" rowindex="0" colindex="0" columntype="rowindex"/>
+              <cl:gridcell std:sid="gd-cell-c68f2846" rowindex="0" colindex="1" columnname="column1">
+                <cl:output std:sid="output-c4f0c432" class="text-center" value="Output">
+                  <cl:celldata std:sid="c-data-100af51b"/>
+                </cl:output>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-61e79d1b" rowindex="0" colindex="2" columnname="column2">
+                <cl:output std:sid="output-fda44e29" value="Output">
+                  <cl:celldata std:sid="c-data-8fa8cffe"/>
+                </cl:output>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-cb7ea067" rowindex="0" colindex="3" columnname="column3">
+                <cl:output std:sid="output-d274c85d" class="text-center" value="Output">
+                  <cl:celldata std:sid="c-data-997d6c6d"/>
+                </cl:output>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-5606f257" rowindex="0" colindex="4" columnname="column4">
+                <cl:output std:sid="output-d25ef6b0" class="text-center" datatype="date" format="YYYY-MM-DD hh:mm">
+                  <cl:celldata std:sid="c-data-1e796089"/>
+                </cl:output>
+              </cl:gridcell>
+            </cl:griddetail>
+          </cl:grid>
+          <cl:verticallayout std:sid="v-layout-3a454f14" spacing="4"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-f44e40a3" spacing="8"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-14670d6a" spacing="7"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-aba164b4" spacing="0" leftmargin="20" rightmargin="20" topmargin="20" bottommargin="10"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

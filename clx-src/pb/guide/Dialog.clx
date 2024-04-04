@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-877b358d" version="1.0.4034">
+  <head std:sid="head-b1f72c1f">
+    <screen std:sid="screen-05322974" id="default" name="default" minwidth="1644px" width="1644px" height="903px"/>
+    <screen std:sid="screen-b7c6c73c" id="tablet" name="tablet" maxwidth="1643px" width="1541px" height="903px"/>
+    <cl:model std:sid="model-03781e31"/>
+    <cl:appspec title="[디자인가이드] 다이얼로그(팝업)"/>
+  </head>
+  <body std:sid="body-710643c1" class="pb-body">
+    <cl:group std:sid="group-b655417b" class="pb-content">
+      <cl:verticaldata std:sid="v-data-4fee3788" width="1644px" height="242px" autosize="height"/>
+      <cl:udc std:sid="ud-control-27c2a286" type="udc.hk.pb.Breadcrumbs">
+        <cl:verticaldata std:sid="v-data-d3766577" width="1544px" height="174px" autosize="height"/>
+      </cl:udc>
+      <cl:output std:sid="output-75a1799d" class="text-red" value="※ 기타 지시문 작성">
+        <cl:verticaldata std:sid="v-data-c42713a6" width="100px" height="20px" syncminheight="true" autosize="height"/>
+      </cl:output>
+      <cl:verticallayout std:sid="v-layout-30aa5659" scrollable="false" spacing="20" leftmargin="50" rightmargin="50" topmargin="0" bottommargin="20"/>
+    </cl:group>
+    <cl:group std:sid="group-110042a3" class="pb-content">
+      <cl:verticaldata std:sid="v-data-bef4a8ed" width="1644px" height="661px" autosize="height"/>
+      <cl:group std:sid="group-694ca9c8">
+        <cl:verticaldata std:sid="v-data-31e11d2b" width="1544px" height="76px" autosize="height"/>
+        <cl:udc std:sid="ud-control-5fef28af" type="udc.hk.pb.SectionTitle">
+          <cl:verticaldata std:sid="v-data-e284631d" width="1544px" height="29px"/>
+          <cl:property name="title" value="다이얼로그" type="string"/>
+          <cl:property name="subText" value="다이얼로그(팝업)을 띄우는 버튼의 타입은 &quot;link&quot;로 설정해야 합니다." type="string"/>
+          <cl:property name="subTextStyle" value="text-blue" type="enumeration"/>
+        </cl:udc>
+        <cl:group std:sid="group-7912a3d0">
+          <cl:verticaldata std:sid="v-data-95c977d7" width="1544px" height="33px" autosize="height"/>
+          <cl:button std:sid="button-99e8e618" id="btnPop" value="일반" ariabuttontype="link">
+            <cl:listener std:sid="listener-285aa35a" name="click" handler="onBtnPopClick"/>
+            <cl:flowlayoutdata std:sid="f-data-48a0f385" width="46px" height="26px"/>
+          </cl:button>
+          <cl:flowlayout std:sid="f-layout-c1e9358d" scrollable="false" hspacing="10" vspacing="10"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-816480d1" scrollable="false" spacing="14"/>
+      </cl:group>
+      <cl:group std:sid="group-1c24c0db">
+        <cl:verticaldata std:sid="v-data-555b309b" width="1544px" height="422px" autosize="height"/>
+        <cl:udc std:sid="ud-control-d67fed68" type="udc.hk.pb.SectionTitle">
+          <cl:verticaldata std:sid="v-data-55f62aa9" width="1544px" height="29px" autosize="none"/>
+          <cl:property name="title" value="기본속성" type="string"/>
+          <cl:property name="subText" value="● = 사용 / ○ = 미사용 / △ = 상황에 따라 사용 / ★ = 필수로 작성" type="string"/>
+          <cl:property name="subTextStyle" value="text-red" type="enumeration"/>
+        </cl:udc>
+        <cl:group std:sid="group-bedd990d" class="pb-table">
+          <cl:verticaldata std:sid="v-data-2e6e8d4c" width="400px" height="362px" autosize="height"/>
+          <cl:output std:sid="output-320c8d70" class="pb-label" value="속성명">
+            <cl:formdata std:sid="f-data-1338aeee" row="0" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-33b27228" class="pb-label" value="사용여부">
+            <cl:formdata std:sid="f-data-39ff7db1" row="0" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-76ab8b88" class="pb-label" value="적용값">
+            <cl:formdata std:sid="f-data-f4abeda1" row="0" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-cd4281cf" class="pb-label" value="내용">
+            <cl:formdata std:sid="f-data-f62ab68c" row="0" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-6834a164" class="pb-label" value="fieldLabel">
+            <cl:formdata std:sid="f-data-4098967f" row="1" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-58bb790a" class="text-center" value="★">
+            <cl:formdata std:sid="f-data-c75c6cbe" row="1" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-1038e626" class="text-center" value="(논리적 레이블 값)">
+            <cl:formdata std:sid="f-data-e41ebf06" row="1" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-05f938b4" value="다이얼로그의 제목을 논리적 레이블로 제공">
+            <cl:formdata std:sid="f-data-0bc7167e" row="1" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-667fd02b" class="pb-label" value="headerClose">
+            <cl:formdata std:sid="f-data-5170d53c" row="2" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-4f4e0527" class="text-center" value="●">
+            <cl:formdata std:sid="f-data-5dc20ebd" row="2" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-7af77f40" class="text-center" value="true">
+            <cl:formdata std:sid="f-data-848ba7f6" row="2" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-d30cf35f" value="다이얼로그를 닫을 수 있는 버튼 항상 표시">
+            <cl:formdata std:sid="f-data-d15eb577" row="2" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-90bf151d" class="pb-label" value="headerMax">
+            <cl:formdata std:sid="f-data-bf4d6266" row="3" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-369274d4" class="text-center" value="○">
+            <cl:formdata std:sid="f-data-bfbb6cf3" row="3" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-1438c1a7" class="text-center" value="false">
+            <cl:formdata std:sid="f-data-82a53967" row="3" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-b50def24" value="다이얼로그 최대화 기능을 사용하는 경우 사용">
+            <cl:formdata std:sid="f-data-81921255" row="3" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-16382fbb" class="pb-label" value="headerMin">
+            <cl:formdata std:sid="f-data-614165d4" row="4" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-c9a76bec" class="text-center" value="○">
+            <cl:formdata std:sid="f-data-b125816d" row="4" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-0456efe4" class="text-center" value="false">
+            <cl:formdata std:sid="f-data-841699c0" row="4" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-ab56ca87" value="다이얼로그 최소화 기능을 사용하는 경우 사용. 단, 최소화에 따른 다이얼로그 표시는 제공하지 않음">
+            <cl:formdata std:sid="f-data-d04b392a" row="4" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-877a6e51" class="pb-label" value="headerMovable">
+            <cl:formdata std:sid="f-data-5cee46d6" row="5" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-87896dbe" class="text-center" value="●">
+            <cl:formdata std:sid="f-data-c24f6ca3" row="5" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-5167522d" class="text-center" value="true">
+            <cl:formdata std:sid="f-data-c95ba4fa" row="5" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-0f08d842" value="다이얼로그 헤더를 통해 다이얼로그의 위치를 이동할 수 있도록 속성 설정">
+            <cl:formdata std:sid="f-data-d6c01c94" row="5" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-a51a998f" class="pb-label" value="headerTitle">
+            <cl:formdata std:sid="f-data-557c2c5c" row="6" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-38deb975" class="text-center" value="●">
+            <cl:formdata std:sid="f-data-138aaa22" row="6" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-ec6dcacc" class="text-center" value="(다이얼로그 타이틀 작성)">
+            <cl:formdata std:sid="f-data-5136aefb" row="6" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-57eaf6f5" value="다이얼로그에 대한 타이틀을 작성">
+            <cl:formdata std:sid="f-data-bbe0b5ba" row="6" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-dfe793a8" class="pb-label" value="headerVisible">
+            <cl:formdata std:sid="f-data-196131bc" row="7" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-97ab53e3" class="text-center" value="△">
+            <cl:formdata std:sid="f-data-d1960255" row="7" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-ebd69a8f" class="text-center" value="(상황에 맞게 설정)">
+            <cl:formdata std:sid="f-data-7634f44c" row="7" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-2ef5bcc4" value="다이얼로그에서 헤더가 표시되지 않아야 하는 경우 해당 속성 사용">
+            <cl:formdata std:sid="f-data-e55ab5cf" row="7" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-e1d57a7a" class="pb-label" value="modal">
+            <cl:formdata std:sid="f-data-f9ace187" row="8" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-5f68633c" class="text-center" value="●">
+            <cl:formdata std:sid="f-data-011a8bbf" row="8" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-d2f30193" class="text-center" value="true">
+            <cl:formdata std:sid="f-data-4db89222" row="8" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-c118fbc0" value="모달을 표시하여 레이어드 팝업으로 사용. 모달을 표시하지 않는 경우에는 윈도우 팝업을 사용">
+            <cl:formdata std:sid="f-data-ef6bcdbe" row="8" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-3a19a5c8" class="pb-label" value="resizable">
+            <cl:formdata std:sid="f-data-259a61a3" row="9" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-1fa0a465" class="text-center" value="○">
+            <cl:formdata std:sid="f-data-7315aa9e" row="9" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-27001d99" class="text-center" value="false">
+            <cl:formdata std:sid="f-data-b8d66b4d" row="9" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-f08cc29e" value="다이얼로그의 크기를 변경하지 않도록 해당 속성을 사용하지 않음">
+            <cl:formdata std:sid="f-data-1f2d2a3b" row="9" col="3"/>
+          </cl:output>
+          <cl:formlayout std:sid="f-layout-a8d12b64" scrollable="false" hspace="8px" vspace="8px" top-margin="4px" right-margin="4px" bottom-margin="4px" left-margin="4px" hseparatorwidth="1" hseparatortype="BY_CLASS" vseparatorwidth="1" vseparatortype="BY_CLASS">
+            <cl:rows length="28" unit="PIXEL" autoSizing="false" hidden="false" shadetype="BY_CLASS" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="150" unit="PIXEL" autoSizing="false" hidden="false" shadetype="BY_CLASS" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="60" unit="PIXEL" autoSizing="false" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="220" unit="PIXEL" autoSizing="false" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-c1dfc9fb" scrollable="false" spacing="14"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-a1c44b73" scrollable="false" spacing="40" leftmargin="50" rightmargin="50" topmargin="50" bottommargin="50"/>
+    </cl:group>
+    <cl:group std:sid="group-41a0cec5" class="pb-content">
+      <cl:verticaldata std:sid="v-data-237c1bb6" width="1644px" height="1086px" autosize="height"/>
+      <cl:group std:sid="group-d59f43ba">
+        <cl:verticaldata std:sid="v-data-0250c90c" width="1544px" height="991px" autosize="height"/>
+        <cl:udc std:sid="ud-control-06ff3372" type="udc.hk.pb.SectionTitle">
+          <cl:verticaldata std:sid="v-data-83fd5a10" width="1544px" height="29px" autosize="none"/>
+          <cl:property name="title" value="팝업 너비 규정" type="string"/>
+          <cl:property name="subTextStyle" value="text-blue" type="enumeration"/>
+          <cl:property name="subText" value="팝업은 400px/767px/1000px 너비를 사용합니다." type="string"/>
+        </cl:udc>
+        <cl:output std:sid="output-008dd976" class="text-red" value="※ 아래의 구조는 다이얼로그를 확인하기 위한 용도로 화면 작성 시 사용하지 않도록 주의합니다.">
+          <cl:verticaldata std:sid="v-data-ca60ef16" width="100px" height="20px"/>
+        </cl:output>
+        <cl:group std:sid="group-f022a6db" class="cl-overlay">
+          <cl:verticaldata std:sid="v-data-8728d7ea" width="400px" height="877px" autosize="height"/>
+          <cl:group std:sid="group-f26cb3c1" class="cl-dialog">
+            <cl:verticaldata std:sid="v-data-9f337451" width="400px" height="233px"/>
+            <cl:group std:sid="group-8873e100" class="cl-dialog-header">
+              <cl:xylayoutdata std:sid="xyl-data-4bd9d26d" top="0px" right="0px" left="0px" height="45px" horizontalAnchor="BOTH" verticalAnchor="TOP"/>
+              <cl:output std:sid="output-5c68a99a" class="cl-text" value="Popup Width 400px">
+                <cl:xylayoutdata std:sid="xyl-data-bed403dc" top="0px" right="18px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+              </cl:output>
+              <cl:group std:sid="group-7d4cf2ed" class="cl-dialog-close">
+                <cl:xylayoutdata std:sid="xyl-data-83f1ff5e" right="0px" width="18px" height="18px" horizontalAnchor="RIGHT" verticalAnchor="CENTER"/>
+                <cl:xylayout std:sid="xylayout-225e07e7"/>
+              </cl:group>
+              <cl:xylayout std:sid="xylayout-3222fbb9"/>
+            </cl:group>
+            <cl:output std:sid="output-f5476f19" class="bg-primary-dim text-primary text-center" value="콘텐트">
+              <cl:xylayoutdata std:sid="xyl-data-f7dd0667" top="65px" right="20px" bottom="20px" left="20px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+            </cl:output>
+            <cl:xylayout std:sid="xylayout-e1ad8e02"/>
+          </cl:group>
+          <cl:group std:sid="group-e27dc88b" class="cl-dialog">
+            <cl:verticaldata std:sid="v-data-8210f97e" width="767px" height="233px" autosize="none"/>
+            <cl:group std:sid="group-129f6df7" class="cl-dialog-header">
+              <cl:xylayoutdata std:sid="xyl-data-3f5f0e6b" top="0px" right="0px" left="0px" height="45px" horizontalAnchor="BOTH" verticalAnchor="TOP"/>
+              <cl:output std:sid="output-7194fb16" class="cl-text" value="Popup Width 767px">
+                <cl:xylayoutdata std:sid="xyl-data-9ce3fde4" top="0px" right="18px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+              </cl:output>
+              <cl:group std:sid="group-95a54bb5" class="cl-dialog-close">
+                <cl:xylayoutdata std:sid="xyl-data-3e5de69e" right="0px" width="18px" height="18px" horizontalAnchor="RIGHT" verticalAnchor="CENTER"/>
+                <cl:xylayout std:sid="xylayout-4267ad89"/>
+              </cl:group>
+              <cl:xylayout std:sid="xylayout-d0cbe2c4"/>
+            </cl:group>
+            <cl:output std:sid="output-febc9849" class="bg-primary-dim text-primary text-center" value="콘텐트">
+              <cl:xylayoutdata std:sid="xyl-data-6dce3dd8" top="65px" right="20px" bottom="20px" left="20px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+            </cl:output>
+            <cl:xylayout std:sid="xylayout-bbc0da66"/>
+          </cl:group>
+          <cl:group std:sid="group-ca1c64cf" class="cl-dialog">
+            <cl:verticaldata std:sid="v-data-a5976ccb" width="1000px" height="233px" autosize="none"/>
+            <cl:group std:sid="group-560d6f4f" class="cl-dialog-header">
+              <cl:xylayoutdata std:sid="xyl-data-af7179e9" top="0px" right="0px" left="0px" height="45px" horizontalAnchor="BOTH" verticalAnchor="TOP"/>
+              <cl:output std:sid="output-936daa2a" class="cl-text" value="Popup Width 1000px">
+                <cl:xylayoutdata std:sid="xyl-data-ab08c758" top="0px" right="18px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+              </cl:output>
+              <cl:group std:sid="group-6d1e61e8" class="cl-dialog-close">
+                <cl:xylayoutdata std:sid="xyl-data-cbf9f005" right="0px" width="18px" height="18px" horizontalAnchor="RIGHT" verticalAnchor="CENTER"/>
+                <cl:xylayout std:sid="xylayout-98ba31f5"/>
+              </cl:group>
+              <cl:xylayout std:sid="xylayout-6bb80b32"/>
+            </cl:group>
+            <cl:output std:sid="output-f0aa1af9" class="bg-primary-dim text-primary text-center" value="콘텐트">
+              <cl:xylayoutdata std:sid="xyl-data-c6212053" top="65px" right="20px" bottom="20px" left="20px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+            </cl:output>
+            <cl:xylayout std:sid="xylayout-a5d38909"/>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-f5d5b5f7" scrollable="false" distribution="leading" spacing="20" leftmargin="20" rightmargin="20" topmargin="20" bottommargin="20"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-c5632f4b" scrollable="false" spacing="14"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-75112577" scrollable="false" spacing="40" leftmargin="50" rightmargin="50" topmargin="50" bottommargin="50"/>
+    </cl:group>
+    <cl:group std:sid="group-bd9b769b" class="pb-content">
+      <cl:verticaldata std:sid="v-data-2a974eef" width="1644px" height="480px" autosize="height"/>
+      <cl:group std:sid="group-05d4db70">
+        <cl:verticaldata std:sid="v-data-889d2997" width="1544px" height="406px" autosize="height"/>
+        <cl:udc std:sid="ud-control-908ca276" id="sectiontitle2" type="udc.hk.pb.SectionTitle">
+          <cl:verticaldata std:sid="v-data-259b518b" width="1544px" height="29px" autosize="none"/>
+          <cl:property name="title" value="팝업 - 확장 사용" type="string"/>
+          <cl:property name="subText" value="단은 최대 4단까지만 사용하며, 특수한 경우 폼의 단 원칙을 유동적으로 변경할 수 있다." type="string"/>
+          <cl:property name="subTextStyle" value="text-red" type="enumeration"/>
+        </cl:udc>
+        <cl:group std:sid="group-1ccef83e">
+          <cl:verticaldata std:sid="v-data-879829ce" width="400px" height="350px" autosize="height"/>
+          <cl:output std:sid="output-425a0617" class="h5" value="Toast Popup">
+            <cl:verticaldata std:sid="v-data-b91ed1cd" width="100px" height="24px" autosize="height"/>
+          </cl:output>
+          <cl:output std:sid="output-548f6e1d" class="caption" value="- 구분, 항목 등을 선택할 때 사용&#xA;- 버튼 영역 없이 사용할 수 있음">
+            <cl:verticaldata std:sid="v-data-34c57523" width="100px" height="40px" autosize="height"/>
+          </cl:output>
+          <cl:group std:sid="group-af4a6dc7">
+            <cl:verticaldata std:sid="v-data-926d9772" width="400px" height="294px"/>
+            <cl:group std:sid="group-cf5d5435">
+              <cl:verticaldata std:sid="v-data-39001d9a" width="346px" height="26px"/>
+              <cl:button std:sid="button-c0cec11c" class="btn-secondary01" value="항목닫기">
+                <cl:flowlayoutdata std:sid="f-data-3dff07a0" width="60px" height="26px" autosize="width"/>
+              </cl:button>
+              <cl:flowlayout std:sid="f-layout-9b21a6b5" scrollable="false" vspacing="0" halign="right"/>
+            </cl:group>
+            <cl:group std:sid="group-2ed93ebe" class="border rounded-sm">
+              <cl:verticaldata std:sid="v-data-ed29edf5" width="346px" height="247px" autosize="none"/>
+              <cl:checkboxgroup std:sid="cb-group-e01603d8" colcount="4" hspacing="0" vspacing="20">
+                <cl:verticaldata std:sid="v-data-66a9b641" width="200px" height="157px" autosize="height"/>
+                <cl:item std:sid="item-cef91311" label="모집채널" value="value1"/>
+                <cl:item std:sid="item-9f6e7d83" label="계약상태" value="value2"/>
+                <cl:item std:sid="item-57f7b23c" label="계약번호" value="value3"/>
+                <cl:item std:sid="item-ffc4e47a" label="보험코드" value="value4"/>
+                <cl:item std:sid="item-3bf74d2e" label="보험종류" value="value5"/>
+                <cl:item std:sid="item-d3ca0589" label="계약일" value="value6"/>
+                <cl:item std:sid="item-475319e9" label="만기일" value="value7"/>
+                <cl:item std:sid="item-68590330" label="계약자" value="value8"/>
+                <cl:item std:sid="item-70070125" label="피보험자" value="value9"/>
+                <cl:item std:sid="item-eb54ea46" label="합보험" value="value10"/>
+                <cl:item std:sid="item-f90ae9e5" label="최종납입" value="value11"/>
+                <cl:item std:sid="item-c408db18" label="납입횟수" value="value12"/>
+                <cl:item std:sid="item-304458d1" label="납입주기" value="value13"/>
+                <cl:item std:sid="item-d3d00ed2" label="수금방법" value="value14"/>
+                <cl:item std:sid="item-044670a7" label="납입기간" value="value15"/>
+                <cl:item std:sid="item-ba3210d1" label="보험기간" value="value16"/>
+                <cl:item std:sid="item-5962964d" label="실손" value="value17"/>
+                <cl:item std:sid="item-fc0fafdb" label="면제" value="value18"/>
+                <cl:item std:sid="item-bc105243" label="구증번" value="value19"/>
+              </cl:checkboxgroup>
+              <cl:group std:sid="group-7939d149">
+                <cl:verticaldata std:sid="v-data-a2aa00a7" width="400px" height="30px"/>
+                <cl:button std:sid="button-7fcd605e" class="btn-md btn-primary04" value="취소">
+                  <cl:flowlayoutdata std:sid="f-data-e06a9109" width="43px" height="30px"/>
+                </cl:button>
+                <cl:button std:sid="button-b4841459" class="btn-md btn-primary01" value="확인">
+                  <cl:flowlayoutdata std:sid="f-data-84b109ef" width="43px" height="30px"/>
+                </cl:button>
+                <cl:flowlayout std:sid="f-layout-c870fb21" scrollable="false" hspacing="10" vspacing="0" halign="center"/>
+              </cl:group>
+              <cl:verticallayout std:sid="v-layout-125d4a96" spacing="20" leftmargin="20" rightmargin="20" topmargin="20" bottommargin="20"/>
+            </cl:group>
+            <cl:verticallayout std:sid="v-layout-8903e4d8" scrollable="false" distribution="leading" spacing="0"/>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-34cb1f24" scrollable="false" spacing="6"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-d0b0f675" scrollable="false" spacing="14"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-51828fc4" scrollable="false" spacing="40" leftmargin="50" rightmargin="50" topmargin="50" bottommargin="50"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-479ebe34" spacing="14"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

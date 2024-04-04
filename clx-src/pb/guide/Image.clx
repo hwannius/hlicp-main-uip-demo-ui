@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-c0996bb0" version="1.0.3985">
+  <head std:sid="head-9d752e69">
+    <screen std:sid="screen-d1b6515b" id="default" name="default" minwidth="1644px" width="1644px" height="903px"/>
+    <screen std:sid="screen-486718b5" id="tablet" name="tablet" maxwidth="1643px" width="1541px" height="903px"/>
+    <cl:model std:sid="model-b6e7426a"/>
+    <cl:appspec title="[디자인가이드] 이미지"/>
+  </head>
+  <body std:sid="body-a1ada39e" class="pb-body">
+    <cl:group std:sid="group-b655417b" class="pb-content">
+      <cl:verticaldata std:sid="v-data-ce1f52ba" width="1644px" height="242px" autosize="height"/>
+      <cl:udc std:sid="ud-control-27c2a286" type="udc.hk.pb.Breadcrumbs">
+        <cl:verticaldata std:sid="v-data-d3766577" width="1544px" height="174px" autosize="height"/>
+      </cl:udc>
+      <cl:output std:sid="output-75a1799d" class="text-red" value="※ 기타 지시문 작성">
+        <cl:verticaldata std:sid="v-data-c42713a6" width="100px" height="20px" syncminheight="true" autosize="height"/>
+      </cl:output>
+      <cl:verticallayout std:sid="v-layout-30aa5659" scrollable="false" spacing="20" leftmargin="50" rightmargin="50" topmargin="0" bottommargin="20"/>
+    </cl:group>
+    <cl:group std:sid="group-110042a3" class="pb-content">
+      <cl:verticaldata std:sid="v-data-a66fdcd6" width="1644px" height="519px" autosize="height"/>
+      <cl:group std:sid="group-694ca9c8">
+        <cl:verticaldata std:sid="v-data-31e11d2b" width="1544px" height="90px" autosize="height"/>
+        <cl:udc std:sid="ud-control-5fef28af" type="udc.hk.pb.SectionTitle">
+          <cl:verticaldata std:sid="v-data-e284631d" width="1544px" height="29px"/>
+          <cl:property name="title" value="이미지" type="string"/>
+        </cl:udc>
+        <cl:group std:sid="group-e80078da">
+          <cl:verticaldata std:sid="v-data-0407a835" width="400px" height="45px" autosize="height"/>
+          <cl:img std:sid="image-bb07b803" fieldLabel="흥국생명 보험코어 시스템" tabindex="0" src="../../../theme/hk/images/com/main/hci-logo-bg-w.png" alt="흥국생명 보험코어 시스템 로고" areacoordinate="absolute">
+            <cl:flowlayoutdata std:sid="f-data-0b30b5d5" width="201px" height="20px"/>
+          </cl:img>
+          <cl:flowlayout std:sid="f-layout-7347acbb" scrollable="false" hspacing="30" vspacing="10"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-816480d1" scrollable="false" spacing="14"/>
+      </cl:group>
+      <cl:group std:sid="group-1c24c0db">
+        <cl:verticaldata std:sid="v-data-555b309b" width="1544px" height="299px" autosize="height"/>
+        <cl:udc std:sid="ud-control-d67fed68" type="udc.hk.pb.SectionTitle">
+          <cl:verticaldata std:sid="v-data-55f62aa9" width="1544px" height="29px" autosize="none"/>
+          <cl:property name="title" value="기본속성" type="string"/>
+          <cl:property name="subText" value="● = 사용 / ○ = 미사용 / △ = 상황에 따라 사용 / ★ = 필수로 작성" type="string"/>
+          <cl:property name="subTextStyle" value="text-red" type="enumeration"/>
+        </cl:udc>
+        <cl:group std:sid="group-bedd990d" class="pb-table">
+          <cl:verticaldata std:sid="v-data-2e6e8d4c" width="400px" height="242px" autosize="height"/>
+          <cl:output std:sid="output-320c8d70" class="pb-label" value="속성명">
+            <cl:formdata std:sid="f-data-1338aeee" row="0" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-33b27228" class="pb-label" value="사용여부">
+            <cl:formdata std:sid="f-data-39ff7db1" row="0" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-e11d57d5" class="pb-label" value="적용값">
+            <cl:formdata std:sid="f-data-2c68269c" row="0" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-cd4281cf" class="pb-label" value="내용">
+            <cl:formdata std:sid="f-data-f62ab68c" row="0" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-fe39a97e" class="pb-label" value="alt" unselectable="false">
+            <cl:formdata std:sid="f-data-a5011ccb" row="1" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-76dd8c40" class="text-center" value="★">
+            <cl:formdata std:sid="f-data-ba449b7c" row="1" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-e2bce6cb" class="text-center" value="(대체 텍스트 값)">
+            <cl:formdata std:sid="f-data-089180a8" row="1" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-6bac81bf" value="이미지에 대한 대체 텍스트로 해당 속성을 통해 이미지와 동등한 정보를 제공해야 함. 웹 접근성 심사 시 반드시 필수로 적용해야 하는 속성">
+            <cl:formdata std:sid="f-data-0cdbc0c1" row="1" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-057055a5" class="pb-label" value="areaCoordinate" unselectable="false">
+            <cl:formdata std:sid="f-data-1a26ecdd" row="2" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-5ae15f1d" class="text-center" value="△">
+            <cl:formdata std:sid="f-data-5581736c" row="2" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-5045c61d" class="text-center" value="&quot;absolute&quot; | &quot;image-size&quot;">
+            <cl:formdata std:sid="f-data-6dac00b4" row="2" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-27cad30b" value="이미지 맵을 사용하는 경우 이미지 맵으로 표시되는 아이템의 좌표계를 해석하는 방법을 설정">
+            <cl:formdata std:sid="f-data-de4a4a81" row="2" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-90bf151d" class="pb-label" value="fieldLabel" unselectable="false">
+            <cl:formdata std:sid="f-data-bf4d6266" row="3" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-369274d4" class="text-center" value="★">
+            <cl:formdata std:sid="f-data-08d3c606" row="3" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-75a637d1" class="text-center" value="(논리적 레이블 값)">
+            <cl:formdata std:sid="f-data-1615e3a9" row="3" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-b50def24" value="폼인 경우 1:1로 대응하는 레이블(라벨)의 값을 입력하거나 컨트롤에서 입력되는 값의 논리적인 레이블(라벨)의 값을 입력">
+            <cl:formdata std:sid="f-data-1f902c20" row="3" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-16382fbb" class="pb-label" value="src" unselectable="false">
+            <cl:formdata std:sid="f-data-614165d4" row="4" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-c4b8afe4" class="text-center" value="●">
+            <cl:formdata std:sid="f-data-45184c94" row="4" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-5ffc2ed7" class="text-center" value="(이미지 경로)">
+            <cl:formdata std:sid="f-data-4f296eb4" row="4" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-ab56ca87" value="이미지 경로를 설정. 파일은 jpg, jpeg, gif, png 등을 지원. 속성 뷰에서 입력된 값이 빌드가 될 때 스튜디오 관점에서 처리하는 부분이 있으므로 자세한 사항은 도움말을 참조 (eXBuilder6 > 스튜디오 구성 > 뷰 > 속성 뷰 > 일반 탭 > 스튜디오에서 예외 처리되는 속성 값)">
+            <cl:formdata std:sid="f-data-d04b392a" row="4" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-cadb9892" class="pb-label" value="tanIndex" unselectable="false">
+            <cl:formdata std:sid="f-data-6e2f90d5" row="5" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-750fea66" class="text-center" value="△">
+            <cl:formdata std:sid="f-data-9dcb47dd" row="5" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-69fd9c18" class="text-center" value="-1 이상">
+            <cl:formdata std:sid="f-data-551651a6" row="5" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-b19ea88e" value="컨트롤의 탭 순서. &quot;0&quot; 이상의 값이 설정되면 컨트롤에 포커스 가능.">
+            <cl:formdata std:sid="f-data-cb9dd62c" row="5" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-a035b507" class="pb-label" value="tooltip" unselectable="false">
+            <cl:formdata std:sid="f-data-5d53dc24" row="6" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-55c9e7db" class="text-center" value="△">
+            <cl:formdata std:sid="f-data-889cb22c" row="6" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-22ee4caa" class="text-center" value="(컨트롤의 힌트값)">
+            <cl:formdata std:sid="f-data-f910aac9" row="6" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-b2ea2beb" value="마우스 오버 시 인풋박스에 대한 힌트 제공 필요할 때 사용. 해당 속성을 작성하면 title 속성으로 적용됨">
+            <cl:formdata std:sid="f-data-90a23017" row="6" col="3"/>
+          </cl:output>
+          <cl:formlayout std:sid="f-layout-a8d12b64" scrollable="false" hspace="8px" vspace="8px" top-margin="4px" right-margin="4px" bottom-margin="4px" left-margin="4px" hseparatorwidth="1" hseparatortype="BY_CLASS" vseparatorwidth="1" vseparatortype="BY_CLASS">
+            <cl:rows length="28" unit="PIXEL" autoSizing="false" hidden="false" shadetype="BY_CLASS" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="150" unit="PIXEL" autoSizing="false" hidden="false" shadetype="BY_CLASS" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="60" unit="PIXEL" autoSizing="false" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="220" unit="PIXEL" autoSizing="false" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-c1dfc9fb" scrollable="false" spacing="14"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-a1c44b73" scrollable="false" spacing="40" leftmargin="50" rightmargin="50" topmargin="50" bottommargin="50"/>
+    </cl:group>
+    <cl:group std:sid="group-d855d021" class="pb-content">
+      <cl:verticaldata std:sid="v-data-37ec0677" width="1644px" height="1102px" autosize="height"/>
+      <cl:group std:sid="group-3c7b2330">
+        <cl:verticaldata std:sid="v-data-76f8487f" width="1544px" height="1021px" autosize="height"/>
+        <cl:udc std:sid="ud-control-44644f32" type="udc.hk.pb.SectionTitle">
+          <cl:verticaldata std:sid="v-data-0eb622f2" width="1544px" height="29px"/>
+          <cl:property name="title" value="부위 선택" type="string"/>
+          <cl:property name="subText" value="첫번째 이미지에 마우스를 올리면 부위가 변경됩니다." type="string"/>
+        </cl:udc>
+        <cl:group std:sid="group-9682c8fb">
+          <cl:verticaldata std:sid="v-data-cdb9c925" width="400px" height="976px" autosize="height"/>
+          <cl:img std:sid="image-855a8f5c" src="../../../theme/hk/images/controls/image/anatomy-img-01.png">
+            <cl:listener std:sid="listener-da6589b3" name="item-mouseover" handler="onImageItemMouseover"/>
+            <cl:listener std:sid="listener-3168dac2" name="item-click" handler="onImageItemClick"/>
+            <cl:listener std:sid="listener-2b31f000" name="mouseleave" handler="onImageMouseleave"/>
+            <cl:flowlayoutdata std:sid="f-data-32391133" width="112px" height="333px" autosize="none"/>
+            <cl:area std:sid="a-item-fdc10fd5" label="머리" value="head" coords="30,2,78,52"/>
+            <cl:area std:sid="a-item-dfe6cee3" label="가슴" value="chest" coords="22,52,85,112"/>
+            <cl:area std:sid="a-item-94f45cd0" label="왼팔" value="left-arm" coords="2,53,22,193"/>
+            <cl:area std:sid="a-item-932c3db1" label="오른팔" value="right-arm" coords="85,51,109,193"/>
+            <cl:area std:sid="a-item-ebbdeaac" label="배" value="abs" coords="23,111,83,176"/>
+            <cl:area std:sid="a-item-1955b658" label="왼다리" value="left-leg" shape="poly" coords="24,177,49,177,49,332,24,332,20,331,20,331,20,331,18,323,32,315"/>
+            <cl:area std:sid="a-item-3a61ff0f" label="오른다리" value="right-leg" shape="poly" coords="84,177,59,177,59,332,84,332,88,331,88,331,88,331,90,323,76,315"/>
+          </cl:img>
+          <cl:group std:sid="group-af3960f1">
+            <cl:flowlayoutdata std:sid="f-data-85156f0b" width="100%" height="333px" autosize="both"/>
+            <cl:img std:sid="image-4c34bc76" src="../../../theme/hk/images/controls/image/anatomy-img-01.png">
+              <cl:flowlayoutdata std:sid="f-data-741d3f54" width="112px" height="333px"/>
+            </cl:img>
+            <cl:img std:sid="image-9c5290f8" src="../../../theme/hk/images/controls/image/anatomy-img-02.png">
+              <cl:flowlayoutdata std:sid="f-data-ce01db9d" width="112px" height="333px" autosize="none"/>
+            </cl:img>
+            <cl:img std:sid="image-94648674" src="../../../theme/hk/images/controls/image/anatomy-img-03.png">
+              <cl:flowlayoutdata std:sid="f-data-3f47247d" width="112px" height="333px" autosize="none"/>
+            </cl:img>
+            <cl:img std:sid="image-f78f881d" src="../../../theme/hk/images/controls/image/anatomy-img-04.png">
+              <cl:flowlayoutdata std:sid="f-data-be9ef7df" width="112px" height="333px" autosize="none"/>
+            </cl:img>
+            <cl:img std:sid="image-c1292b49" src="../../../theme/hk/images/controls/image/anatomy-img-05.png">
+              <cl:flowlayoutdata std:sid="f-data-3f4a08b4" width="112px" height="333px" autosize="none"/>
+            </cl:img>
+            <cl:img std:sid="image-eb7dda0a" src="../../../theme/hk/images/controls/image/anatomy-img-06.png">
+              <cl:flowlayoutdata std:sid="f-data-576614a2" width="112px" height="333px" autosize="none"/>
+            </cl:img>
+            <cl:img std:sid="image-4ceddf1a" src="../../../theme/hk/images/controls/image/anatomy-img-07.png">
+              <cl:flowlayoutdata std:sid="f-data-d6d6cfb6" width="112px" height="333px" autosize="none"/>
+            </cl:img>
+            <cl:img std:sid="image-8d5ad63d" src="../../../theme/hk/images/controls/image/anatomy-img-08.png">
+              <cl:flowlayoutdata std:sid="f-data-0d1f807d" width="112px" height="333px" autosize="none"/>
+            </cl:img>
+            <cl:flowlayout std:sid="f-layout-4f9d72e5" scrollable="false" hspacing="30" vspacing="10" linewrap="false"/>
+          </cl:group>
+          <cl:group std:sid="group-92294737">
+            <cl:flowlayoutdata std:sid="f-data-14fc47e3" width="100%" height="203px" autosize="height"/>
+            <cl:img std:sid="image-74ef5714" src="../../../theme/hk/images/controls/image/head.png">
+              <cl:flowlayoutdata std:sid="f-data-67a7223c" width="44px" height="57px"/>
+            </cl:img>
+            <cl:img std:sid="image-249f68fd" src="../../../theme/hk/images/controls/image/chest.png">
+              <cl:flowlayoutdata std:sid="f-data-2880e984" width="64px" height="63px"/>
+            </cl:img>
+            <cl:img std:sid="image-8dfd9cd7" src="../../../theme/hk/images/controls/image/left-arm.png">
+              <cl:flowlayoutdata std:sid="f-data-d0148377" width="29px" height="142px"/>
+            </cl:img>
+            <cl:img std:sid="image-a61eb4ef" src="../../../theme/hk/images/controls/image/right-arm.png">
+              <cl:flowlayoutdata std:sid="f-data-f6654ae2" width="30px" height="142px"/>
+            </cl:img>
+            <cl:img std:sid="image-0db6798d" src="../../../theme/hk/images/controls/image/abdomen.png">
+              <cl:flowlayoutdata std:sid="f-data-57e59f34" width="61px" height="62px" autosize="none"/>
+            </cl:img>
+            <cl:img std:sid="image-cc57e27f" src="../../../theme/hk/images/controls/image/left-leg.png">
+              <cl:flowlayoutdata std:sid="f-data-b85489c2" width="38px" height="158px" autosize="none"/>
+            </cl:img>
+            <cl:img std:sid="image-ea83f139" src="../../../theme/hk/images/controls/image/right-leg.png">
+              <cl:flowlayoutdata std:sid="f-data-5a7fb9e8" width="38px" height="158px" autosize="none"/>
+            </cl:img>
+            <cl:flowlayout std:sid="f-layout-d4a4d137" scrollable="false" hspacing="30" vspacing="10" linewrap="false"/>
+          </cl:group>
+          <cl:group std:sid="group-7a427a78">
+            <cl:flowlayoutdata std:sid="f-data-b234db22" width="100%" height="25px" autosize="height"/>
+            <cl:output std:sid="output-8f177ccd" class="tooltip arrow-right" value="머리">
+              <cl:flowlayoutdata std:sid="f-data-f71db69a" width="43px" height="25px" autosize="both"/>
+            </cl:output>
+            <cl:output std:sid="output-a8c7bdce" class="tooltip arrow-right" value="가슴">
+              <cl:flowlayoutdata std:sid="f-data-af43b62d" width="43px" height="25px" autosize="both"/>
+            </cl:output>
+            <cl:output std:sid="output-8387fed1" class="tooltip arrow-right" value="왼팔">
+              <cl:flowlayoutdata std:sid="f-data-0798ab6a" width="43px" height="25px" autosize="both"/>
+            </cl:output>
+            <cl:output std:sid="output-30bccc54" class="tooltip arrow-left" value="오른팔">
+              <cl:flowlayoutdata std:sid="f-data-d2b8fe42" width="54px" height="25px" autosize="both"/>
+            </cl:output>
+            <cl:output std:sid="output-874f4a01" class="tooltip arrow-right" value="배">
+              <cl:flowlayoutdata std:sid="f-data-baa4b8b3" width="32px" height="25px" autosize="both"/>
+            </cl:output>
+            <cl:output std:sid="output-c3f6ccdd" class="tooltip arrow-right" value="왼다리">
+              <cl:flowlayoutdata std:sid="f-data-231a2765" width="54px" height="25px" autosize="both"/>
+            </cl:output>
+            <cl:output std:sid="output-e7ebd220" class="tooltip arrow-left" value="오른다리">
+              <cl:flowlayoutdata std:sid="f-data-e1c9a664" width="65px" height="25px" autosize="both"/>
+            </cl:output>
+            <cl:flowlayout std:sid="f-layout-ccab1e67" scrollable="false" hspacing="20" vspacing="10"/>
+          </cl:group>
+          <cl:flowlayout std:sid="f-layout-8aaacac9" scrollable="false" hspacing="30" vspacing="10"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-9759d8e6" scrollable="false" spacing="14"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-76407ce1" scrollable="false" spacing="40" leftmargin="50" rightmargin="50" topmargin="50" bottommargin="50"/>
+    </cl:group>
+    <cl:group std:sid="group-41e6f294" class="pb-content">
+      <cl:verticaldata std:sid="v-data-a5fa3d2e" width="1644px" height="375px" autosize="height"/>
+      <cl:group std:sid="group-58cc8ea1">
+        <cl:verticaldata std:sid="v-data-062569b0" width="1544px" height="223px" autosize="height"/>
+        <cl:udc std:sid="ud-control-fcbd144c" type="udc.hk.pb.SectionTitle">
+          <cl:verticaldata std:sid="v-data-45c6df1a" width="1544px" height="29px"/>
+          <cl:property name="title" value="심사 서류 제출" type="string"/>
+        </cl:udc>
+        <cl:group std:sid="group-1ae6a5fd">
+          <cl:verticaldata std:sid="v-data-2ddec91c" width="400px" height="151px" autosize="height"/>
+          <cl:group std:sid="group-344f0c22">
+            <cl:verticaldata std:sid="v-data-a2de1371" width="400px" height="121px" autosize="height"/>
+            <cl:group std:sid="group-62fa4d77" class="bg-opacity rounded-circle">
+              <cl:formdata std:sid="f-data-f08883e6" row="0" col="0"/>
+              <cl:img std:sid="image-5f430a9e" src="../../../theme/hk/images/controls/image/ico-comm-fax-42.png">
+                <cl:xylayoutdata std:sid="xyl-data-cc1c1226" width="42px" height="42px" horizontalAnchor="CENTER" verticalAnchor="CENTER"/>
+              </cl:img>
+              <cl:xylayout std:sid="xylayout-1bdb16ae" scrollable="false"/>
+            </cl:group>
+            <cl:output std:sid="output-8fb59b93" class="fs-lg text-center" value="팩스">
+              <cl:formdata std:sid="f-data-9254202c" row="1" col="0"/>
+            </cl:output>
+            <cl:output std:sid="output-82c0e33e" class="bg-gray-500">
+              <cl:formdata std:sid="f-data-14a31e90" valign="CENTER" height="2" row="0" col="1"/>
+            </cl:output>
+            <cl:group std:sid="group-61465848" class="bg-opacity rounded-circle">
+              <cl:formdata std:sid="f-data-e47f1a02" row="0" col="2"/>
+              <cl:img std:sid="image-22946356" src="../../../theme/hk/images/controls/image/ico-comm-mobile-42.png">
+                <cl:xylayoutdata std:sid="xyl-data-01d1ec3d" width="30px" height="42px" horizontalAnchor="CENTER" verticalAnchor="CENTER"/>
+              </cl:img>
+              <cl:xylayout std:sid="xylayout-d027e0cf" scrollable="false"/>
+            </cl:group>
+            <cl:output std:sid="output-4e3d4e29" class="fs-lg text-center" value="모바일">
+              <cl:formdata std:sid="f-data-a121c8c4" row="1" col="2"/>
+            </cl:output>
+            <cl:output std:sid="output-26bf5e2c" class="bg-gray-500">
+              <cl:formdata std:sid="f-data-1089104f" valign="CENTER" height="2" row="0" col="3"/>
+            </cl:output>
+            <cl:group std:sid="group-7e7508d7" class="bg-opacity rounded-circle">
+              <cl:formdata std:sid="f-data-03f60fdb" row="0" col="4"/>
+              <cl:img std:sid="image-33178e82" src="../../../theme/hk/images/controls/image/ico-comm-file-42.png">
+                <cl:xylayoutdata std:sid="xyl-data-bc9a23a4" width="28px" height="42px" horizontalAnchor="CENTER" verticalAnchor="CENTER"/>
+              </cl:img>
+              <cl:xylayout std:sid="xylayout-71062985" scrollable="false"/>
+            </cl:group>
+            <cl:output std:sid="output-8adf82e2" class="fs-lg text-center" value="파일첨부">
+              <cl:formdata std:sid="f-data-9fa5e02f" row="1" col="4"/>
+            </cl:output>
+            <cl:formlayout std:sid="f-layout-1477db1a" scrollable="false" hspace="20px" vspace="10px" top-margin="0px" right-margin="1fr" bottom-margin="0px" left-margin="1fr">
+              <cl:rows length="90" unit="PIXEL"/>
+              <cl:rows length="21" unit="PIXEL"/>
+              <cl:columns length="90"/>
+              <cl:columns length="30"/>
+              <cl:columns length="90"/>
+              <cl:columns length="30"/>
+              <cl:columns length="90"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-95316577" spacing="20"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-52990a82" scrollable="false" spacing="14"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-732ea055" scrollable="false" spacing="40" leftmargin="50" rightmargin="50" topmargin="50" bottommargin="50"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-d067fa04" spacing="14"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

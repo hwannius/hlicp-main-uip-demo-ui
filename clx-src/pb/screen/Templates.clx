@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-9b64e183" version="1.0.4074">
+  <head std:sid="head-7375267d">
+    <screen std:sid="screen-2253e93b" id="Hlicp-WIDE" name="Hlicp-WIDE" minwidth="3160px" width="3160px" height="954px" active="false"/>
+    <screen std:sid="screen-b854e2a9" id="Hlicp-FULL" name="Hlicp-FULL" minwidth="1600px" maxwidth="3159px" width="1600px" height="954px" active="true"/>
+    <screen std:sid="screen-6eeaeb74" id="Hlicp-DIV" name="Hlicp-DIV" minwidth="790px" maxwidth="1599px" width="790px" height="954px"/>
+    <screen std:sid="screen-dedd1f2f" id="Hlicp-POP" name="Hlicp-POP" maxwidth="789px" width="767px" height="400px"/>
+    <cl:model std:sid="model-cb5be1f4"/>
+    <cl:appspec title="[템플릿] 템플릿 목록"/>
+  </head>
+  <body std:sid="body-ab6f8da7" class="pb-body">
+    <cl:listener std:sid="listener-196dd116" name="click" handler="onBodyClick"/>
+    <cl:listener std:sid="listener-a5c72f72" name="load" handler="onBodyLoad"/>
+    <cl:group std:sid="group-b655417b" class="pb-content">
+      <cl:verticaldata std:sid="v-data-30817116" width="1024px" height="242px" autosize="height"/>
+      <cl:udc std:sid="ud-control-27c2a286" type="udc.hk.pb.Breadcrumbs">
+        <cl:verticaldata std:sid="v-data-d3766577" width="1544px" height="174px" autosize="height"/>
+        <cl:property name="title" value="템플릿 목록" type="string"/>
+      </cl:udc>
+      <cl:output std:sid="output-75a1799d" class="text-red" value="※ 화면의 경로를 클릭하면 경로가 복사됩니다. Open Resource 다이얼로그를 통해 파일을 검색하세요. (Ctrl + Sift + R)">
+        <cl:verticaldata std:sid="v-data-c42713a6" width="100px" height="20px" syncminheight="true" autosize="height"/>
+      </cl:output>
+      <cl:verticallayout std:sid="v-layout-30aa5659" scrollable="false" spacing="20" leftmargin="50" rightmargin="50" topmargin="0" bottommargin="20"/>
+    </cl:group>
+    <cl:group std:sid="group-7cb234c2" class="pb-content">
+      <cl:verticaldata std:sid="v-data-233da52a" width="1644px" height="1089px" autosize="height"/>
+      <cl:group std:sid="group-f6178776">
+        <cl:verticaldata std:sid="v-data-49f0c3b4" width="1544px" height="1027px" autosize="height"/>
+        <cl:udc std:sid="ud-control-117da149" type="udc.hk.pb.SectionTitle">
+          <cl:verticaldata std:sid="v-data-d8325add" width="1544px" height="29px" autosize="none"/>
+          <cl:property name="title" value="일반" type="string"/>
+        </cl:udc>
+        <cl:group std:sid="group-918ea678" class="pb-table">
+          <cl:verticaldata std:sid="v-data-93783db2" width="400px" height="970px" autosize="height"/>
+          <cl:output std:sid="output-a1971fb5" class="pb-label" value="템플릿명">
+            <cl:formdata std:sid="f-data-c17a0936" row="0" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-1c0c6a76" class="pb-label" value="구분">
+            <cl:formdata std:sid="f-data-24cdf81e" row="0" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-a24898b0" class="pb-label" value="경로">
+            <cl:formdata std:sid="f-data-ea1720c0" row="0" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-504b5f91" class="pb-label" value="내용">
+            <cl:formdata std:sid="f-data-23d7b0b4" row="0" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-c2f05b3a" class="pb-label" value="프레임_일반">
+            <cl:formdata std:sid="f-data-bb6e4a24" row="1" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-b074208a" class="text-center" value="프레임">
+            <cl:formdata std:sid="f-data-53102337" row="1" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-591fc4ee" value="/templates/일반/1.프레임/프레임_일반.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-b7992777" row="1" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-6d9159fb" value="기본 프레임">
+            <cl:formdata std:sid="f-data-144e4c22" row="1" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-71704312" class="pb-label" value="프레임_좌우배치">
+            <cl:listener std:sid="listener-8892cbcd" name="value-change" handler="onOutputValueChange"/>
+            <cl:formdata std:sid="f-data-89a43529" row="2" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-b819fcd0" class="text-center" value="프레임">
+            <cl:formdata std:sid="f-data-7cf205be" row="2" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-ccc4983c" value="/templates/일반/1.프레임/프레임_좌우배치.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-fd15e9c9" row="2" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-b320d803" value="좌우로 컨트롤 배치가 가능한 프레임">
+            <cl:formdata std:sid="f-data-46049f7d" row="2" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-5380ba0b" class="pb-label" value="그리드_수정O">
+            <cl:formdata std:sid="f-data-972fdabd" row="3" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-78ebd906" class="text-center" value="그리드">
+            <cl:formdata std:sid="f-data-78f26efc" row="3" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-676cd2cd" value="/templates/일반/2.그리드/그리드_수정O.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-2d505bc1" row="3" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-938e1046" value="수정이 가능한 그리드">
+            <cl:formdata std:sid="f-data-70497237" row="3" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-a01fb0ef" class="pb-label" value="그리드_수정X">
+            <cl:formdata std:sid="f-data-ee89ae8d" row="4" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-952a2ed6" class="text-center" value="그리드">
+            <cl:formdata std:sid="f-data-34f06392" row="4" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-22e835ec" value="/templates/일반/2.그리드/그리드_수정X.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-609310ef" row="4" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-5763d43f" value="수정이 불가능한 그리드">
+            <cl:formdata std:sid="f-data-8b46168b" row="4" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-a72a0fff" class="pb-label" value="그리드_페이징_수정X">
+            <cl:formdata std:sid="f-data-76d2ec2a" row="5" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-4cc85fa6" class="text-center" value="그리드">
+            <cl:formdata std:sid="f-data-1ff13016" row="5" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-7831b4d8" value="/templates/일반/2.그리드/그리드_페이징_수정X.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-886a1514" row="5" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-1b1e4bce" value="수정이 불가능하고 페이지인덱서 컨트롤을 갖는 그리드">
+            <cl:formdata std:sid="f-data-d0341238" row="5" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-489f2a03" class="pb-label" value="그리드+그리드_수정O_세로배치">
+            <cl:formdata std:sid="f-data-2594ccd2" row="6" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-5b0b833a" class="text-center" value="그리드">
+            <cl:formdata std:sid="f-data-b573c35d" row="6" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-66536c6e" value="/templates/일반/2.그리드/그리드+그리드_수정O_세로배치.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-136ee71d" row="6" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-814dd44b" value="두개의 그리드 타이틀과 그리드를 세로 방향으로 가지며 수정이 가능한 그리드">
+            <cl:formdata std:sid="f-data-bbbfc8f6" row="6" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-fd178037" class="pb-label" value="그리드+그리드_수정O_좌우배치">
+            <cl:formdata std:sid="f-data-55261e44" row="7" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-573997c4" class="text-center" value="그리드">
+            <cl:formdata std:sid="f-data-47b46bf9" row="7" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-6cb379ca" value="/templates/일반/2.그리드/그리드+그리드_수정O_좌우배치.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-3629b675" row="7" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-f0cbd8f1" value="두개의 그리드 타이틀과 그리드를 가로 방향으로 가지며 수정이 가능한 그리드">
+            <cl:formdata std:sid="f-data-b5a74f55" row="7" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-0f2f8862" class="pb-label" value="그리드+그리드+수정X_세로배치">
+            <cl:formdata std:sid="f-data-88a62e56" row="8" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-b7870d3b" class="text-center" value="그리드">
+            <cl:formdata std:sid="f-data-f17272e9" row="8" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-2a362752" value="/templates/일반/2.그리드/그리드+그리드+수정X_세로배치.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-b3f1447d" row="8" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-04e2ce17" value="두개의 그리드 타이틀과 그리드를 세로 방향으로 가지며 수정이 불가능한 그리드">
+            <cl:formdata std:sid="f-data-5ecc1b39" row="8" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-cddc1c79" class="pb-label" value="그리드+그리드_수정X_좌우배치">
+            <cl:formdata std:sid="f-data-bef72ebe" row="9" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-49421f47" class="text-center" value="그리드">
+            <cl:formdata std:sid="f-data-9963bd2e" row="9" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-28d0a178" value="/templates/일반/2.그리드/그리드+그리드_수정X_좌우배치.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-6d0a20d4" row="9" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-31d08146" value="두개의 그리드 타이틀과 그리드를 가로 방향으로 가지며 수정이 불가능한 그리드">
+            <cl:formdata std:sid="f-data-33b56474" row="9" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-6a145077" class="pb-label" value="그리드+그리드+그리드_수정O_가로배치">
+            <cl:formdata std:sid="f-data-90932247" row="10" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-084a0f99" class="text-center" value="그리드">
+            <cl:formdata std:sid="f-data-27adb65e" row="10" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-1370b9fe" value="/templates/일반/2.그리드/그리드+그리드+그리드_수정O_가로배치.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-8cc62eea" row="10" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-a085d9fa" value="세개의 그리드 타이틀과 그리드를 가로 방향으로 가지며 수정이 가능한 그리드">
+            <cl:formdata std:sid="f-data-d58bb9a2" row="10" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-4e60ec93" class="pb-label" value="그리드+그리드+그리드_수정O_세로배치">
+            <cl:formdata std:sid="f-data-c2c0ecbd" row="11" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-2d495ba7" class="text-center" value="그리드">
+            <cl:formdata std:sid="f-data-88c33699" row="11" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-d138d1d3" value="/templates/일반/2.그리드/그리드+그리드+그리드_수정O_세로배치.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-29951d61" row="11" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-5ae04006" value="하나의 타이틀에 두개의 그리드를 세로 방향으로 가지며 수정이 가능한 그리드">
+            <cl:formdata std:sid="f-data-a3358da5" row="11" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-2ee74cfa" class="pb-label" value="그리드+그리드+그리드_수정X_가로배치">
+            <cl:formdata std:sid="f-data-1ff3815e" row="12" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-3c9b5427" class="text-center" value="그리드">
+            <cl:formdata std:sid="f-data-fbdfa09a" row="12" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-92a114b3" value="/templates/일반/2.그리드/그리드+그리드+그리드_수정X_가로배치.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-47bbafca" row="12" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-ff20b7f3" value="세개의 그리드 타이틀과 그리드를 가로 방향으로 가지며 수정이 불가능한 그리드">
+            <cl:formdata std:sid="f-data-8d105c82" row="12" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-71e8bdb3" class="pb-label" value="그리드+그리드+그리드_수정X_세로배치">
+            <cl:formdata std:sid="f-data-31fff797" row="13" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-3a3b0ac3" class="text-center" value="그리드">
+            <cl:formdata std:sid="f-data-2c43d0c2" row="13" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-7eb99738" value="/templates/일반/2.그리드/그리드+그리드+그리드_수정X_세로배치.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-a04cb953" row="13" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-d4ae32dd" value="하나의 타이틀에 두개의 그리드를 세로 방향으로 가지며 수정이 불가능한 그리드">
+            <cl:formdata std:sid="f-data-c32d0a64" row="13" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-5bc1e061" class="pb-label" value="폼_입력형">
+            <cl:formdata std:sid="f-data-f7d79444" row="14" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-d222c1c0" class="text-center" value="폼">
+            <cl:formdata std:sid="f-data-3d5f240d" row="14" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-9da0eeff" value="/templates/일반/3.폼/폼_입력형.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-2ecd0c4d" row="14" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-eb92de94" value="입력형 폼 레이아웃">
+            <cl:formdata std:sid="f-data-0d055e10" row="14" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-24b112f5" class="pb-label" value="폼_출력형">
+            <cl:formdata std:sid="f-data-504e25dd" row="15" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-bc265606" value="/templates/일반/3.폼/폼_출력형.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-48e819e5" row="15" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-8e8f4404" value="출력형 폼 레이아웃">
+            <cl:formdata std:sid="f-data-d74f801a" row="15" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-b4257996" class="pb-label" value="폼_확장형">
+            <cl:formdata std:sid="f-data-0d8b7c31" row="16" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-0a97a576" value="/templates/일반/3.폼/폼_확장형.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-e13e6ca0" row="16" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-ef8e053d" value="확장형 폼 레이아웃">
+            <cl:formdata std:sid="f-data-3fb14a8d" row="16" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-0f590b3e" class="pb-label" value="폼+폼_입력형_가로배치">
+            <cl:formdata std:sid="f-data-301ed89b" row="17" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-46d54171" value="/templates/일반/3.폼/폼+폼_입력형_가로배치.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-7cbb0ca0" row="17" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-27d4e18f" value="두개의 타이틀과 폼을 가로 방향으로 갖는 입력형 폼">
+            <cl:formdata std:sid="f-data-9dc480e9" row="17" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-2aaa1fe9" class="pb-label" value="폼+폼_입력형_세로배치">
+            <cl:formdata std:sid="f-data-f89601d6" row="18" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-045fbea1" value="/templates/일반/3.폼/폼+폼_입력형_세로배치.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-5fbffaba" row="18" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-a4749d8d" value="두개의 타이틀과 폼을 세로 방향으로 갖는 입력형 폼">
+            <cl:formdata std:sid="f-data-50bdcea9" row="18" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-cc705047" class="pb-label" value="폼+폼_출력형_가로배치">
+            <cl:formdata std:sid="f-data-a9d6bede" row="19" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-2ef46b95" value="/templates/일반/3.폼/폼+폼_출력형_가로배치.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-d1cfd7df" row="19" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-e74b5603" value="두개의 타이틀과 폼을 가로 방향으로 갖는 출력형 폼">
+            <cl:formdata std:sid="f-data-33f83aa9" row="19" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-25754a47" class="pb-label" value="폼+폼_출력형_세로배치">
+            <cl:formdata std:sid="f-data-5a9aee7c" row="20" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-b78b4b35" value="/templates/일반/3.폼/폼+폼_출력형_세로배치.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-6da99078" row="20" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-6d21f016" value="두개의 타이틀과 폼을 세로 방향으로 갖는 출력형 폼">
+            <cl:formdata std:sid="f-data-1f25a825" row="20" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-e51d62fc" class="pb-label" value="아코디언_일반형">
+            <cl:formdata std:sid="f-data-8c9dcd75" row="21" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-25e156d6" class="text-center" value="탭과아코디언">
+            <cl:formdata std:sid="f-data-932faa49" row="21" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-9d9742cd" value="/templates/일반/4.탭과아코디언/아코디언_일반형.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-4f2ce1fe" row="21" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-12ec962b" value="일반형 아코디언">
+            <cl:formdata std:sid="f-data-aa19922c" row="21" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-4cea75ac" class="pb-label" value="탭_일반형">
+            <cl:formdata std:sid="f-data-d2a7536d" row="22" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-287ea210" class="text-center" value="탭과아코디언">
+            <cl:formdata std:sid="f-data-12e88f56" row="22" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-24519587" value="/templates/일반/4.탭과아코디언/탭_일반형.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-d5c0a409" row="22" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-a9cad04f" value="일반형 탭폴더">
+            <cl:formdata std:sid="f-data-b27e7cb8" row="22" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-9a046add" class="text-center" value="폼">
+            <cl:formdata std:sid="f-data-99123467" row="15" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-225bdb72" class="text-center" value="폼">
+            <cl:formdata std:sid="f-data-dd1d86df" row="16" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-a5c5d027" class="text-center" value="폼">
+            <cl:formdata std:sid="f-data-31f5da3e" row="17" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-62883695" class="text-center" value="폼">
+            <cl:formdata std:sid="f-data-b7375e15" row="18" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-09895ca6" class="text-center" value="폼">
+            <cl:formdata std:sid="f-data-d7965145" row="19" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-6413cdde" class="text-center" value="폼">
+            <cl:formdata std:sid="f-data-10da1347" row="20" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-a2afae4d" class="pb-label" value="그리드+폼_가로배치">
+            <cl:formdata std:sid="f-data-a0638320" row="23" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-b075e951" class="pb-label" value="그리드+폼_세로배치">
+            <cl:formdata std:sid="f-data-0378c1ca" row="24" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-e7915c5d" class="text-center" value="혼합">
+            <cl:formdata std:sid="f-data-76c8f780" row="23" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-e97f7e8f" class="text-center" value="혼합">
+            <cl:formdata std:sid="f-data-d4a10ce3" row="24" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-ffdf84a1" value="/templates/일반/6.혼합/그리드+폼_가로배치.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-4431065b" row="23" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-7652f7fb" value="/templates/일반/6.혼합/그리드+폼_세로배치.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-7f22d2e1" row="24" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-bfee81a2" value="가로방향 그리드와 폼">
+            <cl:formdata std:sid="f-data-d0848a66" row="23" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-f0b6497a" value="세로방향 그리드와 폼">
+            <cl:formdata std:sid="f-data-afa865e1" row="24" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-b2acc2dd" class="pb-label" value="스테퍼+그리드">
+            <cl:formdata std:sid="f-data-75b35368" row="25" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-f692700a" class="pb-label" value="스테퍼+탭">
+            <cl:formdata std:sid="f-data-28cf06ff" row="26" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-9dedc8ec" class="pb-label" value="스테퍼+폼">
+            <cl:formdata std:sid="f-data-8f799bbb" row="27" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-7478f72e" class="text-center" value="스테퍼">
+            <cl:formdata std:sid="f-data-0b385b10" row="26" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-99c91af1" class="text-center" value="스테퍼">
+            <cl:formdata std:sid="f-data-b75a6ec2" row="27" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-b6939343" class="text-center" value="스테퍼">
+            <cl:formdata std:sid="f-data-21d54e31" row="25" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-1ff052b7" value="/templates/일반/5.스테퍼/스테퍼+그리드.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-59831942" row="25" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-867d5b41" value="/templates/일반/5.스테퍼/스테퍼+탭.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-9401c40f" row="26" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-437e2162" value="/templates/일반/5.스테퍼/스테퍼+폼.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-911a556c" row="27" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-a5e730fb" value="스테퍼+그리드">
+            <cl:formdata std:sid="f-data-fbae4aaf" row="25" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-70c0dd7f" value="스테퍼+탭">
+            <cl:formdata std:sid="f-data-476fb0f8" row="26" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-468f9094" value="스테퍼+폼">
+            <cl:formdata std:sid="f-data-d9a22430" row="27" col="3"/>
+          </cl:output>
+          <cl:formlayout std:sid="f-layout-4cd845f8" scrollable="false" hspace="8px" vspace="8px" top-margin="4px" right-margin="4px" bottom-margin="4px" left-margin="4px" hseparatorwidth="1" hseparatortype="BY_CLASS" vseparatorwidth="1" vseparatortype="BY_CLASS">
+            <cl:rows length="28" unit="PIXEL" autoSizing="false" hidden="false" shadetype="BY_CLASS" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:columns length="250" unit="PIXEL" autoSizing="false" hidden="false" shadetype="BY_CLASS" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="90" unit="PIXEL" autoSizing="false" hidden="false" minlength="0"/>
+            <cl:columns length="1" unit="FRACTION" autoSizing="false" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-d3967e57" scrollable="false" spacing="14"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-8604e0b0" scrollable="false" spacing="40" leftmargin="50" rightmargin="50" topmargin="50" bottommargin="50"/>
+    </cl:group>
+    <cl:group std:sid="group-5c3e3f43" class="pb-content">
+      <cl:verticaldata std:sid="v-data-82c874cf" width="1600px" height="1019px" autosize="height"/>
+      <cl:group std:sid="group-25b4513c">
+        <cl:verticaldata std:sid="v-data-9e1ba449" width="1544px" height="943px" autosize="height"/>
+        <cl:udc std:sid="ud-control-26fe34fe" type="udc.hk.pb.SectionTitle">
+          <cl:verticaldata std:sid="v-data-9a1b9b4b" width="1544px" height="29px" autosize="none"/>
+          <cl:property name="title" value="팝업" type="string"/>
+        </cl:udc>
+        <cl:group std:sid="group-0991982b" class="pb-table">
+          <cl:verticaldata std:sid="v-data-e6482ec9" width="1500px" height="690px" autosize="height"/>
+          <cl:output std:sid="output-e6a11bce" class="pb-label" value="템플릿명">
+            <cl:formdata std:sid="f-data-56cebb37" row="0" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-0a7987d5" class="pb-label" value="구분">
+            <cl:formdata std:sid="f-data-27993a18" row="0" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-a9d378b6" class="pb-label" value="경로">
+            <cl:formdata std:sid="f-data-427deaef" row="0" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-ac1f6c3b" class="pb-label" value="내용">
+            <cl:formdata std:sid="f-data-8e41d7fa" row="0" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-b126076d" class="pb-label" value="프레임_일반">
+            <cl:formdata std:sid="f-data-e9f00d55" row="1" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-4a4c1284" class="text-center" value="프레임">
+            <cl:formdata std:sid="f-data-65a29adb" row="1" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-e9f7fb92" value="/templates/팝업/1.프레임/프레임_일반.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-3a42f5e1" row="1" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-e3db5203" value="일반 팝업 프레임">
+            <cl:formdata std:sid="f-data-e6df783a" row="1" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-b355502e" class="pb-label" value="그리드_수정O">
+            <cl:formdata std:sid="f-data-daaebc36" row="2" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-0888fd85" class="text-center" value="그리드">
+            <cl:formdata std:sid="f-data-eb640169" row="2" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-f7f30b28" value="/templates/팝업/2.그리드/그리드_수정O.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-a878ac85" row="2" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-378b15e9" value="수정가능한 그리드 팝업">
+            <cl:formdata std:sid="f-data-b66be491" row="2" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-08e7c3fe" class="pb-label" value="그리드_수정X">
+            <cl:formdata std:sid="f-data-e67a5a33" row="3" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-de0411f6" class="text-center" value="그리드">
+            <cl:formdata std:sid="f-data-07a3f9f9" row="3" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-70d961b2" value="/templates/팝업/2.그리드/그리드_수정X.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-f534b8ba" row="3" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-89b14f68" value="수정 불가능한 그리드 팝업">
+            <cl:formdata std:sid="f-data-ff786187" row="3" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-05744401" class="pb-label" value="그리드_일반">
+            <cl:formdata std:sid="f-data-e5815ecc" row="4" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-bde7014c" class="text-center" value="그리드">
+            <cl:formdata std:sid="f-data-b3e87486" row="4" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-898f4bda" value="/templates/팝업/2.그리드/그리드_일반.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-447257bd" row="4" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-982c2f8d" value="조회용 그리드 팝업">
+            <cl:formdata std:sid="f-data-63018fa9" row="4" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-30a3770e" class="pb-label" value="그리드+그리드_수정O_상하배치">
+            <cl:formdata std:sid="f-data-2d132721" row="5" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-5bde9bcd" class="text-center" value="그리드">
+            <cl:formdata std:sid="f-data-f2adf94f" row="5" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-2b750343" value="/templates/팝업/2.그리드/그리드+그리드_수정O_상하배치.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-f2c3e2b4" row="5" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-6a6f9f79" value="수정가능한 세로방향의 투그리드 팝업">
+            <cl:formdata std:sid="f-data-64956808" row="5" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-31374c2e" class="pb-label" value="그리드+그리드_수정O_좌우배치">
+            <cl:formdata std:sid="f-data-af11867a" row="6" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-cd485717" class="text-center" value="그리드">
+            <cl:formdata std:sid="f-data-54a0ed57" row="6" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-4753d900" value="/templates/팝업/2.그리드/그리드+그리드_수정O_좌우배치.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-267ce727" row="6" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-8874aee1" value="수정가능한 가로방향의 투그리드 팝업">
+            <cl:formdata std:sid="f-data-c98c48b9" row="6" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-1f904d21" class="pb-label" value="그리드+그리드_수정X_상하배치">
+            <cl:formdata std:sid="f-data-f2d3e6c0" row="7" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-871a2497" class="text-center" value="그리드">
+            <cl:formdata std:sid="f-data-1d0ae6e5" row="7" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-77d6301b" value="/templates/팝업/2.그리드/그리드+그리드_수정X_상하배치.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-b5d6cf81" row="7" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-3db85291" value="수정불가능한 세로방향의 투그리드 팝업">
+            <cl:formdata std:sid="f-data-9ca71156" row="7" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-639ac0d8" class="pb-label" value="그리드+그리드_수정X_좌우배치">
+            <cl:formdata std:sid="f-data-6e1df901" row="8" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-977e9813" class="text-center" value="그리드">
+            <cl:formdata std:sid="f-data-91e61206" row="8" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-2c144810" value="/templates/팝업/2.그리드/그리드+그리드_수정X_좌우배치.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-70d21b93" row="8" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-7ce372e4" value="수정불가능한 가로방향의 투그리드 팝업">
+            <cl:formdata std:sid="f-data-77a44f7b" row="8" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-154d9dfc" class="pb-label" value="폼_일반">
+            <cl:formdata std:sid="f-data-370bf5f0" row="9" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-1f5f5e21" class="text-center" value="폼">
+            <cl:formdata std:sid="f-data-6048a506" row="9" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-59ffd74f" value="/templates/팝업/3.폼/폼_일반.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-33d62912" row="9" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-31f64a4e" value="일반형 폼 팝업">
+            <cl:formdata std:sid="f-data-949e7b4a" row="9" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-d2254d66" class="pb-label" value="폼_입력형">
+            <cl:formdata std:sid="f-data-82166e62" row="10" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-9d5802ad" class="text-center" value="폼">
+            <cl:formdata std:sid="f-data-a21a64fb" row="10" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-27b875bd" value="/templates/팝업/3.폼/폼_입력형.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-06518c14" row="10" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-f21113d3" value="입력형 폼 팝업">
+            <cl:formdata std:sid="f-data-d14543e7" row="10" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-1d443ca5" class="pb-label" value="폼_출력형">
+            <cl:formdata std:sid="f-data-e18fabd2" row="11" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-90cb0777" class="text-center" value="폼">
+            <cl:formdata std:sid="f-data-fe463a3a" row="11" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-1212d733" value="/templates/팝업/3.폼/폼_출력형.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-eedcf797" row="11" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-0134098d" value="출력형 폼 팝업">
+            <cl:formdata std:sid="f-data-3e43ebfd" row="11" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-ab23407b" class="pb-label" value="폼+폼_입력형_가로배치">
+            <cl:formdata std:sid="f-data-c63ca0dd" row="12" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-59134a93" class="text-center" value="폼">
+            <cl:formdata std:sid="f-data-90d9d4df" row="12" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-d5dcd5fe" value="/templates/팝업/3.폼/폼+폼_입력형_가로배치.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-14a2b5fb" row="12" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-9790b329" value="가로방향의 입력형 폼 팝업">
+            <cl:formdata std:sid="f-data-0d66b638" row="12" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-6cfbc760" class="pb-label" value="폼+폼_출력형_가로배치">
+            <cl:formdata std:sid="f-data-52eb69c7" row="13" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-fa0bbce7" class="text-center" value="폼">
+            <cl:formdata std:sid="f-data-c4c5614a" row="13" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-c8a84d5d" value="/templates/팝업/3.폼/폼+폼_출력형_가로배치.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-3c0cb182" row="13" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-2946846a" value="가로방향의 출력형 폼 팝업">
+            <cl:formdata std:sid="f-data-b15161c9" row="13" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-cb55dbfe" class="pb-label" value="아코디언_일반형">
+            <cl:formdata std:sid="f-data-2f295cf5" row="14" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-9c6768b0" class="text-center" value="탭과아코디언">
+            <cl:formdata std:sid="f-data-0d2d4c9d" row="14" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-5d26c407" value="/templates/팝업/4.탭과아코디언/아코디언_일반형.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-aafb0cd7" row="14" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-34a4cba5" value="일반형 아코디언 팝업">
+            <cl:formdata std:sid="f-data-c9d8b6e5" row="14" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-4263f7b3" class="pb-label" value="아코디언_조회형">
+            <cl:formdata std:sid="f-data-a77aab71" row="15" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-3593c7fd" class="text-center" value="탭과아코디언">
+            <cl:formdata std:sid="f-data-7880193f" row="15" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-465fe6a2" value="/templates/팝업/4.탭과아코디언/아코디언_조회형.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-07054b84" row="15" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-c44bf044" value="조회형 아코디언 팝업">
+            <cl:formdata std:sid="f-data-08512346" row="15" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-7e16a512" class="pb-label" value="탭_일반형">
+            <cl:formdata std:sid="f-data-13b5916a" row="16" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-c01f6b32" class="text-center" value="탭과아코디언">
+            <cl:formdata std:sid="f-data-6bc2435b" row="16" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-0c4cd24d" value="/templates/팝업/4.탭과아코디언/탭_일반형.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-ce880a7a" row="16" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-63c80144" value="일반형 탭 폴더">
+            <cl:formdata std:sid="f-data-8f6466a8" row="16" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-2711f262" class="pb-label" value="탭_조회형">
+            <cl:formdata std:sid="f-data-2e6316b0" row="17" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-d2deef87" class="text-center" value="탭과아코디언">
+            <cl:formdata std:sid="f-data-70c23562" row="17" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-eba22f17" value="/templates/팝업/4.탭과아코디언/탭_조회형.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-a381488d" row="17" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-be7e93b6" value="조회형 탭 폴더">
+            <cl:formdata std:sid="f-data-72404f4d" row="17" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-cceeb41d" class="pb-label" value="그리드+폼_가로배치">
+            <cl:formdata std:sid="f-data-c2475f3c" row="18" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-324a4587" class="text-center" value="혼합">
+            <cl:formdata std:sid="f-data-e6264c85" row="18" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-89d31a85" value="/templates/팝업/5.혼합/그리드+폼_가로배치.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-bd7d3ef6" row="18" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-8209f141" value="가로 방향의 그리드와 폼으로 이루어진 팝업">
+            <cl:formdata std:sid="f-data-df30867a" row="18" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-bd719772" class="pb-label" value="그리드+폼_세로배치">
+            <cl:formdata std:sid="f-data-d5738ba6" row="19" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-2ccc4792" class="text-center" value="혼합">
+            <cl:formdata std:sid="f-data-8c86ed3c" row="19" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-5d96e210" value="/templates/팝업/5.혼합/그리드+폼_세로배치.clx">
+            <cl:attribute name="able-to-copy" value="true"/>
+            <cl:formdata std:sid="f-data-7e15c9cf" row="19" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-665b969e" value="세로 방향의 그리드와 폼으로 이루어진 팝업">
+            <cl:formdata std:sid="f-data-31f56cf8" row="19" col="3"/>
+          </cl:output>
+          <cl:formlayout std:sid="f-layout-01fae90c" scrollable="false" hspace="8px" vspace="8px" top-margin="4px" right-margin="4px" bottom-margin="4px" left-margin="4px" hseparatorwidth="1" hseparatortype="BY_CLASS" vseparatorwidth="1" vseparatortype="BY_CLASS">
+            <cl:rows length="28" unit="PIXEL" autoSizing="false" hidden="false" shadetype="BY_CLASS" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:columns length="200" unit="PIXEL" autoSizing="false" hidden="false" shadetype="BY_CLASS" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="120" unit="PIXEL" autoSizing="false" hidden="false" minlength="0"/>
+            <cl:columns length="1" unit="FRACTION" autoSizing="false" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-76c590cd" scrollable="false" spacing="14"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-97bebb78" scrollable="false" spacing="40" leftmargin="50" rightmargin="50" topmargin="50" bottommargin="50"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-0e091e9b" spacing="14"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

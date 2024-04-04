@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-cef46dd2" version="1.0.4034">
+  <head std:sid="head-113497c5">
+    <screen std:sid="screen-490c9470" id="default" name="default" minwidth="1644px" width="1644px" height="903px" useCustomWidth="true" useCustomHeight="true" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-e167c802" id="tablet" name="tablet" maxwidth="1643px" width="1541px" height="903px"/>
+    <cl:model std:sid="model-4726e863">
+      <cl:dataset std:sid="d-set-4c318bad" id="ds1">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-b5f94623" name="column1"/>
+          <cl:datacolumn std:sid="d-column-f7e83f9a" name="column2"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="일반 팝업"/>
+  </head>
+  <body std:sid="body-54776a71">
+    <cl:group std:sid="group-5163a58e">
+      <cl:formdata std:sid="f-data-8d0fcc40" row="1" col="0"/>
+      <cl:button std:sid="button-bd3dd4d3" class="btn-md btn-primary01" value="Button">
+        <cl:listener std:sid="listener-857d973a" name="click" handler="onButtonClick"/>
+        <cl:flowlayoutdata std:sid="f-data-adcd667b" width="60px" height="30px" autosize="width"/>
+      </cl:button>
+      <cl:button std:sid="button-8955cf36" class="btn-md btn-primary04" value="Button">
+        <cl:listener std:sid="listener-5c77225b" name="click" handler="onButtonClick"/>
+        <cl:flowlayoutdata std:sid="f-data-1774a7a3" width="60px" height="30px" autosize="width"/>
+      </cl:button>
+      <cl:flowlayout std:sid="f-layout-b12e8af1" scrollable="false" hspacing="10" vspacing="0" halign="center"/>
+    </cl:group>
+    <cl:group std:sid="group-1c9478a9">
+      <cl:formdata std:sid="f-data-822ba060" row="0" col="0"/>
+      <cl:output std:sid="output-ec5d68fd" value="7" datatype="number" format="#,##0" displayexp="&quot;사고수정일로부터 30일 초과건이 &quot; + sstr(text, [&quot;text-primary&quot;]) + &quot;건 있습니다.\n확인 후 처리바랍니다.&quot;">
+        <cl:formdata std:sid="f-data-d4731491" row="0" col="0"/>
+      </cl:output>
+      <cl:grid std:sid="grid-4098d310" id="grd1" readonly="true" datasetid="ds1" resizablecolumns="all" columnMovable="true">
+        <cl:formdata std:sid="f-data-ea64712b" row="1" col="0"/>
+        <cl:gridcolumn std:sid="g-column-40012255"/>
+        <cl:gridcolumn std:sid="g-column-36fa34e8"/>
+        <cl:gridheader std:sid="gh-band-eae5e505">
+          <cl:gridrow std:sid="g-row-a6d9c3ec" height="31px"/>
+          <cl:gridcell std:sid="gh-cell-4736a443" rowindex="0" colindex="0" targetcolumnname="column1" sortable="false" filterable="false" text="column1"/>
+          <cl:gridcell std:sid="gh-cell-346ef389" rowindex="0" colindex="1" targetcolumnname="column2" sortable="false" filterable="false" text="column2"/>
+        </cl:gridheader>
+        <cl:griddetail std:sid="gd-band-78c5c691">
+          <cl:gridrow std:sid="g-row-2ef565ee" height="31px"/>
+          <cl:gridcell std:sid="gd-cell-505593ca" rowindex="0" colindex="0" columnname="column1"/>
+          <cl:gridcell std:sid="gd-cell-803de507" rowindex="0" colindex="1" columnname="column2"/>
+        </cl:griddetail>
+      </cl:grid>
+      <cl:formlayout std:sid="f-layout-1fd53f8a" scrollable="false" hspace="10px" vspace="10px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="33" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-945c4382" scrollable="false" hspace="0px" vspace="10px" top-margin="20px" right-margin="20px" bottom-margin="20px" left-margin="20px">
+      <cl:rows length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+      <cl:rows length="30" unit="PIXEL"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

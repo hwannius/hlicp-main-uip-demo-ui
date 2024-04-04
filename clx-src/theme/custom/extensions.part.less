@@ -1,0 +1,326 @@
+@import "../custom-settings.part.less";
+
+/************************************************
+ * [화면] 여백 및 간격 처리
+ ************************************************/
+ 
+ .cl-container.app-title {
+ 	padding-bottom: 12px;
+ 	
+ 	.cl-output.home {
+ 		background: url("../images/controls/image/ic_home.svg") no-repeat center / 14px;
+ 	}
+ }
+
+.grid-window-body {
+	.cl-layout-content {
+		> .cl-scrollbar {
+			padding-bottom: 10px;
+		}
+	}
+	min-width: 1000px;
+	
+	
+	/* 임베디드 되는 화면 */
+	.division-area {
+		.cl-embeddedapp > .grid-window-body {
+			min-width: 0;
+			
+			> .cl-layout {
+				/* 버티컬 레이아웃에서만 적용됨 */
+				> .cl-layout-content:has(> .cl-layout-wrap) {
+					padding: 0 !important;
+					
+					> .cl-layout-margin-top,
+					> .cl-layout-margin-bottom {
+						height: 0px !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+.grid-content-body {
+//	padding: 0px 20px 10px 20px;
+}
+
+.pop-content-body {
+	padding: 19px;
+}
+
+.grid-box,
+.form-box,
+.tab-box,
+.accordion-box {
+	padding-top: 5px;
+	
+	&.box-spacing-free {
+		padding-top: 0px;
+	}
+}
+
+// 그리드
+.grid-box {
+}
+
+// 폼
+.form-box {
+}
+
+// 아코디언
+.accordion-box {
+	.accordion-area {
+		padding : 10px;
+	}
+}
+
+// 탭 폴더
+.tab-box {
+	.tab-area {
+		padding : 10px;
+
+		.division-area {
+			// padding : 0px 0px 0px 0px;
+		}
+	}
+}
+
+// 캡션
+.caption-box {
+	padding: 5px 0px;
+}
+
+// 버튼 영역 (타이틀 + 버튼)
+.button-table-area {
+	.button-table-top-area {
+	}
+}
+
+.button-table-top-area {
+	.cl-layout-wrap:not(:last-child) {
+		.cl-output.info-caption {
+			padding-right: 5px;
+		}
+	}
+}
+
+/************************************************
+ * [화면] CmnMainTabItem
+ * --> 화면 내 스타일
+ ************************************************/
+ 
+.cl-output.navi-left {
+	font-size: @h2-font-size;
+	font-weight: @font-weight-bold;
+	padding-left: 19px;
+	
+	&:before {
+		content: "";
+		position: absolute;
+		left: 4.5px;
+		top: calc(50% - 7px);
+		width: 5px;
+		height: 14px;
+		background-color: @primary;
+		border-radius: @border-radius;
+	}
+}
+
+.cl-container.breadcrumbs {
+	.cl-output.breadcrumb-item {
+		background-image: url("../images/com/main/ico-arrow.png");
+		background-position: left 3px;
+		color: @gray-700;
+		font-size: @h5-font-size;
+		padding-left: 11px;
+		
+		.cl-text {
+			line-height: 17px;
+		}
+	}
+}
+
+
+/************************************************
+ * [컴포넌트] Stepper
+ * --> 특정 화면 내 사용되는 스타일
+ ************************************************/
+ 
+.cl-container.stepper {
+	background-color: @white;
+	border: 1px solid @gray-500;
+
+	.cl-container.stepper-item {
+		&:not(.cl-last-row) {
+			background-image: linear-gradient(@gray-500, @gray-500);
+			background-repeat: no-repeat;
+			background-position: center bottom;
+			background-size: calc(100% - 30px) 1px;
+		}
+		
+		.cl-output {
+			text-align: center;
+		}
+		
+		.cl-output.step-order {
+			background-color: @lighter;
+			border-radius: @border-radius-circle;
+			font-size: @h2-font-size;
+		}
+		
+		.cl-output.tit {
+			font-size: @h1-font-size;
+			
+			.cl-text {
+				line-height: 23px;
+			}
+			
+			// sstr로 추가되는 상태
+			span.caption {
+				font-size: @font-size-base;
+				color: @white;
+			}
+		}
+		
+		// 현재 진행중
+		&.on {
+			background-image: none;
+			background-color: @pink;
+			box-shadow: 7px 7px 20px 0px rgba(0, 0, 0, .25);
+			margin: -1px;
+			
+			&:after {
+				content: "";
+				position: absolute;
+				right: -7px;
+				top: calc(50% - 3.5px);
+				border-top: 7px solid @transparent;
+				border-bottom: 7px solid @transparent;
+				border-left: 7px solid @pink;
+			}
+			
+			.cl-output.step-order {
+				&:before {
+					content: "";
+					position: absolute;
+					left: 0px;
+					width: 100%;
+					height: 100%;
+					background-image: url("../images/ext/stepper/ico-comm-check-p-16.png");
+					background-repeat: no-repeat;
+					background-position: center;
+					background-color: @white;
+				}
+			}
+			
+			.cl-output.tit {
+				color: @white;
+			}
+		}
+		
+		// 완료
+		&.done {
+			.cl-output.step-order {
+				&:before {
+					content: "";
+					position: absolute;
+					left: 0px;
+					width: 100%;
+					height: 100%;
+					background-image: url("../images/ext/stepper/ico-comm-check-w-16.png");
+					background-repeat: no-repeat;
+					background-position: center;
+					background-color: @pink;
+				}
+			}
+			
+			.cl-output.tit {
+				color: @pink;
+			}
+		}
+	}
+}
+
+/************************************************
+ * [UDC] udcComLoadMask
+ * --> udc/com/udcComLoadMask
+ ************************************************/
+ 
+.spinner-overlay {
+	background-color: @transparent;
+}
+ 
+.spinner {
+	@spinner-size: 64px;
+	@balls-spacing: 3px;
+	@color: @primary;
+
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	width: @spinner-size;
+	height: @spinner-size;
+
+	&:before, &:after {
+		content: "";
+		flex: 0 0 auto;
+		display: block;
+		width: @spinner-size / 3 - @balls-spacing * 2;
+		height: @spinner-size / 3 - @balls-spacing * 2;
+		border-radius: 50px;
+		background-color: @color;
+		transform-origin: center;
+		margin: @balls-spacing;
+
+		@keyframes spinner-anim-02 {
+			0% {
+				transform: scale(1) translateX((@spinner-size * -1) / 3); // 공이 튄 후 뒤로 미는 동작
+			}
+			50% {
+				transform: scale(1) translateX(0);
+			}
+		}
+
+		animation: spinner-anim-02 0.8s infinite;
+	}
+
+	span {
+		position: absolute;
+		display: flex;
+		justify-content: flex-end;
+		width: 100%;
+		height: @spinner-size / 3;
+		margin: auto;
+		transform-origin: center;
+
+		&:before {
+			content: "";
+			flex: 0 0 auto;
+			display: block;
+			width: @spinner-size / 3 - @balls-spacing * 2;
+			height: @spinner-size / 3 - @balls-spacing * 2;
+			border-radius: 50px;
+			background-color: @color;
+			margin: @balls-spacing;
+		}
+
+		@keyframes spinner-anim-01 {
+			0% {
+				transform: rotate(0);
+				animation-timing-function: cubic-bezier(0,.59,1,.68);
+			}
+			80% {
+				transform: rotate(-180deg) translateY(20%); // 제자리에서 튀는 속도
+				animation-timing-function: ease-in;
+			}
+			50%, 85%, 100% {
+				transform: rotate(-180deg) translateY(0);
+				animation-timing-function: ease;
+			}
+		}
+
+		animation: spinner-anim-01 0.8s infinite;
+	}
+}

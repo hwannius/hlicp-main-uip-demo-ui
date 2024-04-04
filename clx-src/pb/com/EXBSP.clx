@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-cb10fc36" version="1.0.3795">
+  <head std:sid="head-e115a882">
+    <screen std:sid="screen-e9078d55" id="default" name="default" width="1920px" height="963px"/>
+    <cl:model std:sid="model-033ffbab">
+      <cl:dataset std:sid="d-set-952755ab" id="dsMn">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="라벨" std:sid="d-column-342e6791" name="label"/>
+          <cl:datacolumn comment="값" std:sid="d-column-22ca26e7" name="value"/>
+          <cl:datacolumn comment="상위값" std:sid="d-column-cd1a9a08" name="parent"/>
+          <cl:datacolumn comment="앱ID" std:sid="d-column-50d77de0" name="appId"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+      <cl:submission std:sid="submission-0f7a3312" id="subOnLoad" action="hk/pb/com/menu.json">
+        <cl:responsedata dataid="dsMn"/>
+      </cl:submission>
+    </cl:model>
+    <cl:appspec title="EXBSP | 메인"/>
+  </head>
+  <body std:sid="body-bb3301cd" style="min-width:1400px;">
+    <cl:listener std:sid="listener-51f2674a" name="init" handler="onBodyInit"/>
+    <cl:group std:sid="group-f9d7d43d" id="grpHd" class="pb-header">
+      <cl:xylayoutdata std:sid="xyl-data-7e19201f" top="0px" right="0px" left="0px" height="60px" horizontalAnchor="BOTH" verticalAnchor="TOP"/>
+      <cl:img std:sid="image-7bd6e793" id="imgLogo" tabindex="0" src="../../theme/pb/images/com/exb6.png">
+        <cl:listener std:sid="listener-194b4862" name="click" handler="onImgLogoClick"/>
+        <cl:listener std:sid="listener-c6346c06" name="keydown" handler="onImgLogoKeydown"/>
+        <cl:xylayoutdata std:sid="xyl-data-970702f6" left="30px" width="150px" height="32px" horizontalAnchor="LEFT" verticalAnchor="CENTER"/>
+      </cl:img>
+      <cl:xylayout std:sid="xylayout-6d5f575f"/>
+    </cl:group>
+    <cl:group std:sid="group-448fd400" id="grpAsd" class="pb-aside">
+      <cl:xylayoutdata std:sid="xyl-data-56c2486f" top="60px" bottom="0px" left="0px" width="258px" horizontalAnchor="LEFT" verticalAnchor="BOTH"/>
+      <cl:sidenavigation std:sid="s-navigation-28d7802b" id="snavMn" indent="0" selectionHighlightType="independent">
+        <cl:listener std:sid="listener-5cabfc29" name="item-click" handler="onSideNavigationItemClick"/>
+        <cl:listener std:sid="listener-333701f2" name="item-click" handler="onSnavMnItemClick"/>
+        <cl:xylayoutdata std:sid="xyl-data-2b9287f8" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+        <cl:treeitemset datasetid="dsMn" label="label" value="value" parent="parent"/>
+      </cl:sidenavigation>
+      <cl:xylayout std:sid="xylayout-ae2aebae" scrollable="false"/>
+    </cl:group>
+    <cl:embeddedapp std:sid="e-app-24927fcd" id="eaCn">
+      <cl:listener std:sid="listener-cb723aae" name="app-ready" handler="onEaCnAppReady"/>
+      <cl:xylayoutdata std:sid="xyl-data-ef363b94" top="60px" right="0px" bottom="0px" left="258px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+    </cl:embeddedapp>
+    <cl:checkbox std:sid="c-box-1c0bd4da" id="cbxTg" class="pb-toggle" value="" text="">
+      <cl:listener std:sid="listener-d9d4a47e" name="value-change" handler="onCbxTgValueChange"/>
+      <cl:xylayoutdata std:sid="xyl-data-894cd08e" left="243px" width="30px" height="30px" horizontalAnchor="LEFT" verticalAnchor="CENTER"/>
+    </cl:checkbox>
+    <cl:xylayout std:sid="xylayout-4facfa84" animationduration="0.28"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler>
+      <std:guide position="258"/>
+    </std:hruler>
+    <std:vruler>
+      <std:guide position="60"/>
+    </std:vruler>
+  </std:studiosetting>
+</html>

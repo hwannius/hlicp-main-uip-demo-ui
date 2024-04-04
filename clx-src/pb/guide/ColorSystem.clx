@@ -1,0 +1,1238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-330f79a7" version="1.0.3795">
+  <head std:sid="head-1cc7cf00">
+    <std:metadata>
+      <std:property key="template-file" value="templates/퍼블리싱가이드/프레임_버티컬레이아웃.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-73ce4095" id="default" name="default" minwidth="1644px" width="1644px" height="903px"/>
+    <screen std:sid="screen-861e419d" id="tablet" name="tablet" maxwidth="1643px" width="1541px" height="903px"/>
+    <cl:model std:sid="model-ec2c40ac"/>
+    <cl:appspec title="[디자인가이드] 컬러 시스템"/>
+  </head>
+  <body std:sid="body-ef5304c9" class="pb-body">
+    <cl:group std:sid="group-b655417b" class="pb-content">
+      <cl:verticaldata std:sid="v-data-9d0e615f" width="1644px" height="242px" autosize="height"/>
+      <cl:udc std:sid="ud-control-27c2a286" type="udc.hk.pb.Breadcrumbs">
+        <cl:verticaldata std:sid="v-data-d3766577" width="1544px" height="174px" autosize="height"/>
+      </cl:udc>
+      <cl:output std:sid="output-75a1799d" class="text-red" value="※ 기타 지시문 작성">
+        <cl:verticaldata std:sid="v-data-c42713a6" width="100px" height="20px" syncminheight="true" autosize="height"/>
+      </cl:output>
+      <cl:verticallayout std:sid="v-layout-30aa5659" scrollable="false" spacing="20" leftmargin="50" rightmargin="50" topmargin="0" bottommargin="20"/>
+    </cl:group>
+    <cl:group std:sid="group-110042a3" class="pb-content">
+      <cl:verticaldata std:sid="v-data-bef4a8ed" width="400px" height="1111px" autosize="height"/>
+      <cl:group std:sid="group-694ca9c8">
+        <cl:verticaldata std:sid="v-data-31e11d2b" width="1544px" height="172px" autosize="height"/>
+        <cl:udc std:sid="ud-control-5fef28af" type="udc.hk.pb.SectionTitle">
+          <cl:verticaldata std:sid="v-data-e284631d" width="1544px" height="29px"/>
+          <cl:property name="title" value="메인 컬러" type="string"/>
+          <cl:property name="subText" value="메인 컬러는 색상 변경이 불가능하며, 전체적인 아이덴티티를 표현할 때 사용한다." type="string"/>
+        </cl:udc>
+        <cl:group std:sid="group-98688868">
+          <cl:verticaldata std:sid="v-data-a1bcceda" width="400px" height="130px" autosize="height"/>
+          <cl:output std:sid="output-3fef08a3" class="bg-primary text-white text-center" value="Primary&#xD;&#xA;#ec008c">
+            <cl:flowlayoutdata std:sid="f-data-bfa3ecd4" width="120px" height="60px"/>
+          </cl:output>
+          <cl:output std:sid="output-dd0cc00f" class="bg-secondary text-white text-center" value="Secondary&#xD;&#xA;#351b6f">
+            <cl:flowlayoutdata std:sid="f-data-9b6baf1c" width="120px" height="60px"/>
+          </cl:output>
+          <cl:flowlayout std:sid="f-layout-bddd371e" scrollable="false" hspacing="10" vspacing="10"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-816480d1" scrollable="false" spacing="14"/>
+      </cl:group>
+      <cl:group std:sid="group-bec5d9b7">
+        <cl:verticaldata std:sid="v-data-aedde8c2" width="1544px" height="172px" autosize="height"/>
+        <cl:udc std:sid="ud-control-beca3eaa" type="udc.hk.pb.SectionTitle">
+          <cl:verticaldata std:sid="v-data-25362f3e" width="1544px" height="29px"/>
+          <cl:property name="title" value="서브 컬러" type="string"/>
+          <cl:property name="subText" value="메인 컬러 이외에 콘텐트 정보를 강조하거나 서비스 아이덴티티를 표현하는데 보조적으로 사용한다." type="string"/>
+        </cl:udc>
+        <cl:group std:sid="group-173dae95">
+          <cl:verticaldata std:sid="v-data-eeb3808c" width="400px" height="130px" autosize="height"/>
+          <cl:output std:sid="output-7a6e2bbe" class="bg-info text-white text-center" value="Info&#xD;&#xA;#2f6ff2">
+            <cl:flowlayoutdata std:sid="f-data-0fa80558" width="120px" height="60px"/>
+          </cl:output>
+          <cl:output std:sid="output-fcaf94c8" class="bg-success text-white text-center" value="Success&#xD;&#xA;#50a2d1">
+            <cl:flowlayoutdata std:sid="f-data-aaf78044" width="120px" height="60px"/>
+          </cl:output>
+          <cl:output std:sid="output-6f7d5dda" class="bg-warning text-white text-center" value="Warning&#xD;&#xA;#ff5f41">
+            <cl:flowlayoutdata std:sid="f-data-1925540e" width="120px" height="60px"/>
+          </cl:output>
+          <cl:output std:sid="output-1f46554b" class="bg-danger text-white text-center" value="Danger&#xD;&#xA;#f01e1e">
+            <cl:flowlayoutdata std:sid="f-data-2fb1bbef" width="120px" height="60px"/>
+          </cl:output>
+          <cl:flowlayout std:sid="f-layout-187c442f" scrollable="false" hspacing="10" vspacing="10"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-3c5f20f7" scrollable="false" spacing="14"/>
+      </cl:group>
+      <cl:group std:sid="group-847de946">
+        <cl:verticaldata std:sid="v-data-e5232c75" width="1544px" height="172px" autosize="height"/>
+        <cl:udc std:sid="ud-control-503bb023" type="udc.hk.pb.SectionTitle">
+          <cl:verticaldata std:sid="v-data-a8ded5fc" width="1544px" height="29px"/>
+          <cl:property name="title" value="그레이 스케일" type="string"/>
+          <cl:property name="subText" value="콘텐트 정보에 따라 텍스트 컬러를 구분함으로써 정보를 다르게 표현한다." type="string"/>
+        </cl:udc>
+        <cl:group std:sid="group-13bef8b6">
+          <cl:verticaldata std:sid="v-data-cdb8d4f0" width="400px" height="130px" autosize="height"/>
+          <cl:output std:sid="output-65824efc" class="bg-gray-100 text-black text-center" value="Gray-100&#xD;&#xA;#f8f9fa">
+            <cl:flowlayoutdata std:sid="f-data-d01affb3" width="120px" height="60px"/>
+          </cl:output>
+          <cl:output std:sid="output-4c5d9304" class="bg-gray-200 text-black text-center" value="Gray-200&#xD;&#xA;#ececec">
+            <cl:flowlayoutdata std:sid="f-data-0a4506ba" width="120px" height="60px" autosize="none"/>
+          </cl:output>
+          <cl:output std:sid="output-8725a8d8" class="bg-gray-300 text-black text-center" value="Gray-300&#xD;&#xA;#dfdfdf">
+            <cl:flowlayoutdata std:sid="f-data-6789e15b" width="120px" height="60px" autosize="none"/>
+          </cl:output>
+          <cl:output std:sid="output-74f93d13" class="bg-gray-400 text-black text-center" value="Gray-400&#xD;&#xA;#cecece">
+            <cl:flowlayoutdata std:sid="f-data-a6c8fb7a" width="120px" height="60px" autosize="none"/>
+          </cl:output>
+          <cl:output std:sid="output-bf64102b" class="bg-gray-500 text-white text-center" value="Gray-500&#xD;&#xA;#cccccc">
+            <cl:flowlayoutdata std:sid="f-data-e3f314f7" width="120px" height="60px" autosize="none"/>
+          </cl:output>
+          <cl:output std:sid="output-938ed6bb" class="bg-gray-600 text-white text-center" value="Gray-600&#xA;#999999">
+            <cl:flowlayoutdata std:sid="f-data-5f640b1a" width="120px" height="60px" autosize="none"/>
+          </cl:output>
+          <cl:output std:sid="output-dacf717d" class="bg-gray-700 text-white text-center" value="Gray-700&#xD;&#xA;#666666">
+            <cl:flowlayoutdata std:sid="f-data-ed4a66b4" width="120px" height="60px" autosize="none"/>
+          </cl:output>
+          <cl:output std:sid="output-666b7410" class="bg-gray-800 text-white text-center" value="Gray-800&#xD;&#xA;#555555">
+            <cl:flowlayoutdata std:sid="f-data-86a9d8ed" width="120px" height="60px" autosize="none"/>
+          </cl:output>
+          <cl:output std:sid="output-25f15321" class="bg-gray-900 text-white text-center" value="Gray-900&#xD;&#xA;#333333">
+            <cl:flowlayoutdata std:sid="f-data-a69c88ac" width="120px" height="60px" autosize="none"/>
+          </cl:output>
+          <cl:flowlayout std:sid="f-layout-944992e2" scrollable="false" hspacing="10" vspacing="10"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-10a7240b" scrollable="false" spacing="14"/>
+      </cl:group>
+      <cl:group std:sid="group-49a8ce33">
+        <cl:verticaldata std:sid="v-data-8b56649a" width="1544px" height="173px" autosize="height"/>
+        <cl:udc std:sid="ud-control-a3ed8273" type="udc.hk.pb.SectionTitle">
+          <cl:verticaldata std:sid="v-data-10f834e7" width="1544px" height="29px"/>
+          <cl:property name="title" value="컬러 팔레트" type="string"/>
+          <cl:property name="subText" value="콘텐트 정보에 따라 텍스트 컬러를 구분함으로써 정보를 다르게 표현한다." type="string"/>
+        </cl:udc>
+        <cl:group std:sid="group-7912a3d0" id="grp1">
+          <cl:verticaldata std:sid="v-data-230da9cd" width="400px" height="130px" autosize="height"/>
+          <cl:output std:sid="output-b7ff0cea" class="bg-blue text-white text-center" value="Blue&#xD;&#xA;#2f6ff2">
+            <cl:flowlayoutdata std:sid="f-data-41469ca7" width="120px" height="60px"/>
+          </cl:output>
+          <cl:output std:sid="output-7ce622d9" class="bg-indigo text-white text-center" value="Indigo&#xD;&#xA;#2f3659">
+            <cl:flowlayoutdata std:sid="f-data-02689be9" width="120px" height="60px" autosize="none"/>
+          </cl:output>
+          <cl:output std:sid="output-4523f02e" class="bg-purple text-white text-center" value="Purple&#xD;&#xA;#9344ff">
+            <cl:flowlayoutdata std:sid="f-data-58bb9816" width="120px" height="60px" autosize="none"/>
+          </cl:output>
+          <cl:output std:sid="output-01069f51" class="bg-pink text-white text-center" value="Pink&#xD;&#xA;#f01e92">
+            <cl:flowlayoutdata std:sid="f-data-0d4d4140" width="120px" height="60px" autosize="none"/>
+          </cl:output>
+          <cl:output std:sid="output-4350c39f" class="bg-red text-white text-center" value="Red&#xD;&#xA;#f01e1e">
+            <cl:flowlayoutdata std:sid="f-data-4ba5713f" width="120px" height="60px" autosize="none"/>
+          </cl:output>
+          <cl:output std:sid="output-7b121f1f" class="bg-orange text-white text-center" value="Orange&#xD;&#xA;#ff5f41">
+            <cl:flowlayoutdata std:sid="f-data-d27ce4b3" width="120px" height="60px" autosize="none"/>
+          </cl:output>
+          <cl:output std:sid="output-df94b9c6" class="bg-yellow text-white text-center" value="Yellow&#xA;#fec84b">
+            <cl:flowlayoutdata std:sid="f-data-4efea49d" width="120px" height="60px" autosize="none"/>
+          </cl:output>
+          <cl:output std:sid="output-80502a7f" class="bg-green text-white text-center" value="Green&#xD;&#xA;#00a292">
+            <cl:flowlayoutdata std:sid="f-data-5f986b78" width="120px" height="60px" autosize="none"/>
+          </cl:output>
+          <cl:output std:sid="output-e438a8af" class="bg-teal text-white text-center" value="Teal&#xD;&#xA;#50a2d1">
+            <cl:flowlayoutdata std:sid="f-data-47a2e8eb" width="120px" height="60px" autosize="none"/>
+          </cl:output>
+          <cl:output std:sid="output-c1688e4b" class="bg-cyan text-white text-center" value="Cyan&#xD;&#xA;#0087d4">
+            <cl:flowlayoutdata std:sid="f-data-4aa69f89" width="120px" height="60px" autosize="none"/>
+          </cl:output>
+          <cl:output std:sid="output-932785c3" class="bg-gray text-white text-center" value="Gray&#xD;&#xA;#a0a9b4">
+            <cl:flowlayoutdata std:sid="f-data-fc404a3f" width="120px" height="60px" autosize="none"/>
+          </cl:output>
+          <cl:output std:sid="output-40f38448" class="bg-dark text-white text-center" value="Dark&#xD;&#xA;#575c65">
+            <cl:flowlayoutdata std:sid="f-data-7720d361" width="120px" height="60px" autosize="none"/>
+          </cl:output>
+          <cl:output std:sid="output-d8223839" class="bg-white text-black text-center border" value="White&#xA;#ffffff">
+            <cl:flowlayoutdata std:sid="f-data-9f6bfd6e" width="120px" height="60px" autosize="none"/>
+          </cl:output>
+          <cl:output std:sid="output-6c738cbc" class="bg-black text-white text-center" value="Black&#xA;#000000">
+            <cl:flowlayoutdata std:sid="f-data-1e3f7e07" width="120px" height="60px" autosize="none"/>
+          </cl:output>
+          <cl:output std:sid="output-f1399ecb" class="bg-light text-white text-center" value="Light&#xD;&#xA;#b3bbc0">
+            <cl:flowlayoutdata std:sid="f-data-86a685af" width="120px" height="60px" autosize="none"/>
+          </cl:output>
+          <cl:output std:sid="output-ae1acd43" class="bg-lighter text-black text-center" value="Lighter&#xD;&#xA;#f0eff5">
+            <cl:flowlayoutdata std:sid="f-data-76a6134b" width="120px" height="60px" autosize="none"/>
+          </cl:output>
+          <cl:flowlayout std:sid="f-layout-c1e9358d" scrollable="false" hspacing="10" vspacing="10"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-62bd929c" scrollable="false" spacing="14"/>
+      </cl:group>
+      <cl:group std:sid="group-66750bce">
+        <cl:verticaldata std:sid="v-data-265a30f8" width="1544px" height="172px" autosize="height"/>
+        <cl:udc std:sid="ud-control-da45014a" type="udc.hk.pb.SectionTitle">
+          <cl:verticaldata std:sid="v-data-b432d027" width="1544px" height="29px"/>
+          <cl:property name="title" value="딤 컬러" type="string"/>
+        </cl:udc>
+        <cl:group std:sid="group-b1416c00">
+          <cl:verticaldata std:sid="v-data-31ce9bd6" width="400px" height="130px" autosize="height"/>
+          <cl:output std:sid="output-5f1a81cd" class="bg-primary-dim text-primary text-center" value="Primary-dim&#xD;&#xA;#f7f1ff">
+            <cl:flowlayoutdata std:sid="f-data-d8eca799" width="120px" height="60px"/>
+          </cl:output>
+          <cl:output std:sid="output-41e3395e" class="bg-secondary-dim text-secondary text-center" value="Secondary-dim&#xD;&#xA;#eff0f5">
+            <cl:flowlayoutdata std:sid="f-data-daae37f6" width="120px" height="60px"/>
+          </cl:output>
+          <cl:output std:sid="output-33fb3666" class="bg-info-dim text-info text-center" value="Info-dim&#xD;&#xA;#ccd7f5">
+            <cl:flowlayoutdata std:sid="f-data-1d218fc1" width="120px" height="60px"/>
+          </cl:output>
+          <cl:output std:sid="output-76a6bea4" class="bg-success-dim text-success text-center" value="Success-dim&#xD;&#xA;#f2fcff">
+            <cl:flowlayoutdata std:sid="f-data-f131de30" width="120px" height="60px"/>
+          </cl:output>
+          <cl:output std:sid="output-f2ddb99e" class="bg-warning-dim text-warning text-center" value="Warning-dim&#xD;&#xA;#fdf4ea">
+            <cl:flowlayoutdata std:sid="f-data-19d3185d" width="120px" height="60px"/>
+          </cl:output>
+          <cl:output std:sid="output-3fb70a83" class="bg-danger-dim text-danger text-center" value="Danger-dim&#xD;&#xA;#fff2f2">
+            <cl:flowlayoutdata std:sid="f-data-0962f47c" width="120px" height="60px"/>
+          </cl:output>
+          <cl:flowlayout std:sid="f-layout-dc40a04f" scrollable="false" hspacing="10" vspacing="10"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-53b87f7f" scrollable="false" spacing="14"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-a1c44b73" scrollable="false" spacing="40" leftmargin="50" rightmargin="50" topmargin="50" bottommargin="50"/>
+    </cl:group>
+    <cl:group std:sid="group-982f2e6e" class="pb-content">
+      <cl:verticaldata std:sid="v-data-4974af6e" width="1644px" height="1294px" autosize="height"/>
+      <cl:group std:sid="group-e031c78e">
+        <cl:verticaldata std:sid="v-data-055e4707" width="1544px" height="1197px" autosize="height"/>
+        <cl:udc std:sid="ud-control-1cffd87f" type="udc.hk.pb.SectionTitle">
+          <cl:verticaldata std:sid="v-data-eb077210" width="1544px" height="29px" autosize="none"/>
+          <cl:property name="title" value="클래스 - 배경 색상" type="string"/>
+        </cl:udc>
+        <cl:group std:sid="group-a710e1c8" class="pb-table">
+          <cl:verticaldata std:sid="v-data-0ab6e6ec" width="400px" height="1126px" autosize="height"/>
+          <cl:output std:sid="output-be2d4ec5" class="pb-label" value="클래스명">
+            <cl:formdata std:sid="f-data-970a4c07" row="0" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-eb9fad0b" class="pb-label" value="적용">
+            <cl:formdata std:sid="f-data-fb4536df" row="0" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-baca52ee" class="pb-label" value="사용 예시">
+            <cl:formdata std:sid="f-data-6a94a0af" row="0" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-0bd8c347" class="pb-label" value="bg-gray-100" unselectable="false">
+            <cl:formdata std:sid="f-data-657d292f" row="1" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-b44d9fd0" class="bg-gray-100" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-e3456e5d" row="1" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-84a7d89c" value="">
+            <cl:formdata std:sid="f-data-50833f9c" row="1" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-73d05def" class="pb-label" value="bg-gray-200" unselectable="false">
+            <cl:formdata std:sid="f-data-1bfa6f65" row="2" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-c582d0a7" class="bg-gray-200" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-50808daa" row="2" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-a0517e94" value="">
+            <cl:formdata std:sid="f-data-7c22c86f" row="2" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-263420d7" class="pb-label" value="bg-gray-300" unselectable="false">
+            <cl:formdata std:sid="f-data-e5fccce2" row="3" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-4064f843" class="bg-gray-300" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-42414b56" row="3" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-7816348d" value="">
+            <cl:formdata std:sid="f-data-2d14d7dd" row="3" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-f31491b0" class="pb-label" value="bg-gray-400" unselectable="false">
+            <cl:formdata std:sid="f-data-0ae18411" row="4" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-5f23f322" class="bg-gray-400" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-16e5938f" row="4" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-dce1d125" value="">
+            <cl:formdata std:sid="f-data-aadfac1e" row="4" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-7cf2627e" class="pb-label" value="bg-gray-500" unselectable="false">
+            <cl:formdata std:sid="f-data-55dd5ff7" row="5" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-bfd3ce77" class="bg-gray-500" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-2ad77f19" row="5" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-e379374d" value="">
+            <cl:formdata std:sid="f-data-85c7a4a7" row="5" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-ca7a420c" class="pb-label" value="bg-gray-600" unselectable="false">
+            <cl:formdata std:sid="f-data-6a57e50d" row="6" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-5566218b" class="bg-gray-600" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-87eb481a" row="6" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-96ee11a7" value="">
+            <cl:formdata std:sid="f-data-34bddf55" row="6" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-fa390f9f" class="pb-label" value="bg-gray-700" unselectable="false">
+            <cl:formdata std:sid="f-data-5fbd7829" row="7" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-c8228a00" class="bg-gray-700 text-white" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-de183496" row="7" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-3e4870c6" value="">
+            <cl:formdata std:sid="f-data-e703365c" row="7" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-72ee0197" class="pb-label" value="bg-gray-800" unselectable="false">
+            <cl:formdata std:sid="f-data-4bc73700" row="8" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-1ed82dc5" class="bg-gray-800 text-white" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-e6f58cf9" row="8" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-d9bffb8c" value="">
+            <cl:formdata std:sid="f-data-562d7195" row="8" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-6e21d04f" class="pb-label" value="bg-gray-900" unselectable="false">
+            <cl:formdata std:sid="f-data-89d5618d" row="9" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-de0ba64b" class="bg-gray-900 text-white" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-b6792f9b" row="9" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-77f300a9" value="">
+            <cl:formdata std:sid="f-data-7729a496" row="9" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-70a0d056" class="pb-label" value="bg-black" unselectable="false">
+            <cl:formdata std:sid="f-data-6be007f3" row="10" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-1436d049" class="bg-black text-white" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-ce49d338" row="10" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-c2a877bb" value="">
+            <cl:formdata std:sid="f-data-fc937274" row="10" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-027373be" class="pb-label" value="bg-white" unselectable="false">
+            <cl:formdata std:sid="f-data-2e80dc29" row="11" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-dfd57c5d" class="bg-white" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-8f1c2a5b" row="11" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-6eff283e" value="">
+            <cl:formdata std:sid="f-data-7f7b5c66" row="11" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-9a842546" class="pb-label" value="bg-light" unselectable="false">
+            <cl:formdata std:sid="f-data-914737db" row="12" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-20892360" class="bg-light" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-b38abd90" row="12" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-bf457764" value="">
+            <cl:formdata std:sid="f-data-1bd92565" row="12" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-909efc8a" class="pb-label" value="bg-lighter" unselectable="false">
+            <cl:formdata std:sid="f-data-8faa1368" row="13" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-633ec36c" class="bg-lighter" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-e39ffac3" row="13" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-f1a094ef" value="">
+            <cl:formdata std:sid="f-data-b5a43203" row="13" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-ada5e491" class="pb-label" value="bg-primary" unselectable="false">
+            <cl:formdata std:sid="f-data-1db43163" row="14" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-a3d47923" class="bg-primary text-white" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-0cf3c575" row="14" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-954c5e39" value="">
+            <cl:formdata std:sid="f-data-e6e1ba68" row="14" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-5fbfad6a" class="pb-label" value="bg-secondary" unselectable="false">
+            <cl:formdata std:sid="f-data-d82d26ec" row="15" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-300ca88b" class="bg-secondary text-white" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-578c7f03" row="15" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-966a2b4b" value="">
+            <cl:formdata std:sid="f-data-838c1199" row="15" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-ecee04f9" class="pb-label" value="bg-info" unselectable="false">
+            <cl:formdata std:sid="f-data-d9d39c61" row="16" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-3165cbb6" class="bg-info text-white" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-2502b40a" row="16" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-1d214267" value="">
+            <cl:formdata std:sid="f-data-739541f9" row="16" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-49d8c301" class="pb-label" value="bg-success" unselectable="false">
+            <cl:formdata std:sid="f-data-e9ae79fa" row="17" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-f31a244c" class="bg-success text-white" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-a6c7c65e" row="17" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-cd67a4fe">
+            <cl:formdata std:sid="f-data-a7acc4cf" row="17" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-5b32c1de" class="pb-label" value="bg-warning" unselectable="false">
+            <cl:formdata std:sid="f-data-f095ffdb" row="18" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-d984291a" class="bg-warning" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-64ccbe8a" row="18" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-6d646c0a">
+            <cl:formdata std:sid="f-data-a6b67620" row="18" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-a343cb22" class="pb-label" value="bg-danger" unselectable="false">
+            <cl:formdata std:sid="f-data-6df65136" row="19" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-8f2e4590" class="bg-danger text-white" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-7355ae4b" row="19" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-60068407">
+            <cl:formdata std:sid="f-data-38acc951" row="19" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-0c0478c1" class="pb-label" value="bg-blue" unselectable="false">
+            <cl:formdata std:sid="f-data-5a94e2fd" row="20" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-84480a07" class="bg-blue text-white" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-07ab7553" row="20" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-f404be6f">
+            <cl:formdata std:sid="f-data-8468b3d4" row="20" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-4b61aa6e" class="pb-label" value="bg-indigo" unselectable="false">
+            <cl:formdata std:sid="f-data-1c3e9544" row="21" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-c5b354ee" class="bg-indigo text-white" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-38102793" row="21" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-5cef8ea9">
+            <cl:formdata std:sid="f-data-07e9467f" row="21" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-6175d351" class="pb-label" value="bg-purple" unselectable="false">
+            <cl:formdata std:sid="f-data-14b8041f" row="22" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-a0b0a335" class="bg-purple text-white" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-0afa3345" row="22" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-be1d63a9">
+            <cl:formdata std:sid="f-data-681a33ba" row="22" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-950802e2" class="pb-label" value="bg-pink" unselectable="false">
+            <cl:formdata std:sid="f-data-b87af471" row="23" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-141bbdc9" class="bg-pink text-white" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-b7fa7afc" row="23" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-1f681401">
+            <cl:formdata std:sid="f-data-38dab54c" row="23" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-9c845539" class="pb-label" value="bg-red" unselectable="false">
+            <cl:formdata std:sid="f-data-6a2c03d3" row="24" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-97460449" class="bg-red text-white" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-44ac92a7" row="24" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-ba427406">
+            <cl:formdata std:sid="f-data-8887a1df" row="24" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-8b4aaf46" class="pb-label" value="bg-orange" unselectable="false">
+            <cl:formdata std:sid="f-data-b141c403" row="25" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-26160fbb" class="bg-orange text-white" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-67ddf4b9" row="25" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-c67ca72d">
+            <cl:formdata std:sid="f-data-5891a2b5" row="25" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-b0926c0d" class="pb-label" value="bg-yellow" unselectable="false">
+            <cl:formdata std:sid="f-data-db92449b" row="26" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-f1e8a157" class="bg-yellow" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-36bd1fa0" row="26" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-4de2f8d9">
+            <cl:formdata std:sid="f-data-acae3430" row="26" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-51ee57b6" class="pb-label" value="bg-green" unselectable="false">
+            <cl:formdata std:sid="f-data-b6abd145" row="27" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-f222d4e6" class="bg-green text-white" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-2b399341" row="27" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-68a8d623">
+            <cl:formdata std:sid="f-data-6dd20005" row="27" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-f1a0fc16" class="pb-label" value="bg-teal" unselectable="false">
+            <cl:formdata std:sid="f-data-603360ee" row="28" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-96768910" class="bg-teal text-white" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-988ca648" row="28" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-b1b7316d">
+            <cl:formdata std:sid="f-data-c1a23e63" row="28" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-aa4366fc" class="pb-label" value="bg-cyan" unselectable="false">
+            <cl:formdata std:sid="f-data-31352555" row="29" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-b60b1497" class="bg-cyan text-white" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-b8d562ef" row="29" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-b742f9be">
+            <cl:formdata std:sid="f-data-955cb354" row="29" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-792b9992" class="pb-label" value="bg-dark" unselectable="false">
+            <cl:formdata std:sid="f-data-6456279c" row="30" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-45ae34de" class="bg-dark text-white" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-2dd44006" row="30" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-4699b336">
+            <cl:formdata std:sid="f-data-d5e0a017" row="30" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-de17215a" class="pb-label" value="bg-gray" unselectable="false">
+            <cl:formdata std:sid="f-data-8d012602" row="31" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-0a74a779" class="bg-gray text-white" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-feae7ad0" row="31" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-ea4c7319">
+            <cl:formdata std:sid="f-data-e2232c50" row="31" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-f5bb25fa" class="pb-label" value="bg-opacity" unselectable="false">
+            <cl:formdata std:sid="f-data-22d4c488" row="32" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-c613001c" class="bg-opacity" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-25fb85f1" row="32" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-36298438" value="투명도가 적용된 배경색">
+            <cl:formdata std:sid="f-data-04d548f1" row="32" col="2"/>
+          </cl:output>
+          <cl:formlayout std:sid="f-layout-73edcd23" scrollable="false" hspace="8px" vspace="8px" top-margin="4px" right-margin="4px" bottom-margin="4px" left-margin="4px" hseparatorwidth="1" hseparatortype="BY_CLASS" vseparatorwidth="1" vseparatortype="BY_CLASS">
+            <cl:rows length="28" unit="PIXEL" autoSizing="false" hidden="false" shadetype="BY_CLASS" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:columns length="150" unit="PIXEL" autoSizing="false" hidden="false" shadetype="BY_CLASS" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="200" unit="PIXEL" autoSizing="false" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="2" unit="FRACTION" autoSizing="false" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-efd0ae2d" scrollable="false" spacing="14"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-bf213bed" scrollable="false" spacing="40" leftmargin="50" rightmargin="50" topmargin="50" bottommargin="50"/>
+    </cl:group>
+    <cl:group std:sid="group-92c4c89d" class="pb-content">
+      <cl:verticaldata std:sid="v-data-11ccd501" width="1644px" height="1294px" autosize="height"/>
+      <cl:group std:sid="group-5f05c6b2">
+        <cl:verticaldata std:sid="v-data-b6c4709a" width="1544px" height="1197px" autosize="height"/>
+        <cl:udc std:sid="ud-control-570f771a" type="udc.hk.pb.SectionTitle">
+          <cl:verticaldata std:sid="v-data-ac490a24" width="1544px" height="29px" autosize="none"/>
+          <cl:property name="title" value="클래스 - 글꼴 색상" type="string"/>
+        </cl:udc>
+        <cl:group std:sid="group-b91f1b1e" class="pb-table">
+          <cl:verticaldata std:sid="v-data-5b3d789a" width="400px" height="1092px" autosize="height"/>
+          <cl:output std:sid="output-2e1597e0" class="pb-label" value="클래스명">
+            <cl:formdata std:sid="f-data-576a2b1a" row="0" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-676be89a" class="pb-label" value="적용">
+            <cl:formdata std:sid="f-data-ad01d160" row="0" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-17d88694" class="pb-label" value="사용 예시">
+            <cl:formdata std:sid="f-data-411b404f" row="0" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-7002aa55" class="pb-label" value="text-gray-100" unselectable="false">
+            <cl:formdata std:sid="f-data-0779a37a" row="1" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-aa4008e0" class="text-gray-100" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-b5d3fac5" row="1" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-3057a0f4" value="">
+            <cl:formdata std:sid="f-data-a9ac1b97" row="1" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-48d89fab" class="pb-label" value="text-gray-200" unselectable="false">
+            <cl:formdata std:sid="f-data-cd85ff37" row="2" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-acf828eb" class="text-gray-200" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-6602a449" row="2" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-9989378a" value="">
+            <cl:formdata std:sid="f-data-9c713f81" row="2" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-4474a20e" class="pb-label" value="text-gray-300" unselectable="false">
+            <cl:formdata std:sid="f-data-ca5f780c" row="3" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-f10eec75" class="text-gray-300" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-179a063f" row="3" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-f748bc67" value="">
+            <cl:formdata std:sid="f-data-1e7ccf86" row="3" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-c3c4d4bd" class="pb-label" value="text-gray-400" unselectable="false">
+            <cl:formdata std:sid="f-data-4b2198b3" row="4" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-233b3e49" class="text-gray-400" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-2a1a3010" row="4" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-9529073d" value="">
+            <cl:formdata std:sid="f-data-a96c92eb" row="4" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-d6ab97a5" class="pb-label" value="text-gray-500" unselectable="false">
+            <cl:formdata std:sid="f-data-08d19e74" row="5" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-79ef50cf" class="text-gray-500" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-1b106222" row="5" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-80d4d69b" value="">
+            <cl:formdata std:sid="f-data-2ec6b9f8" row="5" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-c8854d01" class="pb-label" value="text-gray-600" unselectable="false">
+            <cl:formdata std:sid="f-data-b3338166" row="6" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-5472d154" class="text-gray-600" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-33fe039b" row="6" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-c1f2d609" value="">
+            <cl:formdata std:sid="f-data-08a25c7b" row="6" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-dbaf990e" class="pb-label" value="text-gray-700" unselectable="false">
+            <cl:formdata std:sid="f-data-944ad59e" row="7" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-bc3cfff5" class="text-gray-700" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-db94fcff" row="7" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-fc0c8a78" value="">
+            <cl:formdata std:sid="f-data-a3a6cf45" row="7" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-07211326" class="pb-label" value="text-gray-800" unselectable="false">
+            <cl:formdata std:sid="f-data-f13fe5ce" row="8" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-905b8f3f" class="text-gray-800" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-daadb8de" row="8" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-776039fe" value="">
+            <cl:formdata std:sid="f-data-9b0cc0a7" row="8" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-331264e8" class="pb-label" value="text-gray-900" unselectable="false">
+            <cl:formdata std:sid="f-data-f1252402" row="9" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-432bd5d8" class="text-gray-900" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-cdfdc20f" row="9" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-4d8afce0" value="">
+            <cl:formdata std:sid="f-data-1d274c1a" row="9" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-decdaf38" class="pb-label" value="text-black" unselectable="false">
+            <cl:formdata std:sid="f-data-b988e775" row="10" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-ce6149d1" class="text-black" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-20fcfb24" row="10" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-82a67543" value="">
+            <cl:formdata std:sid="f-data-92667396" row="10" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-6b500e36" class="pb-label" value="text-white" unselectable="false">
+            <cl:formdata std:sid="f-data-802a76b7" row="11" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-56504071" class="text-white" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-87a04d22" row="11" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-3ef38031" value="">
+            <cl:formdata std:sid="f-data-69efb944" row="11" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-3f5a0c80" class="pb-label" value="text-light" unselectable="false">
+            <cl:formdata std:sid="f-data-3ce6239f" row="12" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-31f1d69b" class="text-light" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-54bc7b9e" row="12" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-8fec5dab" value="">
+            <cl:formdata std:sid="f-data-77047e8e" row="12" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-8e77135d" class="pb-label" value="text-lighter" unselectable="false">
+            <cl:formdata std:sid="f-data-5f1cd2bb" row="13" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-49f6851c" class="text-lighter" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-149b1acb" row="13" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-8df29efd" value="">
+            <cl:formdata std:sid="f-data-c7ab65bc" row="13" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-1187389e" class="pb-label" value="text-primary" unselectable="false">
+            <cl:formdata std:sid="f-data-c8113a39" row="14" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-a8da897b" class="text-primary" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-eae2802a" row="14" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-e3ea7196" value="">
+            <cl:formdata std:sid="f-data-068cc99d" row="14" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-0821845e" class="pb-label" value="text-secondary" unselectable="false">
+            <cl:formdata std:sid="f-data-73758482" row="15" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-1451c733" class="text-secondary" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-1c9b80ca" row="15" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-1d49ea09" value="">
+            <cl:formdata std:sid="f-data-cc7082f3" row="15" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-396bb7e4" class="pb-label" value="text-info" unselectable="false">
+            <cl:formdata std:sid="f-data-928b60fe" row="16" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-19d16652" class="text-info" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-73f3f865" row="16" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-a4a1960a" value="">
+            <cl:formdata std:sid="f-data-e262358c" row="16" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-96561454" class="pb-label" value="text-success" unselectable="false">
+            <cl:formdata std:sid="f-data-d63ef9bd" row="17" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-a2fb0bee" class="text-success" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-be39faba" row="17" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-1e8f2584">
+            <cl:formdata std:sid="f-data-ab1a4f5f" row="17" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-54216af5" class="pb-label" value="text-warning" unselectable="false">
+            <cl:formdata std:sid="f-data-b1c24eec" row="18" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-c6406602" class="text-warning" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-ffdb44f3" row="18" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-f4ec3a12">
+            <cl:formdata std:sid="f-data-13055201" row="18" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-35f13231" class="pb-label" value="text-danger" unselectable="false">
+            <cl:formdata std:sid="f-data-be5d316c" row="19" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-6383b77b" class="text-danger" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-ef9096fc" row="19" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-69a4b189">
+            <cl:formdata std:sid="f-data-79bcfb46" row="19" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-aabd419f" class="pb-label" value="text-blue" unselectable="false">
+            <cl:formdata std:sid="f-data-c2090be7" row="20" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-615a6aab" class="text-blue" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-f4921d0e" row="20" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-0420db56">
+            <cl:formdata std:sid="f-data-3b3afbf3" row="20" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-4ffb84b5" class="pb-label" value="text-indigo" unselectable="false">
+            <cl:formdata std:sid="f-data-5614ee27" row="21" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-eb463f5a" class="text-indigo" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-a7258fe4" row="21" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-0aca49d7">
+            <cl:formdata std:sid="f-data-845a33ca" row="21" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-352b36f5" class="pb-label" value="text-purple" unselectable="false">
+            <cl:formdata std:sid="f-data-749370ab" row="22" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-0eaebf26" class="text-purple" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-05c83e4e" row="22" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-3a0c27fc">
+            <cl:formdata std:sid="f-data-0ac87054" row="22" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-eb1465af" class="pb-label" value="text-pink" unselectable="false">
+            <cl:formdata std:sid="f-data-136a16a9" row="23" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-cb630dfb" class="text-pink" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-6ee65d22" row="23" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-20ba78cf">
+            <cl:formdata std:sid="f-data-dd098036" row="23" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-294052b1" class="pb-label" value="text-red" unselectable="false">
+            <cl:formdata std:sid="f-data-b02962f7" row="24" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-f7193dc2" class="text-red" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-1f40d2b8" row="24" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-657439be">
+            <cl:formdata std:sid="f-data-b93e9ef9" row="24" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-ba143878" class="pb-label" value="text-orange" unselectable="false">
+            <cl:formdata std:sid="f-data-0f41f09e" row="25" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-8736d39a" class="text-orange" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-f3fdc973" row="25" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-94da59af">
+            <cl:formdata std:sid="f-data-c81fdd88" row="25" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-6a67abc9" class="pb-label" value="text-yellow" unselectable="false">
+            <cl:formdata std:sid="f-data-3df919f8" row="26" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-83527a3d" class="text-yellow" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-163cb909" row="26" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-515da64c">
+            <cl:formdata std:sid="f-data-7de4c9cd" row="26" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-da83b7ad" class="pb-label" value="text-green" unselectable="false">
+            <cl:formdata std:sid="f-data-ff5621ae" row="27" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-b2d2c05a" class="text-green" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-de09d888" row="27" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-c74e860e">
+            <cl:formdata std:sid="f-data-44c6443f" row="27" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-2dfea84f" class="pb-label" value="text-teal" unselectable="false">
+            <cl:formdata std:sid="f-data-4d0df6f4" row="28" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-02c48b06" class="text-teal" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-6a301b44" row="28" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-28ae60e4">
+            <cl:formdata std:sid="f-data-9694bc37" row="28" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-59ba962d" class="pb-label" value="text-cyan" unselectable="false">
+            <cl:formdata std:sid="f-data-5931a2ca" row="29" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-4d5663a1" class="text-cyan" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-b6dc8936" row="29" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-93114a98">
+            <cl:formdata std:sid="f-data-631f0466" row="29" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-7cfff68f" class="pb-label" value="text-dark" unselectable="false">
+            <cl:formdata std:sid="f-data-31bbbe38" row="30" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-a2e64db3" class="text-dark" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-4075ff7a" row="30" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-59c9a930">
+            <cl:formdata std:sid="f-data-448926c9" row="30" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-e9a90f53" class="pb-label" value="text-gray" unselectable="false">
+            <cl:formdata std:sid="f-data-62e911b6" row="31" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-0dbe2cb3" class="text-gray" value="동해물과 백두산이 마르고 닳도록">
+            <cl:formdata std:sid="f-data-fdc4bfe0" row="31" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-ca2b7f0a">
+            <cl:formdata std:sid="f-data-ded623e2" row="31" col="2"/>
+          </cl:output>
+          <cl:formlayout std:sid="f-layout-8e43fb63" scrollable="false" hspace="8px" vspace="8px" top-margin="4px" right-margin="4px" bottom-margin="4px" left-margin="4px" hseparatorwidth="1" hseparatortype="BY_CLASS" vseparatorwidth="1" vseparatortype="BY_CLASS">
+            <cl:rows length="28" unit="PIXEL" autoSizing="false" hidden="false" shadetype="BY_CLASS" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:columns length="150" unit="PIXEL" autoSizing="false" hidden="false" shadetype="BY_CLASS" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="200" unit="PIXEL" autoSizing="false" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="2" unit="FRACTION" autoSizing="false" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-3b043c44" scrollable="false" spacing="14"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-0a7842bd" scrollable="false" spacing="40" leftmargin="50" rightmargin="50" topmargin="50" bottommargin="50"/>
+    </cl:group>
+    <cl:group std:sid="group-94bf021e" class="pb-content">
+      <cl:verticaldata std:sid="v-data-acfbd9ee" width="1644px" height="1294px" autosize="height"/>
+      <cl:group std:sid="group-a86fea5d">
+        <cl:verticaldata std:sid="v-data-488d82c4" width="1544px" height="1197px" autosize="height"/>
+        <cl:udc std:sid="ud-control-778800b3" type="udc.hk.pb.SectionTitle">
+          <cl:verticaldata std:sid="v-data-cfb7ac98" width="1544px" height="29px" autosize="none"/>
+          <cl:property name="title" value="클래스 - 테두리 색상" type="string"/>
+        </cl:udc>
+        <cl:group std:sid="group-b369a8af" class="pb-table">
+          <cl:verticaldata std:sid="v-data-a712ff8d" width="1544px" height="1092px" autosize="height"/>
+          <cl:output std:sid="output-fe6fbba1" class="pb-label" value="클래스명">
+            <cl:formdata std:sid="f-data-b589708e" row="0" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-55646fad" class="pb-label" value="적용">
+            <cl:formdata std:sid="f-data-6b7ce001" row="0" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-b5c8d8b1" class="pb-label" value="사용 예시">
+            <cl:formdata std:sid="f-data-239cfc6f" row="0" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-7e0da9dd" class="pb-label" value="border-gray-100" unselectable="false">
+            <cl:formdata std:sid="f-data-8827e9f6" row="1" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-d7a6bd34" class="border border-gray-100">
+            <cl:formdata std:sid="f-data-41855085" row="1" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-1ff48e54" value="">
+            <cl:formdata std:sid="f-data-f3d9962d" row="1" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-c1cf5827" class="pb-label" value="border-gray-200" unselectable="false">
+            <cl:formdata std:sid="f-data-9dfc0015" row="2" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-201b717b" class="border border-gray-200">
+            <cl:formdata std:sid="f-data-a5df8bc7" row="2" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-fefcea91" value="">
+            <cl:formdata std:sid="f-data-ae1d5bf8" row="2" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-2946de16" class="pb-label" value="border-gray-300" unselectable="false">
+            <cl:formdata std:sid="f-data-26e6def8" row="3" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-3ac97230" class="border border-gray-300">
+            <cl:formdata std:sid="f-data-b1a4326a" row="3" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-3736ba82" value="">
+            <cl:formdata std:sid="f-data-827c06fa" row="3" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-61139a54" class="pb-label" value="border-gray-400" unselectable="false">
+            <cl:formdata std:sid="f-data-8b813821" row="4" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-0df5fe3d" class="border border-gray-400">
+            <cl:formdata std:sid="f-data-7ebfbf43" row="4" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-8c475709" value="">
+            <cl:formdata std:sid="f-data-af576ea1" row="4" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-4931bbab" class="pb-label" value="border-gray-500" unselectable="false">
+            <cl:formdata std:sid="f-data-4fec47f9" row="5" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-2ff28e7b" class="border border-gray-500">
+            <cl:formdata std:sid="f-data-b3281bce" row="5" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-77508217" value="">
+            <cl:formdata std:sid="f-data-f709b9a5" row="5" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-b0b07496" class="pb-label" value="border-gray-600" unselectable="false">
+            <cl:formdata std:sid="f-data-260e26c2" row="6" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-480f5bf7" class="border border-gray-600">
+            <cl:formdata std:sid="f-data-85e76027" row="6" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-cdfc7cec" value="">
+            <cl:formdata std:sid="f-data-da91ede0" row="6" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-36f9ed73" class="pb-label" value="border-gray-700" unselectable="false">
+            <cl:formdata std:sid="f-data-395b50e9" row="7" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-802806dc" class="border border-gray-700">
+            <cl:formdata std:sid="f-data-0a1bea29" row="7" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-0b677728" value="">
+            <cl:formdata std:sid="f-data-cd28b057" row="7" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-32bc27ef" class="pb-label" value="border-gray-800" unselectable="false">
+            <cl:formdata std:sid="f-data-589db3ce" row="8" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-d1fec128" class="border border-gray-800">
+            <cl:formdata std:sid="f-data-5e005a8e" row="8" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-34433885" value="">
+            <cl:formdata std:sid="f-data-60ee3c05" row="8" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-a35f3245" class="pb-label border-gray-900" value="border-gray-900" unselectable="false">
+            <cl:formdata std:sid="f-data-5516e353" row="9" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-560c06b0" class="border border-gray-900">
+            <cl:formdata std:sid="f-data-bccf501f" row="9" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-30ad978f" value="">
+            <cl:formdata std:sid="f-data-21062146" row="9" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-b332d35f" class="pb-label" value="border-black" unselectable="false">
+            <cl:formdata std:sid="f-data-6c5fb9da" row="10" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-fda7601a" class="border border-black">
+            <cl:formdata std:sid="f-data-485fb856" row="10" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-7c5a7dbe" value="">
+            <cl:formdata std:sid="f-data-a91e90f3" row="10" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-c0c75104" class="pb-label" value="border-white" unselectable="false">
+            <cl:formdata std:sid="f-data-beb95777" row="11" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-274280dd" class="border border-white">
+            <cl:formdata std:sid="f-data-f5d991ff" row="11" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-3132f5b5" value="">
+            <cl:formdata std:sid="f-data-5c529d92" row="11" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-150ca78f" class="pb-label" value="border-light" unselectable="false">
+            <cl:formdata std:sid="f-data-18298e7b" row="12" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-b7d85068" class="border border-light">
+            <cl:formdata std:sid="f-data-25ffd9bd" row="12" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-61cf9a94" value="">
+            <cl:formdata std:sid="f-data-66bd4a21" row="12" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-e9978eeb" class="pb-label" value="border-lighter" unselectable="false">
+            <cl:formdata std:sid="f-data-66041aac" row="13" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-3a41acfa" class="border border-lighter">
+            <cl:formdata std:sid="f-data-dae4597d" row="13" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-4bccc7a2" value="">
+            <cl:formdata std:sid="f-data-d2384166" row="13" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-8b198abf" class="pb-label" value="border-primary" unselectable="false">
+            <cl:formdata std:sid="f-data-d0d0d5be" row="14" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-d74a02d1" class="border border-primary">
+            <cl:formdata std:sid="f-data-77840b3b" row="14" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-c778adbb" value="">
+            <cl:formdata std:sid="f-data-a21ff9d1" row="14" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-a8121419" class="pb-label" value="border-secondary" unselectable="false">
+            <cl:formdata std:sid="f-data-698946f4" row="15" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-aa8dbcbc" class="border border-secondary">
+            <cl:formdata std:sid="f-data-e6a6fcab" row="15" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-be290843" value="">
+            <cl:formdata std:sid="f-data-46b0a94c" row="15" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-6adb38f2" class="pb-label" value="border-info" unselectable="false">
+            <cl:formdata std:sid="f-data-5982bce6" row="16" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-1dd72b3c" class="border border-info">
+            <cl:formdata std:sid="f-data-2fcaf49f" row="16" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-a5711d8d" value="">
+            <cl:formdata std:sid="f-data-293e118f" row="16" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-b807ea60" class="pb-label" value="border-success" unselectable="false">
+            <cl:formdata std:sid="f-data-867067e1" row="17" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-0b2e55a4" class="border border-success">
+            <cl:formdata std:sid="f-data-f2cbd43d" row="17" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-8e3e16fa">
+            <cl:formdata std:sid="f-data-7973a8d0" row="17" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-6c092c58" class="pb-label" value="border-warning" unselectable="false">
+            <cl:formdata std:sid="f-data-3d4ef866" row="18" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-852b4d0b" class="border border-warning">
+            <cl:formdata std:sid="f-data-6a5c9d6d" row="18" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-5aac1b39">
+            <cl:formdata std:sid="f-data-017c43ed" row="18" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-5590824a" class="pb-label" value="border-danger" unselectable="false">
+            <cl:formdata std:sid="f-data-8d32e8a8" row="19" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-2fa69ae8" class="border border-danger">
+            <cl:formdata std:sid="f-data-70067cfe" row="19" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-50ea016c">
+            <cl:formdata std:sid="f-data-c426fe59" row="19" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-7547d9fc" class="pb-label" value="border-blue" unselectable="false">
+            <cl:formdata std:sid="f-data-b03f211e" row="20" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-0ec955a5" class="border border-blue">
+            <cl:formdata std:sid="f-data-ce240277" row="20" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-a6337e29">
+            <cl:formdata std:sid="f-data-f022f97d" row="20" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-24e3ea6d" class="pb-label border-indigo" value="border-indigo" unselectable="false">
+            <cl:formdata std:sid="f-data-0943e783" row="21" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-f71ed39f" class="border border-indigo">
+            <cl:formdata std:sid="f-data-aaab208e" row="21" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-5f056387">
+            <cl:formdata std:sid="f-data-9bc28045" row="21" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-92270eaf" class="pb-label" value="border-purple" unselectable="false">
+            <cl:formdata std:sid="f-data-25b04cd9" row="22" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-6180f13e" class="border border-purple">
+            <cl:formdata std:sid="f-data-16a378ba" row="22" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-0e1783b4">
+            <cl:formdata std:sid="f-data-8f37750f" row="22" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-98ad24f1" class="pb-label" value="border-pink" unselectable="false">
+            <cl:formdata std:sid="f-data-100a6a4c" row="23" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-0000f930" class="border border-pink">
+            <cl:formdata std:sid="f-data-dfdc215e" row="23" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-f6aa09d2">
+            <cl:formdata std:sid="f-data-b7837f43" row="23" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-a7f17835" class="pb-label" value="border-red" unselectable="false">
+            <cl:formdata std:sid="f-data-5e7dfe06" row="24" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-6e6985ea" class="border border-red">
+            <cl:formdata std:sid="f-data-a76e597b" row="24" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-ecae3f05">
+            <cl:formdata std:sid="f-data-c59c832c" row="24" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-c3ee4760" class="pb-label" value="border-orange" unselectable="false">
+            <cl:formdata std:sid="f-data-cba43057" row="25" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-0447b9fc" class="border border-orange">
+            <cl:formdata std:sid="f-data-2624c5ee" row="25" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-1e35c1f9">
+            <cl:formdata std:sid="f-data-e98d59f5" row="25" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-5279a6ae" class="pb-label" value="border-yellow" unselectable="false">
+            <cl:formdata std:sid="f-data-9322c6b7" row="26" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-7b8600e2" class="border border-yellow">
+            <cl:formdata std:sid="f-data-6869b3a2" row="26" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-a047c54c">
+            <cl:formdata std:sid="f-data-d708d0d3" row="26" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-752050ad" class="pb-label" value="border-green" unselectable="false">
+            <cl:formdata std:sid="f-data-5cd29d90" row="27" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-ec69bc4b" class="border border-green">
+            <cl:formdata std:sid="f-data-3354bf45" row="27" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-9fe60599">
+            <cl:formdata std:sid="f-data-77b47dc6" row="27" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-a81f1246" class="pb-label" value="border-teal" unselectable="false">
+            <cl:formdata std:sid="f-data-cf843ad8" row="28" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-cc8ce216" class="border border-teal">
+            <cl:formdata std:sid="f-data-6a68fe57" row="28" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-5a2e6223">
+            <cl:formdata std:sid="f-data-b1c64573" row="28" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-b7d4e187" class="pb-label" value="border-cyan" unselectable="false">
+            <cl:formdata std:sid="f-data-267a7ad6" row="29" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-d8612d75" class="border border-cyan">
+            <cl:formdata std:sid="f-data-23e9a6b1" row="29" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-aa096b49">
+            <cl:formdata std:sid="f-data-5b2c5108" row="29" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-b0fff121" class="pb-label" value="border-dark" unselectable="false">
+            <cl:formdata std:sid="f-data-56ed0db1" row="30" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-a13431f3" class="border border-dark">
+            <cl:formdata std:sid="f-data-ec6b08db" row="30" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-ffe86043">
+            <cl:formdata std:sid="f-data-188efc2a" row="30" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-fb0842df" class="pb-label" value="border-gray" unselectable="false">
+            <cl:formdata std:sid="f-data-41828797" row="31" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-f011e952" class="border border-gray">
+            <cl:formdata std:sid="f-data-fd88cec1" row="31" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-fef009e9">
+            <cl:formdata std:sid="f-data-1527c253" row="31" col="2"/>
+          </cl:output>
+          <cl:formlayout std:sid="f-layout-20f2e981" scrollable="false" hspace="8px" vspace="8px" top-margin="4px" right-margin="4px" bottom-margin="4px" left-margin="4px" hseparatorwidth="1" hseparatortype="BY_CLASS" vseparatorwidth="1" vseparatortype="BY_CLASS">
+            <cl:rows length="28" unit="PIXEL" autoSizing="false" hidden="false" shadetype="BY_CLASS" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:columns length="150" unit="PIXEL" autoSizing="false" hidden="false" shadetype="BY_CLASS" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="40" unit="PIXEL" autoSizing="false" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="2" unit="FRACTION" autoSizing="false" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-9201769e" scrollable="false" spacing="14"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-fe114d76" scrollable="false" spacing="40" leftmargin="50" rightmargin="50" topmargin="50" bottommargin="50"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-b6439795" spacing="14"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

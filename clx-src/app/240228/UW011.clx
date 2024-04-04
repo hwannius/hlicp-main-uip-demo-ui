@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-ce00141b" version="1.0.4074">
+  <head std:sid="head-78b57f89">
+    <screen std:sid="screen-e749a4bd" id="Hlicp-WIDE" name="Hlicp-WIDE" width="3160px" height="954px" active="false"/>
+    <screen std:sid="screen-9494e983" id="Hlicp-FULL" name="Hlicp-FULL" width="1600px" height="954px" active="true"/>
+    <screen std:sid="screen-32e54726" id="Hlicp-DIV" name="Hlicp-DIV" width="790px" height="954px"/>
+    <screen std:sid="screen-1cd01d2c" id="Hlicp-POP" name="Hlicp-POP" width="767px" height="400px"/>
+    <cl:model std:sid="model-ea770197">
+      <cl:dataset std:sid="d-set-f24ead81" id="ds1">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="보험명" std:sid="d-column-16931230" name="column1"/>
+          <cl:datacolumn std:sid="d-column-66ab2955" name="column13"/>
+          <cl:datacolumn comment="계약금액(만)" std:sid="d-column-87adda93" name="column2"/>
+          <cl:datacolumn comment="보험료(원)" std:sid="d-column-f1f7b970" name="column3"/>
+          <cl:datacolumn comment="보험기간" std:sid="d-column-fa4c1186" name="column4"/>
+          <cl:datacolumn std:sid="d-column-1ef714f7" name="column14"/>
+          <cl:datacolumn comment="납입기간" std:sid="d-column-1892eb4b" name="column5"/>
+          <cl:datacolumn std:sid="d-column-5346d62e" name="column15"/>
+          <cl:datacolumn comment="납입주기" std:sid="d-column-839f262b" name="column6"/>
+          <cl:datacolumn comment="할증" std:sid="d-column-b1089997" name="column7"/>
+          <cl:datacolumn comment="합산결과" std:sid="d-column-cdd7903e" name="column8"/>
+          <cl:datacolumn comment="담보명" std:sid="d-column-4ab6f39f" name="column9"/>
+          <cl:datacolumn comment="개별결과" std:sid="d-column-5797b254" name="column10"/>
+          <cl:datacolumn comment="사고일자" std:sid="d-column-6f357d7d" name="column11"/>
+          <cl:datacolumn comment="질병명(유사질병명)" std:sid="d-column-e4e143fc" name="column12"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="column1">20930</cl:datavalue>
+            <cl:datavalue columnname="column13">(무)흥국생명다(多)사랑통합보험</cl:datavalue>
+            <cl:datavalue columnname="column2">100</cl:datavalue>
+            <cl:datavalue columnname="column3">950</cl:datavalue>
+            <cl:datavalue columnname="column4">100</cl:datavalue>
+            <cl:datavalue columnname="column14">세형</cl:datavalue>
+            <cl:datavalue columnname="column5">30</cl:datavalue>
+            <cl:datavalue columnname="column15">년</cl:datavalue>
+            <cl:datavalue columnname="column6">1월납</cl:datavalue>
+            <cl:datavalue columnname="column7">300</cl:datavalue>
+            <cl:datavalue columnname="column8">S0</cl:datavalue>
+            <cl:datavalue columnname="column9">재해사망</cl:datavalue>
+            <cl:datavalue columnname="column10">S0</cl:datavalue>
+            <cl:datavalue columnname="column11">2022-08</cl:datavalue>
+            <cl:datavalue columnname="column12">요추통증</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1">20930</cl:datavalue>
+            <cl:datavalue columnname="column13">(무)흥국생명다(多)사랑통합보험</cl:datavalue>
+            <cl:datavalue columnname="column2">100</cl:datavalue>
+            <cl:datavalue columnname="column3">950</cl:datavalue>
+            <cl:datavalue columnname="column4">100</cl:datavalue>
+            <cl:datavalue columnname="column14">세형</cl:datavalue>
+            <cl:datavalue columnname="column5">30</cl:datavalue>
+            <cl:datavalue columnname="column15">년</cl:datavalue>
+            <cl:datavalue columnname="column6">1월납</cl:datavalue>
+            <cl:datavalue columnname="column7">300</cl:datavalue>
+            <cl:datavalue columnname="column8">S0</cl:datavalue>
+            <cl:datavalue columnname="column9">재해사망</cl:datavalue>
+            <cl:datavalue columnname="column10">S0</cl:datavalue>
+            <cl:datavalue columnname="column11">2022-08</cl:datavalue>
+            <cl:datavalue columnname="column12">요추통증</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1">20930</cl:datavalue>
+            <cl:datavalue columnname="column13">(무)흥국생명다(多)사랑통합보험</cl:datavalue>
+            <cl:datavalue columnname="column2">100</cl:datavalue>
+            <cl:datavalue columnname="column3">950</cl:datavalue>
+            <cl:datavalue columnname="column4">100</cl:datavalue>
+            <cl:datavalue columnname="column14">세형</cl:datavalue>
+            <cl:datavalue columnname="column5">30</cl:datavalue>
+            <cl:datavalue columnname="column15">년</cl:datavalue>
+            <cl:datavalue columnname="column6">1월납</cl:datavalue>
+            <cl:datavalue columnname="column7">300</cl:datavalue>
+            <cl:datavalue columnname="column8">S0</cl:datavalue>
+            <cl:datavalue columnname="column9">재해사망</cl:datavalue>
+            <cl:datavalue columnname="column10">S0</cl:datavalue>
+            <cl:datavalue columnname="column11">2022-08</cl:datavalue>
+            <cl:datavalue columnname="column12">요추통증</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1">20930</cl:datavalue>
+            <cl:datavalue columnname="column13">(무)흥국생명다(多)사랑통합보험</cl:datavalue>
+            <cl:datavalue columnname="column2">100</cl:datavalue>
+            <cl:datavalue columnname="column3">950</cl:datavalue>
+            <cl:datavalue columnname="column4">100</cl:datavalue>
+            <cl:datavalue columnname="column14">세형</cl:datavalue>
+            <cl:datavalue columnname="column5">30</cl:datavalue>
+            <cl:datavalue columnname="column15">년</cl:datavalue>
+            <cl:datavalue columnname="column6">1월납</cl:datavalue>
+            <cl:datavalue columnname="column7">300</cl:datavalue>
+            <cl:datavalue columnname="column8">S0</cl:datavalue>
+            <cl:datavalue columnname="column9">재해사망</cl:datavalue>
+            <cl:datavalue columnname="column10">S0</cl:datavalue>
+            <cl:datavalue columnname="column11">2022-08</cl:datavalue>
+            <cl:datavalue columnname="column12">요추통증</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1">20930</cl:datavalue>
+            <cl:datavalue columnname="column13">(무)흥국생명다(多)사랑통합보험</cl:datavalue>
+            <cl:datavalue columnname="column2">100</cl:datavalue>
+            <cl:datavalue columnname="column3">950</cl:datavalue>
+            <cl:datavalue columnname="column4">100</cl:datavalue>
+            <cl:datavalue columnname="column14">세형</cl:datavalue>
+            <cl:datavalue columnname="column5">30</cl:datavalue>
+            <cl:datavalue columnname="column15">년</cl:datavalue>
+            <cl:datavalue columnname="column6">1월납</cl:datavalue>
+            <cl:datavalue columnname="column7">300</cl:datavalue>
+            <cl:datavalue columnname="column8">S0</cl:datavalue>
+            <cl:datavalue columnname="column9">재해사망</cl:datavalue>
+            <cl:datavalue columnname="column10">S0</cl:datavalue>
+            <cl:datavalue columnname="column11">2022-08</cl:datavalue>
+            <cl:datavalue columnname="column12">요추통증</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1">20930</cl:datavalue>
+            <cl:datavalue columnname="column13">(무)흥국생명다(多)사랑통합보험</cl:datavalue>
+            <cl:datavalue columnname="column2">100</cl:datavalue>
+            <cl:datavalue columnname="column3">950</cl:datavalue>
+            <cl:datavalue columnname="column4">100</cl:datavalue>
+            <cl:datavalue columnname="column14">세형</cl:datavalue>
+            <cl:datavalue columnname="column5">30</cl:datavalue>
+            <cl:datavalue columnname="column15">년</cl:datavalue>
+            <cl:datavalue columnname="column6">1월납</cl:datavalue>
+            <cl:datavalue columnname="column7">300</cl:datavalue>
+            <cl:datavalue columnname="column8">S0</cl:datavalue>
+            <cl:datavalue columnname="column9">재해사망</cl:datavalue>
+            <cl:datavalue columnname="column10">S0</cl:datavalue>
+            <cl:datavalue columnname="column11">2022-08</cl:datavalue>
+            <cl:datavalue columnname="column12">요추통증</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1">20930</cl:datavalue>
+            <cl:datavalue columnname="column13">(무)흥국생명다(多)사랑통합보험</cl:datavalue>
+            <cl:datavalue columnname="column2">100</cl:datavalue>
+            <cl:datavalue columnname="column3">950</cl:datavalue>
+            <cl:datavalue columnname="column4">100</cl:datavalue>
+            <cl:datavalue columnname="column14">세형</cl:datavalue>
+            <cl:datavalue columnname="column5">30</cl:datavalue>
+            <cl:datavalue columnname="column15">년</cl:datavalue>
+            <cl:datavalue columnname="column6">1월납</cl:datavalue>
+            <cl:datavalue columnname="column7">300</cl:datavalue>
+            <cl:datavalue columnname="column8">S0</cl:datavalue>
+            <cl:datavalue columnname="column9">재해사망</cl:datavalue>
+            <cl:datavalue columnname="column10">S0</cl:datavalue>
+            <cl:datavalue columnname="column11">2022-08</cl:datavalue>
+            <cl:datavalue columnname="column12">요추통증</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1">20930</cl:datavalue>
+            <cl:datavalue columnname="column13">(무)흥국생명다(多)사랑통합보험</cl:datavalue>
+            <cl:datavalue columnname="column2">100</cl:datavalue>
+            <cl:datavalue columnname="column3">950</cl:datavalue>
+            <cl:datavalue columnname="column4">100</cl:datavalue>
+            <cl:datavalue columnname="column14">세형</cl:datavalue>
+            <cl:datavalue columnname="column5">30</cl:datavalue>
+            <cl:datavalue columnname="column15">년</cl:datavalue>
+            <cl:datavalue columnname="column6">1월납</cl:datavalue>
+            <cl:datavalue columnname="column7">300</cl:datavalue>
+            <cl:datavalue columnname="column8">S0</cl:datavalue>
+            <cl:datavalue columnname="column9">재해사망</cl:datavalue>
+            <cl:datavalue columnname="column10">S0</cl:datavalue>
+            <cl:datavalue columnname="column11">2022-08</cl:datavalue>
+            <cl:datavalue columnname="column12">요추통증</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1">20930</cl:datavalue>
+            <cl:datavalue columnname="column13">(무)흥국생명다(多)사랑통합보험</cl:datavalue>
+            <cl:datavalue columnname="column2">100</cl:datavalue>
+            <cl:datavalue columnname="column3">950</cl:datavalue>
+            <cl:datavalue columnname="column4">100</cl:datavalue>
+            <cl:datavalue columnname="column14">세형</cl:datavalue>
+            <cl:datavalue columnname="column5">30</cl:datavalue>
+            <cl:datavalue columnname="column15">년</cl:datavalue>
+            <cl:datavalue columnname="column6">1월납</cl:datavalue>
+            <cl:datavalue columnname="column7">300</cl:datavalue>
+            <cl:datavalue columnname="column8">S0</cl:datavalue>
+            <cl:datavalue columnname="column9">재해사망</cl:datavalue>
+            <cl:datavalue columnname="column10">S0</cl:datavalue>
+            <cl:datavalue columnname="column11">2022-08</cl:datavalue>
+            <cl:datavalue columnname="column12">요추통증</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1">20930</cl:datavalue>
+            <cl:datavalue columnname="column13">(무)흥국생명다(多)사랑통합보험</cl:datavalue>
+            <cl:datavalue columnname="column2">100</cl:datavalue>
+            <cl:datavalue columnname="column3">950</cl:datavalue>
+            <cl:datavalue columnname="column4">100</cl:datavalue>
+            <cl:datavalue columnname="column14">세형</cl:datavalue>
+            <cl:datavalue columnname="column5">30</cl:datavalue>
+            <cl:datavalue columnname="column15">년</cl:datavalue>
+            <cl:datavalue columnname="column6">1월납</cl:datavalue>
+            <cl:datavalue columnname="column7">300</cl:datavalue>
+            <cl:datavalue columnname="column8">S0</cl:datavalue>
+            <cl:datavalue columnname="column9">재해사망</cl:datavalue>
+            <cl:datavalue columnname="column10">S0</cl:datavalue>
+            <cl:datavalue columnname="column11">2022-08</cl:datavalue>
+            <cl:datavalue columnname="column12">요추통증</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1">20930</cl:datavalue>
+            <cl:datavalue columnname="column13">(무)흥국생명다(多)사랑통합보험</cl:datavalue>
+            <cl:datavalue columnname="column2">100</cl:datavalue>
+            <cl:datavalue columnname="column3">950</cl:datavalue>
+            <cl:datavalue columnname="column4">100</cl:datavalue>
+            <cl:datavalue columnname="column14">세형</cl:datavalue>
+            <cl:datavalue columnname="column5">30</cl:datavalue>
+            <cl:datavalue columnname="column15">년</cl:datavalue>
+            <cl:datavalue columnname="column6">1월납</cl:datavalue>
+            <cl:datavalue columnname="column7">300</cl:datavalue>
+            <cl:datavalue columnname="column8">S0</cl:datavalue>
+            <cl:datavalue columnname="column9">재해사망</cl:datavalue>
+            <cl:datavalue columnname="column10">S0</cl:datavalue>
+            <cl:datavalue columnname="column11">2022-08</cl:datavalue>
+            <cl:datavalue columnname="column12">요추통증</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1">20930</cl:datavalue>
+            <cl:datavalue columnname="column13">(무)흥국생명다(多)사랑통합보험</cl:datavalue>
+            <cl:datavalue columnname="column2">100</cl:datavalue>
+            <cl:datavalue columnname="column3">950</cl:datavalue>
+            <cl:datavalue columnname="column4">100</cl:datavalue>
+            <cl:datavalue columnname="column14">세형</cl:datavalue>
+            <cl:datavalue columnname="column5">30</cl:datavalue>
+            <cl:datavalue columnname="column15">년</cl:datavalue>
+            <cl:datavalue columnname="column6">1월납</cl:datavalue>
+            <cl:datavalue columnname="column7">300</cl:datavalue>
+            <cl:datavalue columnname="column8">S0</cl:datavalue>
+            <cl:datavalue columnname="column9">재해사망</cl:datavalue>
+            <cl:datavalue columnname="column10">S0</cl:datavalue>
+            <cl:datavalue columnname="column11">2022-08</cl:datavalue>
+            <cl:datavalue columnname="column12">요추통증</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1">20930</cl:datavalue>
+            <cl:datavalue columnname="column13">(무)흥국생명다(多)사랑통합보험</cl:datavalue>
+            <cl:datavalue columnname="column2">100</cl:datavalue>
+            <cl:datavalue columnname="column3">950</cl:datavalue>
+            <cl:datavalue columnname="column4">100</cl:datavalue>
+            <cl:datavalue columnname="column14">세형</cl:datavalue>
+            <cl:datavalue columnname="column5">30</cl:datavalue>
+            <cl:datavalue columnname="column15">년</cl:datavalue>
+            <cl:datavalue columnname="column6">1월납</cl:datavalue>
+            <cl:datavalue columnname="column7">300</cl:datavalue>
+            <cl:datavalue columnname="column8">S0</cl:datavalue>
+            <cl:datavalue columnname="column9">재해사망</cl:datavalue>
+            <cl:datavalue columnname="column10">S0</cl:datavalue>
+            <cl:datavalue columnname="column11">2022-08</cl:datavalue>
+            <cl:datavalue columnname="column12">요추통증</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1">20930</cl:datavalue>
+            <cl:datavalue columnname="column13">(무)흥국생명다(多)사랑통합보험</cl:datavalue>
+            <cl:datavalue columnname="column2">100</cl:datavalue>
+            <cl:datavalue columnname="column3">950</cl:datavalue>
+            <cl:datavalue columnname="column4">100</cl:datavalue>
+            <cl:datavalue columnname="column14">세형</cl:datavalue>
+            <cl:datavalue columnname="column5">30</cl:datavalue>
+            <cl:datavalue columnname="column15">년</cl:datavalue>
+            <cl:datavalue columnname="column6">1월납</cl:datavalue>
+            <cl:datavalue columnname="column7">300</cl:datavalue>
+            <cl:datavalue columnname="column8">S0</cl:datavalue>
+            <cl:datavalue columnname="column9">재해사망</cl:datavalue>
+            <cl:datavalue columnname="column10">S0</cl:datavalue>
+            <cl:datavalue columnname="column11">2022-08</cl:datavalue>
+            <cl:datavalue columnname="column12">요추통증</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1">20930</cl:datavalue>
+            <cl:datavalue columnname="column13">(무)흥국생명다(多)사랑통합보험</cl:datavalue>
+            <cl:datavalue columnname="column2">100</cl:datavalue>
+            <cl:datavalue columnname="column3">950</cl:datavalue>
+            <cl:datavalue columnname="column4">100</cl:datavalue>
+            <cl:datavalue columnname="column14">세형</cl:datavalue>
+            <cl:datavalue columnname="column5">30</cl:datavalue>
+            <cl:datavalue columnname="column15">년</cl:datavalue>
+            <cl:datavalue columnname="column6">1월납</cl:datavalue>
+            <cl:datavalue columnname="column7">300</cl:datavalue>
+            <cl:datavalue columnname="column8">S0</cl:datavalue>
+            <cl:datavalue columnname="column9">재해사망</cl:datavalue>
+            <cl:datavalue columnname="column10">S0</cl:datavalue>
+            <cl:datavalue columnname="column11">2022-08</cl:datavalue>
+            <cl:datavalue columnname="column12">요추통증</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1">20930</cl:datavalue>
+            <cl:datavalue columnname="column13">(무)흥국생명다(多)사랑통합보험</cl:datavalue>
+            <cl:datavalue columnname="column2">100</cl:datavalue>
+            <cl:datavalue columnname="column3">950</cl:datavalue>
+            <cl:datavalue columnname="column4">100</cl:datavalue>
+            <cl:datavalue columnname="column14">세형</cl:datavalue>
+            <cl:datavalue columnname="column5">30</cl:datavalue>
+            <cl:datavalue columnname="column15">년</cl:datavalue>
+            <cl:datavalue columnname="column6">1월납</cl:datavalue>
+            <cl:datavalue columnname="column7">300</cl:datavalue>
+            <cl:datavalue columnname="column8">S0</cl:datavalue>
+            <cl:datavalue columnname="column9">재해사망</cl:datavalue>
+            <cl:datavalue columnname="column10">S0</cl:datavalue>
+            <cl:datavalue columnname="column11">2022-08</cl:datavalue>
+            <cl:datavalue columnname="column12">요추통증</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1">20930</cl:datavalue>
+            <cl:datavalue columnname="column13">(무)흥국생명다(多)사랑통합보험</cl:datavalue>
+            <cl:datavalue columnname="column2">100</cl:datavalue>
+            <cl:datavalue columnname="column3">950</cl:datavalue>
+            <cl:datavalue columnname="column4">100</cl:datavalue>
+            <cl:datavalue columnname="column14">세형</cl:datavalue>
+            <cl:datavalue columnname="column5">30</cl:datavalue>
+            <cl:datavalue columnname="column15">년</cl:datavalue>
+            <cl:datavalue columnname="column6">1월납</cl:datavalue>
+            <cl:datavalue columnname="column7">300</cl:datavalue>
+            <cl:datavalue columnname="column8">S0</cl:datavalue>
+            <cl:datavalue columnname="column9">재해사망</cl:datavalue>
+            <cl:datavalue columnname="column10">S0</cl:datavalue>
+            <cl:datavalue columnname="column11">2022-08</cl:datavalue>
+            <cl:datavalue columnname="column12">요추통증</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1">20930</cl:datavalue>
+            <cl:datavalue columnname="column13">(무)흥국생명다(多)사랑통합보험</cl:datavalue>
+            <cl:datavalue columnname="column2">100</cl:datavalue>
+            <cl:datavalue columnname="column3">950</cl:datavalue>
+            <cl:datavalue columnname="column4">100</cl:datavalue>
+            <cl:datavalue columnname="column14">세형</cl:datavalue>
+            <cl:datavalue columnname="column5">30</cl:datavalue>
+            <cl:datavalue columnname="column15">년</cl:datavalue>
+            <cl:datavalue columnname="column6">1월납</cl:datavalue>
+            <cl:datavalue columnname="column7">300</cl:datavalue>
+            <cl:datavalue columnname="column8">S0</cl:datavalue>
+            <cl:datavalue columnname="column9">재해사망</cl:datavalue>
+            <cl:datavalue columnname="column10">S0</cl:datavalue>
+            <cl:datavalue columnname="column11">2022-08</cl:datavalue>
+            <cl:datavalue columnname="column12">요추통증</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1">20930</cl:datavalue>
+            <cl:datavalue columnname="column2">100</cl:datavalue>
+            <cl:datavalue columnname="column3">950</cl:datavalue>
+            <cl:datavalue columnname="column4">100</cl:datavalue>
+            <cl:datavalue columnname="column5">30</cl:datavalue>
+            <cl:datavalue columnname="column6">1월납</cl:datavalue>
+            <cl:datavalue columnname="column7">300</cl:datavalue>
+            <cl:datavalue columnname="column8">S0</cl:datavalue>
+            <cl:datavalue columnname="column9">재해사망</cl:datavalue>
+            <cl:datavalue columnname="column10">S0</cl:datavalue>
+            <cl:datavalue columnname="column11">2022-08</cl:datavalue>
+            <cl:datavalue columnname="column12">요추통증</cl:datavalue>
+            <cl:datavalue columnname="column13">(무)흥국생명다(多)사랑통합보험</cl:datavalue>
+            <cl:datavalue columnname="column14">세형</cl:datavalue>
+            <cl:datavalue columnname="column15">년</cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="선심사결과상세조회"/>
+  </head>
+  <body std:sid="body-edc40965" class="grid-window-body">
+    <cl:group std:sid="group-f6cc10a5" id="grpAppTitle" class="app-title">
+      <cl:verticaldata std:sid="v-data-ef7e8ea1" width="1560px" height="35px" autosize="height"/>
+      <cl:output std:sid="output-c6ce190d" id="optTitle" class="navi-left" value="선심사결과상세조회">
+        <cl:formdata std:sid="f-data-fbb0cc9f" row="0" col="0"/>
+      </cl:output>
+      <cl:formlayout std:sid="f-layout-2de29e5a" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-7203aded" id="grpBody" class="grid-content-body">
+      <cl:verticaldata std:sid="v-data-cdb52e8c" width="1600px" height="899px" autosize="height"/>
+      <cl:group std:sid="group-4335e437" class="tab-box box-spacing-free">
+        <cl:verticaldata std:sid="v-data-6dec5a0f" width="1560px" height="405px" autosize="height"/>
+        <cl:tabfolder std:sid="t-folder-7194ae88">
+          <cl:verticaldata std:sid="v-data-99474ddc" width="767px" height="405px" autosize="height"/>
+          <cl:tabitem std:sid="t-item-6a4499bf" selected="true" text="선심사결과상세">
+            <std:metadata>
+              <std:property key="is-active-item" value="true"/>
+            </std:metadata>
+            <cl:group std:sid="group-01f460d6" class="tab-area">
+              <std:metadata>
+                <std:property key="locked" value="true"/>
+              </std:metadata>
+              <cl:group std:sid="group-67c2ea0a">
+                <cl:verticaldata std:sid="v-data-3a6ddaaf" width="374px" height="344px" autosize="height"/>
+                <cl:group std:sid="group-9bf65007" id="grpBodyGroundGrid" class="grid-box box-spacing-free">
+                  <cl:verticaldata std:sid="v-data-df642346" width="1600px" height="344px" autosize="height"/>
+                  <cl:grid std:sid="grid-a1f930f1" id="grd1" class="list-normal" readonly="true" datasetid="ds1" resizablecolumns="all" columnMovable="true">
+                    <cl:verticaldata std:sid="v-data-b0a4b4c7" width="400px" height="405px"/>
+                    <cl:gridcolumn std:sid="g-column-ff5255b3" width="50px"/>
+                    <cl:gridcolumn std:sid="g-column-83abf17b" width="200px"/>
+                    <cl:gridcolumn std:sid="g-column-f52e1169"/>
+                    <cl:gridcolumn std:sid="g-column-7dbc139c"/>
+                    <cl:gridcolumn std:sid="g-column-e3fda097" width="40px"/>
+                    <cl:gridcolumn std:sid="g-column-a9311cd3" width="40px"/>
+                    <cl:gridcolumn std:sid="g-column-5a561ea7" width="40px"/>
+                    <cl:gridcolumn std:sid="g-column-bea0e78d" width="40px"/>
+                    <cl:gridcolumn std:sid="g-column-b7846c03" width="60px"/>
+                    <cl:gridcolumn std:sid="g-column-6383e5e7" width="40px"/>
+                    <cl:gridcolumn std:sid="g-column-cbc48de3"/>
+                    <cl:gridcolumn std:sid="g-column-ba7f43d6"/>
+                    <cl:gridcolumn std:sid="g-column-91b25f9c"/>
+                    <cl:gridcolumn std:sid="g-column-426e3c61" width="100px"/>
+                    <cl:gridcolumn std:sid="g-column-7bcb153f" width="200px"/>
+                    <cl:gridheader std:sid="gh-band-08b687c9">
+                      <cl:gridrow std:sid="g-row-3a6215b7" height="31px"/>
+                      <cl:gridcell std:sid="gh-cell-4e42f199" rowindex="0" colindex="0" rowspan="1" colspan="2" targetcolumnname="column1" sortable="false" filterable="false" text="보험명"/>
+                      <cl:gridcell std:sid="gh-cell-4d1390eb" rowindex="0" colindex="2" targetcolumnname="column2" sortable="false" filterable="false" text="계약금액(만)"/>
+                      <cl:gridcell std:sid="gh-cell-2c2deff7" rowindex="0" colindex="3" targetcolumnname="column3" sortable="false" filterable="false" text="보험료(원)"/>
+                      <cl:gridcell std:sid="gh-cell-4b639a6e" rowindex="0" colindex="4" rowspan="1" colspan="2" targetcolumnname="column4" sortable="false" filterable="false" text="보험기간"/>
+                      <cl:gridcell std:sid="gh-cell-e40ca2ea" rowindex="0" colindex="6" rowspan="1" colspan="2" targetcolumnname="column5" sortable="false" filterable="false" text="납입기간"/>
+                      <cl:gridcell std:sid="gh-cell-41623a58" rowindex="0" colindex="8" targetcolumnname="column6" sortable="false" filterable="false" text="납입주기"/>
+                      <cl:gridcell std:sid="gh-cell-f1176cdf" rowindex="0" colindex="9" targetcolumnname="column7" sortable="false" filterable="false" text="할증"/>
+                      <cl:gridcell std:sid="gh-cell-d7bf5acd" rowindex="0" colindex="10" targetcolumnname="column8" sortable="false" filterable="false" text="합산결과"/>
+                      <cl:gridcell std:sid="gh-cell-0006a7b6" rowindex="0" colindex="11" targetcolumnname="column9" sortable="false" filterable="false" text="담보명"/>
+                      <cl:gridcell std:sid="gh-cell-a62a0bbd" rowindex="0" colindex="12" targetcolumnname="column10" sortable="false" filterable="false" text="개별결과"/>
+                      <cl:gridcell std:sid="gh-cell-84ce8c04" rowindex="0" colindex="13" targetcolumnname="column11" sortable="false" filterable="false" text="사고일자"/>
+                      <cl:gridcell std:sid="gh-cell-5afe216c" rowindex="0" colindex="14" targetcolumnname="column12" sortable="false" filterable="false" text="질병명(유사질병명)"/>
+                    </cl:gridheader>
+                    <cl:griddetail std:sid="gd-band-1f6bd65e">
+                      <cl:gridrow std:sid="g-row-d87bf984" height="31px"/>
+                      <cl:gridcell std:sid="gd-cell-d63f9698" rowindex="0" colindex="0" columnname="column1">
+                        <cl:output std:sid="output-8a9dd123" class="text-center">
+                          <cl:celldata std:sid="c-data-37ad381f"/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-81fb048a" rowindex="0" colindex="1" columnname="column13">
+                        <cl:output std:sid="output-24c09de8">
+                          <cl:celldata std:sid="c-data-44ada39a"/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-9d85688c" rowindex="0" colindex="2" columnname="column2">
+                        <cl:output std:sid="output-3b0b82c2" class="text-right" datatype="number" format="s#,##0">
+                          <cl:celldata std:sid="c-data-ff730652"/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-559954d6" rowindex="0" colindex="3" columnname="column3">
+                        <cl:output std:sid="output-5cfada8e" class="text-right" datatype="number" format="s#,##0">
+                          <cl:celldata std:sid="c-data-a9fd0e78"/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-6c1ad522" rowindex="0" colindex="4" columnname="column4">
+                        <cl:output std:sid="output-dc3db5c7" class="text-center" datatype="number" format="s#,##0">
+                          <cl:celldata std:sid="c-data-0dba8ca9"/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-db497c49" rowindex="0" colindex="5" columnname="column14">
+                        <cl:output std:sid="output-65c35dd8" class="text-center">
+                          <cl:celldata std:sid="c-data-eaee1973"/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-6f2be3b0" rowindex="0" colindex="6" columnname="column5">
+                        <cl:output std:sid="output-2f9347ce" class="text-center" datatype="number" format="s#,##0">
+                          <cl:celldata std:sid="c-data-da10a2f9"/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-e05d56ba" rowindex="0" colindex="7" columnname="column15">
+                        <cl:output std:sid="output-dfe6a97b" class="text-center">
+                          <cl:celldata std:sid="c-data-c4f6cd3e"/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-0a3794a3" rowindex="0" colindex="8" columnname="column6">
+                        <cl:output std:sid="output-8d65ef48" class="text-center">
+                          <cl:celldata std:sid="c-data-700102c1"/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-2e01dd6e" rowindex="0" colindex="9" columnname="column7">
+                        <cl:output std:sid="output-fdc46e4e" class="text-center">
+                          <cl:celldata std:sid="c-data-3155f79c"/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-dc9a72c6" rowindex="0" colindex="10" columnname="column8">
+                        <cl:output std:sid="output-a23d2d6b" class="text-center">
+                          <cl:celldata std:sid="c-data-f0f4326d"/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-82416406" rowindex="0" colindex="11" columnname="column9">
+                        <cl:output std:sid="output-66285165" class="text-center">
+                          <cl:celldata std:sid="c-data-7f793255"/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-1f5a74c4" rowindex="0" colindex="12" columnname="column10">
+                        <cl:output std:sid="output-e8e9eb69" class="text-center">
+                          <cl:celldata std:sid="c-data-0f0169d7"/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-60f23f97" rowindex="0" colindex="13" columnname="column11">
+                        <cl:output std:sid="output-e1416e5e" class="text-center" datatype="date">
+                          <cl:celldata std:sid="c-data-be87a44f"/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-a710f2eb" rowindex="0" colindex="14" columnname="column12">
+                        <cl:output std:sid="output-36a236e4">
+                          <cl:celldata std:sid="c-data-faee8fc2"/>
+                        </cl:output>
+                      </cl:gridcell>
+                    </cl:griddetail>
+                  </cl:grid>
+                  <cl:verticallayout std:sid="v-layout-3a454f14" spacing="4"/>
+                </cl:group>
+                <cl:verticallayout std:sid="v-layout-3b0439ad" spacing="8"/>
+              </cl:group>
+              <cl:verticallayout std:sid="v-layout-3d7d9680" spacing="12"/>
+            </cl:group>
+          </cl:tabitem>
+          <cl:tabitem std:sid="t-item-3f7d9341" text="신정원 지급이력">
+            <cl:group std:sid="group-ab375b67" class="tab-area">
+              <std:metadata>
+                <std:property key="locked" value="true"/>
+              </std:metadata>
+              <cl:embeddedapp std:sid="e-app-a67bfd04" id="ea1" src="UW012.clx">
+                <cl:verticaldata std:sid="v-data-c4cfaf28" width="320px" height="303px" autosize="height"/>
+              </cl:embeddedapp>
+              <cl:verticallayout std:sid="v-layout-22d3ca50" spacing="12"/>
+            </cl:group>
+          </cl:tabitem>
+          <cl:group std:sid="group-f9c63c1a" id="grp1" class="button-table-top-area">
+            <cl:headercontroldata std:sid="thc-data-20df2afa" width="175" position="right"/>
+            <cl:output std:sid="output-d5118406" value="종합선심사결과:">
+              <cl:flowlayoutdata std:sid="f-data-2b71dc2a" width="90px" height="26px" autosize="width"/>
+            </cl:output>
+            <cl:inputbox std:sid="i-box-2925de3b" id="ipb1" value="UD">
+              <cl:flowlayoutdata std:sid="f-data-cc3c13a3" width="80px" height="26px"/>
+            </cl:inputbox>
+            <cl:flowlayout std:sid="f-layout-9821e739" scrollable="false" hspacing="5" vspacing="0" halign="right" linewrap="false" leftmargin="0" rightmargin="0" topmargin="10" bottommargin="0"/>
+          </cl:group>
+        </cl:tabfolder>
+        <cl:verticallayout std:sid="v-layout-8c6568e8" spacing="8"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-6bed78a8" scrollable="false" spacing="7"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-bcbedc8d" spacing="0" leftmargin="20" rightmargin="20" topmargin="20" bottommargin="10"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

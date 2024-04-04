@@ -1,0 +1,254 @@
+@import "../custom-settings.part.less";
+
+/************************************************
+ * 폼 공통
+ ************************************************/
+
+.cl-container.form-normal,
+.cl-container.form-highlight {
+	.cl-output:not(.label) {
+		.cl-text {
+			padding: 5px 5px 5px 5px;
+		}
+	}
+	
+	.cl-radiobutton,
+	.cl-checkbox.cl-control,
+	.cl-checkboxgroup {
+		&:not(.text-center) {
+			padding-left: 5px;
+		}
+	}
+	
+	.cl-container.form-inside {
+		// 첫번째 컨트롤로 특정 컨트롤이 오는 경우에 대한 처리
+		.cl-layout-wrap.first-control-spacing {
+			&:first-child,
+			&.cl-first-row {
+				.cl-output {
+					.cl-text {
+						padding-left: 5px;
+					}
+				}
+				
+				.cl-radiobutton,
+				.cl-checkbox.cl-control,
+				.cl-checkboxgroup {
+					padding-left: 5px;
+				}
+			}
+		}
+		
+		// 폼 레이아웃인 경우
+		.cl-layout-content.first-control-spacing {
+			.cl-control.cl-first-column {
+				&.cl-output {
+					.cl-text {
+						padding-left: 5px;
+					}
+				}
+				
+				&.cl-radiobutton,
+				&.cl-checkbox.cl-control,
+				&.cl-checkboxgroup {
+					padding-left: 5px;
+				}
+			}
+		}
+		
+		.cl-layout-content.form-horizontal-inner-spacing {
+			.cl-control.cl-first-column {
+				margin-left: 5px;
+			}
+			.cl-control.cl-last-column {
+				margin-right: 5px;
+			}
+		}
+		
+		.cl-layout-content.form-vertical-inner-spacing {
+			.cl-control.cl-first-row {
+				margin-top: 5px;
+			}
+			.cl-control.cl-last-row {
+				margin-bottom: 5px;
+			}
+		}
+		
+		// 플로우 레이아웃인 경우 (또는 폼 레이아웃에서도 사용 가능)
+		.cl-layout.form-inner-spacing {
+			padding: 5px;
+		}
+		
+		// 일반 컨트롤 처리
+		.cl-output {
+			.cl-text {
+				padding: 0px;
+			}
+		}
+		
+		.cl-radiobutton,
+		.cl-checkbox,
+		.cl-checkboxgroup {
+			padding-left: 0px;
+		}
+	}
+}
+
+/************************************************
+ * 기본 폼 레이아웃 클래스
+ * --> 미사용 클래스
+ ************************************************/
+ 
+.cl-container.cl-form-group {
+	background-color: @form-background-color;
+	border: @form-border-base;
+	border-radius: @form-border-radius;
+}
+
+/************************************************
+ * 기본 폼
+ ************************************************/
+ 
+.cl-container.form-normal {
+	background-color: @form-background-color;
+	border: @form-border-base;
+	border-width: 2px 0px 1px 0px;
+	border-top: 2px solid #a0a9b4;
+	border-radius: @form-border-radius;
+	
+	.cl-control.label {
+		text-align: center;
+		
+		&.required {
+			.cl-text:after {
+				content: "*";
+				position: relative;
+				height: 100%;
+				color: @danger;
+				margin: 0 0 0 2px;
+			}
+		}
+	}
+	
+	.cl-button.btn-hyper-text {
+		font-size: @font-size-base;
+	}
+	
+	.cl-output.highlight {
+		background-color: @info-dim !important;
+		color: @table-text-color;
+		font-weight: @font-weight-regular;
+		
+		.cl-control {
+			font-weight: @font-weight-regular;
+		}
+	}
+	
+	.cl-output.highlight-primary {
+		background-color: @primary-dim;
+		color: @primary;
+		font-weight: @font-weight-bold;
+		
+		&:not(.label) {
+			.cl-text {
+				padding: 0px 10px;
+			}
+		}
+	}
+}
+
+
+/************************************************
+ * 강조 폼
+ ************************************************/
+
+.cl-container.form-highlight {
+	border: 1px solid #b485c9;
+	
+	.cl-formlayout-column-shade,
+	.cl-formlayout-row-shade {
+		background-color: @primary-dim;
+	}
+	
+	.cl-output.label {
+		text-align: center;
+	}
+}
+
+/************************************************
+ * 조회 폼
+ ************************************************/
+ 
+//.cl-container.search-box {
+//	padding: 7px 21px;
+//	
+//	.cl-container.search-area {
+//		.cl-output.label {
+//			text-align: right;
+//		}
+//		
+//		.cl-container.btn-flow-area {
+//			border-left: 1px solid @gray-500;
+//		}
+//	}
+//}
+
+.cl-container.search-box {
+	background-color: @lighter;
+	border: 1px solid @gray-500;
+	
+	.cl-output.label {
+		text-align: right;
+		
+		&.required {
+			.cl-text:after {
+				content: "*";
+				position: relative;
+				height: 100%;
+				color: @danger;
+				margin: 0 0 0 2px;
+			}
+		}		
+		
+	}
+	
+	.cl-control.label {
+		&:not(.cl-first-column) {
+			margin-left: 20px;
+		}
+	}
+	
+	.cl-container.btn-flow-area {
+		border-left: 1px solid @gray-500;
+	}
+}
+
+
+/************************************************
+ * 어플리케이션 테이블(폼)
+ ************************************************/
+ 
+.cl-container.form-application {
+	border-top: 2px solid #a0a9b4;
+	border-bottom: 1px solid @gray-500;
+	
+	.cl-formlayout-vertical-separator {
+		background-color: #cccccc;
+	}
+	
+	.cl-container.form-header {
+		background-color: @gray-100;
+		border: 1px solid @gray-500;
+		border-width: 1px 0px;
+	}
+	
+	.cl-control.form-control {
+		background-color: @primary-dim;
+		
+		&.cl-output,
+		&.cl-radiobutton,
+		&.cl-checkboxgroup {
+			text-align: center;
+		}
+	}
+}

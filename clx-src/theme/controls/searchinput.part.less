@@ -1,0 +1,105 @@
+@import "../custom-settings.part.less";
+
+/* 서치 인풋 */
+.cl-searchinput {
+	font: @font-base;
+	background-image: @input-background-image;
+	background-color: @input-background-color;
+	border: none; //@input-border-base;
+	border-radius: @input-border-radius;
+	color: @input-text-color;
+
+	/* 서치 인풋 텍스트 */
+	.cl-text {
+		&:not(.cl-placeholder) {
+			border: @input-border-base;
+			border-right-color: @transparent;
+		}
+		
+		padding: @input-padding-0 @input-padding-x;
+		
+		&.cl-placeholder {
+			color: @input-placeholder-text-color !important;
+			font-style: @input-placeholder-text-style;
+			font-weight: @input-placeholder-text-weight;
+		}
+	}
+
+	/* 서치 인풋 Clear버튼 */
+	.cl-searchinput-clear {
+		background-size: auto;
+
+		// cursor:pointer;
+		&:hover {
+			/* Clear버튼 hover시 Clear버튼 스타일 */
+		}
+	}
+
+	/* 서치 인풋 검색버튼 */
+	.cl-searchinput-search {
+		background-image: url("../images/controls/button/research-w-12.png");
+		background-size: auto;
+		background-color: #7e85c1;
+		width: 26px;
+
+		&.cl-left {
+			/* 검색버튼이 왼쪽에 표시될때 상태 */
+		}
+
+		&.cl-right {
+			/* 검색버튼이 오른쪽에 표시될때 상태 */
+		}
+	}
+
+	&.cl-disabled {
+
+		/* 서치 인풋 disabled 상태 검색버튼 */
+		.cl-searchinput-search {
+			// background-image: url(icons/search-button-disabled.png);
+		}
+	}
+
+	&:not(.cl-disabled) {
+
+		/* Clear버튼 hover상태 */
+		.cl-searchinput-clear:hover {}
+
+		/* Clear버튼 active상태 */
+		.cl-searchinput-clear:active {}
+
+		/* 검색버튼 hover상태 */
+		.cl-searchinput-search:hover {
+			background-image: url("../images/controls/button/research-w-12.png");
+		}
+
+		/* 검색버튼 active상태 */
+		.cl-searchinput-search:active {
+			background-image: url("../images/controls/button/research-w-12.png");
+			background-color: #7d82b5;
+			opacity: 1;
+		}
+	}
+
+	&.cl-disabled {
+		background-color: @input-disabled-background-color;
+		border-color: @input-disabled-border-color;
+		color: @input-disabled-text-color;
+		
+		.cl-searchinput-search {
+			background-image: url("../images/controls/button/research-w-12.png");
+		}
+	}
+
+	/* 서치 인풋 포커스 상태 */
+	&.cl-focus {
+		.cl-text {
+			border-color: @input-focus-border-color;
+		}
+
+		.cl-searchinput-search {
+			background-image: url("../images/controls/button/research-w-12.png");
+		}
+
+		.cl-searchinput-clear {}
+	}
+}

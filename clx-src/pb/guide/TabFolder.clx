@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-3fac7192" version="1.0.3985">
+  <head std:sid="head-868c43b3">
+    <screen std:sid="screen-830624f8" id="default" name="default" minwidth="1644px" width="1644px" height="903px"/>
+    <screen std:sid="screen-70e28e3a" id="tablet" name="tablet" maxwidth="1643px" width="1541px" height="903px"/>
+    <cl:model std:sid="model-f01b33ad"/>
+    <cl:appspec title="[디자인가이드] 탭폴더"/>
+  </head>
+  <body std:sid="body-a9a22c0f" class="pb-body">
+    <cl:group std:sid="group-b655417b" class="pb-content">
+      <cl:verticaldata std:sid="v-data-ae38b005" width="1644px" height="242px" autosize="height"/>
+      <cl:udc std:sid="ud-control-27c2a286" type="udc.hk.pb.Breadcrumbs">
+        <cl:verticaldata std:sid="v-data-d3766577" width="1544px" height="174px" autosize="height"/>
+      </cl:udc>
+      <cl:output std:sid="output-75a1799d" class="text-red" value="※ 기타 지시문 작성">
+        <cl:verticaldata std:sid="v-data-c42713a6" width="100px" height="20px" syncminheight="true" autosize="height"/>
+      </cl:output>
+      <cl:verticallayout std:sid="v-layout-30aa5659" scrollable="false" spacing="20" leftmargin="50" rightmargin="50" topmargin="0" bottommargin="20"/>
+    </cl:group>
+    <cl:group std:sid="group-110042a3" class="pb-content">
+      <cl:verticaldata std:sid="v-data-e31968d7" width="1644px" height="970px" autosize="height"/>
+      <cl:group std:sid="group-694ca9c8">
+        <cl:verticaldata std:sid="v-data-31e11d2b" width="1544px" height="244px" autosize="height"/>
+        <cl:udc std:sid="ud-control-5fef28af" type="udc.hk.pb.SectionTitle">
+          <cl:verticaldata std:sid="v-data-e284631d" width="1544px" height="29px"/>
+          <cl:property name="title" value="탭폴더" type="string"/>
+          <cl:property name="subText" value="탭폴더 컨트롤은 &quot;tab-box&quot; 클래스가 적용된 그룹에 배치되어야 합니다." type="string"/>
+          <cl:property name="subTextStyle" value="text-blue" type="enumeration"/>
+        </cl:udc>
+        <cl:group std:sid="group-e80078da">
+          <cl:verticaldata std:sid="v-data-0407a835" width="400px" height="201px" autosize="height"/>
+          <cl:tabfolder std:sid="t-folder-acf4cb21">
+            <cl:flowlayoutdata std:sid="f-data-86fcaf3c" width="800px" height="200px" autosize="height"/>
+            <cl:tabitem std:sid="t-item-cfef672e" text="선택되지 않은 탭">
+              <cl:group std:sid="group-5fd9f49b" class="tab-area">
+                <std:metadata>
+                  <std:property key="locked" value="true"/>
+                </std:metadata>
+                <cl:output std:sid="output-e59e84d5" class="bg-secondary-dim text-secondary text-center" value="콘텐트">
+                  <cl:verticaldata std:sid="v-data-52fe4242" width="778px" height="140px" autosize="none"/>
+                </cl:output>
+                <cl:verticallayout std:sid="v-layout-8e3b858f" spacing="12" leftmargin="10" rightmargin="10" topmargin="10" bottommargin="10"/>
+              </cl:group>
+            </cl:tabitem>
+            <cl:tabitem std:sid="t-item-cebaecc6" selected="true" text="선택된 탭">
+              <std:metadata>
+                <std:property key="is-active-item" value="true"/>
+              </std:metadata>
+              <cl:group std:sid="group-d4d2599d" class="tab-area">
+                <std:metadata>
+                  <std:property key="locked" value="true"/>
+                </std:metadata>
+                <cl:output std:sid="output-06e6e293" class="bg-secondary-dim text-secondary text-center" value="콘텐트">
+                  <cl:verticaldata std:sid="v-data-5a9c54d4" width="780px" height="140px"/>
+                </cl:output>
+                <cl:verticallayout std:sid="v-layout-cd7602e1" spacing="12" leftmargin="10" rightmargin="10" topmargin="10" bottommargin="10"/>
+              </cl:group>
+            </cl:tabitem>
+            <cl:tabitem std:sid="t-item-4efa3774" text="비활성화 탭" enabled="false">
+              <cl:group std:sid="group-532264f2" class="tab-area">
+                <std:metadata>
+                  <std:property key="locked" value="true"/>
+                </std:metadata>
+                <cl:verticallayout std:sid="v-layout-19f73919" spacing="12" leftmargin="10" rightmargin="10" topmargin="10" bottommargin="10"/>
+              </cl:group>
+            </cl:tabitem>
+            <cl:group std:sid="group-caa5e0e3" class="button-table-top-area">
+              <cl:headercontroldata std:sid="thc-data-931909ff" width="91" position="right"/>
+              <cl:button std:sid="button-299cd811" class="btn-primary04" value="버튼">
+                <cl:flowlayoutdata std:sid="f-data-19ac12a4" width="43px" height="26px" autosize="width"/>
+              </cl:button>
+              <cl:button std:sid="button-07379fd9" class="btn-primary04" value="버튼">
+                <cl:flowlayoutdata std:sid="f-data-6bbb5e70" width="43px" height="26px" autosize="width"/>
+              </cl:button>
+              <cl:flowlayout std:sid="f-layout-55be4c16" scrollable="false" hspacing="5" vspacing="0" halign="right" linewrap="false" topmargin="10"/>
+            </cl:group>
+          </cl:tabfolder>
+          <cl:flowlayout std:sid="f-layout-7347acbb" scrollable="false" hspacing="30" vspacing="10"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-816480d1" scrollable="false" spacing="14"/>
+      </cl:group>
+      <cl:group std:sid="group-1c24c0db">
+        <cl:verticaldata std:sid="v-data-555b309b" width="1544px" height="591px" autosize="height"/>
+        <cl:udc std:sid="ud-control-d67fed68" type="udc.hk.pb.SectionTitle">
+          <cl:verticaldata std:sid="v-data-55f62aa9" width="1544px" height="29px" autosize="none"/>
+          <cl:property name="title" value="기본속성" type="string"/>
+          <cl:property name="subText" value="● = 사용 / ○ = 미사용 / △ = 상황에 따라 사용 / ★ = 필수로 작성" type="string"/>
+          <cl:property name="subTextStyle" value="text-red" type="enumeration"/>
+        </cl:udc>
+        <cl:group std:sid="group-bedd990d" class="pb-table">
+          <cl:verticaldata std:sid="v-data-2e6e8d4c" width="400px" height="480px" autosize="height"/>
+          <cl:output std:sid="output-320c8d70" class="pb-label" value="속성명">
+            <cl:formdata std:sid="f-data-1338aeee" row="0" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-33b27228" class="pb-label" value="사용여부">
+            <cl:formdata std:sid="f-data-39ff7db1" row="0" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-e11d57d5" class="pb-label" value="적용값">
+            <cl:formdata std:sid="f-data-2c68269c" row="0" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-cd4281cf" class="pb-label" value="내용">
+            <cl:formdata std:sid="f-data-f62ab68c" row="0" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-90bf151d" class="pb-label" value="fieldLabel" unselectable="false">
+            <cl:formdata std:sid="f-data-bf4d6266" row="1" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-369274d4" class="text-center" value="★">
+            <cl:formdata std:sid="f-data-bfbb6cf3" row="1" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-80c99d61" class="text-center" value="(논리적 레이블 값)">
+            <cl:formdata std:sid="f-data-8170582b" row="1" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-b50def24" value="폼인 경우 1:1로 대응하는 레이블(라벨)의 값을 입력하거나 컨트롤에서 입력되는 값의 논리적인 레이블(라벨)의 값을 입력">
+            <cl:formdata std:sid="f-data-81921255" row="1" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-3862d735" class="pb-label" value="headerArrowPosition" unselectable="false">
+            <cl:formdata std:sid="f-data-3eedcd1e" row="2" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-3436c187" class="text-center" value="●">
+            <cl:formdata std:sid="f-data-7a69ecf8" row="2" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-a23956cf" class="text-center" value="&quot;both&quot;">
+            <cl:formdata std:sid="f-data-429e9603" row="2" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-6ecd1ae3" value="탭 폴더의 화살표 위치를 우측으로 고정함">
+            <cl:formdata std:sid="f-data-39e85546" row="2" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-cb8bc40d" class="pb-label" value="headerArrowVisible" unselectable="false">
+            <cl:formdata std:sid="f-data-68820170" row="3" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-057bab21" class="text-center" value="●">
+            <cl:formdata std:sid="f-data-0f89d747" row="3" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-c2e873f3" class="text-center" value="&quot;auto&quot; | &quot;show&quot;">
+            <cl:formdata std:sid="f-data-3f5a9c90" row="3" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-b9659c67" value="탭 폴더의 화살표를 자동 또는 항상 표시로 설정할 수 있음">
+            <cl:formdata std:sid="f-data-24c42c49" row="3" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-257c6c73" class="pb-label" value="headerCheckable" unselectable="false">
+            <cl:formdata std:sid="f-data-01c590dd" row="4" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-1fa0a465" class="text-center" value="○">
+            <cl:formdata std:sid="f-data-d685892e" row="4" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-480d54f4" class="text-center" value="false">
+            <cl:formdata std:sid="f-data-41674755" row="4" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-b5de1e8d" value="탭 폴더 헤더의 아이템에서 체크박스를 사용할 것인지에 대한 여부. 체크박스 기능을 사용하지 않음">
+            <cl:formdata std:sid="f-data-ef161e58" row="4" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-e19af1f5" class="pb-label" value="headerPosition" unselectable="false">
+            <cl:formdata std:sid="f-data-957695b4" row="5" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-7dd11c44" class="text-center" value="●">
+            <cl:formdata std:sid="f-data-67f2bed5" row="5" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-76fd26b2" class="text-center" value="&quot;top&quot;">
+            <cl:formdata std:sid="f-data-82af9dbf" row="5" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-52ebc146" value="탭 폴더 헤더의 위치를 위로 표시">
+            <cl:formdata std:sid="f-data-12ce19ec" row="5" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-8a9cd13c" class="pb-label" value="hideHeader" unselectable="false">
+            <cl:formdata std:sid="f-data-7723558f" row="6" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-70c1c761" class="text-center" value="●">
+            <cl:formdata std:sid="f-data-afa34ed9" row="6" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-08ab420c" class="text-center" value="true | false">
+            <cl:formdata std:sid="f-data-fd9f6200" row="6" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-5c8dbd27" value="기본적으로 탭 폴더 헤더를 항상 표시하나 상황에 따라 탭 폴더의 헤더를 숨길 수 있음">
+            <cl:formdata std:sid="f-data-b0e19ef0" row="6" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-b7167522" class="pb-label" value="itemAlign" unselectable="false">
+            <cl:formdata std:sid="f-data-73aa5c16" row="7" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-220096c1" class="text-center" value="●">
+            <cl:formdata std:sid="f-data-34f6e019" row="7" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-92ce80fa" class="text-center" value="&quot;leading&quot;">
+            <cl:formdata std:sid="f-data-57402c60" row="7" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-8fcd5176" value="탭 아이템의 정렬을 왼쪽으로 함">
+            <cl:formdata std:sid="f-data-42f6b1cc" row="7" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-5e895d9b" class="pb-label" value="itemSizing" unselectable="false">
+            <cl:formdata std:sid="f-data-46cce56a" row="8" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-161abb53" class="text-center" value="●">
+            <cl:formdata std:sid="f-data-b8c4fc58" row="8" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-1a3035f0" class="text-center" value="&quot;fixed&quot;">
+            <cl:formdata std:sid="f-data-25769be4" row="8" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-960ecb8c" value="텍스트 크기에 따라 탭 아이템의 너비가 자동으로 늘거나 줄 수 있도록 &quot;auto&quot;로 값을 설정">
+            <cl:formdata std:sid="f-data-4a5c2911" row="8" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-80033afb" class="pb-label" value="itemSpacing" unselectable="false">
+            <cl:formdata std:sid="f-data-f2c0e232" row="9" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-38e11868" class="text-center" value="●">
+            <cl:formdata std:sid="f-data-ac3b180c" row="9" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-85456389" class="text-center" value="-1">
+            <cl:formdata std:sid="f-data-779e15c9" row="9" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-8cc39764" value="탭 아이템 간 간격">
+            <cl:formdata std:sid="f-data-76a61de2" row="9" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-ed9ce565" class="pb-label" value="preferredItemWidth" unselectable="false">
+            <cl:formdata std:sid="f-data-f2f8f561" row="10" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-557a39c7" class="text-center" value="●">
+            <cl:formdata std:sid="f-data-b58cb834" row="10" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-349f55c9" class="text-center" value="160">
+            <cl:formdata std:sid="f-data-28e0ef69" row="10" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-5d248255" value="itemSizing 속성을 &quot;auto&quot;로 사용하므로 해당 속성을 적용하지 않음. 만약 특수한 경우에 해당하는 탭에서 itemSizing 속성을 &quot;fixed&quot;로 변경하는 경우 해당 속성을 반드시 확인해야 함">
+            <cl:formdata std:sid="f-data-04582784" row="10" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-88441164" class="pb-label" value="showCloseOnlyActive" unselectable="false">
+            <cl:formdata std:sid="f-data-d0316c2c" row="11" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-e657a8ee" class="text-center" value="○">
+            <cl:formdata std:sid="f-data-15efead5" row="11" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-e663137d" class="text-center" value="false">
+            <cl:formdata std:sid="f-data-ab60aa80" row="11" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-2e1e543e" value="일반적인 탭에서는 &quot;closable=false&quot;를 적용하나, MDI폴더 같은 경우에는 닫기 버튼을 표시할 수 있음. 그러나 모든 탭 아이템을 닫을 수 있도록 표시하기 때문에 해당 속성은 사용하지 않음">
+            <cl:formdata std:sid="f-data-a68784c7" row="11" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-16382fbb" class="pb-label" value="tooltip" unselectable="false">
+            <cl:formdata std:sid="f-data-614165d4" row="12" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-97ab53e3" class="text-center" value="△">
+            <cl:formdata std:sid="f-data-1c2e7796" row="12" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-5ffc2ed7" class="text-center" value="(컨트롤의 힌트)">
+            <cl:formdata std:sid="f-data-4f296eb4" row="12" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-ab56ca87" value="마우스 오버 시 인풋박스에 대한 힌트 제공 필요할 때 사용. 해당 속성을 작성하면 title 속성으로 적용됨">
+            <cl:formdata std:sid="f-data-d04b392a" row="12" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-0a705df6" class="pb-label" value="useItemTextEllipsis" unselectable="false">
+            <cl:formdata std:sid="f-data-72bea59b" row="13" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-ee842493" class="text-center" value="○">
+            <cl:formdata std:sid="f-data-e1a02d07" row="13" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-12e0957e" class="text-center" value="false">
+            <cl:formdata std:sid="f-data-f6cd31e8" row="13" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-3c2470b3" value="탭 아이템의 텍스트를 모두 표시할 수 있도록 말줄임 표시를 하지 않음">
+            <cl:formdata std:sid="f-data-41d7fa1d" row="13" col="3"/>
+          </cl:output>
+          <cl:formlayout std:sid="f-layout-a8d12b64" scrollable="false" hspace="8px" vspace="8px" top-margin="4px" right-margin="4px" bottom-margin="4px" left-margin="4px" hseparatorwidth="1" hseparatortype="BY_CLASS" vseparatorwidth="1" vseparatortype="BY_CLASS">
+            <cl:rows length="28" unit="PIXEL" autoSizing="false" hidden="false" shadetype="BY_CLASS" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="150" unit="PIXEL" autoSizing="false" hidden="false" shadetype="BY_CLASS" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="60" unit="PIXEL" autoSizing="false" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="220" unit="PIXEL" autoSizing="false" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-c1dfc9fb" scrollable="false" spacing="14"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-a1c44b73" scrollable="false" spacing="40" leftmargin="50" rightmargin="50" topmargin="50" bottommargin="50"/>
+    </cl:group>
+    <cl:group std:sid="group-7cb234c2" class="pb-content">
+      <cl:verticaldata std:sid="v-data-233da52a" width="1644px" height="1059px" autosize="height"/>
+      <cl:group std:sid="group-f6178776">
+        <cl:verticaldata std:sid="v-data-49f0c3b4" width="1544px" height="978px" autosize="height"/>
+        <cl:udc std:sid="ud-control-117da149" id="sectiontitle1" type="udc.hk.pb.SectionTitle">
+          <cl:verticaldata std:sid="v-data-d8325add" width="1544px" height="29px" autosize="none"/>
+          <cl:property name="title" value="클래스" type="string"/>
+        </cl:udc>
+        <cl:group std:sid="group-918ea678" class="pb-table">
+          <cl:verticaldata std:sid="v-data-93783db2" width="400px" height="870px" autosize="height"/>
+          <cl:output std:sid="output-a1971fb5" class="pb-label" value="클래스명">
+            <cl:formdata std:sid="f-data-c17a0936" row="0" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-a24898b0" class="pb-label" value="적용">
+            <cl:formdata std:sid="f-data-ea1720c0" row="0" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-504b5f91" class="pb-label" value="내용">
+            <cl:formdata std:sid="f-data-23d7b0b4" row="0" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-d9261d77" class="pb-label" value="use-closable">
+            <cl:formdata std:sid="f-data-fe4580ae" row="1" col="0"/>
+          </cl:output>
+          <cl:tabfolder std:sid="t-folder-d46dab8a" class="use-closable">
+            <cl:formdata std:sid="f-data-29973024" row="1" col="1"/>
+            <cl:tabitem std:sid="t-item-4d3a0add" selected="true" text="아이템" closable="true">
+              <std:metadata>
+                <std:property key="is-active-item" value="true"/>
+              </std:metadata>
+              <cl:group std:sid="group-0b8fe847" class="tab-area">
+                <std:metadata>
+                  <std:property key="locked" value="true"/>
+                </std:metadata>
+                <cl:verticallayout std:sid="v-layout-82a2f22e" spacing="12" leftmargin="10" rightmargin="10" topmargin="10" bottommargin="10"/>
+              </cl:group>
+            </cl:tabitem>
+            <cl:tabitem std:sid="t-item-35927baa" text="아이템" closable="true">
+              <cl:group std:sid="group-f9d7efc9" class="tab-area">
+                <std:metadata>
+                  <std:property key="locked" value="true"/>
+                </std:metadata>
+                <cl:verticallayout std:sid="v-layout-4c70c2c9" spacing="12" leftmargin="10" rightmargin="10" topmargin="10" bottommargin="10"/>
+              </cl:group>
+            </cl:tabitem>
+            <cl:tabitem std:sid="t-item-ab43cece" text="아이템" closable="true">
+              <cl:group std:sid="group-33e0cc50" class="tab-area">
+                <std:metadata>
+                  <std:property key="locked" value="true"/>
+                </std:metadata>
+                <cl:verticallayout std:sid="v-layout-65700df2" spacing="12" leftmargin="10" rightmargin="10" topmargin="10" bottommargin="10"/>
+              </cl:group>
+            </cl:tabitem>
+          </cl:tabfolder>
+          <cl:output std:sid="output-7bc89a93" value="탭 아이템에 닫기 버튼을 사용하는 경우 텍스트의 중앙 정렬을 맞추기 위해 적용하는 클래스">
+            <cl:formdata std:sid="f-data-865f3b82" row="1" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-95e055c8" class="pb-label" value="btn-tab-trailing">
+            <cl:formdata std:sid="f-data-46fb1880" row="2" col="0"/>
+          </cl:output>
+          <cl:tabfolder std:sid="t-folder-f15d4bc9" class="use-closable">
+            <cl:formdata std:sid="f-data-edeef501" row="2" col="1"/>
+            <cl:tabitem std:sid="t-item-44fcfc8c" selected="true" text="아이템" closable="true">
+              <cl:group std:sid="group-7aa9f8cd" class="tab-area">
+                <std:metadata>
+                  <std:property key="locked" value="true"/>
+                </std:metadata>
+                <cl:verticallayout std:sid="v-layout-64ccaf57" spacing="12" leftmargin="10" rightmargin="10" topmargin="10" bottommargin="10"/>
+              </cl:group>
+            </cl:tabitem>
+            <cl:tabitem std:sid="t-item-9549cdeb" text="아이템" closable="true">
+              <std:metadata>
+                <std:property key="is-active-item" value="true"/>
+              </std:metadata>
+              <cl:group std:sid="group-dc6efdbe" class="tab-area">
+                <std:metadata>
+                  <std:property key="locked" value="true"/>
+                </std:metadata>
+                <cl:verticallayout std:sid="v-layout-77e352d5" spacing="12" leftmargin="10" rightmargin="10" topmargin="10" bottommargin="10"/>
+              </cl:group>
+            </cl:tabitem>
+            <cl:group std:sid="group-76e6f8ff">
+              <cl:headercontroldata std:sid="thc-data-8e5e0b75" width="160" position="trailing"/>
+              <cl:button std:sid="button-5bea55f4" class="btn-tab-trailing" value="추가">
+                <cl:xylayoutdata std:sid="xyl-data-1d5d2407" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+              </cl:button>
+              <cl:xylayout std:sid="xylayout-94f2522c" scrollable="false"/>
+            </cl:group>
+          </cl:tabfolder>
+          <cl:output std:sid="output-37e887ef" value="해당 컨트롤은 버튼에 적용하는 클래스로, 탭 헤더의 컨트롤 중 &quot;trailing&quot; 으로 아이템을 추가하는 버튼을 사용하는 경우 다음과 같이 적용함">
+            <cl:formdata std:sid="f-data-aa74d902" row="2" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-0aba7536" class="pb-label" value="button-table-top-area">
+            <cl:formdata std:sid="f-data-26e9a09b" row="3" col="0"/>
+          </cl:output>
+          <cl:tabfolder std:sid="t-folder-57f6a2c5">
+            <cl:formdata std:sid="f-data-2bea3844" row="3" col="1"/>
+            <cl:tabitem std:sid="t-item-da8a57f4" selected="true" text="아이템" closable="true">
+              <std:metadata>
+                <std:property key="is-active-item" value="true"/>
+              </std:metadata>
+              <cl:group std:sid="group-d44f0289" class="tab-area">
+                <std:metadata>
+                  <std:property key="locked" value="true"/>
+                </std:metadata>
+                <cl:verticallayout std:sid="v-layout-17f94889" spacing="12" leftmargin="10" rightmargin="10" topmargin="10" bottommargin="10"/>
+              </cl:group>
+            </cl:tabitem>
+            <cl:tabitem std:sid="t-item-db6c6093" text="아이템" closable="true">
+              <cl:group std:sid="group-63b76035" class="tab-area">
+                <std:metadata>
+                  <std:property key="locked" value="true"/>
+                </std:metadata>
+                <cl:verticallayout std:sid="v-layout-19e02306" spacing="12" leftmargin="10" rightmargin="10" topmargin="10" bottommargin="10"/>
+              </cl:group>
+            </cl:tabitem>
+            <cl:tabitem std:sid="t-item-092031af" text="아이템" closable="true">
+              <cl:group std:sid="group-9d2382d6" class="tab-area">
+                <std:metadata>
+                  <std:property key="locked" value="true"/>
+                </std:metadata>
+                <cl:verticallayout std:sid="v-layout-026a787b" spacing="12" leftmargin="10" rightmargin="10" topmargin="10" bottommargin="10"/>
+              </cl:group>
+            </cl:tabitem>
+            <cl:group std:sid="group-f27409dc" class="button-table-top-area">
+              <cl:headercontroldata std:sid="thc-data-f5b634dd" width="91" position="right"/>
+              <cl:button std:sid="button-974d334f" class="btn-primary04" value="버튼">
+                <cl:flowlayoutdata std:sid="f-data-dd04382f" width="43px" height="26px" autosize="width"/>
+              </cl:button>
+              <cl:button std:sid="button-15b92a51" class="btn-primary04" value="버튼">
+                <cl:flowlayoutdata std:sid="f-data-4e8135f6" width="43px" height="26px" autosize="width"/>
+              </cl:button>
+              <cl:flowlayout std:sid="f-layout-57cf186b" scrollable="false" hspacing="5" vspacing="0" halign="right" linewrap="false" topmargin="10"/>
+            </cl:group>
+          </cl:tabfolder>
+          <cl:output std:sid="output-765a99bc" value="해당 컨트롤은 버튼이 배치되는 그룹 영역에 적용하는 클래스로, 탭 헤더의 컨트롤 중 &quot;right&quot;로 추가되는 영역에 적용. 해당 영역의 너비는 버튼이 모두 표시될 수 있는 크기로 설정해야 한다.&#xA;&#xA;플로우 레이아웃&#xA;- margin : 10px 0px 0px 0px&#xA;- horizontalAlign : right&#xA;- horizontalSpacing : 5&#xA;- verticalSpacing : 0&#xA;- lineWrap : false&#xA;- scrollable : false">
+            <cl:formdata std:sid="f-data-bcdfdfc1" row="3" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-c2f05b3a" class="pb-label" value="has-detail">
+            <cl:formdata std:sid="f-data-bb6e4a24" row="4" col="0"/>
+          </cl:output>
+          <cl:tabfolder std:sid="t-folder-d04dc6bb" item-displayexp="text + sstr(&quot;\n보험료 : 34,520원&quot;, [&quot;caption&quot;])" preferred-item-width="238">
+            <cl:formdata std:sid="f-data-f0a51861" row="4" col="1"/>
+            <cl:tabitem std:sid="t-item-74db6e1f" selected="true" text="가설(설계번호)" closable="true">
+              <std:metadata>
+                <std:property key="is-active-item" value="true"/>
+              </std:metadata>
+              <cl:group std:sid="group-28c68c6a">
+                <std:metadata>
+                  <std:property key="locked" value="true"/>
+                </std:metadata>
+                <cl:xylayout std:sid="xylayout-081c30dc"/>
+              </cl:group>
+            </cl:tabitem>
+            <cl:tabitem std:sid="t-item-1125ae94" text="가설(설계번호)" closable="true">
+              <cl:group std:sid="group-abd618f7">
+                <std:metadata>
+                  <std:property key="locked" value="true"/>
+                </std:metadata>
+                <cl:xylayout std:sid="xylayout-11f0c003"/>
+              </cl:group>
+            </cl:tabitem>
+            <cl:group std:sid="group-5c94fd9f">
+              <cl:headercontroldata std:sid="thc-data-a1139e3b" width="64" position="right"/>
+              <cl:button std:sid="button-f75ba212" class="btn-secondary01" value="가설복사">
+                <cl:flowlayoutdata std:sid="f-data-a5ad42da" width="64px" height="61px"/>
+              </cl:button>
+              <cl:flowlayout std:sid="f-layout-b7301776" scrollable="false" hspacing="5" vspacing="0" halign="right" linewrap="false"/>
+            </cl:group>
+            <cl:header-style class="has-detail"/>
+          </cl:tabfolder>
+          <cl:output std:sid="output-6d9159fb" value="해당 클래스는 탭 폴더의 헤더 스타일러에 적용하며, preferredItemWidth=238로 설정. 디테일 내용은 itemDisplayExp 속성을 사용하여 추가하며, 복잡한 로직이 필요한 경우 앱 함수 또는 공통 함수를 통해 StyledString을 추가하세요.">
+            <cl:formdata std:sid="f-data-144e4c22" row="4" col="2"/>
+          </cl:output>
+          <cl:formlayout std:sid="f-layout-4cd845f8" scrollable="false" hspace="8px" vspace="8px" top-margin="4px" right-margin="4px" bottom-margin="4px" left-margin="4px" hseparatorwidth="1" hseparatortype="BY_CLASS" vseparatorwidth="1" vseparatortype="BY_CLASS">
+            <cl:rows length="28" unit="PIXEL" autoSizing="false" hidden="false" shadetype="BY_CLASS" shadecolor="#000000" minlength="0"/>
+            <cl:rows length="200" unit="PIXEL"/>
+            <cl:rows length="200" unit="PIXEL"/>
+            <cl:rows length="200" unit="PIXEL"/>
+            <cl:rows length="200" unit="PIXEL"/>
+            <cl:columns length="150" unit="PIXEL" autoSizing="false" hidden="false" shadetype="BY_CLASS" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="600" unit="PIXEL" autoSizing="false" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-d3967e57" scrollable="false" spacing="14"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-8604e0b0" scrollable="false" spacing="40" leftmargin="50" rightmargin="50" topmargin="50" bottommargin="50"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-b07ef184" spacing="14"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>
