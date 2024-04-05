@@ -23,14 +23,14 @@
         </cl:datacolumnlist>
         <cl:datarowlist>
           <cl:datarow>
-            <cl:datavalue columnname="column1"><![CDATA[20150327103045724]]></cl:datavalue>
+            <cl:datavalue columnname="column1"><![CDATA[20240327103045724]]></cl:datavalue>
             <cl:datavalue columnname="column2"><![CDATA[2424561]]></cl:datavalue>
             <cl:datavalue columnname="column3"><![CDATA[P04569]]></cl:datavalue>
-            <cl:datavalue columnname="column4"><![CDATA[(무)베스트유니버셜종신보험]]></cl:datavalue>
+            <cl:datavalue columnname="column4"><![CDATA[	(무)흥국생명 실손의료비보험(갱신형)]]></cl:datavalue>
             <cl:datavalue columnname="column5"><![CDATA[신상품해약환급금 테스트]]></cl:datavalue>
             <cl:datavalue columnname="column6"><![CDATA[N]]></cl:datavalue>
             <cl:datavalue columnname="column7"><![CDATA[N]]></cl:datavalue>
-            <cl:datavalue columnname="column8"><![CDATA[20150327]]></cl:datavalue>
+            <cl:datavalue columnname="column8"><![CDATA[20240327]]></cl:datavalue>
             <cl:datavalue columnname="column9"><![CDATA[홍수아]]></cl:datavalue>
           </cl:datarow>
         </cl:datarowlist>
@@ -61,13 +61,13 @@
           </cl:output>
           <cl:group std:sid="group-2478137a" id="grp9" class="form-inside">
             <cl:formdata std:sid="f-data-e598f638" row="0" col="1"/>
-            <cl:dateinput std:sid="d-input-7688709d" id="dti4" value="20150327">
+            <cl:dateinput std:sid="d-input-7688709d" id="dti4" value="20240327">
               <cl:formdata std:sid="f-data-707e9992" row="0" col="0"/>
             </cl:dateinput>
             <cl:output std:sid="output-be6108f0" class="text-center" value="-">
               <cl:formdata std:sid="f-data-6250141e" row="0" col="1"/>
             </cl:output>
-            <cl:dateinput std:sid="d-input-f17d9d5d" id="dti5" value="20150327">
+            <cl:dateinput std:sid="d-input-f17d9d5d" id="dti5" value="20240327">
               <cl:formdata std:sid="f-data-cabadc21" row="0" col="2"/>
             </cl:dateinput>
             <cl:formlayout std:sid="f-layout-19945f5d" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
@@ -116,7 +116,7 @@
             <cl:searchinput std:sid="s-input-11d3471a" value="10001044433">
               <cl:formdata std:sid="f-data-b0bc246a" row="0" col="0"/>
             </cl:searchinput>
-            <cl:inputbox std:sid="i-box-0b4d10db" id="ipb2" value="홍길동">
+            <cl:inputbox std:sid="i-box-0b4d10db" id="ipb2" value="김흥국">
               <cl:formdata std:sid="f-data-ac0d0ef6" row="0" col="1"/>
             </cl:inputbox>
             <cl:button std:sid="button-e482163a" id="btn6" class="btn-primary04 btn-md" value="계산내역조회">
@@ -174,8 +174,8 @@
               <cl:gridcell std:sid="gh-cell-7e8c85a5" rowindex="0" colindex="2" targetcolumnname="column2" sortable="false" filterable="false" text="계약번호"/>
               <cl:gridcell std:sid="gh-cell-6e93bd75" rowindex="0" colindex="3" targetcolumnname="column3" sortable="false" filterable="false" text="상품코드"/>
               <cl:gridcell std:sid="gh-cell-91b02077" rowindex="0" colindex="4" targetcolumnname="column4" sortable="false" filterable="false" text="상품명"/>
-              <cl:gridcell std:sid="gh-cell-a786eceb" rowindex="0" colindex="5" targetcolumnname="column5" sortable="false" filterable="false" text="계약상세설명"/>
-              <cl:gridcell std:sid="gh-cell-32dc2179" rowindex="0" colindex="6" rowspan="1" colspan="2" targetcolumnname="column6" sortable="false" filterable="false" text="파일등록"/>
+              <cl:gridcell std:sid="gh-cell-a786eceb" rowindex="0" colindex="5" style="border-top-width:3px; border-left-style:dashed; border-left-color:red; border-top-color:red; border-left-width:3px; border-top-style:dashed;" targetcolumnname="column5" sortable="false" filterable="false" text="계약상세설명"/>
+              <cl:gridcell std:sid="gh-cell-32dc2179" rowindex="0" colindex="6" rowspan="1" colspan="2" style="border-right-style:dashed; border-top-width:3px; border-right-width:3px; border-top-color:red; border-right-color:red; border-top-style:dashed;" targetcolumnname="column6" sortable="false" filterable="false" text="파일등록"/>
               <cl:gridcell std:sid="gh-cell-87565248" rowindex="0" colindex="8" rowspan="1" colspan="2" targetcolumnname="column7" sortable="false" filterable="false" text="테스트항목"/>
               <cl:gridcell std:sid="gh-cell-b4d2a55c" rowindex="0" colindex="10" targetcolumnname="column8" sortable="false" filterable="false" text="처리일자"/>
               <cl:gridcell std:sid="gh-cell-ceb65593" rowindex="0" colindex="11" targetcolumnname="column9" sortable="false" filterable="false" text="처리자"/>
@@ -203,12 +203,12 @@
                   <cl:celldata std:sid="c-data-8edede73"/>
                 </cl:output>
               </cl:gridcell>
-              <cl:gridcell std:sid="gd-cell-c82913b0" rowindex="0" colindex="5" columnname="column5">
+              <cl:gridcell std:sid="gd-cell-c82913b0" rowindex="0" colindex="5" style="border-bottom-color:red; border-left-style:dashed; border-bottom-width:3px; border-left-color:red; border-bottom-style:dashed; border-left-width:3px;" columnname="column5">
                 <cl:inputbox std:sid="i-box-031c6b86" id="ipb4">
                   <cl:celldata std:sid="c-data-6d0f9f0c"/>
                 </cl:inputbox>
               </cl:gridcell>
-              <cl:gridcell std:sid="gd-cell-ddf8df03" rowindex="0" colindex="7" columnname="column6">
+              <cl:gridcell std:sid="gd-cell-ddf8df03" rowindex="0" colindex="7" style="border-right-style:dashed; border-bottom-color:red; border-right-width:3px; border-bottom-width:3px; border-bottom-style:dashed; border-right-color:red;" columnname="column6">
                 <cl:output std:sid="output-210594d0" class="text-center">
                   <cl:celldata std:sid="c-data-38d74e68"/>
                 </cl:output>
@@ -233,7 +233,7 @@
                   <cl:celldata std:sid="c-data-8f868380"/>
                 </cl:button>
               </cl:gridcell>
-              <cl:gridcell std:sid="gd-cell-4d3d2f09" rowindex="0" colindex="6">
+              <cl:gridcell std:sid="gd-cell-4d3d2f09" rowindex="0" colindex="6" style="border-bottom-color:red; border-bottom-width:3px; border-bottom-style:dashed;">
                 <cl:button std:sid="button-5bab883e" id="btn8" class="btn-primary04" value="등록">
                   <cl:celldata std:sid="c-data-aa47f74e"/>
                 </cl:button>
@@ -304,32 +304,32 @@
               <cl:gridcell std:sid="gd-cell-75e4e275" rowindex="0" colindex="0" columntype="checkbox"/>
               <cl:gridcell std:sid="gd-cell-483afc68" rowindex="0" colindex="1" columnname="column1">
                 <cl:output std:sid="output-b6936b9a">
-                  <cl:celldata/>
+                  <cl:celldata std:sid="c-data-218654ab"/>
                 </cl:output>
               </cl:gridcell>
               <cl:gridcell std:sid="gd-cell-31d09bb6" rowindex="0" colindex="2" columnname="column2">
                 <cl:output std:sid="output-b8403cee">
-                  <cl:celldata/>
+                  <cl:celldata std:sid="c-data-08b032d1"/>
                 </cl:output>
               </cl:gridcell>
               <cl:gridcell std:sid="gd-cell-06346f77" rowindex="0" colindex="3" columnname="column3">
                 <cl:output std:sid="output-540e7031">
-                  <cl:celldata/>
+                  <cl:celldata std:sid="c-data-aed19779"/>
                 </cl:output>
               </cl:gridcell>
               <cl:gridcell std:sid="gd-cell-56ec1116" rowindex="0" colindex="4" columnname="column4">
                 <cl:output std:sid="output-999d0784">
-                  <cl:celldata/>
+                  <cl:celldata std:sid="c-data-15e2179f"/>
                 </cl:output>
               </cl:gridcell>
               <cl:gridcell std:sid="gd-cell-3232ab43" rowindex="0" colindex="5" columnname="column5">
                 <cl:output std:sid="output-768a9c5f">
-                  <cl:celldata/>
+                  <cl:celldata std:sid="c-data-488a3e07"/>
                 </cl:output>
               </cl:gridcell>
               <cl:gridcell std:sid="gd-cell-ee44732f" rowindex="0" colindex="6" columnname="column6">
                 <cl:output std:sid="output-49a9cf66">
-                  <cl:celldata/>
+                  <cl:celldata std:sid="c-data-8f105e21"/>
                 </cl:output>
               </cl:gridcell>
             </cl:griddetail>

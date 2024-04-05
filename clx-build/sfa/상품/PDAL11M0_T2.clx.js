@@ -33,7 +33,7 @@
 					{"name": "column8"},
 					{"name": "column9"}
 				],
-				"rows": [{"column1": "20150327103045724", "column2": "2424561", "column3": "P04569", "column4": "(무)베스트유니버셜종신보험", "column5": "신상품해약환급금 테스트", "column6": "N", "column7": "N", "column8": "20150327", "column9": "홍수아"}]
+				"rows": [{"column1": "20240327103045724", "column2": "2424561", "column3": "P04569", "column4": "\t(무)흥국생명 실손의료비보험(갱신형)", "column5": "신상품해약환급금 테스트", "column6": "N", "column7": "N", "column8": "20240327", "column9": "홍수아"}]
 			});
 			app.register(dataSet_1);
 			
@@ -125,7 +125,7 @@
 						group_4.setLayout(formLayout_2);
 						(function(container){
 							var dateInput_1 = new cpr.controls.DateInput("dti4");
-							dateInput_1.value = "20150327";
+							dateInput_1.value = "20240327";
 							container.addChild(dateInput_1, {
 								"colIndex": 0,
 								"rowIndex": 0
@@ -138,7 +138,7 @@
 								"rowIndex": 0
 							});
 							var dateInput_2 = new cpr.controls.DateInput("dti5");
-							dateInput_2.value = "20150327";
+							dateInput_2.value = "20240327";
 							container.addChild(dateInput_2, {
 								"colIndex": 2,
 								"rowIndex": 0
@@ -246,7 +246,7 @@
 								"rowIndex": 0
 							});
 							var inputBox_3 = new cpr.controls.InputBox("ipb2");
-							inputBox_3.value = "홍길동";
+							inputBox_3.value = "김흥국";
 							container.addChild(inputBox_3, {
 								"colIndex": 1,
 								"rowIndex": 0
@@ -383,6 +383,14 @@
 											cell.sortable = false;
 											cell.targetColumnName = "column5";
 											cell.text = "계약상세설명";
+											cell.style.css({
+												"border-top-width" : "3px",
+												"border-left-style" : "dashed",
+												"border-left-color" : "red",
+												"border-top-color" : "red",
+												"border-left-width" : "3px",
+												"border-top-style" : "dashed"
+											});
 										}
 									},
 									{
@@ -392,6 +400,14 @@
 											cell.sortable = false;
 											cell.targetColumnName = "column6";
 											cell.text = "파일등록";
+											cell.style.css({
+												"border-right-style" : "dashed",
+												"border-top-width" : "3px",
+												"border-right-width" : "3px",
+												"border-top-color" : "red",
+												"border-right-color" : "red",
+												"border-top-style" : "dashed"
+											});
 										}
 									},
 									{
@@ -487,6 +503,14 @@
 										"constraint": {"rowIndex": 0, "colIndex": 5},
 										"configurator": function(cell){
 											cell.columnName = "column5";
+											cell.style.css({
+												"border-bottom-color" : "red",
+												"border-left-style" : "dashed",
+												"border-bottom-width" : "3px",
+												"border-left-color" : "red",
+												"border-bottom-style" : "dashed",
+												"border-left-width" : "3px"
+											});
 											cell.control = (function(){
 												var inputBox_4 = new cpr.controls.InputBox("ipb4");
 												inputBox_4.bind("value").toDataColumn("column5");
@@ -499,6 +523,17 @@
 										"constraint": {"rowIndex": 0, "colIndex": 7},
 										"configurator": function(cell){
 											cell.columnName = "column6";
+											cell.style.css({
+												"border-right-style" : "dashed",
+												"border-top-width" : "3px",
+												"border-bottom-color" : "red",
+												"border-right-width" : "3px",
+												"border-bottom-width" : "3px",
+												"border-top-color" : "red",
+												"border-bottom-style" : "dashed",
+												"border-right-color" : "red",
+												"border-top-style" : "dashed"
+											});
 											cell.control = (function(){
 												var output_12 = new cpr.controls.Output();
 												output_12.style.setClasses(["text-center"]);
@@ -564,6 +599,11 @@
 									{
 										"constraint": {"rowIndex": 0, "colIndex": 6},
 										"configurator": function(cell){
+											cell.style.css({
+												"border-bottom-color" : "red",
+												"border-bottom-width" : "3px",
+												"border-bottom-style" : "dashed"
+											});
 											cell.control = (function(){
 												var button_3 = new cpr.controls.Button("btn8");
 												button_3.value = "등록";
@@ -799,6 +839,7 @@
 												output_16.bind("value").toDataColumn("column1");
 												return output_16;
 											})();
+											cell.controlConstraint = {};
 										}
 									},
 									{
@@ -810,6 +851,7 @@
 												output_17.bind("value").toDataColumn("column2");
 												return output_17;
 											})();
+											cell.controlConstraint = {};
 										}
 									},
 									{
@@ -821,6 +863,7 @@
 												output_18.bind("value").toDataColumn("column3");
 												return output_18;
 											})();
+											cell.controlConstraint = {};
 										}
 									},
 									{
@@ -832,6 +875,7 @@
 												output_19.bind("value").toDataColumn("column4");
 												return output_19;
 											})();
+											cell.controlConstraint = {};
 										}
 									},
 									{
@@ -843,6 +887,7 @@
 												output_20.bind("value").toDataColumn("column5");
 												return output_20;
 											})();
+											cell.controlConstraint = {};
 										}
 									},
 									{
@@ -854,6 +899,7 @@
 												output_21.bind("value").toDataColumn("column6");
 												return output_21;
 											})();
+											cell.controlConstraint = {};
 										}
 									}
 								]

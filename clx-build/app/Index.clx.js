@@ -169,9 +169,9 @@
 					{"name": "appId"}
 				],
 				"rows": [
-					{"label": "계약변경", "value": "value0", "parent": "", "appId": ""},
-					{"label": "심사메인", "value": "uw001", "parent": "value0", "appId": "app/240228/UW001.clx"},
-					{"label": "SFA시연화면", "value": "value1", "parent": "", "appId": ""},
+					{"label": "샘플화면", "value": "value0", "parent": "", "appId": ""},
+					{"label": "그리드 샘플페이지", "value": "샘플페이지", "parent": "value0", "appId": "sample/샘플페이지.clx"},
+					{"label": "시연화면", "value": "value1", "parent": "", "appId": ""},
 					{"label": "상품", "value": "value2", "parent": "value1", "appId": ""},
 					{"label": "보험료/준비급 조회", "value": "보험료+준비급 조회", "parent": "value2", "appId": "sfa/상품/보험료+준비급 조회.clx"},
 					{"label": "계산상세내역조회", "value": "PDAL11M0", "parent": "value2", "appId": "sfa/상품/PDAL11M0.clx"},
@@ -207,9 +207,7 @@
 					{"label": "신계약/UW", "value": "value4", "parent": "value1", "appId": ""},
 					{"label": "가입설계", "value": "PPB100M0", "parent": "value4", "appId": "sfa/신계약+UW/PPB100M0.clx"},
 					{"label": "청약입력및전송", "value": "PPC100M0", "parent": "value4", "appId": "sfa/신계약+UW/PPC100M0.clx"},
-					{"label": "RT계좌일괄입력", "value": "NBBR10M0", "parent": "value4", "appId": "sfa/신계약+UW/NBBR10M0.clx"},
-					{"label": "샘플 화면", "value": "value9", "parent": "", "appId": ""},
-					{"label": "그리드 샘플페이지", "value": "샘플페이지", "parent": "value9", "appId": "sample/샘플페이지.clx"}
+					{"label": "RT계좌일괄입력", "value": "NBBR10M0", "parent": "value4", "appId": "sfa/신계약+UW/NBBR10M0.clx"}
 				]
 			});
 			app.register(dataSet_1);

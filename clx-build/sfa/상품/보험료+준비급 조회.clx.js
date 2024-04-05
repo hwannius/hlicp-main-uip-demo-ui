@@ -19,22 +19,21 @@
 			 ************************************************/
 
 			/*
-			 * "이전" 버튼에서 click 이벤트 발생 시 호출.
+			 * "뒤로" 버튼에서 click 이벤트 발생 시 호출.
 			 * 사용자가 컨트롤을 클릭할 때 발생하는 이벤트.
 			 */
 			function onButtonClick(e){
 				var button = e.control;
 				
-				//화면이동(현재 화면에서 리로드)
 				var host = app.getHost(); // 부모 임베디드 앱
 				cpr.core.App.load("sfa/상품/PDAL11M0", function(loadedApp) {
-				    if (loadedApp) {
-				        host.app = loadedApp;
-				        host.initValue = {
-				            "param": "param"
-				        }
-				    }
-				});
+			    if (loadedApp) {
+			        host.app = loadedApp;
+			        host.initValue = {
+			            "param": "param"
+			        }
+			    }
+			});
 			}
 
 			/*
@@ -44,6 +43,15 @@
 			function onButtonClick2(e){
 				var button = e.control;
 				
+				var host = app.getHost(); // 부모 임베디드 앱
+				cpr.core.App.load("sfa/상품/PDAL11M0", function(loadedApp) {
+			    if (loadedApp) {
+			        host.app = loadedApp;
+			        host.initValue = {
+			            "param": "param"
+			        }
+			    }
+			});	
 			};
 			// End - User Script
 			
@@ -52,9 +60,21 @@
 			dataSet_1.parseData({
 				"columns": [
 					{"name": "column1"},
-					{"name": "column2"},
-					{"name": "column3"},
-					{"name": "column4"},
+					{
+						"name": "column2",
+						"dataType": "string",
+						"displayOnly": false,
+						"info": ""
+					},
+					{
+						"name": "column3",
+						"dataType": "string",
+						"displayOnly": false
+					},
+					{
+						"name": "column4",
+						"dataType": "string"
+					},
 					{"name": "column5"},
 					{"name": "column6"},
 					{"name": "column7"},
@@ -78,16 +98,16 @@
 					{"name": "column25"}
 				],
 				"rows": [
-					{"column1": "I15153", "column2": "20년만기", "column3": "월납", "column4": "10년납", "column5": "15", "column6": "0", "column7": "0", "column8": "0", "column9": "비위험", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "1", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0"},
-					{"column1": "I15153", "column2": "60세만기", "column3": "월납", "column4": "10년납", "column5": "15", "column6": "0", "column7": "0", "column8": "0", "column9": "비위험", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "1", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0"},
-					{"column1": "I15153", "column2": "80세만기", "column3": "월납", "column4": "전기납", "column5": "15", "column6": "0", "column7": "0", "column8": "0", "column9": "비위험", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "1", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0"},
-					{"column1": "I15153", "column2": "20년만기", "column3": "월납", "column4": "20년납", "column5": "15", "column6": "0", "column7": "0", "column8": "0", "column9": "비위험", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "1", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0"},
-					{"column1": "I15153", "column2": "20년만기", "column3": "월납", "column4": "10년납", "column5": "15", "column6": "0", "column7": "0", "column8": "0", "column9": "비위험", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "1", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0"},
-					{"column1": "I15153", "column2": "80세만기", "column3": "월납", "column4": "20년납", "column5": "15", "column6": "0", "column7": "0", "column8": "0", "column9": "비위험", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "1", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0"},
-					{"column1": "I15153", "column2": "20년만기", "column3": "월납", "column4": "전기납", "column5": "15", "column6": "0", "column7": "0", "column8": "0", "column9": "비위험", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "1", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0"},
-					{"column1": "I15153", "column2": "60세만기", "column3": "월납", "column4": "전기납", "column5": "15", "column6": "0", "column7": "0", "column8": "0", "column9": "비위험", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "1", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0"},
-					{"column1": "I15153", "column2": "20년만기", "column3": "월납", "column4": "10년납", "column5": "15", "column6": "0", "column7": "0", "column8": "0", "column9": "비위험", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "1", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0"},
-					{"column1": "I15153", "column2": "60세만기", "column3": "월납", "column4": "20년납", "column5": "15", "column6": "0", "column7": "0", "column8": "0", "column9": "비위험", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "1", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0"}
+					{"column1": "I15153", "column3": "월납", "column4": "10년납", "column5": "45", "column6": "45", "column7": "A", "column8": "3", "column9": "비위험", "column10": "1978", "column11": "1", "column12": "5", "column13": "B", "column14": "E", "column15": "여", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0", "column2": "1년만기"},
+					{"column1": "I15153", "column3": "연납", "column4": "전기납", "column5": "45", "column6": "45", "column7": "A", "column8": "3", "column9": "위험", "column10": "1978", "column11": "1", "column12": "10", "column13": "B", "column14": "E", "column15": "여", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0", "column2": "5년만기"},
+					{"column1": "I15153", "column3": "월납", "column4": "5년납", "column5": "45", "column6": "45", "column7": "A", "column8": "3", "column9": "위험", "column10": "1978", "column11": "1", "column12": "10", "column13": "B", "column14": "E", "column15": "여", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0", "column2": "5년만기"},
+					{"column1": "I15153", "column3": "월납", "column4": "5년납", "column5": "45", "column6": "45", "column7": "A", "column8": "3", "column9": "비위험", "column10": "1978", "column11": "1", "column12": "10", "column13": "B", "column14": "E", "column15": "여", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0", "column2": "1년만기"},
+					{"column1": "I15153", "column3": "월납", "column4": "20년납", "column5": "45", "column6": "45", "column7": "A", "column8": "3", "column9": "비위험", "column10": "1978", "column11": "1", "column12": "8", "column13": "B", "column14": "E", "column15": "여", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0", "column2": "1년만기"},
+					{"column1": "I15153", "column3": "월납", "column4": "5년납", "column5": "45", "column6": "45", "column7": "A", "column8": "3", "column9": "비위험", "column10": "1978", "column11": "1", "column12": "25", "column13": "B", "column14": "E", "column15": "여", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0", "column2": "20년만기"},
+					{"column1": "I15153", "column3": "연납", "column4": "10년납", "column5": "45", "column6": "45", "column7": "A", "column8": "3", "column9": "비위험", "column10": "1978", "column11": "1", "column12": "45", "column13": "B", "column14": "E", "column15": "여", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0", "column2": "20년만기"},
+					{"column1": "I15153", "column3": "연납", "column4": "5년납", "column5": "45", "column6": "45", "column7": "A", "column8": "3", "column9": "비위험", "column10": "1978", "column11": "1", "column12": "10", "column13": "B", "column14": "E", "column15": "여", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0", "column2": "20년만기"},
+					{"column1": "I15153", "column3": "월납", "column4": "10년납", "column5": "45", "column6": "45", "column7": "A", "column8": "3", "column9": "비위험", "column10": "1978", "column11": "1", "column12": "3", "column13": "B", "column14": "E", "column15": "여", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0", "column2": "5년만기"},
+					{"column1": "I15153", "column3": "월납", "column4": "10년납", "column5": "45", "column6": "45", "column7": "A", "column8": "3", "column9": "비위험", "column10": "1978", "column11": "1", "column12": "1", "column13": "B", "column14": "E", "column15": "여", "column16": "0", "column17": "6770", "column18": "582", "column19": "5847", "column20": "0", "column21": "6838", "column22": "0", "column23": "0", "column24": "0", "column25": "0", "column2": "5년만기"}
 				]
 			});
 			app.register(dataSet_1);
@@ -129,7 +149,7 @@
 			group_1.setLayout(formLayout_1);
 			(function(container){
 				var output_1 = new cpr.controls.Output("optTitle");
-				output_1.value = "보험료+준비급 조회";
+				output_1.value = "보험료+준비금 조회";
 				output_1.style.setClasses(["navi-left"]);
 				container.addChild(output_1, {
 					"colIndex": 0,
@@ -216,9 +236,7 @@
 						output_2.style.setClasses(["label"]);
 						container.addChild(output_2, {
 							"colIndex": 0,
-							"rowIndex": 0,
-							"colSpan": 1,
-							"rowSpan": 1
+							"rowIndex": 0
 						});
 						var searchInput_1 = new cpr.controls.SearchInput();
 						searchInput_1.value = "15153";
@@ -564,7 +582,7 @@
 						});
 						var inputBox_5 = new cpr.controls.InputBox("ipb5");
 						inputBox_5.enabled = false;
-						inputBox_5.value = "(무)KDB스마트어린이보험2종 Dream형";
+						inputBox_5.value = "\t(무)흥국생명 온라인정기보험";
 						container.addChild(inputBox_5, {
 							"colIndex": 3,
 							"rowIndex": 0
@@ -617,21 +635,25 @@
 				group_9.setLayout(verticalLayout_5);
 				(function(container){
 					var tabFolder_1 = new cpr.controls.TabFolder();
+					var group_10 = new cpr.controls.Container();
+					var responsiveXYLayout_1 = new cpr.controls.layouts.ResponsiveXYLayout();
+					group_10.setLayout(responsiveXYLayout_1);
+					tabFolder_1.addHeaderControl(group_10, {"position": "heading", "width": 14});
 					
 					var tabItem_1 = (function(tabFolder){
 						var tabItem_1 = new cpr.controls.TabItem();
 						tabItem_1.text = "보험료";
-						var group_10 = new cpr.controls.Container("grp8");
-						group_10.style.setClasses(["tab-area"]);
+						var group_11 = new cpr.controls.Container("grp8");
+						group_11.style.setClasses(["tab-area"]);
 						var verticalLayout_6 = new cpr.controls.layouts.VerticalLayout();
 						verticalLayout_6.spacing = 12;
-						group_10.setLayout(verticalLayout_6);
+						group_11.setLayout(verticalLayout_6);
 						(function(container){
-							var group_11 = new cpr.controls.Container("grp17");
-							group_11.style.setClasses(["grid-box", "box-spacing-free"]);
+							var group_12 = new cpr.controls.Container("grp17");
+							group_12.style.setClasses(["grid-box", "box-spacing-free"]);
 							var verticalLayout_7 = new cpr.controls.layouts.VerticalLayout();
 							verticalLayout_7.spacing = 8;
-							group_11.setLayout(verticalLayout_7);
+							group_12.setLayout(verticalLayout_7);
 							(function(container){
 								var grid_1 = new cpr.controls.Grid("grd2");
 								grid_1.readOnly = true;
@@ -679,6 +701,20 @@
 													cell.sortable = false;
 													cell.targetColumnName = "column1";
 													cell.text = "요율코드";
+													cell.style.css({
+														"border-right-style" : "dashed",
+														"border-top-width" : "3px",
+														"border-bottom-color" : "red",
+														"border-left-style" : "dashed",
+														"border-right-width" : "3px",
+														"border-bottom-width" : "3px",
+														"border-left-color" : "red",
+														"border-top-color" : "red",
+														"border-bottom-style" : "dashed",
+														"border-right-color" : "red",
+														"border-left-width" : "3px",
+														"border-top-style" : "dashed"
+													});
 												}
 											},
 											{
@@ -951,8 +987,7 @@
 													cell.control = (function(){
 														var output_24 = new cpr.controls.Output();
 														output_24.value = "0";
-														output_24.dataType = "number";
-														output_24.format = "s#,##0";
+														output_24.dataType = "string";
 														output_24.style.setClasses(["text-right"]);
 														output_24.bind("value").toDataColumn("column2");
 														return output_24;
@@ -967,8 +1002,7 @@
 													cell.control = (function(){
 														var output_25 = new cpr.controls.Output();
 														output_25.value = "0";
-														output_25.dataType = "number";
-														output_25.format = "s#,##0";
+														output_25.dataType = "string";
 														output_25.style.setClasses(["text-right"]);
 														output_25.bind("value").toDataColumn("column3");
 														return output_25;
@@ -983,8 +1017,7 @@
 													cell.control = (function(){
 														var output_26 = new cpr.controls.Output();
 														output_26.value = "0";
-														output_26.dataType = "number";
-														output_26.format = "s#,##0";
+														output_26.dataType = "string";
 														output_26.style.setClasses(["text-right"]);
 														output_26.bind("value").toDataColumn("column4");
 														return output_26;
@@ -999,8 +1032,7 @@
 													cell.control = (function(){
 														var output_27 = new cpr.controls.Output();
 														output_27.value = "0";
-														output_27.dataType = "number";
-														output_27.format = "s#,##0";
+														output_27.dataType = "string";
 														output_27.style.setClasses(["text-right"]);
 														output_27.bind("value").toDataColumn("column5");
 														return output_27;
@@ -1015,8 +1047,7 @@
 													cell.control = (function(){
 														var output_28 = new cpr.controls.Output();
 														output_28.value = "0";
-														output_28.dataType = "number";
-														output_28.format = "s#,##0";
+														output_28.dataType = "string";
 														output_28.style.setClasses(["text-right"]);
 														output_28.bind("value").toDataColumn("column6");
 														return output_28;
@@ -1031,8 +1062,7 @@
 													cell.control = (function(){
 														var output_29 = new cpr.controls.Output();
 														output_29.value = "0";
-														output_29.dataType = "number";
-														output_29.format = "s#,##0";
+														output_29.dataType = "string";
 														output_29.style.setClasses(["text-right"]);
 														output_29.bind("value").toDataColumn("column7");
 														return output_29;
@@ -1047,8 +1077,7 @@
 													cell.control = (function(){
 														var output_30 = new cpr.controls.Output();
 														output_30.value = "0";
-														output_30.dataType = "number";
-														output_30.format = "s#,##0";
+														output_30.dataType = "string";
 														output_30.style.setClasses(["text-right"]);
 														output_30.bind("value").toDataColumn("column8");
 														return output_30;
@@ -1063,8 +1092,7 @@
 													cell.control = (function(){
 														var output_31 = new cpr.controls.Output();
 														output_31.value = "0";
-														output_31.dataType = "number";
-														output_31.format = "s#,##0";
+														output_31.dataType = "string";
 														output_31.style.setClasses(["text-right"]);
 														output_31.bind("value").toDataColumn("column9");
 														return output_31;
@@ -1079,8 +1107,7 @@
 													cell.control = (function(){
 														var output_32 = new cpr.controls.Output();
 														output_32.value = "0";
-														output_32.dataType = "number";
-														output_32.format = "s#,##0";
+														output_32.dataType = "string";
 														output_32.style.setClasses(["text-right"]);
 														output_32.bind("value").toDataColumn("column10");
 														return output_32;
@@ -1095,8 +1122,7 @@
 													cell.control = (function(){
 														var output_33 = new cpr.controls.Output();
 														output_33.value = "0";
-														output_33.dataType = "number";
-														output_33.format = "s#,##0";
+														output_33.dataType = "string";
 														output_33.style.setClasses(["text-right"]);
 														output_33.bind("value").toDataColumn("column11");
 														return output_33;
@@ -1111,8 +1137,7 @@
 													cell.control = (function(){
 														var output_34 = new cpr.controls.Output();
 														output_34.value = "0";
-														output_34.dataType = "number";
-														output_34.format = "s#,##0";
+														output_34.dataType = "string";
 														output_34.style.setClasses(["text-right"]);
 														output_34.bind("value").toDataColumn("column12");
 														return output_34;
@@ -1127,8 +1152,7 @@
 													cell.control = (function(){
 														var output_35 = new cpr.controls.Output();
 														output_35.value = "0";
-														output_35.dataType = "number";
-														output_35.format = "s#,##0";
+														output_35.dataType = "string";
 														output_35.style.setClasses(["text-right"]);
 														output_35.bind("value").toDataColumn("column13");
 														return output_35;
@@ -1143,8 +1167,7 @@
 													cell.control = (function(){
 														var output_36 = new cpr.controls.Output();
 														output_36.value = "0";
-														output_36.dataType = "number";
-														output_36.format = "s#,##0";
+														output_36.dataType = "string";
 														output_36.style.setClasses(["text-right"]);
 														output_36.bind("value").toDataColumn("column14");
 														return output_36;
@@ -1158,7 +1181,9 @@
 													cell.columnName = "column15";
 													cell.control = (function(){
 														var output_37 = new cpr.controls.Output();
-														output_37.style.setClasses(["text-center"]);
+														output_37.value = "0";
+														output_37.dataType = "string";
+														output_37.style.setClasses(["text-right"]);
 														output_37.bind("value").toDataColumn("column15");
 														return output_37;
 													})();
@@ -1172,8 +1197,7 @@
 													cell.control = (function(){
 														var output_38 = new cpr.controls.Output();
 														output_38.value = "0";
-														output_38.dataType = "number";
-														output_38.format = "s#,##0";
+														output_38.dataType = "string";
 														output_38.style.setClasses(["text-right"]);
 														output_38.bind("value").toDataColumn("column16");
 														return output_38;
@@ -1188,8 +1212,7 @@
 													cell.control = (function(){
 														var output_39 = new cpr.controls.Output();
 														output_39.value = "0";
-														output_39.dataType = "number";
-														output_39.format = "s#,##0";
+														output_39.dataType = "string";
 														output_39.style.setClasses(["text-right"]);
 														output_39.bind("value").toDataColumn("column17");
 														return output_39;
@@ -1204,8 +1227,7 @@
 													cell.control = (function(){
 														var output_40 = new cpr.controls.Output();
 														output_40.value = "0";
-														output_40.dataType = "number";
-														output_40.format = "s#,##0";
+														output_40.dataType = "string";
 														output_40.style.setClasses(["text-right"]);
 														output_40.bind("value").toDataColumn("column18");
 														return output_40;
@@ -1220,8 +1242,7 @@
 													cell.control = (function(){
 														var output_41 = new cpr.controls.Output();
 														output_41.value = "0";
-														output_41.dataType = "number";
-														output_41.format = "s#,##0";
+														output_41.dataType = "string";
 														output_41.style.setClasses(["text-right"]);
 														output_41.bind("value").toDataColumn("column19");
 														return output_41;
@@ -1236,8 +1257,7 @@
 													cell.control = (function(){
 														var output_42 = new cpr.controls.Output();
 														output_42.value = "0";
-														output_42.dataType = "number";
-														output_42.format = "s#,##0";
+														output_42.dataType = "string";
 														output_42.style.setClasses(["text-right"]);
 														output_42.bind("value").toDataColumn("column20");
 														return output_42;
@@ -1252,8 +1272,7 @@
 													cell.control = (function(){
 														var output_43 = new cpr.controls.Output();
 														output_43.value = "0";
-														output_43.dataType = "number";
-														output_43.format = "s#,##0";
+														output_43.dataType = "string";
 														output_43.style.setClasses(["text-right"]);
 														output_43.bind("value").toDataColumn("column21");
 														return output_43;
@@ -1268,8 +1287,7 @@
 													cell.control = (function(){
 														var output_44 = new cpr.controls.Output();
 														output_44.value = "0";
-														output_44.dataType = "number";
-														output_44.format = "s#,##0";
+														output_44.dataType = "string";
 														output_44.style.setClasses(["text-right"]);
 														output_44.bind("value").toDataColumn("column22");
 														return output_44;
@@ -1284,8 +1302,7 @@
 													cell.control = (function(){
 														var output_45 = new cpr.controls.Output();
 														output_45.value = "0";
-														output_45.dataType = "number";
-														output_45.format = "s#,##0";
+														output_45.dataType = "string";
 														output_45.style.setClasses(["text-right"]);
 														output_45.bind("value").toDataColumn("column23");
 														return output_45;
@@ -1300,8 +1317,7 @@
 													cell.control = (function(){
 														var output_46 = new cpr.controls.Output();
 														output_46.value = "0";
-														output_46.dataType = "number";
-														output_46.format = "s#,##0";
+														output_46.dataType = "string";
 														output_46.style.setClasses(["text-right"]);
 														output_46.bind("value").toDataColumn("column24");
 														return output_46;
@@ -1334,14 +1350,14 @@
 									"width": "1558px",
 									"height": "498px"
 								});
-							})(group_11);
-							container.addChild(group_11, {
+							})(group_12);
+							container.addChild(group_12, {
 								"autoSize": "height",
 								"width": "1538px",
 								"height": "503px"
 							});
-						})(group_10);
-						tabItem_1.content = group_10;
+						})(group_11);
+						tabItem_1.content = group_11;
 						return tabItem_1;
 					})(tabFolder_1);
 					tabFolder_1.addTabItem(tabItem_1);
@@ -1349,11 +1365,11 @@
 					var tabItem_2 = (function(tabFolder){
 						var tabItem_2 = new cpr.controls.TabItem();
 						tabItem_2.text = "준비금";
-						var group_12 = new cpr.controls.Container("grp16");
-						group_12.style.setClasses(["tab-area"]);
+						var group_13 = new cpr.controls.Container("grp16");
+						group_13.style.setClasses(["tab-area"]);
 						var verticalLayout_8 = new cpr.controls.layouts.VerticalLayout();
 						verticalLayout_8.spacing = 12;
-						group_12.setLayout(verticalLayout_8);
+						group_13.setLayout(verticalLayout_8);
 						(function(container){
 							var embeddedApp_1 = new cpr.controls.EmbeddedApp("ea1");
 							container.addChild(embeddedApp_1, {
@@ -1361,8 +1377,8 @@
 								"width": "320px",
 								"height": "504px"
 							});
-						})(group_12);
-						tabItem_2.content = group_12;
+						})(group_13);
+						tabItem_2.content = group_13;
 						return tabItem_2;
 					})(tabFolder_1);
 					tabFolder_1.addTabItem(tabItem_2);
@@ -1372,8 +1388,8 @@
 						"width": "767px",
 						"height": "565px"
 					});
-					var group_13 = new cpr.controls.Container("grp1");
-					group_13.style.setClasses(["button-table-area"]);
+					var group_14 = new cpr.controls.Container("grp1");
+					group_14.style.setClasses(["button-table-area"]);
 					var formLayout_4 = new cpr.controls.layouts.FormLayout();
 					formLayout_4.scrollable = false;
 					formLayout_4.topMargin = "0px";
@@ -1385,41 +1401,41 @@
 					formLayout_4.setColumns(["1fr", "43px", "1fr"]);
 					formLayout_4.setColumnAutoSizing(1, true);
 					formLayout_4.setRows(["1fr"]);
-					group_13.setLayout(formLayout_4);
+					group_14.setLayout(formLayout_4);
 					(function(container){
-						var group_14 = new cpr.controls.Container("grp3");
-						group_14.style.setClasses(["button-table-bottom-left-area"]);
+						var group_15 = new cpr.controls.Container("grp3");
+						group_15.style.setClasses(["button-table-bottom-left-area"]);
 						var flowLayout_3 = new cpr.controls.layouts.FlowLayout();
 						flowLayout_3.scrollable = false;
 						flowLayout_3.horizontalSpacing = 10;
 						flowLayout_3.verticalSpacing = 0;
 						flowLayout_3.lineWrap = false;
-						group_14.setLayout(flowLayout_3);
-						container.addChild(group_14, {
+						group_15.setLayout(flowLayout_3);
+						container.addChild(group_15, {
 							"colIndex": 0,
 							"rowIndex": 0
 						});
-						var group_15 = new cpr.controls.Container("grp4");
-						group_15.style.setClasses(["button-table-bottom-center-area"]);
+						var group_16 = new cpr.controls.Container("grp4");
+						group_16.style.setClasses(["button-table-bottom-center-area"]);
 						var flowLayout_4 = new cpr.controls.layouts.FlowLayout();
 						flowLayout_4.scrollable = false;
 						flowLayout_4.horizontalSpacing = 10;
 						flowLayout_4.verticalSpacing = 0;
 						flowLayout_4.horizontalAlign = "center";
-						group_15.setLayout(flowLayout_4);
-						container.addChild(group_15, {
+						group_16.setLayout(flowLayout_4);
+						container.addChild(group_16, {
 							"colIndex": 1,
 							"rowIndex": 0
 						});
-						var group_16 = new cpr.controls.Container("grp5");
-						group_16.style.setClasses(["button-table-bottom-right-area"]);
+						var group_17 = new cpr.controls.Container("grp5");
+						group_17.style.setClasses(["button-table-bottom-right-area"]);
 						var flowLayout_5 = new cpr.controls.layouts.FlowLayout();
 						flowLayout_5.scrollable = false;
 						flowLayout_5.horizontalSpacing = 10;
 						flowLayout_5.verticalSpacing = 0;
 						flowLayout_5.horizontalAlign = "right";
 						flowLayout_5.lineWrap = false;
-						group_16.setLayout(flowLayout_5);
+						group_17.setLayout(flowLayout_5);
 						(function(container){
 							var button_6 = new cpr.controls.Button("btn4");
 							button_6.value = "다음";
@@ -1429,13 +1445,13 @@
 								"width": "60px",
 								"height": "30px"
 							});
-						})(group_16);
-						container.addChild(group_16, {
+						})(group_17);
+						container.addChild(group_17, {
 							"colIndex": 2,
 							"rowIndex": 0
 						});
-					})(group_13);
-					container.addChild(group_13, {
+					})(group_14);
+					container.addChild(group_14, {
 						"autoSize": "height",
 						"width": "1560px",
 						"height": "30px"

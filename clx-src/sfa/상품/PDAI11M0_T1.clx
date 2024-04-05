@@ -25,11 +25,11 @@
           <cl:datarow>
             <cl:datavalue columnname="column1">I70293</cl:datavalue>
             <cl:datavalue columnname="column2">I70293</cl:datavalue>
-            <cl:datavalue columnname="column3">(무)실손의료비특약 Ⅱ 표준형 질병입원형</cl:datavalue>
+            <cl:datavalue columnname="column3"><![CDATA[(무)흥국생명 프리미엄드림저축보험]]></cl:datavalue>
             <cl:datavalue columnname="column4">I70293</cl:datavalue>
             <cl:datavalue columnname="column5">1</cl:datavalue>
-            <cl:datavalue columnname="column6">20140401</cl:datavalue>
-            <cl:datavalue columnname="column7">201503131</cl:datavalue>
+            <cl:datavalue columnname="column6"><![CDATA[20240501]]></cl:datavalue>
+            <cl:datavalue columnname="column7"><![CDATA[202603131]]></cl:datavalue>
             <cl:datavalue columnname="column8">0.0374</cl:datavalue>
             <cl:datavalue columnname="column9">-</cl:datavalue>
           </cl:datarow>
@@ -52,8 +52,8 @@
             <cl:datavalue columnname="column1">I70293</cl:datavalue>
             <cl:datavalue columnname="column2">2</cl:datavalue>
             <cl:datavalue columnname="column3">I70405</cl:datavalue>
-            <cl:datavalue columnname="column4">(무)손실의료비특약 Ⅱ 질병입원형</cl:datavalue>
-            <cl:datavalue columnname="column5">20150401</cl:datavalue>
+            <cl:datavalue columnname="column4"><![CDATA[(무)흥국생명 프리미엄드림저축보험]]></cl:datavalue>
+            <cl:datavalue columnname="column5"><![CDATA[20240101]]></cl:datavalue>
             <cl:datavalue columnname="column6">99991231</cl:datavalue>
             <cl:datavalue columnname="column7">1</cl:datavalue>
             <cl:datavalue columnname="column8">0.035</cl:datavalue>
@@ -63,19 +63,19 @@
             <cl:datavalue columnname="column1">I70293</cl:datavalue>
             <cl:datavalue columnname="column2">2</cl:datavalue>
             <cl:datavalue columnname="column3">I70405</cl:datavalue>
-            <cl:datavalue columnname="column4">(무)손실의료비특약 Ⅱ 질병입원형</cl:datavalue>
-            <cl:datavalue columnname="column5">20150401</cl:datavalue>
+            <cl:datavalue columnname="column4"><![CDATA[	(무)흥국생명 OK연금보험]]></cl:datavalue>
+            <cl:datavalue columnname="column5"><![CDATA[20240401]]></cl:datavalue>
             <cl:datavalue columnname="column6">99991231</cl:datavalue>
             <cl:datavalue columnname="column7">1</cl:datavalue>
-            <cl:datavalue columnname="column8">0.035</cl:datavalue>
-            <cl:datavalue columnname="column9">0.0325</cl:datavalue>
+            <cl:datavalue columnname="column8"><![CDATA[0.0375]]></cl:datavalue>
+            <cl:datavalue columnname="column9"><![CDATA[조건규칙적용]]></cl:datavalue>
           </cl:datarow>
           <cl:datarow>
             <cl:datavalue columnname="column1">I70293</cl:datavalue>
             <cl:datavalue columnname="column2">2</cl:datavalue>
             <cl:datavalue columnname="column3">I70405</cl:datavalue>
-            <cl:datavalue columnname="column4">(무)손실의료비특약 Ⅱ 질병입원형</cl:datavalue>
-            <cl:datavalue columnname="column5">20150401</cl:datavalue>
+            <cl:datavalue columnname="column4"><![CDATA[	연금저축 흥국생명 체인지UP연금보험]]></cl:datavalue>
+            <cl:datavalue columnname="column5"><![CDATA[20230531]]></cl:datavalue>
             <cl:datavalue columnname="column6">99991231</cl:datavalue>
             <cl:datavalue columnname="column7">1</cl:datavalue>
             <cl:datavalue columnname="column8">0.035</cl:datavalue>
@@ -102,7 +102,7 @@
           <cl:output std:sid="output-e8041a8c" class="label" value="보험명">
             <cl:formdata std:sid="f-data-df4120c7" row="0" col="2"/>
           </cl:output>
-          <cl:inputbox std:sid="i-box-d3a573a4" id="ipb1" value="(무)실손의료비특약 Ⅱ 표준형 질병입원형">
+          <cl:inputbox std:sid="i-box-d3a573a4" id="ipb1" value="(무)흥국생명 OK연금보험">
             <cl:formdata std:sid="f-data-f8b9300d" row="0" col="3"/>
           </cl:inputbox>
           <cl:group std:sid="group-267e4d47" class="btn-flow-area">
@@ -234,13 +234,13 @@
               <cl:button std:sid="button-238cdc7d" class="btn-primary04" value="조회">
                 <cl:flowlayoutdata std:sid="f-data-e74ab539" width="43px" height="26px" autosize="width"/>
               </cl:button>
-              <cl:button std:sid="button-9d6e6f6a" class="btn-secondary01" value="회차생성">
+              <cl:button std:sid="button-9d6e6f6a" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" class="btn-secondary01" value="회차생성">
                 <cl:flowlayoutdata std:sid="f-data-71363a18" width="63px" height="26px" autosize="width"/>
               </cl:button>
               <cl:button std:sid="button-eea93301" class="btn-secondary01" value="마지막회차삭제">
                 <cl:flowlayoutdata std:sid="f-data-0450adce" width="93px" height="26px" autosize="width"/>
               </cl:button>
-              <cl:button std:sid="button-3c253f10" class="btn-primary03" value="저장">
+              <cl:button std:sid="button-3c253f10" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" class="btn-primary03" value="저장">
                 <cl:flowlayoutdata std:sid="f-data-8ee09f70" width="43px" height="26px" autosize="width"/>
               </cl:button>
               <cl:flowlayout std:sid="f-layout-96a78bd7" scrollable="false" hspacing="5" vspacing="5" halign="right" linewrap="false"/>
@@ -295,8 +295,8 @@
               <cl:gridcell std:sid="gh-cell-eaae0258" rowindex="0" colindex="1" rowspan="2" colspan="1" targetcolumnname="column2" sortable="false" filterable="false" text="SEQ"/>
               <cl:gridcell std:sid="gh-cell-8ab920fc" rowindex="0" colindex="2" rowspan="2" colspan="1" targetcolumnname="column3" sortable="false" filterable="false" text="요율코드"/>
               <cl:gridcell std:sid="gh-cell-444dfb01" rowindex="0" colindex="3" rowspan="2" colspan="1" targetcolumnname="column4" sortable="false" filterable="false" text="보험명"/>
-              <cl:gridcell std:sid="gh-cell-a5586612" rowindex="1" colindex="4" targetcolumnname="column5" sortable="false" filterable="false" text="유효개시일자"/>
-              <cl:gridcell std:sid="gh-cell-4e7ea6d6" rowindex="1" colindex="5" targetcolumnname="column6" sortable="false" filterable="false" text="유효종료일자"/>
+              <cl:gridcell std:sid="gh-cell-a5586612" rowindex="1" colindex="4" style="border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-left-width:3px; border-top-style:dashed;" targetcolumnname="column5" sortable="false" filterable="false" text="유효개시일자"/>
+              <cl:gridcell std:sid="gh-cell-4e7ea6d6" rowindex="1" colindex="5" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-right-width:3px; border-bottom-width:3px; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-top-style:dashed;" targetcolumnname="column6" sortable="false" filterable="false" text="유효종료일자"/>
               <cl:gridcell std:sid="gh-cell-773e85e3" rowindex="1" colindex="6" targetcolumnname="column7" sortable="false" filterable="false" text="갱신회차"/>
               <cl:gridcell std:sid="gh-cell-a79e08c1" rowindex="1" colindex="7" targetcolumnname="column8" sortable="false" filterable="false" text="예정(적용)이율"/>
               <cl:gridcell std:sid="gh-cell-e3cdb2be" rowindex="1" colindex="8" targetcolumnname="column9" sortable="false" filterable="false" text="표준이율"/>

@@ -16,7 +16,43 @@
 			 * Created at 2024. 4. 1. 오후 1:01:27.
 			 *
 			 * @author User
-			 ************************************************/;
+			 ************************************************/
+
+			/*
+			 * "이전" 버튼에서 click 이벤트 발생 시 호출.
+			 * 사용자가 컨트롤을 클릭할 때 발생하는 이벤트.
+			 */
+			function onButtonClick(e){
+				var button = e.control;
+				
+				var host = app.getHost(); // 부모 임베디드 앱
+				cpr.core.App.load("sfa/상품/보험료+준비급 조회", function(loadedApp) {
+			    if (loadedApp) {
+			        host.app = loadedApp;
+			        host.initValue = {
+			            "param": "param"
+			        }
+			    }
+			});
+			}
+
+			/*
+			 * "다음" 버튼에서 click 이벤트 발생 시 호출.
+			 * 사용자가 컨트롤을 클릭할 때 발생하는 이벤트.
+			 */
+			function onButtonClick2(e){
+				var button = e.control;
+
+				var host = app.getHost(); // 부모 임베디드 앱
+				cpr.core.App.load("sfa/상품/PDAL01M0", function(loadedApp) {
+			    if (loadedApp) {
+			        host.app = loadedApp;
+			        host.initValue = {
+			            "param": "param"
+			        }
+			    }
+			});	
+			};
 			// End - User Script
 			
 			// Header
@@ -38,9 +74,9 @@
 					{"name": "column13"}
 				],
 				"rows": [
-					{"column1": "I04569", "column2": "(무)베스트유니버셜종신보험(우량체-월납)", "column3": "피보험자", "column4": "홍길동", "column5": "20240101", "column6": "여자", "column7": "59", "column8": "Y", "column9": "100123456", "column10": "40000000", "column11": "145699", "column12": "20091214", "column13": "99991214"},
-					{"column1": "I04569", "column2": "(무)베스트유니버셜종신보험(우량체-월납)", "column3": "피보험자", "column4": "홍길동", "column5": "20240101", "column6": "여자", "column7": "59", "column8": "Y", "column9": "100123456", "column10": "40000000", "column11": "145699", "column12": "20091214", "column13": "99991214"},
-					{"column1": "I04569", "column2": "(무)베스트유니버셜종신보험(우량체-월납)", "column3": "피보험자", "column4": "홍길동", "column5": "20240101", "column6": "여자", "column7": "59", "column8": "Y", "column9": "100123456", "column10": "40000000", "column11": "145699", "column12": "20091214", "column13": "99991214"}
+					{"column1": "I04569", "column2": "(무)흥국생명 온라인연금저축보험", "column3": "피보험자", "column4": "김흥국", "column5": "19780404", "column6": "남자", "column7": "45", "column8": "Y", "column9": "100123456", "column10": "40000000", "column11": "145699", "column12": "20091214", "column13": "99991214"},
+					{"column1": "I04569", "column2": "연금저축 흥국생명 체인지UP연금보험", "column3": "피보험자", "column4": "김흥국", "column5": "19780404", "column6": "남자", "column7": "45", "column8": "Y", "column9": "100123456", "column10": "30000000", "column11": "115499", "column12": "20091214", "column13": "99991214"},
+					{"column1": "I04569", "column2": "(무)흥국생명 OK연금보험", "column3": "피보험자", "column4": "김흥국", "column5": "19780404", "column6": "남자", "column7": "45", "column8": "Y", "column9": "100123456", "column10": "55000000", "column11": "159984", "column12": "20091214", "column13": "99991214"}
 				]
 			});
 			app.register(dataSet_1);
@@ -68,10 +104,10 @@
 					{"name": "column18"}
 				],
 				"rows": [
-					{"column1": "I04569", "column2": "I04569", "column3": "999", "column4": "12", "column5": "15", "column6": "59", "column7": "0", "column8": "00", "column9": "0", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "0", "column16": "2", "column17": "0", "column18": "0"},
-					{"column1": "I04569", "column2": "I04569", "column3": "999", "column4": "12", "column5": "15", "column6": "59", "column7": "0", "column8": "00", "column9": "0", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "0", "column16": "2", "column17": "0", "column18": "0"},
-					{"column1": "I04569", "column2": "I04569", "column3": "999", "column4": "12", "column5": "15", "column6": "59", "column7": "0", "column8": "00", "column9": "0", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "0", "column16": "2", "column17": "0", "column18": "0"},
-					{"column1": "I04569", "column2": "I04569", "column3": "999", "column4": "12", "column5": "15", "column6": "59", "column7": "0", "column8": "00", "column9": "0", "column10": "0", "column11": "0", "column12": "0", "column13": "0", "column14": "0", "column15": "0", "column16": "2", "column17": "0", "column18": "0"}
+					{"column1": "I04569", "column2": "I04569", "column3": "30년", "column4": "월납", "column5": "10년납", "column6": "59", "column7": "0", "column8": "00", "column9": "0", "column10": "위험", "column11": "22", "column12": "0", "column13": "2", "column14": "D", "column15": "B", "column16": "남", "column17": "1736", "column18": "2015"},
+					{"column1": "I09878", "column2": "I09878", "column3": "10년", "column4": "월납", "column5": "전기납", "column6": "59", "column7": "0", "column8": "00", "column9": "0", "column10": "비위험", "column11": "18", "column12": "0", "column13": "6", "column14": "D", "column15": "B", "column16": "남", "column17": "299", "column18": "359"},
+					{"column1": "I09882", "column2": "I09882", "column3": "20년", "column4": "월납", "column5": "전기납", "column6": "59", "column7": "0", "column8": "00", "column9": "0", "column10": "비위험", "column11": "22", "column12": "0", "column13": "2", "column14": "D", "column15": "B", "column16": "남", "column17": "1988", "column18": "2320"},
+					{"column1": "I09887", "column2": "I09887", "column3": "20년", "column4": "월납", "column5": "10년납", "column6": "59", "column7": "0", "column8": "00", "column9": "0", "column10": "비위험", "column11": "23", "column12": "0", "column13": "1", "column14": "D", "column15": "B", "column16": "남", "column17": "0", "column18": "0"}
 				]
 			});
 			app.register(dataSet_2);
@@ -96,11 +132,11 @@
 					{"name": "column15"}
 				],
 				"rows": [
-					{"column1": "I04569", "column2": "I04569", "column3": "999", "column4": "12", "column5": "15", "column6": "59", "column7": "0", "column8": "00", "column9": "0", "column10": "0", "column11": "0", "column12": "0", "column14": "0", "column15": "0", "column19": "(무)베스트유니버셜종신보험(우량체-월납)"},
-					{"column1": "I04569", "column2": "I04569", "column3": "999", "column4": "12", "column5": "15", "column6": "59", "column7": "0", "column8": "00", "column9": "0", "column10": "0", "column11": "0", "column12": "0", "column14": "0", "column15": "0", "column19": "(무)베스트유니버셜종신보험(우량체-월납)"},
-					{"column1": "I04569", "column2": "I04569", "column3": "999", "column4": "12", "column5": "15", "column6": "59", "column7": "0", "column8": "00", "column9": "0", "column10": "0", "column11": "0", "column12": "0", "column14": "0", "column15": "0", "column19": "(무)베스트유니버셜종신보험(우량체-월납)"},
-					{"column1": "I04569", "column19": "(무)베스트유니버셜종신보험(우량체-월납)", "column2": "I04569", "column3": "999", "column4": "12", "column5": "15", "column6": "59", "column7": "0", "column8": "00", "column9": "0", "column11": "0", "column12": "0", "column10": "0", "column14": "0", "column15": "0"},
-					{"column1": "I04569", "column2": "I04569", "column3": "999", "column4": "12", "column5": "15", "column6": "59", "column7": "0", "column8": "00", "column9": "0", "column10": "0", "column11": "0", "column12": "0", "column14": "0", "column15": "0", "column19": "(무)베스트유니버셜종신보험(우량체-월납)"}
+					{"column1": "I04789", "column2": "I04789", "column3": "5년", "column4": "월납", "column5": "10년납", "column6": "59", "column7": "59", "column8": "TEF", "column9": "3", "column10": "위험", "column11": "66", "column12": "1", "column14": "B", "column15": "D", "column19": "\t(무)흥국생명 실손의료비보험(갱신형)"},
+					{"column1": "I04654", "column2": "I04654", "column3": "10년", "column4": "월납", "column5": "10년납", "column6": "59", "column7": "59", "column8": "TEF", "column9": "3", "column10": "위험", "column11": "66", "column12": "1", "column14": "B", "column15": "D", "column19": "(무)흥국생명다(多)사랑OK355간편건강보험"},
+					{"column1": "I02254", "column2": "I02254", "column3": "8년", "column4": "월납", "column5": "10년납", "column6": "59", "column7": "59", "column8": "TEF", "column9": "3", "column10": "비위험", "column11": "66", "column12": "1", "column14": "B", "column15": "D", "column19": "\t(무)흥국생명다(多)사랑OK335간편건강보험"},
+					{"column1": "I09585", "column19": "\t(무)흥국생명 헬린이보장보험", "column2": "I09585", "column3": "20년", "column4": "월납", "column5": "10년납", "column6": "59", "column7": "59", "column8": "TEF", "column9": "3", "column11": "66", "column12": "1", "column10": "비위험", "column14": "B", "column15": "D"},
+					{"column1": "I05464", "column2": "I05464", "column3": "5년", "column4": "월납", "column5": "10년납", "column6": "59", "column7": "59", "column8": "TEF", "column9": "3", "column10": "비위험", "column11": "66", "column12": "1", "column14": "B", "column15": "D", "column19": "\t(무)흥국생명 더블페이암보험V2"}
 				]
 			});
 			app.register(dataSet_3);
@@ -159,44 +195,27 @@
 				flowLayout_1.lineWrap = false;
 				group_2.setLayout(flowLayout_1);
 				(function(container){
-					var output_2 = new cpr.controls.Output();
-					output_2.value = "";
-					output_2.style.setClasses(["home"]);
-					container.addChild(output_2, {
-						"width": "20px",
-						"height": "20px"
-					});
-					var output_3 = new cpr.controls.Output();
-					output_3.value = "1Depth";
-					output_3.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_3, {
+					var button_1 = new cpr.controls.Button();
+					button_1.value = "이전";
+					button_1.style.setClasses(["btn-primary04", "btn-md"]);
+					if(typeof onButtonClick == "function") {
+						button_1.addEventListener("click", onButtonClick);
+					}
+					container.addChild(button_1, {
 						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
+						"width": "49px",
+						"height": "26px"
 					});
-					var output_4 = new cpr.controls.Output();
-					output_4.value = "2Depth";
-					output_4.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_4, {
+					var button_2 = new cpr.controls.Button();
+					button_2.value = "다음";
+					button_2.style.setClasses(["btn-primary04", "btn-md"]);
+					if(typeof onButtonClick2 == "function") {
+						button_2.addEventListener("click", onButtonClick2);
+					}
+					container.addChild(button_2, {
 						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
-					});
-					var output_5 = new cpr.controls.Output();
-					output_5.value = "3Depth";
-					output_5.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_5, {
-						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
-					});
-					var output_6 = new cpr.controls.Output();
-					output_6.value = "4Depth";
-					output_6.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_6, {
-						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
+						"width": "49px",
+						"height": "26px"
 					});
 				})(group_2);
 				container.addChild(group_2, {
@@ -239,10 +258,10 @@
 					formLayout_2.setRows(["26px"]);
 					group_5.setLayout(formLayout_2);
 					(function(container){
-						var output_7 = new cpr.controls.Output();
-						output_7.value = "계약번호";
-						output_7.style.setClasses(["label", "required"]);
-						container.addChild(output_7, {
+						var output_2 = new cpr.controls.Output();
+						output_2.value = "계약번호";
+						output_2.style.setClasses(["label", "required"]);
+						container.addChild(output_2, {
 							"colIndex": 0,
 							"rowIndex": 0
 						});
@@ -262,14 +281,28 @@
 						(function(container){
 							var inputBox_1 = new cpr.controls.InputBox("ipb1");
 							inputBox_1.value = "24212345678";
+							inputBox_1.style.css({
+								"border-right-style" : "dashed",
+								"border-top-width" : "3px",
+								"border-bottom-color" : "red",
+								"border-left-style" : "dashed",
+								"border-right-width" : "3px",
+								"border-bottom-width" : "3px",
+								"border-left-color" : "red",
+								"border-top-color" : "red",
+								"border-bottom-style" : "dashed",
+								"border-right-color" : "red",
+								"border-left-width" : "3px",
+								"border-top-style" : "dashed"
+							});
 							container.addChild(inputBox_1, {
 								"colIndex": 0,
 								"rowIndex": 0
 							});
-							var button_1 = new cpr.controls.Button("btn1");
-							button_1.value = "계산일시조회";
-							button_1.style.setClasses(["btn-primary03"]);
-							container.addChild(button_1, {
+							var button_3 = new cpr.controls.Button("btn1");
+							button_3.value = "계산일시조회";
+							button_3.style.setClasses(["btn-primary03"]);
+							container.addChild(button_3, {
 								"colIndex": 1,
 								"rowIndex": 0
 							});
@@ -278,31 +311,31 @@
 							"colIndex": 1,
 							"rowIndex": 0
 						});
-						var output_8 = new cpr.controls.Output();
-						output_8.value = "계산일시";
-						output_8.style.setClasses(["label", "required"]);
-						container.addChild(output_8, {
+						var output_3 = new cpr.controls.Output();
+						output_3.value = "계산일시";
+						output_3.style.setClasses(["label", "required"]);
+						container.addChild(output_3, {
 							"colIndex": 2,
 							"rowIndex": 0
 						});
 						var comboBox_1 = new cpr.controls.ComboBox("cmb2");
 						comboBox_1.value = "value1";
 						(function(comboBox_1){
-							comboBox_1.addItem(new cpr.controls.Item("20140327103045724", "value1"));
+							comboBox_1.addItem(new cpr.controls.Item("20240327103045724", "value1"));
 						})(comboBox_1);
 						container.addChild(comboBox_1, {
 							"colIndex": 3,
 							"rowIndex": 0
 						});
-						var output_9 = new cpr.controls.Output();
-						output_9.value = "계산기준일자";
-						output_9.style.setClasses(["label"]);
-						container.addChild(output_9, {
+						var output_4 = new cpr.controls.Output();
+						output_4.value = "계산기준일자";
+						output_4.style.setClasses(["label"]);
+						container.addChild(output_4, {
 							"colIndex": 4,
 							"rowIndex": 0
 						});
 						var dateInput_1 = new cpr.controls.DateInput("dti2");
-						dateInput_1.value = "20150327";
+						dateInput_1.value = "20240327";
 						container.addChild(dateInput_1, {
 							"colIndex": 5,
 							"rowIndex": 0,
@@ -319,26 +352,26 @@
 						flowLayout_2.leftMargin = 20;
 						group_7.setLayout(flowLayout_2);
 						(function(container){
-							var button_2 = new cpr.controls.Button("btn2");
-							button_2.value = "엑셀다운로드";
-							button_2.style.setClasses(["btn-primary04", "btn-md"]);
-							container.addChild(button_2, {
-								"autoSize": "width",
-								"width": "49px",
-								"height": "26px"
-							});
-							var button_3 = new cpr.controls.Button();
-							button_3.value = "조회";
-							button_3.style.setClasses(["btn-search"]);
-							container.addChild(button_3, {
-								"autoSize": "width",
-								"width": "49px",
-								"height": "26px"
-							});
-							var button_4 = new cpr.controls.Button();
-							button_4.value = "";
-							button_4.style.setClasses(["btn-reset"]);
+							var button_4 = new cpr.controls.Button("btn2");
+							button_4.value = "엑셀다운로드";
+							button_4.style.setClasses(["btn-primary04", "btn-md"]);
 							container.addChild(button_4, {
+								"autoSize": "width",
+								"width": "49px",
+								"height": "26px"
+							});
+							var button_5 = new cpr.controls.Button();
+							button_5.value = "조회";
+							button_5.style.setClasses(["btn-search"]);
+							container.addChild(button_5, {
+								"autoSize": "width",
+								"width": "49px",
+								"height": "26px"
+							});
+							var button_6 = new cpr.controls.Button();
+							button_6.value = "";
+							button_6.style.setClasses(["btn-reset"]);
+							container.addChild(button_6, {
 								"width": "26px",
 								"height": "26px"
 							});
@@ -407,10 +440,10 @@
 								formLayout_4.setRows(["26px"]);
 								group_11.setLayout(formLayout_4);
 								(function(container){
-									var output_10 = new cpr.controls.Output();
-									output_10.value = "상품코드";
-									output_10.style.setClasses(["label"]);
-									container.addChild(output_10, {
+									var output_5 = new cpr.controls.Output();
+									output_5.value = "상품코드";
+									output_5.style.setClasses(["label"]);
+									container.addChild(output_5, {
 										"colIndex": 0,
 										"rowIndex": 0
 									});
@@ -421,16 +454,16 @@
 										"colIndex": 1,
 										"rowIndex": 0
 									});
-									var output_11 = new cpr.controls.Output();
-									output_11.value = "상품명";
-									output_11.style.setClasses(["label"]);
-									container.addChild(output_11, {
+									var output_6 = new cpr.controls.Output();
+									output_6.value = "상품명";
+									output_6.style.setClasses(["label"]);
+									container.addChild(output_6, {
 										"colIndex": 2,
 										"rowIndex": 0
 									});
 									var inputBox_3 = new cpr.controls.InputBox("ipb5");
 									inputBox_3.enabled = false;
-									inputBox_3.value = "(무)베스트유니버셜종신보험(우량체-월납)";
+									inputBox_3.value = "(무)흥국생명 온라인연금저축보험";
 									container.addChild(inputBox_3, {
 										"colIndex": 3,
 										"rowIndex": 0
@@ -505,6 +538,14 @@
 													cell.sortable = false;
 													cell.targetColumnName = "column3";
 													cell.text = "피보험자구분";
+													cell.style.css({
+														"border-bottom-color" : "red",
+														"border-left-style" : "dashed",
+														"border-bottom-width" : "3px",
+														"border-left-color" : "red",
+														"border-bottom-style" : "dashed",
+														"border-left-width" : "3px"
+													});
 												}
 											},
 											{
@@ -514,6 +555,11 @@
 													cell.sortable = false;
 													cell.targetColumnName = "column4";
 													cell.text = "이름";
+													cell.style.css({
+														"border-bottom-color" : "red",
+														"border-bottom-width" : "3px",
+														"border-bottom-style" : "dashed"
+													});
 												}
 											},
 											{
@@ -523,6 +569,11 @@
 													cell.sortable = false;
 													cell.targetColumnName = "column5";
 													cell.text = "생년월일";
+													cell.style.css({
+														"border-bottom-color" : "red",
+														"border-bottom-width" : "3px",
+														"border-bottom-style" : "dashed"
+													});
 												}
 											},
 											{
@@ -532,6 +583,11 @@
 													cell.sortable = false;
 													cell.targetColumnName = "column6";
 													cell.text = "성별";
+													cell.style.css({
+														"border-bottom-color" : "red",
+														"border-bottom-width" : "3px",
+														"border-bottom-style" : "dashed"
+													});
 												}
 											},
 											{
@@ -541,6 +597,11 @@
 													cell.sortable = false;
 													cell.targetColumnName = "column7";
 													cell.text = "나이";
+													cell.style.css({
+														"border-bottom-color" : "red",
+														"border-bottom-width" : "3px",
+														"border-bottom-style" : "dashed"
+													});
 												}
 											},
 											{
@@ -550,6 +611,11 @@
 													cell.sortable = false;
 													cell.targetColumnName = "column8";
 													cell.text = "생존여부";
+													cell.style.css({
+														"border-bottom-color" : "red",
+														"border-bottom-width" : "3px",
+														"border-bottom-style" : "dashed"
+													});
 												}
 											},
 											{
@@ -559,6 +625,14 @@
 													cell.sortable = false;
 													cell.targetColumnName = "column9";
 													cell.text = "계약상세번호";
+													cell.style.css({
+														"border-top-width" : "3px",
+														"border-bottom-color" : "red",
+														"border-bottom-width" : "3px",
+														"border-top-color" : "red",
+														"border-bottom-style" : "dashed",
+														"border-top-style" : "dashed"
+													});
 												}
 											},
 											{
@@ -568,6 +642,14 @@
 													cell.sortable = false;
 													cell.targetColumnName = "column10";
 													cell.text = "가입금액";
+													cell.style.css({
+														"border-top-width" : "3px",
+														"border-bottom-color" : "red",
+														"border-bottom-width" : "3px",
+														"border-top-color" : "red",
+														"border-bottom-style" : "dashed",
+														"border-top-style" : "dashed"
+													});
 												}
 											},
 											{
@@ -577,6 +659,14 @@
 													cell.sortable = false;
 													cell.targetColumnName = "column11";
 													cell.text = "보험료";
+													cell.style.css({
+														"border-top-width" : "3px",
+														"border-bottom-color" : "red",
+														"border-bottom-width" : "3px",
+														"border-top-color" : "red",
+														"border-bottom-style" : "dashed",
+														"border-top-style" : "dashed"
+													});
 												}
 											},
 											{
@@ -586,6 +676,14 @@
 													cell.sortable = false;
 													cell.targetColumnName = "column12";
 													cell.text = "계약일자";
+													cell.style.css({
+														"border-top-width" : "3px",
+														"border-bottom-color" : "red",
+														"border-bottom-width" : "3px",
+														"border-top-color" : "red",
+														"border-bottom-style" : "dashed",
+														"border-top-style" : "dashed"
+													});
 												}
 											},
 											{
@@ -595,12 +693,31 @@
 													cell.sortable = false;
 													cell.targetColumnName = "column13";
 													cell.text = "만기일자";
+													cell.style.css({
+														"border-right-style" : "dashed",
+														"border-top-width" : "3px",
+														"border-bottom-color" : "red",
+														"border-right-width" : "3px",
+														"border-bottom-width" : "3px",
+														"border-top-color" : "red",
+														"border-bottom-style" : "dashed",
+														"border-right-color" : "red",
+														"border-top-style" : "dashed"
+													});
 												}
 											},
 											{
 												"constraint": {"rowIndex": 0, "colIndex": 2, "rowSpan": 1, "colSpan": 6},
 												"configurator": function(cell){
 													cell.text = "피보험자정보";
+													cell.style.css({
+														"border-top-width" : "3px",
+														"border-left-style" : "dashed",
+														"border-left-color" : "red",
+														"border-top-color" : "red",
+														"border-left-width" : "3px",
+														"border-top-style" : "dashed"
+													});
 												}
 											}
 										]
@@ -613,10 +730,10 @@
 												"configurator": function(cell){
 													cell.columnName = "column1";
 													cell.control = (function(){
-														var output_12 = new cpr.controls.Output();
-														output_12.style.setClasses(["text-center"]);
-														output_12.bind("value").toDataColumn("column1");
-														return output_12;
+														var output_7 = new cpr.controls.Output();
+														output_7.style.setClasses(["text-center"]);
+														output_7.bind("value").toDataColumn("column1");
+														return output_7;
 													})();
 													cell.controlConstraint = {};
 												}
@@ -626,9 +743,9 @@
 												"configurator": function(cell){
 													cell.columnName = "column2";
 													cell.control = (function(){
-														var output_13 = new cpr.controls.Output();
-														output_13.bind("value").toDataColumn("column2");
-														return output_13;
+														var output_8 = new cpr.controls.Output();
+														output_8.bind("value").toDataColumn("column2");
+														return output_8;
 													})();
 													cell.controlConstraint = {};
 												}
@@ -638,10 +755,10 @@
 												"configurator": function(cell){
 													cell.columnName = "column3";
 													cell.control = (function(){
-														var output_14 = new cpr.controls.Output();
-														output_14.style.setClasses(["text-center"]);
-														output_14.bind("value").toDataColumn("column3");
-														return output_14;
+														var output_9 = new cpr.controls.Output();
+														output_9.style.setClasses(["text-center"]);
+														output_9.bind("value").toDataColumn("column3");
+														return output_9;
 													})();
 													cell.controlConstraint = {};
 												}
@@ -651,10 +768,10 @@
 												"configurator": function(cell){
 													cell.columnName = "column4";
 													cell.control = (function(){
-														var output_15 = new cpr.controls.Output();
-														output_15.style.setClasses(["text-center"]);
-														output_15.bind("value").toDataColumn("column4");
-														return output_15;
+														var output_10 = new cpr.controls.Output();
+														output_10.style.setClasses(["text-center"]);
+														output_10.bind("value").toDataColumn("column4");
+														return output_10;
 													})();
 													cell.controlConstraint = {};
 												}
@@ -664,12 +781,12 @@
 												"configurator": function(cell){
 													cell.columnName = "column5";
 													cell.control = (function(){
-														var output_16 = new cpr.controls.Output("opt4");
-														output_16.value = "20241231";
-														output_16.dataType = "date";
-														output_16.format = "YYYY-MM-DD";
-														output_16.bind("value").toDataColumn("column5");
-														return output_16;
+														var output_11 = new cpr.controls.Output("opt4");
+														output_11.value = "20241231";
+														output_11.dataType = "date";
+														output_11.format = "YYYY-MM-DD";
+														output_11.bind("value").toDataColumn("column5");
+														return output_11;
 													})();
 													cell.controlConstraint = {};
 												}
@@ -679,10 +796,10 @@
 												"configurator": function(cell){
 													cell.columnName = "column6";
 													cell.control = (function(){
-														var output_17 = new cpr.controls.Output();
-														output_17.style.setClasses(["text-center"]);
-														output_17.bind("value").toDataColumn("column6");
-														return output_17;
+														var output_12 = new cpr.controls.Output();
+														output_12.style.setClasses(["text-center"]);
+														output_12.bind("value").toDataColumn("column6");
+														return output_12;
 													})();
 													cell.controlConstraint = {};
 												}
@@ -692,13 +809,13 @@
 												"configurator": function(cell){
 													cell.columnName = "column7";
 													cell.control = (function(){
-														var output_18 = new cpr.controls.Output();
-														output_18.value = "0";
-														output_18.dataType = "number";
-														output_18.format = "s#,##0";
-														output_18.style.setClasses(["text-right"]);
-														output_18.bind("value").toDataColumn("column7");
-														return output_18;
+														var output_13 = new cpr.controls.Output();
+														output_13.value = "0";
+														output_13.dataType = "number";
+														output_13.format = "s#,##0";
+														output_13.style.setClasses(["text-right"]);
+														output_13.bind("value").toDataColumn("column7");
+														return output_13;
 													})();
 													cell.controlConstraint = {};
 												}
@@ -708,10 +825,10 @@
 												"configurator": function(cell){
 													cell.columnName = "column8";
 													cell.control = (function(){
-														var output_19 = new cpr.controls.Output();
-														output_19.style.setClasses(["text-center"]);
-														output_19.bind("value").toDataColumn("column8");
-														return output_19;
+														var output_14 = new cpr.controls.Output();
+														output_14.style.setClasses(["text-center"]);
+														output_14.bind("value").toDataColumn("column8");
+														return output_14;
 													})();
 													cell.controlConstraint = {};
 												}
@@ -721,10 +838,10 @@
 												"configurator": function(cell){
 													cell.columnName = "column9";
 													cell.control = (function(){
-														var output_20 = new cpr.controls.Output();
-														output_20.style.setClasses(["text-center"]);
-														output_20.bind("value").toDataColumn("column9");
-														return output_20;
+														var output_15 = new cpr.controls.Output();
+														output_15.style.setClasses(["text-center"]);
+														output_15.bind("value").toDataColumn("column9");
+														return output_15;
 													})();
 													cell.controlConstraint = {};
 												}
@@ -734,13 +851,13 @@
 												"configurator": function(cell){
 													cell.columnName = "column10";
 													cell.control = (function(){
-														var output_21 = new cpr.controls.Output();
-														output_21.value = "0";
-														output_21.dataType = "number";
-														output_21.format = "s#,##0";
-														output_21.style.setClasses(["text-right"]);
-														output_21.bind("value").toDataColumn("column10");
-														return output_21;
+														var output_16 = new cpr.controls.Output();
+														output_16.value = "0";
+														output_16.dataType = "number";
+														output_16.format = "s#,##0";
+														output_16.style.setClasses(["text-right"]);
+														output_16.bind("value").toDataColumn("column10");
+														return output_16;
 													})();
 													cell.controlConstraint = {};
 												}
@@ -750,13 +867,13 @@
 												"configurator": function(cell){
 													cell.columnName = "column11";
 													cell.control = (function(){
-														var output_22 = new cpr.controls.Output();
-														output_22.value = "0";
-														output_22.dataType = "number";
-														output_22.format = "s#,##0";
-														output_22.style.setClasses(["text-right"]);
-														output_22.bind("value").toDataColumn("column11");
-														return output_22;
+														var output_17 = new cpr.controls.Output();
+														output_17.value = "0";
+														output_17.dataType = "number";
+														output_17.format = "s#,##0";
+														output_17.style.setClasses(["text-right"]);
+														output_17.bind("value").toDataColumn("column11");
+														return output_17;
 													})();
 													cell.controlConstraint = {};
 												}
@@ -766,12 +883,12 @@
 												"configurator": function(cell){
 													cell.columnName = "column12";
 													cell.control = (function(){
-														var output_23 = new cpr.controls.Output("opt3");
-														output_23.value = "20241231";
-														output_23.dataType = "date";
-														output_23.format = "YYYY-MM-DD";
-														output_23.bind("value").toDataColumn("column12");
-														return output_23;
+														var output_18 = new cpr.controls.Output("opt3");
+														output_18.value = "20241231";
+														output_18.dataType = "date";
+														output_18.format = "YYYY-MM-DD";
+														output_18.bind("value").toDataColumn("column12");
+														return output_18;
 													})();
 													cell.controlConstraint = {};
 												}
@@ -781,12 +898,12 @@
 												"configurator": function(cell){
 													cell.columnName = "column13";
 													cell.control = (function(){
-														var output_24 = new cpr.controls.Output("opt2");
-														output_24.value = "20241231";
-														output_24.dataType = "date";
-														output_24.format = "YYYY-MM-DD";
-														output_24.bind("value").toDataColumn("column13");
-														return output_24;
+														var output_19 = new cpr.controls.Output("opt2");
+														output_19.value = "20241231";
+														output_19.dataType = "date";
+														output_19.format = "YYYY-MM-DD";
+														output_19.bind("value").toDataColumn("column13");
+														return output_19;
 													})();
 													cell.controlConstraint = {};
 												}
@@ -835,10 +952,10 @@
 											verticalLayout_11.spacing = 0;
 											group_16.setLayout(verticalLayout_11);
 											(function(container){
-												var output_25 = new cpr.controls.Output("optGrildTitle2");
-												output_25.value = "준비금정보";
-												output_25.style.setClasses(["grid-title"]);
-												container.addChild(output_25, {
+												var output_20 = new cpr.controls.Output("optGrildTitle2");
+												output_20.value = "준비금정보";
+												output_20.style.setClasses(["grid-title"]);
+												container.addChild(output_20, {
 													"autoSize": "height",
 													"width": "300px",
 													"height": "17px"
@@ -1071,10 +1188,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column1";
 																cell.control = (function(){
-																	var output_26 = new cpr.controls.Output();
-																	output_26.style.setClasses(["text-center"]);
-																	output_26.bind("value").toDataColumn("column1");
-																	return output_26;
+																	var output_21 = new cpr.controls.Output();
+																	output_21.style.setClasses(["text-center"]);
+																	output_21.bind("value").toDataColumn("column1");
+																	return output_21;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -1084,10 +1201,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column2";
 																cell.control = (function(){
-																	var output_27 = new cpr.controls.Output();
-																	output_27.style.setClasses(["text-center"]);
-																	output_27.bind("value").toDataColumn("column2");
-																	return output_27;
+																	var output_22 = new cpr.controls.Output();
+																	output_22.style.setClasses(["text-center"]);
+																	output_22.bind("value").toDataColumn("column2");
+																	return output_22;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -1097,10 +1214,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column3";
 																cell.control = (function(){
-																	var output_28 = new cpr.controls.Output();
-																	output_28.style.setClasses(["text-center"]);
-																	output_28.bind("value").toDataColumn("column3");
-																	return output_28;
+																	var output_23 = new cpr.controls.Output();
+																	output_23.style.setClasses(["text-center"]);
+																	output_23.bind("value").toDataColumn("column3");
+																	return output_23;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -1110,10 +1227,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column4";
 																cell.control = (function(){
-																	var output_29 = new cpr.controls.Output();
-																	output_29.style.setClasses(["text-center"]);
-																	output_29.bind("value").toDataColumn("column4");
-																	return output_29;
+																	var output_24 = new cpr.controls.Output();
+																	output_24.style.setClasses(["text-center"]);
+																	output_24.bind("value").toDataColumn("column4");
+																	return output_24;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -1123,10 +1240,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column5";
 																cell.control = (function(){
-																	var output_30 = new cpr.controls.Output();
-																	output_30.style.setClasses(["text-center"]);
-																	output_30.bind("value").toDataColumn("column5");
-																	return output_30;
+																	var output_25 = new cpr.controls.Output();
+																	output_25.style.setClasses(["text-center"]);
+																	output_25.bind("value").toDataColumn("column5");
+																	return output_25;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -1136,10 +1253,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column6";
 																cell.control = (function(){
-																	var output_31 = new cpr.controls.Output();
-																	output_31.style.setClasses(["text-center"]);
-																	output_31.bind("value").toDataColumn("column6");
-																	return output_31;
+																	var output_26 = new cpr.controls.Output();
+																	output_26.style.setClasses(["text-center"]);
+																	output_26.bind("value").toDataColumn("column6");
+																	return output_26;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -1149,10 +1266,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column7";
 																cell.control = (function(){
-																	var output_32 = new cpr.controls.Output();
-																	output_32.style.setClasses(["text-center"]);
-																	output_32.bind("value").toDataColumn("column7");
-																	return output_32;
+																	var output_27 = new cpr.controls.Output();
+																	output_27.style.setClasses(["text-center"]);
+																	output_27.bind("value").toDataColumn("column7");
+																	return output_27;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -1162,10 +1279,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column8";
 																cell.control = (function(){
-																	var output_33 = new cpr.controls.Output();
-																	output_33.style.setClasses(["text-center"]);
-																	output_33.bind("value").toDataColumn("column8");
-																	return output_33;
+																	var output_28 = new cpr.controls.Output();
+																	output_28.style.setClasses(["text-center"]);
+																	output_28.bind("value").toDataColumn("column8");
+																	return output_28;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -1175,10 +1292,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column9";
 																cell.control = (function(){
-																	var output_34 = new cpr.controls.Output();
-																	output_34.style.setClasses(["text-center"]);
-																	output_34.bind("value").toDataColumn("column9");
-																	return output_34;
+																	var output_29 = new cpr.controls.Output();
+																	output_29.style.setClasses(["text-center"]);
+																	output_29.bind("value").toDataColumn("column9");
+																	return output_29;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -1188,10 +1305,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column10";
 																cell.control = (function(){
-																	var output_35 = new cpr.controls.Output();
-																	output_35.style.setClasses(["text-center"]);
-																	output_35.bind("value").toDataColumn("column10");
-																	return output_35;
+																	var output_30 = new cpr.controls.Output();
+																	output_30.style.setClasses(["text-center"]);
+																	output_30.bind("value").toDataColumn("column10");
+																	return output_30;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -1201,10 +1318,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column11";
 																cell.control = (function(){
-																	var output_36 = new cpr.controls.Output();
-																	output_36.style.setClasses(["text-center"]);
-																	output_36.bind("value").toDataColumn("column11");
-																	return output_36;
+																	var output_31 = new cpr.controls.Output();
+																	output_31.style.setClasses(["text-center"]);
+																	output_31.bind("value").toDataColumn("column11");
+																	return output_31;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -1214,10 +1331,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column12";
 																cell.control = (function(){
-																	var output_37 = new cpr.controls.Output();
-																	output_37.style.setClasses(["text-center"]);
-																	output_37.bind("value").toDataColumn("column12");
-																	return output_37;
+																	var output_32 = new cpr.controls.Output();
+																	output_32.style.setClasses(["text-center"]);
+																	output_32.bind("value").toDataColumn("column12");
+																	return output_32;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -1227,10 +1344,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column13";
 																cell.control = (function(){
-																	var output_38 = new cpr.controls.Output();
-																	output_38.style.setClasses(["text-center"]);
-																	output_38.bind("value").toDataColumn("column13");
-																	return output_38;
+																	var output_33 = new cpr.controls.Output();
+																	output_33.style.setClasses(["text-center"]);
+																	output_33.bind("value").toDataColumn("column13");
+																	return output_33;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -1240,10 +1357,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column14";
 																cell.control = (function(){
-																	var output_39 = new cpr.controls.Output();
-																	output_39.style.setClasses(["text-center"]);
-																	output_39.bind("value").toDataColumn("column14");
-																	return output_39;
+																	var output_34 = new cpr.controls.Output();
+																	output_34.style.setClasses(["text-center"]);
+																	output_34.bind("value").toDataColumn("column14");
+																	return output_34;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -1253,10 +1370,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column15";
 																cell.control = (function(){
-																	var output_40 = new cpr.controls.Output();
-																	output_40.style.setClasses(["text-center"]);
-																	output_40.bind("value").toDataColumn("column15");
-																	return output_40;
+																	var output_35 = new cpr.controls.Output();
+																	output_35.style.setClasses(["text-center"]);
+																	output_35.bind("value").toDataColumn("column15");
+																	return output_35;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -1266,10 +1383,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column16";
 																cell.control = (function(){
-																	var output_41 = new cpr.controls.Output();
-																	output_41.style.setClasses(["text-center"]);
-																	output_41.bind("value").toDataColumn("column16");
-																	return output_41;
+																	var output_36 = new cpr.controls.Output();
+																	output_36.style.setClasses(["text-center"]);
+																	output_36.bind("value").toDataColumn("column16");
+																	return output_36;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -1279,13 +1396,13 @@
 															"configurator": function(cell){
 																cell.columnName = "column17";
 																cell.control = (function(){
-																	var output_42 = new cpr.controls.Output();
-																	output_42.value = "0";
-																	output_42.dataType = "number";
-																	output_42.format = "s#,##0";
-																	output_42.style.setClasses(["text-right"]);
-																	output_42.bind("value").toDataColumn("column17");
-																	return output_42;
+																	var output_37 = new cpr.controls.Output();
+																	output_37.value = "0";
+																	output_37.dataType = "number";
+																	output_37.format = "s#,##0";
+																	output_37.style.setClasses(["text-right"]);
+																	output_37.bind("value").toDataColumn("column17");
+																	return output_37;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -1295,13 +1412,13 @@
 															"configurator": function(cell){
 																cell.columnName = "column18";
 																cell.control = (function(){
-																	var output_43 = new cpr.controls.Output();
-																	output_43.value = "0";
-																	output_43.dataType = "number";
-																	output_43.format = "s#,##0";
-																	output_43.style.setClasses(["text-right"]);
-																	output_43.bind("value").toDataColumn("column18");
-																	return output_43;
+																	var output_38 = new cpr.controls.Output();
+																	output_38.value = "0";
+																	output_38.dataType = "number";
+																	output_38.format = "s#,##0";
+																	output_38.style.setClasses(["text-right"]);
+																	output_38.bind("value").toDataColumn("column18");
+																	return output_38;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -1328,17 +1445,38 @@
 										(function(container){
 											var group_18 = new cpr.controls.Container("grp14");
 											group_18.style.setClasses(["grid-title-box"]);
-											var verticalLayout_13 = new cpr.controls.layouts.VerticalLayout();
-											verticalLayout_13.spacing = 0;
-											group_18.setLayout(verticalLayout_13);
+											var formLayout_5 = new cpr.controls.layouts.FormLayout();
+											formLayout_5.scrollable = false;
+											formLayout_5.topMargin = "0px";
+											formLayout_5.rightMargin = "0px";
+											formLayout_5.bottomMargin = "0px";
+											formLayout_5.leftMargin = "0px";
+											formLayout_5.horizontalSpacing = "0px";
+											formLayout_5.verticalSpacing = "0px";
+											formLayout_5.setColumns(["110px", "1fr"]);
+											formLayout_5.setRows(["1fr"]);
+											group_18.setLayout(formLayout_5);
 											(function(container){
-												var output_44 = new cpr.controls.Output("optGrildTitle3");
-												output_44.value = "준비금키정보";
-												output_44.style.setClasses(["grid-title"]);
-												container.addChild(output_44, {
-													"autoSize": "height",
-													"width": "300px",
-													"height": "17px"
+												var output_39 = new cpr.controls.Output("optGrildTitle3");
+												output_39.value = "  준비금키정보";
+												output_39.style.setClasses(["grid-title"]);
+												output_39.style.css({
+													"border-right-style" : "dashed",
+													"border-top-width" : "3px",
+													"border-bottom-color" : "red",
+													"border-left-style" : "dashed",
+													"border-right-width" : "3px",
+													"border-bottom-width" : "3px",
+													"border-left-color" : "red",
+													"border-top-color" : "red",
+													"border-bottom-style" : "dashed",
+													"border-right-color" : "red",
+													"border-left-width" : "3px",
+													"border-top-style" : "dashed"
+												});
+												container.addChild(output_39, {
+													"colIndex": 0,
+													"rowIndex": 0
 												});
 											})(group_18);
 											container.addChild(group_18, {
@@ -1526,10 +1664,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column1";
 																cell.control = (function(){
-																	var output_45 = new cpr.controls.Output();
-																	output_45.style.setClasses(["text-center"]);
-																	output_45.bind("value").toDataColumn("column1");
-																	return output_45;
+																	var output_40 = new cpr.controls.Output();
+																	output_40.style.setClasses(["text-center"]);
+																	output_40.bind("value").toDataColumn("column1");
+																	return output_40;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -1539,9 +1677,9 @@
 															"configurator": function(cell){
 																cell.columnName = "column19";
 																cell.control = (function(){
-																	var output_46 = new cpr.controls.Output();
-																	output_46.bind("value").toDataColumn("column19");
-																	return output_46;
+																	var output_41 = new cpr.controls.Output();
+																	output_41.bind("value").toDataColumn("column19");
+																	return output_41;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -1551,10 +1689,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column2";
 																cell.control = (function(){
-																	var output_47 = new cpr.controls.Output();
-																	output_47.style.setClasses(["text-center"]);
-																	output_47.bind("value").toDataColumn("column2");
-																	return output_47;
+																	var output_42 = new cpr.controls.Output();
+																	output_42.style.setClasses(["text-center"]);
+																	output_42.bind("value").toDataColumn("column2");
+																	return output_42;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -1564,10 +1702,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column3";
 																cell.control = (function(){
-																	var output_48 = new cpr.controls.Output();
-																	output_48.style.setClasses(["text-center"]);
-																	output_48.bind("value").toDataColumn("column3");
-																	return output_48;
+																	var output_43 = new cpr.controls.Output();
+																	output_43.style.setClasses(["text-center"]);
+																	output_43.bind("value").toDataColumn("column3");
+																	return output_43;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -1577,10 +1715,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column4";
 																cell.control = (function(){
-																	var output_49 = new cpr.controls.Output();
-																	output_49.style.setClasses(["text-center"]);
-																	output_49.bind("value").toDataColumn("column4");
-																	return output_49;
+																	var output_44 = new cpr.controls.Output();
+																	output_44.style.setClasses(["text-center"]);
+																	output_44.bind("value").toDataColumn("column4");
+																	return output_44;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -1590,10 +1728,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column5";
 																cell.control = (function(){
-																	var output_50 = new cpr.controls.Output();
-																	output_50.style.setClasses(["text-center"]);
-																	output_50.bind("value").toDataColumn("column5");
-																	return output_50;
+																	var output_45 = new cpr.controls.Output();
+																	output_45.style.setClasses(["text-center"]);
+																	output_45.bind("value").toDataColumn("column5");
+																	return output_45;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -1603,10 +1741,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column6";
 																cell.control = (function(){
-																	var output_51 = new cpr.controls.Output();
-																	output_51.style.setClasses(["text-center"]);
-																	output_51.bind("value").toDataColumn("column6");
-																	return output_51;
+																	var output_46 = new cpr.controls.Output();
+																	output_46.style.setClasses(["text-center"]);
+																	output_46.bind("value").toDataColumn("column6");
+																	return output_46;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -1616,10 +1754,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column7";
 																cell.control = (function(){
-																	var output_52 = new cpr.controls.Output();
-																	output_52.style.setClasses(["text-center"]);
-																	output_52.bind("value").toDataColumn("column7");
-																	return output_52;
+																	var output_47 = new cpr.controls.Output();
+																	output_47.style.setClasses(["text-center"]);
+																	output_47.bind("value").toDataColumn("column7");
+																	return output_47;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -1629,10 +1767,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column8";
 																cell.control = (function(){
-																	var output_53 = new cpr.controls.Output();
-																	output_53.style.setClasses(["text-center"]);
-																	output_53.bind("value").toDataColumn("column8");
-																	return output_53;
+																	var output_48 = new cpr.controls.Output();
+																	output_48.style.setClasses(["text-center"]);
+																	output_48.bind("value").toDataColumn("column8");
+																	return output_48;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -1642,10 +1780,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column9";
 																cell.control = (function(){
-																	var output_54 = new cpr.controls.Output();
-																	output_54.style.setClasses(["text-center"]);
-																	output_54.bind("value").toDataColumn("column9");
-																	return output_54;
+																	var output_49 = new cpr.controls.Output();
+																	output_49.style.setClasses(["text-center"]);
+																	output_49.bind("value").toDataColumn("column9");
+																	return output_49;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -1655,10 +1793,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column11";
 																cell.control = (function(){
-																	var output_55 = new cpr.controls.Output();
-																	output_55.style.setClasses(["text-center"]);
-																	output_55.bind("value").toDataColumn("column11");
-																	return output_55;
+																	var output_50 = new cpr.controls.Output();
+																	output_50.style.setClasses(["text-center"]);
+																	output_50.bind("value").toDataColumn("column11");
+																	return output_50;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -1668,10 +1806,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column12";
 																cell.control = (function(){
-																	var output_56 = new cpr.controls.Output();
-																	output_56.style.setClasses(["text-center"]);
-																	output_56.bind("value").toDataColumn("column12");
-																	return output_56;
+																	var output_51 = new cpr.controls.Output();
+																	output_51.style.setClasses(["text-center"]);
+																	output_51.bind("value").toDataColumn("column12");
+																	return output_51;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -1681,10 +1819,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column10";
 																cell.control = (function(){
-																	var output_57 = new cpr.controls.Output();
-																	output_57.style.setClasses(["text-center"]);
-																	output_57.bind("value").toDataColumn("column10");
-																	return output_57;
+																	var output_52 = new cpr.controls.Output();
+																	output_52.style.setClasses(["text-center"]);
+																	output_52.bind("value").toDataColumn("column10");
+																	return output_52;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -1694,10 +1832,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column14";
 																cell.control = (function(){
-																	var output_58 = new cpr.controls.Output();
-																	output_58.style.setClasses(["text-center"]);
-																	output_58.bind("value").toDataColumn("column14");
-																	return output_58;
+																	var output_53 = new cpr.controls.Output();
+																	output_53.style.setClasses(["text-center"]);
+																	output_53.bind("value").toDataColumn("column14");
+																	return output_53;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -1707,10 +1845,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column15";
 																cell.control = (function(){
-																	var output_59 = new cpr.controls.Output();
-																	output_59.style.setClasses(["text-center"]);
-																	output_59.bind("value").toDataColumn("column15");
-																	return output_59;
+																	var output_54 = new cpr.controls.Output();
+																	output_54.style.setClasses(["text-center"]);
+																	output_54.bind("value").toDataColumn("column15");
+																	return output_54;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -1740,26 +1878,26 @@
 									tabItem_3.text = "이율정보";
 									var group_19 = new cpr.controls.Container("grp23");
 									group_19.style.setClasses(["tab-area"]);
-									var verticalLayout_14 = new cpr.controls.layouts.VerticalLayout();
-									verticalLayout_14.spacing = 12;
-									group_19.setLayout(verticalLayout_14);
+									var verticalLayout_13 = new cpr.controls.layouts.VerticalLayout();
+									verticalLayout_13.spacing = 12;
+									group_19.setLayout(verticalLayout_13);
 									(function(container){
 										var group_20 = new cpr.controls.Container("grp1");
 										group_20.style.setClasses(["grid-box"]);
-										var verticalLayout_15 = new cpr.controls.layouts.VerticalLayout();
-										verticalLayout_15.spacing = 8;
-										group_20.setLayout(verticalLayout_15);
+										var verticalLayout_14 = new cpr.controls.layouts.VerticalLayout();
+										verticalLayout_14.spacing = 8;
+										group_20.setLayout(verticalLayout_14);
 										(function(container){
 											var group_21 = new cpr.controls.Container("grp3");
 											group_21.style.setClasses(["grid-title-box"]);
-											var verticalLayout_16 = new cpr.controls.layouts.VerticalLayout();
-											verticalLayout_16.spacing = 0;
-											group_21.setLayout(verticalLayout_16);
+											var verticalLayout_15 = new cpr.controls.layouts.VerticalLayout();
+											verticalLayout_15.spacing = 0;
+											group_21.setLayout(verticalLayout_15);
 											(function(container){
-												var output_60 = new cpr.controls.Output("optGrildTitle4");
-												output_60.value = "준비금정보";
-												output_60.style.setClasses(["grid-title"]);
-												container.addChild(output_60, {
+												var output_55 = new cpr.controls.Output("optGrildTitle4");
+												output_55.value = "준비금정보";
+												output_55.style.setClasses(["grid-title"]);
+												container.addChild(output_55, {
 													"autoSize": "height",
 													"width": "300px",
 													"height": "17px"
@@ -1992,10 +2130,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column1";
 																cell.control = (function(){
-																	var output_61 = new cpr.controls.Output();
-																	output_61.style.setClasses(["text-center"]);
-																	output_61.bind("value").toDataColumn("column1");
-																	return output_61;
+																	var output_56 = new cpr.controls.Output();
+																	output_56.style.setClasses(["text-center"]);
+																	output_56.bind("value").toDataColumn("column1");
+																	return output_56;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2005,10 +2143,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column2";
 																cell.control = (function(){
-																	var output_62 = new cpr.controls.Output();
-																	output_62.style.setClasses(["text-center"]);
-																	output_62.bind("value").toDataColumn("column2");
-																	return output_62;
+																	var output_57 = new cpr.controls.Output();
+																	output_57.style.setClasses(["text-center"]);
+																	output_57.bind("value").toDataColumn("column2");
+																	return output_57;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2018,10 +2156,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column3";
 																cell.control = (function(){
-																	var output_63 = new cpr.controls.Output();
-																	output_63.style.setClasses(["text-center"]);
-																	output_63.bind("value").toDataColumn("column3");
-																	return output_63;
+																	var output_58 = new cpr.controls.Output();
+																	output_58.style.setClasses(["text-center"]);
+																	output_58.bind("value").toDataColumn("column3");
+																	return output_58;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2031,10 +2169,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column4";
 																cell.control = (function(){
-																	var output_64 = new cpr.controls.Output();
-																	output_64.style.setClasses(["text-center"]);
-																	output_64.bind("value").toDataColumn("column4");
-																	return output_64;
+																	var output_59 = new cpr.controls.Output();
+																	output_59.style.setClasses(["text-center"]);
+																	output_59.bind("value").toDataColumn("column4");
+																	return output_59;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2044,10 +2182,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column5";
 																cell.control = (function(){
-																	var output_65 = new cpr.controls.Output();
-																	output_65.style.setClasses(["text-center"]);
-																	output_65.bind("value").toDataColumn("column5");
-																	return output_65;
+																	var output_60 = new cpr.controls.Output();
+																	output_60.style.setClasses(["text-center"]);
+																	output_60.bind("value").toDataColumn("column5");
+																	return output_60;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2057,10 +2195,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column6";
 																cell.control = (function(){
-																	var output_66 = new cpr.controls.Output();
-																	output_66.style.setClasses(["text-center"]);
-																	output_66.bind("value").toDataColumn("column6");
-																	return output_66;
+																	var output_61 = new cpr.controls.Output();
+																	output_61.style.setClasses(["text-center"]);
+																	output_61.bind("value").toDataColumn("column6");
+																	return output_61;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2070,10 +2208,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column7";
 																cell.control = (function(){
-																	var output_67 = new cpr.controls.Output();
-																	output_67.style.setClasses(["text-center"]);
-																	output_67.bind("value").toDataColumn("column7");
-																	return output_67;
+																	var output_62 = new cpr.controls.Output();
+																	output_62.style.setClasses(["text-center"]);
+																	output_62.bind("value").toDataColumn("column7");
+																	return output_62;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2083,10 +2221,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column8";
 																cell.control = (function(){
-																	var output_68 = new cpr.controls.Output();
-																	output_68.style.setClasses(["text-center"]);
-																	output_68.bind("value").toDataColumn("column8");
-																	return output_68;
+																	var output_63 = new cpr.controls.Output();
+																	output_63.style.setClasses(["text-center"]);
+																	output_63.bind("value").toDataColumn("column8");
+																	return output_63;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2096,10 +2234,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column9";
 																cell.control = (function(){
-																	var output_69 = new cpr.controls.Output();
-																	output_69.style.setClasses(["text-center"]);
-																	output_69.bind("value").toDataColumn("column9");
-																	return output_69;
+																	var output_64 = new cpr.controls.Output();
+																	output_64.style.setClasses(["text-center"]);
+																	output_64.bind("value").toDataColumn("column9");
+																	return output_64;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2109,10 +2247,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column10";
 																cell.control = (function(){
-																	var output_70 = new cpr.controls.Output();
-																	output_70.style.setClasses(["text-center"]);
-																	output_70.bind("value").toDataColumn("column10");
-																	return output_70;
+																	var output_65 = new cpr.controls.Output();
+																	output_65.style.setClasses(["text-center"]);
+																	output_65.bind("value").toDataColumn("column10");
+																	return output_65;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2122,10 +2260,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column11";
 																cell.control = (function(){
-																	var output_71 = new cpr.controls.Output();
-																	output_71.style.setClasses(["text-center"]);
-																	output_71.bind("value").toDataColumn("column11");
-																	return output_71;
+																	var output_66 = new cpr.controls.Output();
+																	output_66.style.setClasses(["text-center"]);
+																	output_66.bind("value").toDataColumn("column11");
+																	return output_66;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2135,10 +2273,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column12";
 																cell.control = (function(){
-																	var output_72 = new cpr.controls.Output();
-																	output_72.style.setClasses(["text-center"]);
-																	output_72.bind("value").toDataColumn("column12");
-																	return output_72;
+																	var output_67 = new cpr.controls.Output();
+																	output_67.style.setClasses(["text-center"]);
+																	output_67.bind("value").toDataColumn("column12");
+																	return output_67;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2148,10 +2286,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column13";
 																cell.control = (function(){
-																	var output_73 = new cpr.controls.Output();
-																	output_73.style.setClasses(["text-center"]);
-																	output_73.bind("value").toDataColumn("column13");
-																	return output_73;
+																	var output_68 = new cpr.controls.Output();
+																	output_68.style.setClasses(["text-center"]);
+																	output_68.bind("value").toDataColumn("column13");
+																	return output_68;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2161,10 +2299,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column14";
 																cell.control = (function(){
-																	var output_74 = new cpr.controls.Output();
-																	output_74.style.setClasses(["text-center"]);
-																	output_74.bind("value").toDataColumn("column14");
-																	return output_74;
+																	var output_69 = new cpr.controls.Output();
+																	output_69.style.setClasses(["text-center"]);
+																	output_69.bind("value").toDataColumn("column14");
+																	return output_69;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2174,10 +2312,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column15";
 																cell.control = (function(){
-																	var output_75 = new cpr.controls.Output();
-																	output_75.style.setClasses(["text-center"]);
-																	output_75.bind("value").toDataColumn("column15");
-																	return output_75;
+																	var output_70 = new cpr.controls.Output();
+																	output_70.style.setClasses(["text-center"]);
+																	output_70.bind("value").toDataColumn("column15");
+																	return output_70;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2187,10 +2325,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column16";
 																cell.control = (function(){
-																	var output_76 = new cpr.controls.Output();
-																	output_76.style.setClasses(["text-center"]);
-																	output_76.bind("value").toDataColumn("column16");
-																	return output_76;
+																	var output_71 = new cpr.controls.Output();
+																	output_71.style.setClasses(["text-center"]);
+																	output_71.bind("value").toDataColumn("column16");
+																	return output_71;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2200,13 +2338,13 @@
 															"configurator": function(cell){
 																cell.columnName = "column17";
 																cell.control = (function(){
-																	var output_77 = new cpr.controls.Output();
-																	output_77.value = "0";
-																	output_77.dataType = "number";
-																	output_77.format = "s#,##0";
-																	output_77.style.setClasses(["text-right"]);
-																	output_77.bind("value").toDataColumn("column17");
-																	return output_77;
+																	var output_72 = new cpr.controls.Output();
+																	output_72.value = "0";
+																	output_72.dataType = "number";
+																	output_72.format = "s#,##0";
+																	output_72.style.setClasses(["text-right"]);
+																	output_72.bind("value").toDataColumn("column17");
+																	return output_72;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2216,13 +2354,13 @@
 															"configurator": function(cell){
 																cell.columnName = "column18";
 																cell.control = (function(){
-																	var output_78 = new cpr.controls.Output();
-																	output_78.value = "0";
-																	output_78.dataType = "number";
-																	output_78.format = "s#,##0";
-																	output_78.style.setClasses(["text-right"]);
-																	output_78.bind("value").toDataColumn("column18");
-																	return output_78;
+																	var output_73 = new cpr.controls.Output();
+																	output_73.value = "0";
+																	output_73.dataType = "number";
+																	output_73.format = "s#,##0";
+																	output_73.style.setClasses(["text-right"]);
+																	output_73.bind("value").toDataColumn("column18");
+																	return output_73;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2243,20 +2381,20 @@
 										});
 										var group_22 = new cpr.controls.Container("grp4");
 										group_22.style.setClasses(["grid-box"]);
-										var verticalLayout_17 = new cpr.controls.layouts.VerticalLayout();
-										verticalLayout_17.spacing = 8;
-										group_22.setLayout(verticalLayout_17);
+										var verticalLayout_16 = new cpr.controls.layouts.VerticalLayout();
+										verticalLayout_16.spacing = 8;
+										group_22.setLayout(verticalLayout_16);
 										(function(container){
 											var group_23 = new cpr.controls.Container("grp5");
 											group_23.style.setClasses(["grid-title-box"]);
-											var verticalLayout_18 = new cpr.controls.layouts.VerticalLayout();
-											verticalLayout_18.spacing = 0;
-											group_23.setLayout(verticalLayout_18);
+											var verticalLayout_17 = new cpr.controls.layouts.VerticalLayout();
+											verticalLayout_17.spacing = 0;
+											group_23.setLayout(verticalLayout_17);
 											(function(container){
-												var output_79 = new cpr.controls.Output("optGrildTitle5");
-												output_79.value = "준비금키정보";
-												output_79.style.setClasses(["grid-title"]);
-												container.addChild(output_79, {
+												var output_74 = new cpr.controls.Output("optGrildTitle5");
+												output_74.value = "준비금키정보";
+												output_74.style.setClasses(["grid-title"]);
+												container.addChild(output_74, {
 													"autoSize": "height",
 													"width": "300px",
 													"height": "17px"
@@ -2447,10 +2585,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column1";
 																cell.control = (function(){
-																	var output_80 = new cpr.controls.Output();
-																	output_80.style.setClasses(["text-center"]);
-																	output_80.bind("value").toDataColumn("column1");
-																	return output_80;
+																	var output_75 = new cpr.controls.Output();
+																	output_75.style.setClasses(["text-center"]);
+																	output_75.bind("value").toDataColumn("column1");
+																	return output_75;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2460,9 +2598,9 @@
 															"configurator": function(cell){
 																cell.columnName = "column19";
 																cell.control = (function(){
-																	var output_81 = new cpr.controls.Output();
-																	output_81.bind("value").toDataColumn("column19");
-																	return output_81;
+																	var output_76 = new cpr.controls.Output();
+																	output_76.bind("value").toDataColumn("column19");
+																	return output_76;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2472,10 +2610,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column2";
 																cell.control = (function(){
-																	var output_82 = new cpr.controls.Output();
-																	output_82.style.setClasses(["text-center"]);
-																	output_82.bind("value").toDataColumn("column2");
-																	return output_82;
+																	var output_77 = new cpr.controls.Output();
+																	output_77.style.setClasses(["text-center"]);
+																	output_77.bind("value").toDataColumn("column2");
+																	return output_77;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2485,10 +2623,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column3";
 																cell.control = (function(){
-																	var output_83 = new cpr.controls.Output();
-																	output_83.style.setClasses(["text-center"]);
-																	output_83.bind("value").toDataColumn("column3");
-																	return output_83;
+																	var output_78 = new cpr.controls.Output();
+																	output_78.style.setClasses(["text-center"]);
+																	output_78.bind("value").toDataColumn("column3");
+																	return output_78;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2498,10 +2636,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column4";
 																cell.control = (function(){
-																	var output_84 = new cpr.controls.Output();
-																	output_84.style.setClasses(["text-center"]);
-																	output_84.bind("value").toDataColumn("column4");
-																	return output_84;
+																	var output_79 = new cpr.controls.Output();
+																	output_79.style.setClasses(["text-center"]);
+																	output_79.bind("value").toDataColumn("column4");
+																	return output_79;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2511,10 +2649,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column5";
 																cell.control = (function(){
-																	var output_85 = new cpr.controls.Output();
-																	output_85.style.setClasses(["text-center"]);
-																	output_85.bind("value").toDataColumn("column5");
-																	return output_85;
+																	var output_80 = new cpr.controls.Output();
+																	output_80.style.setClasses(["text-center"]);
+																	output_80.bind("value").toDataColumn("column5");
+																	return output_80;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2524,10 +2662,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column6";
 																cell.control = (function(){
-																	var output_86 = new cpr.controls.Output();
-																	output_86.style.setClasses(["text-center"]);
-																	output_86.bind("value").toDataColumn("column6");
-																	return output_86;
+																	var output_81 = new cpr.controls.Output();
+																	output_81.style.setClasses(["text-center"]);
+																	output_81.bind("value").toDataColumn("column6");
+																	return output_81;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2537,10 +2675,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column7";
 																cell.control = (function(){
-																	var output_87 = new cpr.controls.Output();
-																	output_87.style.setClasses(["text-center"]);
-																	output_87.bind("value").toDataColumn("column7");
-																	return output_87;
+																	var output_82 = new cpr.controls.Output();
+																	output_82.style.setClasses(["text-center"]);
+																	output_82.bind("value").toDataColumn("column7");
+																	return output_82;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2550,10 +2688,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column8";
 																cell.control = (function(){
-																	var output_88 = new cpr.controls.Output();
-																	output_88.style.setClasses(["text-center"]);
-																	output_88.bind("value").toDataColumn("column8");
-																	return output_88;
+																	var output_83 = new cpr.controls.Output();
+																	output_83.style.setClasses(["text-center"]);
+																	output_83.bind("value").toDataColumn("column8");
+																	return output_83;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2563,10 +2701,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column9";
 																cell.control = (function(){
-																	var output_89 = new cpr.controls.Output();
-																	output_89.style.setClasses(["text-center"]);
-																	output_89.bind("value").toDataColumn("column9");
-																	return output_89;
+																	var output_84 = new cpr.controls.Output();
+																	output_84.style.setClasses(["text-center"]);
+																	output_84.bind("value").toDataColumn("column9");
+																	return output_84;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2576,10 +2714,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column11";
 																cell.control = (function(){
-																	var output_90 = new cpr.controls.Output();
-																	output_90.style.setClasses(["text-center"]);
-																	output_90.bind("value").toDataColumn("column11");
-																	return output_90;
+																	var output_85 = new cpr.controls.Output();
+																	output_85.style.setClasses(["text-center"]);
+																	output_85.bind("value").toDataColumn("column11");
+																	return output_85;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2589,10 +2727,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column12";
 																cell.control = (function(){
-																	var output_91 = new cpr.controls.Output();
-																	output_91.style.setClasses(["text-center"]);
-																	output_91.bind("value").toDataColumn("column12");
-																	return output_91;
+																	var output_86 = new cpr.controls.Output();
+																	output_86.style.setClasses(["text-center"]);
+																	output_86.bind("value").toDataColumn("column12");
+																	return output_86;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2602,10 +2740,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column10";
 																cell.control = (function(){
-																	var output_92 = new cpr.controls.Output();
-																	output_92.style.setClasses(["text-center"]);
-																	output_92.bind("value").toDataColumn("column10");
-																	return output_92;
+																	var output_87 = new cpr.controls.Output();
+																	output_87.style.setClasses(["text-center"]);
+																	output_87.bind("value").toDataColumn("column10");
+																	return output_87;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2615,10 +2753,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column14";
 																cell.control = (function(){
-																	var output_93 = new cpr.controls.Output();
-																	output_93.style.setClasses(["text-center"]);
-																	output_93.bind("value").toDataColumn("column14");
-																	return output_93;
+																	var output_88 = new cpr.controls.Output();
+																	output_88.style.setClasses(["text-center"]);
+																	output_88.bind("value").toDataColumn("column14");
+																	return output_88;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2628,10 +2766,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column15";
 																cell.control = (function(){
-																	var output_94 = new cpr.controls.Output();
-																	output_94.style.setClasses(["text-center"]);
-																	output_94.bind("value").toDataColumn("column15");
-																	return output_94;
+																	var output_89 = new cpr.controls.Output();
+																	output_89.style.setClasses(["text-center"]);
+																	output_89.bind("value").toDataColumn("column15");
+																	return output_89;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2661,26 +2799,26 @@
 									tabItem_4.text = "예정사업비";
 									var group_24 = new cpr.controls.Container("grp26");
 									group_24.style.setClasses(["tab-area"]);
-									var verticalLayout_19 = new cpr.controls.layouts.VerticalLayout();
-									verticalLayout_19.spacing = 12;
-									group_24.setLayout(verticalLayout_19);
+									var verticalLayout_18 = new cpr.controls.layouts.VerticalLayout();
+									verticalLayout_18.spacing = 12;
+									group_24.setLayout(verticalLayout_18);
 									(function(container){
 										var group_25 = new cpr.controls.Container("grp15");
 										group_25.style.setClasses(["grid-box"]);
-										var verticalLayout_20 = new cpr.controls.layouts.VerticalLayout();
-										verticalLayout_20.spacing = 8;
-										group_25.setLayout(verticalLayout_20);
+										var verticalLayout_19 = new cpr.controls.layouts.VerticalLayout();
+										verticalLayout_19.spacing = 8;
+										group_25.setLayout(verticalLayout_19);
 										(function(container){
 											var group_26 = new cpr.controls.Container("grp18");
 											group_26.style.setClasses(["grid-title-box"]);
-											var verticalLayout_21 = new cpr.controls.layouts.VerticalLayout();
-											verticalLayout_21.spacing = 0;
-											group_26.setLayout(verticalLayout_21);
+											var verticalLayout_20 = new cpr.controls.layouts.VerticalLayout();
+											verticalLayout_20.spacing = 0;
+											group_26.setLayout(verticalLayout_20);
 											(function(container){
-												var output_95 = new cpr.controls.Output("optGrildTitle6");
-												output_95.value = "준비금정보";
-												output_95.style.setClasses(["grid-title"]);
-												container.addChild(output_95, {
+												var output_90 = new cpr.controls.Output("optGrildTitle6");
+												output_90.value = "준비금정보";
+												output_90.style.setClasses(["grid-title"]);
+												container.addChild(output_90, {
 													"autoSize": "height",
 													"width": "300px",
 													"height": "17px"
@@ -2913,10 +3051,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column1";
 																cell.control = (function(){
-																	var output_96 = new cpr.controls.Output();
-																	output_96.style.setClasses(["text-center"]);
-																	output_96.bind("value").toDataColumn("column1");
-																	return output_96;
+																	var output_91 = new cpr.controls.Output();
+																	output_91.style.setClasses(["text-center"]);
+																	output_91.bind("value").toDataColumn("column1");
+																	return output_91;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2926,10 +3064,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column2";
 																cell.control = (function(){
-																	var output_97 = new cpr.controls.Output();
-																	output_97.style.setClasses(["text-center"]);
-																	output_97.bind("value").toDataColumn("column2");
-																	return output_97;
+																	var output_92 = new cpr.controls.Output();
+																	output_92.style.setClasses(["text-center"]);
+																	output_92.bind("value").toDataColumn("column2");
+																	return output_92;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2939,10 +3077,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column3";
 																cell.control = (function(){
-																	var output_98 = new cpr.controls.Output();
-																	output_98.style.setClasses(["text-center"]);
-																	output_98.bind("value").toDataColumn("column3");
-																	return output_98;
+																	var output_93 = new cpr.controls.Output();
+																	output_93.style.setClasses(["text-center"]);
+																	output_93.bind("value").toDataColumn("column3");
+																	return output_93;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2952,10 +3090,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column4";
 																cell.control = (function(){
-																	var output_99 = new cpr.controls.Output();
-																	output_99.style.setClasses(["text-center"]);
-																	output_99.bind("value").toDataColumn("column4");
-																	return output_99;
+																	var output_94 = new cpr.controls.Output();
+																	output_94.style.setClasses(["text-center"]);
+																	output_94.bind("value").toDataColumn("column4");
+																	return output_94;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2965,10 +3103,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column5";
 																cell.control = (function(){
-																	var output_100 = new cpr.controls.Output();
-																	output_100.style.setClasses(["text-center"]);
-																	output_100.bind("value").toDataColumn("column5");
-																	return output_100;
+																	var output_95 = new cpr.controls.Output();
+																	output_95.style.setClasses(["text-center"]);
+																	output_95.bind("value").toDataColumn("column5");
+																	return output_95;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2978,10 +3116,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column6";
 																cell.control = (function(){
-																	var output_101 = new cpr.controls.Output();
-																	output_101.style.setClasses(["text-center"]);
-																	output_101.bind("value").toDataColumn("column6");
-																	return output_101;
+																	var output_96 = new cpr.controls.Output();
+																	output_96.style.setClasses(["text-center"]);
+																	output_96.bind("value").toDataColumn("column6");
+																	return output_96;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -2991,10 +3129,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column7";
 																cell.control = (function(){
-																	var output_102 = new cpr.controls.Output();
-																	output_102.style.setClasses(["text-center"]);
-																	output_102.bind("value").toDataColumn("column7");
-																	return output_102;
+																	var output_97 = new cpr.controls.Output();
+																	output_97.style.setClasses(["text-center"]);
+																	output_97.bind("value").toDataColumn("column7");
+																	return output_97;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3004,10 +3142,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column8";
 																cell.control = (function(){
-																	var output_103 = new cpr.controls.Output();
-																	output_103.style.setClasses(["text-center"]);
-																	output_103.bind("value").toDataColumn("column8");
-																	return output_103;
+																	var output_98 = new cpr.controls.Output();
+																	output_98.style.setClasses(["text-center"]);
+																	output_98.bind("value").toDataColumn("column8");
+																	return output_98;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3017,10 +3155,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column9";
 																cell.control = (function(){
-																	var output_104 = new cpr.controls.Output();
-																	output_104.style.setClasses(["text-center"]);
-																	output_104.bind("value").toDataColumn("column9");
-																	return output_104;
+																	var output_99 = new cpr.controls.Output();
+																	output_99.style.setClasses(["text-center"]);
+																	output_99.bind("value").toDataColumn("column9");
+																	return output_99;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3030,10 +3168,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column10";
 																cell.control = (function(){
-																	var output_105 = new cpr.controls.Output();
-																	output_105.style.setClasses(["text-center"]);
-																	output_105.bind("value").toDataColumn("column10");
-																	return output_105;
+																	var output_100 = new cpr.controls.Output();
+																	output_100.style.setClasses(["text-center"]);
+																	output_100.bind("value").toDataColumn("column10");
+																	return output_100;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3043,10 +3181,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column11";
 																cell.control = (function(){
-																	var output_106 = new cpr.controls.Output();
-																	output_106.style.setClasses(["text-center"]);
-																	output_106.bind("value").toDataColumn("column11");
-																	return output_106;
+																	var output_101 = new cpr.controls.Output();
+																	output_101.style.setClasses(["text-center"]);
+																	output_101.bind("value").toDataColumn("column11");
+																	return output_101;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3056,10 +3194,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column12";
 																cell.control = (function(){
-																	var output_107 = new cpr.controls.Output();
-																	output_107.style.setClasses(["text-center"]);
-																	output_107.bind("value").toDataColumn("column12");
-																	return output_107;
+																	var output_102 = new cpr.controls.Output();
+																	output_102.style.setClasses(["text-center"]);
+																	output_102.bind("value").toDataColumn("column12");
+																	return output_102;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3069,10 +3207,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column13";
 																cell.control = (function(){
-																	var output_108 = new cpr.controls.Output();
-																	output_108.style.setClasses(["text-center"]);
-																	output_108.bind("value").toDataColumn("column13");
-																	return output_108;
+																	var output_103 = new cpr.controls.Output();
+																	output_103.style.setClasses(["text-center"]);
+																	output_103.bind("value").toDataColumn("column13");
+																	return output_103;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3082,10 +3220,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column14";
 																cell.control = (function(){
-																	var output_109 = new cpr.controls.Output();
-																	output_109.style.setClasses(["text-center"]);
-																	output_109.bind("value").toDataColumn("column14");
-																	return output_109;
+																	var output_104 = new cpr.controls.Output();
+																	output_104.style.setClasses(["text-center"]);
+																	output_104.bind("value").toDataColumn("column14");
+																	return output_104;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3095,10 +3233,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column15";
 																cell.control = (function(){
-																	var output_110 = new cpr.controls.Output();
-																	output_110.style.setClasses(["text-center"]);
-																	output_110.bind("value").toDataColumn("column15");
-																	return output_110;
+																	var output_105 = new cpr.controls.Output();
+																	output_105.style.setClasses(["text-center"]);
+																	output_105.bind("value").toDataColumn("column15");
+																	return output_105;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3108,10 +3246,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column16";
 																cell.control = (function(){
-																	var output_111 = new cpr.controls.Output();
-																	output_111.style.setClasses(["text-center"]);
-																	output_111.bind("value").toDataColumn("column16");
-																	return output_111;
+																	var output_106 = new cpr.controls.Output();
+																	output_106.style.setClasses(["text-center"]);
+																	output_106.bind("value").toDataColumn("column16");
+																	return output_106;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3121,13 +3259,13 @@
 															"configurator": function(cell){
 																cell.columnName = "column17";
 																cell.control = (function(){
-																	var output_112 = new cpr.controls.Output();
-																	output_112.value = "0";
-																	output_112.dataType = "number";
-																	output_112.format = "s#,##0";
-																	output_112.style.setClasses(["text-right"]);
-																	output_112.bind("value").toDataColumn("column17");
-																	return output_112;
+																	var output_107 = new cpr.controls.Output();
+																	output_107.value = "0";
+																	output_107.dataType = "number";
+																	output_107.format = "s#,##0";
+																	output_107.style.setClasses(["text-right"]);
+																	output_107.bind("value").toDataColumn("column17");
+																	return output_107;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3137,13 +3275,13 @@
 															"configurator": function(cell){
 																cell.columnName = "column18";
 																cell.control = (function(){
-																	var output_113 = new cpr.controls.Output();
-																	output_113.value = "0";
-																	output_113.dataType = "number";
-																	output_113.format = "s#,##0";
-																	output_113.style.setClasses(["text-right"]);
-																	output_113.bind("value").toDataColumn("column18");
-																	return output_113;
+																	var output_108 = new cpr.controls.Output();
+																	output_108.value = "0";
+																	output_108.dataType = "number";
+																	output_108.format = "s#,##0";
+																	output_108.style.setClasses(["text-right"]);
+																	output_108.bind("value").toDataColumn("column18");
+																	return output_108;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3164,20 +3302,20 @@
 										});
 										var group_27 = new cpr.controls.Container("grp19");
 										group_27.style.setClasses(["grid-box"]);
-										var verticalLayout_22 = new cpr.controls.layouts.VerticalLayout();
-										verticalLayout_22.spacing = 8;
-										group_27.setLayout(verticalLayout_22);
+										var verticalLayout_21 = new cpr.controls.layouts.VerticalLayout();
+										verticalLayout_21.spacing = 8;
+										group_27.setLayout(verticalLayout_21);
 										(function(container){
 											var group_28 = new cpr.controls.Container("grp20");
 											group_28.style.setClasses(["grid-title-box"]);
-											var verticalLayout_23 = new cpr.controls.layouts.VerticalLayout();
-											verticalLayout_23.spacing = 0;
-											group_28.setLayout(verticalLayout_23);
+											var verticalLayout_22 = new cpr.controls.layouts.VerticalLayout();
+											verticalLayout_22.spacing = 0;
+											group_28.setLayout(verticalLayout_22);
 											(function(container){
-												var output_114 = new cpr.controls.Output("optGrildTitle7");
-												output_114.value = "준비금키정보";
-												output_114.style.setClasses(["grid-title"]);
-												container.addChild(output_114, {
+												var output_109 = new cpr.controls.Output("optGrildTitle7");
+												output_109.value = "준비금키정보";
+												output_109.style.setClasses(["grid-title"]);
+												container.addChild(output_109, {
 													"autoSize": "height",
 													"width": "300px",
 													"height": "17px"
@@ -3368,10 +3506,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column1";
 																cell.control = (function(){
-																	var output_115 = new cpr.controls.Output();
-																	output_115.style.setClasses(["text-center"]);
-																	output_115.bind("value").toDataColumn("column1");
-																	return output_115;
+																	var output_110 = new cpr.controls.Output();
+																	output_110.style.setClasses(["text-center"]);
+																	output_110.bind("value").toDataColumn("column1");
+																	return output_110;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3381,9 +3519,9 @@
 															"configurator": function(cell){
 																cell.columnName = "column19";
 																cell.control = (function(){
-																	var output_116 = new cpr.controls.Output();
-																	output_116.bind("value").toDataColumn("column19");
-																	return output_116;
+																	var output_111 = new cpr.controls.Output();
+																	output_111.bind("value").toDataColumn("column19");
+																	return output_111;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3393,10 +3531,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column2";
 																cell.control = (function(){
-																	var output_117 = new cpr.controls.Output();
-																	output_117.style.setClasses(["text-center"]);
-																	output_117.bind("value").toDataColumn("column2");
-																	return output_117;
+																	var output_112 = new cpr.controls.Output();
+																	output_112.style.setClasses(["text-center"]);
+																	output_112.bind("value").toDataColumn("column2");
+																	return output_112;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3406,10 +3544,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column3";
 																cell.control = (function(){
-																	var output_118 = new cpr.controls.Output();
-																	output_118.style.setClasses(["text-center"]);
-																	output_118.bind("value").toDataColumn("column3");
-																	return output_118;
+																	var output_113 = new cpr.controls.Output();
+																	output_113.style.setClasses(["text-center"]);
+																	output_113.bind("value").toDataColumn("column3");
+																	return output_113;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3419,10 +3557,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column4";
 																cell.control = (function(){
-																	var output_119 = new cpr.controls.Output();
-																	output_119.style.setClasses(["text-center"]);
-																	output_119.bind("value").toDataColumn("column4");
-																	return output_119;
+																	var output_114 = new cpr.controls.Output();
+																	output_114.style.setClasses(["text-center"]);
+																	output_114.bind("value").toDataColumn("column4");
+																	return output_114;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3432,10 +3570,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column5";
 																cell.control = (function(){
-																	var output_120 = new cpr.controls.Output();
-																	output_120.style.setClasses(["text-center"]);
-																	output_120.bind("value").toDataColumn("column5");
-																	return output_120;
+																	var output_115 = new cpr.controls.Output();
+																	output_115.style.setClasses(["text-center"]);
+																	output_115.bind("value").toDataColumn("column5");
+																	return output_115;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3445,10 +3583,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column6";
 																cell.control = (function(){
-																	var output_121 = new cpr.controls.Output();
-																	output_121.style.setClasses(["text-center"]);
-																	output_121.bind("value").toDataColumn("column6");
-																	return output_121;
+																	var output_116 = new cpr.controls.Output();
+																	output_116.style.setClasses(["text-center"]);
+																	output_116.bind("value").toDataColumn("column6");
+																	return output_116;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3458,10 +3596,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column7";
 																cell.control = (function(){
-																	var output_122 = new cpr.controls.Output();
-																	output_122.style.setClasses(["text-center"]);
-																	output_122.bind("value").toDataColumn("column7");
-																	return output_122;
+																	var output_117 = new cpr.controls.Output();
+																	output_117.style.setClasses(["text-center"]);
+																	output_117.bind("value").toDataColumn("column7");
+																	return output_117;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3471,10 +3609,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column8";
 																cell.control = (function(){
-																	var output_123 = new cpr.controls.Output();
-																	output_123.style.setClasses(["text-center"]);
-																	output_123.bind("value").toDataColumn("column8");
-																	return output_123;
+																	var output_118 = new cpr.controls.Output();
+																	output_118.style.setClasses(["text-center"]);
+																	output_118.bind("value").toDataColumn("column8");
+																	return output_118;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3484,10 +3622,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column9";
 																cell.control = (function(){
-																	var output_124 = new cpr.controls.Output();
-																	output_124.style.setClasses(["text-center"]);
-																	output_124.bind("value").toDataColumn("column9");
-																	return output_124;
+																	var output_119 = new cpr.controls.Output();
+																	output_119.style.setClasses(["text-center"]);
+																	output_119.bind("value").toDataColumn("column9");
+																	return output_119;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3497,10 +3635,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column11";
 																cell.control = (function(){
-																	var output_125 = new cpr.controls.Output();
-																	output_125.style.setClasses(["text-center"]);
-																	output_125.bind("value").toDataColumn("column11");
-																	return output_125;
+																	var output_120 = new cpr.controls.Output();
+																	output_120.style.setClasses(["text-center"]);
+																	output_120.bind("value").toDataColumn("column11");
+																	return output_120;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3510,10 +3648,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column12";
 																cell.control = (function(){
-																	var output_126 = new cpr.controls.Output();
-																	output_126.style.setClasses(["text-center"]);
-																	output_126.bind("value").toDataColumn("column12");
-																	return output_126;
+																	var output_121 = new cpr.controls.Output();
+																	output_121.style.setClasses(["text-center"]);
+																	output_121.bind("value").toDataColumn("column12");
+																	return output_121;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3523,10 +3661,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column10";
 																cell.control = (function(){
-																	var output_127 = new cpr.controls.Output();
-																	output_127.style.setClasses(["text-center"]);
-																	output_127.bind("value").toDataColumn("column10");
-																	return output_127;
+																	var output_122 = new cpr.controls.Output();
+																	output_122.style.setClasses(["text-center"]);
+																	output_122.bind("value").toDataColumn("column10");
+																	return output_122;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3536,10 +3674,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column14";
 																cell.control = (function(){
-																	var output_128 = new cpr.controls.Output();
-																	output_128.style.setClasses(["text-center"]);
-																	output_128.bind("value").toDataColumn("column14");
-																	return output_128;
+																	var output_123 = new cpr.controls.Output();
+																	output_123.style.setClasses(["text-center"]);
+																	output_123.bind("value").toDataColumn("column14");
+																	return output_123;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3549,10 +3687,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column15";
 																cell.control = (function(){
-																	var output_129 = new cpr.controls.Output();
-																	output_129.style.setClasses(["text-center"]);
-																	output_129.bind("value").toDataColumn("column15");
-																	return output_129;
+																	var output_124 = new cpr.controls.Output();
+																	output_124.style.setClasses(["text-center"]);
+																	output_124.bind("value").toDataColumn("column15");
+																	return output_124;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3582,26 +3720,26 @@
 									tabItem_5.text = "중도인출";
 									var group_29 = new cpr.controls.Container("grp37");
 									group_29.style.setClasses(["tab-area"]);
-									var verticalLayout_24 = new cpr.controls.layouts.VerticalLayout();
-									verticalLayout_24.spacing = 12;
-									group_29.setLayout(verticalLayout_24);
+									var verticalLayout_23 = new cpr.controls.layouts.VerticalLayout();
+									verticalLayout_23.spacing = 12;
+									group_29.setLayout(verticalLayout_23);
 									(function(container){
 										var group_30 = new cpr.controls.Container("grp21");
 										group_30.style.setClasses(["grid-box"]);
-										var verticalLayout_25 = new cpr.controls.layouts.VerticalLayout();
-										verticalLayout_25.spacing = 8;
-										group_30.setLayout(verticalLayout_25);
+										var verticalLayout_24 = new cpr.controls.layouts.VerticalLayout();
+										verticalLayout_24.spacing = 8;
+										group_30.setLayout(verticalLayout_24);
 										(function(container){
 											var group_31 = new cpr.controls.Container("grp22");
 											group_31.style.setClasses(["grid-title-box"]);
-											var verticalLayout_26 = new cpr.controls.layouts.VerticalLayout();
-											verticalLayout_26.spacing = 0;
-											group_31.setLayout(verticalLayout_26);
+											var verticalLayout_25 = new cpr.controls.layouts.VerticalLayout();
+											verticalLayout_25.spacing = 0;
+											group_31.setLayout(verticalLayout_25);
 											(function(container){
-												var output_130 = new cpr.controls.Output("optGrildTitle8");
-												output_130.value = "준비금정보";
-												output_130.style.setClasses(["grid-title"]);
-												container.addChild(output_130, {
+												var output_125 = new cpr.controls.Output("optGrildTitle8");
+												output_125.value = "준비금정보";
+												output_125.style.setClasses(["grid-title"]);
+												container.addChild(output_125, {
 													"autoSize": "height",
 													"width": "300px",
 													"height": "17px"
@@ -3834,10 +3972,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column1";
 																cell.control = (function(){
-																	var output_131 = new cpr.controls.Output();
-																	output_131.style.setClasses(["text-center"]);
-																	output_131.bind("value").toDataColumn("column1");
-																	return output_131;
+																	var output_126 = new cpr.controls.Output();
+																	output_126.style.setClasses(["text-center"]);
+																	output_126.bind("value").toDataColumn("column1");
+																	return output_126;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3847,10 +3985,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column2";
 																cell.control = (function(){
-																	var output_132 = new cpr.controls.Output();
-																	output_132.style.setClasses(["text-center"]);
-																	output_132.bind("value").toDataColumn("column2");
-																	return output_132;
+																	var output_127 = new cpr.controls.Output();
+																	output_127.style.setClasses(["text-center"]);
+																	output_127.bind("value").toDataColumn("column2");
+																	return output_127;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3860,10 +3998,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column3";
 																cell.control = (function(){
-																	var output_133 = new cpr.controls.Output();
-																	output_133.style.setClasses(["text-center"]);
-																	output_133.bind("value").toDataColumn("column3");
-																	return output_133;
+																	var output_128 = new cpr.controls.Output();
+																	output_128.style.setClasses(["text-center"]);
+																	output_128.bind("value").toDataColumn("column3");
+																	return output_128;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3873,10 +4011,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column4";
 																cell.control = (function(){
-																	var output_134 = new cpr.controls.Output();
-																	output_134.style.setClasses(["text-center"]);
-																	output_134.bind("value").toDataColumn("column4");
-																	return output_134;
+																	var output_129 = new cpr.controls.Output();
+																	output_129.style.setClasses(["text-center"]);
+																	output_129.bind("value").toDataColumn("column4");
+																	return output_129;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3886,10 +4024,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column5";
 																cell.control = (function(){
-																	var output_135 = new cpr.controls.Output();
-																	output_135.style.setClasses(["text-center"]);
-																	output_135.bind("value").toDataColumn("column5");
-																	return output_135;
+																	var output_130 = new cpr.controls.Output();
+																	output_130.style.setClasses(["text-center"]);
+																	output_130.bind("value").toDataColumn("column5");
+																	return output_130;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3899,10 +4037,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column6";
 																cell.control = (function(){
-																	var output_136 = new cpr.controls.Output();
-																	output_136.style.setClasses(["text-center"]);
-																	output_136.bind("value").toDataColumn("column6");
-																	return output_136;
+																	var output_131 = new cpr.controls.Output();
+																	output_131.style.setClasses(["text-center"]);
+																	output_131.bind("value").toDataColumn("column6");
+																	return output_131;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3912,10 +4050,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column7";
 																cell.control = (function(){
-																	var output_137 = new cpr.controls.Output();
-																	output_137.style.setClasses(["text-center"]);
-																	output_137.bind("value").toDataColumn("column7");
-																	return output_137;
+																	var output_132 = new cpr.controls.Output();
+																	output_132.style.setClasses(["text-center"]);
+																	output_132.bind("value").toDataColumn("column7");
+																	return output_132;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3925,10 +4063,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column8";
 																cell.control = (function(){
-																	var output_138 = new cpr.controls.Output();
-																	output_138.style.setClasses(["text-center"]);
-																	output_138.bind("value").toDataColumn("column8");
-																	return output_138;
+																	var output_133 = new cpr.controls.Output();
+																	output_133.style.setClasses(["text-center"]);
+																	output_133.bind("value").toDataColumn("column8");
+																	return output_133;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3938,10 +4076,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column9";
 																cell.control = (function(){
-																	var output_139 = new cpr.controls.Output();
-																	output_139.style.setClasses(["text-center"]);
-																	output_139.bind("value").toDataColumn("column9");
-																	return output_139;
+																	var output_134 = new cpr.controls.Output();
+																	output_134.style.setClasses(["text-center"]);
+																	output_134.bind("value").toDataColumn("column9");
+																	return output_134;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3951,10 +4089,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column10";
 																cell.control = (function(){
-																	var output_140 = new cpr.controls.Output();
-																	output_140.style.setClasses(["text-center"]);
-																	output_140.bind("value").toDataColumn("column10");
-																	return output_140;
+																	var output_135 = new cpr.controls.Output();
+																	output_135.style.setClasses(["text-center"]);
+																	output_135.bind("value").toDataColumn("column10");
+																	return output_135;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3964,10 +4102,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column11";
 																cell.control = (function(){
-																	var output_141 = new cpr.controls.Output();
-																	output_141.style.setClasses(["text-center"]);
-																	output_141.bind("value").toDataColumn("column11");
-																	return output_141;
+																	var output_136 = new cpr.controls.Output();
+																	output_136.style.setClasses(["text-center"]);
+																	output_136.bind("value").toDataColumn("column11");
+																	return output_136;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3977,10 +4115,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column12";
 																cell.control = (function(){
-																	var output_142 = new cpr.controls.Output();
-																	output_142.style.setClasses(["text-center"]);
-																	output_142.bind("value").toDataColumn("column12");
-																	return output_142;
+																	var output_137 = new cpr.controls.Output();
+																	output_137.style.setClasses(["text-center"]);
+																	output_137.bind("value").toDataColumn("column12");
+																	return output_137;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -3990,10 +4128,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column13";
 																cell.control = (function(){
-																	var output_143 = new cpr.controls.Output();
-																	output_143.style.setClasses(["text-center"]);
-																	output_143.bind("value").toDataColumn("column13");
-																	return output_143;
+																	var output_138 = new cpr.controls.Output();
+																	output_138.style.setClasses(["text-center"]);
+																	output_138.bind("value").toDataColumn("column13");
+																	return output_138;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -4003,10 +4141,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column14";
 																cell.control = (function(){
-																	var output_144 = new cpr.controls.Output();
-																	output_144.style.setClasses(["text-center"]);
-																	output_144.bind("value").toDataColumn("column14");
-																	return output_144;
+																	var output_139 = new cpr.controls.Output();
+																	output_139.style.setClasses(["text-center"]);
+																	output_139.bind("value").toDataColumn("column14");
+																	return output_139;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -4016,10 +4154,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column15";
 																cell.control = (function(){
-																	var output_145 = new cpr.controls.Output();
-																	output_145.style.setClasses(["text-center"]);
-																	output_145.bind("value").toDataColumn("column15");
-																	return output_145;
+																	var output_140 = new cpr.controls.Output();
+																	output_140.style.setClasses(["text-center"]);
+																	output_140.bind("value").toDataColumn("column15");
+																	return output_140;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -4029,10 +4167,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column16";
 																cell.control = (function(){
-																	var output_146 = new cpr.controls.Output();
-																	output_146.style.setClasses(["text-center"]);
-																	output_146.bind("value").toDataColumn("column16");
-																	return output_146;
+																	var output_141 = new cpr.controls.Output();
+																	output_141.style.setClasses(["text-center"]);
+																	output_141.bind("value").toDataColumn("column16");
+																	return output_141;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -4042,13 +4180,13 @@
 															"configurator": function(cell){
 																cell.columnName = "column17";
 																cell.control = (function(){
-																	var output_147 = new cpr.controls.Output();
-																	output_147.value = "0";
-																	output_147.dataType = "number";
-																	output_147.format = "s#,##0";
-																	output_147.style.setClasses(["text-right"]);
-																	output_147.bind("value").toDataColumn("column17");
-																	return output_147;
+																	var output_142 = new cpr.controls.Output();
+																	output_142.value = "0";
+																	output_142.dataType = "number";
+																	output_142.format = "s#,##0";
+																	output_142.style.setClasses(["text-right"]);
+																	output_142.bind("value").toDataColumn("column17");
+																	return output_142;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -4058,13 +4196,13 @@
 															"configurator": function(cell){
 																cell.columnName = "column18";
 																cell.control = (function(){
-																	var output_148 = new cpr.controls.Output();
-																	output_148.value = "0";
-																	output_148.dataType = "number";
-																	output_148.format = "s#,##0";
-																	output_148.style.setClasses(["text-right"]);
-																	output_148.bind("value").toDataColumn("column18");
-																	return output_148;
+																	var output_143 = new cpr.controls.Output();
+																	output_143.value = "0";
+																	output_143.dataType = "number";
+																	output_143.format = "s#,##0";
+																	output_143.style.setClasses(["text-right"]);
+																	output_143.bind("value").toDataColumn("column18");
+																	return output_143;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -4085,20 +4223,20 @@
 										});
 										var group_32 = new cpr.controls.Container("grp24");
 										group_32.style.setClasses(["grid-box"]);
-										var verticalLayout_27 = new cpr.controls.layouts.VerticalLayout();
-										verticalLayout_27.spacing = 8;
-										group_32.setLayout(verticalLayout_27);
+										var verticalLayout_26 = new cpr.controls.layouts.VerticalLayout();
+										verticalLayout_26.spacing = 8;
+										group_32.setLayout(verticalLayout_26);
 										(function(container){
 											var group_33 = new cpr.controls.Container("grp25");
 											group_33.style.setClasses(["grid-title-box"]);
-											var verticalLayout_28 = new cpr.controls.layouts.VerticalLayout();
-											verticalLayout_28.spacing = 0;
-											group_33.setLayout(verticalLayout_28);
+											var verticalLayout_27 = new cpr.controls.layouts.VerticalLayout();
+											verticalLayout_27.spacing = 0;
+											group_33.setLayout(verticalLayout_27);
 											(function(container){
-												var output_149 = new cpr.controls.Output("optGrildTitle9");
-												output_149.value = "준비금키정보";
-												output_149.style.setClasses(["grid-title"]);
-												container.addChild(output_149, {
+												var output_144 = new cpr.controls.Output("optGrildTitle9");
+												output_144.value = "준비금키정보";
+												output_144.style.setClasses(["grid-title"]);
+												container.addChild(output_144, {
 													"autoSize": "height",
 													"width": "300px",
 													"height": "17px"
@@ -4289,10 +4427,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column1";
 																cell.control = (function(){
-																	var output_150 = new cpr.controls.Output();
-																	output_150.style.setClasses(["text-center"]);
-																	output_150.bind("value").toDataColumn("column1");
-																	return output_150;
+																	var output_145 = new cpr.controls.Output();
+																	output_145.style.setClasses(["text-center"]);
+																	output_145.bind("value").toDataColumn("column1");
+																	return output_145;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -4302,9 +4440,9 @@
 															"configurator": function(cell){
 																cell.columnName = "column19";
 																cell.control = (function(){
-																	var output_151 = new cpr.controls.Output();
-																	output_151.bind("value").toDataColumn("column19");
-																	return output_151;
+																	var output_146 = new cpr.controls.Output();
+																	output_146.bind("value").toDataColumn("column19");
+																	return output_146;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -4314,10 +4452,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column2";
 																cell.control = (function(){
-																	var output_152 = new cpr.controls.Output();
-																	output_152.style.setClasses(["text-center"]);
-																	output_152.bind("value").toDataColumn("column2");
-																	return output_152;
+																	var output_147 = new cpr.controls.Output();
+																	output_147.style.setClasses(["text-center"]);
+																	output_147.bind("value").toDataColumn("column2");
+																	return output_147;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -4327,10 +4465,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column3";
 																cell.control = (function(){
-																	var output_153 = new cpr.controls.Output();
-																	output_153.style.setClasses(["text-center"]);
-																	output_153.bind("value").toDataColumn("column3");
-																	return output_153;
+																	var output_148 = new cpr.controls.Output();
+																	output_148.style.setClasses(["text-center"]);
+																	output_148.bind("value").toDataColumn("column3");
+																	return output_148;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -4340,10 +4478,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column4";
 																cell.control = (function(){
-																	var output_154 = new cpr.controls.Output();
-																	output_154.style.setClasses(["text-center"]);
-																	output_154.bind("value").toDataColumn("column4");
-																	return output_154;
+																	var output_149 = new cpr.controls.Output();
+																	output_149.style.setClasses(["text-center"]);
+																	output_149.bind("value").toDataColumn("column4");
+																	return output_149;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -4353,10 +4491,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column5";
 																cell.control = (function(){
-																	var output_155 = new cpr.controls.Output();
-																	output_155.style.setClasses(["text-center"]);
-																	output_155.bind("value").toDataColumn("column5");
-																	return output_155;
+																	var output_150 = new cpr.controls.Output();
+																	output_150.style.setClasses(["text-center"]);
+																	output_150.bind("value").toDataColumn("column5");
+																	return output_150;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -4366,10 +4504,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column6";
 																cell.control = (function(){
-																	var output_156 = new cpr.controls.Output();
-																	output_156.style.setClasses(["text-center"]);
-																	output_156.bind("value").toDataColumn("column6");
-																	return output_156;
+																	var output_151 = new cpr.controls.Output();
+																	output_151.style.setClasses(["text-center"]);
+																	output_151.bind("value").toDataColumn("column6");
+																	return output_151;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -4379,10 +4517,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column7";
 																cell.control = (function(){
-																	var output_157 = new cpr.controls.Output();
-																	output_157.style.setClasses(["text-center"]);
-																	output_157.bind("value").toDataColumn("column7");
-																	return output_157;
+																	var output_152 = new cpr.controls.Output();
+																	output_152.style.setClasses(["text-center"]);
+																	output_152.bind("value").toDataColumn("column7");
+																	return output_152;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -4392,10 +4530,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column8";
 																cell.control = (function(){
-																	var output_158 = new cpr.controls.Output();
-																	output_158.style.setClasses(["text-center"]);
-																	output_158.bind("value").toDataColumn("column8");
-																	return output_158;
+																	var output_153 = new cpr.controls.Output();
+																	output_153.style.setClasses(["text-center"]);
+																	output_153.bind("value").toDataColumn("column8");
+																	return output_153;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -4405,10 +4543,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column9";
 																cell.control = (function(){
-																	var output_159 = new cpr.controls.Output();
-																	output_159.style.setClasses(["text-center"]);
-																	output_159.bind("value").toDataColumn("column9");
-																	return output_159;
+																	var output_154 = new cpr.controls.Output();
+																	output_154.style.setClasses(["text-center"]);
+																	output_154.bind("value").toDataColumn("column9");
+																	return output_154;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -4418,10 +4556,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column11";
 																cell.control = (function(){
-																	var output_160 = new cpr.controls.Output();
-																	output_160.style.setClasses(["text-center"]);
-																	output_160.bind("value").toDataColumn("column11");
-																	return output_160;
+																	var output_155 = new cpr.controls.Output();
+																	output_155.style.setClasses(["text-center"]);
+																	output_155.bind("value").toDataColumn("column11");
+																	return output_155;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -4431,10 +4569,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column12";
 																cell.control = (function(){
-																	var output_161 = new cpr.controls.Output();
-																	output_161.style.setClasses(["text-center"]);
-																	output_161.bind("value").toDataColumn("column12");
-																	return output_161;
+																	var output_156 = new cpr.controls.Output();
+																	output_156.style.setClasses(["text-center"]);
+																	output_156.bind("value").toDataColumn("column12");
+																	return output_156;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -4444,10 +4582,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column10";
 																cell.control = (function(){
-																	var output_162 = new cpr.controls.Output();
-																	output_162.style.setClasses(["text-center"]);
-																	output_162.bind("value").toDataColumn("column10");
-																	return output_162;
+																	var output_157 = new cpr.controls.Output();
+																	output_157.style.setClasses(["text-center"]);
+																	output_157.bind("value").toDataColumn("column10");
+																	return output_157;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -4457,10 +4595,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column14";
 																cell.control = (function(){
-																	var output_163 = new cpr.controls.Output();
-																	output_163.style.setClasses(["text-center"]);
-																	output_163.bind("value").toDataColumn("column14");
-																	return output_163;
+																	var output_158 = new cpr.controls.Output();
+																	output_158.style.setClasses(["text-center"]);
+																	output_158.bind("value").toDataColumn("column14");
+																	return output_158;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -4470,10 +4608,10 @@
 															"configurator": function(cell){
 																cell.columnName = "column15";
 																cell.control = (function(){
-																	var output_164 = new cpr.controls.Output();
-																	output_164.style.setClasses(["text-center"]);
-																	output_164.bind("value").toDataColumn("column15");
-																	return output_164;
+																	var output_159 = new cpr.controls.Output();
+																	output_159.style.setClasses(["text-center"]);
+																	output_159.bind("value").toDataColumn("column15");
+																	return output_159;
 																})();
 																cell.controlConstraint = {};
 															}
@@ -4520,9 +4658,9 @@
 						tabItem_6.text = "상세정보";
 						var group_34 = new cpr.controls.Container("grp16");
 						group_34.style.setClasses(["tab-area"]);
-						var verticalLayout_29 = new cpr.controls.layouts.VerticalLayout();
-						verticalLayout_29.spacing = 12;
-						group_34.setLayout(verticalLayout_29);
+						var verticalLayout_28 = new cpr.controls.layouts.VerticalLayout();
+						verticalLayout_28.spacing = 12;
+						group_34.setLayout(verticalLayout_28);
 						(function(container){
 							var embeddedApp_1 = new cpr.controls.EmbeddedApp("ea1");
 							cpr.core.App.load("sfa/상품/PDAL11M0_T1", function(app) {
@@ -4546,9 +4684,9 @@
 						tabItem_7.text = "계산내역관리";
 						var group_35 = new cpr.controls.Container("grp10");
 						group_35.style.setClasses(["tab-area"]);
-						var verticalLayout_30 = new cpr.controls.layouts.VerticalLayout();
-						verticalLayout_30.spacing = 12;
-						group_35.setLayout(verticalLayout_30);
+						var verticalLayout_29 = new cpr.controls.layouts.VerticalLayout();
+						verticalLayout_29.spacing = 12;
+						group_35.setLayout(verticalLayout_29);
 						(function(container){
 							var embeddedApp_2 = new cpr.controls.EmbeddedApp("ea2");
 							cpr.core.App.load("sfa/상품/PDAL11M0_T2", function(app) {
@@ -4572,9 +4710,9 @@
 						tabItem_8.text = "코드관리";
 						var group_36 = new cpr.controls.Container("grp11");
 						group_36.style.setClasses(["tab-area"]);
-						var verticalLayout_31 = new cpr.controls.layouts.VerticalLayout();
-						verticalLayout_31.spacing = 12;
-						group_36.setLayout(verticalLayout_31);
+						var verticalLayout_30 = new cpr.controls.layouts.VerticalLayout();
+						verticalLayout_30.spacing = 12;
+						group_36.setLayout(verticalLayout_30);
 						(function(container){
 							var embeddedApp_3 = new cpr.controls.EmbeddedApp("ea3");
 							container.addChild(embeddedApp_3, {

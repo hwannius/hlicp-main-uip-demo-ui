@@ -61,14 +61,14 @@
 					{"name": "column13"}
 				],
 				"rows": [
-					{"column1": "20111028", "column2": "주가연동이자적립", "column3": "20111129", "column4": "", "column5": "20111129", "column6": "20111129", "column7": "200000", "column8": "12000000", "column9": "", "column10": "", "column11": "76", "column12": "23080", "column13": ""},
-					{"column1": "20111028", "column2": "주가연동이자적립", "column3": "20111129", "column4": "", "column5": "20111129", "column6": "20111129", "column7": "200000", "column8": "12000000", "column9": "", "column10": "", "column11": "76", "column12": "23080", "column13": ""},
-					{"column1": "20111028", "column2": "주가연동이자적립", "column3": "20111129", "column4": "", "column5": "20111129", "column6": "20111129", "column7": "200000", "column8": "12000000", "column9": "", "column10": "", "column11": "76", "column12": "23080", "column13": ""},
-					{"column1": "20111028", "column2": "주가연동이자적립", "column3": "20111129", "column4": "", "column5": "20111129", "column6": "20111129", "column7": "200000", "column8": "12000000", "column9": "", "column10": "", "column11": "76", "column12": "23080", "column13": ""},
-					{"column1": "20111028", "column2": "주가연동이자적립", "column3": "20111129", "column4": "", "column5": "20111129", "column6": "20111129", "column7": "200000", "column8": "12000000", "column9": "", "column10": "", "column11": "76", "column12": "23080", "column13": ""},
-					{"column1": "20111028", "column2": "주가연동이자적립", "column3": "20111129", "column4": "", "column5": "20111129", "column6": "20111129", "column7": "200000", "column8": "12000000", "column9": "", "column10": "", "column11": "76", "column12": "23080", "column13": ""},
-					{"column1": "20111028", "column2": "주가연동이자적립", "column3": "20111129", "column4": "", "column5": "20111129", "column6": "20111129", "column7": "200000", "column8": "12000000", "column9": "", "column10": "", "column11": "76", "column12": "23080", "column13": ""},
-					{"column1": "20111028", "column2": "주가연동이자적립", "column3": "20111129", "column4": "", "column5": "20111129", "column6": "20111129", "column7": "200000", "column8": "12000000", "column9": "", "column10": "", "column11": "76", "column12": "23080", "column13": ""}
+					{"column1": "20240405", "column2": "주가연동이자적립", "column3": "20240405", "column4": "", "column5": "20240405", "column6": "20240405", "column7": "200000", "column8": "12000000", "column9": "", "column10": "", "column11": "76", "column12": "23080", "column13": ""},
+					{"column1": "20240405", "column2": "주가연동이자적립", "column3": "20240405", "column4": "", "column5": "20240405", "column6": "20240405", "column7": "200000", "column8": "12000000", "column9": "", "column10": "", "column11": "76", "column12": "23080", "column13": ""},
+					{"column1": "20240405", "column2": "주가연동이자적립", "column3": "20240405", "column4": "", "column5": "20240405", "column6": "20240405", "column7": "200000", "column8": "12000000", "column9": "", "column10": "", "column11": "76", "column12": "23080", "column13": ""},
+					{"column1": "20240405", "column2": "주가연동이자적립", "column3": "20240405", "column4": "", "column5": "20240405", "column6": "20240405", "column7": "200000", "column8": "12000000", "column9": "", "column10": "", "column11": "76", "column12": "23080", "column13": ""},
+					{"column1": "20240405", "column2": "주가연동이자적립", "column3": "20240405", "column4": "", "column5": "20240405", "column6": "20240405", "column7": "200000", "column8": "12000000", "column9": "", "column10": "", "column11": "76", "column12": "23080", "column13": ""},
+					{"column1": "20240405", "column2": "주가연동이자적립", "column3": "20240405", "column4": "", "column5": "20240405", "column6": "20240405", "column7": "200000", "column8": "12000000", "column9": "", "column10": "", "column11": "76", "column12": "23080", "column13": ""},
+					{"column1": "20240405", "column2": "주가연동이자적립", "column3": "20240405", "column4": "", "column5": "20240405", "column6": "20240405", "column7": "200000", "column8": "12000000", "column9": "", "column10": "", "column11": "76", "column12": "23080", "column13": ""},
+					{"column1": "20240405", "column2": "주가연동이자적립", "column3": "20240405", "column4": "", "column5": "20240405", "column6": "20240405", "column7": "200000", "column8": "12000000", "column9": "", "column10": "", "column11": "76", "column12": "23080", "column13": ""}
 				]
 			});
 			app.register(dataSet_2);
@@ -288,6 +288,7 @@
 											output_2.bind("value").toDataColumn("column1");
 											return output_2;
 										})();
+										cell.controlConstraint = {};
 									}
 								},
 								{
@@ -601,6 +602,20 @@
 													cell.sortable = false;
 													cell.targetColumnName = "column1";
 													cell.text = "응답일자";
+													cell.style.css({
+														"border-right-style" : "dashed",
+														"border-top-width" : "3px",
+														"border-bottom-color" : "red",
+														"border-left-style" : "dashed",
+														"border-right-width" : "3px",
+														"border-bottom-width" : "3px",
+														"border-left-color" : "red",
+														"border-top-color" : "red",
+														"border-bottom-style" : "dashed",
+														"border-right-color" : "red",
+														"border-left-width" : "3px",
+														"border-top-style" : "dashed"
+													});
 												}
 											},
 											{
@@ -700,6 +715,20 @@
 													cell.sortable = false;
 													cell.targetColumnName = "column12";
 													cell.text = "신계약비1";
+													cell.style.css({
+														"border-right-style" : "dashed",
+														"border-top-width" : "3px",
+														"border-bottom-color" : "red",
+														"border-left-style" : "dashed",
+														"border-right-width" : "3px",
+														"border-bottom-width" : "3px",
+														"border-left-color" : "red",
+														"border-top-color" : "red",
+														"border-bottom-style" : "dashed",
+														"border-right-color" : "red",
+														"border-left-width" : "3px",
+														"border-top-style" : "dashed"
+													});
 												}
 											},
 											{
@@ -709,12 +738,40 @@
 													cell.sortable = false;
 													cell.targetColumnName = "column13";
 													cell.text = "신계약비2";
+													cell.style.css({
+														"border-right-style" : "dashed",
+														"border-top-width" : "3px",
+														"border-bottom-color" : "red",
+														"border-left-style" : "dashed",
+														"border-right-width" : "3px",
+														"border-bottom-width" : "3px",
+														"border-left-color" : "red",
+														"border-top-color" : "red",
+														"border-bottom-style" : "dashed",
+														"border-right-color" : "red",
+														"border-left-width" : "3px",
+														"border-top-style" : "dashed"
+													});
 												}
 											},
 											{
 												"constraint": {"rowIndex": 0, "colIndex": 11, "rowSpan": 1, "colSpan": 2},
 												"configurator": function(cell){
 													cell.text = "예정사업비";
+													cell.style.css({
+														"border-right-style" : "dashed",
+														"border-top-width" : "3px",
+														"border-bottom-color" : "red",
+														"border-left-style" : "dashed",
+														"border-right-width" : "3px",
+														"border-bottom-width" : "3px",
+														"border-left-color" : "red",
+														"border-top-color" : "red",
+														"border-bottom-style" : "dashed",
+														"border-right-color" : "red",
+														"border-left-width" : "3px",
+														"border-top-style" : "dashed"
+													});
 												}
 											}
 										]
@@ -731,6 +788,20 @@
 														output_15.value = "20241231";
 														output_15.dataType = "date";
 														output_15.format = "YYYY-MM-DD";
+														output_15.style.css({
+															"border-right-style" : "dashed",
+															"border-top-width" : "3px",
+															"border-bottom-color" : "red",
+															"border-left-style" : "dashed",
+															"border-right-width" : "3px",
+															"border-bottom-width" : "3px",
+															"border-left-color" : "red",
+															"border-top-color" : "red",
+															"border-bottom-style" : "dashed",
+															"border-right-color" : "red",
+															"border-left-width" : "3px",
+															"border-top-style" : "dashed"
+														});
 														output_15.bind("value").toDataColumn("column1");
 														return output_15;
 													})();
@@ -891,6 +962,20 @@
 												"constraint": {"rowIndex": 0, "colIndex": 11},
 												"configurator": function(cell){
 													cell.columnName = "column12";
+													cell.style.css({
+														"border-right-style" : "dashed",
+														"border-top-width" : "3px",
+														"border-bottom-color" : "red",
+														"border-left-style" : "dashed",
+														"border-right-width" : "3px",
+														"border-bottom-width" : "3px",
+														"border-left-color" : "red",
+														"border-top-color" : "red",
+														"border-bottom-style" : "dashed",
+														"border-right-color" : "red",
+														"border-left-width" : "3px",
+														"border-top-style" : "dashed"
+													});
 													cell.control = (function(){
 														var output_26 = new cpr.controls.Output();
 														output_26.value = "0";
@@ -907,6 +992,20 @@
 												"constraint": {"rowIndex": 0, "colIndex": 12},
 												"configurator": function(cell){
 													cell.columnName = "column13";
+													cell.style.css({
+														"border-right-style" : "dashed",
+														"border-top-width" : "3px",
+														"border-bottom-color" : "red",
+														"border-left-style" : "dashed",
+														"border-right-width" : "3px",
+														"border-bottom-width" : "3px",
+														"border-left-color" : "red",
+														"border-top-color" : "red",
+														"border-bottom-style" : "dashed",
+														"border-right-color" : "red",
+														"border-left-width" : "3px",
+														"border-top-style" : "dashed"
+													});
 													cell.control = (function(){
 														var output_27 = new cpr.controls.Output();
 														output_27.value = "0";

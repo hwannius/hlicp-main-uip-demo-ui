@@ -15,7 +15,7 @@
     <cl:group std:sid="group-f6cc10a5" id="grpAppTitle" class="app-title">
       <cl:verticaldata std:sid="v-data-ef7e8ea1" width="1560px" height="35px" autosize="height"/>
       <cl:output std:sid="output-c6ce190d" id="optTitle" class="navi-left" value="기본정보등록">
-        <cl:formdata std:sid="f-data-fbb0cc9f" row="0" col="0"/>
+        <cl:formdata std:sid="f-data-84645346" row="0" col="0" rowspan="1" colspan="1"/>
       </cl:output>
       <cl:group std:sid="group-799c377d" id="grpNavi" class="breadcrumbs">
         <cl:formdata std:sid="f-data-b5509d70" row="0" col="1"/>
@@ -99,6 +99,9 @@
         </cl:group>
         <cl:verticallayout std:sid="v-layout-28a66f41" spacing="12"/>
       </cl:group>
+      <cl:output std:sid="output-79e22c2d" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-right-width:3px; border-left-style:dashed; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-right-color:red; border-bottom-style:dashed; border-left-width:3px; border-top-style:dashed;" class="form-title" value="기본정보">
+        <cl:verticaldata std:sid="v-data-00cb28c6" width="110px" height="20px" autosize="none"/>
+      </cl:output>
       <cl:group std:sid="group-44c56dc2" id="grp1" class="form-box">
         <cl:verticaldata std:sid="v-data-f6af4315" width="1560px" height="187px" autosize="height"/>
         <cl:group std:sid="group-cf8c4f3f" id="grp2" class="form-title-box">
@@ -107,9 +110,15 @@
             <std:property key="template-rev" value="1"/>
           </std:metadata>
           <cl:verticaldata std:sid="v-data-4beb8906" width="796px" height="17px" autosize="height"/>
-          <cl:output std:sid="output-79e22c2d" class="form-title" value="기본정보">
-            <cl:verticaldata std:sid="v-data-614ead96" width="100px" height="17px" autosize="height"/>
-          </cl:output>
+          <cl:group std:sid="group-84f1de0e">
+            <cl:verticaldata std:sid="v-data-517f4fad" width="1560px" height="17px"/>
+            <cl:formlayout std:sid="f-layout-506682c6" scrollable="false" hspace="2px" vspace="2px" top-margin="2px" right-margin="2px" bottom-margin="2px" left-margin="2px">
+              <cl:rows length="26" unit="PIXEL"/>
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:columns length="110" unit="PIXEL"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
           <cl:verticallayout std:sid="v-layout-4880331e" spacing="0"/>
         </cl:group>
         <cl:group std:sid="group-52436b02" id="grp3" class="form-normal">

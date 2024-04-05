@@ -12,9 +12,9 @@
       <cl:dataset std:sid="d-set-488e0a4e" id="ds1">
         <cl:datacolumnlist>
           <cl:datacolumn comment="요율코드" std:sid="d-column-b9634809" name="column1"/>
-          <cl:datacolumn comment="보험기간" std:sid="d-column-6186fd2f" name="column2"/>
-          <cl:datacolumn comment="납입주기" std:sid="d-column-37f174c1" name="column3"/>
-          <cl:datacolumn comment="납입기간" std:sid="d-column-637e8c4d" name="column4"/>
+          <cl:datacolumn comment="보험기간" std:sid="d-column-6186fd2f" info="" name="column2" datatype="string" displayonly="false"/>
+          <cl:datacolumn comment="납입주기" std:sid="d-column-37f174c1" name="column3" datatype="string" displayonly="false"/>
+          <cl:datacolumn comment="납입기간" std:sid="d-column-637e8c4d" name="column4" datatype="string"/>
           <cl:datacolumn comment="주피보험자연령" std:sid="d-column-328501b7" name="column5"/>
           <cl:datacolumn comment="종피보험자연령" std:sid="d-column-679a1580" name="column6"/>
           <cl:datacolumn comment="건강체구분" std:sid="d-column-e714f48b" name="column7"/>
@@ -39,274 +39,274 @@
         </cl:datacolumnlist>
         <cl:datarowlist>
           <cl:datarow>
-            <cl:datavalue columnname="column1"><![CDATA[I15153]]></cl:datavalue>
-            <cl:datavalue columnname="column2"><![CDATA[15]]></cl:datavalue>
-            <cl:datavalue columnname="column3"><![CDATA[1]]></cl:datavalue>
-            <cl:datavalue columnname="column4"><![CDATA[10]]></cl:datavalue>
-            <cl:datavalue columnname="column5"><![CDATA[15]]></cl:datavalue>
-            <cl:datavalue columnname="column6"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column7"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column8"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column9"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column10"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column11"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column12"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column13"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column14"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column15"><![CDATA[1]]></cl:datavalue>
-            <cl:datavalue columnname="column16"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column17"><![CDATA[6770]]></cl:datavalue>
-            <cl:datavalue columnname="column18"><![CDATA[582]]></cl:datavalue>
-            <cl:datavalue columnname="column19"><![CDATA[5847]]></cl:datavalue>
-            <cl:datavalue columnname="column20"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column21"><![CDATA[6838]]></cl:datavalue>
-            <cl:datavalue columnname="column22"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column23"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column24"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column25"><![CDATA[0]]></cl:datavalue>
+            <cl:datavalue columnname="column1">I15153</cl:datavalue>
+            <cl:datavalue columnname="column3"><![CDATA[월납]]></cl:datavalue>
+            <cl:datavalue columnname="column4"><![CDATA[10년납]]></cl:datavalue>
+            <cl:datavalue columnname="column5"><![CDATA[45]]></cl:datavalue>
+            <cl:datavalue columnname="column6"><![CDATA[45]]></cl:datavalue>
+            <cl:datavalue columnname="column7"><![CDATA[A]]></cl:datavalue>
+            <cl:datavalue columnname="column8"><![CDATA[3]]></cl:datavalue>
+            <cl:datavalue columnname="column9"><![CDATA[비위험]]></cl:datavalue>
+            <cl:datavalue columnname="column10"><![CDATA[1978]]></cl:datavalue>
+            <cl:datavalue columnname="column11"><![CDATA[1]]></cl:datavalue>
+            <cl:datavalue columnname="column12"><![CDATA[5]]></cl:datavalue>
+            <cl:datavalue columnname="column13"><![CDATA[B]]></cl:datavalue>
+            <cl:datavalue columnname="column14"><![CDATA[E]]></cl:datavalue>
+            <cl:datavalue columnname="column15"><![CDATA[여]]></cl:datavalue>
+            <cl:datavalue columnname="column16">0</cl:datavalue>
+            <cl:datavalue columnname="column17">6770</cl:datavalue>
+            <cl:datavalue columnname="column18">582</cl:datavalue>
+            <cl:datavalue columnname="column19">5847</cl:datavalue>
+            <cl:datavalue columnname="column20">0</cl:datavalue>
+            <cl:datavalue columnname="column21">6838</cl:datavalue>
+            <cl:datavalue columnname="column22">0</cl:datavalue>
+            <cl:datavalue columnname="column23">0</cl:datavalue>
+            <cl:datavalue columnname="column24">0</cl:datavalue>
+            <cl:datavalue columnname="column25">0</cl:datavalue>
+            <cl:datavalue columnname="column2"><![CDATA[1년만기]]></cl:datavalue>
           </cl:datarow>
           <cl:datarow>
-            <cl:datavalue columnname="column1"><![CDATA[I15153]]></cl:datavalue>
-            <cl:datavalue columnname="column2"><![CDATA[15]]></cl:datavalue>
-            <cl:datavalue columnname="column3"><![CDATA[1]]></cl:datavalue>
-            <cl:datavalue columnname="column4"><![CDATA[10]]></cl:datavalue>
-            <cl:datavalue columnname="column5"><![CDATA[15]]></cl:datavalue>
-            <cl:datavalue columnname="column6"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column7"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column8"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column9"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column10"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column11"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column12"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column13"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column14"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column15"><![CDATA[1]]></cl:datavalue>
-            <cl:datavalue columnname="column16"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column17"><![CDATA[6770]]></cl:datavalue>
-            <cl:datavalue columnname="column18"><![CDATA[582]]></cl:datavalue>
-            <cl:datavalue columnname="column19"><![CDATA[5847]]></cl:datavalue>
-            <cl:datavalue columnname="column20"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column21"><![CDATA[6838]]></cl:datavalue>
-            <cl:datavalue columnname="column22"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column23"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column24"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column25"><![CDATA[0]]></cl:datavalue>
+            <cl:datavalue columnname="column1">I15153</cl:datavalue>
+            <cl:datavalue columnname="column3"><![CDATA[연납]]></cl:datavalue>
+            <cl:datavalue columnname="column4"><![CDATA[전기납]]></cl:datavalue>
+            <cl:datavalue columnname="column5"><![CDATA[45]]></cl:datavalue>
+            <cl:datavalue columnname="column6"><![CDATA[45]]></cl:datavalue>
+            <cl:datavalue columnname="column7"><![CDATA[A]]></cl:datavalue>
+            <cl:datavalue columnname="column8"><![CDATA[3]]></cl:datavalue>
+            <cl:datavalue columnname="column9"><![CDATA[위험]]></cl:datavalue>
+            <cl:datavalue columnname="column10"><![CDATA[1978]]></cl:datavalue>
+            <cl:datavalue columnname="column11"><![CDATA[1]]></cl:datavalue>
+            <cl:datavalue columnname="column12"><![CDATA[10]]></cl:datavalue>
+            <cl:datavalue columnname="column13"><![CDATA[B]]></cl:datavalue>
+            <cl:datavalue columnname="column14"><![CDATA[E]]></cl:datavalue>
+            <cl:datavalue columnname="column15"><![CDATA[여]]></cl:datavalue>
+            <cl:datavalue columnname="column16">0</cl:datavalue>
+            <cl:datavalue columnname="column17">6770</cl:datavalue>
+            <cl:datavalue columnname="column18">582</cl:datavalue>
+            <cl:datavalue columnname="column19">5847</cl:datavalue>
+            <cl:datavalue columnname="column20">0</cl:datavalue>
+            <cl:datavalue columnname="column21">6838</cl:datavalue>
+            <cl:datavalue columnname="column22">0</cl:datavalue>
+            <cl:datavalue columnname="column23">0</cl:datavalue>
+            <cl:datavalue columnname="column24">0</cl:datavalue>
+            <cl:datavalue columnname="column25">0</cl:datavalue>
+            <cl:datavalue columnname="column2"><![CDATA[5년만기]]></cl:datavalue>
           </cl:datarow>
           <cl:datarow>
-            <cl:datavalue columnname="column1"><![CDATA[I15153]]></cl:datavalue>
-            <cl:datavalue columnname="column2"><![CDATA[15]]></cl:datavalue>
-            <cl:datavalue columnname="column3"><![CDATA[1]]></cl:datavalue>
-            <cl:datavalue columnname="column4"><![CDATA[10]]></cl:datavalue>
-            <cl:datavalue columnname="column5"><![CDATA[15]]></cl:datavalue>
-            <cl:datavalue columnname="column6"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column7"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column8"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column9"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column10"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column11"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column12"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column13"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column14"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column15"><![CDATA[1]]></cl:datavalue>
-            <cl:datavalue columnname="column16"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column17"><![CDATA[6770]]></cl:datavalue>
-            <cl:datavalue columnname="column18"><![CDATA[582]]></cl:datavalue>
-            <cl:datavalue columnname="column19"><![CDATA[5847]]></cl:datavalue>
-            <cl:datavalue columnname="column20"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column21"><![CDATA[6838]]></cl:datavalue>
-            <cl:datavalue columnname="column22"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column23"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column24"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column25"><![CDATA[0]]></cl:datavalue>
+            <cl:datavalue columnname="column1">I15153</cl:datavalue>
+            <cl:datavalue columnname="column3"><![CDATA[월납]]></cl:datavalue>
+            <cl:datavalue columnname="column4"><![CDATA[5년납]]></cl:datavalue>
+            <cl:datavalue columnname="column5"><![CDATA[45]]></cl:datavalue>
+            <cl:datavalue columnname="column6"><![CDATA[45]]></cl:datavalue>
+            <cl:datavalue columnname="column7"><![CDATA[A]]></cl:datavalue>
+            <cl:datavalue columnname="column8"><![CDATA[3]]></cl:datavalue>
+            <cl:datavalue columnname="column9"><![CDATA[위험]]></cl:datavalue>
+            <cl:datavalue columnname="column10"><![CDATA[1978]]></cl:datavalue>
+            <cl:datavalue columnname="column11"><![CDATA[1]]></cl:datavalue>
+            <cl:datavalue columnname="column12"><![CDATA[10]]></cl:datavalue>
+            <cl:datavalue columnname="column13"><![CDATA[B]]></cl:datavalue>
+            <cl:datavalue columnname="column14"><![CDATA[E]]></cl:datavalue>
+            <cl:datavalue columnname="column15"><![CDATA[여]]></cl:datavalue>
+            <cl:datavalue columnname="column16">0</cl:datavalue>
+            <cl:datavalue columnname="column17">6770</cl:datavalue>
+            <cl:datavalue columnname="column18">582</cl:datavalue>
+            <cl:datavalue columnname="column19">5847</cl:datavalue>
+            <cl:datavalue columnname="column20">0</cl:datavalue>
+            <cl:datavalue columnname="column21">6838</cl:datavalue>
+            <cl:datavalue columnname="column22">0</cl:datavalue>
+            <cl:datavalue columnname="column23">0</cl:datavalue>
+            <cl:datavalue columnname="column24">0</cl:datavalue>
+            <cl:datavalue columnname="column25">0</cl:datavalue>
+            <cl:datavalue columnname="column2"><![CDATA[5년만기]]></cl:datavalue>
           </cl:datarow>
           <cl:datarow>
-            <cl:datavalue columnname="column1"><![CDATA[I15153]]></cl:datavalue>
-            <cl:datavalue columnname="column2"><![CDATA[15]]></cl:datavalue>
-            <cl:datavalue columnname="column3"><![CDATA[1]]></cl:datavalue>
-            <cl:datavalue columnname="column4"><![CDATA[10]]></cl:datavalue>
-            <cl:datavalue columnname="column5"><![CDATA[15]]></cl:datavalue>
-            <cl:datavalue columnname="column6"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column7"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column8"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column9"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column10"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column11"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column12"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column13"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column14"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column15"><![CDATA[1]]></cl:datavalue>
-            <cl:datavalue columnname="column16"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column17"><![CDATA[6770]]></cl:datavalue>
-            <cl:datavalue columnname="column18"><![CDATA[582]]></cl:datavalue>
-            <cl:datavalue columnname="column19"><![CDATA[5847]]></cl:datavalue>
-            <cl:datavalue columnname="column20"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column21"><![CDATA[6838]]></cl:datavalue>
-            <cl:datavalue columnname="column22"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column23"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column24"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column25"><![CDATA[0]]></cl:datavalue>
+            <cl:datavalue columnname="column1">I15153</cl:datavalue>
+            <cl:datavalue columnname="column3"><![CDATA[월납]]></cl:datavalue>
+            <cl:datavalue columnname="column4"><![CDATA[5년납]]></cl:datavalue>
+            <cl:datavalue columnname="column5"><![CDATA[45]]></cl:datavalue>
+            <cl:datavalue columnname="column6"><![CDATA[45]]></cl:datavalue>
+            <cl:datavalue columnname="column7"><![CDATA[A]]></cl:datavalue>
+            <cl:datavalue columnname="column8"><![CDATA[3]]></cl:datavalue>
+            <cl:datavalue columnname="column9"><![CDATA[비위험]]></cl:datavalue>
+            <cl:datavalue columnname="column10"><![CDATA[1978]]></cl:datavalue>
+            <cl:datavalue columnname="column11"><![CDATA[1]]></cl:datavalue>
+            <cl:datavalue columnname="column12"><![CDATA[10]]></cl:datavalue>
+            <cl:datavalue columnname="column13"><![CDATA[B]]></cl:datavalue>
+            <cl:datavalue columnname="column14"><![CDATA[E]]></cl:datavalue>
+            <cl:datavalue columnname="column15"><![CDATA[여]]></cl:datavalue>
+            <cl:datavalue columnname="column16">0</cl:datavalue>
+            <cl:datavalue columnname="column17">6770</cl:datavalue>
+            <cl:datavalue columnname="column18">582</cl:datavalue>
+            <cl:datavalue columnname="column19">5847</cl:datavalue>
+            <cl:datavalue columnname="column20">0</cl:datavalue>
+            <cl:datavalue columnname="column21">6838</cl:datavalue>
+            <cl:datavalue columnname="column22">0</cl:datavalue>
+            <cl:datavalue columnname="column23">0</cl:datavalue>
+            <cl:datavalue columnname="column24">0</cl:datavalue>
+            <cl:datavalue columnname="column25">0</cl:datavalue>
+            <cl:datavalue columnname="column2"><![CDATA[1년만기]]></cl:datavalue>
           </cl:datarow>
           <cl:datarow>
-            <cl:datavalue columnname="column1"><![CDATA[I15153]]></cl:datavalue>
-            <cl:datavalue columnname="column2"><![CDATA[15]]></cl:datavalue>
-            <cl:datavalue columnname="column3"><![CDATA[1]]></cl:datavalue>
-            <cl:datavalue columnname="column4"><![CDATA[10]]></cl:datavalue>
-            <cl:datavalue columnname="column5"><![CDATA[15]]></cl:datavalue>
-            <cl:datavalue columnname="column6"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column7"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column8"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column9"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column10"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column11"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column12"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column13"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column14"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column15"><![CDATA[1]]></cl:datavalue>
-            <cl:datavalue columnname="column16"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column17"><![CDATA[6770]]></cl:datavalue>
-            <cl:datavalue columnname="column18"><![CDATA[582]]></cl:datavalue>
-            <cl:datavalue columnname="column19"><![CDATA[5847]]></cl:datavalue>
-            <cl:datavalue columnname="column20"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column21"><![CDATA[6838]]></cl:datavalue>
-            <cl:datavalue columnname="column22"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column23"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column24"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column25"><![CDATA[0]]></cl:datavalue>
+            <cl:datavalue columnname="column1">I15153</cl:datavalue>
+            <cl:datavalue columnname="column3"><![CDATA[월납]]></cl:datavalue>
+            <cl:datavalue columnname="column4"><![CDATA[20년납]]></cl:datavalue>
+            <cl:datavalue columnname="column5"><![CDATA[45]]></cl:datavalue>
+            <cl:datavalue columnname="column6"><![CDATA[45]]></cl:datavalue>
+            <cl:datavalue columnname="column7"><![CDATA[A]]></cl:datavalue>
+            <cl:datavalue columnname="column8"><![CDATA[3]]></cl:datavalue>
+            <cl:datavalue columnname="column9"><![CDATA[비위험]]></cl:datavalue>
+            <cl:datavalue columnname="column10"><![CDATA[1978]]></cl:datavalue>
+            <cl:datavalue columnname="column11"><![CDATA[1]]></cl:datavalue>
+            <cl:datavalue columnname="column12"><![CDATA[8]]></cl:datavalue>
+            <cl:datavalue columnname="column13"><![CDATA[B]]></cl:datavalue>
+            <cl:datavalue columnname="column14"><![CDATA[E]]></cl:datavalue>
+            <cl:datavalue columnname="column15"><![CDATA[여]]></cl:datavalue>
+            <cl:datavalue columnname="column16">0</cl:datavalue>
+            <cl:datavalue columnname="column17">6770</cl:datavalue>
+            <cl:datavalue columnname="column18">582</cl:datavalue>
+            <cl:datavalue columnname="column19">5847</cl:datavalue>
+            <cl:datavalue columnname="column20">0</cl:datavalue>
+            <cl:datavalue columnname="column21">6838</cl:datavalue>
+            <cl:datavalue columnname="column22">0</cl:datavalue>
+            <cl:datavalue columnname="column23">0</cl:datavalue>
+            <cl:datavalue columnname="column24">0</cl:datavalue>
+            <cl:datavalue columnname="column25">0</cl:datavalue>
+            <cl:datavalue columnname="column2"><![CDATA[1년만기]]></cl:datavalue>
           </cl:datarow>
           <cl:datarow>
-            <cl:datavalue columnname="column1"><![CDATA[I15153]]></cl:datavalue>
-            <cl:datavalue columnname="column2"><![CDATA[15]]></cl:datavalue>
-            <cl:datavalue columnname="column3"><![CDATA[1]]></cl:datavalue>
-            <cl:datavalue columnname="column4"><![CDATA[10]]></cl:datavalue>
-            <cl:datavalue columnname="column5"><![CDATA[15]]></cl:datavalue>
-            <cl:datavalue columnname="column6"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column7"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column8"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column9"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column10"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column11"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column12"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column13"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column14"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column15"><![CDATA[1]]></cl:datavalue>
-            <cl:datavalue columnname="column16"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column17"><![CDATA[6770]]></cl:datavalue>
-            <cl:datavalue columnname="column18"><![CDATA[582]]></cl:datavalue>
-            <cl:datavalue columnname="column19"><![CDATA[5847]]></cl:datavalue>
-            <cl:datavalue columnname="column20"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column21"><![CDATA[6838]]></cl:datavalue>
-            <cl:datavalue columnname="column22"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column23"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column24"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column25"><![CDATA[0]]></cl:datavalue>
+            <cl:datavalue columnname="column1">I15153</cl:datavalue>
+            <cl:datavalue columnname="column3"><![CDATA[월납]]></cl:datavalue>
+            <cl:datavalue columnname="column4"><![CDATA[5년납]]></cl:datavalue>
+            <cl:datavalue columnname="column5"><![CDATA[45]]></cl:datavalue>
+            <cl:datavalue columnname="column6"><![CDATA[45]]></cl:datavalue>
+            <cl:datavalue columnname="column7"><![CDATA[A]]></cl:datavalue>
+            <cl:datavalue columnname="column8"><![CDATA[3]]></cl:datavalue>
+            <cl:datavalue columnname="column9"><![CDATA[비위험]]></cl:datavalue>
+            <cl:datavalue columnname="column10"><![CDATA[1978]]></cl:datavalue>
+            <cl:datavalue columnname="column11"><![CDATA[1]]></cl:datavalue>
+            <cl:datavalue columnname="column12"><![CDATA[25]]></cl:datavalue>
+            <cl:datavalue columnname="column13"><![CDATA[B]]></cl:datavalue>
+            <cl:datavalue columnname="column14"><![CDATA[E]]></cl:datavalue>
+            <cl:datavalue columnname="column15"><![CDATA[여]]></cl:datavalue>
+            <cl:datavalue columnname="column16">0</cl:datavalue>
+            <cl:datavalue columnname="column17">6770</cl:datavalue>
+            <cl:datavalue columnname="column18">582</cl:datavalue>
+            <cl:datavalue columnname="column19">5847</cl:datavalue>
+            <cl:datavalue columnname="column20">0</cl:datavalue>
+            <cl:datavalue columnname="column21">6838</cl:datavalue>
+            <cl:datavalue columnname="column22">0</cl:datavalue>
+            <cl:datavalue columnname="column23">0</cl:datavalue>
+            <cl:datavalue columnname="column24">0</cl:datavalue>
+            <cl:datavalue columnname="column25">0</cl:datavalue>
+            <cl:datavalue columnname="column2"><![CDATA[20년만기]]></cl:datavalue>
           </cl:datarow>
           <cl:datarow>
-            <cl:datavalue columnname="column1"><![CDATA[I15153]]></cl:datavalue>
-            <cl:datavalue columnname="column2"><![CDATA[15]]></cl:datavalue>
-            <cl:datavalue columnname="column3"><![CDATA[1]]></cl:datavalue>
-            <cl:datavalue columnname="column4"><![CDATA[10]]></cl:datavalue>
-            <cl:datavalue columnname="column5"><![CDATA[15]]></cl:datavalue>
-            <cl:datavalue columnname="column6"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column7"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column8"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column9"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column10"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column11"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column12"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column13"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column14"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column15"><![CDATA[1]]></cl:datavalue>
-            <cl:datavalue columnname="column16"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column17"><![CDATA[6770]]></cl:datavalue>
-            <cl:datavalue columnname="column18"><![CDATA[582]]></cl:datavalue>
-            <cl:datavalue columnname="column19"><![CDATA[5847]]></cl:datavalue>
-            <cl:datavalue columnname="column20"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column21"><![CDATA[6838]]></cl:datavalue>
-            <cl:datavalue columnname="column22"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column23"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column24"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column25"><![CDATA[0]]></cl:datavalue>
+            <cl:datavalue columnname="column1">I15153</cl:datavalue>
+            <cl:datavalue columnname="column3"><![CDATA[연납]]></cl:datavalue>
+            <cl:datavalue columnname="column4"><![CDATA[10년납]]></cl:datavalue>
+            <cl:datavalue columnname="column5"><![CDATA[45]]></cl:datavalue>
+            <cl:datavalue columnname="column6"><![CDATA[45]]></cl:datavalue>
+            <cl:datavalue columnname="column7"><![CDATA[A]]></cl:datavalue>
+            <cl:datavalue columnname="column8"><![CDATA[3]]></cl:datavalue>
+            <cl:datavalue columnname="column9"><![CDATA[비위험]]></cl:datavalue>
+            <cl:datavalue columnname="column10"><![CDATA[1978]]></cl:datavalue>
+            <cl:datavalue columnname="column11"><![CDATA[1]]></cl:datavalue>
+            <cl:datavalue columnname="column12"><![CDATA[45]]></cl:datavalue>
+            <cl:datavalue columnname="column13"><![CDATA[B]]></cl:datavalue>
+            <cl:datavalue columnname="column14"><![CDATA[E]]></cl:datavalue>
+            <cl:datavalue columnname="column15"><![CDATA[여]]></cl:datavalue>
+            <cl:datavalue columnname="column16">0</cl:datavalue>
+            <cl:datavalue columnname="column17">6770</cl:datavalue>
+            <cl:datavalue columnname="column18">582</cl:datavalue>
+            <cl:datavalue columnname="column19">5847</cl:datavalue>
+            <cl:datavalue columnname="column20">0</cl:datavalue>
+            <cl:datavalue columnname="column21">6838</cl:datavalue>
+            <cl:datavalue columnname="column22">0</cl:datavalue>
+            <cl:datavalue columnname="column23">0</cl:datavalue>
+            <cl:datavalue columnname="column24">0</cl:datavalue>
+            <cl:datavalue columnname="column25">0</cl:datavalue>
+            <cl:datavalue columnname="column2"><![CDATA[20년만기]]></cl:datavalue>
           </cl:datarow>
           <cl:datarow>
-            <cl:datavalue columnname="column1"><![CDATA[I15153]]></cl:datavalue>
-            <cl:datavalue columnname="column2"><![CDATA[15]]></cl:datavalue>
-            <cl:datavalue columnname="column3"><![CDATA[1]]></cl:datavalue>
-            <cl:datavalue columnname="column4"><![CDATA[10]]></cl:datavalue>
-            <cl:datavalue columnname="column5"><![CDATA[15]]></cl:datavalue>
-            <cl:datavalue columnname="column6"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column7"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column8"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column9"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column10"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column11"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column12"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column13"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column14"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column15"><![CDATA[1]]></cl:datavalue>
-            <cl:datavalue columnname="column16"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column17"><![CDATA[6770]]></cl:datavalue>
-            <cl:datavalue columnname="column18"><![CDATA[582]]></cl:datavalue>
-            <cl:datavalue columnname="column19"><![CDATA[5847]]></cl:datavalue>
-            <cl:datavalue columnname="column20"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column21"><![CDATA[6838]]></cl:datavalue>
-            <cl:datavalue columnname="column22"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column23"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column24"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column25"><![CDATA[0]]></cl:datavalue>
+            <cl:datavalue columnname="column1">I15153</cl:datavalue>
+            <cl:datavalue columnname="column3"><![CDATA[연납]]></cl:datavalue>
+            <cl:datavalue columnname="column4"><![CDATA[5년납]]></cl:datavalue>
+            <cl:datavalue columnname="column5"><![CDATA[45]]></cl:datavalue>
+            <cl:datavalue columnname="column6"><![CDATA[45]]></cl:datavalue>
+            <cl:datavalue columnname="column7"><![CDATA[A]]></cl:datavalue>
+            <cl:datavalue columnname="column8"><![CDATA[3]]></cl:datavalue>
+            <cl:datavalue columnname="column9"><![CDATA[비위험]]></cl:datavalue>
+            <cl:datavalue columnname="column10"><![CDATA[1978]]></cl:datavalue>
+            <cl:datavalue columnname="column11"><![CDATA[1]]></cl:datavalue>
+            <cl:datavalue columnname="column12"><![CDATA[10]]></cl:datavalue>
+            <cl:datavalue columnname="column13"><![CDATA[B]]></cl:datavalue>
+            <cl:datavalue columnname="column14"><![CDATA[E]]></cl:datavalue>
+            <cl:datavalue columnname="column15"><![CDATA[여]]></cl:datavalue>
+            <cl:datavalue columnname="column16">0</cl:datavalue>
+            <cl:datavalue columnname="column17">6770</cl:datavalue>
+            <cl:datavalue columnname="column18">582</cl:datavalue>
+            <cl:datavalue columnname="column19">5847</cl:datavalue>
+            <cl:datavalue columnname="column20">0</cl:datavalue>
+            <cl:datavalue columnname="column21">6838</cl:datavalue>
+            <cl:datavalue columnname="column22">0</cl:datavalue>
+            <cl:datavalue columnname="column23">0</cl:datavalue>
+            <cl:datavalue columnname="column24">0</cl:datavalue>
+            <cl:datavalue columnname="column25">0</cl:datavalue>
+            <cl:datavalue columnname="column2"><![CDATA[20년만기]]></cl:datavalue>
           </cl:datarow>
           <cl:datarow>
-            <cl:datavalue columnname="column1"><![CDATA[I15153]]></cl:datavalue>
-            <cl:datavalue columnname="column2"><![CDATA[15]]></cl:datavalue>
-            <cl:datavalue columnname="column3"><![CDATA[1]]></cl:datavalue>
-            <cl:datavalue columnname="column4"><![CDATA[10]]></cl:datavalue>
-            <cl:datavalue columnname="column5"><![CDATA[15]]></cl:datavalue>
-            <cl:datavalue columnname="column6"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column7"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column8"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column9"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column10"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column11"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column12"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column13"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column14"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column15"><![CDATA[1]]></cl:datavalue>
-            <cl:datavalue columnname="column16"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column17"><![CDATA[6770]]></cl:datavalue>
-            <cl:datavalue columnname="column18"><![CDATA[582]]></cl:datavalue>
-            <cl:datavalue columnname="column19"><![CDATA[5847]]></cl:datavalue>
-            <cl:datavalue columnname="column20"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column21"><![CDATA[6838]]></cl:datavalue>
-            <cl:datavalue columnname="column22"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column23"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column24"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column25"><![CDATA[0]]></cl:datavalue>
+            <cl:datavalue columnname="column1">I15153</cl:datavalue>
+            <cl:datavalue columnname="column3"><![CDATA[월납]]></cl:datavalue>
+            <cl:datavalue columnname="column4"><![CDATA[10년납]]></cl:datavalue>
+            <cl:datavalue columnname="column5"><![CDATA[45]]></cl:datavalue>
+            <cl:datavalue columnname="column6"><![CDATA[45]]></cl:datavalue>
+            <cl:datavalue columnname="column7"><![CDATA[A]]></cl:datavalue>
+            <cl:datavalue columnname="column8"><![CDATA[3]]></cl:datavalue>
+            <cl:datavalue columnname="column9"><![CDATA[비위험]]></cl:datavalue>
+            <cl:datavalue columnname="column10"><![CDATA[1978]]></cl:datavalue>
+            <cl:datavalue columnname="column11"><![CDATA[1]]></cl:datavalue>
+            <cl:datavalue columnname="column12"><![CDATA[3]]></cl:datavalue>
+            <cl:datavalue columnname="column13"><![CDATA[B]]></cl:datavalue>
+            <cl:datavalue columnname="column14"><![CDATA[E]]></cl:datavalue>
+            <cl:datavalue columnname="column15"><![CDATA[여]]></cl:datavalue>
+            <cl:datavalue columnname="column16">0</cl:datavalue>
+            <cl:datavalue columnname="column17">6770</cl:datavalue>
+            <cl:datavalue columnname="column18">582</cl:datavalue>
+            <cl:datavalue columnname="column19">5847</cl:datavalue>
+            <cl:datavalue columnname="column20">0</cl:datavalue>
+            <cl:datavalue columnname="column21">6838</cl:datavalue>
+            <cl:datavalue columnname="column22">0</cl:datavalue>
+            <cl:datavalue columnname="column23">0</cl:datavalue>
+            <cl:datavalue columnname="column24">0</cl:datavalue>
+            <cl:datavalue columnname="column25">0</cl:datavalue>
+            <cl:datavalue columnname="column2"><![CDATA[5년만기]]></cl:datavalue>
           </cl:datarow>
           <cl:datarow>
-            <cl:datavalue columnname="column1"><![CDATA[I15153]]></cl:datavalue>
-            <cl:datavalue columnname="column2"><![CDATA[15]]></cl:datavalue>
-            <cl:datavalue columnname="column3"><![CDATA[1]]></cl:datavalue>
-            <cl:datavalue columnname="column4"><![CDATA[10]]></cl:datavalue>
-            <cl:datavalue columnname="column5"><![CDATA[15]]></cl:datavalue>
-            <cl:datavalue columnname="column6"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column7"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column8"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column9"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column10"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column11"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column12"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column13"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column14"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column15"><![CDATA[1]]></cl:datavalue>
-            <cl:datavalue columnname="column16"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column17"><![CDATA[6770]]></cl:datavalue>
-            <cl:datavalue columnname="column18"><![CDATA[582]]></cl:datavalue>
-            <cl:datavalue columnname="column19"><![CDATA[5847]]></cl:datavalue>
-            <cl:datavalue columnname="column20"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column21"><![CDATA[6838]]></cl:datavalue>
-            <cl:datavalue columnname="column22"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column23"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column24"><![CDATA[0]]></cl:datavalue>
-            <cl:datavalue columnname="column25"><![CDATA[0]]></cl:datavalue>
+            <cl:datavalue columnname="column1">I15153</cl:datavalue>
+            <cl:datavalue columnname="column3"><![CDATA[월납]]></cl:datavalue>
+            <cl:datavalue columnname="column4"><![CDATA[10년납]]></cl:datavalue>
+            <cl:datavalue columnname="column5"><![CDATA[45]]></cl:datavalue>
+            <cl:datavalue columnname="column6"><![CDATA[45]]></cl:datavalue>
+            <cl:datavalue columnname="column7"><![CDATA[A]]></cl:datavalue>
+            <cl:datavalue columnname="column8"><![CDATA[3]]></cl:datavalue>
+            <cl:datavalue columnname="column9"><![CDATA[비위험]]></cl:datavalue>
+            <cl:datavalue columnname="column10"><![CDATA[1978]]></cl:datavalue>
+            <cl:datavalue columnname="column11"><![CDATA[1]]></cl:datavalue>
+            <cl:datavalue columnname="column12"><![CDATA[1]]></cl:datavalue>
+            <cl:datavalue columnname="column13"><![CDATA[B]]></cl:datavalue>
+            <cl:datavalue columnname="column14"><![CDATA[E]]></cl:datavalue>
+            <cl:datavalue columnname="column15"><![CDATA[여]]></cl:datavalue>
+            <cl:datavalue columnname="column16">0</cl:datavalue>
+            <cl:datavalue columnname="column17">6770</cl:datavalue>
+            <cl:datavalue columnname="column18">582</cl:datavalue>
+            <cl:datavalue columnname="column19">5847</cl:datavalue>
+            <cl:datavalue columnname="column20">0</cl:datavalue>
+            <cl:datavalue columnname="column21">6838</cl:datavalue>
+            <cl:datavalue columnname="column22">0</cl:datavalue>
+            <cl:datavalue columnname="column23">0</cl:datavalue>
+            <cl:datavalue columnname="column24">0</cl:datavalue>
+            <cl:datavalue columnname="column25">0</cl:datavalue>
+            <cl:datavalue columnname="column2"><![CDATA[5년만기]]></cl:datavalue>
           </cl:datarow>
         </cl:datarowlist>
       </cl:dataset>
@@ -316,26 +316,19 @@
   <body std:sid="body-89c09349" class="grid-window-body">
     <cl:group std:sid="group-f6cc10a5" id="grpAppTitle" class="app-title">
       <cl:verticaldata std:sid="v-data-ef7e8ea1" width="1150px" height="35px" autosize="height"/>
-      <cl:output std:sid="output-c6ce190d" id="optTitle" class="navi-left" value="보험료+준비급 조회">
+      <cl:output std:sid="output-c6ce190d" id="optTitle" class="navi-left" value="보험료+준비금 조회">
         <cl:formdata std:sid="f-data-fbb0cc9f" row="0" col="0"/>
       </cl:output>
       <cl:group std:sid="group-799c377d" id="grpNavi" class="breadcrumbs">
         <cl:formdata std:sid="f-data-b5509d70" row="0" col="1"/>
-        <cl:output std:sid="output-dbbcce1a" class="home" value="">
-          <cl:flowlayoutdata std:sid="f-data-1cd87bb6" width="20px" height="20px"/>
-        </cl:output>
-        <cl:output std:sid="output-d5e11268" class="breadcrumb-item" value="1Depth">
-          <cl:flowlayoutdata std:sid="f-data-3beb2f65" width="45px" height="17px" autosize="width"/>
-        </cl:output>
-        <cl:output std:sid="output-6e79a920" class="breadcrumb-item" value="2Depth">
-          <cl:flowlayoutdata std:sid="f-data-e5e89842" width="45px" height="17px" autosize="width"/>
-        </cl:output>
-        <cl:output std:sid="output-a3f90a9b" class="breadcrumb-item" value="3Depth">
-          <cl:flowlayoutdata std:sid="f-data-81618497" width="45px" height="17px" autosize="width"/>
-        </cl:output>
-        <cl:output std:sid="output-6a18b375" class="breadcrumb-item" value="4Depth">
-          <cl:flowlayoutdata std:sid="f-data-94258ced" width="45px" height="17px" autosize="width"/>
-        </cl:output>
+        <cl:button std:sid="button-981d5f38" class="btn-primary04 btn-md" value="이전">
+          <cl:listener std:sid="listener-16b38d68" name="click" handler="onButtonClick"/>
+          <cl:flowlayoutdata std:sid="f-data-98a5fd4b" width="49px" height="26px" autosize="width"/>
+        </cl:button>
+        <cl:button std:sid="button-9ca2d62f" class="btn-primary04 btn-md" value="다음">
+          <cl:listener std:sid="listener-2cdffdf7" name="click" handler="onButtonClick2"/>
+          <cl:flowlayoutdata std:sid="f-data-63680882" width="49px" height="26px" autosize="width"/>
+        </cl:button>
         <cl:flowlayout std:sid="f-layout-ce38801e" scrollable="false" hspacing="5" vspacing="0" halign="right" valign="middle" linewrap="false"/>
       </cl:group>
       <cl:formlayout std:sid="f-layout-2de29e5a" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
@@ -353,7 +346,7 @@
           <cl:output std:sid="output-92c04caf" class="label" value="보험코드">
             <cl:formdata std:sid="f-data-19aaf57d" row="0" col="0"/>
           </cl:output>
-          <cl:searchinput std:sid="s-input-3467b20e" value="15153">
+          <cl:searchinput std:sid="s-input-3467b20e" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" value="15153">
             <cl:formdata std:sid="f-data-954c4f26" row="0" col="1"/>
           </cl:searchinput>
           <cl:output std:sid="output-57db873a" class="label" value="갱신회차">
@@ -504,7 +497,7 @@
           <cl:output std:sid="output-d681424c" class="label" value="보험명">
             <cl:formdata std:sid="f-data-80424a34" row="0" col="2"/>
           </cl:output>
-          <cl:inputbox std:sid="i-box-031d31ac" id="ipb5" enabled="false" value="(무)KDB스마트어린이보험2종 Dream형">
+          <cl:inputbox std:sid="i-box-031d31ac" id="ipb5" enabled="false" value="&#x9;(무)흥국생명 온라인정기보험">
             <cl:formdata std:sid="f-data-1c728c68" row="0" col="3"/>
           </cl:inputbox>
           <cl:output std:sid="output-dd36945c" class="label" value="요율코드">
@@ -579,7 +572,7 @@
                   <cl:gridheader std:sid="gh-band-9e6fc34a">
                     <cl:gridrow std:sid="g-row-61457750" height="31px"/>
                     <cl:gridrow std:sid="g-row-b5fd615c" height="31px"/>
-                    <cl:gridcell std:sid="gh-cell-26330774" rowindex="1" colindex="0" targetcolumnname="column1" sortable="false" filterable="false" text="요율코드"/>
+                    <cl:gridcell std:sid="gh-cell-26330774" rowindex="1" colindex="0" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" targetcolumnname="column1" sortable="false" filterable="false" text="요율코드"/>
                     <cl:gridcell std:sid="gh-cell-8e449b3b" rowindex="1" colindex="1" targetcolumnname="column2" sortable="false" filterable="false" text="보험기간"/>
                     <cl:gridcell std:sid="gh-cell-54cf6f44" rowindex="1" colindex="2" targetcolumnname="column3" sortable="false" filterable="false" text="납입주기"/>
                     <cl:gridcell std:sid="gh-cell-70fc031a" rowindex="1" colindex="3" targetcolumnname="column4" sortable="false" filterable="false" text="납입기간"/>
@@ -618,7 +611,7 @@
                       </cl:output>
                     </cl:gridcell>
                     <cl:gridcell std:sid="gd-cell-c1aec38c" rowindex="0" colindex="1" columnname="column2">
-                      <cl:output std:sid="output-126c0f29" class="text-right" value="0" datatype="number" format="s#,##0">
+                      <cl:output std:sid="output-126c0f29" class="text-right" value="0" datatype="string">
                         <std:metadata>
                           <std:property key="template-uuid" value="2b0b4d6d-724c-49a2-8737-2969f11883eb"/>
                           <std:property key="template-rev" value="1"/>
@@ -627,7 +620,7 @@
                       </cl:output>
                     </cl:gridcell>
                     <cl:gridcell std:sid="gd-cell-caa70600" rowindex="0" colindex="2" columnname="column3">
-                      <cl:output std:sid="output-a8c0ce6b" class="text-right" value="0" datatype="number" format="s#,##0">
+                      <cl:output std:sid="output-a8c0ce6b" class="text-right" value="0" datatype="string">
                         <std:metadata>
                           <std:property key="template-uuid" value="2b0b4d6d-724c-49a2-8737-2969f11883eb"/>
                           <std:property key="template-rev" value="1"/>
@@ -636,7 +629,7 @@
                       </cl:output>
                     </cl:gridcell>
                     <cl:gridcell std:sid="gd-cell-9b996023" rowindex="0" colindex="3" columnname="column4">
-                      <cl:output std:sid="output-f84f8fae" class="text-right" value="0" datatype="number" format="s#,##0">
+                      <cl:output std:sid="output-f84f8fae" class="text-right" value="0" datatype="string">
                         <std:metadata>
                           <std:property key="template-uuid" value="2b0b4d6d-724c-49a2-8737-2969f11883eb"/>
                           <std:property key="template-rev" value="1"/>
@@ -645,52 +638,52 @@
                       </cl:output>
                     </cl:gridcell>
                     <cl:gridcell std:sid="gd-cell-b79d136c" rowindex="0" colindex="4" columnname="column5">
-                      <cl:output std:sid="output-00e9974d" class="text-right" value="0" datatype="number" format="s#,##0">
+                      <cl:output std:sid="output-87cc2335" class="text-right" value="0" datatype="string">
                         <std:metadata>
                           <std:property key="template-uuid" value="2b0b4d6d-724c-49a2-8737-2969f11883eb"/>
                           <std:property key="template-rev" value="1"/>
                         </std:metadata>
-                        <cl:celldata std:sid="f-data-4dad1e27"/>
+                        <cl:celldata std:sid="c-data-0a11a3f6"/>
                       </cl:output>
                     </cl:gridcell>
                     <cl:gridcell std:sid="gd-cell-ee03b748" rowindex="0" colindex="5" columnname="column6">
-                      <cl:output std:sid="output-0151b1a9" class="text-right" value="0" datatype="number" format="s#,##0">
+                      <cl:output std:sid="output-50a7e1e5" class="text-right" value="0" datatype="string">
                         <std:metadata>
                           <std:property key="template-uuid" value="2b0b4d6d-724c-49a2-8737-2969f11883eb"/>
                           <std:property key="template-rev" value="1"/>
                         </std:metadata>
-                        <cl:celldata std:sid="c-data-52ed495f"/>
+                        <cl:celldata std:sid="c-data-a32098cf"/>
                       </cl:output>
                     </cl:gridcell>
                     <cl:gridcell std:sid="gd-cell-bc8364fe" rowindex="0" colindex="6" columnname="column7">
-                      <cl:output std:sid="output-351f4cc3" class="text-right" value="0" datatype="number" format="s#,##0">
+                      <cl:output std:sid="output-c3f3b879" class="text-right" value="0" datatype="string">
                         <std:metadata>
                           <std:property key="template-uuid" value="2b0b4d6d-724c-49a2-8737-2969f11883eb"/>
                           <std:property key="template-rev" value="1"/>
                         </std:metadata>
-                        <cl:celldata std:sid="c-data-68ce8c55"/>
+                        <cl:celldata std:sid="c-data-e2237599"/>
                       </cl:output>
                     </cl:gridcell>
                     <cl:gridcell std:sid="gd-cell-8e656d71" rowindex="0" colindex="7" columnname="column8">
-                      <cl:output std:sid="output-1de6fb93" class="text-right" value="0" datatype="number" format="s#,##0">
+                      <cl:output std:sid="output-98607e3a" class="text-right" value="0" datatype="string">
                         <std:metadata>
                           <std:property key="template-uuid" value="2b0b4d6d-724c-49a2-8737-2969f11883eb"/>
                           <std:property key="template-rev" value="1"/>
                         </std:metadata>
-                        <cl:celldata std:sid="c-data-41569260"/>
+                        <cl:celldata std:sid="c-data-51b2e83e"/>
                       </cl:output>
                     </cl:gridcell>
                     <cl:gridcell std:sid="gd-cell-89d48fd3" rowindex="0" colindex="8" columnname="column9">
-                      <cl:output std:sid="output-a48d9bf6" class="text-right" value="0" datatype="number" format="s#,##0">
+                      <cl:output std:sid="output-edd1416a" class="text-right" value="0" datatype="string">
                         <std:metadata>
                           <std:property key="template-uuid" value="2b0b4d6d-724c-49a2-8737-2969f11883eb"/>
                           <std:property key="template-rev" value="1"/>
                         </std:metadata>
-                        <cl:celldata std:sid="c-data-411eb6a9"/>
+                        <cl:celldata std:sid="c-data-6ddc904f"/>
                       </cl:output>
                     </cl:gridcell>
                     <cl:gridcell std:sid="gd-cell-e0005388" rowindex="0" colindex="9" columnname="column10">
-                      <cl:output std:sid="output-d71e358b" class="text-right" value="0" datatype="number" format="s#,##0">
+                      <cl:output std:sid="output-d71e358b" class="text-right" value="0" datatype="string">
                         <std:metadata>
                           <std:property key="template-uuid" value="2b0b4d6d-724c-49a2-8737-2969f11883eb"/>
                           <std:property key="template-rev" value="1"/>
@@ -699,125 +692,129 @@
                       </cl:output>
                     </cl:gridcell>
                     <cl:gridcell std:sid="gd-cell-91ebe4cd" rowindex="0" colindex="10" columnname="column11">
-                      <cl:output std:sid="output-754b44cc" class="text-right" value="0" datatype="number" format="s#,##0">
+                      <cl:output std:sid="output-aa820341" class="text-right" value="0" datatype="string">
                         <std:metadata>
                           <std:property key="template-uuid" value="2b0b4d6d-724c-49a2-8737-2969f11883eb"/>
                           <std:property key="template-rev" value="1"/>
                         </std:metadata>
-                        <cl:celldata std:sid="c-data-ca9d4bb7"/>
+                        <cl:celldata std:sid="c-data-a4138ff9"/>
                       </cl:output>
                     </cl:gridcell>
                     <cl:gridcell std:sid="gd-cell-ad90f2dd" rowindex="0" colindex="11" columnname="column12">
-                      <cl:output std:sid="output-73fa4957" class="text-right" value="0" datatype="number" format="s#,##0">
+                      <cl:output std:sid="output-d82eb566" class="text-right" value="0" datatype="string">
                         <std:metadata>
                           <std:property key="template-uuid" value="2b0b4d6d-724c-49a2-8737-2969f11883eb"/>
                           <std:property key="template-rev" value="1"/>
                         </std:metadata>
-                        <cl:celldata std:sid="c-data-1da3b26a"/>
+                        <cl:celldata std:sid="c-data-49481fca"/>
                       </cl:output>
                     </cl:gridcell>
                     <cl:gridcell std:sid="gd-cell-43665fa8" rowindex="0" colindex="12" columnname="column13">
-                      <cl:output std:sid="output-2afbfd2d" class="text-right" value="0" datatype="number" format="s#,##0">
+                      <cl:output std:sid="output-4fc24fd8" class="text-right" value="0" datatype="string">
                         <std:metadata>
                           <std:property key="template-uuid" value="2b0b4d6d-724c-49a2-8737-2969f11883eb"/>
                           <std:property key="template-rev" value="1"/>
                         </std:metadata>
-                        <cl:celldata std:sid="c-data-2a0bc14b"/>
+                        <cl:celldata std:sid="c-data-cb6aea7f"/>
                       </cl:output>
                     </cl:gridcell>
                     <cl:gridcell std:sid="gd-cell-9be7645d" rowindex="0" colindex="13" columnname="column14">
-                      <cl:output std:sid="output-ad8f6a6f" class="text-right" value="0" datatype="number" format="s#,##0">
+                      <cl:output std:sid="output-90bd581f" class="text-right" value="0" datatype="string">
                         <std:metadata>
                           <std:property key="template-uuid" value="2b0b4d6d-724c-49a2-8737-2969f11883eb"/>
                           <std:property key="template-rev" value="1"/>
                         </std:metadata>
-                        <cl:celldata std:sid="c-data-a99c2807"/>
+                        <cl:celldata std:sid="c-data-e577e947"/>
                       </cl:output>
                     </cl:gridcell>
                     <cl:gridcell std:sid="gd-cell-45baf34f" rowindex="0" colindex="14" columnname="column15">
-                      <cl:output std:sid="output-01c06f9a" class="text-center">
-                        <cl:celldata std:sid="c-data-40c6c27e"/>
+                      <cl:output std:sid="output-c4315f52" class="text-right" value="0" datatype="string">
+                        <std:metadata>
+                          <std:property key="template-uuid" value="2b0b4d6d-724c-49a2-8737-2969f11883eb"/>
+                          <std:property key="template-rev" value="1"/>
+                        </std:metadata>
+                        <cl:celldata std:sid="c-data-3e3adeb9"/>
                       </cl:output>
                     </cl:gridcell>
                     <cl:gridcell std:sid="gd-cell-a6d9e704" rowindex="0" colindex="15" columnname="column16">
-                      <cl:output std:sid="output-f0cba638" class="text-right" value="0" datatype="number" format="s#,##0">
+                      <cl:output std:sid="output-7ae6a9ce" class="text-right" value="0" datatype="string">
                         <std:metadata>
                           <std:property key="template-uuid" value="2b0b4d6d-724c-49a2-8737-2969f11883eb"/>
                           <std:property key="template-rev" value="1"/>
                         </std:metadata>
-                        <cl:celldata std:sid="c-data-ee06240e"/>
+                        <cl:celldata std:sid="c-data-87aeb9e7"/>
                       </cl:output>
                     </cl:gridcell>
                     <cl:gridcell std:sid="gd-cell-2e1ac76c" rowindex="0" colindex="16" columnname="column17">
-                      <cl:output std:sid="output-8ad94d58" class="text-right" value="0" datatype="number" format="s#,##0">
+                      <cl:output std:sid="output-aa9759d6" class="text-right" value="0" datatype="string">
                         <std:metadata>
                           <std:property key="template-uuid" value="2b0b4d6d-724c-49a2-8737-2969f11883eb"/>
                           <std:property key="template-rev" value="1"/>
                         </std:metadata>
-                        <cl:celldata std:sid="c-data-d6045d21"/>
+                        <cl:celldata std:sid="c-data-9387d934"/>
                       </cl:output>
                     </cl:gridcell>
                     <cl:gridcell std:sid="gd-cell-3b25e990" rowindex="0" colindex="17" columnname="column18">
-                      <cl:output std:sid="output-3338e85f" class="text-right" value="0" datatype="number" format="s#,##0">
+                      <cl:output std:sid="output-aa7a127b" class="text-right" value="0" datatype="string">
                         <std:metadata>
                           <std:property key="template-uuid" value="2b0b4d6d-724c-49a2-8737-2969f11883eb"/>
                           <std:property key="template-rev" value="1"/>
                         </std:metadata>
-                        <cl:celldata std:sid="c-data-60567360"/>
+                        <cl:celldata std:sid="c-data-b3f21a4f"/>
                       </cl:output>
                     </cl:gridcell>
                     <cl:gridcell std:sid="gd-cell-1a9f3b3d" rowindex="0" colindex="18" columnname="column19">
-                      <cl:output std:sid="output-1d034b05" class="text-right" value="0" datatype="number" format="s#,##0">
+                      <cl:output std:sid="output-7177ca71" class="text-right" value="0" datatype="string">
                         <std:metadata>
                           <std:property key="template-uuid" value="2b0b4d6d-724c-49a2-8737-2969f11883eb"/>
                           <std:property key="template-rev" value="1"/>
                         </std:metadata>
-                        <cl:celldata std:sid="c-data-9e8894c9"/>
+                        <cl:celldata std:sid="c-data-0f70d9ba"/>
                       </cl:output>
                     </cl:gridcell>
                     <cl:gridcell std:sid="gd-cell-c7eb7b76" rowindex="0" colindex="19" columnname="column20">
-                      <cl:output std:sid="output-9495f18d" class="text-right" value="0" datatype="number" format="s#,##0">
+                      <cl:output std:sid="output-e1d7b2c4" class="text-right" value="0" datatype="string">
                         <std:metadata>
                           <std:property key="template-uuid" value="2b0b4d6d-724c-49a2-8737-2969f11883eb"/>
                           <std:property key="template-rev" value="1"/>
                         </std:metadata>
-                        <cl:celldata std:sid="c-data-b1d28bf8"/>
+                        <cl:celldata std:sid="c-data-3fe65bc4"/>
                       </cl:output>
                     </cl:gridcell>
                     <cl:gridcell std:sid="gd-cell-1bd4c1ae" rowindex="0" colindex="20" columnname="column21">
-                      <cl:output std:sid="output-115894d7" class="text-right" value="0" datatype="number" format="s#,##0">
+                      <cl:output std:sid="output-3c7fbb82" class="text-right" value="0" datatype="string">
                         <std:metadata>
                           <std:property key="template-uuid" value="2b0b4d6d-724c-49a2-8737-2969f11883eb"/>
                           <std:property key="template-rev" value="1"/>
                         </std:metadata>
-                        <cl:celldata std:sid="c-data-2ae80b24"/>
+                        <cl:celldata std:sid="c-data-d8c361e7"/>
                       </cl:output>
                     </cl:gridcell>
                     <cl:gridcell std:sid="gd-cell-0cba5919" rowindex="0" colindex="21" columnname="column22">
-                      <cl:output std:sid="output-58856e13" class="text-right" value="0" datatype="number" format="s#,##0">
+                      <cl:output std:sid="output-92b5f0df" class="text-right" value="0" datatype="string">
                         <std:metadata>
                           <std:property key="template-uuid" value="2b0b4d6d-724c-49a2-8737-2969f11883eb"/>
                           <std:property key="template-rev" value="1"/>
                         </std:metadata>
-                        <cl:celldata std:sid="c-data-a3cb7754"/>
+                        <cl:celldata std:sid="c-data-9b4d3ade"/>
                       </cl:output>
                     </cl:gridcell>
                     <cl:gridcell std:sid="gd-cell-de0eeaa3" rowindex="0" colindex="22" columnname="column23">
-                      <cl:output std:sid="output-bf81181c" class="text-right" value="0" datatype="number" format="s#,##0">
+                      <cl:output std:sid="output-9e8eb558" class="text-right" value="0" datatype="string">
                         <std:metadata>
                           <std:property key="template-uuid" value="2b0b4d6d-724c-49a2-8737-2969f11883eb"/>
                           <std:property key="template-rev" value="1"/>
                         </std:metadata>
-                        <cl:celldata std:sid="c-data-3bccd096"/>
+                        <cl:celldata std:sid="c-data-3ac738fb"/>
                       </cl:output>
                     </cl:gridcell>
                     <cl:gridcell std:sid="gd-cell-64e70739" rowindex="0" colindex="23" columnname="column24">
-                      <cl:output std:sid="output-bdf2ffab" class="text-right" value="0" datatype="number" format="s#,##0">
+                      <cl:output std:sid="output-4afe8319" class="text-right" value="0" datatype="string">
                         <std:metadata>
                           <std:property key="template-uuid" value="2b0b4d6d-724c-49a2-8737-2969f11883eb"/>
                           <std:property key="template-rev" value="1"/>
                         </std:metadata>
-                        <cl:celldata std:sid="c-data-e7ed4577"/>
+                        <cl:celldata std:sid="c-data-d5e218f0"/>
                       </cl:output>
                     </cl:gridcell>
                     <cl:gridcell std:sid="gd-cell-bde32d94" rowindex="0" colindex="24" columnname="column25">
@@ -847,6 +844,10 @@
               <cl:verticallayout std:sid="v-layout-22d3ca50" spacing="12"/>
             </cl:group>
           </cl:tabitem>
+          <cl:group std:sid="group-a487bfb7">
+            <cl:headercontroldata std:sid="thc-data-c501606f" width="14" position="heading"/>
+            <cl:responsivexylayout std:sid="r-xylayout-59b18679"/>
+          </cl:group>
         </cl:tabfolder>
         <cl:group std:sid="group-f5a9fdc0" id="grp1" class="button-table-area">
           <cl:verticaldata std:sid="v-data-8cd14901" width="1560px" height="30px" autosize="height"/>

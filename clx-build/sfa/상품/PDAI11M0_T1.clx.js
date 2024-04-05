@@ -33,7 +33,7 @@
 					{"name": "column8"},
 					{"name": "column9"}
 				],
-				"rows": [{"column1": "I70293", "column2": "I70293", "column3": "(무)실손의료비특약 Ⅱ 표준형 질병입원형", "column4": "I70293", "column5": "1", "column6": "20140401", "column7": "201503131", "column8": "0.0374", "column9": "-"}]
+				"rows": [{"column1": "I70293", "column2": "I70293", "column3": "(무)흥국생명 프리미엄드림저축보험", "column4": "I70293", "column5": "1", "column6": "20240501", "column7": "202603131", "column8": "0.0374", "column9": "-"}]
 			});
 			app.register(dataSet_1);
 			
@@ -51,9 +51,9 @@
 					{"name": "column9"}
 				],
 				"rows": [
-					{"column1": "I70293", "column2": "2", "column3": "I70405", "column4": "(무)손실의료비특약 Ⅱ 질병입원형", "column5": "20150401", "column6": "99991231", "column7": "1", "column8": "0.035", "column9": "0.0325"},
-					{"column1": "I70293", "column2": "2", "column3": "I70405", "column4": "(무)손실의료비특약 Ⅱ 질병입원형", "column5": "20150401", "column6": "99991231", "column7": "1", "column8": "0.035", "column9": "0.0325"},
-					{"column1": "I70293", "column2": "2", "column3": "I70405", "column4": "(무)손실의료비특약 Ⅱ 질병입원형", "column5": "20150401", "column6": "99991231", "column7": "1", "column8": "0.035", "column9": "0.0325"}
+					{"column1": "I70293", "column2": "2", "column3": "I70405", "column4": "(무)흥국생명 프리미엄드림저축보험", "column5": "20240101", "column6": "99991231", "column7": "1", "column8": "0.035", "column9": "0.0325"},
+					{"column1": "I70293", "column2": "2", "column3": "I70405", "column4": "\t(무)흥국생명 OK연금보험", "column5": "20240401", "column6": "99991231", "column7": "1", "column8": "0.0375", "column9": "조건규칙적용"},
+					{"column1": "I70293", "column2": "2", "column3": "I70405", "column4": "\t연금저축 흥국생명 체인지UP연금보험", "column5": "20230531", "column6": "99991231", "column7": "1", "column8": "0.035", "column9": "0.0325"}
 				]
 			});
 			app.register(dataSet_2);
@@ -126,7 +126,7 @@
 							"rowIndex": 0
 						});
 						var inputBox_1 = new cpr.controls.InputBox("ipb1");
-						inputBox_1.value = "(무)실손의료비특약 Ⅱ 표준형 질병입원형";
+						inputBox_1.value = "(무)흥국생명 OK연금보험";
 						container.addChild(inputBox_1, {
 							"colIndex": 3,
 							"rowIndex": 0
@@ -506,6 +506,20 @@
 								var button_3 = new cpr.controls.Button();
 								button_3.value = "회차생성";
 								button_3.style.setClasses(["btn-secondary01"]);
+								button_3.style.css({
+									"border-right-style" : "dashed",
+									"border-top-width" : "3px",
+									"border-bottom-color" : "red",
+									"border-left-style" : "dashed",
+									"border-right-width" : "3px",
+									"border-bottom-width" : "3px",
+									"border-left-color" : "red",
+									"border-top-color" : "red",
+									"border-bottom-style" : "dashed",
+									"border-right-color" : "red",
+									"border-left-width" : "3px",
+									"border-top-style" : "dashed"
+								});
 								container.addChild(button_3, {
 									"autoSize": "width",
 									"width": "63px",
@@ -522,6 +536,20 @@
 								var button_5 = new cpr.controls.Button();
 								button_5.value = "저장";
 								button_5.style.setClasses(["btn-primary03"]);
+								button_5.style.css({
+									"border-right-style" : "dashed",
+									"border-top-width" : "3px",
+									"border-bottom-color" : "red",
+									"border-left-style" : "dashed",
+									"border-right-width" : "3px",
+									"border-bottom-width" : "3px",
+									"border-left-color" : "red",
+									"border-top-color" : "red",
+									"border-bottom-style" : "dashed",
+									"border-right-color" : "red",
+									"border-left-width" : "3px",
+									"border-top-style" : "dashed"
+								});
 								container.addChild(button_5, {
 									"autoSize": "width",
 									"width": "43px",
@@ -652,6 +680,17 @@
 											cell.sortable = false;
 											cell.targetColumnName = "column5";
 											cell.text = "유효개시일자";
+											cell.style.css({
+												"border-top-width" : "3px",
+												"border-bottom-color" : "red",
+												"border-left-style" : "dashed",
+												"border-bottom-width" : "3px",
+												"border-left-color" : "red",
+												"border-top-color" : "red",
+												"border-bottom-style" : "dashed",
+												"border-left-width" : "3px",
+												"border-top-style" : "dashed"
+											});
 										}
 									},
 									{
@@ -661,6 +700,17 @@
 											cell.sortable = false;
 											cell.targetColumnName = "column6";
 											cell.text = "유효종료일자";
+											cell.style.css({
+												"border-right-style" : "dashed",
+												"border-top-width" : "3px",
+												"border-bottom-color" : "red",
+												"border-right-width" : "3px",
+												"border-bottom-width" : "3px",
+												"border-top-color" : "red",
+												"border-bottom-style" : "dashed",
+												"border-right-color" : "red",
+												"border-top-style" : "dashed"
+											});
 										}
 									},
 									{
