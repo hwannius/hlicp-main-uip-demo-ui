@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-8c2738e0" version="1.0.4074">
+  <head std:sid="head-5be35ebc">
+    <std:metadata>
+      <std:property key="template-file" value="templates/팝업/1.프레임/프레임_일반.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-3ca7d346" id="Hlicp-WIDE" name="Hlicp-WIDE" minwidth="3160px" width="3160px" height="954px" active="false"/>
+    <screen std:sid="screen-9889953f" id="Hlicp-FULL" name="Hlicp-FULL" minwidth="1600px" maxwidth="3159px" width="1600px" height="954px"/>
+    <screen std:sid="screen-4f37d31b" id="Hlicp-DIV" name="Hlicp-DIV" minwidth="790px" maxwidth="1599px" width="790px" height="954px"/>
+    <screen std:sid="screen-c796f562" id="Hlicp-POP" name="Hlicp-POP" maxwidth="789px" width="767px" height="400px" active="true"/>
+    <cl:model std:sid="model-5cb21c4b"/>
+    <cl:appspec title="안내장실물증빙"/>
+  </head>
+  <body std:sid="body-bf644614" class="pop-content-body">
+    <cl:group std:sid="group-f6cc10a5" id="grpAppTitle" class="app-title">
+      <cl:verticaldata std:sid="v-data-ef7e8ea1" width="1560px" height="35px" autosize="height"/>
+      <cl:output std:sid="output-c6ce190d" id="optTitle" class="navi-left" value="안내장실물증빙">
+        <cl:formdata std:sid="f-data-fbb0cc9f" row="0" col="0"/>
+      </cl:output>
+      <cl:group std:sid="group-799c377d" id="grpNavi" class="breadcrumbs">
+        <cl:formdata std:sid="f-data-b5509d70" row="0" col="1"/>
+        <cl:output std:sid="output-dbbcce1a" class="home" value="">
+          <cl:flowlayoutdata std:sid="f-data-1cd87bb6" width="20px" height="20px"/>
+        </cl:output>
+        <cl:output std:sid="output-d5e11268" class="breadcrumb-item" value="1Depth">
+          <cl:flowlayoutdata std:sid="f-data-3beb2f65" width="45px" height="17px" autosize="width"/>
+        </cl:output>
+        <cl:output std:sid="output-6e79a920" class="breadcrumb-item" value="2Depth">
+          <cl:flowlayoutdata std:sid="f-data-e5e89842" width="45px" height="17px" autosize="width"/>
+        </cl:output>
+        <cl:output std:sid="output-a3f90a9b" class="breadcrumb-item" value="3Depth">
+          <cl:flowlayoutdata std:sid="f-data-81618497" width="45px" height="17px" autosize="width"/>
+        </cl:output>
+        <cl:output std:sid="output-6a18b375" class="breadcrumb-item" value="4Depth">
+          <cl:flowlayoutdata std:sid="f-data-94258ced" width="45px" height="17px" autosize="width"/>
+        </cl:output>
+        <cl:flowlayout std:sid="f-layout-ce38801e" scrollable="false" hspacing="5" vspacing="0" halign="right" valign="middle" linewrap="false"/>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-2de29e5a" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-6aa426d3">
+      <std:metadata>
+        <std:property key="template-uuid" value="fb58e15e-1379-46c7-a7c8-32d518331e20"/>
+        <std:property key="template-rev" value="1"/>
+      </std:metadata>
+      <cl:verticaldata std:sid="v-data-a96da2d6" width="729px" height="430px" autosize="height"/>
+      <cl:group std:sid="group-c62d7e4d" id="grp4" class="button-table-area">
+        <cl:verticaldata std:sid="v-data-c44780d3" width="1560px" height="26px" autosize="height"/>
+        <cl:group std:sid="group-caf57af9" id="grp5" class="button-table-top-area">
+          <cl:formdata std:sid="f-data-831456c5" row="0" col="0"/>
+          <cl:flowlayout std:sid="f-layout-f01b2d7f" scrollable="false" hspacing="5" vspacing="5"/>
+        </cl:group>
+        <cl:group std:sid="group-e72f3d87" id="grp6" class="button-table-top-area">
+          <cl:formdata std:sid="f-data-42280a35" row="0" col="1"/>
+          <cl:button std:sid="button-021fd85f" id="btn7" class="btn-primary04" value="Capture">
+            <cl:flowlayoutdata std:sid="f-data-48b4dac1" width="80px" height="26px" autosize="width"/>
+          </cl:button>
+          <cl:flowlayout std:sid="f-layout-c4262455" scrollable="false" hspacing="5" vspacing="5" halign="right"/>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-cb8488c8" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="1" unit="FRACTION" autoSizing="true"/>
+          <cl:columns length="1" unit="FRACTION" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:htmlsnippet std:sid="htmlsnippet-e3aa187e" value="&lt;p>HTML Snippet&lt;/p>&#xD;&#xA;&lt;p>보험계약 자동갱신 예고안내 pdf 영역&lt;/p>">
+        <cl:verticaldata std:sid="v-data-af585243" width="100px" height="400px" autosize="height"/>
+      </cl:htmlsnippet>
+      <cl:verticallayout std:sid="v-layout-dc4f96be" spacing="4"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-b2a49f85" spacing="10"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler>
+      <std:guide position="380"/>
+    </std:vruler>
+  </std:studiosetting>
+</html>

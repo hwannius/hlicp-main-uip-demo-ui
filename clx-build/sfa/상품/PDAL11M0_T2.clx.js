@@ -525,14 +525,11 @@
 											cell.columnName = "column6";
 											cell.style.css({
 												"border-right-style" : "dashed",
-												"border-top-width" : "3px",
 												"border-bottom-color" : "red",
 												"border-right-width" : "3px",
 												"border-bottom-width" : "3px",
-												"border-top-color" : "red",
 												"border-bottom-style" : "dashed",
-												"border-right-color" : "red",
-												"border-top-style" : "dashed"
+												"border-right-color" : "red"
 											});
 											cell.control = (function(){
 												var output_12 = new cpr.controls.Output();

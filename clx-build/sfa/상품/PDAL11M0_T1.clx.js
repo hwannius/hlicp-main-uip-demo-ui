@@ -716,18 +716,12 @@
 													cell.targetColumnName = "column12";
 													cell.text = "신계약비1";
 													cell.style.css({
-														"border-right-style" : "dashed",
-														"border-top-width" : "3px",
 														"border-bottom-color" : "red",
 														"border-left-style" : "dashed",
-														"border-right-width" : "3px",
 														"border-bottom-width" : "3px",
 														"border-left-color" : "red",
-														"border-top-color" : "red",
 														"border-bottom-style" : "dashed",
-														"border-right-color" : "red",
-														"border-left-width" : "3px",
-														"border-top-style" : "dashed"
+														"border-left-width" : "3px"
 													});
 												}
 											},
@@ -740,17 +734,11 @@
 													cell.text = "신계약비2";
 													cell.style.css({
 														"border-right-style" : "dashed",
-														"border-top-width" : "3px",
 														"border-bottom-color" : "red",
-														"border-left-style" : "dashed",
 														"border-right-width" : "3px",
 														"border-bottom-width" : "3px",
-														"border-left-color" : "red",
-														"border-top-color" : "red",
 														"border-bottom-style" : "dashed",
-														"border-right-color" : "red",
-														"border-left-width" : "3px",
-														"border-top-style" : "dashed"
+														"border-right-color" : "red"
 													});
 												}
 											},
@@ -761,13 +749,10 @@
 													cell.style.css({
 														"border-right-style" : "dashed",
 														"border-top-width" : "3px",
-														"border-bottom-color" : "red",
 														"border-left-style" : "dashed",
 														"border-right-width" : "3px",
-														"border-bottom-width" : "3px",
 														"border-left-color" : "red",
 														"border-top-color" : "red",
-														"border-bottom-style" : "dashed",
 														"border-right-color" : "red",
 														"border-left-width" : "3px",
 														"border-top-style" : "dashed"
@@ -788,20 +773,6 @@
 														output_15.value = "20241231";
 														output_15.dataType = "date";
 														output_15.format = "YYYY-MM-DD";
-														output_15.style.css({
-															"border-right-style" : "dashed",
-															"border-top-width" : "3px",
-															"border-bottom-color" : "red",
-															"border-left-style" : "dashed",
-															"border-right-width" : "3px",
-															"border-bottom-width" : "3px",
-															"border-left-color" : "red",
-															"border-top-color" : "red",
-															"border-bottom-style" : "dashed",
-															"border-right-color" : "red",
-															"border-left-width" : "3px",
-															"border-top-style" : "dashed"
-														});
 														output_15.bind("value").toDataColumn("column1");
 														return output_15;
 													})();
@@ -962,20 +933,6 @@
 												"constraint": {"rowIndex": 0, "colIndex": 11},
 												"configurator": function(cell){
 													cell.columnName = "column12";
-													cell.style.css({
-														"border-right-style" : "dashed",
-														"border-top-width" : "3px",
-														"border-bottom-color" : "red",
-														"border-left-style" : "dashed",
-														"border-right-width" : "3px",
-														"border-bottom-width" : "3px",
-														"border-left-color" : "red",
-														"border-top-color" : "red",
-														"border-bottom-style" : "dashed",
-														"border-right-color" : "red",
-														"border-left-width" : "3px",
-														"border-top-style" : "dashed"
-													});
 													cell.control = (function(){
 														var output_26 = new cpr.controls.Output();
 														output_26.value = "0";
@@ -992,20 +949,6 @@
 												"constraint": {"rowIndex": 0, "colIndex": 12},
 												"configurator": function(cell){
 													cell.columnName = "column13";
-													cell.style.css({
-														"border-right-style" : "dashed",
-														"border-top-width" : "3px",
-														"border-bottom-color" : "red",
-														"border-left-style" : "dashed",
-														"border-right-width" : "3px",
-														"border-bottom-width" : "3px",
-														"border-left-color" : "red",
-														"border-top-color" : "red",
-														"border-bottom-style" : "dashed",
-														"border-right-color" : "red",
-														"border-left-width" : "3px",
-														"border-top-style" : "dashed"
-													});
 													cell.control = (function(){
 														var output_27 = new cpr.controls.Output();
 														output_27.value = "0";
