@@ -23,8 +23,8 @@
           <cl:datarow>
             <cl:datavalue columnname="column1"><![CDATA[호남지점]]></cl:datavalue>
             <cl:datavalue columnname="column2"><![CDATA[0006300647]]></cl:datavalue>
-            <cl:datavalue columnname="column3"><![CDATA[홍*동]]></cl:datavalue>
-            <cl:datavalue columnname="column4"><![CDATA[1996-07]]></cl:datavalue>
+            <cl:datavalue columnname="column3"><![CDATA[김*국]]></cl:datavalue>
+            <cl:datavalue columnname="column4"><![CDATA[2005-07]]></cl:datavalue>
             <cl:datavalue columnname="column5"><![CDATA[02]]></cl:datavalue>
             <cl:datavalue columnname="column6"><![CDATA[SM(E)]]></cl:datavalue>
             <cl:datavalue columnname="column7"><![CDATA[50]]></cl:datavalue>
@@ -42,21 +42,14 @@
       </cl:output>
       <cl:group std:sid="group-373b0678" id="grpNavi2" class="breadcrumbs">
         <cl:formdata std:sid="f-data-417ee0ad" row="0" col="1"/>
-        <cl:output std:sid="output-8cb44099" class="home" value="">
-          <cl:flowlayoutdata std:sid="f-data-b950fad1" width="20px" height="20px"/>
-        </cl:output>
-        <cl:output std:sid="output-cc397308" class="breadcrumb-item" value="1Depth">
-          <cl:flowlayoutdata std:sid="f-data-d4de9799" width="45px" height="17px" autosize="width"/>
-        </cl:output>
-        <cl:output std:sid="output-27f5a6e6" class="breadcrumb-item" value="2Depth">
-          <cl:flowlayoutdata std:sid="f-data-f36ef822" width="45px" height="17px" autosize="width"/>
-        </cl:output>
-        <cl:output std:sid="output-781b1a9d" class="breadcrumb-item" value="3Depth">
-          <cl:flowlayoutdata std:sid="f-data-6f6b68cb" width="45px" height="17px" autosize="width"/>
-        </cl:output>
-        <cl:output std:sid="output-db593407" class="breadcrumb-item" value="4Depth">
-          <cl:flowlayoutdata std:sid="f-data-6fd1cf71" width="45px" height="17px" autosize="width"/>
-        </cl:output>
+        <cl:button std:sid="button-cf1d1def" class="btn-primary04 btn-md" value="이전">
+          <cl:listener std:sid="listener-038d74e4" name="click" handler="onButtonClick"/>
+          <cl:flowlayoutdata std:sid="f-data-e00902d9" width="49px" height="26px" autosize="width"/>
+        </cl:button>
+        <cl:button std:sid="button-496c49da" class="btn-primary04 btn-md" value="다음">
+          <cl:listener std:sid="listener-d6acd76b" name="click" handler="onButtonClick2"/>
+          <cl:flowlayoutdata std:sid="f-data-66881adc" width="49px" height="26px" autosize="width"/>
+        </cl:button>
         <cl:flowlayout std:sid="f-layout-dc9e6e8d" scrollable="false" hspacing="5" vspacing="0" halign="right" valign="middle" linewrap="false"/>
       </cl:group>
       <cl:formlayout std:sid="f-layout-7b3b9f0b" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
@@ -80,7 +73,7 @@
           <cl:inputbox std:sid="i-box-d729a11f" id="ipb1" value="FTP1과정(신인입문)">
             <cl:formdata std:sid="f-data-24053ab4" row="0" col="1"/>
           </cl:inputbox>
-          <cl:searchinput std:sid="s-input-52843219" value="0527">
+          <cl:searchinput std:sid="s-input-52843219" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" value="0527">
             <cl:formdata std:sid="f-data-1205da11" row="0" col="0"/>
           </cl:searchinput>
           <cl:formlayout std:sid="f-layout-d73488c0" scrollable="false" hspace="5px" vspace="5px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
@@ -104,7 +97,7 @@
         </cl:group>
         <cl:group std:sid="group-b3f63375" class="form-inside">
           <cl:formdata std:sid="f-data-fe8ab4e7" row="0" col="7"/>
-          <cl:searchinput std:sid="s-input-9978578f" value="000110">
+          <cl:searchinput std:sid="s-input-9978578f" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" value="000110">
             <cl:formdata std:sid="f-data-6e79d584" row="0" col="0"/>
           </cl:searchinput>
           <cl:inputbox std:sid="i-box-59bbbfa7" id="ipb3" value="리더스본부">
@@ -116,10 +109,10 @@
             <cl:columns length="3" unit="FRACTION"/>
           </cl:formlayout>
         </cl:group>
-        <cl:dateinput std:sid="d-input-c948ee42" id="dti1" value="201503" calendartype="yearmonth" mask="YYYY-MM">
+        <cl:dateinput std:sid="d-input-c948ee42" id="dti1" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" value="202403" calendartype="yearmonth" mask="YYYY-MM">
           <cl:formdata std:sid="f-data-f29c9975" halign="LEFT" width="120" row="0" col="3"/>
         </cl:dateinput>
-        <cl:inputbox std:sid="i-box-2ccd6f74" id="ipb2" class="text-right" value="1">
+        <cl:inputbox std:sid="i-box-2ccd6f74" id="ipb2" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" class="text-right" value="1">
           <cl:formdata std:sid="f-data-ca2dec83" halign="LEFT" width="120" row="0" col="5"/>
         </cl:inputbox>
         <cl:formlayout std:sid="f-layout-46c7bb97" scrollable="false" hspace="20px" vspace="8px" top-margin="6px" right-margin="20px" bottom-margin="6px" left-margin="20px">
@@ -165,7 +158,7 @@
             </cl:gridheader>
             <cl:griddetail std:sid="gd-band-b88b2beb">
               <cl:gridrow std:sid="g-row-3ea02865" height="31px"/>
-              <cl:gridcell std:sid="gd-cell-abd3ba7e" rowindex="0" colindex="0" columntype="checkbox"/>
+              <cl:gridcell std:sid="gd-cell-abd3ba7e" rowindex="0" colindex="0" columntype="checkbox" columnname=""/>
               <cl:gridcell std:sid="gd-cell-3fedd9fe" rowindex="0" colindex="1" columnname="column1">
                 <cl:output std:sid="output-451290e0" class="text-center">
                   <cl:celldata std:sid="c-data-d97c9b96"/>

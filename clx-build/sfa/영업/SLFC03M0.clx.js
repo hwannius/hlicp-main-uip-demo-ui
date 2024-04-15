@@ -17,6 +17,42 @@
 			 *
 			 * @author ${user}
 			 ************************************************/
+
+			/*
+			 * "이전" 버튼에서 click 이벤트 발생 시 호출.
+			 * 사용자가 컨트롤을 클릭할 때 발생하는 이벤트.
+			 */
+			function onButtonClick(e){
+				var button = e.control;
+				//화면이동(현재 화면에서 리로드)
+				var host = app.getHost(); // 부모 임베디드 앱
+				cpr.core.App.load("sfa/영업/SLFC02M1", function(loadedApp) {
+				    if (loadedApp) {
+				        host.app = loadedApp;
+				        host.initValue = {
+				            "param": "param"
+				        }
+				    }
+				});
+			}
+
+			/*
+			 * "다음" 버튼에서 click 이벤트 발생 시 호출.
+			 * 사용자가 컨트롤을 클릭할 때 발생하는 이벤트.
+			 */
+			function onButtonClick2(e){
+				var button = e.control;
+				//화면이동(현재 화면에서 리로드)
+				var host = app.getHost(); // 부모 임베디드 앱
+				cpr.core.App.load("sfa/영업/SLFD01M2", function(loadedApp) {
+				    if (loadedApp) {
+				        host.app = loadedApp;
+				        host.initValue = {
+				            "param": "param"
+				        }
+				    }
+				});
+			};
 			// End - User Script
 			
 			// Header
@@ -39,15 +75,15 @@
 					{"name": "column13"}
 				],
 				"rows": [
-					{"column1": "0004592650", "column14": "홍길동", "column2": "20130213", "column3": "070123410080", "column4": "(무)파워에셋저축보험", "column5": "정상", "column6": "홍길동", "column7": "홍길동", "column8": "월납", "column9": "자동이체", "column10": "141200", "column11": "103120", "column12": "0", "column13": "20000000"},
-					{"column1": "0004592650", "column14": "홍길동", "column2": "20130213", "column3": "070123410080", "column4": "(무)파워에셋저축보험", "column5": "정상", "column6": "홍길동", "column7": "홍길동", "column8": "월납", "column9": "자동이체", "column10": "141200", "column11": "103120", "column12": "0", "column13": "20000000"},
-					{"column1": "0004592650", "column14": "홍길동", "column2": "20130213", "column3": "070123410080", "column4": "(무)파워에셋저축보험", "column5": "정상", "column6": "홍길동", "column7": "홍길동", "column8": "월납", "column9": "자동이체", "column10": "141200", "column11": "103120", "column12": "0", "column13": "20000000"},
-					{"column1": "0004592650", "column14": "홍길동", "column2": "20130213", "column3": "070123410080", "column4": "(무)파워에셋저축보험", "column5": "정상", "column6": "홍길동", "column7": "홍길동", "column8": "월납", "column9": "자동이체", "column10": "141200", "column11": "103120", "column12": "0", "column13": "20000000"},
-					{"column1": "0004592650", "column14": "홍길동", "column2": "20130213", "column3": "070123410080", "column4": "(무)파워에셋저축보험", "column5": "정상", "column6": "홍길동", "column7": "홍길동", "column8": "월납", "column9": "자동이체", "column10": "141200", "column11": "103120", "column12": "0", "column13": "20000000"},
-					{"column1": "0004592650", "column14": "홍길동", "column2": "20130213", "column3": "070123410080", "column4": "(무)파워에셋저축보험", "column5": "정상", "column6": "홍길동", "column7": "홍길동", "column8": "월납", "column9": "자동이체", "column10": "141200", "column11": "103120", "column12": "0", "column13": "20000000"},
-					{"column1": "0004592650", "column14": "홍길동", "column2": "20130213", "column3": "070123410080", "column4": "(무)파워에셋저축보험", "column5": "정상", "column6": "홍길동", "column7": "홍길동", "column8": "월납", "column9": "자동이체", "column10": "141200", "column11": "103120", "column12": "0", "column13": "20000000"},
-					{"column1": "0004592650", "column14": "홍길동", "column2": "20130213", "column3": "070123410080", "column4": "(무)파워에셋저축보험", "column5": "정상", "column6": "홍길동", "column7": "홍길동", "column8": "월납", "column9": "자동이체", "column10": "141200", "column11": "103120", "column12": "0", "column13": "20000000"},
-					{"column1": "0004592650", "column2": "20130213", "column3": "070123410080", "column4": "(무)파워에셋저축보험", "column5": "정상", "column6": "홍길동", "column7": "홍길동", "column8": "월납", "column9": "자동이체", "column10": "141200", "column11": "103120", "column12": "0", "column13": "20000000", "column14": "홍길동"}
+					{"column1": "0004592***", "column14": "이*민", "column2": "20240502", "column3": "07012***0080", "column4": "(무)흥국생명 온라인정기보험", "column5": "정상", "column6": "이*지", "column7": "이*지", "column8": "월납", "column9": "자동이체", "column10": "66500", "column11": "72540", "column12": "0", "column13": "50000000"},
+					{"column1": "0004592***", "column14": "이*주", "column2": "20240513", "column3": "07012***6825", "column4": "(무)흥국생명 실손의료비보험(갱신형)", "column5": "정상", "column6": "이*주", "column7": "이*주", "column8": "일시납", "column9": "자동이체", "column10": "13620", "column11": "12970", "column12": "0", "column13": "50000000"},
+					{"column1": "0004593***", "column14": "박*민", "column2": "20240518", "column3": "07012***6914", "column4": "연금저축 흥국생명 체인지UP연금보험", "column5": "청약철회", "column6": "손*화", "column7": "손*화", "column8": "일시납", "column9": "자동이체", "column10": "500000", "column11": "135480", "column12": "0", "column13": "30000000"},
+					{"column1": "0004592***", "column14": "김*정", "column2": "20240518", "column3": "07012***6145", "column4": "(무)흥국생명 온라인연금저축보험", "column5": "정상", "column6": "이*재", "column7": "이*재", "column8": "월납", "column9": "자동이체", "column10": "150000", "column11": "162540", "column12": "0", "column13": "9000000"},
+					{"column1": "0004592***", "column14": "송*아", "column2": "20240522", "column3": "07012***6914", "column4": "(무)흥국생명 실손의료비보험(갱신형)", "column5": "정상", "column6": "성*철", "column7": "송*아", "column8": "일시납", "column9": "자동이체", "column10": "4900", "column11": "5250", "column12": "0", "column13": "10000000"},
+					{"column1": "0004595***", "column14": "김*국", "column2": "20240525", "column3": "07012***6578", "column4": "(무)흥국생명 온라인정기보험", "column5": "정상", "column6": "김*진", "column7": "김*진", "column8": "월납", "column9": "자동이체", "column10": "13300", "column11": "24350", "column12": "0", "column13": "10000000"},
+					{"column1": "0004598***", "column14": "장*수", "column2": "20240526", "column3": "07012***1348", "column4": "(무)흥국생명 온라인정기보험", "column5": "정상", "column6": "신*철", "column7": "신*철", "column8": "월납", "column9": "자동이체", "column10": "24600", "column11": "32100", "column12": "0", "column13": "30000000"},
+					{"column1": "0004598***", "column14": "이*수", "column2": "20240527", "column3": "07012***7354", "column4": "(무)흥국생명 온라인정기보험", "column5": "정상", "column6": "이*지", "column7": "이*지", "column8": "월납", "column9": "자동이체", "column10": "66500", "column11": "72540", "column12": "0", "column13": "50000000"},
+					{"column1": "0004599***", "column14": "이*정", "column2": "20240518", "column3": "07012***6654", "column4": "(무)흥국생명 온라인연금저축보험", "column5": "정상", "column6": "이*준", "column7": "이*준", "column8": "월납", "column9": "자동이체", "column10": "150000", "column11": "162540", "column12": "0", "column13": "9000000"}
 				]
 			});
 			app.register(dataSet_1);
@@ -106,44 +142,27 @@
 				flowLayout_1.lineWrap = false;
 				group_2.setLayout(flowLayout_1);
 				(function(container){
-					var output_2 = new cpr.controls.Output();
-					output_2.value = "";
-					output_2.style.setClasses(["home"]);
-					container.addChild(output_2, {
-						"width": "20px",
-						"height": "20px"
-					});
-					var output_3 = new cpr.controls.Output();
-					output_3.value = "1Depth";
-					output_3.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_3, {
+					var button_1 = new cpr.controls.Button();
+					button_1.value = "이전";
+					button_1.style.setClasses(["btn-primary04", "btn-md"]);
+					if(typeof onButtonClick == "function") {
+						button_1.addEventListener("click", onButtonClick);
+					}
+					container.addChild(button_1, {
 						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
+						"width": "49px",
+						"height": "26px"
 					});
-					var output_4 = new cpr.controls.Output();
-					output_4.value = "2Depth";
-					output_4.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_4, {
+					var button_2 = new cpr.controls.Button();
+					button_2.value = "다음";
+					button_2.style.setClasses(["btn-primary04", "btn-md"]);
+					if(typeof onButtonClick2 == "function") {
+						button_2.addEventListener("click", onButtonClick2);
+					}
+					container.addChild(button_2, {
 						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
-					});
-					var output_5 = new cpr.controls.Output();
-					output_5.value = "3Depth";
-					output_5.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_5, {
-						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
-					});
-					var output_6 = new cpr.controls.Output();
-					output_6.value = "4Depth";
-					output_6.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_6, {
-						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
+						"width": "49px",
+						"height": "26px"
 					});
 				})(group_2);
 				container.addChild(group_2, {
@@ -186,14 +205,29 @@
 					formLayout_2.setRows(["26px", "26px"]);
 					group_5.setLayout(formLayout_2);
 					(function(container){
-						var output_7 = new cpr.controls.Output();
-						output_7.value = "조회구분";
-						output_7.style.setClasses(["label", "required"]);
-						container.addChild(output_7, {
+						var output_2 = new cpr.controls.Output();
+						output_2.value = "조회구분";
+						output_2.style.setClasses(["label", "required"]);
+						container.addChild(output_2, {
 							"colIndex": 0,
 							"rowIndex": 0
 						});
 						var radioButton_1 = new cpr.controls.RadioButton("rdb2");
+						radioButton_1.value = "value2";
+						radioButton_1.style.css({
+							"border-right-style" : "dashed",
+							"border-top-width" : "3px",
+							"border-bottom-color" : "red",
+							"border-left-style" : "dashed",
+							"border-right-width" : "3px",
+							"border-bottom-width" : "3px",
+							"border-left-color" : "red",
+							"border-top-color" : "red",
+							"border-bottom-style" : "dashed",
+							"border-right-color" : "red",
+							"border-left-width" : "3px",
+							"border-top-style" : "dashed"
+						});
 						(function(radioButton_1){
 							radioButton_1.addItem(new cpr.controls.Item("조직별", "value1"));
 							radioButton_1.addItem(new cpr.controls.Item("설계사별", "value2"));
@@ -202,10 +236,10 @@
 							"colIndex": 1,
 							"rowIndex": 0
 						});
-						var output_8 = new cpr.controls.Output();
-						output_8.value = "조직번호";
-						output_8.style.setClasses(["label", "required"]);
-						container.addChild(output_8, {
+						var output_3 = new cpr.controls.Output();
+						output_3.value = "조직번호";
+						output_3.style.setClasses(["label", "required"]);
+						container.addChild(output_3, {
 							"colIndex": 2,
 							"rowIndex": 0
 						});
@@ -225,12 +259,26 @@
 						(function(container){
 							var searchInput_1 = new cpr.controls.SearchInput();
 							searchInput_1.value = "005553";
+							searchInput_1.style.css({
+								"border-right-style" : "dashed",
+								"border-top-width" : "3px",
+								"border-bottom-color" : "red",
+								"border-left-style" : "dashed",
+								"border-right-width" : "3px",
+								"border-bottom-width" : "3px",
+								"border-left-color" : "red",
+								"border-top-color" : "red",
+								"border-bottom-style" : "dashed",
+								"border-right-color" : "red",
+								"border-left-width" : "3px",
+								"border-top-style" : "dashed"
+							});
 							container.addChild(searchInput_1, {
 								"colIndex": 0,
 								"rowIndex": 0
 							});
 							var inputBox_1 = new cpr.controls.InputBox("ipb2");
-							inputBox_1.value = "보람1";
+							inputBox_1.value = "서*1";
 							container.addChild(inputBox_1, {
 								"colIndex": 1,
 								"rowIndex": 0
@@ -250,17 +298,17 @@
 						flowLayout_2.leftMargin = 20;
 						group_7.setLayout(flowLayout_2);
 						(function(container){
-							var button_1 = new cpr.controls.Button();
-							button_1.value = "조회";
-							button_1.style.setClasses(["btn-search"]);
-							container.addChild(button_1, {
+							var button_3 = new cpr.controls.Button();
+							button_3.value = "조회";
+							button_3.style.setClasses(["btn-search"]);
+							container.addChild(button_3, {
 								"width": "49px",
 								"height": "26px"
 							});
-							var button_2 = new cpr.controls.Button();
-							button_2.value = "";
-							button_2.style.setClasses(["btn-reset"]);
-							container.addChild(button_2, {
+							var button_4 = new cpr.controls.Button();
+							button_4.value = "";
+							button_4.style.setClasses(["btn-reset"]);
+							container.addChild(button_4, {
 								"width": "26px",
 								"height": "26px"
 							});
@@ -273,30 +321,58 @@
 							"verticalAlign": "center",
 							"height": 26
 						});
-						var output_9 = new cpr.controls.Output();
-						output_9.value = "계약년월";
-						output_9.style.setClasses(["label", "required"]);
-						container.addChild(output_9, {
+						var output_4 = new cpr.controls.Output();
+						output_4.value = "계약년월";
+						output_4.style.setClasses(["label", "required"]);
+						container.addChild(output_4, {
 							"colIndex": 0,
 							"rowIndex": 1
 						});
 						var dateInput_1 = new cpr.controls.DateInput("dti1");
-						dateInput_1.value = "201302";
+						dateInput_1.value = "202405";
 						dateInput_1.mask = "YYYY-MM";
+						dateInput_1.style.css({
+							"border-right-style" : "dashed",
+							"border-top-width" : "3px",
+							"border-bottom-color" : "red",
+							"border-left-style" : "dashed",
+							"border-right-width" : "3px",
+							"border-bottom-width" : "3px",
+							"border-left-color" : "red",
+							"border-top-color" : "red",
+							"border-bottom-style" : "dashed",
+							"border-right-color" : "red",
+							"border-left-width" : "3px",
+							"border-top-style" : "dashed"
+						});
 						container.addChild(dateInput_1, {
 							"colIndex": 1,
 							"rowIndex": 1,
 							"horizontalAlign": "left"
 						});
-						var output_10 = new cpr.controls.Output();
-						output_10.value = "상태";
-						output_10.style.setClasses(["label", "required"]);
-						container.addChild(output_10, {
+						var output_5 = new cpr.controls.Output();
+						output_5.value = "상태";
+						output_5.style.setClasses(["label", "required"]);
+						container.addChild(output_5, {
 							"colIndex": 2,
 							"rowIndex": 1
 						});
 						var comboBox_1 = new cpr.controls.ComboBox("cmb1");
 						comboBox_1.value = "0";
+						comboBox_1.style.css({
+							"border-right-style" : "dashed",
+							"border-top-width" : "3px",
+							"border-bottom-color" : "red",
+							"border-left-style" : "dashed",
+							"border-right-width" : "3px",
+							"border-bottom-width" : "3px",
+							"border-left-color" : "red",
+							"border-top-color" : "red",
+							"border-bottom-style" : "dashed",
+							"border-right-color" : "red",
+							"border-left-width" : "3px",
+							"border-top-style" : "dashed"
+						});
 						(function(comboBox_1){
 							comboBox_1.addItem(new cpr.controls.Item("전체", "0"));
 						})(comboBox_1);
@@ -359,6 +435,11 @@
 											cell.sortable = false;
 											cell.targetColumnName = "column1";
 											cell.text = "설계사";
+											cell.style.css({
+												"border-left-style" : "dashed",
+												"border-left-color" : "red",
+												"border-left-width" : "3px"
+											});
 										}
 									},
 									{
@@ -479,9 +560,9 @@
 										"configurator": function(cell){
 											cell.columnName = "column1";
 											cell.control = (function(){
-												var output_11 = new cpr.controls.Output();
-												output_11.bind("value").toDataColumn("column1");
-												return output_11;
+												var output_6 = new cpr.controls.Output();
+												output_6.bind("value").toDataColumn("column1");
+												return output_6;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -491,9 +572,9 @@
 										"configurator": function(cell){
 											cell.columnName = "column14";
 											cell.control = (function(){
-												var output_12 = new cpr.controls.Output();
-												output_12.bind("value").toDataColumn("column14");
-												return output_12;
+												var output_7 = new cpr.controls.Output();
+												output_7.bind("value").toDataColumn("column14");
+												return output_7;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -503,13 +584,13 @@
 										"configurator": function(cell){
 											cell.columnName = "column2";
 											cell.control = (function(){
-												var output_13 = new cpr.controls.Output("opt28");
-												output_13.value = "20241231";
-												output_13.dataType = "date";
-												output_13.format = "YYYY-MM-DD";
-												output_13.style.setClasses(["text-center"]);
-												output_13.bind("value").toDataColumn("column2");
-												return output_13;
+												var output_8 = new cpr.controls.Output("opt28");
+												output_8.value = "20241231";
+												output_8.dataType = "date";
+												output_8.format = "YYYY-MM-DD";
+												output_8.style.setClasses(["text-center"]);
+												output_8.bind("value").toDataColumn("column2");
+												return output_8;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -519,9 +600,9 @@
 										"configurator": function(cell){
 											cell.columnName = "column3";
 											cell.control = (function(){
-												var output_14 = new cpr.controls.Output();
-												output_14.bind("value").toDataColumn("column3");
-												return output_14;
+												var output_9 = new cpr.controls.Output();
+												output_9.bind("value").toDataColumn("column3");
+												return output_9;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -531,10 +612,10 @@
 										"configurator": function(cell){
 											cell.columnName = "column4";
 											cell.control = (function(){
-												var output_15 = new cpr.controls.Output();
-												output_15.style.setClasses(["text-left"]);
-												output_15.bind("value").toDataColumn("column4");
-												return output_15;
+												var output_10 = new cpr.controls.Output();
+												output_10.style.setClasses(["text-left"]);
+												output_10.bind("value").toDataColumn("column4");
+												return output_10;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -544,9 +625,9 @@
 										"configurator": function(cell){
 											cell.columnName = "column5";
 											cell.control = (function(){
-												var output_16 = new cpr.controls.Output();
-												output_16.bind("value").toDataColumn("column5");
-												return output_16;
+												var output_11 = new cpr.controls.Output();
+												output_11.bind("value").toDataColumn("column5");
+												return output_11;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -556,9 +637,9 @@
 										"configurator": function(cell){
 											cell.columnName = "column6";
 											cell.control = (function(){
-												var output_17 = new cpr.controls.Output();
-												output_17.bind("value").toDataColumn("column6");
-												return output_17;
+												var output_12 = new cpr.controls.Output();
+												output_12.bind("value").toDataColumn("column6");
+												return output_12;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -568,9 +649,9 @@
 										"configurator": function(cell){
 											cell.columnName = "column7";
 											cell.control = (function(){
-												var output_18 = new cpr.controls.Output();
-												output_18.bind("value").toDataColumn("column7");
-												return output_18;
+												var output_13 = new cpr.controls.Output();
+												output_13.bind("value").toDataColumn("column7");
+												return output_13;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -580,9 +661,9 @@
 										"configurator": function(cell){
 											cell.columnName = "column8";
 											cell.control = (function(){
-												var output_19 = new cpr.controls.Output();
-												output_19.bind("value").toDataColumn("column8");
-												return output_19;
+												var output_14 = new cpr.controls.Output();
+												output_14.bind("value").toDataColumn("column8");
+												return output_14;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -592,9 +673,9 @@
 										"configurator": function(cell){
 											cell.columnName = "column9";
 											cell.control = (function(){
-												var output_20 = new cpr.controls.Output();
-												output_20.bind("value").toDataColumn("column9");
-												return output_20;
+												var output_15 = new cpr.controls.Output();
+												output_15.bind("value").toDataColumn("column9");
+												return output_15;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -604,13 +685,13 @@
 										"configurator": function(cell){
 											cell.columnName = "column10";
 											cell.control = (function(){
-												var output_21 = new cpr.controls.Output();
-												output_21.value = "0";
-												output_21.dataType = "number";
-												output_21.format = "s#,##0";
-												output_21.style.setClasses(["text-right"]);
-												output_21.bind("value").toDataColumn("column10");
-												return output_21;
+												var output_16 = new cpr.controls.Output();
+												output_16.value = "0";
+												output_16.dataType = "number";
+												output_16.format = "s#,##0";
+												output_16.style.setClasses(["text-right"]);
+												output_16.bind("value").toDataColumn("column10");
+												return output_16;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -620,13 +701,13 @@
 										"configurator": function(cell){
 											cell.columnName = "column11";
 											cell.control = (function(){
-												var output_22 = new cpr.controls.Output();
-												output_22.value = "0";
-												output_22.dataType = "number";
-												output_22.format = "s#,##0";
-												output_22.style.setClasses(["text-right"]);
-												output_22.bind("value").toDataColumn("column11");
-												return output_22;
+												var output_17 = new cpr.controls.Output();
+												output_17.value = "0";
+												output_17.dataType = "number";
+												output_17.format = "s#,##0";
+												output_17.style.setClasses(["text-right"]);
+												output_17.bind("value").toDataColumn("column11");
+												return output_17;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -636,13 +717,13 @@
 										"configurator": function(cell){
 											cell.columnName = "column12";
 											cell.control = (function(){
-												var output_23 = new cpr.controls.Output();
-												output_23.value = "0";
-												output_23.dataType = "number";
-												output_23.format = "s#,##0";
-												output_23.style.setClasses(["text-right"]);
-												output_23.bind("value").toDataColumn("column12");
-												return output_23;
+												var output_18 = new cpr.controls.Output();
+												output_18.value = "0";
+												output_18.dataType = "number";
+												output_18.format = "s#,##0";
+												output_18.style.setClasses(["text-right"]);
+												output_18.bind("value").toDataColumn("column12");
+												return output_18;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -652,13 +733,13 @@
 										"configurator": function(cell){
 											cell.columnName = "column13";
 											cell.control = (function(){
-												var output_24 = new cpr.controls.Output();
-												output_24.value = "0";
-												output_24.dataType = "number";
-												output_24.format = "s#,##0";
-												output_24.style.setClasses(["text-right"]);
-												output_24.bind("value").toDataColumn("column13");
-												return output_24;
+												var output_19 = new cpr.controls.Output();
+												output_19.value = "0";
+												output_19.dataType = "number";
+												output_19.format = "s#,##0";
+												output_19.style.setClasses(["text-right"]);
+												output_19.bind("value").toDataColumn("column13");
+												return output_19;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -687,12 +768,12 @@
 										"configurator": function(cell){
 											cell.expr = "getRowCount()\r\n";
 											cell.control = (function(){
-												var output_25 = new cpr.controls.Output();
-												output_25.value = "0";
-												output_25.dataType = "number";
-												output_25.format = "s#,##0";
-												output_25.style.setClasses(["text-right"]);
-												return output_25;
+												var output_20 = new cpr.controls.Output();
+												output_20.value = "0";
+												output_20.dataType = "number";
+												output_20.format = "s#,##0";
+												output_20.style.setClasses(["text-right"]);
+												return output_20;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -709,12 +790,12 @@
 										"configurator": function(cell){
 											cell.expr = "getSum(\"column10\")";
 											cell.control = (function(){
-												var output_26 = new cpr.controls.Output();
-												output_26.value = "0";
-												output_26.dataType = "number";
-												output_26.format = "s#,##0";
-												output_26.style.setClasses(["text-right"]);
-												return output_26;
+												var output_21 = new cpr.controls.Output();
+												output_21.value = "0";
+												output_21.dataType = "number";
+												output_21.format = "s#,##0";
+												output_21.style.setClasses(["text-right"]);
+												return output_21;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -731,12 +812,12 @@
 										"configurator": function(cell){
 											cell.expr = "getSum(\"column11\")";
 											cell.control = (function(){
-												var output_27 = new cpr.controls.Output();
-												output_27.value = "0";
-												output_27.dataType = "number";
-												output_27.format = "s#,##0";
-												output_27.style.setClasses(["text-right"]);
-												return output_27;
+												var output_22 = new cpr.controls.Output();
+												output_22.value = "0";
+												output_22.dataType = "number";
+												output_22.format = "s#,##0";
+												output_22.style.setClasses(["text-right"]);
+												return output_22;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -745,8 +826,22 @@
 							}
 						});
 						grid_1.style.setClasses(["list-normal"]);
+						grid_1.style.css({
+							"border-right-style" : "dashed",
+							"border-top-width" : "3px",
+							"border-bottom-color" : "red",
+							"border-left-style" : "dashed",
+							"border-right-width" : "3px",
+							"border-bottom-width" : "3px",
+							"border-left-color" : "red",
+							"border-top-color" : "red",
+							"border-bottom-style" : "dashed",
+							"border-right-color" : "red",
+							"border-left-width" : "3px",
+							"border-top-style" : "dashed"
+						});
 						container.addChild(grid_1, {
-							"autoSize": "height",
+							"autoSize": "none",
 							"width": "1052px",
 							"height": "498px"
 						});
@@ -780,10 +875,10 @@
 						flowLayout_3.lineWrap = false;
 						group_11.setLayout(flowLayout_3);
 						(function(container){
-							var button_3 = new cpr.controls.Button("btn1");
-							button_3.value = "엑셀다운로드";
-							button_3.style.setClasses(["btn-secondary01", "btn-md"]);
-							container.addChild(button_3, {
+							var button_5 = new cpr.controls.Button("btn1");
+							button_5.value = "엑셀다운로드";
+							button_5.style.setClasses(["btn-secondary01", "btn-md"]);
+							container.addChild(button_5, {
 								"autoSize": "width",
 								"width": "100px",
 								"height": "30px"
@@ -815,10 +910,10 @@
 						flowLayout_5.lineWrap = false;
 						group_13.setLayout(flowLayout_5);
 						(function(container){
-							var button_4 = new cpr.controls.Button("btn2");
-							button_4.value = "다음";
-							button_4.style.setClasses(["btn-primary04", "btn-md"]);
-							container.addChild(button_4, {
+							var button_6 = new cpr.controls.Button("btn2");
+							button_6.value = "다음";
+							button_6.style.setClasses(["btn-primary04", "btn-md"]);
+							container.addChild(button_6, {
 								"autoSize": "width",
 								"width": "100px",
 								"height": "30px"
@@ -845,9 +940,9 @@
 					verticalLayout_6.bottomMargin = 10;
 					group_14.setLayout(verticalLayout_6);
 					(function(container){
-						var output_28 = new cpr.controls.Output();
-						output_28.value = "List 에서 더블클릭 하시면 기본계약사항을 조회 할 수 있습니다.";
-						container.addChild(output_28, {
+						var output_23 = new cpr.controls.Output();
+						output_23.value = "List 에서 더블클릭 하시면 기본계약사항을 조회 할 수 있습니다.";
+						container.addChild(output_23, {
 							"autoSize": "height",
 							"width": "904px",
 							"height": "20px"

@@ -15,25 +15,14 @@
     <cl:group std:sid="group-f6cc10a5" id="grpAppTitle" class="app-title">
       <cl:verticaldata std:sid="v-data-ef7e8ea1" width="1560px" height="35px" autosize="height"/>
       <cl:output std:sid="output-c6ce190d" id="optTitle" class="navi-left" value="기본정보등록">
-        <cl:formdata std:sid="f-data-84645346" row="0" col="0" rowspan="1" colspan="1"/>
+        <cl:formdata std:sid="f-data-fbb0cc9f" row="0" col="0"/>
       </cl:output>
       <cl:group std:sid="group-799c377d" id="grpNavi" class="breadcrumbs">
         <cl:formdata std:sid="f-data-b5509d70" row="0" col="1"/>
-        <cl:output std:sid="output-dbbcce1a" class="home" value="">
-          <cl:flowlayoutdata std:sid="f-data-1cd87bb6" width="20px" height="20px"/>
-        </cl:output>
-        <cl:output std:sid="output-d5e11268" class="breadcrumb-item" value="1Depth">
-          <cl:flowlayoutdata std:sid="f-data-3beb2f65" width="45px" height="17px" autosize="width"/>
-        </cl:output>
-        <cl:output std:sid="output-6e79a920" class="breadcrumb-item" value="2Depth">
-          <cl:flowlayoutdata std:sid="f-data-e5e89842" width="45px" height="17px" autosize="width"/>
-        </cl:output>
-        <cl:output std:sid="output-a3f90a9b" class="breadcrumb-item" value="3Depth">
-          <cl:flowlayoutdata std:sid="f-data-81618497" width="45px" height="17px" autosize="width"/>
-        </cl:output>
-        <cl:output std:sid="output-6a18b375" class="breadcrumb-item" value="4Depth">
-          <cl:flowlayoutdata std:sid="f-data-94258ced" width="45px" height="17px" autosize="width"/>
-        </cl:output>
+        <cl:button std:sid="button-cf1d1def" class="btn-primary04 btn-md" value="다음">
+          <cl:listener std:sid="listener-863ffdf4" name="click" handler="onButtonClick"/>
+          <cl:flowlayoutdata std:sid="f-data-e00902d9" width="49px" height="26px" autosize="width"/>
+        </cl:button>
         <cl:flowlayout std:sid="f-layout-ce38801e" scrollable="false" hspacing="5" vspacing="0" halign="right" valign="middle" linewrap="false"/>
       </cl:group>
       <cl:formlayout std:sid="f-layout-2de29e5a" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
@@ -51,24 +40,21 @@
           <cl:output std:sid="output-92c04caf" class="label" value="성명">
             <cl:formdata std:sid="f-data-19aaf57d" row="0" col="0"/>
           </cl:output>
-          <cl:inputbox std:sid="i-box-dae2894b" id="ipb1">
+          <cl:inputbox std:sid="i-box-dae2894b" id="ipb1" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" value="김흥국">
             <cl:formdata std:sid="f-data-a21cdb03" row="0" col="1"/>
           </cl:inputbox>
           <cl:output std:sid="output-57db873a" class="label" value="주민등록번호">
             <cl:formdata std:sid="f-data-705ae905" row="0" col="2"/>
           </cl:output>
-          <cl:inputbox std:sid="i-box-d5c6f570" id="ipb3">
-            <cl:formdata std:sid="f-data-efc57cd2" row="0" col="3"/>
-          </cl:inputbox>
           <cl:output std:sid="output-e8041a8c" class="label" value="조직번호">
             <cl:formdata std:sid="f-data-df4120c7" row="0" col="4"/>
           </cl:output>
           <cl:group std:sid="group-bca9bd36" class="form-inside">
             <cl:formdata std:sid="f-data-58a41c3f" row="0" col="5"/>
-            <cl:searchinput std:sid="s-input-cb5b2973">
+            <cl:searchinput std:sid="s-input-cb5b2973" value="008003">
               <cl:formdata std:sid="f-data-7e2d7c57" row="0" col="0"/>
             </cl:searchinput>
-            <cl:inputbox std:sid="i-box-2373c291" id="ipb2">
+            <cl:inputbox std:sid="i-box-2373c291" id="ipb2" value="광화문지점">
               <cl:formdata std:sid="f-data-8250e6e9" row="0" col="1"/>
             </cl:inputbox>
             <cl:formlayout std:sid="f-layout-4308dfd4" scrollable="false" hspace="5px" vspace="5px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
@@ -84,6 +70,9 @@
             </cl:button>
             <cl:flowlayout std:sid="f-layout-3d6526c0" scrollable="false" vspacing="0" halign="right" linewrap="false" leftmargin="20"/>
           </cl:group>
+          <cl:maskeditor std:sid="m-editor-fc016b18" id="mse2" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" value="8007071111111" mask="000000-0******">
+            <cl:formdata std:sid="f-data-8d0f5827" row="0" col="3"/>
+          </cl:maskeditor>
           <cl:formlayout std:sid="f-layout-04e336ab" scrollable="false" hspace="20px" vspace="8px" top-margin="6px" right-margin="20px" bottom-margin="6px" left-margin="20px">
             <cl:rows length="26" unit="PIXEL"/>
             <cl:columns length="100" unit="PIXEL" autoSizing="true" syncminlength="false"/>
@@ -99,9 +88,6 @@
         </cl:group>
         <cl:verticallayout std:sid="v-layout-28a66f41" spacing="12"/>
       </cl:group>
-      <cl:output std:sid="output-79e22c2d" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-right-width:3px; border-left-style:dashed; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-right-color:red; border-bottom-style:dashed; border-left-width:3px; border-top-style:dashed;" class="form-title" value="기본정보">
-        <cl:verticaldata std:sid="v-data-00cb28c6" width="110px" height="20px" autosize="none"/>
-      </cl:output>
       <cl:group std:sid="group-44c56dc2" id="grp1" class="form-box">
         <cl:verticaldata std:sid="v-data-f6af4315" width="1560px" height="187px" autosize="height"/>
         <cl:group std:sid="group-cf8c4f3f" id="grp2" class="form-title-box">
@@ -109,24 +95,22 @@
             <std:property key="template-uuid" value="118e3c3f-4223-4b04-952e-4b957942d41d"/>
             <std:property key="template-rev" value="1"/>
           </std:metadata>
-          <cl:verticaldata std:sid="v-data-4beb8906" width="796px" height="17px" autosize="height"/>
-          <cl:group std:sid="group-84f1de0e">
-            <cl:verticaldata std:sid="v-data-517f4fad" width="1560px" height="17px"/>
-            <cl:formlayout std:sid="f-layout-506682c6" scrollable="false" hspace="2px" vspace="2px" top-margin="2px" right-margin="2px" bottom-margin="2px" left-margin="2px">
-              <cl:rows length="26" unit="PIXEL"/>
-              <cl:rows length="1" unit="FRACTION"/>
-              <cl:columns length="110" unit="PIXEL"/>
-              <cl:columns length="1" unit="FRACTION"/>
-            </cl:formlayout>
-          </cl:group>
-          <cl:verticallayout std:sid="v-layout-4880331e" spacing="0"/>
+          <cl:verticaldata std:sid="v-data-4beb8906" width="1550px" height="17px" autosize="height"/>
+          <cl:output std:sid="output-79e22c2d" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" class="form-title" value="기본정보">
+            <cl:formdata std:sid="f-data-d43076f7" row="0" col="0"/>
+          </cl:output>
+          <cl:formlayout std:sid="f-layout-f8524feb" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="110" unit="PIXEL"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
         </cl:group>
         <cl:group std:sid="group-52436b02" id="grp3" class="form-normal">
           <cl:verticaldata std:sid="v-data-57390bcd" width="1440px" height="157px" autosize="height"/>
           <cl:output std:sid="output-5d5091c3" class="label" value="성명">
             <cl:formdata std:sid="f-data-5dc02572" row="0" col="0"/>
           </cl:output>
-          <cl:inputbox std:sid="i-box-9017ad45" id="ipb4" value="홍길동">
+          <cl:inputbox std:sid="i-box-9017ad45" id="ipb4" value="김흥국">
             <cl:formdata std:sid="f-data-a3d49f08" row="0" col="1" rowspan="1" colspan="2"/>
           </cl:inputbox>
           <cl:output std:sid="output-d681424c" class="label required" value="주민등록번호">
@@ -441,10 +425,14 @@
             <std:property key="template-rev" value="1"/>
           </std:metadata>
           <cl:verticaldata std:sid="v-data-df8923de" width="796px" height="17px" autosize="height"/>
-          <cl:output std:sid="output-34c53b56" class="form-title" value="인적정보">
-            <cl:verticaldata std:sid="v-data-0a875959" width="100px" height="17px" autosize="height"/>
+          <cl:output std:sid="output-34c53b56" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" class="form-title" value="인적정보">
+            <cl:formdata std:sid="f-data-69d8c505" row="0" col="0"/>
           </cl:output>
-          <cl:verticallayout std:sid="v-layout-e5b649fc" spacing="0"/>
+          <cl:formlayout std:sid="f-layout-5eaccb52" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="110" unit="PIXEL"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
         </cl:group>
         <cl:group std:sid="group-76f02138" id="grp23" class="form-box">
           <cl:verticaldata std:sid="v-data-0f2d25f0" width="1560px" height="234px" autosize="height"/>
@@ -535,7 +523,7 @@
           </cl:group>
           <cl:group std:sid="group-0571386e" id="grp25" class="form-normal">
             <cl:verticaldata std:sid="v-data-af37bf20" width="1560px" height="33px" autosize="height"/>
-            <cl:output std:sid="output-0281e353" class="label required" value="JB적성검사">
+            <cl:output std:sid="output-0281e353" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" class="label required" value="JB적성검사">
               <cl:formdata std:sid="f-data-17d13635" row="0" col="0"/>
             </cl:output>
             <cl:group std:sid="group-420100b5" id="grp26" class="form-inside">
@@ -562,7 +550,7 @@
             <cl:output std:sid="output-eded37dd" class="label required" value="개인정보활용동의서명일">
               <cl:formdata std:sid="f-data-40a749b3" row="0" col="2"/>
             </cl:output>
-            <cl:dateinput std:sid="d-input-84647d8e" id="dti4" value="20150310">
+            <cl:dateinput std:sid="d-input-84647d8e" id="dti4" value="20240310">
               <cl:formdata std:sid="f-data-2654e39e" halign="LEFT" width="120" row="0" col="3"/>
             </cl:dateinput>
             <cl:output std:sid="output-04dce944" class="label" value="스캔ID">
@@ -607,7 +595,7 @@
             <cl:button std:sid="button-2d055e0d" id="btn3" class="btn-primary04" value="가족사항">
               <cl:flowlayoutdata std:sid="f-data-0932111c" width="60px" height="30px" autosize="width"/>
             </cl:button>
-            <cl:button std:sid="button-354ad66d" id="btn4" class="btn-primary04" value="이미지조회">
+            <cl:button std:sid="button-354ad66d" id="btn4" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" class="btn-primary04" value="이미지조회">
               <cl:flowlayoutdata std:sid="f-data-26df8896" width="60px" height="30px" autosize="width"/>
             </cl:button>
             <cl:flowlayout std:sid="f-layout-5fb1d0db" scrollable="false" hspacing="10" vspacing="0" linewrap="false"/>
@@ -618,7 +606,7 @@
           </cl:group>
           <cl:group std:sid="group-5aa6c261" id="grp31" class="button-table-bottom-right-area">
             <cl:formdata std:sid="f-data-811afdad" row="0" col="2"/>
-            <cl:button std:sid="button-6561a753" id="btn5" class="btn-primary03" value="기본정보수정">
+            <cl:button std:sid="button-6561a753" id="btn5" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" class="btn-primary03" value="기본정보수정">
               <cl:flowlayoutdata std:sid="f-data-b5dd94f4" width="60px" height="30px" autosize="width"/>
             </cl:button>
             <cl:button std:sid="button-3b4da337" id="btn6" class="btn-primary03" value="신규/재진행">

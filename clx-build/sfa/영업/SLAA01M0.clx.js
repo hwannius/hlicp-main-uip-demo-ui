@@ -16,7 +16,26 @@
 			 * Created at 2024. 4. 1. 오후 2:47:48.
 			 *
 			 * @author chwec
-			 ************************************************/;
+			 ************************************************/
+
+			/*
+			 * "다음" 버튼에서 click 이벤트 발생 시 호출.
+			 * 사용자가 컨트롤을 클릭할 때 발생하는 이벤트.
+			 */
+			function onButtonClick(e){
+				var button = e.control;
+
+				//화면이동(현재 화면에서 리로드)_기본정보등록2
+				var host = app.getHost(); // 부모 임베디드 앱
+				cpr.core.App.load("sfa/영업/SLAA01M0_1", function(loadedApp) {
+				    if (loadedApp) {
+				        host.app = loadedApp;
+				        host.initValue = {
+				            "param": "param"
+				        }
+				    }
+				});	
+			};
 			// End - User Script
 			
 			// Header
@@ -62,9 +81,7 @@
 				output_1.style.setClasses(["navi-left"]);
 				container.addChild(output_1, {
 					"colIndex": 0,
-					"rowIndex": 0,
-					"colSpan": 1,
-					"rowSpan": 1
+					"rowIndex": 0
 				});
 				var group_2 = new cpr.controls.Container("grpNavi");
 				group_2.style.setClasses(["breadcrumbs"]);
@@ -77,44 +94,16 @@
 				flowLayout_1.lineWrap = false;
 				group_2.setLayout(flowLayout_1);
 				(function(container){
-					var output_2 = new cpr.controls.Output();
-					output_2.value = "";
-					output_2.style.setClasses(["home"]);
-					container.addChild(output_2, {
-						"width": "20px",
-						"height": "20px"
-					});
-					var output_3 = new cpr.controls.Output();
-					output_3.value = "1Depth";
-					output_3.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_3, {
+					var button_1 = new cpr.controls.Button();
+					button_1.value = "다음";
+					button_1.style.setClasses(["btn-primary04", "btn-md"]);
+					if(typeof onButtonClick == "function") {
+						button_1.addEventListener("click", onButtonClick);
+					}
+					container.addChild(button_1, {
 						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
-					});
-					var output_4 = new cpr.controls.Output();
-					output_4.value = "2Depth";
-					output_4.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_4, {
-						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
-					});
-					var output_5 = new cpr.controls.Output();
-					output_5.value = "3Depth";
-					output_5.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_5, {
-						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
-					});
-					var output_6 = new cpr.controls.Output();
-					output_6.value = "4Depth";
-					output_6.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_6, {
-						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
+						"width": "49px",
+						"height": "26px"
 					});
 				})(group_2);
 				container.addChild(group_2, {
@@ -158,34 +147,44 @@
 					formLayout_2.setRows(["26px"]);
 					group_5.setLayout(formLayout_2);
 					(function(container){
-						var output_7 = new cpr.controls.Output();
-						output_7.value = "성명";
-						output_7.style.setClasses(["label"]);
-						container.addChild(output_7, {
+						var output_2 = new cpr.controls.Output();
+						output_2.value = "성명";
+						output_2.style.setClasses(["label"]);
+						container.addChild(output_2, {
 							"colIndex": 0,
 							"rowIndex": 0
 						});
 						var inputBox_1 = new cpr.controls.InputBox("ipb1");
+						inputBox_1.value = "김흥국";
+						inputBox_1.style.css({
+							"border-right-style" : "dashed",
+							"border-top-width" : "3px",
+							"border-bottom-color" : "red",
+							"border-left-style" : "dashed",
+							"border-right-width" : "3px",
+							"border-bottom-width" : "3px",
+							"border-left-color" : "red",
+							"border-top-color" : "red",
+							"border-bottom-style" : "dashed",
+							"border-right-color" : "red",
+							"border-left-width" : "3px",
+							"border-top-style" : "dashed"
+						});
 						container.addChild(inputBox_1, {
 							"colIndex": 1,
 							"rowIndex": 0
 						});
-						var output_8 = new cpr.controls.Output();
-						output_8.value = "주민등록번호";
-						output_8.style.setClasses(["label"]);
-						container.addChild(output_8, {
+						var output_3 = new cpr.controls.Output();
+						output_3.value = "주민등록번호";
+						output_3.style.setClasses(["label"]);
+						container.addChild(output_3, {
 							"colIndex": 2,
 							"rowIndex": 0
 						});
-						var inputBox_2 = new cpr.controls.InputBox("ipb3");
-						container.addChild(inputBox_2, {
-							"colIndex": 3,
-							"rowIndex": 0
-						});
-						var output_9 = new cpr.controls.Output();
-						output_9.value = "조직번호";
-						output_9.style.setClasses(["label"]);
-						container.addChild(output_9, {
+						var output_4 = new cpr.controls.Output();
+						output_4.value = "조직번호";
+						output_4.style.setClasses(["label"]);
+						container.addChild(output_4, {
 							"colIndex": 4,
 							"rowIndex": 0
 						});
@@ -204,12 +203,14 @@
 						group_6.setLayout(formLayout_3);
 						(function(container){
 							var searchInput_1 = new cpr.controls.SearchInput();
+							searchInput_1.value = "008003";
 							container.addChild(searchInput_1, {
 								"colIndex": 0,
 								"rowIndex": 0
 							});
-							var inputBox_3 = new cpr.controls.InputBox("ipb2");
-							container.addChild(inputBox_3, {
+							var inputBox_2 = new cpr.controls.InputBox("ipb2");
+							inputBox_2.value = "광화문지점";
+							container.addChild(inputBox_2, {
 								"colIndex": 1,
 								"rowIndex": 0
 							});
@@ -228,10 +229,10 @@
 						flowLayout_2.leftMargin = 20;
 						group_7.setLayout(flowLayout_2);
 						(function(container){
-							var button_1 = new cpr.controls.Button();
-							button_1.value = "조회";
-							button_1.style.setClasses(["btn-search"]);
-							container.addChild(button_1, {
+							var button_2 = new cpr.controls.Button();
+							button_2.value = "조회";
+							button_2.style.setClasses(["btn-search"]);
+							container.addChild(button_2, {
 								"width": "49px",
 								"height": "26px"
 							});
@@ -243,6 +244,27 @@
 							"rowSpan": 1,
 							"verticalAlign": "center",
 							"height": 26
+						});
+						var maskEditor_1 = new cpr.controls.MaskEditor("mse2");
+						maskEditor_1.value = "8007071111111";
+						maskEditor_1.mask = "000000-0******";
+						maskEditor_1.style.css({
+							"border-right-style" : "dashed",
+							"border-top-width" : "3px",
+							"border-bottom-color" : "red",
+							"border-left-style" : "dashed",
+							"border-right-width" : "3px",
+							"border-bottom-width" : "3px",
+							"border-left-color" : "red",
+							"border-top-color" : "red",
+							"border-bottom-style" : "dashed",
+							"border-right-color" : "red",
+							"border-left-width" : "3px",
+							"border-top-style" : "dashed"
+						});
+						container.addChild(maskEditor_1, {
+							"colIndex": 3,
+							"rowIndex": 0
 						});
 					})(group_5);
 					container.addChild(group_5, {
@@ -256,28 +278,6 @@
 					"width": "2264px",
 					"height": "42px"
 				});
-				var output_10 = new cpr.controls.Output();
-				output_10.value = "기본정보";
-				output_10.style.setClasses(["form-title"]);
-				output_10.style.css({
-					"border-right-style" : "dashed",
-					"border-top-width" : "3px",
-					"border-bottom-color" : "red",
-					"border-right-width" : "3px",
-					"border-left-style" : "dashed",
-					"border-bottom-width" : "3px",
-					"border-left-color" : "red",
-					"border-top-color" : "red",
-					"border-right-color" : "red",
-					"border-bottom-style" : "dashed",
-					"border-left-width" : "3px",
-					"border-top-style" : "dashed"
-				});
-				container.addChild(output_10, {
-					"autoSize": "none",
-					"width": "110px",
-					"height": "20px"
-				});
 				var group_8 = new cpr.controls.Container("grp1");
 				group_8.style.setClasses(["form-box"]);
 				var verticalLayout_4 = new cpr.controls.layouts.VerticalLayout();
@@ -287,34 +287,47 @@
 				(function(container){
 					var group_9 = new cpr.controls.Container("grp2");
 					group_9.style.setClasses(["form-title-box"]);
-					var verticalLayout_5 = new cpr.controls.layouts.VerticalLayout();
-					verticalLayout_5.spacing = 0;
-					group_9.setLayout(verticalLayout_5);
+					var formLayout_4 = new cpr.controls.layouts.FormLayout();
+					formLayout_4.scrollable = false;
+					formLayout_4.topMargin = "0px";
+					formLayout_4.rightMargin = "0px";
+					formLayout_4.bottomMargin = "0px";
+					formLayout_4.leftMargin = "0px";
+					formLayout_4.horizontalSpacing = "0px";
+					formLayout_4.verticalSpacing = "0px";
+					formLayout_4.setColumns(["110px", "1fr"]);
+					formLayout_4.setRows(["1fr"]);
+					group_9.setLayout(formLayout_4);
 					(function(container){
-						var group_10 = new cpr.controls.Container();
-						var formLayout_4 = new cpr.controls.layouts.FormLayout();
-						formLayout_4.scrollable = false;
-						formLayout_4.topMargin = "2px";
-						formLayout_4.rightMargin = "2px";
-						formLayout_4.bottomMargin = "2px";
-						formLayout_4.leftMargin = "2px";
-						formLayout_4.horizontalSpacing = "2px";
-						formLayout_4.verticalSpacing = "2px";
-						formLayout_4.setColumns(["110px", "1fr"]);
-						formLayout_4.setRows(["26px", "1fr"]);
-						group_10.setLayout(formLayout_4);
-						container.addChild(group_10, {
-							"width": "1560px",
-							"height": "17px"
+						var output_5 = new cpr.controls.Output();
+						output_5.value = "기본정보";
+						output_5.style.setClasses(["form-title"]);
+						output_5.style.css({
+							"border-right-style" : "dashed",
+							"border-top-width" : "3px",
+							"border-bottom-color" : "red",
+							"border-left-style" : "dashed",
+							"border-right-width" : "3px",
+							"border-bottom-width" : "3px",
+							"border-left-color" : "red",
+							"border-top-color" : "red",
+							"border-bottom-style" : "dashed",
+							"border-right-color" : "red",
+							"border-left-width" : "3px",
+							"border-top-style" : "dashed"
+						});
+						container.addChild(output_5, {
+							"colIndex": 0,
+							"rowIndex": 0
 						});
 					})(group_9);
 					container.addChild(group_9, {
 						"autoSize": "height",
-						"width": "796px",
+						"width": "1550px",
 						"height": "17px"
 					});
-					var group_11 = new cpr.controls.Container("grp3");
-					group_11.style.setClasses(["form-normal"]);
+					var group_10 = new cpr.controls.Container("grp3");
+					group_10.style.setClasses(["form-normal"]);
 					var formLayout_5 = new cpr.controls.layouts.FormLayout();
 					formLayout_5.scrollable = false;
 					formLayout_5.topMargin = "2px";
@@ -335,46 +348,46 @@
 					formLayout_5.setColumnAutoSizing(3, true);
 					formLayout_5.setColumnAutoSizing(5, true);
 					formLayout_5.setRows(["26px", "26px", "26px", "26px", "26px"]);
-					group_11.setLayout(formLayout_5);
+					group_10.setLayout(formLayout_5);
 					(function(container){
-						var output_11 = new cpr.controls.Output();
-						output_11.value = "성명";
-						output_11.style.setClasses(["label"]);
-						container.addChild(output_11, {
+						var output_6 = new cpr.controls.Output();
+						output_6.value = "성명";
+						output_6.style.setClasses(["label"]);
+						container.addChild(output_6, {
 							"colIndex": 0,
 							"rowIndex": 0
 						});
-						var inputBox_4 = new cpr.controls.InputBox("ipb4");
-						inputBox_4.value = "홍길동";
-						container.addChild(inputBox_4, {
+						var inputBox_3 = new cpr.controls.InputBox("ipb4");
+						inputBox_3.value = "김흥국";
+						container.addChild(inputBox_3, {
 							"colIndex": 1,
 							"rowIndex": 0,
 							"colSpan": 2,
 							"rowSpan": 1
 						});
-						var output_12 = new cpr.controls.Output();
-						output_12.value = "주민등록번호";
-						output_12.style.setClasses(["label", "required"]);
-						container.addChild(output_12, {
+						var output_7 = new cpr.controls.Output();
+						output_7.value = "주민등록번호";
+						output_7.style.setClasses(["label", "required"]);
+						container.addChild(output_7, {
 							"colIndex": 3,
 							"rowIndex": 0
 						});
-						var maskEditor_1 = new cpr.controls.MaskEditor("mse1");
-						maskEditor_1.value = "8007071111111";
-						maskEditor_1.mask = "000000-0******";
-						container.addChild(maskEditor_1, {
+						var maskEditor_2 = new cpr.controls.MaskEditor("mse1");
+						maskEditor_2.value = "8007071111111";
+						maskEditor_2.mask = "000000-0******";
+						container.addChild(maskEditor_2, {
 							"colIndex": 4,
 							"rowIndex": 0
 						});
-						var output_13 = new cpr.controls.Output();
-						output_13.value = "조직번호";
-						output_13.style.setClasses(["label", "required"]);
-						container.addChild(output_13, {
+						var output_8 = new cpr.controls.Output();
+						output_8.value = "조직번호";
+						output_8.style.setClasses(["label", "required"]);
+						container.addChild(output_8, {
 							"colIndex": 5,
 							"rowIndex": 0
 						});
-						var group_12 = new cpr.controls.Container("grp4");
-						group_12.style.setClasses(["form-inside"]);
+						var group_11 = new cpr.controls.Container("grp4");
+						group_11.style.setClasses(["form-inside"]);
 						var formLayout_6 = new cpr.controls.layouts.FormLayout();
 						formLayout_6.scrollable = false;
 						formLayout_6.topMargin = "0px";
@@ -385,7 +398,7 @@
 						formLayout_6.verticalSpacing = "5px";
 						formLayout_6.setColumns(["120px", "1fr"]);
 						formLayout_6.setRows(["1fr"]);
-						group_12.setLayout(formLayout_6);
+						group_11.setLayout(formLayout_6);
 						(function(container){
 							var searchInput_2 = new cpr.controls.SearchInput();
 							searchInput_2.value = "008003";
@@ -393,26 +406,26 @@
 								"colIndex": 0,
 								"rowIndex": 0
 							});
-							var inputBox_5 = new cpr.controls.InputBox("ipb8");
-							inputBox_5.value = "광화문지점";
-							container.addChild(inputBox_5, {
+							var inputBox_4 = new cpr.controls.InputBox("ipb8");
+							inputBox_4.value = "광화문지점";
+							container.addChild(inputBox_4, {
 								"colIndex": 1,
 								"rowIndex": 0
 							});
-						})(group_12);
-						container.addChild(group_12, {
+						})(group_11);
+						container.addChild(group_11, {
 							"colIndex": 6,
 							"rowIndex": 0
 						});
-						var output_14 = new cpr.controls.Output();
-						output_14.value = "도입매니저";
-						output_14.style.setClasses(["label"]);
-						container.addChild(output_14, {
+						var output_9 = new cpr.controls.Output();
+						output_9.value = "도입매니저";
+						output_9.style.setClasses(["label"]);
+						container.addChild(output_9, {
 							"colIndex": 0,
 							"rowIndex": 1
 						});
-						var group_13 = new cpr.controls.Container("grp5");
-						group_13.style.setClasses(["form-inside"]);
+						var group_12 = new cpr.controls.Container("grp5");
+						group_12.style.setClasses(["form-inside"]);
 						var formLayout_7 = new cpr.controls.layouts.FormLayout();
 						formLayout_7.scrollable = false;
 						formLayout_7.topMargin = "0px";
@@ -423,7 +436,7 @@
 						formLayout_7.verticalSpacing = "5px";
 						formLayout_7.setColumns(["120px", "1fr"]);
 						formLayout_7.setRows(["1fr"]);
-						group_13.setLayout(formLayout_7);
+						group_12.setLayout(formLayout_7);
 						(function(container){
 							var searchInput_3 = new cpr.controls.SearchInput();
 							searchInput_3.value = "00262616";
@@ -431,28 +444,28 @@
 								"colIndex": 0,
 								"rowIndex": 0
 							});
-							var inputBox_6 = new cpr.controls.InputBox("ipb6");
-							inputBox_6.value = "고길동";
-							container.addChild(inputBox_6, {
+							var inputBox_5 = new cpr.controls.InputBox("ipb6");
+							inputBox_5.value = "고길동";
+							container.addChild(inputBox_5, {
 								"colIndex": 1,
 								"rowIndex": 0
 							});
-						})(group_13);
-						container.addChild(group_13, {
+						})(group_12);
+						container.addChild(group_12, {
 							"colIndex": 1,
 							"rowIndex": 1,
 							"colSpan": 2,
 							"rowSpan": 1
 						});
-						var output_15 = new cpr.controls.Output();
-						output_15.value = "유치자";
-						output_15.style.setClasses(["label", "required"]);
-						container.addChild(output_15, {
+						var output_10 = new cpr.controls.Output();
+						output_10.value = "유치자";
+						output_10.style.setClasses(["label", "required"]);
+						container.addChild(output_10, {
 							"colIndex": 3,
 							"rowIndex": 1
 						});
-						var group_14 = new cpr.controls.Container("grp6");
-						group_14.style.setClasses(["form-inside"]);
+						var group_13 = new cpr.controls.Container("grp6");
+						group_13.style.setClasses(["form-inside"]);
 						var formLayout_8 = new cpr.controls.layouts.FormLayout();
 						formLayout_8.scrollable = false;
 						formLayout_8.topMargin = "0px";
@@ -463,7 +476,7 @@
 						formLayout_8.verticalSpacing = "5px";
 						formLayout_8.setColumns(["120px", "1fr"]);
 						formLayout_8.setRows(["1fr"]);
-						group_14.setLayout(formLayout_8);
+						group_13.setLayout(formLayout_8);
 						(function(container){
 							var searchInput_4 = new cpr.controls.SearchInput();
 							searchInput_4.value = "00262616";
@@ -471,26 +484,26 @@
 								"colIndex": 0,
 								"rowIndex": 0
 							});
-							var inputBox_7 = new cpr.controls.InputBox("ipb7");
-							inputBox_7.value = "고길동";
-							container.addChild(inputBox_7, {
+							var inputBox_6 = new cpr.controls.InputBox("ipb7");
+							inputBox_6.value = "고길동";
+							container.addChild(inputBox_6, {
 								"colIndex": 1,
 								"rowIndex": 0
 							});
-						})(group_14);
-						container.addChild(group_14, {
+						})(group_13);
+						container.addChild(group_13, {
 							"colIndex": 4,
 							"rowIndex": 1
 						});
-						var output_16 = new cpr.controls.Output();
-						output_16.value = "유치자경력";
-						output_16.style.setClasses(["label"]);
-						container.addChild(output_16, {
+						var output_11 = new cpr.controls.Output();
+						output_11.value = "유치자경력";
+						output_11.style.setClasses(["label"]);
+						container.addChild(output_11, {
 							"colIndex": 5,
 							"rowIndex": 1
 						});
-						var group_15 = new cpr.controls.Container("grp7");
-						group_15.style.setClasses(["form-inside"]);
+						var group_14 = new cpr.controls.Container("grp7");
+						group_14.style.setClasses(["form-inside"]);
 						var formLayout_9 = new cpr.controls.layouts.FormLayout();
 						formLayout_9.scrollable = false;
 						formLayout_9.topMargin = "0px";
@@ -502,52 +515,52 @@
 						formLayout_9.setColumns(["120px", "0px"]);
 						formLayout_9.setColumnAutoSizing(1, true);
 						formLayout_9.setRows(["1fr"]);
-						group_15.setLayout(formLayout_9);
+						group_14.setLayout(formLayout_9);
 						(function(container){
-							var inputBox_8 = new cpr.controls.InputBox("ipb10");
-							inputBox_8.value = "84";
-							inputBox_8.style.setClasses(["text-right"]);
-							container.addChild(inputBox_8, {
+							var inputBox_7 = new cpr.controls.InputBox("ipb10");
+							inputBox_7.value = "84";
+							inputBox_7.style.setClasses(["text-right"]);
+							container.addChild(inputBox_7, {
 								"colIndex": 0,
 								"rowIndex": 0
 							});
-							var output_17 = new cpr.controls.Output();
-							output_17.value = "차월";
-							container.addChild(output_17, {
+							var output_12 = new cpr.controls.Output();
+							output_12.value = "차월";
+							container.addChild(output_12, {
 								"colIndex": 1,
 								"rowIndex": 0
 							});
-						})(group_15);
-						container.addChild(group_15, {
+						})(group_14);
+						container.addChild(group_14, {
 							"colIndex": 6,
 							"rowIndex": 1
 						});
-						var output_18 = new cpr.controls.Output();
-						output_18.value = "활동가능시간";
-						output_18.style.setClasses(["label", "required"]);
-						container.addChild(output_18, {
+						var output_13 = new cpr.controls.Output();
+						output_13.value = "활동가능시간";
+						output_13.style.setClasses(["label", "required"]);
+						container.addChild(output_13, {
 							"colIndex": 0,
 							"rowIndex": 2,
 							"colSpan": 1,
 							"rowSpan": 2
 						});
-						var output_19 = new cpr.controls.Output();
-						output_19.value = "참석시간";
-						output_19.style.setClasses(["label"]);
-						container.addChild(output_19, {
+						var output_14 = new cpr.controls.Output();
+						output_14.value = "참석시간";
+						output_14.style.setClasses(["label"]);
+						container.addChild(output_14, {
 							"colIndex": 1,
 							"rowIndex": 2
 						});
-						var group_16 = new cpr.controls.Container("grp8");
+						var group_15 = new cpr.controls.Container("grp8");
 						var flowLayout_3 = new cpr.controls.layouts.FlowLayout();
 						flowLayout_3.scrollable = false;
 						flowLayout_3.horizontalSpacing = 20;
 						flowLayout_3.verticalSpacing = 0;
 						flowLayout_3.lineWrap = false;
-						group_16.setLayout(flowLayout_3);
+						group_15.setLayout(flowLayout_3);
 						(function(container){
-							var group_17 = new cpr.controls.Container("grp9");
-							group_17.style.setClasses(["form-inside"]);
+							var group_16 = new cpr.controls.Container("grp9");
+							group_16.style.setClasses(["form-inside"]);
 							var formLayout_10 = new cpr.controls.layouts.FormLayout();
 							formLayout_10.scrollable = false;
 							formLayout_10.topMargin = "0px";
@@ -559,28 +572,28 @@
 							formLayout_10.setColumns(["55px", "0px"]);
 							formLayout_10.setColumnAutoSizing(1, true);
 							formLayout_10.setRows(["1fr"]);
-							group_17.setLayout(formLayout_10);
+							group_16.setLayout(formLayout_10);
 							(function(container){
-								var inputBox_9 = new cpr.controls.InputBox("ipb14");
-								inputBox_9.value = "09";
-								container.addChild(inputBox_9, {
+								var inputBox_8 = new cpr.controls.InputBox("ipb14");
+								inputBox_8.value = "09";
+								container.addChild(inputBox_8, {
 									"colIndex": 0,
 									"rowIndex": 0
 								});
-								var output_20 = new cpr.controls.Output();
-								output_20.value = "시";
-								container.addChild(output_20, {
+								var output_15 = new cpr.controls.Output();
+								output_15.value = "시";
+								container.addChild(output_15, {
 									"colIndex": 1,
 									"rowIndex": 0
 								});
-							})(group_17);
-							container.addChild(group_17, {
+							})(group_16);
+							container.addChild(group_16, {
 								"autoSize": "width",
 								"width": "95px",
 								"height": "26px"
 							});
-							var group_18 = new cpr.controls.Container("grp10");
-							group_18.style.setClasses(["form-inside"]);
+							var group_17 = new cpr.controls.Container("grp10");
+							group_17.style.setClasses(["form-inside"]);
 							var formLayout_11 = new cpr.controls.layouts.FormLayout();
 							formLayout_11.scrollable = false;
 							formLayout_11.topMargin = "0px";
@@ -592,35 +605,35 @@
 							formLayout_11.setColumns(["55px", "0px"]);
 							formLayout_11.setColumnAutoSizing(1, true);
 							formLayout_11.setRows(["1fr"]);
-							group_18.setLayout(formLayout_11);
+							group_17.setLayout(formLayout_11);
 							(function(container){
-								var inputBox_10 = new cpr.controls.InputBox("ipb13");
-								inputBox_10.value = "00";
-								container.addChild(inputBox_10, {
+								var inputBox_9 = new cpr.controls.InputBox("ipb13");
+								inputBox_9.value = "00";
+								container.addChild(inputBox_9, {
 									"colIndex": 0,
 									"rowIndex": 0
 								});
-								var output_21 = new cpr.controls.Output();
-								output_21.value = "분";
-								container.addChild(output_21, {
+								var output_16 = new cpr.controls.Output();
+								output_16.value = "분";
+								container.addChild(output_16, {
 									"colIndex": 1,
 									"rowIndex": 0
 								});
-							})(group_18);
-							container.addChild(group_18, {
+							})(group_17);
+							container.addChild(group_17, {
 								"autoSize": "width",
 								"width": "120px",
 								"height": "26px"
 							});
-						})(group_16);
-						container.addChild(group_16, {
+						})(group_15);
+						container.addChild(group_15, {
 							"colIndex": 2,
 							"rowIndex": 2
 						});
-						var output_22 = new cpr.controls.Output();
-						output_22.value = "교차여부";
-						output_22.style.setClasses(["label", "required"]);
-						container.addChild(output_22, {
+						var output_17 = new cpr.controls.Output();
+						output_17.value = "교차여부";
+						output_17.style.setClasses(["label", "required"]);
+						container.addChild(output_17, {
 							"colIndex": 3,
 							"rowIndex": 2
 						});
@@ -635,15 +648,15 @@
 							"colIndex": 4,
 							"rowIndex": 2
 						});
-						var output_23 = new cpr.controls.Output();
-						output_23.value = "가정월소득";
-						output_23.style.setClasses(["label", "required"]);
-						container.addChild(output_23, {
+						var output_18 = new cpr.controls.Output();
+						output_18.value = "가정월소득";
+						output_18.style.setClasses(["label", "required"]);
+						container.addChild(output_18, {
 							"colIndex": 5,
 							"rowIndex": 2
 						});
-						var group_19 = new cpr.controls.Container("grp11");
-						group_19.style.setClasses(["form-inside"]);
+						var group_18 = new cpr.controls.Container("grp11");
+						group_18.style.setClasses(["form-inside"]);
 						var formLayout_12 = new cpr.controls.layouts.FormLayout();
 						formLayout_12.scrollable = false;
 						formLayout_12.topMargin = "0px";
@@ -655,7 +668,7 @@
 						formLayout_12.setColumns(["120px", "0px"]);
 						formLayout_12.setColumnAutoSizing(1, true);
 						formLayout_12.setRows(["1fr"]);
-						group_19.setLayout(formLayout_12);
+						group_18.setLayout(formLayout_12);
 						(function(container){
 							var numberEditor_1 = new cpr.controls.NumberEditor("nbe1");
 							numberEditor_1.value = "0";
@@ -663,34 +676,34 @@
 								"colIndex": 0,
 								"rowIndex": 0
 							});
-							var output_24 = new cpr.controls.Output();
-							output_24.value = "만원";
-							container.addChild(output_24, {
+							var output_19 = new cpr.controls.Output();
+							output_19.value = "만원";
+							container.addChild(output_19, {
 								"colIndex": 1,
 								"rowIndex": 0
 							});
-						})(group_19);
-						container.addChild(group_19, {
+						})(group_18);
+						container.addChild(group_18, {
 							"colIndex": 6,
 							"rowIndex": 2
 						});
-						var output_25 = new cpr.controls.Output();
-						output_25.value = "귀소시간";
-						output_25.style.setClasses(["label"]);
-						container.addChild(output_25, {
+						var output_20 = new cpr.controls.Output();
+						output_20.value = "귀소시간";
+						output_20.style.setClasses(["label"]);
+						container.addChild(output_20, {
 							"colIndex": 1,
 							"rowIndex": 3
 						});
-						var group_20 = new cpr.controls.Container("grp12");
+						var group_19 = new cpr.controls.Container("grp12");
 						var flowLayout_4 = new cpr.controls.layouts.FlowLayout();
 						flowLayout_4.scrollable = false;
 						flowLayout_4.horizontalSpacing = 20;
 						flowLayout_4.verticalSpacing = 0;
 						flowLayout_4.lineWrap = false;
-						group_20.setLayout(flowLayout_4);
+						group_19.setLayout(flowLayout_4);
 						(function(container){
-							var group_21 = new cpr.controls.Container("grp13");
-							group_21.style.setClasses(["form-inside"]);
+							var group_20 = new cpr.controls.Container("grp13");
+							group_20.style.setClasses(["form-inside"]);
 							var formLayout_13 = new cpr.controls.layouts.FormLayout();
 							formLayout_13.scrollable = false;
 							formLayout_13.topMargin = "0px";
@@ -702,28 +715,28 @@
 							formLayout_13.setColumns(["55px", "0px"]);
 							formLayout_13.setColumnAutoSizing(1, true);
 							formLayout_13.setRows(["1fr"]);
-							group_21.setLayout(formLayout_13);
+							group_20.setLayout(formLayout_13);
 							(function(container){
-								var inputBox_11 = new cpr.controls.InputBox("ipb15");
-								inputBox_11.value = "17";
-								container.addChild(inputBox_11, {
+								var inputBox_10 = new cpr.controls.InputBox("ipb15");
+								inputBox_10.value = "17";
+								container.addChild(inputBox_10, {
 									"colIndex": 0,
 									"rowIndex": 0
 								});
-								var output_26 = new cpr.controls.Output();
-								output_26.value = "시";
-								container.addChild(output_26, {
+								var output_21 = new cpr.controls.Output();
+								output_21.value = "시";
+								container.addChild(output_21, {
 									"colIndex": 1,
 									"rowIndex": 0
 								});
-							})(group_21);
-							container.addChild(group_21, {
+							})(group_20);
+							container.addChild(group_20, {
 								"autoSize": "width",
 								"width": "95px",
 								"height": "26px"
 							});
-							var group_22 = new cpr.controls.Container("grp14");
-							group_22.style.setClasses(["form-inside"]);
+							var group_21 = new cpr.controls.Container("grp14");
+							group_21.style.setClasses(["form-inside"]);
 							var formLayout_14 = new cpr.controls.layouts.FormLayout();
 							formLayout_14.scrollable = false;
 							formLayout_14.topMargin = "0px";
@@ -735,40 +748,40 @@
 							formLayout_14.setColumns(["55px", "0px"]);
 							formLayout_14.setColumnAutoSizing(1, true);
 							formLayout_14.setRows(["1fr"]);
-							group_22.setLayout(formLayout_14);
+							group_21.setLayout(formLayout_14);
 							(function(container){
-								var inputBox_12 = new cpr.controls.InputBox("ipb16");
-								inputBox_12.value = "00";
-								container.addChild(inputBox_12, {
+								var inputBox_11 = new cpr.controls.InputBox("ipb16");
+								inputBox_11.value = "00";
+								container.addChild(inputBox_11, {
 									"colIndex": 0,
 									"rowIndex": 0
 								});
-								var output_27 = new cpr.controls.Output();
-								output_27.value = "분";
-								container.addChild(output_27, {
+								var output_22 = new cpr.controls.Output();
+								output_22.value = "분";
+								container.addChild(output_22, {
 									"colIndex": 1,
 									"rowIndex": 0
 								});
-							})(group_22);
-							container.addChild(group_22, {
+							})(group_21);
+							container.addChild(group_21, {
 								"autoSize": "width",
 								"width": "120px",
 								"height": "26px"
 							});
-						})(group_20);
-						container.addChild(group_20, {
+						})(group_19);
+						container.addChild(group_19, {
 							"colIndex": 2,
 							"rowIndex": 3
 						});
-						var output_28 = new cpr.controls.Output();
-						output_28.value = "생보가입경험";
-						output_28.style.setClasses(["label", "required"]);
-						container.addChild(output_28, {
+						var output_23 = new cpr.controls.Output();
+						output_23.value = "생보가입경험";
+						output_23.style.setClasses(["label", "required"]);
+						container.addChild(output_23, {
 							"colIndex": 3,
 							"rowIndex": 3
 						});
-						var group_23 = new cpr.controls.Container("grp15");
-						group_23.style.setClasses(["form-inside"]);
+						var group_22 = new cpr.controls.Container("grp15");
+						group_22.style.setClasses(["form-inside"]);
 						var formLayout_15 = new cpr.controls.layouts.FormLayout();
 						formLayout_15.scrollable = false;
 						formLayout_15.topMargin = "0px";
@@ -780,35 +793,35 @@
 						formLayout_15.setColumns(["120px", "0px"]);
 						formLayout_15.setColumnAutoSizing(1, true);
 						formLayout_15.setRows(["1fr"]);
-						group_23.setLayout(formLayout_15);
+						group_22.setLayout(formLayout_15);
 						(function(container){
-							var inputBox_13 = new cpr.controls.InputBox("ipb12");
-							inputBox_13.value = "5";
-							inputBox_13.style.setClasses(["text-right"]);
-							container.addChild(inputBox_13, {
+							var inputBox_12 = new cpr.controls.InputBox("ipb12");
+							inputBox_12.value = "5";
+							inputBox_12.style.setClasses(["text-right"]);
+							container.addChild(inputBox_12, {
 								"colIndex": 0,
 								"rowIndex": 0
 							});
-							var output_29 = new cpr.controls.Output();
-							output_29.value = "건";
-							container.addChild(output_29, {
+							var output_24 = new cpr.controls.Output();
+							output_24.value = "건";
+							container.addChild(output_24, {
 								"colIndex": 1,
 								"rowIndex": 0
 							});
-						})(group_23);
-						container.addChild(group_23, {
+						})(group_22);
+						container.addChild(group_22, {
 							"colIndex": 4,
 							"rowIndex": 3
 						});
-						var output_30 = new cpr.controls.Output();
-						output_30.value = "부양가족수";
-						output_30.style.setClasses(["label", "required"]);
-						container.addChild(output_30, {
+						var output_25 = new cpr.controls.Output();
+						output_25.value = "부양가족수";
+						output_25.style.setClasses(["label", "required"]);
+						container.addChild(output_25, {
 							"colIndex": 5,
 							"rowIndex": 3
 						});
-						var group_24 = new cpr.controls.Container("grp16");
-						group_24.style.setClasses(["form-inside"]);
+						var group_23 = new cpr.controls.Container("grp16");
+						group_23.style.setClasses(["form-inside"]);
 						var formLayout_16 = new cpr.controls.layouts.FormLayout();
 						formLayout_16.scrollable = false;
 						formLayout_16.topMargin = "0px";
@@ -820,43 +833,43 @@
 						formLayout_16.setColumns(["120px", "0px"]);
 						formLayout_16.setColumnAutoSizing(1, true);
 						formLayout_16.setRows(["1fr"]);
-						group_24.setLayout(formLayout_16);
+						group_23.setLayout(formLayout_16);
 						(function(container){
-							var inputBox_14 = new cpr.controls.InputBox("ipb9");
-							inputBox_14.value = "3";
-							inputBox_14.style.setClasses(["text-right"]);
-							container.addChild(inputBox_14, {
+							var inputBox_13 = new cpr.controls.InputBox("ipb9");
+							inputBox_13.value = "3";
+							inputBox_13.style.setClasses(["text-right"]);
+							container.addChild(inputBox_13, {
 								"colIndex": 0,
 								"rowIndex": 0
 							});
-							var output_31 = new cpr.controls.Output();
-							output_31.value = "명";
-							container.addChild(output_31, {
+							var output_26 = new cpr.controls.Output();
+							output_26.value = "명";
+							container.addChild(output_26, {
 								"colIndex": 1,
 								"rowIndex": 0
 							});
-						})(group_24);
-						container.addChild(group_24, {
+						})(group_23);
+						container.addChild(group_23, {
 							"colIndex": 6,
 							"rowIndex": 3
 						});
-						var output_32 = new cpr.controls.Output();
-						output_32.value = "직장경력기간";
-						output_32.style.setClasses(["label", "required"]);
-						container.addChild(output_32, {
+						var output_27 = new cpr.controls.Output();
+						output_27.value = "직장경력기간";
+						output_27.style.setClasses(["label", "required"]);
+						container.addChild(output_27, {
 							"colIndex": 0,
 							"rowIndex": 4
 						});
-						var group_25 = new cpr.controls.Container("grp17");
+						var group_24 = new cpr.controls.Container("grp17");
 						var flowLayout_5 = new cpr.controls.layouts.FlowLayout();
 						flowLayout_5.scrollable = false;
 						flowLayout_5.horizontalSpacing = 20;
 						flowLayout_5.verticalSpacing = 0;
 						flowLayout_5.lineWrap = false;
-						group_25.setLayout(flowLayout_5);
+						group_24.setLayout(flowLayout_5);
 						(function(container){
-							var group_26 = new cpr.controls.Container("grp18");
-							group_26.style.setClasses(["form-inside"]);
+							var group_25 = new cpr.controls.Container("grp18");
+							group_25.style.setClasses(["form-inside"]);
 							var formLayout_17 = new cpr.controls.layouts.FormLayout();
 							formLayout_17.scrollable = false;
 							formLayout_17.topMargin = "0px";
@@ -868,7 +881,7 @@
 							formLayout_17.setColumns(["55px", "0px"]);
 							formLayout_17.setColumnAutoSizing(1, true);
 							formLayout_17.setRows(["1fr"]);
-							group_26.setLayout(formLayout_17);
+							group_25.setLayout(formLayout_17);
 							(function(container){
 								var numberEditor_2 = new cpr.controls.NumberEditor("nbe2");
 								numberEditor_2.value = "10";
@@ -880,20 +893,20 @@
 									"bottomSpacing": 0,
 									"leftSpacing": 0
 								});
-								var output_33 = new cpr.controls.Output();
-								output_33.value = "년";
-								container.addChild(output_33, {
+								var output_28 = new cpr.controls.Output();
+								output_28.value = "년";
+								container.addChild(output_28, {
 									"colIndex": 1,
 									"rowIndex": 0
 								});
-							})(group_26);
-							container.addChild(group_26, {
+							})(group_25);
+							container.addChild(group_25, {
 								"autoSize": "width",
 								"width": "95px",
 								"height": "26px"
 							});
-							var group_27 = new cpr.controls.Container("grp19");
-							group_27.style.setClasses(["form-inside"]);
+							var group_26 = new cpr.controls.Container("grp19");
+							group_26.style.setClasses(["form-inside"]);
 							var formLayout_18 = new cpr.controls.layouts.FormLayout();
 							formLayout_18.scrollable = false;
 							formLayout_18.topMargin = "0px";
@@ -905,7 +918,7 @@
 							formLayout_18.setColumns(["55px", "0px"]);
 							formLayout_18.setColumnAutoSizing(1, true);
 							formLayout_18.setRows(["1fr"]);
-							group_27.setLayout(formLayout_18);
+							group_26.setLayout(formLayout_18);
 							(function(container){
 								var numberEditor_3 = new cpr.controls.NumberEditor("nbe3");
 								numberEditor_3.value = "0";
@@ -917,20 +930,20 @@
 									"bottomSpacing": 0,
 									"leftSpacing": 0
 								});
-								var output_34 = new cpr.controls.Output();
-								output_34.value = "개월";
-								container.addChild(output_34, {
+								var output_29 = new cpr.controls.Output();
+								output_29.value = "개월";
+								container.addChild(output_29, {
 									"colIndex": 1,
 									"rowIndex": 0
 								});
-							})(group_27);
-							container.addChild(group_27, {
+							})(group_26);
+							container.addChild(group_26, {
 								"autoSize": "width",
 								"width": "80px",
 								"height": "26px"
 							});
-						})(group_25);
-						container.addChild(group_25, {
+						})(group_24);
+						container.addChild(group_24, {
 							"colIndex": 1,
 							"rowIndex": 4,
 							"colSpan": 2,
@@ -938,15 +951,15 @@
 							"width": 60,
 							"height": 25
 						});
-						var output_35 = new cpr.controls.Output();
-						output_35.value = "사회활동기간";
-						output_35.style.setClasses(["label", "required"]);
-						container.addChild(output_35, {
+						var output_30 = new cpr.controls.Output();
+						output_30.value = "사회활동기간";
+						output_30.style.setClasses(["label", "required"]);
+						container.addChild(output_30, {
 							"colIndex": 3,
 							"rowIndex": 4
 						});
-						var group_28 = new cpr.controls.Container("grp20");
-						group_28.style.setClasses(["form-inside"]);
+						var group_27 = new cpr.controls.Container("grp20");
+						group_27.style.setClasses(["form-inside"]);
 						var formLayout_19 = new cpr.controls.layouts.FormLayout();
 						formLayout_19.scrollable = false;
 						formLayout_19.topMargin = "0px";
@@ -958,30 +971,30 @@
 						formLayout_19.setColumns(["120px", "0px"]);
 						formLayout_19.setColumnAutoSizing(1, true);
 						formLayout_19.setRows(["1fr"]);
-						group_28.setLayout(formLayout_19);
+						group_27.setLayout(formLayout_19);
 						(function(container){
-							var inputBox_15 = new cpr.controls.InputBox("ipb11");
-							inputBox_15.value = "10";
-							inputBox_15.style.setClasses(["text-right"]);
-							container.addChild(inputBox_15, {
+							var inputBox_14 = new cpr.controls.InputBox("ipb11");
+							inputBox_14.value = "10";
+							inputBox_14.style.setClasses(["text-right"]);
+							container.addChild(inputBox_14, {
 								"colIndex": 0,
 								"rowIndex": 0
 							});
-							var output_36 = new cpr.controls.Output();
-							output_36.value = "년";
-							container.addChild(output_36, {
+							var output_31 = new cpr.controls.Output();
+							output_31.value = "년";
+							container.addChild(output_31, {
 								"colIndex": 1,
 								"rowIndex": 0
 							});
-						})(group_28);
-						container.addChild(group_28, {
+						})(group_27);
+						container.addChild(group_27, {
 							"colIndex": 4,
 							"rowIndex": 4
 						});
-						var output_37 = new cpr.controls.Output();
-						output_37.value = "결혼여부";
-						output_37.style.setClasses(["label", "required"]);
-						container.addChild(output_37, {
+						var output_32 = new cpr.controls.Output();
+						output_32.value = "결혼여부";
+						output_32.style.setClasses(["label", "required"]);
+						container.addChild(output_32, {
 							"colIndex": 5,
 							"rowIndex": 4
 						});
@@ -995,8 +1008,8 @@
 							"colIndex": 6,
 							"rowIndex": 4
 						});
-					})(group_11);
-					container.addChild(group_11, {
+					})(group_10);
+					container.addChild(group_10, {
 						"autoSize": "height",
 						"width": "1440px",
 						"height": "157px"
@@ -1007,61 +1020,82 @@
 					"width": "1560px",
 					"height": "187px"
 				});
-				var group_29 = new cpr.controls.Container("grp21");
-				group_29.style.setClasses(["form-box"]);
-				var verticalLayout_6 = new cpr.controls.layouts.VerticalLayout();
-				verticalLayout_6.spacing = 8;
-				group_29.setLayout(verticalLayout_6);
+				var group_28 = new cpr.controls.Container("grp21");
+				group_28.style.setClasses(["form-box"]);
+				var verticalLayout_5 = new cpr.controls.layouts.VerticalLayout();
+				verticalLayout_5.spacing = 8;
+				group_28.setLayout(verticalLayout_5);
 				(function(container){
-					var group_30 = new cpr.controls.Container("grp22");
-					group_30.style.setClasses(["form-title-box"]);
-					var verticalLayout_7 = new cpr.controls.layouts.VerticalLayout();
-					verticalLayout_7.spacing = 0;
-					group_30.setLayout(verticalLayout_7);
+					var group_29 = new cpr.controls.Container("grp22");
+					group_29.style.setClasses(["form-title-box"]);
+					var formLayout_20 = new cpr.controls.layouts.FormLayout();
+					formLayout_20.scrollable = false;
+					formLayout_20.topMargin = "0px";
+					formLayout_20.rightMargin = "0px";
+					formLayout_20.bottomMargin = "0px";
+					formLayout_20.leftMargin = "0px";
+					formLayout_20.horizontalSpacing = "0px";
+					formLayout_20.verticalSpacing = "0px";
+					formLayout_20.setColumns(["110px", "1fr"]);
+					formLayout_20.setRows(["1fr"]);
+					group_29.setLayout(formLayout_20);
 					(function(container){
-						var output_38 = new cpr.controls.Output();
-						output_38.value = "인적정보";
-						output_38.style.setClasses(["form-title"]);
-						container.addChild(output_38, {
-							"autoSize": "height",
-							"width": "100px",
-							"height": "17px"
+						var output_33 = new cpr.controls.Output();
+						output_33.value = "인적정보";
+						output_33.style.setClasses(["form-title"]);
+						output_33.style.css({
+							"border-right-style" : "dashed",
+							"border-top-width" : "3px",
+							"border-bottom-color" : "red",
+							"border-left-style" : "dashed",
+							"border-right-width" : "3px",
+							"border-bottom-width" : "3px",
+							"border-left-color" : "red",
+							"border-top-color" : "red",
+							"border-bottom-style" : "dashed",
+							"border-right-color" : "red",
+							"border-left-width" : "3px",
+							"border-top-style" : "dashed"
 						});
-					})(group_30);
-					container.addChild(group_30, {
+						container.addChild(output_33, {
+							"colIndex": 0,
+							"rowIndex": 0
+						});
+					})(group_29);
+					container.addChild(group_29, {
 						"autoSize": "height",
 						"width": "796px",
 						"height": "17px"
 					});
-					var group_31 = new cpr.controls.Container("grp23");
-					group_31.style.setClasses(["form-box"]);
-					var verticalLayout_8 = new cpr.controls.layouts.VerticalLayout();
-					verticalLayout_8.scrollable = false;
-					verticalLayout_8.spacing = 8;
-					group_31.setLayout(verticalLayout_8);
+					var group_30 = new cpr.controls.Container("grp23");
+					group_30.style.setClasses(["form-box"]);
+					var verticalLayout_6 = new cpr.controls.layouts.VerticalLayout();
+					verticalLayout_6.scrollable = false;
+					verticalLayout_6.spacing = 8;
+					group_30.setLayout(verticalLayout_6);
 					(function(container){
-						var group_32 = new cpr.controls.Container("grp24");
-						group_32.style.setClasses(["form-normal"]);
-						var formLayout_20 = new cpr.controls.layouts.FormLayout();
-						formLayout_20.scrollable = false;
-						formLayout_20.topMargin = "2px";
-						formLayout_20.rightMargin = "5px";
-						formLayout_20.bottomMargin = "2px";
-						formLayout_20.leftMargin = "5px";
-						formLayout_20.horizontalSpacing = "11px";
-						formLayout_20.verticalSpacing = "5px";
-						formLayout_20.horizontalSeparatorWidth = 1;
-						formLayout_20.verticalSeparatorWidth = 1;
-						formLayout_20.setColumns(["310px", "1fr"]);
-						formLayout_20.setUseColumnShade(0, true);
-						formLayout_20.setColumnAutoSizing(0, true);
-						formLayout_20.setRows(["26px", "26px", "26px", "26px", "26px", "26px"]);
-						group_32.setLayout(formLayout_20);
+						var group_31 = new cpr.controls.Container("grp24");
+						group_31.style.setClasses(["form-normal"]);
+						var formLayout_21 = new cpr.controls.layouts.FormLayout();
+						formLayout_21.scrollable = false;
+						formLayout_21.topMargin = "2px";
+						formLayout_21.rightMargin = "5px";
+						formLayout_21.bottomMargin = "2px";
+						formLayout_21.leftMargin = "5px";
+						formLayout_21.horizontalSpacing = "11px";
+						formLayout_21.verticalSpacing = "5px";
+						formLayout_21.horizontalSeparatorWidth = 1;
+						formLayout_21.verticalSeparatorWidth = 1;
+						formLayout_21.setColumns(["310px", "1fr"]);
+						formLayout_21.setUseColumnShade(0, true);
+						formLayout_21.setColumnAutoSizing(0, true);
+						formLayout_21.setRows(["26px", "26px", "26px", "26px", "26px", "26px"]);
+						group_31.setLayout(formLayout_21);
 						(function(container){
-							var output_39 = new cpr.controls.Output();
-							output_39.value = "결혼구분";
-							output_39.style.setClasses(["label", "required"]);
-							container.addChild(output_39, {
+							var output_34 = new cpr.controls.Output();
+							output_34.value = "결혼구분";
+							output_34.style.setClasses(["label", "required"]);
+							container.addChild(output_34, {
 								"colIndex": 0,
 								"rowIndex": 0
 							});
@@ -1077,10 +1111,10 @@
 								"colIndex": 1,
 								"rowIndex": 0
 							});
-							var output_40 = new cpr.controls.Output();
-							output_40.value = "학력";
-							output_40.style.setClasses(["label", "required"]);
-							container.addChild(output_40, {
+							var output_35 = new cpr.controls.Output();
+							output_35.value = "학력";
+							output_35.style.setClasses(["label", "required"]);
+							container.addChild(output_35, {
 								"colIndex": 0,
 								"rowIndex": 1
 							});
@@ -1097,10 +1131,10 @@
 								"colIndex": 1,
 								"rowIndex": 1
 							});
-							var output_41 = new cpr.controls.Output();
-							output_41.value = "유치자관계";
-							output_41.style.setClasses(["label", "required"]);
-							container.addChild(output_41, {
+							var output_36 = new cpr.controls.Output();
+							output_36.value = "유치자관계";
+							output_36.style.setClasses(["label", "required"]);
+							container.addChild(output_36, {
 								"colIndex": 0,
 								"rowIndex": 2
 							});
@@ -1119,10 +1153,10 @@
 								"colIndex": 1,
 								"rowIndex": 2
 							});
-							var output_42 = new cpr.controls.Output();
-							output_42.value = "막내나이";
-							output_42.style.setClasses(["label", "required"]);
-							container.addChild(output_42, {
+							var output_37 = new cpr.controls.Output();
+							output_37.value = "막내나이";
+							output_37.style.setClasses(["label", "required"]);
+							container.addChild(output_37, {
 								"colIndex": 0,
 								"rowIndex": 3
 							});
@@ -1140,10 +1174,10 @@
 								"colIndex": 1,
 								"rowIndex": 3
 							});
-							var output_43 = new cpr.controls.Output();
-							output_43.value = "경력구분";
-							output_43.style.setClasses(["label", "required"]);
-							container.addChild(output_43, {
+							var output_38 = new cpr.controls.Output();
+							output_38.value = "경력구분";
+							output_38.style.setClasses(["label", "required"]);
+							container.addChild(output_38, {
 								"colIndex": 0,
 								"rowIndex": 4
 							});
@@ -1162,10 +1196,10 @@
 								"colIndex": 1,
 								"rowIndex": 4
 							});
-							var output_44 = new cpr.controls.Output();
-							output_44.value = "전직장상세";
-							output_44.style.setClasses(["label", "required"]);
-							container.addChild(output_44, {
+							var output_39 = new cpr.controls.Output();
+							output_39.value = "전직장상세";
+							output_39.style.setClasses(["label", "required"]);
+							container.addChild(output_39, {
 								"colIndex": 0,
 								"rowIndex": 5
 							});
@@ -1184,54 +1218,68 @@
 								"colIndex": 1,
 								"rowIndex": 5
 							});
-						})(group_32);
-						container.addChild(group_32, {
+						})(group_31);
+						container.addChild(group_31, {
 							"autoSize": "height",
 							"width": "1560px",
 							"height": "188px"
 						});
-						var group_33 = new cpr.controls.Container("grp25");
-						group_33.style.setClasses(["form-normal"]);
-						var formLayout_21 = new cpr.controls.layouts.FormLayout();
-						formLayout_21.scrollable = false;
-						formLayout_21.topMargin = "2px";
-						formLayout_21.rightMargin = "5px";
-						formLayout_21.bottomMargin = "2px";
-						formLayout_21.leftMargin = "5px";
-						formLayout_21.horizontalSpacing = "11px";
-						formLayout_21.verticalSpacing = "5px";
-						formLayout_21.horizontalSeparatorWidth = 1;
-						formLayout_21.verticalSeparatorWidth = 1;
-						formLayout_21.setColumns(["110px", "3fr", "140px", "2fr", "110px", "2fr"]);
-						formLayout_21.setUseColumnShade(0, true);
-						formLayout_21.setUseColumnShade(2, true);
-						formLayout_21.setUseColumnShade(4, true);
-						formLayout_21.setColumnAutoSizing(0, true);
-						formLayout_21.setColumnAutoSizing(2, true);
-						formLayout_21.setColumnAutoSizing(4, true);
-						formLayout_21.setRows(["26px"]);
-						group_33.setLayout(formLayout_21);
+						var group_32 = new cpr.controls.Container("grp25");
+						group_32.style.setClasses(["form-normal"]);
+						var formLayout_22 = new cpr.controls.layouts.FormLayout();
+						formLayout_22.scrollable = false;
+						formLayout_22.topMargin = "2px";
+						formLayout_22.rightMargin = "5px";
+						formLayout_22.bottomMargin = "2px";
+						formLayout_22.leftMargin = "5px";
+						formLayout_22.horizontalSpacing = "11px";
+						formLayout_22.verticalSpacing = "5px";
+						formLayout_22.horizontalSeparatorWidth = 1;
+						formLayout_22.verticalSeparatorWidth = 1;
+						formLayout_22.setColumns(["110px", "3fr", "140px", "2fr", "110px", "2fr"]);
+						formLayout_22.setUseColumnShade(0, true);
+						formLayout_22.setUseColumnShade(2, true);
+						formLayout_22.setUseColumnShade(4, true);
+						formLayout_22.setColumnAutoSizing(0, true);
+						formLayout_22.setColumnAutoSizing(2, true);
+						formLayout_22.setColumnAutoSizing(4, true);
+						formLayout_22.setRows(["26px"]);
+						group_32.setLayout(formLayout_22);
 						(function(container){
-							var output_45 = new cpr.controls.Output();
-							output_45.value = "JB적성검사";
-							output_45.style.setClasses(["label", "required"]);
-							container.addChild(output_45, {
+							var output_40 = new cpr.controls.Output();
+							output_40.value = "JB적성검사";
+							output_40.style.setClasses(["label", "required"]);
+							output_40.style.css({
+								"border-right-style" : "dashed",
+								"border-top-width" : "3px",
+								"border-bottom-color" : "red",
+								"border-left-style" : "dashed",
+								"border-right-width" : "3px",
+								"border-bottom-width" : "3px",
+								"border-left-color" : "red",
+								"border-top-color" : "red",
+								"border-bottom-style" : "dashed",
+								"border-right-color" : "red",
+								"border-left-width" : "3px",
+								"border-top-style" : "dashed"
+							});
+							container.addChild(output_40, {
 								"colIndex": 0,
 								"rowIndex": 0
 							});
-							var group_34 = new cpr.controls.Container("grp26");
-							group_34.style.setClasses(["form-inside"]);
-							var formLayout_22 = new cpr.controls.layouts.FormLayout();
-							formLayout_22.scrollable = false;
-							formLayout_22.topMargin = "0px";
-							formLayout_22.rightMargin = "0px";
-							formLayout_22.bottomMargin = "0px";
-							formLayout_22.leftMargin = "0px";
-							formLayout_22.horizontalSpacing = "5px";
-							formLayout_22.verticalSpacing = "0px";
-							formLayout_22.setColumns(["1fr", "1fr", "1fr"]);
-							formLayout_22.setRows(["1fr"]);
-							group_34.setLayout(formLayout_22);
+							var group_33 = new cpr.controls.Container("grp26");
+							group_33.style.setClasses(["form-inside"]);
+							var formLayout_23 = new cpr.controls.layouts.FormLayout();
+							formLayout_23.scrollable = false;
+							formLayout_23.topMargin = "0px";
+							formLayout_23.rightMargin = "0px";
+							formLayout_23.bottomMargin = "0px";
+							formLayout_23.leftMargin = "0px";
+							formLayout_23.horizontalSpacing = "5px";
+							formLayout_23.verticalSpacing = "0px";
+							formLayout_23.setColumns(["1fr", "1fr", "1fr"]);
+							formLayout_23.setRows(["1fr"]);
+							group_33.setLayout(formLayout_23);
 							(function(container){
 								var comboBox_1 = new cpr.controls.ComboBox("cmb2");
 								comboBox_1.value = "value1";
@@ -1260,189 +1308,217 @@
 									"colIndex": 2,
 									"rowIndex": 0
 								});
-							})(group_34);
-							container.addChild(group_34, {
+							})(group_33);
+							container.addChild(group_33, {
 								"colIndex": 1,
 								"rowIndex": 0,
 								"width": 297,
 								"height": 25
 							});
-							var output_46 = new cpr.controls.Output();
-							output_46.value = "개인정보활용동의서명일";
-							output_46.style.setClasses(["label", "required"]);
-							container.addChild(output_46, {
+							var output_41 = new cpr.controls.Output();
+							output_41.value = "개인정보활용동의서명일";
+							output_41.style.setClasses(["label", "required"]);
+							container.addChild(output_41, {
 								"colIndex": 2,
 								"rowIndex": 0
 							});
 							var dateInput_1 = new cpr.controls.DateInput("dti4");
-							dateInput_1.value = "20150310";
+							dateInput_1.value = "20240310";
 							container.addChild(dateInput_1, {
 								"colIndex": 3,
 								"rowIndex": 0,
 								"horizontalAlign": "left",
 								"width": 120
 							});
-							var output_47 = new cpr.controls.Output();
-							output_47.value = "스캔ID";
-							output_47.style.setClasses(["label"]);
-							container.addChild(output_47, {
+							var output_42 = new cpr.controls.Output();
+							output_42.value = "스캔ID";
+							output_42.style.setClasses(["label"]);
+							container.addChild(output_42, {
 								"colIndex": 4,
 								"rowIndex": 0
 							});
-							var inputBox_16 = new cpr.controls.InputBox("ipb5");
-							inputBox_16.value = "A145460003";
-							container.addChild(inputBox_16, {
+							var inputBox_15 = new cpr.controls.InputBox("ipb5");
+							inputBox_15.value = "A145460003";
+							container.addChild(inputBox_15, {
 								"colIndex": 5,
 								"rowIndex": 0
 							});
-						})(group_33);
-						container.addChild(group_33, {
+						})(group_32);
+						container.addChild(group_32, {
 							"autoSize": "height",
 							"width": "1560px",
 							"height": "33px"
 						});
-					})(group_31);
-					container.addChild(group_31, {
+					})(group_30);
+					container.addChild(group_30, {
 						"autoSize": "height",
 						"width": "1560px",
 						"height": "234px"
 					});
-					var group_35 = new cpr.controls.Container("grp27");
-					group_35.style.setClasses(["commentary"]);
-					var verticalLayout_9 = new cpr.controls.layouts.VerticalLayout();
-					verticalLayout_9.scrollable = false;
-					verticalLayout_9.spacing = 8;
-					verticalLayout_9.leftMargin = 10;
-					verticalLayout_9.rightMargin = 10;
-					verticalLayout_9.topMargin = 10;
-					verticalLayout_9.bottomMargin = 10;
-					group_35.setLayout(verticalLayout_9);
+					var group_34 = new cpr.controls.Container("grp27");
+					group_34.style.setClasses(["commentary"]);
+					var verticalLayout_7 = new cpr.controls.layouts.VerticalLayout();
+					verticalLayout_7.scrollable = false;
+					verticalLayout_7.spacing = 8;
+					verticalLayout_7.leftMargin = 10;
+					verticalLayout_7.rightMargin = 10;
+					verticalLayout_7.topMargin = 10;
+					verticalLayout_7.bottomMargin = 10;
+					group_34.setLayout(verticalLayout_7);
 					(function(container){
-						var output_48 = new cpr.controls.Output();
-						output_48.value = "- 국공기업 : 공무원, 직업군인, 교사, 공사, 정부투자기관";
-						container.addChild(output_48, {
+						var output_43 = new cpr.controls.Output();
+						output_43.value = "- 국공기업 : 공무원, 직업군인, 교사, 공사, 정부투자기관";
+						container.addChild(output_43, {
 							"autoSize": "height",
 							"width": "904px",
 							"height": "24px"
 						});
-					})(group_35);
-					container.addChild(group_35, {
+					})(group_34);
+					container.addChild(group_34, {
 						"autoSize": "height",
 						"width": "1560px",
 						"height": "46px"
 					});
-					var group_36 = new cpr.controls.Container("grp28");
-					group_36.style.setClasses(["button-table-area"]);
-					var formLayout_23 = new cpr.controls.layouts.FormLayout();
-					formLayout_23.scrollable = false;
-					formLayout_23.topMargin = "0px";
-					formLayout_23.rightMargin = "0px";
-					formLayout_23.bottomMargin = "0px";
-					formLayout_23.leftMargin = "0px";
-					formLayout_23.horizontalSpacing = "0px";
-					formLayout_23.verticalSpacing = "0px";
-					formLayout_23.setColumns(["1fr", "43px", "1fr"]);
-					formLayout_23.setColumnAutoSizing(1, true);
-					formLayout_23.setRows(["1fr"]);
-					group_36.setLayout(formLayout_23);
+					var group_35 = new cpr.controls.Container("grp28");
+					group_35.style.setClasses(["button-table-area"]);
+					var formLayout_24 = new cpr.controls.layouts.FormLayout();
+					formLayout_24.scrollable = false;
+					formLayout_24.topMargin = "0px";
+					formLayout_24.rightMargin = "0px";
+					formLayout_24.bottomMargin = "0px";
+					formLayout_24.leftMargin = "0px";
+					formLayout_24.horizontalSpacing = "0px";
+					formLayout_24.verticalSpacing = "0px";
+					formLayout_24.setColumns(["1fr", "43px", "1fr"]);
+					formLayout_24.setColumnAutoSizing(1, true);
+					formLayout_24.setRows(["1fr"]);
+					group_35.setLayout(formLayout_24);
 					(function(container){
-						var group_37 = new cpr.controls.Container("grp29");
-						group_37.style.setClasses(["button-table-bottom-left-area"]);
+						var group_36 = new cpr.controls.Container("grp29");
+						group_36.style.setClasses(["button-table-bottom-left-area"]);
 						var flowLayout_6 = new cpr.controls.layouts.FlowLayout();
 						flowLayout_6.scrollable = false;
 						flowLayout_6.horizontalSpacing = 10;
 						flowLayout_6.verticalSpacing = 0;
 						flowLayout_6.lineWrap = false;
-						group_37.setLayout(flowLayout_6);
+						group_36.setLayout(flowLayout_6);
 						(function(container){
-							var button_2 = new cpr.controls.Button("btn1");
-							button_2.value = "증원배양이력";
-							button_2.style.setClasses(["btn-primary04"]);
-							container.addChild(button_2, {
-								"autoSize": "width",
-								"width": "60px",
-								"height": "30px"
-							});
-							var button_3 = new cpr.controls.Button("btn2");
-							button_3.value = "주소사항";
+							var button_3 = new cpr.controls.Button("btn1");
+							button_3.value = "증원배양이력";
 							button_3.style.setClasses(["btn-primary04"]);
 							container.addChild(button_3, {
 								"autoSize": "width",
 								"width": "60px",
 								"height": "30px"
 							});
-							var button_4 = new cpr.controls.Button("btn3");
-							button_4.value = "가족사항";
+							var button_4 = new cpr.controls.Button("btn2");
+							button_4.value = "주소사항";
 							button_4.style.setClasses(["btn-primary04"]);
 							container.addChild(button_4, {
 								"autoSize": "width",
 								"width": "60px",
 								"height": "30px"
 							});
-							var button_5 = new cpr.controls.Button("btn4");
-							button_5.value = "이미지조회";
+							var button_5 = new cpr.controls.Button("btn3");
+							button_5.value = "가족사항";
 							button_5.style.setClasses(["btn-primary04"]);
 							container.addChild(button_5, {
 								"autoSize": "width",
 								"width": "60px",
 								"height": "30px"
 							});
-						})(group_37);
-						container.addChild(group_37, {
+							var button_6 = new cpr.controls.Button("btn4");
+							button_6.value = "이미지조회";
+							button_6.style.setClasses(["btn-primary04"]);
+							button_6.style.css({
+								"border-right-style" : "dashed",
+								"border-top-width" : "3px",
+								"border-bottom-color" : "red",
+								"border-left-style" : "dashed",
+								"border-right-width" : "3px",
+								"border-bottom-width" : "3px",
+								"border-left-color" : "red",
+								"border-top-color" : "red",
+								"border-bottom-style" : "dashed",
+								"border-right-color" : "red",
+								"border-left-width" : "3px",
+								"border-top-style" : "dashed"
+							});
+							container.addChild(button_6, {
+								"autoSize": "width",
+								"width": "60px",
+								"height": "30px"
+							});
+						})(group_36);
+						container.addChild(group_36, {
 							"colIndex": 0,
 							"rowIndex": 0
 						});
-						var group_38 = new cpr.controls.Container("grp30");
-						group_38.style.setClasses(["button-table-bottom-center-area"]);
+						var group_37 = new cpr.controls.Container("grp30");
+						group_37.style.setClasses(["button-table-bottom-center-area"]);
 						var flowLayout_7 = new cpr.controls.layouts.FlowLayout();
 						flowLayout_7.scrollable = false;
 						flowLayout_7.horizontalSpacing = 10;
 						flowLayout_7.verticalSpacing = 0;
 						flowLayout_7.horizontalAlign = "center";
-						group_38.setLayout(flowLayout_7);
-						container.addChild(group_38, {
+						group_37.setLayout(flowLayout_7);
+						container.addChild(group_37, {
 							"colIndex": 1,
 							"rowIndex": 0
 						});
-						var group_39 = new cpr.controls.Container("grp31");
-						group_39.style.setClasses(["button-table-bottom-right-area"]);
+						var group_38 = new cpr.controls.Container("grp31");
+						group_38.style.setClasses(["button-table-bottom-right-area"]);
 						var flowLayout_8 = new cpr.controls.layouts.FlowLayout();
 						flowLayout_8.scrollable = false;
 						flowLayout_8.horizontalSpacing = 10;
 						flowLayout_8.verticalSpacing = 0;
 						flowLayout_8.horizontalAlign = "right";
 						flowLayout_8.lineWrap = false;
-						group_39.setLayout(flowLayout_8);
+						group_38.setLayout(flowLayout_8);
 						(function(container){
-							var button_6 = new cpr.controls.Button("btn5");
-							button_6.value = "기본정보수정";
-							button_6.style.setClasses(["btn-primary03"]);
-							container.addChild(button_6, {
-								"autoSize": "width",
-								"width": "60px",
-								"height": "30px"
-							});
-							var button_7 = new cpr.controls.Button("btn6");
-							button_7.value = "신규/재진행";
+							var button_7 = new cpr.controls.Button("btn5");
+							button_7.value = "기본정보수정";
 							button_7.style.setClasses(["btn-primary03"]);
+							button_7.style.css({
+								"border-right-style" : "dashed",
+								"border-top-width" : "3px",
+								"border-bottom-color" : "red",
+								"border-left-style" : "dashed",
+								"border-right-width" : "3px",
+								"border-bottom-width" : "3px",
+								"border-left-color" : "red",
+								"border-top-color" : "red",
+								"border-bottom-style" : "dashed",
+								"border-right-color" : "red",
+								"border-left-width" : "3px",
+								"border-top-style" : "dashed"
+							});
 							container.addChild(button_7, {
 								"autoSize": "width",
 								"width": "60px",
 								"height": "30px"
 							});
-						})(group_39);
-						container.addChild(group_39, {
+							var button_8 = new cpr.controls.Button("btn6");
+							button_8.value = "신규/재진행";
+							button_8.style.setClasses(["btn-primary03"]);
+							container.addChild(button_8, {
+								"autoSize": "width",
+								"width": "60px",
+								"height": "30px"
+							});
+						})(group_38);
+						container.addChild(group_38, {
 							"colIndex": 2,
 							"rowIndex": 0
 						});
-					})(group_36);
-					container.addChild(group_36, {
+					})(group_35);
+					container.addChild(group_35, {
 						"autoSize": "height",
 						"width": "1560px",
 						"height": "30px"
 					});
-				})(group_29);
-				container.addChild(group_29, {
+				})(group_28);
+				container.addChild(group_28, {
 					"autoSize": "height",
 					"width": "1560px",
 					"height": "356px"

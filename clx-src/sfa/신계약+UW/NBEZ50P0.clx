@@ -22,12 +22,12 @@
         <cl:datarowlist>
           <cl:datarow>
             <cl:datavalue columnname="미결코드"><![CDATA[PP096]]></cl:datavalue>
-            <cl:datavalue columnname="미결지시일"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="미결지시일"><![CDATA[20240319]]></cl:datavalue>
             <cl:datavalue columnname="미결지시내용"><![CDATA[청약서, 기타서류(진하게), 첨부서류]]></cl:datavalue>
             <cl:datavalue columnname="사유"><![CDATA[청약서 불량 재스캔 요함]]></cl:datavalue>
             <cl:datavalue columnname="보완문서"><![CDATA[보완문서]]></cl:datavalue>
-            <cl:datavalue columnname="보완완료기한"><![CDATA[20150324]]></cl:datavalue>
-            <cl:datavalue columnname="실제보완일"><![CDATA[20150324]]></cl:datavalue>
+            <cl:datavalue columnname="보완완료기한"><![CDATA[20240324]]></cl:datavalue>
+            <cl:datavalue columnname="실제보완일"><![CDATA[20240324]]></cl:datavalue>
           </cl:datarow>
         </cl:datarowlist>
       </cl:dataset>
@@ -44,13 +44,13 @@
           <cl:output std:sid="output-0be4165b" class="label" value="계약자">
             <cl:formdata std:sid="f-data-55d3ed29" row="0" col="0"/>
           </cl:output>
-          <cl:inputbox std:sid="i-box-e37ebbb4" id="ipb1" value="홍길동">
+          <cl:inputbox std:sid="i-box-e37ebbb4" id="ipb1" value="김흥국">
             <cl:formdata std:sid="f-data-a6be95ab" row="0" col="1"/>
           </cl:inputbox>
           <cl:output std:sid="output-01de13cb" class="label" value="주민등록번호">
             <cl:formdata std:sid="f-data-91c94efd" row="0" col="2"/>
           </cl:output>
-          <cl:maskeditor std:sid="m-editor-210c4d64" id="mse1" mask="000000-0******">
+          <cl:maskeditor std:sid="m-editor-210c4d64" id="mse1" value="840510-1234567" mask="000000-0******">
             <cl:formdata std:sid="f-data-beafbbc5" row="0" col="3"/>
           </cl:maskeditor>
           <cl:output std:sid="output-dac5e239" class="label" value="계약번호">
@@ -83,7 +83,8 @@
         <cl:verticaldata std:sid="v-data-3c098985" width="729px" height="288px" autosize="height"/>
         <cl:group std:sid="group-9bf65007" class="grid-box">
           <cl:verticaldata std:sid="v-data-df642346" width="1600px" height="224px" autosize="height"/>
-          <cl:grid std:sid="grid-a1f930f1" id="grd1" class="list-normal" datasetid="ds1" autofit="1, 2, 3, 4, 5" resizablecolumns="1, 2, 3, 4, 5" columnMovable="true">
+          <cl:grid std:sid="grid-a1f930f1" id="grd1" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" class="list-normal" datasetid="ds1" autofit="1, 2, 3, 4, 5" resizablecolumns="1, 2, 3, 4, 5" columnMovable="true">
+            <cl:listener std:sid="listener-60479528" name="selection-change" handler="onGrd1SelectionChange"/>
             <cl:verticaldata std:sid="v-data-b0a4b4c7" width="400px" height="219px"/>
             <cl:gridcolumn std:sid="g-column-8f2885ae" width="32px"/>
             <cl:gridcolumn std:sid="g-column-ff401c8f" width="120px"/>
@@ -188,6 +189,7 @@
       <cl:group std:sid="group-5aa6c261" class="button-table-bottom-right-area">
         <cl:formdata std:sid="f-data-811afdad" row="0" col="2"/>
         <cl:button std:sid="button-b6538912" id="btn1" class="btn-primary03 btn-md" value="입력">
+          <cl:listener std:sid="listener-78d4847a" name="click" handler="onBtn1Click"/>
           <cl:flowlayoutdata std:sid="f-data-2af6a408" width="60px" height="30px" autosize="width"/>
         </cl:button>
         <cl:button std:sid="button-fd6e21ef" id="btn3" class="btn-primary03 btn-md" value="삭제">

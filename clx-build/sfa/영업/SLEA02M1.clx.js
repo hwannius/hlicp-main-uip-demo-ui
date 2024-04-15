@@ -16,7 +16,43 @@
 			 * Created at 2024. 4. 2. 오전 11:29:39.
 			 *
 			 * @author User
-			 ************************************************/;
+			 ************************************************/
+
+			/*
+			 * "이전" 버튼에서 click 이벤트 발생 시 호출.
+			 * 사용자가 컨트롤을 클릭할 때 발생하는 이벤트.
+			 */
+			function onButtonClick2(e){
+				var button = e.control;
+				//화면이동(현재 화면에서 리로드)
+				var host = app.getHost(); // 부모 임베디드 앱
+				cpr.core.App.load("sfa/영업/SLGA30M0_2", function(loadedApp) {
+				    if (loadedApp) {
+				        host.app = loadedApp;
+				        host.initValue = {
+				            "param": "param"
+				        }
+				    }
+				});
+			}
+
+			/*
+			 * "다음" 버튼에서 click 이벤트 발생 시 호출.
+			 * 사용자가 컨트롤을 클릭할 때 발생하는 이벤트.
+			 */
+			function onButtonClick3(e){
+				var button = e.control;
+				//화면이동(현재 화면에서 리로드)
+				var host = app.getHost(); // 부모 임베디드 앱
+				cpr.core.App.load("sfa/영업/SLEA02M1_1", function(loadedApp) {
+				    if (loadedApp) {
+				        host.app = loadedApp;
+				        host.initValue = {
+				            "param": "param"
+				        }
+				    }
+				});
+			};
 			// End - User Script
 			
 			// Header
@@ -34,18 +70,19 @@
 					{"name": "column6"},
 					{"name": "column7"},
 					{"name": "column8"},
-					{"name": "column9"},
-					{"name": "소속"},
-					{"name": "대리점"},
-					{"name": "CBM"},
-					{"name": "흡수"},
-					{"name": "분할"},
-					{"name": "발의부서"},
-					{"name": "현지지급"},
-					{"name": "채널"},
-					{"name": "현지변경"}
+					{"name": "column9"}
 				],
-				"rows": [{"column1": "", "column2": "00111", "column3": "노원지점", "column4": "20130703", "column5": "99991231", "column6": "value1", "column7": "", "column8": "", "column9": "", "소속": "소속", "대리점": "대리점", "CBM": "CBM", "흡수": "흡수", "분할": "분할", "발의부서": "발의부서", "현지지급": "현지지급", "채널": "채널", "현지변경": "현지변경"}]
+				"rows": [
+					{"column1": "소속", "column2": "000111", "column3": "노*지점", "column4": "20220703", "column5": "99991231", "column6": "temp", "column7": "", "column8": "", "column9": ""},
+					{"column1": "대리점", "column2": "", "column3": "", "column4": "", "column5": "", "column6": "", "column7": "", "column8": "", "column9": ""},
+					{"column1": "CBM", "column2": "", "column3": "", "column4": "", "column5": "", "column6": "", "column7": "", "column8": "", "column9": ""},
+					{"column1": "흡수", "column2": "", "column3": "", "column4": "", "column5": "", "column6": "", "column7": "", "column8": "", "column9": ""},
+					{"column1": "분할", "column2": "", "column3": "", "column4": "", "column5": "", "column6": "", "column7": "", "column8": "", "column9": ""},
+					{"column1": "발의부서", "column2": "008001", "column3": "노*지점", "column4": "20220703", "column5": "99991231", "column6": "temp", "column7": "", "column8": "", "column9": ""},
+					{"column1": "현지지급", "column2": "310007", "column3": "노*CS브랜치", "column4": "20230415", "column5": "20230422", "column6": "temp", "column7": "", "column8": "", "column9": ""},
+					{"column1": "채널", "column2": "", "column3": "", "column4": "", "column5": "", "column6": "", "column7": "", "column8": "", "column9": ""},
+					{"column1": "현지변경", "column2": "326007", "column3": "원격지원", "column4": "20190705", "column5": "99991231", "column6": "temp", "column7": "", "column8": "", "column9": ""}
+				]
 			});
 			app.register(dataSet_1);
 			app.supportMedia("all and (min-width: 3160px)", "Hlicp-WIDE");
@@ -103,44 +140,30 @@
 				flowLayout_1.lineWrap = false;
 				group_2.setLayout(flowLayout_1);
 				(function(container){
-					var output_2 = new cpr.controls.Output();
-					output_2.value = "";
-					output_2.style.setClasses(["home"]);
-					container.addChild(output_2, {
-						"width": "20px",
-						"height": "20px"
-					});
-					var output_3 = new cpr.controls.Output();
-					output_3.value = "1Depth";
-					output_3.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_3, {
+					var button_1 = new cpr.controls.Button();
+					button_1.value = "이전";
+					button_1.style.setClasses(["btn-primary04", "btn-md"]);
+					if(typeof onButtonClick2 == "function") {
+						button_1.addEventListener("click", onButtonClick2);
+					}
+					container.addChild(button_1, {
 						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
+						"width": "49px",
+						"height": "26px"
 					});
-					var output_4 = new cpr.controls.Output();
-					output_4.value = "2Depth";
-					output_4.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_4, {
+					var button_2 = new cpr.controls.Button();
+					button_2.value = "다음";
+					button_2.style.setClasses(["btn-primary04", "btn-md"]);
+					if(typeof onButtonClick == "function") {
+						button_2.addEventListener("click", onButtonClick);
+					}
+					if(typeof onButtonClick3 == "function") {
+						button_2.addEventListener("click", onButtonClick3);
+					}
+					container.addChild(button_2, {
 						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
-					});
-					var output_5 = new cpr.controls.Output();
-					output_5.value = "3Depth";
-					output_5.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_5, {
-						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
-					});
-					var output_6 = new cpr.controls.Output();
-					output_6.value = "4Depth";
-					output_6.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_6, {
-						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
+						"width": "49px",
+						"height": "26px"
 					});
 				})(group_2);
 				container.addChild(group_2, {
@@ -177,15 +200,29 @@
 				formLayout_2.setRows(["26px"]);
 				group_4.setLayout(formLayout_2);
 				(function(container){
-					var output_7 = new cpr.controls.Output();
-					output_7.value = "업무구분";
-					output_7.style.setClasses(["label", "required"]);
-					container.addChild(output_7, {
+					var output_2 = new cpr.controls.Output();
+					output_2.value = "업무구분";
+					output_2.style.setClasses(["label", "required"]);
+					container.addChild(output_2, {
 						"colIndex": 0,
 						"rowIndex": 0
 					});
 					var comboBox_1 = new cpr.controls.ComboBox("cmb1");
 					comboBox_1.value = "value1";
+					comboBox_1.style.css({
+						"border-right-style" : "dashed",
+						"border-top-width" : "3px",
+						"border-bottom-color" : "red",
+						"border-left-style" : "dashed",
+						"border-right-width" : "3px",
+						"border-bottom-width" : "3px",
+						"border-left-color" : "red",
+						"border-top-color" : "red",
+						"border-bottom-style" : "dashed",
+						"border-right-color" : "red",
+						"border-left-width" : "3px",
+						"border-top-style" : "dashed"
+					});
 					(function(comboBox_1){
 						comboBox_1.addItem(new cpr.controls.Item("점포조회", "value1"));
 					})(comboBox_1);
@@ -193,10 +230,10 @@
 						"colIndex": 1,
 						"rowIndex": 0
 					});
-					var output_8 = new cpr.controls.Output();
-					output_8.value = "조직번호";
-					output_8.style.setClasses(["label", "required"]);
-					container.addChild(output_8, {
+					var output_3 = new cpr.controls.Output();
+					output_3.value = "조직번호";
+					output_3.style.setClasses(["label", "required"]);
+					container.addChild(output_3, {
 						"colIndex": 2,
 						"rowIndex": 0
 					});
@@ -242,17 +279,17 @@
 					flowLayout_2.leftMargin = 20;
 					group_6.setLayout(flowLayout_2);
 					(function(container){
-						var button_1 = new cpr.controls.Button("btn11");
-						button_1.value = "조회";
-						button_1.style.setClasses(["btn-search"]);
-						container.addChild(button_1, {
+						var button_3 = new cpr.controls.Button("btn11");
+						button_3.value = "조회";
+						button_3.style.setClasses(["btn-search"]);
+						container.addChild(button_3, {
 							"width": "49px",
 							"height": "26px"
 						});
-						var button_2 = new cpr.controls.Button("btn12");
-						button_2.value = "";
-						button_2.style.setClasses(["btn-reset"]);
-						container.addChild(button_2, {
+						var button_4 = new cpr.controls.Button("btn12");
+						button_4.value = "";
+						button_4.style.setClasses(["btn-reset"]);
+						container.addChild(button_4, {
 							"width": "26px",
 							"height": "26px"
 						});
@@ -295,10 +332,10 @@
 					var verticalLayout_5 = new cpr.controls.layouts.VerticalLayout();
 					group_9.setLayout(verticalLayout_5);
 					(function(container){
-						var output_9 = new cpr.controls.Output();
-						output_9.value = "조직기본사항";
-						output_9.style.setClasses(["form-title"]);
-						container.addChild(output_9, {
+						var output_4 = new cpr.controls.Output();
+						output_4.value = "조직기본사항";
+						output_4.style.setClasses(["form-title"]);
+						container.addChild(output_4, {
 							"autoSize": "height",
 							"width": "300px",
 							"height": "17px"
@@ -333,10 +370,10 @@
 					formLayout_4.setRows(["26px", "26px", "26px", "26px", "26px", "26px", "26px"]);
 					group_10.setLayout(formLayout_4);
 					(function(container){
-						var output_10 = new cpr.controls.Output();
-						output_10.value = "조직명";
-						output_10.style.setClasses(["label"]);
-						container.addChild(output_10, {
+						var output_5 = new cpr.controls.Output();
+						output_5.value = "조직명";
+						output_5.style.setClasses(["label"]);
+						container.addChild(output_5, {
 							"colIndex": 0,
 							"rowIndex": 0
 						});
@@ -346,10 +383,10 @@
 							"colIndex": 1,
 							"rowIndex": 0
 						});
-						var output_11 = new cpr.controls.Output();
-						output_11.value = "조직축약명";
-						output_11.style.setClasses(["label"]);
-						container.addChild(output_11, {
+						var output_6 = new cpr.controls.Output();
+						output_6.value = "조직축약명";
+						output_6.style.setClasses(["label"]);
+						container.addChild(output_6, {
 							"colIndex": 2,
 							"rowIndex": 0
 						});
@@ -359,25 +396,25 @@
 							"colIndex": 3,
 							"rowIndex": 0
 						});
-						var output_12 = new cpr.controls.Output();
-						output_12.value = "조직명변경일";
-						output_12.style.setClasses(["label"]);
-						container.addChild(output_12, {
+						var output_7 = new cpr.controls.Output();
+						output_7.value = "조직명변경일";
+						output_7.style.setClasses(["label"]);
+						container.addChild(output_7, {
 							"colIndex": 4,
 							"rowIndex": 0
 						});
 						var dateInput_1 = new cpr.controls.DateInput("dti1");
-						dateInput_1.value = "20020102";
+						dateInput_1.value = "20180102";
 						container.addChild(dateInput_1, {
 							"colIndex": 5,
 							"rowIndex": 0,
 							"horizontalAlign": "left",
 							"width": 120
 						});
-						var output_13 = new cpr.controls.Output();
-						output_13.value = "조직영문명";
-						output_13.style.setClasses(["label"]);
-						container.addChild(output_13, {
+						var output_8 = new cpr.controls.Output();
+						output_8.value = "조직영문명";
+						output_8.style.setClasses(["label"]);
+						container.addChild(output_8, {
 							"colIndex": 6,
 							"rowIndex": 0
 						});
@@ -386,45 +423,59 @@
 							"colIndex": 7,
 							"rowIndex": 0
 						});
-						var output_14 = new cpr.controls.Output();
-						output_14.value = "개시일자";
-						output_14.style.setClasses(["label"]);
-						container.addChild(output_14, {
+						var output_9 = new cpr.controls.Output();
+						output_9.value = "개시일자";
+						output_9.style.setClasses(["label"]);
+						container.addChild(output_9, {
 							"colIndex": 0,
 							"rowIndex": 1
 						});
 						var dateInput_2 = new cpr.controls.DateInput("dti2");
-						dateInput_2.value = "20020102";
+						dateInput_2.value = "20180102";
 						container.addChild(dateInput_2, {
 							"colIndex": 1,
 							"rowIndex": 1,
 							"horizontalAlign": "left",
 							"width": 120
 						});
-						var output_15 = new cpr.controls.Output();
-						output_15.value = "폐쇄일자";
-						output_15.style.setClasses(["label"]);
-						container.addChild(output_15, {
+						var output_10 = new cpr.controls.Output();
+						output_10.value = "폐쇄일자";
+						output_10.style.setClasses(["label"]);
+						container.addChild(output_10, {
 							"colIndex": 2,
 							"rowIndex": 1
 						});
 						var dateInput_3 = new cpr.controls.DateInput("dti3");
-						dateInput_3.value = "20020102";
+						dateInput_3.value = "99991231";
 						container.addChild(dateInput_3, {
 							"colIndex": 3,
 							"rowIndex": 1,
 							"horizontalAlign": "left",
 							"width": 120
 						});
-						var output_16 = new cpr.controls.Output();
-						output_16.value = "조직유형";
-						output_16.style.setClasses(["label"]);
-						container.addChild(output_16, {
+						var output_11 = new cpr.controls.Output();
+						output_11.value = "조직유형";
+						output_11.style.setClasses(["label"]);
+						container.addChild(output_11, {
 							"colIndex": 4,
 							"rowIndex": 1
 						});
 						var comboBox_2 = new cpr.controls.ComboBox("cmb2");
 						comboBox_2.value = "value1";
+						comboBox_2.style.css({
+							"border-right-style" : "dashed",
+							"border-top-width" : "3px",
+							"border-bottom-color" : "red",
+							"border-left-style" : "dashed",
+							"border-right-width" : "3px",
+							"border-bottom-width" : "3px",
+							"border-left-color" : "red",
+							"border-top-color" : "red",
+							"border-bottom-style" : "dashed",
+							"border-right-color" : "red",
+							"border-left-width" : "3px",
+							"border-top-style" : "dashed"
+						});
 						(function(comboBox_2){
 							comboBox_2.addItem(new cpr.controls.Item("영업소", "value1"));
 						})(comboBox_2);
@@ -432,30 +483,44 @@
 							"colIndex": 5,
 							"rowIndex": 1
 						});
-						var output_17 = new cpr.controls.Output();
-						output_17.value = "유형시행일";
-						output_17.style.setClasses(["label"]);
-						container.addChild(output_17, {
+						var output_12 = new cpr.controls.Output();
+						output_12.value = "유형시행일";
+						output_12.style.setClasses(["label"]);
+						container.addChild(output_12, {
 							"colIndex": 6,
 							"rowIndex": 1
 						});
 						var dateInput_4 = new cpr.controls.DateInput("dti6");
-						dateInput_4.value = "20020102";
+						dateInput_4.value = "20180102";
 						container.addChild(dateInput_4, {
 							"colIndex": 7,
 							"rowIndex": 1,
 							"horizontalAlign": "left",
 							"width": 120
 						});
-						var output_18 = new cpr.controls.Output();
-						output_18.value = "조직속성";
-						output_18.style.setClasses(["label"]);
-						container.addChild(output_18, {
+						var output_13 = new cpr.controls.Output();
+						output_13.value = "조직속성";
+						output_13.style.setClasses(["label"]);
+						container.addChild(output_13, {
 							"colIndex": 0,
 							"rowIndex": 2
 						});
 						var comboBox_3 = new cpr.controls.ComboBox("cmb9");
 						comboBox_3.value = "value1";
+						comboBox_3.style.css({
+							"border-right-style" : "dashed",
+							"border-top-width" : "3px",
+							"border-bottom-color" : "red",
+							"border-left-style" : "dashed",
+							"border-right-width" : "3px",
+							"border-bottom-width" : "3px",
+							"border-left-color" : "red",
+							"border-top-color" : "red",
+							"border-bottom-style" : "dashed",
+							"border-right-color" : "red",
+							"border-left-width" : "3px",
+							"border-top-style" : "dashed"
+						});
 						(function(comboBox_3){
 							comboBox_3.addItem(new cpr.controls.Item("영업지점", "value1"));
 						})(comboBox_3);
@@ -463,25 +528,25 @@
 							"colIndex": 1,
 							"rowIndex": 2
 						});
-						var output_19 = new cpr.controls.Output();
-						output_19.value = "속성시행일";
-						output_19.style.setClasses(["label"]);
-						container.addChild(output_19, {
+						var output_14 = new cpr.controls.Output();
+						output_14.value = "속성시행일";
+						output_14.style.setClasses(["label"]);
+						container.addChild(output_14, {
 							"colIndex": 2,
 							"rowIndex": 2
 						});
 						var dateInput_5 = new cpr.controls.DateInput("dti4");
-						dateInput_5.value = "20020102";
+						dateInput_5.value = "20180102";
 						container.addChild(dateInput_5, {
 							"colIndex": 3,
 							"rowIndex": 2,
 							"horizontalAlign": "left",
 							"width": 120
 						});
-						var output_20 = new cpr.controls.Output();
-						output_20.value = "조직특성";
-						output_20.style.setClasses(["label"]);
-						container.addChild(output_20, {
+						var output_15 = new cpr.controls.Output();
+						output_15.value = "조직특성";
+						output_15.style.setClasses(["label"]);
+						container.addChild(output_15, {
 							"colIndex": 4,
 							"rowIndex": 2
 						});
@@ -494,25 +559,25 @@
 							"colIndex": 5,
 							"rowIndex": 2
 						});
-						var output_21 = new cpr.controls.Output();
-						output_21.value = "특성시행일";
-						output_21.style.setClasses(["label"]);
-						container.addChild(output_21, {
+						var output_16 = new cpr.controls.Output();
+						output_16.value = "특성시행일";
+						output_16.style.setClasses(["label"]);
+						container.addChild(output_16, {
 							"colIndex": 6,
 							"rowIndex": 2
 						});
 						var dateInput_6 = new cpr.controls.DateInput("dti7");
-						dateInput_6.value = "20020102";
+						dateInput_6.value = "20180102";
 						container.addChild(dateInput_6, {
 							"colIndex": 7,
 							"rowIndex": 2,
 							"horizontalAlign": "left",
 							"width": 120
 						});
-						var output_22 = new cpr.controls.Output();
-						output_22.value = "조직규모";
-						output_22.style.setClasses(["label"]);
-						container.addChild(output_22, {
+						var output_17 = new cpr.controls.Output();
+						output_17.value = "조직규모";
+						output_17.style.setClasses(["label"]);
+						container.addChild(output_17, {
 							"colIndex": 0,
 							"rowIndex": 3
 						});
@@ -525,25 +590,25 @@
 							"colIndex": 1,
 							"rowIndex": 3
 						});
-						var output_23 = new cpr.controls.Output();
-						output_23.value = "규모시행일";
-						output_23.style.setClasses(["label"]);
-						container.addChild(output_23, {
+						var output_18 = new cpr.controls.Output();
+						output_18.value = "규모시행일";
+						output_18.style.setClasses(["label"]);
+						container.addChild(output_18, {
 							"colIndex": 2,
 							"rowIndex": 3
 						});
 						var dateInput_7 = new cpr.controls.DateInput("dti5");
-						dateInput_7.value = "20020102";
+						dateInput_7.value = "20180102";
 						container.addChild(dateInput_7, {
 							"colIndex": 3,
 							"rowIndex": 3,
 							"horizontalAlign": "left",
 							"width": 120
 						});
-						var output_24 = new cpr.controls.Output();
-						output_24.value = "광역시도구분";
-						output_24.style.setClasses(["label"]);
-						container.addChild(output_24, {
+						var output_19 = new cpr.controls.Output();
+						output_19.value = "광역시도구분";
+						output_19.style.setClasses(["label"]);
+						container.addChild(output_19, {
 							"colIndex": 4,
 							"rowIndex": 3
 						});
@@ -556,10 +621,10 @@
 							"colIndex": 5,
 							"rowIndex": 3
 						});
-						var output_25 = new cpr.controls.Output();
-						output_25.value = "지역구분";
-						output_25.style.setClasses(["label"]);
-						container.addChild(output_25, {
+						var output_20 = new cpr.controls.Output();
+						output_20.value = "지역구분";
+						output_20.style.setClasses(["label"]);
+						container.addChild(output_20, {
 							"colIndex": 6,
 							"rowIndex": 3
 						});
@@ -572,10 +637,10 @@
 							"colIndex": 7,
 							"rowIndex": 3
 						});
-						var output_26 = new cpr.controls.Output();
-						output_26.value = "육성운영구분";
-						output_26.style.setClasses(["label"]);
-						container.addChild(output_26, {
+						var output_21 = new cpr.controls.Output();
+						output_21.value = "육성운영구분";
+						output_21.style.setClasses(["label"]);
+						container.addChild(output_21, {
 							"colIndex": 0,
 							"rowIndex": 4
 						});
@@ -588,10 +653,10 @@
 							"colIndex": 1,
 							"rowIndex": 4
 						});
-						var output_27 = new cpr.controls.Output();
-						output_27.value = "외각점포여부";
-						output_27.style.setClasses(["label"]);
-						container.addChild(output_27, {
+						var output_22 = new cpr.controls.Output();
+						output_22.value = "외각점포여부";
+						output_22.style.setClasses(["label"]);
+						container.addChild(output_22, {
 							"colIndex": 2,
 							"rowIndex": 4
 						});
@@ -604,10 +669,10 @@
 							"colIndex": 3,
 							"rowIndex": 4
 						});
-						var output_28 = new cpr.controls.Output();
-						output_28.value = "조직종류";
-						output_28.style.setClasses(["label"]);
-						container.addChild(output_28, {
+						var output_23 = new cpr.controls.Output();
+						output_23.value = "조직종류";
+						output_23.style.setClasses(["label"]);
+						container.addChild(output_23, {
 							"colIndex": 4,
 							"rowIndex": 4
 						});
@@ -620,15 +685,29 @@
 							"colIndex": 5,
 							"rowIndex": 4
 						});
-						var output_29 = new cpr.controls.Output();
-						output_29.value = "사업부문";
-						output_29.style.setClasses(["label"]);
-						container.addChild(output_29, {
+						var output_24 = new cpr.controls.Output();
+						output_24.value = "사업부문";
+						output_24.style.setClasses(["label"]);
+						container.addChild(output_24, {
 							"colIndex": 6,
 							"rowIndex": 4
 						});
 						var comboBox_11 = new cpr.controls.ComboBox("cmb7");
 						comboBox_11.value = "value1";
+						comboBox_11.style.css({
+							"border-right-style" : "dashed",
+							"border-top-width" : "3px",
+							"border-bottom-color" : "red",
+							"border-left-style" : "dashed",
+							"border-right-width" : "3px",
+							"border-bottom-width" : "3px",
+							"border-left-color" : "red",
+							"border-top-color" : "red",
+							"border-bottom-style" : "dashed",
+							"border-right-color" : "red",
+							"border-left-width" : "3px",
+							"border-top-style" : "dashed"
+						});
 						(function(comboBox_11){
 							comboBox_11.addItem(new cpr.controls.Item("FP", "value1"));
 						})(comboBox_11);
@@ -636,10 +715,10 @@
 							"colIndex": 7,
 							"rowIndex": 4
 						});
-						var output_30 = new cpr.controls.Output();
-						output_30.value = "구분";
-						output_30.style.setClasses(["label"]);
-						container.addChild(output_30, {
+						var output_25 = new cpr.controls.Output();
+						output_25.value = "구분";
+						output_25.style.setClasses(["label"]);
+						container.addChild(output_25, {
 							"colIndex": 0,
 							"rowIndex": 5
 						});
@@ -655,10 +734,10 @@
 							"colIndex": 1,
 							"rowIndex": 5
 						});
-						var output_31 = new cpr.controls.Output();
-						output_31.value = "생보협지사번호";
-						output_31.style.setClasses(["label"]);
-						container.addChild(output_31, {
+						var output_26 = new cpr.controls.Output();
+						output_26.value = "생보협지사번호";
+						output_26.style.setClasses(["label"]);
+						container.addChild(output_26, {
 							"colIndex": 2,
 							"rowIndex": 5
 						});
@@ -667,10 +746,10 @@
 							"colIndex": 3,
 							"rowIndex": 5
 						});
-						var output_32 = new cpr.controls.Output();
-						output_32.value = "대리점등록번호";
-						output_32.style.setClasses(["label"]);
-						container.addChild(output_32, {
+						var output_27 = new cpr.controls.Output();
+						output_27.value = "대리점등록번호";
+						output_27.style.setClasses(["label"]);
+						container.addChild(output_27, {
 							"colIndex": 4,
 							"rowIndex": 5
 						});
@@ -679,10 +758,10 @@
 							"colIndex": 5,
 							"rowIndex": 5
 						});
-						var output_33 = new cpr.controls.Output();
-						output_33.value = "사업자등록번호";
-						output_33.style.setClasses(["label"]);
-						container.addChild(output_33, {
+						var output_28 = new cpr.controls.Output();
+						output_28.value = "사업자등록번호";
+						output_28.style.setClasses(["label"]);
+						container.addChild(output_28, {
 							"colIndex": 6,
 							"rowIndex": 5
 						});
@@ -691,10 +770,10 @@
 							"colIndex": 7,
 							"rowIndex": 5
 						});
-						var output_34 = new cpr.controls.Output();
-						output_34.value = "제휴BM";
-						output_34.style.setClasses(["label"]);
-						container.addChild(output_34, {
+						var output_29 = new cpr.controls.Output();
+						output_29.value = "제휴BM";
+						output_29.style.setClasses(["label"]);
+						container.addChild(output_29, {
 							"colIndex": 0,
 							"rowIndex": 6
 						});
@@ -727,10 +806,10 @@
 							"colIndex": 1,
 							"rowIndex": 6
 						});
-						var output_35 = new cpr.controls.Output();
-						output_35.value = "관리BM";
-						output_35.style.setClasses(["label"]);
-						container.addChild(output_35, {
+						var output_30 = new cpr.controls.Output();
+						output_30.value = "관리BM";
+						output_30.style.setClasses(["label"]);
+						container.addChild(output_30, {
 							"colIndex": 2,
 							"rowIndex": 6
 						});
@@ -780,1157 +859,791 @@
 					"height": "249px"
 				});
 				var group_13 = new cpr.controls.Container();
+				group_13.style.setClasses(["form-box"]);
 				var verticalLayout_6 = new cpr.controls.layouts.VerticalLayout();
+				verticalLayout_6.scrollable = false;
 				verticalLayout_6.spacing = 8;
 				group_13.setLayout(verticalLayout_6);
 				(function(container){
-					var group_14 = new cpr.controls.Container("grpBodyGroundGrid");
-					group_14.style.setClasses(["grid-box"]);
-					var verticalLayout_7 = new cpr.controls.layouts.VerticalLayout();
-					verticalLayout_7.spacing = 8;
-					group_14.setLayout(verticalLayout_7);
+					var group_14 = new cpr.controls.Container();
+					group_14.style.setClasses(["form-normal"]);
+					var formLayout_7 = new cpr.controls.layouts.FormLayout();
+					formLayout_7.scrollable = false;
+					formLayout_7.topMargin = "2px";
+					formLayout_7.rightMargin = "5px";
+					formLayout_7.bottomMargin = "2px";
+					formLayout_7.leftMargin = "5px";
+					formLayout_7.horizontalSpacing = "11px";
+					formLayout_7.verticalSpacing = "5px";
+					formLayout_7.horizontalSeparatorWidth = 1;
+					formLayout_7.verticalSeparatorWidth = 1;
+					formLayout_7.setColumns(["110px", "1fr", "1fr", "1fr", "1fr", "1fr", "1fr", "1fr", "1fr"]);
+					formLayout_7.setUseColumnShade(0, true);
+					formLayout_7.setColumnAutoSizing(0, true);
+					formLayout_7.setColumnMinWidth(6, 50);
+					formLayout_7.setRows(["26px", "26px", "26px", "26px", "26px", "26px", "26px", "26px", "26px", "26px"]);
+					formLayout_7.setUseRowShade(0, true);
+					group_14.setLayout(formLayout_7);
 					(function(container){
-						var grid_1 = new cpr.controls.Grid("grd1");
-						grid_1.fieldLabel = "계약별세부계산내역";
-						grid_1.init({
-							"dataSet": app.lookup("dsSet1"),
-							"columnMovable": true,
-							"autoFit": "1, 2, 3, 4, 5, 6, 7, 8",
-							"resizableColumns": "all",
-							"noDataMessage": "DATA가 없습니다.",
-							"columns": [
-								{"width": "120px"},
-								{"width": "150px"},
-								{"width": "150px"},
-								{"width": "100px"},
-								{"width": "100px"},
-								{"width": "100px"},
-								{"width": "200px"},
-								{"width": "120px"},
-								{"width": "120px"}
-							],
-							"header": {
-								"rows": [{"height": "31px"}],
-								"cells": [
-									{
-										"constraint": {"rowIndex": 0, "colIndex": 0},
-										"configurator": function(cell){
-											cell.filterable = false;
-											cell.sortable = false;
-											cell.targetColumnName = "column1";
-											cell.text = "조직관계";
-										}
-									},
-									{
-										"constraint": {"rowIndex": 0, "colIndex": 1},
-										"configurator": function(cell){
-											cell.filterable = false;
-											cell.sortable = false;
-											cell.targetColumnName = "column2";
-											cell.text = "관계점포";
-										}
-									},
-									{
-										"constraint": {"rowIndex": 0, "colIndex": 2},
-										"configurator": function(cell){
-											cell.filterable = false;
-											cell.sortable = false;
-											cell.targetColumnName = "column3";
-											cell.text = "점포명";
-										}
-									},
-									{
-										"constraint": {"rowIndex": 0, "colIndex": 3},
-										"configurator": function(cell){
-											cell.filterable = false;
-											cell.sortable = false;
-											cell.targetColumnName = "column4";
-											cell.text = "유효게시일";
-										}
-									},
-									{
-										"constraint": {"rowIndex": 0, "colIndex": 4},
-										"configurator": function(cell){
-											cell.filterable = false;
-											cell.sortable = false;
-											cell.targetColumnName = "column5";
-											cell.text = "유효종료일";
-										}
-									},
-									{
-										"constraint": {"rowIndex": 0, "colIndex": 5},
-										"configurator": function(cell){
-											cell.filterable = false;
-											cell.sortable = false;
-											cell.targetColumnName = "column6";
-											cell.text = "처리구분";
-										}
-									},
-									{
-										"constraint": {"rowIndex": 0, "colIndex": 6},
-										"configurator": function(cell){
-											cell.filterable = false;
-											cell.sortable = false;
-											cell.targetColumnName = "column7";
-											cell.text = "관계점포";
-										}
-									},
-									{
-										"constraint": {"rowIndex": 0, "colIndex": 7},
-										"configurator": function(cell){
-											cell.filterable = false;
-											cell.sortable = false;
-											cell.targetColumnName = "column8";
-											cell.text = "유효게시일";
-										}
-									},
-									{
-										"constraint": {"rowIndex": 0, "colIndex": 8},
-										"configurator": function(cell){
-											cell.filterable = false;
-											cell.sortable = false;
-											cell.targetColumnName = "column9";
-											cell.text = "유효종료일";
-										}
-									}
-								]
-							},
-							"detail": {
-								"rows": [
-									{"height": "31px"},
-									{"height": "31px"},
-									{"height": "31px"},
-									{"height": "31px"},
-									{"height": "31px"},
-									{"height": "31px"},
-									{"height": "31px"},
-									{"height": "31px"},
-									{"height": "31px"}
-								],
-								"cells": [
-									{
-										"constraint": {"rowIndex": 0, "colIndex": 0},
-										"configurator": function(cell){
-											cell.columnName = "소속";
-											cell.control = (function(){
-												var output_36 = new cpr.controls.Output();
-												output_36.style.setClasses(["bg-secondary-dim", "text-center"]);
-												output_36.bind("value").toDataColumn("소속");
-												return output_36;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 0, "colIndex": 1},
-										"configurator": function(cell){
-											cell.columnName = "column2";
-											cell.control = (function(){
-												var output_37 = new cpr.controls.Output();
-												output_37.bind("value").toDataColumn("column2");
-												return output_37;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 0, "colIndex": 2},
-										"configurator": function(cell){
-											cell.columnName = "column3";
-											cell.control = (function(){
-												var output_38 = new cpr.controls.Output();
-												output_38.style.setClasses(["text-left"]);
-												output_38.bind("value").toDataColumn("column3");
-												return output_38;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 0, "colIndex": 3},
-										"configurator": function(cell){
-											cell.columnName = "column4";
-											cell.control = (function(){
-												var output_39 = new cpr.controls.Output("opt28");
-												output_39.value = "20241231";
-												output_39.dataType = "date";
-												output_39.format = "YYYY-MM-DD";
-												output_39.style.setClasses(["text-center"]);
-												output_39.bind("value").toDataColumn("column4");
-												return output_39;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 0, "colIndex": 4},
-										"configurator": function(cell){
-											cell.columnName = "column5";
-											cell.control = (function(){
-												var output_40 = new cpr.controls.Output("opt2");
-												output_40.value = "20241231";
-												output_40.dataType = "date";
-												output_40.format = "YYYY-MM-DD";
-												output_40.style.setClasses(["text-center"]);
-												output_40.bind("value").toDataColumn("column5");
-												return output_40;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 0, "colIndex": 5},
-										"configurator": function(cell){
-											cell.columnName = "column6";
-											cell.control = (function(){
-												var comboBox_12 = new cpr.controls.ComboBox("cmb12");
-												comboBox_12.value = "value1";
-												(function(comboBox_12){
-													comboBox_12.addItem(new cpr.controls.Item("선택", "value1"));
-												})(comboBox_12);
-												comboBox_12.bind("value").toDataColumn("column6");
-												return comboBox_12;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 0, "colIndex": 6},
-										"configurator": function(cell){
-											cell.columnName = "column7";
-											cell.control = (function(){
-												var searchInput_4 = new cpr.controls.SearchInput();
-												searchInput_4.bind("value").toDataColumn("column7");
-												return searchInput_4;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 0, "colIndex": 7},
-										"configurator": function(cell){
-											cell.columnName = "column8";
-											cell.control = (function(){
-												var dateInput_8 = new cpr.controls.DateInput("dti8");
-												dateInput_8.bind("value").toDataColumn("column8");
-												return dateInput_8;
-											})();
-											cell.controlConstraint = {"horizontalAlign": "fill"};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 0, "colIndex": 8},
-										"configurator": function(cell){
-											cell.columnName = "column9";
-											cell.control = (function(){
-												var dateInput_9 = new cpr.controls.DateInput("dti9");
-												dateInput_9.bind("value").toDataColumn("column9");
-												return dateInput_9;
-											})();
-											cell.controlConstraint = {"horizontalAlign": "fill"};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 1, "colIndex": 0},
-										"configurator": function(cell){
-											cell.columnName = "대리점";
-											cell.control = (function(){
-												var output_41 = new cpr.controls.Output();
-												output_41.style.setClasses(["bg-secondary-dim", "text-center"]);
-												output_41.bind("value").toDataColumn("대리점");
-												return output_41;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 1, "colIndex": 1},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_42 = new cpr.controls.Output();
-												return output_42;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 1, "colIndex": 2},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_43 = new cpr.controls.Output();
-												return output_43;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 1, "colIndex": 3},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_44 = new cpr.controls.Output();
-												return output_44;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 1, "colIndex": 4},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_45 = new cpr.controls.Output();
-												return output_45;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 1, "colIndex": 5},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var comboBox_13 = new cpr.controls.ComboBox("cmb13");
-												comboBox_13.value = "value1";
-												(function(comboBox_13){
-												})(comboBox_13);
-												return comboBox_13;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 1, "colIndex": 6},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var searchInput_5 = new cpr.controls.SearchInput();
-												return searchInput_5;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 1, "colIndex": 7},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_46 = new cpr.controls.Output();
-												return output_46;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 1, "colIndex": 8},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_47 = new cpr.controls.Output();
-												return output_47;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 2, "colIndex": 0},
-										"configurator": function(cell){
-											cell.columnName = "CBM";
-											cell.control = (function(){
-												var output_48 = new cpr.controls.Output();
-												output_48.style.setClasses(["bg-secondary-dim", "text-center"]);
-												output_48.bind("value").toDataColumn("CBM");
-												return output_48;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 2, "colIndex": 1},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_49 = new cpr.controls.Output();
-												return output_49;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 2, "colIndex": 2},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_50 = new cpr.controls.Output();
-												return output_50;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 2, "colIndex": 3},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_51 = new cpr.controls.Output();
-												return output_51;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 2, "colIndex": 4},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_52 = new cpr.controls.Output();
-												return output_52;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 2, "colIndex": 5},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var comboBox_14 = new cpr.controls.ComboBox("cmb14");
-												comboBox_14.value = "value1";
-												(function(comboBox_14){
-												})(comboBox_14);
-												return comboBox_14;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 2, "colIndex": 6},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var searchInput_6 = new cpr.controls.SearchInput();
-												return searchInput_6;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 2, "colIndex": 7},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_53 = new cpr.controls.Output();
-												return output_53;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 2, "colIndex": 8},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_54 = new cpr.controls.Output();
-												return output_54;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 3, "colIndex": 0},
-										"configurator": function(cell){
-											cell.columnName = "흡수";
-											cell.control = (function(){
-												var output_55 = new cpr.controls.Output();
-												output_55.style.setClasses(["bg-secondary-dim", "text-center"]);
-												output_55.bind("value").toDataColumn("흡수");
-												return output_55;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 3, "colIndex": 1},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_56 = new cpr.controls.Output();
-												return output_56;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 3, "colIndex": 2},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_57 = new cpr.controls.Output();
-												return output_57;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 3, "colIndex": 3},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_58 = new cpr.controls.Output();
-												return output_58;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 3, "colIndex": 4},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_59 = new cpr.controls.Output();
-												return output_59;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 3, "colIndex": 5},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var comboBox_15 = new cpr.controls.ComboBox("cmb15");
-												comboBox_15.value = "value1";
-												(function(comboBox_15){
-												})(comboBox_15);
-												return comboBox_15;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 3, "colIndex": 6},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var searchInput_7 = new cpr.controls.SearchInput();
-												return searchInput_7;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 3, "colIndex": 7},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_60 = new cpr.controls.Output();
-												return output_60;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 3, "colIndex": 8},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_61 = new cpr.controls.Output();
-												return output_61;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 4, "colIndex": 0},
-										"configurator": function(cell){
-											cell.columnName = "분할";
-											cell.control = (function(){
-												var output_62 = new cpr.controls.Output();
-												output_62.style.setClasses(["bg-secondary-dim", "text-center"]);
-												output_62.bind("value").toDataColumn("분할");
-												return output_62;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 4, "colIndex": 1},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_63 = new cpr.controls.Output();
-												return output_63;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 4, "colIndex": 2},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_64 = new cpr.controls.Output();
-												return output_64;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 4, "colIndex": 3},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_65 = new cpr.controls.Output();
-												return output_65;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 4, "colIndex": 4},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_66 = new cpr.controls.Output();
-												return output_66;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 4, "colIndex": 5},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var comboBox_16 = new cpr.controls.ComboBox("cmb16");
-												comboBox_16.value = "value1";
-												(function(comboBox_16){
-												})(comboBox_16);
-												return comboBox_16;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 4, "colIndex": 6},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var searchInput_8 = new cpr.controls.SearchInput();
-												return searchInput_8;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 4, "colIndex": 7},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_67 = new cpr.controls.Output();
-												return output_67;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 4, "colIndex": 8},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_68 = new cpr.controls.Output();
-												return output_68;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 5, "colIndex": 0},
-										"configurator": function(cell){
-											cell.columnName = "발의부서";
-											cell.control = (function(){
-												var output_69 = new cpr.controls.Output();
-												output_69.style.setClasses(["bg-secondary-dim", "text-center"]);
-												output_69.bind("value").toDataColumn("발의부서");
-												return output_69;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 5, "colIndex": 1},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_70 = new cpr.controls.Output();
-												return output_70;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 5, "colIndex": 2},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_71 = new cpr.controls.Output();
-												return output_71;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 5, "colIndex": 3},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_72 = new cpr.controls.Output();
-												return output_72;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 5, "colIndex": 4},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_73 = new cpr.controls.Output();
-												return output_73;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 5, "colIndex": 5},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var comboBox_17 = new cpr.controls.ComboBox("cmb17");
-												comboBox_17.value = "value1";
-												(function(comboBox_17){
-												})(comboBox_17);
-												return comboBox_17;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 5, "colIndex": 6},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var searchInput_9 = new cpr.controls.SearchInput();
-												return searchInput_9;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 5, "colIndex": 7},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_74 = new cpr.controls.Output();
-												return output_74;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 5, "colIndex": 8},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_75 = new cpr.controls.Output();
-												return output_75;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 6, "colIndex": 0},
-										"configurator": function(cell){
-											cell.columnName = "현지지급";
-											cell.control = (function(){
-												var output_76 = new cpr.controls.Output();
-												output_76.style.setClasses(["bg-secondary-dim", "text-center"]);
-												output_76.bind("value").toDataColumn("현지지급");
-												return output_76;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 6, "colIndex": 1},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_77 = new cpr.controls.Output();
-												return output_77;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 6, "colIndex": 2},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_78 = new cpr.controls.Output();
-												return output_78;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 6, "colIndex": 3},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_79 = new cpr.controls.Output();
-												return output_79;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 6, "colIndex": 4},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_80 = new cpr.controls.Output();
-												return output_80;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 6, "colIndex": 5},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var comboBox_18 = new cpr.controls.ComboBox("cmb18");
-												comboBox_18.value = "value1";
-												(function(comboBox_18){
-												})(comboBox_18);
-												return comboBox_18;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 6, "colIndex": 6},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var searchInput_10 = new cpr.controls.SearchInput();
-												return searchInput_10;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 6, "colIndex": 7},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_81 = new cpr.controls.Output();
-												return output_81;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 6, "colIndex": 8},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_82 = new cpr.controls.Output();
-												return output_82;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 7, "colIndex": 0},
-										"configurator": function(cell){
-											cell.columnName = "채널";
-											cell.control = (function(){
-												var output_83 = new cpr.controls.Output();
-												output_83.style.setClasses(["bg-secondary-dim", "text-center"]);
-												output_83.bind("value").toDataColumn("채널");
-												return output_83;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 7, "colIndex": 1},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_84 = new cpr.controls.Output();
-												return output_84;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 7, "colIndex": 2},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_85 = new cpr.controls.Output();
-												return output_85;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 7, "colIndex": 3},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_86 = new cpr.controls.Output();
-												return output_86;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 7, "colIndex": 4},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_87 = new cpr.controls.Output();
-												return output_87;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 7, "colIndex": 5},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var comboBox_19 = new cpr.controls.ComboBox("cmb19");
-												comboBox_19.value = "value1";
-												(function(comboBox_19){
-												})(comboBox_19);
-												return comboBox_19;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 7, "colIndex": 6},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var searchInput_11 = new cpr.controls.SearchInput();
-												return searchInput_11;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 7, "colIndex": 7},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_88 = new cpr.controls.Output();
-												return output_88;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 7, "colIndex": 8},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_89 = new cpr.controls.Output();
-												return output_89;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 8, "colIndex": 0},
-										"configurator": function(cell){
-											cell.columnName = "현지변경";
-											cell.control = (function(){
-												var output_90 = new cpr.controls.Output();
-												output_90.style.setClasses(["bg-secondary-dim", "text-center"]);
-												output_90.bind("value").toDataColumn("현지변경");
-												return output_90;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 8, "colIndex": 1},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_91 = new cpr.controls.Output();
-												return output_91;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 8, "colIndex": 2},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_92 = new cpr.controls.Output();
-												return output_92;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 8, "colIndex": 3},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_93 = new cpr.controls.Output();
-												return output_93;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 8, "colIndex": 4},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_94 = new cpr.controls.Output();
-												return output_94;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 8, "colIndex": 5},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var comboBox_20 = new cpr.controls.ComboBox("cmb20");
-												comboBox_20.value = "value1";
-												(function(comboBox_20){
-												})(comboBox_20);
-												return comboBox_20;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 8, "colIndex": 6},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var searchInput_12 = new cpr.controls.SearchInput();
-												return searchInput_12;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 8, "colIndex": 7},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_95 = new cpr.controls.Output();
-												return output_95;
-											})();
-											cell.controlConstraint = {};
-										}
-									},
-									{
-										"constraint": {"rowIndex": 8, "colIndex": 8},
-										"configurator": function(cell){
-											cell.control = (function(){
-												var output_96 = new cpr.controls.Output();
-												return output_96;
-											})();
-											cell.controlConstraint = {};
-										}
-									}
-								]
-							}
+						var output_31 = new cpr.controls.Output();
+						output_31.value = "관계정보";
+						output_31.style.setClasses(["label"]);
+						container.addChild(output_31, {
+							"colIndex": 1,
+							"rowIndex": 0
 						});
-						grid_1.style.setClasses(["list-normal"]);
-						container.addChild(grid_1, {
-							"autoSize": "none",
-							"width": "1052px",
-							"height": "312px"
+						var output_32 = new cpr.controls.Output();
+						output_32.value = "조직관계";
+						output_32.style.setClasses(["label"]);
+						container.addChild(output_32, {
+							"colIndex": 0,
+							"rowIndex": 0
+						});
+						var output_33 = new cpr.controls.Output();
+						output_33.value = "점포명";
+						output_33.style.setClasses(["label"]);
+						container.addChild(output_33, {
+							"colIndex": 2,
+							"rowIndex": 0
+						});
+						var output_34 = new cpr.controls.Output();
+						output_34.value = "유효게시일";
+						output_34.style.setClasses(["label"]);
+						container.addChild(output_34, {
+							"colIndex": 3,
+							"rowIndex": 0
+						});
+						var output_35 = new cpr.controls.Output();
+						output_35.value = "유효종료일";
+						output_35.style.setClasses(["label"]);
+						container.addChild(output_35, {
+							"colIndex": 4,
+							"rowIndex": 0
+						});
+						var output_36 = new cpr.controls.Output();
+						output_36.value = "처리구분";
+						output_36.style.setClasses(["label"]);
+						container.addChild(output_36, {
+							"colIndex": 5,
+							"rowIndex": 0
+						});
+						var output_37 = new cpr.controls.Output();
+						output_37.value = "관계정보";
+						output_37.style.setClasses(["label"]);
+						container.addChild(output_37, {
+							"colIndex": 6,
+							"rowIndex": 0
+						});
+						var output_38 = new cpr.controls.Output();
+						output_38.value = "유효게시일";
+						output_38.style.setClasses(["label"]);
+						container.addChild(output_38, {
+							"colIndex": 7,
+							"rowIndex": 0
+						});
+						var output_39 = new cpr.controls.Output();
+						output_39.value = "유효종료일";
+						output_39.style.setClasses(["label"]);
+						container.addChild(output_39, {
+							"colIndex": 8,
+							"rowIndex": 0
+						});
+						var inputBox_10 = new cpr.controls.InputBox("ipb17");
+						inputBox_10.value = "";
+						container.addChild(inputBox_10, {
+							"colIndex": 1,
+							"rowIndex": 2
+						});
+						var output_40 = new cpr.controls.Output();
+						output_40.value = "대리점";
+						output_40.style.setClasses(["label"]);
+						container.addChild(output_40, {
+							"colIndex": 0,
+							"rowIndex": 2
+						});
+						var output_41 = new cpr.controls.Output();
+						output_41.value = "CBM";
+						output_41.style.setClasses(["label"]);
+						container.addChild(output_41, {
+							"colIndex": 0,
+							"rowIndex": 3
+						});
+						var output_42 = new cpr.controls.Output();
+						output_42.value = "흡수";
+						output_42.style.setClasses(["label"]);
+						container.addChild(output_42, {
+							"colIndex": 0,
+							"rowIndex": 4
+						});
+						var output_43 = new cpr.controls.Output();
+						output_43.value = "분할";
+						output_43.style.setClasses(["label"]);
+						container.addChild(output_43, {
+							"colIndex": 0,
+							"rowIndex": 5
+						});
+						var output_44 = new cpr.controls.Output();
+						output_44.value = "발의부서";
+						output_44.style.setClasses(["label"]);
+						if(typeof onOutputValueChange == "function") {
+							output_44.addEventListener("value-change", onOutputValueChange);
+						}
+						container.addChild(output_44, {
+							"colIndex": 0,
+							"rowIndex": 6
+						});
+						var output_45 = new cpr.controls.Output();
+						output_45.value = "현지지급";
+						output_45.style.setClasses(["label"]);
+						container.addChild(output_45, {
+							"colIndex": 0,
+							"rowIndex": 7
+						});
+						var output_46 = new cpr.controls.Output();
+						output_46.value = "채널";
+						output_46.style.setClasses(["label"]);
+						container.addChild(output_46, {
+							"colIndex": 0,
+							"rowIndex": 8
+						});
+						var output_47 = new cpr.controls.Output();
+						output_47.value = "현지변경";
+						output_47.style.setClasses(["label"]);
+						container.addChild(output_47, {
+							"colIndex": 0,
+							"rowIndex": 9
+						});
+						var inputBox_11 = new cpr.controls.InputBox("ipb18");
+						inputBox_11.value = "";
+						container.addChild(inputBox_11, {
+							"colIndex": 2,
+							"rowIndex": 2
+						});
+						var inputBox_12 = new cpr.controls.InputBox("ipb24");
+						inputBox_12.value = "";
+						container.addChild(inputBox_12, {
+							"colIndex": 2,
+							"rowIndex": 3
+						});
+						var inputBox_13 = new cpr.controls.InputBox("ipb16");
+						inputBox_13.value = "";
+						container.addChild(inputBox_13, {
+							"colIndex": 1,
+							"rowIndex": 3
+						});
+						var inputBox_14 = new cpr.controls.InputBox("ipb15");
+						inputBox_14.value = "";
+						container.addChild(inputBox_14, {
+							"colIndex": 1,
+							"rowIndex": 4
+						});
+						var inputBox_15 = new cpr.controls.InputBox("ipb21");
+						inputBox_15.value = "";
+						container.addChild(inputBox_15, {
+							"colIndex": 2,
+							"rowIndex": 4
+						});
+						var inputBox_16 = new cpr.controls.InputBox("ipb23");
+						inputBox_16.value = "";
+						container.addChild(inputBox_16, {
+							"colIndex": 2,
+							"rowIndex": 5
+						});
+						var inputBox_17 = new cpr.controls.InputBox("ipb14");
+						inputBox_17.value = "";
+						container.addChild(inputBox_17, {
+							"colIndex": 1,
+							"rowIndex": 5
+						});
+						var inputBox_18 = new cpr.controls.InputBox("ipb13");
+						inputBox_18.value = "008001";
+						container.addChild(inputBox_18, {
+							"colIndex": 1,
+							"rowIndex": 6
+						});
+						var inputBox_19 = new cpr.controls.InputBox("ipb12");
+						inputBox_19.value = "310007";
+						if(typeof onIpb12ValueChange == "function") {
+							inputBox_19.addEventListener("value-change", onIpb12ValueChange);
+						}
+						container.addChild(inputBox_19, {
+							"colIndex": 1,
+							"rowIndex": 7
+						});
+						var inputBox_20 = new cpr.controls.InputBox("ipb26");
+						inputBox_20.value = "노*B***";
+						container.addChild(inputBox_20, {
+							"colIndex": 2,
+							"rowIndex": 7
+						});
+						var inputBox_21 = new cpr.controls.InputBox("ipb25");
+						inputBox_21.value = "노*지점";
+						container.addChild(inputBox_21, {
+							"colIndex": 2,
+							"rowIndex": 6
+						});
+						var inputBox_22 = new cpr.controls.InputBox("ipb27");
+						inputBox_22.value = "";
+						container.addChild(inputBox_22, {
+							"colIndex": 1,
+							"rowIndex": 8
+						});
+						var inputBox_23 = new cpr.controls.InputBox("ipb28");
+						inputBox_23.value = "326007";
+						container.addChild(inputBox_23, {
+							"colIndex": 1,
+							"rowIndex": 9
+						});
+						var inputBox_24 = new cpr.controls.InputBox("ipb29");
+						inputBox_24.value = "원격지원";
+						container.addChild(inputBox_24, {
+							"colIndex": 2,
+							"rowIndex": 9
+						});
+						var inputBox_25 = new cpr.controls.InputBox("ipb30");
+						inputBox_25.value = "";
+						container.addChild(inputBox_25, {
+							"colIndex": 2,
+							"rowIndex": 8
+						});
+						var dateInput_8 = new cpr.controls.DateInput("dti9");
+						dateInput_8.value = "20180702";
+						container.addChild(dateInput_8, {
+							"colIndex": 3,
+							"rowIndex": 6
+						});
+						var dateInput_9 = new cpr.controls.DateInput("dti11");
+						dateInput_9.value = "20190415";
+						container.addChild(dateInput_9, {
+							"colIndex": 3,
+							"rowIndex": 7
+						});
+						var dateInput_10 = new cpr.controls.DateInput("dti12");
+						dateInput_10.value = "20150705";
+						container.addChild(dateInput_10, {
+							"colIndex": 3,
+							"rowIndex": 9
+						});
+						var comboBox_12 = new cpr.controls.ComboBox("cmb13");
+						comboBox_12.value = "value1";
+						(function(comboBox_12){
+							comboBox_12.addItem(new cpr.controls.Item("선택", "value1"));
+						})(comboBox_12);
+						container.addChild(comboBox_12, {
+							"colIndex": 5,
+							"rowIndex": 6
+						});
+						var comboBox_13 = new cpr.controls.ComboBox("cmb14");
+						comboBox_13.value = "value1";
+						(function(comboBox_13){
+							comboBox_13.addItem(new cpr.controls.Item("선택", "value1"));
+						})(comboBox_13);
+						container.addChild(comboBox_13, {
+							"colIndex": 5,
+							"rowIndex": 7
+						});
+						var comboBox_14 = new cpr.controls.ComboBox("cmb15");
+						comboBox_14.value = "value1";
+						(function(comboBox_14){
+							comboBox_14.addItem(new cpr.controls.Item("선택", "value1"));
+						})(comboBox_14);
+						container.addChild(comboBox_14, {
+							"colIndex": 5,
+							"rowIndex": 9
+						});
+						var searchInput_4 = new cpr.controls.SearchInput();
+						container.addChild(searchInput_4, {
+							"colIndex": 6,
+							"rowIndex": 6
+						});
+						var searchInput_5 = new cpr.controls.SearchInput();
+						container.addChild(searchInput_5, {
+							"colIndex": 6,
+							"rowIndex": 7
+						});
+						var searchInput_6 = new cpr.controls.SearchInput();
+						container.addChild(searchInput_6, {
+							"colIndex": 6,
+							"rowIndex": 9
+						});
+						var searchInput_7 = new cpr.controls.SearchInput();
+						container.addChild(searchInput_7, {
+							"colIndex": 6,
+							"rowIndex": 3
+						});
+						var searchInput_8 = new cpr.controls.SearchInput();
+						container.addChild(searchInput_8, {
+							"colIndex": 6,
+							"rowIndex": 5
+						});
+						var searchInput_9 = new cpr.controls.SearchInput();
+						container.addChild(searchInput_9, {
+							"colIndex": 6,
+							"rowIndex": 4
+						});
+						var searchInput_10 = new cpr.controls.SearchInput();
+						container.addChild(searchInput_10, {
+							"colIndex": 6,
+							"rowIndex": 2
+						});
+						var searchInput_11 = new cpr.controls.SearchInput();
+						container.addChild(searchInput_11, {
+							"colIndex": 6,
+							"rowIndex": 8
+						});
+						var comboBox_15 = new cpr.controls.ComboBox("cmb16");
+						comboBox_15.value = "value1";
+						(function(comboBox_15){
+							comboBox_15.addItem(new cpr.controls.Item("선택", "value1"));
+						})(comboBox_15);
+						container.addChild(comboBox_15, {
+							"colIndex": 5,
+							"rowIndex": 3
+						});
+						var comboBox_16 = new cpr.controls.ComboBox("cmb17");
+						comboBox_16.value = "value1";
+						(function(comboBox_16){
+							comboBox_16.addItem(new cpr.controls.Item("선택", "value1"));
+						})(comboBox_16);
+						container.addChild(comboBox_16, {
+							"colIndex": 5,
+							"rowIndex": 4
+						});
+						var comboBox_17 = new cpr.controls.ComboBox("cmb18");
+						comboBox_17.value = "value1";
+						(function(comboBox_17){
+							comboBox_17.addItem(new cpr.controls.Item("선택", "value1"));
+						})(comboBox_17);
+						container.addChild(comboBox_17, {
+							"colIndex": 5,
+							"rowIndex": 2
+						});
+						var comboBox_18 = new cpr.controls.ComboBox("cmb19");
+						comboBox_18.value = "value1";
+						(function(comboBox_18){
+							comboBox_18.addItem(new cpr.controls.Item("선택", "value1"));
+						})(comboBox_18);
+						container.addChild(comboBox_18, {
+							"colIndex": 5,
+							"rowIndex": 5
+						});
+						var comboBox_19 = new cpr.controls.ComboBox("cmb20");
+						comboBox_19.value = "value1";
+						(function(comboBox_19){
+							comboBox_19.addItem(new cpr.controls.Item("선택", "value1"));
+						})(comboBox_19);
+						container.addChild(comboBox_19, {
+							"colIndex": 5,
+							"rowIndex": 8
+						});
+						var dateInput_11 = new cpr.controls.DateInput("dti15");
+						dateInput_11.value = "99991231";
+						container.addChild(dateInput_11, {
+							"colIndex": 4,
+							"rowIndex": 6
+						});
+						var dateInput_12 = new cpr.controls.DateInput("dti17");
+						dateInput_12.value = "";
+						container.addChild(dateInput_12, {
+							"colIndex": 4,
+							"rowIndex": 2
+						});
+						var dateInput_13 = new cpr.controls.DateInput("dti18");
+						dateInput_13.value = "";
+						container.addChild(dateInput_13, {
+							"colIndex": 3,
+							"rowIndex": 2
+						});
+						var dateInput_14 = new cpr.controls.DateInput("dti19");
+						dateInput_14.value = "";
+						container.addChild(dateInput_14, {
+							"colIndex": 3,
+							"rowIndex": 3
+						});
+						var dateInput_15 = new cpr.controls.DateInput("dti20");
+						dateInput_15.value = "";
+						container.addChild(dateInput_15, {
+							"colIndex": 3,
+							"rowIndex": 4
+						});
+						var dateInput_16 = new cpr.controls.DateInput("dti21");
+						dateInput_16.value = "";
+						container.addChild(dateInput_16, {
+							"colIndex": 4,
+							"rowIndex": 5
+						});
+						var dateInput_17 = new cpr.controls.DateInput("dti22");
+						dateInput_17.value = "";
+						container.addChild(dateInput_17, {
+							"colIndex": 4,
+							"rowIndex": 4
+						});
+						var dateInput_18 = new cpr.controls.DateInput("dti23");
+						dateInput_18.value = "";
+						container.addChild(dateInput_18, {
+							"colIndex": 4,
+							"rowIndex": 3
+						});
+						var dateInput_19 = new cpr.controls.DateInput("dti24");
+						dateInput_19.value = "";
+						container.addChild(dateInput_19, {
+							"colIndex": 3,
+							"rowIndex": 5
+						});
+						var dateInput_20 = new cpr.controls.DateInput("dti25");
+						dateInput_20.value = "";
+						container.addChild(dateInput_20, {
+							"colIndex": 4,
+							"rowIndex": 8
+						});
+						var dateInput_21 = new cpr.controls.DateInput("dti26");
+						dateInput_21.value = "";
+						container.addChild(dateInput_21, {
+							"colIndex": 3,
+							"rowIndex": 8
+						});
+						var dateInput_22 = new cpr.controls.DateInput("dti14");
+						dateInput_22.value = "99991231";
+						container.addChild(dateInput_22, {
+							"colIndex": 4,
+							"rowIndex": 9
+						});
+						var dateInput_23 = new cpr.controls.DateInput("dti13");
+						dateInput_23.value = "20190422";
+						container.addChild(dateInput_23, {
+							"colIndex": 4,
+							"rowIndex": 7
+						});
+						var dateInput_24 = new cpr.controls.DateInput("dti28");
+						dateInput_24.value = "";
+						container.addChild(dateInput_24, {
+							"colIndex": 7,
+							"rowIndex": 2
+						});
+						var dateInput_25 = new cpr.controls.DateInput("dti29");
+						dateInput_25.value = "";
+						container.addChild(dateInput_25, {
+							"colIndex": 7,
+							"rowIndex": 3
+						});
+						var dateInput_26 = new cpr.controls.DateInput("dti32");
+						dateInput_26.value = "";
+						container.addChild(dateInput_26, {
+							"colIndex": 7,
+							"rowIndex": 8
+						});
+						var dateInput_27 = new cpr.controls.DateInput("dti30");
+						dateInput_27.value = "";
+						container.addChild(dateInput_27, {
+							"colIndex": 7,
+							"rowIndex": 5
+						});
+						var dateInput_28 = new cpr.controls.DateInput("dti33");
+						dateInput_28.value = "";
+						container.addChild(dateInput_28, {
+							"colIndex": 7,
+							"rowIndex": 4
+						});
+						var dateInput_29 = new cpr.controls.DateInput("dti31");
+						dateInput_29.value = "";
+						container.addChild(dateInput_29, {
+							"colIndex": 7,
+							"rowIndex": 7
+						});
+						var dateInput_30 = new cpr.controls.DateInput("dti34");
+						dateInput_30.value = "";
+						container.addChild(dateInput_30, {
+							"colIndex": 7,
+							"rowIndex": 9
+						});
+						var dateInput_31 = new cpr.controls.DateInput("dti35");
+						dateInput_31.value = "";
+						container.addChild(dateInput_31, {
+							"colIndex": 8,
+							"rowIndex": 9
+						});
+						var dateInput_32 = new cpr.controls.DateInput("dti36");
+						dateInput_32.value = "";
+						container.addChild(dateInput_32, {
+							"colIndex": 8,
+							"rowIndex": 6
+						});
+						var dateInput_33 = new cpr.controls.DateInput("dti39");
+						dateInput_33.value = "";
+						container.addChild(dateInput_33, {
+							"colIndex": 8,
+							"rowIndex": 3
+						});
+						var dateInput_34 = new cpr.controls.DateInput("dti40");
+						dateInput_34.value = "";
+						container.addChild(dateInput_34, {
+							"colIndex": 8,
+							"rowIndex": 2
+						});
+						var dateInput_35 = new cpr.controls.DateInput("dti37");
+						dateInput_35.value = "";
+						container.addChild(dateInput_35, {
+							"colIndex": 8,
+							"rowIndex": 5
+						});
+						var dateInput_36 = new cpr.controls.DateInput("dti41");
+						dateInput_36.value = "";
+						container.addChild(dateInput_36, {
+							"colIndex": 8,
+							"rowIndex": 4
+						});
+						var dateInput_37 = new cpr.controls.DateInput("dti42");
+						dateInput_37.value = "";
+						container.addChild(dateInput_37, {
+							"colIndex": 8,
+							"rowIndex": 7
+						});
+						var dateInput_38 = new cpr.controls.DateInput("dti43");
+						dateInput_38.value = "";
+						container.addChild(dateInput_38, {
+							"colIndex": 8,
+							"rowIndex": 8
+						});
+						var dateInput_39 = new cpr.controls.DateInput("dti44");
+						dateInput_39.value = "";
+						container.addChild(dateInput_39, {
+							"colIndex": 7,
+							"rowIndex": 6
+						});
+						var group_15 = new cpr.controls.Container();
+						group_15.style.css({
+							"border-right-style" : "dashed",
+							"border-top-width" : "3px",
+							"border-bottom-color" : "red",
+							"border-left-style" : "dashed",
+							"border-right-width" : "3px",
+							"border-bottom-width" : "3px",
+							"border-left-color" : "red",
+							"border-top-color" : "red",
+							"border-bottom-style" : "dashed",
+							"border-right-color" : "red",
+							"border-left-width" : "3px",
+							"border-top-style" : "dashed"
+						});
+						var formLayout_8 = new cpr.controls.layouts.FormLayout();
+						formLayout_8.scrollable = false;
+						formLayout_8.horizontalSpacing = "11px";
+						formLayout_8.verticalSpacing = "5px";
+						formLayout_8.setColumns(["110px", "1fr", "1fr", "1fr", "1fr", "1fr", "1fr", "1fr", "1fr"]);
+						formLayout_8.setUseColumnShade(0, true);
+						formLayout_8.setColumnAutoSizing(0, true);
+						formLayout_8.setColumnMinWidth(6, 50);
+						formLayout_8.setRows(["26px"]);
+						group_15.setLayout(formLayout_8);
+						(function(container){
+							var inputBox_26 = new cpr.controls.InputBox("ipb10");
+							inputBox_26.value = "000111";
+							container.addChild(inputBox_26, {
+								"colIndex": 1,
+								"rowIndex": 0
+							});
+							var inputBox_27 = new cpr.controls.InputBox("ipb11");
+							inputBox_27.value = "노*지점";
+							container.addChild(inputBox_27, {
+								"colIndex": 2,
+								"rowIndex": 0
+							});
+							var dateInput_40 = new cpr.controls.DateInput("dti8");
+							dateInput_40.value = "20180703";
+							container.addChild(dateInput_40, {
+								"colIndex": 3,
+								"rowIndex": 0
+							});
+							var dateInput_41 = new cpr.controls.DateInput("dti16");
+							dateInput_41.value = "99991231";
+							container.addChild(dateInput_41, {
+								"colIndex": 4,
+								"rowIndex": 0
+							});
+							var comboBox_20 = new cpr.controls.ComboBox("cmb12");
+							comboBox_20.value = "value1";
+							(function(comboBox_20){
+								comboBox_20.addItem(new cpr.controls.Item("선택", "value1"));
+							})(comboBox_20);
+							container.addChild(comboBox_20, {
+								"colIndex": 5,
+								"rowIndex": 0
+							});
+							var searchInput_12 = new cpr.controls.SearchInput();
+							container.addChild(searchInput_12, {
+								"colIndex": 6,
+								"rowIndex": 0
+							});
+							var dateInput_42 = new cpr.controls.DateInput("dti27");
+							dateInput_42.value = "";
+							container.addChild(dateInput_42, {
+								"colIndex": 7,
+								"rowIndex": 0
+							});
+							var dateInput_43 = new cpr.controls.DateInput("dti38");
+							dateInput_43.value = "";
+							container.addChild(dateInput_43, {
+								"colIndex": 8,
+								"rowIndex": 0
+							});
+							var output_48 = new cpr.controls.Output();
+							output_48.value = "소속";
+							output_48.style.setClasses(["label"]);
+							container.addChild(output_48, {
+								"colIndex": 0,
+								"rowIndex": 0
+							});
+						})(group_15);
+						container.addChild(group_15, {
+							"colIndex": 0,
+							"rowIndex": 1,
+							"colSpan": 9,
+							"rowSpan": 1
 						});
 					})(group_14);
 					container.addChild(group_14, {
 						"autoSize": "height",
 						"width": "1600px",
-						"height": "317px"
+						"height": "316px"
 					});
-					var group_15 = new cpr.controls.Container("grp2");
-					group_15.style.setClasses(["form-box"]);
-					var verticalLayout_8 = new cpr.controls.layouts.VerticalLayout();
-					verticalLayout_8.scrollable = false;
-					verticalLayout_8.spacing = 8;
-					group_15.setLayout(verticalLayout_8);
+					var group_16 = new cpr.controls.Container("grp1");
+					group_16.style.setClasses(["form-box"]);
+					var verticalLayout_7 = new cpr.controls.layouts.VerticalLayout();
+					verticalLayout_7.scrollable = false;
+					verticalLayout_7.spacing = 8;
+					group_16.setLayout(verticalLayout_7);
 					(function(container){
-						var group_16 = new cpr.controls.Container("grp6");
-						group_16.style.setClasses(["form-normal"]);
-						var formLayout_7 = new cpr.controls.layouts.FormLayout();
-						formLayout_7.scrollable = false;
-						formLayout_7.topMargin = "2px";
-						formLayout_7.rightMargin = "5px";
-						formLayout_7.bottomMargin = "2px";
-						formLayout_7.leftMargin = "5px";
-						formLayout_7.horizontalSpacing = "11px";
-						formLayout_7.verticalSpacing = "5px";
-						formLayout_7.horizontalSeparatorWidth = 1;
-						formLayout_7.verticalSeparatorWidth = 1;
-						formLayout_7.setColumns(["230px", "3fr", "230px", "1fr"]);
-						formLayout_7.setUseColumnShade(0, true);
-						formLayout_7.setUseColumnShade(2, true);
-						formLayout_7.setColumnAutoSizing(0, true);
-						formLayout_7.setColumnAutoSizing(2, true);
-						formLayout_7.setRows(["26px"]);
-						group_16.setLayout(formLayout_7);
+						var group_17 = new cpr.controls.Container("grp2");
+						group_17.style.setClasses(["form-box"]);
+						var verticalLayout_8 = new cpr.controls.layouts.VerticalLayout();
+						verticalLayout_8.scrollable = false;
+						verticalLayout_8.spacing = 8;
+						group_17.setLayout(verticalLayout_8);
 						(function(container){
-							var output_97 = new cpr.controls.Output();
-							output_97.value = "흡수점포";
-							output_97.style.setClasses(["label"]);
-							container.addChild(output_97, {
-								"colIndex": 0,
-								"rowIndex": 0
-							});
-							var group_17 = new cpr.controls.Container("grp7");
-							group_17.childCombinatorClass = "first-control-spacing";
-							group_17.style.setClasses(["form-inside"]);
-							var flowLayout_3 = new cpr.controls.layouts.FlowLayout();
-							flowLayout_3.scrollable = false;
-							flowLayout_3.horizontalSpacing = 20;
-							flowLayout_3.verticalSpacing = 2;
-							group_17.setLayout(flowLayout_3);
+							var group_18 = new cpr.controls.Container();
+							group_18.style.setClasses(["form-normal"]);
+							var formLayout_9 = new cpr.controls.layouts.FormLayout();
+							formLayout_9.scrollable = false;
+							formLayout_9.topMargin = "2px";
+							formLayout_9.rightMargin = "5px";
+							formLayout_9.bottomMargin = "2px";
+							formLayout_9.leftMargin = "5px";
+							formLayout_9.horizontalSpacing = "11px";
+							formLayout_9.verticalSpacing = "5px";
+							formLayout_9.horizontalSeparatorWidth = 1;
+							formLayout_9.verticalSeparatorWidth = 1;
+							formLayout_9.setColumns(["150px", "3fr", "230px", "1fr"]);
+							formLayout_9.setUseColumnShade(0, true);
+							formLayout_9.setUseColumnShade(2, true);
+							formLayout_9.setColumnAutoSizing(0, true);
+							formLayout_9.setColumnAutoSizing(2, true);
+							formLayout_9.setRows(["26px"]);
+							group_18.setLayout(formLayout_9);
 							(function(container){
-								var output_98 = new cpr.controls.Output();
-								output_98.value = "대표흡수점포";
-								container.addChild(output_98, {
-									"autoSize": "width",
-									"width": "100px",
-									"height": "26px"
+								var output_49 = new cpr.controls.Output();
+								output_49.value = "흡수점포";
+								output_49.style.setClasses(["label"]);
+								container.addChild(output_49, {
+									"colIndex": 0,
+									"rowIndex": 0,
+									"colSpan": 1,
+									"rowSpan": 1
 								});
-								var group_18 = new cpr.controls.Container("grp8");
-								var formLayout_8 = new cpr.controls.layouts.FormLayout();
-								formLayout_8.scrollable = false;
-								formLayout_8.topMargin = "0px";
-								formLayout_8.rightMargin = "0px";
-								formLayout_8.bottomMargin = "0px";
-								formLayout_8.leftMargin = "0px";
-								formLayout_8.horizontalSpacing = "5px";
-								formLayout_8.verticalSpacing = "0px";
-								formLayout_8.setColumns(["120px", "1fr", "1fr"]);
-								formLayout_8.setRows(["1fr"]);
-								group_18.setLayout(formLayout_8);
+								var group_19 = new cpr.controls.Container();
+								group_19.childCombinatorClass = "first-control-spacing";
+								group_19.style.setClasses(["form-inside"]);
+								var flowLayout_3 = new cpr.controls.layouts.FlowLayout();
+								flowLayout_3.scrollable = false;
+								flowLayout_3.horizontalSpacing = 20;
+								flowLayout_3.verticalSpacing = 2;
+								group_19.setLayout(flowLayout_3);
 								(function(container){
-									var inputBox_10 = new cpr.controls.InputBox("ipb10");
-									container.addChild(inputBox_10, {
-										"colIndex": 0,
-										"rowIndex": 0
+									var group_20 = new cpr.controls.Container();
+									var formLayout_10 = new cpr.controls.layouts.FormLayout();
+									formLayout_10.scrollable = false;
+									formLayout_10.topMargin = "0px";
+									formLayout_10.rightMargin = "0px";
+									formLayout_10.bottomMargin = "0px";
+									formLayout_10.leftMargin = "0px";
+									formLayout_10.horizontalSpacing = "5px";
+									formLayout_10.verticalSpacing = "0px";
+									formLayout_10.setColumns(["120px", "150px", "200px"]);
+									formLayout_10.setUseColumnShade(0, true);
+									formLayout_10.setRows(["1fr"]);
+									group_20.setLayout(formLayout_10);
+									(function(container){
+										var output_50 = new cpr.controls.Output();
+										output_50.value = "대표흡수점포";
+										output_50.style.setClasses(["label"]);
+										container.addChild(output_50, {
+											"colIndex": 0,
+											"rowIndex": 0
+										});
+										var inputBox_28 = new cpr.controls.InputBox("ipb19");
+										inputBox_28.value = "";
+										container.addChild(inputBox_28, {
+											"colIndex": 1,
+											"rowIndex": 0
+										});
+										var inputBox_29 = new cpr.controls.InputBox("ipb20");
+										inputBox_29.value = "";
+										container.addChild(inputBox_29, {
+											"colIndex": 2,
+											"rowIndex": 0
+										});
+									})(group_20);
+									container.addChild(group_20, {
+										"autoSize": "width",
+										"width": "500px",
+										"height": "26px"
 									});
-									var inputBox_11 = new cpr.controls.InputBox("ipb12");
-									container.addChild(inputBox_11, {
-										"colIndex": 1,
-										"rowIndex": 0
+									var inputBox_30 = new cpr.controls.InputBox("ipb22");
+									inputBox_30.value = "";
+									container.addChild(inputBox_30, {
+										"autoSize": "none",
+										"width": "185px",
+										"height": "26px"
 									});
-									var inputBox_12 = new cpr.controls.InputBox("ipb11");
-									container.addChild(inputBox_12, {
-										"colIndex": 2,
-										"rowIndex": 0
-									});
-								})(group_18);
-								container.addChild(group_18, {
-									"autoSize": "width",
-									"width": "500px",
-									"height": "26px"
+								})(group_19);
+								container.addChild(group_19, {
+									"colIndex": 1,
+									"rowIndex": 0,
+									"width": 203,
+									"height": 25
 								});
-							})(group_17);
-							container.addChild(group_17, {
-								"colIndex": 1,
-								"rowIndex": 0,
-								"width": 203,
-								"height": 25
+								var output_51 = new cpr.controls.Output();
+								output_51.value = "점포등급";
+								output_51.style.setClasses(["label"]);
+								container.addChild(output_51, {
+									"colIndex": 2,
+									"rowIndex": 0
+								});
+								var numberEditor_1 = new cpr.controls.NumberEditor("nbe1");
+								numberEditor_1.value = "5";
+								container.addChild(numberEditor_1, {
+									"colIndex": 3,
+									"rowIndex": 0
+								});
+							})(group_18);
+							container.addChild(group_18, {
+								"autoSize": "height",
+								"width": "1366px",
+								"height": "33px"
 							});
-							var output_99 = new cpr.controls.Output();
-							output_99.value = "점포등급";
-							output_99.style.setClasses(["label"]);
-							container.addChild(output_99, {
-								"colIndex": 2,
-								"rowIndex": 0
-							});
-							var numberEditor_1 = new cpr.controls.NumberEditor("nbe1");
-							numberEditor_1.value = "5";
-							container.addChild(numberEditor_1, {
-								"colIndex": 3,
-								"rowIndex": 0
-							});
-						})(group_16);
-						container.addChild(group_16, {
+						})(group_17);
+						container.addChild(group_17, {
 							"autoSize": "height",
-							"width": "1366px",
-							"height": "33px"
+							"width": "1560px",
+							"height": "38px"
 						});
-					})(group_15);
-					container.addChild(group_15, {
+					})(group_16);
+					container.addChild(group_16, {
 						"autoSize": "height",
-						"width": "1366px",
+						"width": "1600px",
 						"height": "38px"
 					});
-					var group_19 = new cpr.controls.Container("grp1");
-					group_19.style.setClasses(["commentary"]);
+					var group_21 = new cpr.controls.Container();
+					group_21.style.setClasses(["commentary"]);
 					var verticalLayout_9 = new cpr.controls.layouts.VerticalLayout();
 					verticalLayout_9.scrollable = false;
 					verticalLayout_9.spacing = 8;
@@ -1938,94 +1651,112 @@
 					verticalLayout_9.rightMargin = 10;
 					verticalLayout_9.topMargin = 10;
 					verticalLayout_9.bottomMargin = 10;
-					group_19.setLayout(verticalLayout_9);
+					group_21.setLayout(verticalLayout_9);
 					(function(container){
-						var output_100 = new cpr.controls.Output();
-						output_100.value = "- '조직관계' 항목의 추가, 변경은 '관계점포'를 먼저 선택하면 해당 항목이 활성화 되어 입력가능합니다 ('일반변경' 및 '점포폐쇄-대표흡수점포' 업무 수행시)\r\n- '점포폐쇄' 작업시, '조직관계'의 '흡수-점포' 설정하면 해당 '흡수-점포'가 자동으로 '대표 흡수 점포'로 셋팅 됩니다.\r\n- '점포신설' 시 조직번호는 직접 입력 하거나 입력하지 않으면 자동채번으로 반영됩니다.";
-						container.addChild(output_100, {
+						var output_52 = new cpr.controls.Output();
+						output_52.value = "- '조직관계' 항목의 추가, 변경은 '관계점포'를 먼저 선택하면 해당 항목이 활성화 되어 입력가능합니다 ('일반변경' 및 '점포폐쇄-대표흡수점포' 업무 수행시)\r\n- '점포폐쇄' 작업시, '조직관계'의 '흡수-점포' 설정하면 해당 '흡수-점포'가 자동으로 '대표 흡수 점포'로 셋팅 됩니다.\r\n- '점포신설' 시 조직번호는 직접 입력 하거나 입력하지 않으면 자동채번으로 반영됩니다.";
+						container.addChild(output_52, {
 							"autoSize": "height",
 							"width": "904px",
-							"height": "40px"
+							"height": "24px"
 						});
-					})(group_19);
-					container.addChild(group_19, {
+					})(group_21);
+					container.addChild(group_21, {
 						"autoSize": "height",
 						"width": "1560px",
-						"height": "62px"
+						"height": "46px"
 					});
-					var group_20 = new cpr.controls.Container();
-					group_20.style.setClasses(["button-table-area"]);
-					var formLayout_9 = new cpr.controls.layouts.FormLayout();
-					formLayout_9.scrollable = false;
-					formLayout_9.topMargin = "0px";
-					formLayout_9.rightMargin = "0px";
-					formLayout_9.bottomMargin = "0px";
-					formLayout_9.leftMargin = "0px";
-					formLayout_9.horizontalSpacing = "0px";
-					formLayout_9.verticalSpacing = "0px";
-					formLayout_9.setColumns(["1fr", "43px", "1fr"]);
-					formLayout_9.setColumnAutoSizing(1, true);
-					formLayout_9.setRows(["1fr"]);
-					group_20.setLayout(formLayout_9);
+					var group_22 = new cpr.controls.Container();
+					group_22.style.setClasses(["button-table-area"]);
+					var formLayout_11 = new cpr.controls.layouts.FormLayout();
+					formLayout_11.scrollable = false;
+					formLayout_11.topMargin = "0px";
+					formLayout_11.rightMargin = "0px";
+					formLayout_11.bottomMargin = "0px";
+					formLayout_11.leftMargin = "0px";
+					formLayout_11.horizontalSpacing = "0px";
+					formLayout_11.verticalSpacing = "0px";
+					formLayout_11.setColumns(["1fr", "43px", "1fr"]);
+					formLayout_11.setColumnAutoSizing(1, true);
+					formLayout_11.setRows(["1fr"]);
+					group_22.setLayout(formLayout_11);
 					(function(container){
-						var group_21 = new cpr.controls.Container();
-						group_21.style.setClasses(["button-table-bottom-left-area"]);
+						var group_23 = new cpr.controls.Container("grp6");
+						group_23.style.setClasses(["button-table-bottom-left-area"]);
 						var flowLayout_4 = new cpr.controls.layouts.FlowLayout();
 						flowLayout_4.scrollable = false;
 						flowLayout_4.horizontalSpacing = 10;
 						flowLayout_4.verticalSpacing = 0;
 						flowLayout_4.lineWrap = false;
-						group_21.setLayout(flowLayout_4);
-						container.addChild(group_21, {
+						group_23.setLayout(flowLayout_4);
+						(function(container){
+							var button_5 = new cpr.controls.Button("btn1");
+							button_5.value = "기본사항조";
+							button_5.style.setClasses(["btn-primary04", "btn-md"]);
+							container.addChild(button_5, {
+								"autoSize": "width",
+								"width": "90px",
+								"height": "30px"
+							});
+							var button_6 = new cpr.controls.Button("btn2");
+							button_6.value = "조직건재변경";
+							button_6.style.setClasses(["btn-primary04", "btn-md"]);
+							container.addChild(button_6, {
+								"autoSize": "width",
+								"width": "90px",
+								"height": "30px"
+							});
+						})(group_23);
+						container.addChild(group_23, {
 							"colIndex": 0,
 							"rowIndex": 0
 						});
-						var group_22 = new cpr.controls.Container();
-						group_22.style.setClasses(["button-table-bottom-center-area"]);
+						var group_24 = new cpr.controls.Container("grp7");
+						group_24.style.setClasses(["button-table-bottom-center-area"]);
 						var flowLayout_5 = new cpr.controls.layouts.FlowLayout();
 						flowLayout_5.scrollable = false;
 						flowLayout_5.horizontalSpacing = 10;
 						flowLayout_5.verticalSpacing = 0;
 						flowLayout_5.horizontalAlign = "center";
-						group_22.setLayout(flowLayout_5);
-						container.addChild(group_22, {
+						group_24.setLayout(flowLayout_5);
+						container.addChild(group_24, {
 							"colIndex": 1,
 							"rowIndex": 0
 						});
-						var group_23 = new cpr.controls.Container();
-						group_23.style.setClasses(["button-table-bottom-right-area"]);
+						var group_25 = new cpr.controls.Container("grp8");
+						group_25.style.setClasses(["button-table-bottom-right-area"]);
 						var flowLayout_6 = new cpr.controls.layouts.FlowLayout();
 						flowLayout_6.scrollable = false;
 						flowLayout_6.horizontalSpacing = 10;
 						flowLayout_6.verticalSpacing = 0;
 						flowLayout_6.horizontalAlign = "right";
 						flowLayout_6.lineWrap = false;
-						group_23.setLayout(flowLayout_6);
+						group_25.setLayout(flowLayout_6);
 						(function(container){
-							var button_3 = new cpr.controls.Button("btn1");
-							button_3.value = "저장";
-							button_3.style.setClasses(["btn-primary03", "btn-md"]);
-							container.addChild(button_3, {
+							var button_7 = new cpr.controls.Button("btn4");
+							button_7.value = "저장";
+							button_7.style.setClasses(["btn-primary03", "btn-md"]);
+							container.addChild(button_7, {
 								"autoSize": "width",
 								"width": "60px",
 								"height": "30px"
 							});
-						})(group_23);
-						container.addChild(group_23, {
+						})(group_25);
+						container.addChild(group_25, {
 							"colIndex": 2,
 							"rowIndex": 0
 						});
-					})(group_20);
-					container.addChild(group_20, {
+					})(group_22);
+					container.addChild(group_22, {
 						"autoSize": "height",
-						"width": "1600px",
+						"width": "1560px",
 						"height": "30px"
 					});
 				})(group_13);
 				container.addChild(group_13, {
 					"autoSize": "height",
-					"width": "1366px",
-					"height": "471px"
+					"width": "1560px",
+					"height": "425px"
 				});
 			})(group_7);
 			container.addChild(group_7, {

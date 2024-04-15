@@ -16,7 +16,43 @@
 			 * Created at 2024. 4. 3. 오전 9:42:11.
 			 *
 			 * @author User
-			 ************************************************/;
+			 ************************************************/
+
+			/*
+			 * "이전" 버튼에서 click 이벤트 발생 시 호출.
+			 * 사용자가 컨트롤을 클릭할 때 발생하는 이벤트.
+			 */
+			function onButtonClick(e){
+				var button = e.control;
+				//화면이동(현재 화면에서 리로드)
+				var host = app.getHost(); // 부모 임베디드 앱
+				cpr.core.App.load("sfa/영업/SLFD01M2", function(loadedApp) {
+				    if (loadedApp) {
+				        host.app = loadedApp;
+				        host.initValue = {
+				            "param": "param"
+				        }
+				    }
+				});
+			}
+
+			/*
+			 * "다음" 버튼에서 click 이벤트 발생 시 호출.
+			 * 사용자가 컨트롤을 클릭할 때 발생하는 이벤트.
+			 */
+			function onButtonClick2(e){
+				var button = e.control;
+				//화면이동(현재 화면에서 리로드)
+				var host = app.getHost(); // 부모 임베디드 앱
+				cpr.core.App.load("sfa/영업/SLFG01M0", function(loadedApp) {
+				    if (loadedApp) {
+				        host.app = loadedApp;
+				        host.initValue = {
+				            "param": "param"
+				        }
+				    }
+				});
+			};
 			// End - User Script
 			
 			// Header
@@ -40,16 +76,15 @@
 					{"name": "column14"}
 				],
 				"rows": [
-					{"column1": "홍길동", "column2": "미입금", "column3": "20150227", "column15": "409123410007", "column4": "(무)퍼펙트상해보험(순수형)", "column5": "", "column6": "월납", "column7": "자동이체", "column8": "4400", "column9": "4400", "column10": "응당", "column11": "20150227", "column12": "1", "column13": "201502", "column14": ""},
-					{"column1": "홍길동", "column2": "미입금", "column3": "20150227", "column15": "409123410007", "column4": "(무)퍼펙트상해보험(순수형)", "column5": "", "column6": "월납", "column7": "자동이체", "column8": "4400", "column9": "4400", "column10": "응당", "column11": "20150227", "column12": "1", "column13": "201502", "column14": ""},
-					{"column1": "홍길동", "column2": "미입금", "column3": "20150227", "column15": "409123410007", "column4": "(무)퍼펙트상해보험(순수형)", "column5": "", "column6": "월납", "column7": "자동이체", "column8": "4400", "column9": "4400", "column10": "응당", "column11": "20150227", "column12": "1", "column13": "201502", "column14": ""},
-					{"column1": "홍길동", "column2": "미입금", "column3": "20150227", "column15": "409123410007", "column4": "(무)퍼펙트상해보험(순수형)", "column5": "", "column6": "월납", "column7": "자동이체", "column8": "4400", "column9": "4400", "column10": "응당", "column11": "20150227", "column12": "1", "column13": "201502", "column14": ""},
-					{"column1": "홍길동", "column2": "미입금", "column3": "20150227", "column15": "409123410007", "column4": "(무)퍼펙트상해보험(순수형)", "column5": "", "column6": "월납", "column7": "자동이체", "column8": "4400", "column9": "4400", "column10": "응당", "column11": "20150227", "column12": "1", "column13": "201502", "column14": ""},
-					{"column1": "홍길동", "column2": "미입금", "column3": "20150227", "column15": "409123410007", "column4": "(무)퍼펙트상해보험(순수형)", "column5": "", "column6": "월납", "column7": "자동이체", "column8": "4400", "column9": "4400", "column10": "응당", "column11": "20150227", "column12": "1", "column13": "201502", "column14": ""},
-					{"column1": "홍길동", "column2": "미입금", "column3": "20150227", "column15": "409123410007", "column4": "(무)퍼펙트상해보험(순수형)", "column5": "", "column6": "월납", "column7": "자동이체", "column8": "4400", "column9": "4400", "column10": "응당", "column11": "20150227", "column12": "1", "column13": "201502", "column14": ""},
-					{"column1": "홍길동", "column2": "미입금", "column3": "20150227", "column15": "409123410007", "column4": "(무)퍼펙트상해보험(순수형)", "column5": "", "column6": "월납", "column7": "자동이체", "column8": "4400", "column9": "4400", "column10": "응당", "column11": "20150227", "column12": "1", "column13": "201502", "column14": ""},
-					{"column1": "홍길동", "column2": "미입금", "column3": "20150227", "column15": "409123410007", "column4": "(무)퍼펙트상해보험(순수형)", "column5": "", "column6": "월납", "column7": "자동이체", "column8": "4400", "column9": "4400", "column10": "응당", "column11": "20150227", "column12": "1", "column13": "201502", "column14": ""},
-					{"column1": "홍길동", "column2": "미입금", "column3": "20150227", "column15": "409123410007", "column4": "(무)퍼펙트상해보험(순수형)", "column5": "", "column6": "월납", "column7": "자동이체", "column8": "4400", "column9": "4400", "column10": "응당", "column11": "20150227", "column12": "1", "column13": "201502", "column14": ""}
+					{"column1": "이*민", "column2": "미입금", "column3": "20240502", "column15": "4091***0007", "column4": "(무)흥국생명 온라인정기보험", "column5": "이*지", "column6": "월납", "column7": "자동이체", "column8": "66500", "column9": "66500", "column10": "응당", "column11": "20240502", "column12": "1", "column13": "202405", "column14": "이*민"},
+					{"column1": "이*주", "column2": "미입금", "column3": "20240502", "column15": "4091***0124", "column4": "(무)흥국생명 다(多)사랑착한종신보험(해약환급금 미지급형V4)", "column5": "이*주", "column6": "월납", "column7": "자동이체", "column8": "40300", "column9": "40300", "column10": "응당", "column11": "20240502", "column12": "1", "column13": "202405", "column14": "이*주"},
+					{"column1": "박*민", "column2": "미입금", "column3": "20240502", "column15": "4091***0251", "column4": "(무)흥국생명 실손의료비보험(갱신형)", "column5": "손*화", "column6": "월납", "column7": "자동이체", "column8": "24620", "column9": "24620", "column10": "응당", "column11": "20240502", "column12": "1", "column13": "202405", "column14": "박*민"},
+					{"column1": "김*정", "column2": "미입금", "column3": "20240502", "column15": "4091***1674", "column4": "(무)흥국생명 온라인연금저축보험", "column5": "이*재", "column6": "월납", "column7": "자동이체", "column8": "150000", "column9": "150000", "column10": "응당", "column11": "20240502", "column12": "1", "column13": "202405", "column14": "김*정"},
+					{"column1": "송*아", "column2": "미입금", "column3": "20240502", "column15": "4091***1788", "column4": "(무)흥국생명 다(多)사랑착한종신보험(해약환급금 미지급형V4)", "column5": "성*철", "column6": "월납", "column7": "자동이체", "column8": "55100", "column9": "55100", "column10": "응당", "column11": "20240502", "column12": "1", "column13": "202405", "column14": "송*아"},
+					{"column1": "김*국", "column2": "미입금", "column3": "20240502", "column15": "4091***2613", "column4": "(무)흥국생명 온라인정기보험", "column5": "김*진", "column6": "월납", "column7": "자동이체", "column8": "13300", "column9": "13300", "column10": "응당", "column11": "20240502", "column12": "1", "column13": "202405", "column14": "김*국"},
+					{"column1": "장*수", "column2": "미입금", "column3": "20240502", "column15": "4091***2115", "column4": "(무)흥국생명 온라인정기보험", "column5": "신*철", "column6": "월납", "column7": "자동이체", "column8": "24600", "column9": "24600", "column10": "응당", "column11": "20240502", "column12": "1", "column13": "202405", "column14": "장*수"},
+					{"column1": "이*수", "column2": "미입금", "column3": "20240502", "column15": "4091***3202", "column4": "(무)흥국생명 온라인정기보험", "column5": "이*지", "column6": "월납", "column7": "자동이체", "column8": "66500", "column9": "66500", "column10": "응당", "column11": "20240502", "column12": "1", "column13": "202405", "column14": "이*수"},
+					{"column1": "이*정", "column2": "미입금", "column3": "20240502", "column15": "4091***3225", "column4": "(무)흥국생명 온라인연금저축보험", "column5": "이*준", "column6": "월납", "column7": "자동이체", "column8": "150000", "column9": "150000", "column10": "응당", "column11": "20240502", "column12": "1", "column13": "202405", "column14": "이*정"}
 				]
 			});
 			app.register(dataSet_1);
@@ -125,44 +160,27 @@
 				flowLayout_1.lineWrap = false;
 				group_2.setLayout(flowLayout_1);
 				(function(container){
-					var output_2 = new cpr.controls.Output();
-					output_2.value = "";
-					output_2.style.setClasses(["home"]);
-					container.addChild(output_2, {
-						"width": "20px",
-						"height": "20px"
-					});
-					var output_3 = new cpr.controls.Output();
-					output_3.value = "1Depth";
-					output_3.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_3, {
+					var button_1 = new cpr.controls.Button();
+					button_1.value = "이전";
+					button_1.style.setClasses(["btn-primary04", "btn-md"]);
+					if(typeof onButtonClick == "function") {
+						button_1.addEventListener("click", onButtonClick);
+					}
+					container.addChild(button_1, {
 						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
+						"width": "49px",
+						"height": "26px"
 					});
-					var output_4 = new cpr.controls.Output();
-					output_4.value = "2Depth";
-					output_4.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_4, {
+					var button_2 = new cpr.controls.Button();
+					button_2.value = "다음";
+					button_2.style.setClasses(["btn-primary04", "btn-md"]);
+					if(typeof onButtonClick2 == "function") {
+						button_2.addEventListener("click", onButtonClick2);
+					}
+					container.addChild(button_2, {
 						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
-					});
-					var output_5 = new cpr.controls.Output();
-					output_5.value = "3Depth";
-					output_5.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_5, {
-						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
-					});
-					var output_6 = new cpr.controls.Output();
-					output_6.value = "4Depth";
-					output_6.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_6, {
-						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
+						"width": "49px",
+						"height": "26px"
 					});
 				})(group_2);
 				container.addChild(group_2, {
@@ -206,15 +224,29 @@
 					formLayout_2.setRows(["26px", "26px"]);
 					group_5.setLayout(formLayout_2);
 					(function(container){
-						var output_7 = new cpr.controls.Output();
-						output_7.value = "조회구분";
-						output_7.style.setClasses(["label", "required"]);
-						container.addChild(output_7, {
+						var output_2 = new cpr.controls.Output();
+						output_2.value = "조회구분";
+						output_2.style.setClasses(["label", "required"]);
+						container.addChild(output_2, {
 							"colIndex": 0,
 							"rowIndex": 0
 						});
 						var radioButton_1 = new cpr.controls.RadioButton("rdb2");
 						radioButton_1.value = "value1";
+						radioButton_1.style.css({
+							"border-right-style" : "dashed",
+							"border-top-width" : "3px",
+							"border-bottom-color" : "red",
+							"border-left-style" : "dashed",
+							"border-right-width" : "3px",
+							"border-bottom-width" : "3px",
+							"border-left-color" : "red",
+							"border-top-color" : "red",
+							"border-bottom-style" : "dashed",
+							"border-right-color" : "red",
+							"border-left-width" : "3px",
+							"border-top-style" : "dashed"
+						});
 						(function(radioButton_1){
 							radioButton_1.addItem(new cpr.controls.Item("조직별", "value1"));
 							radioButton_1.addItem(new cpr.controls.Item("설계사별", "value2"));
@@ -223,10 +255,10 @@
 							"colIndex": 1,
 							"rowIndex": 0
 						});
-						var output_8 = new cpr.controls.Output();
-						output_8.value = "조직번호";
-						output_8.style.setClasses(["label", "required"]);
-						container.addChild(output_8, {
+						var output_3 = new cpr.controls.Output();
+						output_3.value = "조직번호";
+						output_3.style.setClasses(["label", "required"]);
+						container.addChild(output_3, {
 							"colIndex": 2,
 							"rowIndex": 0
 						});
@@ -246,12 +278,26 @@
 						(function(container){
 							var searchInput_1 = new cpr.controls.SearchInput();
 							searchInput_1.value = "008001";
+							searchInput_1.style.css({
+								"border-right-style" : "dashed",
+								"border-top-width" : "3px",
+								"border-bottom-color" : "red",
+								"border-left-style" : "dashed",
+								"border-right-width" : "3px",
+								"border-bottom-width" : "3px",
+								"border-left-color" : "red",
+								"border-top-color" : "red",
+								"border-bottom-style" : "dashed",
+								"border-right-color" : "red",
+								"border-left-width" : "3px",
+								"border-top-style" : "dashed"
+							});
 							container.addChild(searchInput_1, {
 								"colIndex": 0,
 								"rowIndex": 0
 							});
 							var inputBox_1 = new cpr.controls.InputBox("ipb1");
-							inputBox_1.value = "노원지점";
+							inputBox_1.value = "노*지점";
 							container.addChild(inputBox_1, {
 								"colIndex": 1,
 								"rowIndex": 0
@@ -261,15 +307,29 @@
 							"colIndex": 3,
 							"rowIndex": 0
 						});
-						var output_9 = new cpr.controls.Output();
-						output_9.value = "수금구분";
-						output_9.style.setClasses(["label", "required"]);
-						container.addChild(output_9, {
+						var output_4 = new cpr.controls.Output();
+						output_4.value = "수금구분";
+						output_4.style.setClasses(["label", "required"]);
+						container.addChild(output_4, {
 							"colIndex": 4,
 							"rowIndex": 0
 						});
 						var radioButton_2 = new cpr.controls.RadioButton("rdb1");
 						radioButton_2.value = "value1";
+						radioButton_2.style.css({
+							"border-right-style" : "dashed",
+							"border-top-width" : "3px",
+							"border-bottom-color" : "red",
+							"border-left-style" : "dashed",
+							"border-right-width" : "3px",
+							"border-bottom-width" : "3px",
+							"border-left-color" : "red",
+							"border-top-color" : "red",
+							"border-bottom-style" : "dashed",
+							"border-right-color" : "red",
+							"border-left-width" : "3px",
+							"border-top-style" : "dashed"
+						});
 						(function(radioButton_2){
 							radioButton_2.addItem(new cpr.controls.Item("전체", "value1"));
 							radioButton_2.addItem(new cpr.controls.Item("모집,수금동일건", "value2"));
@@ -279,15 +339,29 @@
 							"colIndex": 5,
 							"rowIndex": 0
 						});
-						var output_10 = new cpr.controls.Output();
-						output_10.value = "낼회차";
-						output_10.style.setClasses(["label", "required"]);
-						container.addChild(output_10, {
+						var output_5 = new cpr.controls.Output();
+						output_5.value = "낼회차";
+						output_5.style.setClasses(["label", "required"]);
+						container.addChild(output_5, {
 							"colIndex": 6,
 							"rowIndex": 0
 						});
 						var comboBox_1 = new cpr.controls.ComboBox("cmb2");
 						comboBox_1.value = "value1";
+						comboBox_1.style.css({
+							"border-right-style" : "dashed",
+							"border-top-width" : "3px",
+							"border-bottom-color" : "red",
+							"border-left-style" : "dashed",
+							"border-right-width" : "3px",
+							"border-bottom-width" : "3px",
+							"border-left-color" : "red",
+							"border-top-color" : "red",
+							"border-bottom-style" : "dashed",
+							"border-right-color" : "red",
+							"border-left-width" : "3px",
+							"border-top-style" : "dashed"
+						});
 						(function(comboBox_1){
 							comboBox_1.addItem(new cpr.controls.Item("2회차", "value1"));
 						})(comboBox_1);
@@ -305,17 +379,17 @@
 						flowLayout_2.leftMargin = 20;
 						group_7.setLayout(flowLayout_2);
 						(function(container){
-							var button_1 = new cpr.controls.Button();
-							button_1.value = "조회";
-							button_1.style.setClasses(["btn-search"]);
-							container.addChild(button_1, {
+							var button_3 = new cpr.controls.Button();
+							button_3.value = "조회";
+							button_3.style.setClasses(["btn-search"]);
+							container.addChild(button_3, {
 								"width": "49px",
 								"height": "26px"
 							});
-							var button_2 = new cpr.controls.Button();
-							button_2.value = "";
-							button_2.style.setClasses(["btn-reset"]);
-							container.addChild(button_2, {
+							var button_4 = new cpr.controls.Button();
+							button_4.value = "";
+							button_4.style.setClasses(["btn-reset"]);
+							container.addChild(button_4, {
 								"width": "26px",
 								"height": "26px"
 							});
@@ -328,15 +402,29 @@
 							"verticalAlign": "center",
 							"height": 26
 						});
-						var output_11 = new cpr.controls.Output();
-						output_11.value = "마감상태";
-						output_11.style.setClasses(["label", "required"]);
-						container.addChild(output_11, {
+						var output_6 = new cpr.controls.Output();
+						output_6.value = "마감상태";
+						output_6.style.setClasses(["label", "required"]);
+						container.addChild(output_6, {
 							"colIndex": 0,
 							"rowIndex": 1
 						});
 						var comboBox_2 = new cpr.controls.ComboBox("cmb1");
 						comboBox_2.value = "value1";
+						comboBox_2.style.css({
+							"border-right-style" : "dashed",
+							"border-top-width" : "3px",
+							"border-bottom-color" : "red",
+							"border-left-style" : "dashed",
+							"border-right-width" : "3px",
+							"border-bottom-width" : "3px",
+							"border-left-color" : "red",
+							"border-top-color" : "red",
+							"border-bottom-style" : "dashed",
+							"border-right-color" : "red",
+							"border-left-width" : "3px",
+							"border-top-style" : "dashed"
+						});
 						(function(comboBox_2){
 							comboBox_2.addItem(new cpr.controls.Item("유지", "value1"));
 						})(comboBox_2);
@@ -344,15 +432,29 @@
 							"colIndex": 1,
 							"rowIndex": 1
 						});
-						var output_12 = new cpr.controls.Output();
-						output_12.value = "납입방법";
-						output_12.style.setClasses(["label", "required"]);
-						container.addChild(output_12, {
+						var output_7 = new cpr.controls.Output();
+						output_7.value = "납입방법";
+						output_7.style.setClasses(["label", "required"]);
+						container.addChild(output_7, {
 							"colIndex": 2,
 							"rowIndex": 1
 						});
 						var comboBox_3 = new cpr.controls.ComboBox("cmb5");
 						comboBox_3.value = "value1";
+						comboBox_3.style.css({
+							"border-right-style" : "dashed",
+							"border-top-width" : "3px",
+							"border-bottom-color" : "red",
+							"border-left-style" : "dashed",
+							"border-right-width" : "3px",
+							"border-bottom-width" : "3px",
+							"border-left-color" : "red",
+							"border-top-color" : "red",
+							"border-bottom-style" : "dashed",
+							"border-right-color" : "red",
+							"border-left-width" : "3px",
+							"border-top-style" : "dashed"
+						});
 						(function(comboBox_3){
 							comboBox_3.addItem(new cpr.controls.Item("전체", "value1"));
 						})(comboBox_3);
@@ -360,15 +462,29 @@
 							"colIndex": 3,
 							"rowIndex": 1
 						});
-						var output_13 = new cpr.controls.Output();
-						output_13.value = "입금상태";
-						output_13.style.setClasses(["label", "required"]);
-						container.addChild(output_13, {
+						var output_8 = new cpr.controls.Output();
+						output_8.value = "입금상태";
+						output_8.style.setClasses(["label", "required"]);
+						container.addChild(output_8, {
 							"colIndex": 4,
 							"rowIndex": 1
 						});
 						var comboBox_4 = new cpr.controls.ComboBox("cmb3");
 						comboBox_4.value = "value1";
+						comboBox_4.style.css({
+							"border-right-style" : "dashed",
+							"border-top-width" : "3px",
+							"border-bottom-color" : "red",
+							"border-left-style" : "dashed",
+							"border-right-width" : "3px",
+							"border-bottom-width" : "3px",
+							"border-left-color" : "red",
+							"border-top-color" : "red",
+							"border-bottom-style" : "dashed",
+							"border-right-color" : "red",
+							"border-left-width" : "3px",
+							"border-top-style" : "dashed"
+						});
 						(function(comboBox_4){
 							comboBox_4.addItem(new cpr.controls.Item("전체", "value1"));
 						})(comboBox_4);
@@ -376,15 +492,29 @@
 							"colIndex": 5,
 							"rowIndex": 1
 						});
-						var output_14 = new cpr.controls.Output();
-						output_14.value = "상품분류";
-						output_14.style.setClasses(["label", "required"]);
-						container.addChild(output_14, {
+						var output_9 = new cpr.controls.Output();
+						output_9.value = "상품분류";
+						output_9.style.setClasses(["label", "required"]);
+						container.addChild(output_9, {
 							"colIndex": 6,
 							"rowIndex": 1
 						});
 						var comboBox_5 = new cpr.controls.ComboBox("cmb4");
 						comboBox_5.value = "value1";
+						comboBox_5.style.css({
+							"border-right-style" : "dashed",
+							"border-top-width" : "3px",
+							"border-bottom-color" : "red",
+							"border-left-style" : "dashed",
+							"border-right-width" : "3px",
+							"border-bottom-width" : "3px",
+							"border-left-color" : "red",
+							"border-top-color" : "red",
+							"border-bottom-style" : "dashed",
+							"border-right-color" : "red",
+							"border-left-width" : "3px",
+							"border-top-style" : "dashed"
+						});
 						(function(comboBox_5){
 							comboBox_5.addItem(new cpr.controls.Item("전체", "value1"));
 						})(comboBox_5);
@@ -586,11 +716,12 @@
 										"configurator": function(cell){
 											cell.columnName = "column1";
 											cell.control = (function(){
-												var output_15 = new cpr.controls.Output();
-												output_15.style.setClasses(["text-center"]);
-												output_15.bind("value").toDataColumn("column1");
-												return output_15;
+												var output_10 = new cpr.controls.Output();
+												output_10.style.setClasses(["text-center"]);
+												output_10.bind("value").toDataColumn("column1");
+												return output_10;
 											})();
+											cell.controlConstraint = {};
 										}
 									},
 									{
@@ -598,11 +729,12 @@
 										"configurator": function(cell){
 											cell.columnName = "column2";
 											cell.control = (function(){
-												var output_16 = new cpr.controls.Output();
-												output_16.style.setClasses(["text-center"]);
-												output_16.bind("value").toDataColumn("column2");
-												return output_16;
+												var output_11 = new cpr.controls.Output();
+												output_11.style.setClasses(["text-center"]);
+												output_11.bind("value").toDataColumn("column2");
+												return output_11;
 											})();
+											cell.controlConstraint = {};
 										}
 									},
 									{
@@ -610,12 +742,12 @@
 										"configurator": function(cell){
 											cell.columnName = "column3";
 											cell.control = (function(){
-												var output_17 = new cpr.controls.Output("opt3");
-												output_17.value = "20241231";
-												output_17.dataType = "date";
-												output_17.format = "YYYY-MM-DD";
-												output_17.bind("value").toDataColumn("column3");
-												return output_17;
+												var output_12 = new cpr.controls.Output("opt3");
+												output_12.value = "20241231";
+												output_12.dataType = "date";
+												output_12.format = "YYYY-MM-DD";
+												output_12.bind("value").toDataColumn("column3");
+												return output_12;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -625,11 +757,12 @@
 										"configurator": function(cell){
 											cell.columnName = "column15";
 											cell.control = (function(){
-												var output_18 = new cpr.controls.Output();
-												output_18.style.setClasses(["text-center"]);
-												output_18.bind("value").toDataColumn("column15");
-												return output_18;
+												var output_13 = new cpr.controls.Output();
+												output_13.style.setClasses(["text-center"]);
+												output_13.bind("value").toDataColumn("column15");
+												return output_13;
 											})();
+											cell.controlConstraint = {};
 										}
 									},
 									{
@@ -637,10 +770,11 @@
 										"configurator": function(cell){
 											cell.columnName = "column4";
 											cell.control = (function(){
-												var output_19 = new cpr.controls.Output();
-												output_19.bind("value").toDataColumn("column4");
-												return output_19;
+												var output_14 = new cpr.controls.Output();
+												output_14.bind("value").toDataColumn("column4");
+												return output_14;
 											})();
+											cell.controlConstraint = {};
 										}
 									},
 									{
@@ -648,11 +782,12 @@
 										"configurator": function(cell){
 											cell.columnName = "column5";
 											cell.control = (function(){
-												var output_20 = new cpr.controls.Output();
-												output_20.style.setClasses(["text-center"]);
-												output_20.bind("value").toDataColumn("column5");
-												return output_20;
+												var output_15 = new cpr.controls.Output();
+												output_15.style.setClasses(["text-center"]);
+												output_15.bind("value").toDataColumn("column5");
+												return output_15;
 											})();
+											cell.controlConstraint = {};
 										}
 									},
 									{
@@ -660,11 +795,12 @@
 										"configurator": function(cell){
 											cell.columnName = "column6";
 											cell.control = (function(){
-												var output_21 = new cpr.controls.Output();
-												output_21.style.setClasses(["text-center"]);
-												output_21.bind("value").toDataColumn("column6");
-												return output_21;
+												var output_16 = new cpr.controls.Output();
+												output_16.style.setClasses(["text-center"]);
+												output_16.bind("value").toDataColumn("column6");
+												return output_16;
 											})();
+											cell.controlConstraint = {};
 										}
 									},
 									{
@@ -672,11 +808,12 @@
 										"configurator": function(cell){
 											cell.columnName = "column7";
 											cell.control = (function(){
-												var output_22 = new cpr.controls.Output();
-												output_22.style.setClasses(["text-center"]);
-												output_22.bind("value").toDataColumn("column7");
-												return output_22;
+												var output_17 = new cpr.controls.Output();
+												output_17.style.setClasses(["text-center"]);
+												output_17.bind("value").toDataColumn("column7");
+												return output_17;
 											})();
+											cell.controlConstraint = {};
 										}
 									},
 									{
@@ -684,13 +821,13 @@
 										"configurator": function(cell){
 											cell.columnName = "column8";
 											cell.control = (function(){
-												var output_23 = new cpr.controls.Output();
-												output_23.value = "0";
-												output_23.dataType = "number";
-												output_23.format = "s#,##0";
-												output_23.style.setClasses(["text-right"]);
-												output_23.bind("value").toDataColumn("column8");
-												return output_23;
+												var output_18 = new cpr.controls.Output();
+												output_18.value = "0";
+												output_18.dataType = "number";
+												output_18.format = "s#,##0";
+												output_18.style.setClasses(["text-right"]);
+												output_18.bind("value").toDataColumn("column8");
+												return output_18;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -700,13 +837,13 @@
 										"configurator": function(cell){
 											cell.columnName = "column9";
 											cell.control = (function(){
-												var output_24 = new cpr.controls.Output();
-												output_24.value = "0";
-												output_24.dataType = "number";
-												output_24.format = "s#,##0";
-												output_24.style.setClasses(["text-right"]);
-												output_24.bind("value").toDataColumn("column9");
-												return output_24;
+												var output_19 = new cpr.controls.Output();
+												output_19.value = "0";
+												output_19.dataType = "number";
+												output_19.format = "s#,##0";
+												output_19.style.setClasses(["text-right"]);
+												output_19.bind("value").toDataColumn("column9");
+												return output_19;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -716,11 +853,12 @@
 										"configurator": function(cell){
 											cell.columnName = "column10";
 											cell.control = (function(){
-												var output_25 = new cpr.controls.Output();
-												output_25.style.setClasses(["text-center"]);
-												output_25.bind("value").toDataColumn("column10");
-												return output_25;
+												var output_20 = new cpr.controls.Output();
+												output_20.style.setClasses(["text-center"]);
+												output_20.bind("value").toDataColumn("column10");
+												return output_20;
 											})();
+											cell.controlConstraint = {};
 										}
 									},
 									{
@@ -728,12 +866,12 @@
 										"configurator": function(cell){
 											cell.columnName = "column11";
 											cell.control = (function(){
-												var output_26 = new cpr.controls.Output("opt28");
-												output_26.value = "20241231";
-												output_26.dataType = "date";
-												output_26.format = "YYYY-MM-DD";
-												output_26.bind("value").toDataColumn("column11");
-												return output_26;
+												var output_21 = new cpr.controls.Output("opt28");
+												output_21.value = "20241231";
+												output_21.dataType = "date";
+												output_21.format = "YYYY-MM-DD";
+												output_21.bind("value").toDataColumn("column11");
+												return output_21;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -743,11 +881,12 @@
 										"configurator": function(cell){
 											cell.columnName = "column12";
 											cell.control = (function(){
-												var output_27 = new cpr.controls.Output();
-												output_27.style.setClasses(["text-center"]);
-												output_27.bind("value").toDataColumn("column12");
-												return output_27;
+												var output_22 = new cpr.controls.Output();
+												output_22.style.setClasses(["text-center"]);
+												output_22.bind("value").toDataColumn("column12");
+												return output_22;
 											})();
+											cell.controlConstraint = {};
 										}
 									},
 									{
@@ -755,12 +894,12 @@
 										"configurator": function(cell){
 											cell.columnName = "column13";
 											cell.control = (function(){
-												var output_28 = new cpr.controls.Output("opt2");
-												output_28.value = "20241231";
-												output_28.dataType = "date";
-												output_28.format = "YYYY-MM";
-												output_28.bind("value").toDataColumn("column13");
-												return output_28;
+												var output_23 = new cpr.controls.Output("opt2");
+												output_23.value = "20241231";
+												output_23.dataType = "date";
+												output_23.format = "YYYY-MM";
+												output_23.bind("value").toDataColumn("column13");
+												return output_23;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -770,20 +909,35 @@
 										"configurator": function(cell){
 											cell.columnName = "column14";
 											cell.control = (function(){
-												var output_29 = new cpr.controls.Output();
-												output_29.style.setClasses(["text-center"]);
-												output_29.bind("value").toDataColumn("column14");
-												return output_29;
+												var output_24 = new cpr.controls.Output();
+												output_24.style.setClasses(["text-center"]);
+												output_24.bind("value").toDataColumn("column14");
+												return output_24;
 											})();
+											cell.controlConstraint = {};
 										}
 									}
 								]
 							}
 						});
 						grid_1.style.setClasses(["list-normal"]);
+						grid_1.style.css({
+							"border-right-style" : "dashed",
+							"border-top-width" : "3px",
+							"border-bottom-color" : "red",
+							"border-left-style" : "dashed",
+							"border-right-width" : "3px",
+							"border-bottom-width" : "3px",
+							"border-left-color" : "red",
+							"border-top-color" : "red",
+							"border-bottom-style" : "dashed",
+							"border-right-color" : "red",
+							"border-left-width" : "3px",
+							"border-top-style" : "dashed"
+						});
 						container.addChild(grid_1, {
 							"width": "400px",
-							"height": "498px"
+							"height": "480px"
 						});
 						var grid_2 = new cpr.controls.Grid("grd2");
 						grid_2.readOnly = true;
@@ -849,11 +1003,12 @@
 										"configurator": function(cell){
 											cell.columnName = "건수";
 											cell.control = (function(){
-												var output_30 = new cpr.controls.Output();
-												output_30.style.setClasses(["text-center", "bg-secondary-dim"]);
-												output_30.bind("value").toDataColumn("건수");
-												return output_30;
+												var output_25 = new cpr.controls.Output();
+												output_25.style.setClasses(["text-center", "bg-secondary-dim"]);
+												output_25.bind("value").toDataColumn("건수");
+												return output_25;
 											})();
+											cell.controlConstraint = {};
 										}
 									},
 									{
@@ -861,11 +1016,12 @@
 										"configurator": function(cell){
 											cell.columnName = "column2";
 											cell.control = (function(){
-												var output_31 = new cpr.controls.Output();
-												output_31.style.setClasses(["text-right"]);
-												output_31.bind("value").toDataColumn("column2");
-												return output_31;
+												var output_26 = new cpr.controls.Output();
+												output_26.style.setClasses(["text-right"]);
+												output_26.bind("value").toDataColumn("column2");
+												return output_26;
 											})();
+											cell.controlConstraint = {};
 										}
 									},
 									{
@@ -873,11 +1029,12 @@
 										"configurator": function(cell){
 											cell.columnName = "column3";
 											cell.control = (function(){
-												var output_32 = new cpr.controls.Output();
-												output_32.style.setClasses(["text-right"]);
-												output_32.bind("value").toDataColumn("column3");
-												return output_32;
+												var output_27 = new cpr.controls.Output();
+												output_27.style.setClasses(["text-right"]);
+												output_27.bind("value").toDataColumn("column3");
+												return output_27;
 											})();
+											cell.controlConstraint = {};
 										}
 									},
 									{
@@ -885,11 +1042,12 @@
 										"configurator": function(cell){
 											cell.columnName = "column4";
 											cell.control = (function(){
-												var output_33 = new cpr.controls.Output();
-												output_33.style.setClasses(["text-right"]);
-												output_33.bind("value").toDataColumn("column4");
-												return output_33;
+												var output_28 = new cpr.controls.Output();
+												output_28.style.setClasses(["text-right"]);
+												output_28.bind("value").toDataColumn("column4");
+												return output_28;
 											})();
+											cell.controlConstraint = {};
 										}
 									},
 									{
@@ -897,11 +1055,12 @@
 										"configurator": function(cell){
 											cell.columnName = "보험료";
 											cell.control = (function(){
-												var output_34 = new cpr.controls.Output();
-												output_34.style.setClasses(["text-center", "bg-secondary-dim"]);
-												output_34.bind("value").toDataColumn("보험료");
-												return output_34;
+												var output_29 = new cpr.controls.Output();
+												output_29.style.setClasses(["text-center", "bg-secondary-dim"]);
+												output_29.bind("value").toDataColumn("보험료");
+												return output_29;
 											})();
+											cell.controlConstraint = {};
 										}
 									},
 									{
@@ -909,10 +1068,10 @@
 										"configurator": function(cell){
 											cell.columnName = "column5";
 											cell.control = (function(){
-												var output_35 = new cpr.controls.Output();
-												output_35.style.setClasses(["text-right"]);
-												output_35.bind("value").toDataColumn("column5");
-												return output_35;
+												var output_30 = new cpr.controls.Output();
+												output_30.style.setClasses(["text-right"]);
+												output_30.bind("value").toDataColumn("column5");
+												return output_30;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -922,11 +1081,12 @@
 										"configurator": function(cell){
 											cell.columnName = "column6";
 											cell.control = (function(){
-												var output_36 = new cpr.controls.Output();
-												output_36.style.setClasses(["text-right"]);
-												output_36.bind("value").toDataColumn("column6");
-												return output_36;
+												var output_31 = new cpr.controls.Output();
+												output_31.style.setClasses(["text-right"]);
+												output_31.bind("value").toDataColumn("column6");
+												return output_31;
 											})();
+											cell.controlConstraint = {};
 										}
 									},
 									{
@@ -934,11 +1094,12 @@
 										"configurator": function(cell){
 											cell.columnName = "column7";
 											cell.control = (function(){
-												var output_37 = new cpr.controls.Output();
-												output_37.style.setClasses(["text-right"]);
-												output_37.bind("value").toDataColumn("column7");
-												return output_37;
+												var output_32 = new cpr.controls.Output();
+												output_32.style.setClasses(["text-right"]);
+												output_32.bind("value").toDataColumn("column7");
+												return output_32;
 											})();
+											cell.controlConstraint = {};
 										}
 									}
 								]
@@ -980,10 +1141,10 @@
 						flowLayout_3.lineWrap = false;
 						group_11.setLayout(flowLayout_3);
 						(function(container){
-							var button_3 = new cpr.controls.Button("btn1");
-							button_3.value = "엑셀다운로드";
-							button_3.style.setClasses(["btn-secondary01", "btn-md"]);
-							container.addChild(button_3, {
+							var button_5 = new cpr.controls.Button("btn1");
+							button_5.value = "엑셀다운로드";
+							button_5.style.setClasses(["btn-secondary01", "btn-md"]);
+							container.addChild(button_5, {
 								"autoSize": "width",
 								"width": "100px",
 								"height": "30px"
@@ -1015,10 +1176,10 @@
 						flowLayout_5.lineWrap = false;
 						group_13.setLayout(flowLayout_5);
 						(function(container){
-							var button_4 = new cpr.controls.Button("btn2");
-							button_4.value = "다음";
-							button_4.style.setClasses(["btn-primary04", "btn-md"]);
-							container.addChild(button_4, {
+							var button_6 = new cpr.controls.Button("btn2");
+							button_6.value = "다음";
+							button_6.style.setClasses(["btn-primary04", "btn-md"]);
+							container.addChild(button_6, {
 								"autoSize": "width",
 								"width": "60px",
 								"height": "30px"
@@ -1045,9 +1206,9 @@
 					verticalLayout_6.bottomMargin = 10;
 					group_14.setLayout(verticalLayout_6);
 					(function(container){
-						var output_38 = new cpr.controls.Output();
-						output_38.value = "- 단위: 건수-건, 천원";
-						container.addChild(output_38, {
+						var output_33 = new cpr.controls.Output();
+						output_33.value = "- 단위: 건수-건, 천원";
+						container.addChild(output_33, {
 							"autoSize": "height",
 							"width": "904px",
 							"height": "24px"

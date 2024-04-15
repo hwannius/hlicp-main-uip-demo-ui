@@ -26,7 +26,7 @@
             <cl:inputbox std:sid="i-box-feafbb06" id="ipb1" value="04811">
               <cl:formdata std:sid="f-data-d56941b6" row="0" col="0"/>
             </cl:inputbox>
-            <cl:searchinput std:sid="s-input-0530e9e4" value="10015">
+            <cl:searchinput std:sid="s-input-0530e9e4" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" value="10015">
               <cl:formdata std:sid="f-data-c64bbd7f" row="0" col="1"/>
             </cl:searchinput>
             <cl:formlayout std:sid="f-layout-0a3aff0d" scrollable="false" hspace="5px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
@@ -74,7 +74,7 @@
           <cl:output std:sid="output-0281e353" class="label" value="계약자">
             <cl:formdata std:sid="f-data-17d13635" row="0" col="0"/>
           </cl:output>
-          <cl:inputbox std:sid="i-box-59b1bbaa" value="홍길동">
+          <cl:inputbox std:sid="i-box-59b1bbaa" value="김흥국">
             <cl:formdata std:sid="f-data-846efb30" row="0" col="1"/>
           </cl:inputbox>
           <cl:output std:sid="output-eded37dd" class="label" value="계약구분">
@@ -103,13 +103,13 @@
           <cl:output std:sid="output-58cb57ea" class="label" value="피보험자">
             <cl:formdata std:sid="f-data-75e82f3f" row="1" col="0"/>
           </cl:output>
-          <cl:inputbox std:sid="i-box-2b6cd9b7" id="ipb9" value="홍길동">
+          <cl:inputbox std:sid="i-box-2b6cd9b7" id="ipb9" value="김흥국">
             <cl:formdata std:sid="f-data-f5a3a1e9" row="1" col="1"/>
           </cl:inputbox>
           <cl:output std:sid="output-dcf6cdbd" class="label" value="계약일자">
             <cl:formdata std:sid="f-data-df2fd967" row="1" col="2"/>
           </cl:output>
-          <cl:dateinput std:sid="d-input-84647d8e" value="20150327">
+          <cl:dateinput std:sid="d-input-84647d8e" value="20240327">
             <cl:formdata std:sid="f-data-5310d712" halign="LEFT" width="120" row="1" col="3"/>
           </cl:dateinput>
           <cl:output std:sid="output-fe0b5075" class="label" value="단체번호">
@@ -166,7 +166,7 @@
             <cl:inputbox std:sid="i-box-eb59a683" id="ipb12" value="100012345">
               <cl:formdata std:sid="f-data-4b261613" row="0" col="0"/>
             </cl:inputbox>
-            <cl:inputbox std:sid="i-box-95b84380" id="ipb13" value="홍길동">
+            <cl:inputbox std:sid="i-box-95b84380" id="ipb13" value="김흥국">
               <cl:formdata std:sid="f-data-41292c55" row="0" col="1"/>
             </cl:inputbox>
             <cl:formlayout std:sid="f-layout-cdd6a38b" scrollable="false" hspace="5px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
@@ -368,7 +368,7 @@
           <cl:output std:sid="output-aab903b5" class="label" value="반송처리일">
             <cl:formdata std:sid="f-data-6d8592c3" row="1" col="2"/>
           </cl:output>
-          <cl:dateinput std:sid="d-input-ca115e95" id="dti1" value="20150327">
+          <cl:dateinput std:sid="d-input-ca115e95" id="dti1" value="20240327">
             <cl:formdata std:sid="f-data-ed2e4b61" halign="LEFT" width="120" row="1" col="3"/>
           </cl:dateinput>
           <cl:output std:sid="output-a7671bd8" class="label" value="반송사유">
@@ -376,7 +376,7 @@
           </cl:output>
           <cl:group std:sid="group-5cd1fd29" id="grp12" class="form-inside">
             <cl:formdata std:sid="f-data-99d9c860" row="2" col="1" rowspan="1" colspan="3"/>
-            <cl:searchinput std:sid="s-input-46ec0cc4">
+            <cl:searchinput std:sid="s-input-46ec0cc4" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;">
               <cl:formdata std:sid="f-data-710f9249" row="0" col="0"/>
             </cl:searchinput>
             <cl:inputbox std:sid="i-box-3f30cf46" id="ipb25" value="">
@@ -397,7 +397,7 @@
           <cl:output std:sid="output-dddbce4b" class="label" value="비밀번호">
             <cl:formdata std:sid="f-data-8e913b73" row="3" col="2"/>
           </cl:output>
-          <cl:inputbox std:sid="i-box-3700e5c4" id="ipb28" value="">
+          <cl:inputbox std:sid="i-box-3700e5c4" id="ipb28" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" value="">
             <cl:formdata std:sid="f-data-a2dd8245" row="3" col="3"/>
           </cl:inputbox>
           <cl:formlayout std:sid="f-layout-d03d35ee" scrollable="false" hspace="11px" vspace="5px" top-margin="2px" right-margin="5px" bottom-margin="2px" left-margin="5px" hseparatorwidth="1" hseparatortype="BY_CLASS" vseparatorwidth="1" vseparatortype="BY_CLASS">
@@ -427,7 +427,7 @@
           <cl:output std:sid="output-a862af63" class="label" value="반제일자">
             <cl:formdata std:sid="f-data-11b09292" row="0" col="0"/>
           </cl:output>
-          <cl:dateinput std:sid="d-input-4bf07169" id="dti2" value="20150327">
+          <cl:dateinput std:sid="d-input-4bf07169" id="dti2" value="20240327">
             <cl:formdata std:sid="f-data-0b2e76b1" halign="LEFT" width="120" row="0" col="1"/>
           </cl:dateinput>
           <cl:output std:sid="output-c43a25dc" class="label" value="지연일수">
@@ -538,6 +538,7 @@
           <cl:flowlayoutdata std:sid="f-data-bcc44a0e" width="70px" height="30px" autosize="width"/>
         </cl:button>
         <cl:button std:sid="button-ecbd812a" id="btn2" class="btn-primary03 btn-md" value="반송">
+          <cl:listener std:sid="listener-314b844a" name="click" handler="onBtn2Click"/>
           <cl:flowlayoutdata std:sid="f-data-469c1ec5" width="60px" height="30px" autosize="width"/>
         </cl:button>
         <cl:button std:sid="button-e471bf3c" id="btn3" class="btn-primary03 btn-md" value="반송취소">

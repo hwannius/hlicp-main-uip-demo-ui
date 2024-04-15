@@ -25,9 +25,9 @@
           <cl:datarow>
             <cl:datavalue columnname="카드회사"><![CDATA[국민카드]]></cl:datavalue>
             <cl:datavalue columnname="카드번호"><![CDATA[40921601234]]></cl:datavalue>
-            <cl:datavalue columnname="유효년월"><![CDATA[201908]]></cl:datavalue>
+            <cl:datavalue columnname="유효년월"><![CDATA[202508]]></cl:datavalue>
             <cl:datavalue columnname="카드상태"><![CDATA[정상]]></cl:datavalue>
-            <cl:datavalue columnname="소유자명"><![CDATA[양태형]]></cl:datavalue>
+            <cl:datavalue columnname="소유자명"><![CDATA[김흥국]]></cl:datavalue>
             <cl:datavalue columnname="소유자주민등록번호"><![CDATA[6204291234567]]></cl:datavalue>
             <cl:datavalue columnname="처리일자"><![CDATA[20241113]]></cl:datavalue>
             <cl:datavalue columnname="처리사원번호"><![CDATA[100700811]]></cl:datavalue>
@@ -48,13 +48,13 @@
           <cl:output std:sid="output-0be4165b" class="label" value="고객명">
             <cl:formdata std:sid="f-data-55d3ed29" row="0" col="0"/>
           </cl:output>
-          <cl:inputbox std:sid="i-box-7ea56189" id="ipb2" value="앙태형">
+          <cl:inputbox std:sid="i-box-7ea56189" id="ipb2" value="김흥국">
             <cl:formdata std:sid="f-data-a2af4c24" row="0" col="1"/>
           </cl:inputbox>
           <cl:output std:sid="output-dac5e239" class="label required" value="주민등록번호">
             <cl:formdata std:sid="f-data-2144414f" row="0" col="2"/>
           </cl:output>
-          <cl:maskeditor std:sid="m-editor-ab90dff1" id="mse2" value="6204291234567" mask="000000-0000000">
+          <cl:maskeditor std:sid="m-editor-ab90dff1" id="mse2" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" value="6204291234567" mask="000000-0******">
             <cl:formdata std:sid="f-data-37487ed0" row="0" col="3"/>
           </cl:maskeditor>
           <cl:group std:sid="group-8a363f5d" class="btn-flow-area">
@@ -69,7 +69,7 @@
           </cl:output>
           <cl:group std:sid="group-59c8962b" id="grp2" class="form-inside" childcombinatorclass="first-control-spacing">
             <cl:formdata std:sid="f-data-f68b975f" row="1" col="1" rowspan="1" colspan="3"/>
-            <cl:searchinput std:sid="s-input-7b2d844e" placeholder="____-____-______">
+            <cl:searchinput std:sid="s-input-7b2d844e" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" placeholder="____-____-______">
               <cl:flowlayoutdata std:sid="f-data-d48cb991" width="140px" height="26px" autosize="none"/>
             </cl:searchinput>
             <cl:checkbox std:sid="c-box-0b5039b0" id="cbx1" text="예외처리">
@@ -174,12 +174,16 @@
       <cl:verticaldata std:sid="v-data-cee7764e" width="767px" height="30px" autosize="height"/>
       <cl:group std:sid="group-20b8d0aa" class="button-table-bottom-left-area">
         <cl:formdata std:sid="f-data-7f575d86" row="0" col="0"/>
-        <cl:button std:sid="button-5fbf9325" class="btn-secondary01 btn-md" value="행추가">
-          <cl:flowlayoutdata std:sid="f-data-672c0366" width="60px" height="30px" autosize="width"/>
-        </cl:button>
-        <cl:button std:sid="button-cf6ff4c9" class="btn-secondary01 btn-md" value="행삭제">
-          <cl:flowlayoutdata std:sid="f-data-6dadcff9" width="60px" height="30px" autosize="width"/>
-        </cl:button>
+        <cl:group std:sid="group-91b250ee" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;">
+          <cl:flowlayoutdata std:sid="f-data-db7b6d00" width="147px" height="30px"/>
+          <cl:button std:sid="button-5fbf9325" class="btn-secondary01 btn-md" value="행추가">
+            <cl:flowlayoutdata std:sid="f-data-672c0366" width="60px" height="30px" autosize="width"/>
+          </cl:button>
+          <cl:button std:sid="button-cf6ff4c9" class="btn-secondary01 btn-md" value="행삭제">
+            <cl:flowlayoutdata std:sid="f-data-6dadcff9" width="60px" height="30px" autosize="width"/>
+          </cl:button>
+          <cl:flowlayout std:sid="f-layout-778a6daa" scrollable="false" hspacing="10" vspacing="0" linewrap="false"/>
+        </cl:group>
         <cl:flowlayout std:sid="f-layout-5fb1d0db" scrollable="false" hspacing="10" vspacing="0" linewrap="false"/>
       </cl:group>
       <cl:group std:sid="group-9d84ea4c" class="button-table-bottom-center-area">
@@ -188,7 +192,7 @@
       </cl:group>
       <cl:group std:sid="group-5aa6c261" class="button-table-bottom-right-area">
         <cl:formdata std:sid="f-data-811afdad" row="0" col="2"/>
-        <cl:button std:sid="button-1e7f07b8" class="btn-primary04 btn-md" value="실시간 카드확인">
+        <cl:button std:sid="button-1e7f07b8" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" class="btn-primary04 btn-md" value="실시간 카드확인">
           <cl:flowlayoutdata std:sid="f-data-f73a704d" width="60px" height="30px" autosize="width"/>
         </cl:button>
         <cl:button std:sid="button-be01a7f4" class="btn-primary03 btn-md" value="수정">

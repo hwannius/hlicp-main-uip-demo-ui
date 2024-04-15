@@ -32,7 +32,7 @@
       <cl:group std:sid="group-9bf65007" class="grid-box box-spacing-free">
         <cl:verticaldata std:sid="v-data-df642346" width="1560px" height="498px" autosize="height"/>
         <cl:grid std:sid="grid-a1f930f1" id="grd1" class="list-normal" datasetid="ds1">
-          <cl:verticaldata std:sid="v-data-b0a4b4c7" width="400px" height="498px"/>
+          <cl:verticaldata std:sid="v-data-b0a4b4c7" width="400px" height="185px"/>
           <cl:gridcolumn std:sid="g-column-6529e5e0"/>
           <cl:gridcolumn std:sid="g-column-8b626549"/>
           <cl:gridcolumn std:sid="g-column-870ef9ec"/>
@@ -56,62 +56,62 @@
             <cl:gridcell std:sid="gh-cell-fd91ef72" rowindex="1" colindex="7" targetcolumnname="column8" sortable="false" filterable="false" text="지급일자"/>
             <cl:gridcell std:sid="gh-cell-c3e62356" rowindex="1" colindex="8" targetcolumnname="column9" sortable="false" filterable="false" text="보증보험처리구분"/>
             <cl:gridcell std:sid="gh-cell-fce4329d" rowindex="0" colindex="9" rowspan="2" colspan="1" targetcolumnname="column10" sortable="false" filterable="false" text="증권번호"/>
-            <cl:gridcell rowindex="0" colindex="4" text="보험금"/>
-            <cl:gridcell rowindex="0" colindex="5" text="개시일자"/>
-            <cl:gridcell rowindex="0" colindex="6" text="종료일자"/>
-            <cl:gridcell rowindex="0" colindex="7" text="갱신일자"/>
-            <cl:gridcell rowindex="0" colindex="8" text="처리년월"/>
+            <cl:gridcell std:sid="gh-cell-059fa55f" rowindex="0" colindex="4" text="보험금"/>
+            <cl:gridcell std:sid="gh-cell-3ebd2d1e" rowindex="0" colindex="5" text="개시일자"/>
+            <cl:gridcell std:sid="gh-cell-9191e560" rowindex="0" colindex="6" text="종료일자"/>
+            <cl:gridcell std:sid="gh-cell-dcfe6894" rowindex="0" colindex="7" text="갱신일자"/>
+            <cl:gridcell std:sid="gh-cell-2df6925a" rowindex="0" colindex="8" text="처리년월"/>
           </cl:gridheader>
           <cl:griddetail std:sid="gd-band-495710d1">
             <cl:gridrow std:sid="g-row-3918df8d" height="31px"/>
             <cl:gridcell std:sid="gd-cell-8576a259" rowindex="0" colindex="0" columnname="column1">
               <cl:output std:sid="output-5005d9ed">
-                <cl:celldata/>
+                <cl:celldata std:sid="c-data-7e438293"/>
               </cl:output>
             </cl:gridcell>
             <cl:gridcell std:sid="gd-cell-a266d740" rowindex="0" colindex="1" columnname="column2">
               <cl:output std:sid="output-c94ab744">
-                <cl:celldata/>
+                <cl:celldata std:sid="c-data-6d0dc752"/>
               </cl:output>
             </cl:gridcell>
             <cl:gridcell std:sid="gd-cell-90e23b6c" rowindex="0" colindex="2" columnname="column3">
               <cl:output std:sid="output-75c0f55b">
-                <cl:celldata/>
+                <cl:celldata std:sid="c-data-09c432a0"/>
               </cl:output>
             </cl:gridcell>
             <cl:gridcell std:sid="gd-cell-3cf25e7e" rowindex="0" colindex="3" columnname="column4">
               <cl:output std:sid="output-571e763a">
-                <cl:celldata/>
+                <cl:celldata std:sid="c-data-cd926222"/>
               </cl:output>
             </cl:gridcell>
             <cl:gridcell std:sid="gd-cell-ca3a2fb8" rowindex="0" colindex="4" columnname="column5">
               <cl:output std:sid="output-654e2e9c">
-                <cl:celldata/>
+                <cl:celldata std:sid="c-data-1d3dd83e"/>
               </cl:output>
             </cl:gridcell>
             <cl:gridcell std:sid="gd-cell-5db88d63" rowindex="0" colindex="5" columnname="column6">
               <cl:output std:sid="output-62dc4206">
-                <cl:celldata/>
+                <cl:celldata std:sid="c-data-f8c52913"/>
               </cl:output>
             </cl:gridcell>
             <cl:gridcell std:sid="gd-cell-75bb27c2" rowindex="0" colindex="6" columnname="column7">
               <cl:output std:sid="output-f3025fe4">
-                <cl:celldata/>
+                <cl:celldata std:sid="c-data-75e942ec"/>
               </cl:output>
             </cl:gridcell>
             <cl:gridcell std:sid="gd-cell-efc72ae3" rowindex="0" colindex="7" columnname="column8">
               <cl:output std:sid="output-9459275a">
-                <cl:celldata/>
+                <cl:celldata std:sid="c-data-79c2e906"/>
               </cl:output>
             </cl:gridcell>
             <cl:gridcell std:sid="gd-cell-55f4c7bd" rowindex="0" colindex="8" columnname="column9">
               <cl:output std:sid="output-cbdc33ab">
-                <cl:celldata/>
+                <cl:celldata std:sid="c-data-b07562f0"/>
               </cl:output>
             </cl:gridcell>
             <cl:gridcell std:sid="gd-cell-1e01fc82" rowindex="0" colindex="9" columnname="column10">
               <cl:output std:sid="output-29cb4966">
-                <cl:celldata/>
+                <cl:celldata std:sid="c-data-c130ae0b"/>
               </cl:output>
             </cl:gridcell>
           </cl:griddetail>

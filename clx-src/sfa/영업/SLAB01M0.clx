@@ -31,21 +31,14 @@
       </cl:output>
       <cl:group std:sid="group-373b0678" id="grpNavi2" class="breadcrumbs">
         <cl:formdata std:sid="f-data-417ee0ad" row="0" col="1"/>
-        <cl:output std:sid="output-8cb44099" class="home" value="">
-          <cl:flowlayoutdata std:sid="f-data-b950fad1" width="20px" height="20px"/>
-        </cl:output>
-        <cl:output std:sid="output-cc397308" class="breadcrumb-item" value="1Depth">
-          <cl:flowlayoutdata std:sid="f-data-d4de9799" width="45px" height="17px" autosize="width"/>
-        </cl:output>
-        <cl:output std:sid="output-27f5a6e6" class="breadcrumb-item" value="2Depth">
-          <cl:flowlayoutdata std:sid="f-data-f36ef822" width="45px" height="17px" autosize="width"/>
-        </cl:output>
-        <cl:output std:sid="output-781b1a9d" class="breadcrumb-item" value="3Depth">
-          <cl:flowlayoutdata std:sid="f-data-6f6b68cb" width="45px" height="17px" autosize="width"/>
-        </cl:output>
-        <cl:output std:sid="output-db593407" class="breadcrumb-item" value="4Depth">
-          <cl:flowlayoutdata std:sid="f-data-6fd1cf71" width="45px" height="17px" autosize="width"/>
-        </cl:output>
+        <cl:button std:sid="button-cf1d1def" class="btn-primary04 btn-md" value="이전">
+          <cl:listener std:sid="listener-62b2ff82" name="click" handler="onButtonClick"/>
+          <cl:flowlayoutdata std:sid="f-data-e00902d9" width="49px" height="26px" autosize="width"/>
+        </cl:button>
+        <cl:button std:sid="button-496c49da" class="btn-primary04 btn-md" value="다음">
+          <cl:listener std:sid="listener-34e485d0" name="click" handler="onButtonClick2"/>
+          <cl:flowlayoutdata std:sid="f-data-66881adc" width="49px" height="26px" autosize="width"/>
+        </cl:button>
         <cl:flowlayout std:sid="f-layout-dc9e6e8d" scrollable="false" hspacing="5" vspacing="0" halign="right" valign="middle" linewrap="false"/>
       </cl:group>
       <cl:formlayout std:sid="f-layout-7b3b9f0b" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
@@ -65,10 +58,10 @@
           </std:metadata>
           <cl:verticaldata std:sid="v-data-9fe57766" width="1152px" height="40px" autosize="none"/>
           <cl:output std:sid="output-698610e5" class="label required" value="주민등록번호">
-            <cl:formdata std:sid="f-data-bb369349" row="0" col="2"/>
+            <cl:formdata std:sid="f-data-db819d63" row="0" col="0"/>
           </cl:output>
-          <cl:maskeditor std:sid="m-editor-7063d4df" id="mse1" value="7405052612340" mask="000000-0******">
-            <cl:formdata std:sid="f-data-4fcba0e1" row="0" col="3"/>
+          <cl:maskeditor std:sid="m-editor-7063d4df" id="mse1" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" value="7405052612340" mask="000000-0******">
+            <cl:formdata std:sid="f-data-fc5a7fd8" row="0" col="1"/>
           </cl:maskeditor>
           <cl:group std:sid="group-cc61f2af" class="btn-flow-area">
             <cl:formdata std:sid="f-data-c550d49d" valign="CENTER" height="26" row="0" col="6" rowspan="1" colspan="1"/>

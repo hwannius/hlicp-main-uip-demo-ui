@@ -32,21 +32,14 @@
       </cl:output>
       <cl:group std:sid="group-799c377d" id="grpNavi" class="breadcrumbs">
         <cl:formdata std:sid="f-data-b5509d70" row="0" col="1"/>
-        <cl:output std:sid="output-dbbcce1a" class="home" value="">
-          <cl:flowlayoutdata std:sid="f-data-1cd87bb6" width="20px" height="20px"/>
-        </cl:output>
-        <cl:output std:sid="output-d5e11268" class="breadcrumb-item" value="1Depth">
-          <cl:flowlayoutdata std:sid="f-data-3beb2f65" width="45px" height="17px" autosize="width"/>
-        </cl:output>
-        <cl:output std:sid="output-6e79a920" class="breadcrumb-item" value="2Depth">
-          <cl:flowlayoutdata std:sid="f-data-e5e89842" width="45px" height="17px" autosize="width"/>
-        </cl:output>
-        <cl:output std:sid="output-a3f90a9b" class="breadcrumb-item" value="3Depth">
-          <cl:flowlayoutdata std:sid="f-data-81618497" width="45px" height="17px" autosize="width"/>
-        </cl:output>
-        <cl:output std:sid="output-6a18b375" class="breadcrumb-item" value="4Depth">
-          <cl:flowlayoutdata std:sid="f-data-94258ced" width="45px" height="17px" autosize="width"/>
-        </cl:output>
+        <cl:button std:sid="button-cf1d1def" class="btn-primary04 btn-md" value="이전">
+          <cl:listener std:sid="listener-d97ff0e2" name="click" handler="onButtonClick"/>
+          <cl:flowlayoutdata std:sid="f-data-e00902d9" width="49px" height="26px" autosize="width"/>
+        </cl:button>
+        <cl:button std:sid="button-496c49da" class="btn-primary04 btn-md" value="다음">
+          <cl:listener std:sid="listener-a23113c1" name="click" handler="onButtonClick2"/>
+          <cl:flowlayoutdata std:sid="f-data-66881adc" width="49px" height="26px" autosize="width"/>
+        </cl:button>
         <cl:flowlayout std:sid="f-layout-ce38801e" scrollable="false" hspacing="5" vspacing="0" halign="right" valign="middle" linewrap="false"/>
       </cl:group>
       <cl:formlayout std:sid="f-layout-2de29e5a" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
@@ -66,7 +59,7 @@
           </cl:output>
           <cl:group std:sid="group-bca9bd36" class="form-inside">
             <cl:formdata std:sid="f-data-133ac977" row="0" col="1"/>
-            <cl:searchinput std:sid="s-input-cb5b2973" value="008110">
+            <cl:searchinput std:sid="s-input-cb5b2973" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" value="008110">
               <cl:formdata std:sid="f-data-77e77f86" row="0" col="0"/>
             </cl:searchinput>
             <cl:inputbox std:sid="i-box-2373c291" id="ipb2" value="부천지점">
@@ -81,7 +74,7 @@
           <cl:output std:sid="output-121b9322" class="label required" value="입과년월">
             <cl:formdata std:sid="f-data-20134ed5" row="0" col="2"/>
           </cl:output>
-          <cl:dateinput std:sid="d-input-9530ad9d" id="dti1" value="201307" calendartype="yearmonth" mask="YYYY-MM">
+          <cl:dateinput std:sid="d-input-9530ad9d" id="dti1" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" value="202405" calendartype="yearmonth" mask="YYYY-MM">
             <std:metadata>
               <std:property key="template-uuid" value="fee3a3c9-7931-4d21-b4da-b3a6d6af44c6"/>
               <std:property key="template-rev" value="1"/>
@@ -91,7 +84,7 @@
           <cl:output std:sid="output-002b915d" class="label required" value="교육과정">
             <cl:formdata std:sid="f-data-19ef879e" row="0" col="4"/>
           </cl:output>
-          <cl:combobox std:sid="c-box-4e66061f" id="cmb2" value="value1">
+          <cl:combobox std:sid="c-box-4e66061f" id="cmb2" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" value="value1">
             <cl:formdata std:sid="f-data-4f2db017" row="0" col="5"/>
             <cl:item std:sid="t-item-81ec0c7c" label="PreFTP1과정" value="value1"/>
           </cl:combobox>
@@ -136,12 +129,12 @@
               <cl:gridrow std:sid="g-row-019153c3" height="31px"/>
               <cl:gridcell std:sid="gh-cell-d2196447" rowindex="0" colindex="0" sortable="false" filterable="false" columntype="checkbox"/>
               <cl:gridcell std:sid="gh-cell-884a58c7" rowindex="0" colindex="1" targetcolumnname="column1" sortable="false" filterable="false" text="소속"/>
-              <cl:gridcell std:sid="gh-cell-cdc740d6" rowindex="0" colindex="2" targetcolumnname="column2" sortable="false" filterable="false" text="팀코드"/>
-              <cl:gridcell std:sid="gh-cell-2d807205" rowindex="0" colindex="3" targetcolumnname="column3" sortable="false" filterable="false" text="사원번호"/>
+              <cl:gridcell std:sid="gh-cell-cdc740d6" rowindex="0" colindex="2" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" targetcolumnname="column2" sortable="false" filterable="false" text="팀코드"/>
+              <cl:gridcell std:sid="gh-cell-2d807205" rowindex="0" colindex="3" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" targetcolumnname="column3" sortable="false" filterable="false" text="사원번호"/>
               <cl:gridcell std:sid="gh-cell-dd06c40c" rowindex="0" colindex="4" targetcolumnname="column4" sortable="false" filterable="false" text="성명"/>
               <cl:gridcell std:sid="gh-cell-fcc74190" rowindex="0" colindex="5" targetcolumnname="column5" sortable="false" filterable="false" text="주민등록번호"/>
               <cl:gridcell std:sid="gh-cell-35f2ccde" rowindex="0" colindex="6" targetcolumnname="column6" sortable="false" filterable="false" text="유치자"/>
-              <cl:gridcell std:sid="gh-cell-e307b24e" rowindex="0" colindex="7" class="required" targetcolumnname="column7" sortable="false" filterable="false" text="간부설계사"/>
+              <cl:gridcell std:sid="gh-cell-e307b24e" rowindex="0" colindex="7" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" class="required" targetcolumnname="column7" sortable="false" filterable="false" text="간부설계사"/>
               <cl:gridcell std:sid="gh-cell-103f3682" rowindex="0" colindex="8" targetcolumnname="column8" sortable="false" filterable="false" text="합격월도"/>
             </cl:gridheader>
             <cl:griddetail std:sid="gd-band-7b9556ec">

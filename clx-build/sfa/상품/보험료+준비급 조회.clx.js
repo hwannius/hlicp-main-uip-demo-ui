@@ -18,23 +18,6 @@
 			 * @author User
 			 ************************************************/
 
-			/*
-			 * "뒤로" 버튼에서 click 이벤트 발생 시 호출.
-			 * 사용자가 컨트롤을 클릭할 때 발생하는 이벤트.
-			 */
-			function onButtonClick(e){
-				var button = e.control;
-				
-				var host = app.getHost(); // 부모 임베디드 앱
-				cpr.core.App.load("sfa/상품/PDAL11M0", function(loadedApp) {
-			    if (loadedApp) {
-			        host.app = loadedApp;
-			        host.initValue = {
-			            "param": "param"
-			        }
-			    }
-			});
-			}
 
 			/*
 			 * "다음" 버튼에서 click 이벤트 발생 시 호출.
@@ -167,23 +150,12 @@
 				group_2.setLayout(flowLayout_1);
 				(function(container){
 					var button_1 = new cpr.controls.Button();
-					button_1.value = "이전";
+					button_1.value = "다음";
 					button_1.style.setClasses(["btn-primary04", "btn-md"]);
-					if(typeof onButtonClick == "function") {
-						button_1.addEventListener("click", onButtonClick);
+					if(typeof onButtonClick2 == "function") {
+						button_1.addEventListener("click", onButtonClick2);
 					}
 					container.addChild(button_1, {
-						"autoSize": "width",
-						"width": "49px",
-						"height": "26px"
-					});
-					var button_2 = new cpr.controls.Button();
-					button_2.value = "다음";
-					button_2.style.setClasses(["btn-primary04", "btn-md"]);
-					if(typeof onButtonClick2 == "function") {
-						button_2.addEventListener("click", onButtonClick2);
-					}
-					container.addChild(button_2, {
 						"autoSize": "width",
 						"width": "49px",
 						"height": "26px"
@@ -320,25 +292,25 @@
 						flowLayout_2.leftMargin = 20;
 						group_6.setLayout(flowLayout_2);
 						(function(container){
-							var button_3 = new cpr.controls.Button();
-							button_3.value = "조회";
-							button_3.style.setClasses(["btn-search"]);
-							container.addChild(button_3, {
+							var button_2 = new cpr.controls.Button();
+							button_2.value = "조회";
+							button_2.style.setClasses(["btn-search"]);
+							container.addChild(button_2, {
 								"autoSize": "width",
 								"width": "49px",
 								"height": "26px"
 							});
-							var button_4 = new cpr.controls.Button();
-							button_4.value = "";
-							button_4.style.setClasses(["btn-reset"]);
-							container.addChild(button_4, {
+							var button_3 = new cpr.controls.Button();
+							button_3.value = "";
+							button_3.style.setClasses(["btn-reset"]);
+							container.addChild(button_3, {
 								"width": "26px",
 								"height": "26px"
 							});
-							var button_5 = new cpr.controls.Button("btn2");
-							button_5.value = "엑셀다운로드";
-							button_5.style.setClasses(["btn-primary04", "btn-md"]);
-							container.addChild(button_5, {
+							var button_4 = new cpr.controls.Button("btn2");
+							button_4.value = "엑셀다운로드";
+							button_4.style.setClasses(["btn-primary04", "btn-md"]);
+							container.addChild(button_4, {
 								"autoSize": "width",
 								"width": "49px",
 								"height": "26px"
@@ -1437,10 +1409,10 @@
 						flowLayout_5.lineWrap = false;
 						group_17.setLayout(flowLayout_5);
 						(function(container){
-							var button_6 = new cpr.controls.Button("btn4");
-							button_6.value = "다음";
-							button_6.style.setClasses(["btn-primary04", "btn-md"]);
-							container.addChild(button_6, {
+							var button_5 = new cpr.controls.Button("btn4");
+							button_5.value = "다음";
+							button_5.style.setClasses(["btn-primary04", "btn-md"]);
+							container.addChild(button_5, {
 								"autoSize": "width",
 								"width": "60px",
 								"height": "30px"

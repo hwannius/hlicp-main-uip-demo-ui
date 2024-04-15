@@ -34,21 +34,14 @@
       </cl:output>
       <cl:group std:sid="group-799c377d" id="grpNavi" class="breadcrumbs">
         <cl:formdata std:sid="f-data-b5509d70" row="0" col="1"/>
-        <cl:output std:sid="output-dbbcce1a" class="home" value="">
-          <cl:flowlayoutdata std:sid="f-data-1cd87bb6" width="20px" height="20px"/>
-        </cl:output>
-        <cl:output std:sid="output-d5e11268" class="breadcrumb-item" value="1Depth">
-          <cl:flowlayoutdata std:sid="f-data-3beb2f65" width="45px" height="17px" autosize="width"/>
-        </cl:output>
-        <cl:output std:sid="output-6e79a920" class="breadcrumb-item" value="2Depth">
-          <cl:flowlayoutdata std:sid="f-data-e5e89842" width="45px" height="17px" autosize="width"/>
-        </cl:output>
-        <cl:output std:sid="output-a3f90a9b" class="breadcrumb-item" value="3Depth">
-          <cl:flowlayoutdata std:sid="f-data-81618497" width="45px" height="17px" autosize="width"/>
-        </cl:output>
-        <cl:output std:sid="output-6a18b375" class="breadcrumb-item" value="4Depth">
-          <cl:flowlayoutdata std:sid="f-data-94258ced" width="45px" height="17px" autosize="width"/>
-        </cl:output>
+        <cl:button std:sid="button-cf1d1def" class="btn-primary04 btn-md" value="이전">
+          <cl:listener std:sid="listener-b706d15b" name="click" handler="onButtonClick"/>
+          <cl:flowlayoutdata std:sid="f-data-e00902d9" width="49px" height="26px" autosize="width"/>
+        </cl:button>
+        <cl:button std:sid="button-496c49da" class="btn-primary04 btn-md" value="다음">
+          <cl:listener std:sid="listener-5759e0d9" name="click" handler="onButtonClick2"/>
+          <cl:flowlayoutdata std:sid="f-data-66881adc" width="49px" height="26px" autosize="width"/>
+        </cl:button>
         <cl:flowlayout std:sid="f-layout-ce38801e" scrollable="false" hspacing="5" vspacing="0" halign="right" valign="middle" linewrap="false"/>
       </cl:group>
       <cl:formlayout std:sid="f-layout-2de29e5a" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
@@ -68,7 +61,7 @@
           </cl:output>
           <cl:group std:sid="group-f66fda4c" id="grp1" class="form-inside">
             <cl:formdata std:sid="f-data-b18d6b19" row="0" col="1"/>
-            <cl:searchinput std:sid="s-input-67f73c92" value="0527">
+            <cl:searchinput std:sid="s-input-67f73c92" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" value="0527">
               <cl:formdata std:sid="f-data-e795de41" row="0" col="0"/>
             </cl:searchinput>
             <cl:inputbox std:sid="i-box-2eb46eb2" id="ipb3" enabled="false" value="FTP1과정(신인입문)">
@@ -83,7 +76,7 @@
           <cl:output std:sid="output-418ebff7" class="label required" value="입과년월">
             <cl:formdata std:sid="f-data-b1c4665c" row="0" col="2"/>
           </cl:output>
-          <cl:dateinput std:sid="d-input-e3e7125c" id="dti1" value="201501" calendartype="yearmonth" mask="YYYY-MM" format="YYYYMM">
+          <cl:dateinput std:sid="d-input-e3e7125c" id="dti1" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" value="202401" calendartype="yearmonth" mask="YYYY-MM" format="YYYYMM">
             <cl:formdata std:sid="f-data-f6cca351" halign="LEFT" width="100" row="0" col="3"/>
           </cl:dateinput>
           <cl:output std:sid="output-20a2972f" class="label required" value="주관조직">
@@ -91,7 +84,7 @@
           </cl:output>
           <cl:group std:sid="group-e4db78f5" id="grp2" class="form-inside">
             <cl:formdata std:sid="f-data-43ca8f86" row="0" col="5"/>
-            <cl:searchinput std:sid="s-input-c792aac0" value="000530">
+            <cl:searchinput std:sid="s-input-c792aac0" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" value="000530">
               <cl:formdata std:sid="f-data-fd303945" row="0" col="0"/>
             </cl:searchinput>
             <cl:inputbox std:sid="i-box-578b3ccb" id="ipb2" enabled="false" value="서울지역본부">
@@ -106,7 +99,7 @@
           <cl:output std:sid="output-3acf7395" class="label required" value="교육차수">
             <cl:formdata std:sid="f-data-a1b0b32d" row="0" col="6"/>
           </cl:output>
-          <cl:inputbox std:sid="i-box-71a368d3" id="ipb1" value="1">
+          <cl:inputbox std:sid="i-box-71a368d3" id="ipb1" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" value="1">
             <cl:formdata std:sid="f-data-f77e96f9" row="0" col="7"/>
           </cl:inputbox>
           <cl:group std:sid="group-e2c799bb" id="grp3" class="btn-flow-area">
@@ -169,52 +162,52 @@
               <cl:gridrow std:sid="g-row-ac43a51e" height="31px"/>
               <cl:gridcell std:sid="gd-cell-ddc5793d" rowindex="0" colindex="0" columnname="column1">
                 <cl:output std:sid="output-0aafc39b">
-                  <cl:celldata/>
+                  <cl:celldata std:sid="c-data-1b1bcf62"/>
                 </cl:output>
               </cl:gridcell>
               <cl:gridcell std:sid="gd-cell-76615ffc" rowindex="0" colindex="1" columnname="column2">
                 <cl:output std:sid="output-846292f5">
-                  <cl:celldata/>
+                  <cl:celldata std:sid="c-data-8367a187"/>
                 </cl:output>
               </cl:gridcell>
               <cl:gridcell std:sid="gd-cell-63e16c71" rowindex="0" colindex="2" columnname="column3">
                 <cl:output std:sid="output-17fb64fe">
-                  <cl:celldata/>
+                  <cl:celldata std:sid="c-data-65524cb1"/>
                 </cl:output>
               </cl:gridcell>
               <cl:gridcell std:sid="gd-cell-4a668de9" rowindex="0" colindex="3" columnname="column4">
                 <cl:output std:sid="output-7a3b3dc9">
-                  <cl:celldata/>
+                  <cl:celldata std:sid="c-data-fe145168"/>
                 </cl:output>
               </cl:gridcell>
               <cl:gridcell std:sid="gd-cell-e6fe6ae7" rowindex="0" colindex="4" columnname="column5">
                 <cl:output std:sid="output-788f2af3">
-                  <cl:celldata/>
+                  <cl:celldata std:sid="c-data-fb9a8be4"/>
                 </cl:output>
               </cl:gridcell>
               <cl:gridcell std:sid="gd-cell-4bd357ba" rowindex="0" colindex="5" columnname="column6">
                 <cl:output std:sid="output-c2a31586">
-                  <cl:celldata/>
+                  <cl:celldata std:sid="c-data-c79af321"/>
                 </cl:output>
               </cl:gridcell>
               <cl:gridcell std:sid="gd-cell-d0765c7f" rowindex="0" colindex="6" columnname="column7">
                 <cl:output std:sid="output-0718acfa">
-                  <cl:celldata/>
+                  <cl:celldata std:sid="c-data-0c701246"/>
                 </cl:output>
               </cl:gridcell>
               <cl:gridcell std:sid="gd-cell-23d3fa8b" rowindex="0" colindex="7" columnname="column8">
                 <cl:output std:sid="output-61e7c116">
-                  <cl:celldata/>
+                  <cl:celldata std:sid="c-data-36f44d0e"/>
                 </cl:output>
               </cl:gridcell>
               <cl:gridcell std:sid="gd-cell-2e0ae743" rowindex="0" colindex="8" columnname="column9">
                 <cl:output std:sid="output-817209c5">
-                  <cl:celldata/>
+                  <cl:celldata std:sid="c-data-7e4c61e4"/>
                 </cl:output>
               </cl:gridcell>
               <cl:gridcell std:sid="gd-cell-cde782f0" rowindex="0" colindex="9" columnname="column10">
                 <cl:output std:sid="output-9a5a4718">
-                  <cl:celldata/>
+                  <cl:celldata std:sid="c-data-3f81909b"/>
                 </cl:output>
               </cl:gridcell>
             </cl:griddetail>

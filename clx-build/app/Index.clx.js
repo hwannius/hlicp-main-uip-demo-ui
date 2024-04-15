@@ -207,7 +207,24 @@
 					{"label": "신계약/UW", "value": "value4", "parent": "value1", "appId": ""},
 					{"label": "가입설계", "value": "PPB100M0", "parent": "value4", "appId": "sfa/신계약+UW/PPB100M0.clx"},
 					{"label": "청약입력및전송", "value": "PPC100M0", "parent": "value4", "appId": "sfa/신계약+UW/PPC100M0.clx"},
-					{"label": "RT계좌일괄입력", "value": "NBBR10M0", "parent": "value4", "appId": "sfa/신계약+UW/NBBR10M0.clx"}
+					{"label": "RT계좌일괄입력", "value": "NBBR10M0", "parent": "value4", "appId": "sfa/신계약+UW/NBBR10M0.clx"},
+					{"label": "변경청약안내", "value": "NBDZ10M1", "parent": "value4", "appId": "sfa/신계약+UW/NBDZ10M1.clx"},
+					{"label": "지점별 변경청약안내", "value": "NBDZ01M0", "parent": "value4", "appId": "sfa/신계약+UW/NBDZ01M0.clx"},
+					{"label": "중도부가 청약서 전산발행", "value": "NBAP80M0", "parent": "value4", "appId": "sfa/신계약+UW/NBAP80M0.clx"},
+					{"label": "상품별 인수 기준", "value": "NBEM30M2", "parent": "value4", "appId": "sfa/신계약+UW/NBEM30M2.clx"},
+					{"label": "청약철회 처리", "value": "NBDC10M1", "parent": "value4", "appId": "sfa/신계약+UW/NBDC10M1.clx"},
+					{"label": "개별청약서 심사", "value": "NBEP10M0", "parent": "value4", "appId": "sfa/신계약+UW/NBEP10M0.clx"},
+					{"label": "부활청약서 심사", "value": "NBER10M0", "parent": "value4", "appId": "sfa/신계약+UW/NBER10M0.clx"},
+					{"label": "기본계약사항", "value": "PRA110M0", "parent": "value4", "appId": "sfa/신계약+UW/PRA110M0.clx"},
+					{"label": "청약서식 이미지 심사", "value": "NBEZ10M0", "parent": "value4", "appId": "sfa/신계약+UW/NBEZ10M0.clx"},
+					{"label": "심사진행 상황 조회", "value": "NBEP20M4", "parent": "value4", "appId": "sfa/신계약+UW/NBEP20M4.clx"},
+					{"label": "일일업무연락", "value": "NBEZ20M2", "parent": "value4", "appId": "sfa/신계약+UW/NBEZ20M2.clx"},
+					{"label": "상품보장내용입력", "value": "NBCM10M0", "parent": "value4", "appId": "sfa/신계약+UW/NBCM10M0.clx"},
+					{"label": "안내장발송이력", "value": "CSCH00M1", "parent": "value4", "appId": "sfa/신계약+UW/CSCH00M1.clx"},
+					{"label": "보전", "value": "value5", "parent": "value1", "appId": ""},
+					{"label": "자동이체신청", "value": "DPD010M0", "parent": "value5", "appId": "sfa/보전/DPD010M0.clx"},
+					{"label": "카드이체신청", "value": "DPD200M0", "parent": "value5", "appId": "sfa/보전/DPD200M0.clx"},
+					{"label": "P_청약철회 접수입력 ", "value": "NBDC10P0", "parent": "value4", "appId": "sfa/신계약+UW/NBDC10P0.clx"}
 				]
 			});
 			app.register(dataSet_1);
@@ -891,31 +908,6 @@
 				return tabItem_1;
 			})(mDIFolder_1);
 			mDIFolder_1.addTabItem(tabItem_1);
-			
-			var tabItem_2 = (function(tabFolder){
-				var tabItem_2 = new cpr.controls.TabItem();
-				tabItem_2.text = "tab 2";
-				var group_22 = new cpr.controls.Container();
-				var xYLayout_8 = new cpr.controls.layouts.XYLayout();
-				group_22.setLayout(xYLayout_8);
-				tabItem_2.content = group_22;
-				return tabItem_2;
-			})(mDIFolder_1);
-			mDIFolder_1.addTabItem(tabItem_2);
-			
-			var tabItem_3 = (function(tabFolder){
-				var tabItem_3 = new cpr.controls.TabItem();
-				tabItem_3.text = "심사메인화면";
-				var embeddedApp_1 = new cpr.controls.EmbeddedApp("ea1");
-				cpr.core.App.load("app/240228/UW001", function(app) {
-					if(app){
-						embeddedApp_1.app = app;
-					}
-				});
-				tabItem_3.content = embeddedApp_1;
-				return tabItem_3;
-			})(mDIFolder_1);
-			mDIFolder_1.addTabItem(tabItem_3);
 			mDIFolder_1.setSelectedTabItem(tabItem_1);
 			container.addChild(mDIFolder_1, {
 				"top": "94px",

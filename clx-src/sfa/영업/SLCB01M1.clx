@@ -58,21 +58,14 @@
       </cl:output>
       <cl:group std:sid="group-799c377d" id="grpNavi" class="breadcrumbs">
         <cl:formdata std:sid="f-data-b5509d70" row="0" col="1"/>
-        <cl:output std:sid="output-dbbcce1a" class="home" value="">
-          <cl:flowlayoutdata std:sid="f-data-1cd87bb6" width="20px" height="20px"/>
-        </cl:output>
-        <cl:output std:sid="output-d5e11268" class="breadcrumb-item" value="1Depth">
-          <cl:flowlayoutdata std:sid="f-data-3beb2f65" width="45px" height="17px" autosize="width"/>
-        </cl:output>
-        <cl:output std:sid="output-6e79a920" class="breadcrumb-item" value="2Depth">
-          <cl:flowlayoutdata std:sid="f-data-e5e89842" width="45px" height="17px" autosize="width"/>
-        </cl:output>
-        <cl:output std:sid="output-a3f90a9b" class="breadcrumb-item" value="3Depth">
-          <cl:flowlayoutdata std:sid="f-data-81618497" width="45px" height="17px" autosize="width"/>
-        </cl:output>
-        <cl:output std:sid="output-6a18b375" class="breadcrumb-item" value="4Depth">
-          <cl:flowlayoutdata std:sid="f-data-94258ced" width="45px" height="17px" autosize="width"/>
-        </cl:output>
+        <cl:button std:sid="button-cf1d1def" class="btn-primary04 btn-md" value="이전">
+          <cl:listener std:sid="listener-cde6a309" name="click" handler="onButtonClick"/>
+          <cl:flowlayoutdata std:sid="f-data-e00902d9" width="49px" height="26px" autosize="width"/>
+        </cl:button>
+        <cl:button std:sid="button-496c49da" class="btn-primary04 btn-md" value="다음">
+          <cl:listener std:sid="listener-d50e0cdd" name="click" handler="onButtonClick2"/>
+          <cl:flowlayoutdata std:sid="f-data-66881adc" width="49px" height="26px" autosize="width"/>
+        </cl:button>
         <cl:flowlayout std:sid="f-layout-ce38801e" scrollable="false" hspacing="5" vspacing="0" halign="right" valign="middle" linewrap="false"/>
       </cl:group>
       <cl:formlayout std:sid="f-layout-2de29e5a" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
@@ -92,7 +85,7 @@
           </cl:output>
           <cl:group std:sid="group-f66fda4c" id="grp1" class="form-inside">
             <cl:formdata std:sid="f-data-b18d6b19" row="0" col="1"/>
-            <cl:searchinput std:sid="s-input-67f73c92" value="0527">
+            <cl:searchinput std:sid="s-input-67f73c92" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" value="0527">
               <cl:formdata std:sid="f-data-e795de41" row="0" col="0"/>
             </cl:searchinput>
             <cl:inputbox std:sid="i-box-2eb46eb2" id="ipb3" enabled="false" value="FTP1과정(신인입문)">
@@ -109,7 +102,7 @@
           </cl:output>
           <cl:group std:sid="group-bca9bd36" class="form-inside">
             <cl:formdata std:sid="f-data-a6446279" row="0" col="3"/>
-            <cl:searchinput std:sid="s-input-c792aac0" value="000530">
+            <cl:searchinput std:sid="s-input-c792aac0" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" value="000530">
               <cl:formdata std:sid="f-data-fd303945" row="0" col="0"/>
             </cl:searchinput>
             <cl:inputbox std:sid="i-box-578b3ccb" id="ipb2" enabled="false" value="서울지역본부">
@@ -124,13 +117,13 @@
           <cl:output std:sid="output-e8041a8c" class="label required" value="입과년월">
             <cl:formdata std:sid="f-data-df4120c7" row="0" col="4"/>
           </cl:output>
-          <cl:dateinput std:sid="d-input-e3e7125c" id="dti1" value="201501" calendartype="yearmonth" mask="YYYY-MM" format="YYYYMM">
+          <cl:dateinput std:sid="d-input-e3e7125c" id="dti1" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" value="202401" calendartype="yearmonth" mask="YYYY-MM" format="YYYYMM">
             <cl:formdata std:sid="f-data-5f21ffe8" halign="LEFT" width="100" row="0" col="5"/>
           </cl:dateinput>
           <cl:output std:sid="output-5888405c" class="label required" value="교육차수">
             <cl:formdata std:sid="f-data-d2050cbf" row="0" col="6"/>
           </cl:output>
-          <cl:inputbox std:sid="i-box-71a368d3" id="ipb1" value="1">
+          <cl:inputbox std:sid="i-box-71a368d3" id="ipb1" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" value="1">
             <cl:formdata std:sid="f-data-f77e96f9" row="0" col="7"/>
           </cl:inputbox>
           <cl:group std:sid="group-267e4d47" class="btn-flow-area">
@@ -169,13 +162,13 @@
           </cl:output>
           <cl:group std:sid="group-2a8755e9" id="grp2" class="form-inside">
             <cl:formdata std:sid="f-data-79c44f7b" row="0" col="1"/>
-            <cl:dateinput std:sid="d-input-b9647840" id="dti2" value="20150116">
+            <cl:dateinput std:sid="d-input-b9647840" id="dti2" value="20240116">
               <cl:formdata std:sid="f-data-298ff059" row="0" col="0"/>
             </cl:dateinput>
             <cl:output std:sid="output-827991c1" class="text-center" value="-">
               <cl:formdata std:sid="f-data-44aa9d54" row="0" col="1"/>
             </cl:output>
-            <cl:dateinput std:sid="d-input-cda05998" id="dti3" value="20150205">
+            <cl:dateinput std:sid="d-input-cda05998" id="dti3" value="20240205">
               <cl:formdata std:sid="f-data-684673a5" row="0" col="2"/>
             </cl:dateinput>
             <cl:formlayout std:sid="f-layout-ed93f4f4" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
@@ -237,16 +230,16 @@
               <cl:gridcell std:sid="gh-cell-e535f6e2" rowindex="0" colindex="2" targetcolumnname="column3" sortable="false" filterable="false" text="사원번호"/>
               <cl:gridcell std:sid="gh-cell-35f76030" rowindex="0" colindex="3" targetcolumnname="column4" sortable="false" filterable="false" text="위촉월"/>
               <cl:gridcell std:sid="gh-cell-063996ed" rowindex="0" colindex="4" targetcolumnname="column5" sortable="false" filterable="false" text="직책"/>
-              <cl:gridcell std:sid="gh-cell-688a00f1" rowindex="0" colindex="5" targetcolumnname="column6" sortable="false" filterable="false" text="16일"/>
-              <cl:gridcell std:sid="gh-cell-48e6c94b" rowindex="0" colindex="6" targetcolumnname="column7" sortable="false" filterable="false" text="19일"/>
-              <cl:gridcell std:sid="gh-cell-13533011" rowindex="0" colindex="7" targetcolumnname="column8" sortable="false" filterable="false" text="20일"/>
-              <cl:gridcell std:sid="gh-cell-dccc4e33" rowindex="0" colindex="8" targetcolumnname="column9" sortable="false" filterable="false" text="21일"/>
-              <cl:gridcell std:sid="gh-cell-95570acb" rowindex="0" colindex="9" targetcolumnname="column10" sortable="false" filterable="false" text="22일"/>
-              <cl:gridcell std:sid="gh-cell-d2578234" rowindex="0" colindex="10" targetcolumnname="column11" sortable="false" filterable="false" text="23일"/>
-              <cl:gridcell std:sid="gh-cell-303f86a5" rowindex="0" colindex="11" targetcolumnname="column12" sortable="false" filterable="false" text="26일"/>
-              <cl:gridcell std:sid="gh-cell-f61cddd2" rowindex="0" colindex="12" targetcolumnname="column13" sortable="false" filterable="false" text="27일"/>
-              <cl:gridcell std:sid="gh-cell-dddecbbd" rowindex="0" colindex="13" targetcolumnname="column14" sortable="false" filterable="false" text="28일"/>
-              <cl:gridcell std:sid="gh-cell-fa8c7fdd" rowindex="0" colindex="14" targetcolumnname="column15" sortable="false" filterable="false" text="29일"/>
+              <cl:gridcell std:sid="gh-cell-688a00f1" rowindex="0" colindex="5" style="border-top-width:3px; border-left-style:dashed; border-left-color:red; border-top-color:red; border-left-width:3px; border-top-style:dashed;" targetcolumnname="column6" sortable="false" filterable="false" text="16일"/>
+              <cl:gridcell std:sid="gh-cell-48e6c94b" rowindex="0" colindex="6" style="border-top-width:3px; border-top-color:red; border-top-style:dashed;" targetcolumnname="column7" sortable="false" filterable="false" text="19일"/>
+              <cl:gridcell std:sid="gh-cell-13533011" rowindex="0" colindex="7" style="border-top-width:3px; border-top-color:red; border-top-style:dashed;" targetcolumnname="column8" sortable="false" filterable="false" text="20일"/>
+              <cl:gridcell std:sid="gh-cell-dccc4e33" rowindex="0" colindex="8" style="border-top-width:3px; border-top-color:red; border-top-style:dashed;" targetcolumnname="column9" sortable="false" filterable="false" text="21일"/>
+              <cl:gridcell std:sid="gh-cell-95570acb" rowindex="0" colindex="9" style="border-top-width:3px; border-top-color:red; border-top-style:dashed;" targetcolumnname="column10" sortable="false" filterable="false" text="22일"/>
+              <cl:gridcell std:sid="gh-cell-d2578234" rowindex="0" colindex="10" style="border-top-width:3px; border-top-color:red; border-top-style:dashed;" targetcolumnname="column11" sortable="false" filterable="false" text="23일"/>
+              <cl:gridcell std:sid="gh-cell-303f86a5" rowindex="0" colindex="11" style="border-top-width:3px; border-top-color:red; border-top-style:dashed;" targetcolumnname="column12" sortable="false" filterable="false" text="26일"/>
+              <cl:gridcell std:sid="gh-cell-f61cddd2" rowindex="0" colindex="12" style="border-top-width:3px; border-top-color:red; border-top-style:dashed;" targetcolumnname="column13" sortable="false" filterable="false" text="27일"/>
+              <cl:gridcell std:sid="gh-cell-dddecbbd" rowindex="0" colindex="13" style="border-top-width:3px; border-top-color:red; border-top-style:dashed;" targetcolumnname="column14" sortable="false" filterable="false" text="28일"/>
+              <cl:gridcell std:sid="gh-cell-fa8c7fdd" rowindex="0" colindex="14" style="border-right-style:dashed; border-top-width:3px; border-right-width:3px; border-top-color:red; border-right-color:red; border-top-style:dashed;" targetcolumnname="column15" sortable="false" filterable="false" text="29일"/>
             </cl:gridheader>
             <cl:griddetail std:sid="gd-band-f479226d">
               <cl:gridrow std:sid="g-row-7ac20452" height="31px"/>
@@ -275,52 +268,52 @@
                   <cl:celldata std:sid="c-data-979b28e6"/>
                 </cl:output>
               </cl:gridcell>
-              <cl:gridcell std:sid="gd-cell-311c0e19" rowindex="0" colindex="5" columnname="column6">
+              <cl:gridcell std:sid="gd-cell-311c0e19" rowindex="0" colindex="5" style="border-bottom-color:red; border-left-style:dashed; border-bottom-width:3px; border-left-color:red; border-bottom-style:dashed; border-left-width:3px;" columnname="column6">
                 <cl:output std:sid="output-45e61b18" class="text-center">
                   <cl:celldata std:sid="c-data-e5098e8e"/>
                 </cl:output>
               </cl:gridcell>
-              <cl:gridcell std:sid="gd-cell-8a9974e7" rowindex="0" colindex="6" columnname="column7">
+              <cl:gridcell std:sid="gd-cell-8a9974e7" rowindex="0" colindex="6" style="border-bottom-color:red; border-bottom-width:3px; border-bottom-style:dashed;" columnname="column7">
                 <cl:output std:sid="output-7be2a611" class="text-center">
                   <cl:celldata std:sid="c-data-8f1f48eb"/>
                 </cl:output>
               </cl:gridcell>
-              <cl:gridcell std:sid="gd-cell-70c66ac6" rowindex="0" colindex="7" columnname="column8">
+              <cl:gridcell std:sid="gd-cell-70c66ac6" rowindex="0" colindex="7" style="border-bottom-color:red; border-bottom-width:3px; border-bottom-style:dashed;" columnname="column8">
                 <cl:output std:sid="output-1ec626b6" class="text-center">
                   <cl:celldata std:sid="c-data-306258cb"/>
                 </cl:output>
               </cl:gridcell>
-              <cl:gridcell std:sid="gd-cell-33898544" rowindex="0" colindex="8" columnname="column9">
+              <cl:gridcell std:sid="gd-cell-33898544" rowindex="0" colindex="8" style="border-bottom-color:red; border-bottom-width:3px; border-bottom-style:dashed;" columnname="column9">
                 <cl:output std:sid="output-dd262e2b" class="text-center">
                   <cl:celldata std:sid="c-data-63a387c6"/>
                 </cl:output>
               </cl:gridcell>
-              <cl:gridcell std:sid="gd-cell-0b755e50" rowindex="0" colindex="9" columnname="column10">
+              <cl:gridcell std:sid="gd-cell-0b755e50" rowindex="0" colindex="9" style="border-bottom-color:red; border-bottom-width:3px; border-bottom-style:dashed;" columnname="column10">
                 <cl:output std:sid="output-8d4064d8" class="text-center">
                   <cl:celldata std:sid="c-data-2415749a"/>
                 </cl:output>
               </cl:gridcell>
-              <cl:gridcell std:sid="gd-cell-dcd5996f" rowindex="0" colindex="10" columnname="column11">
+              <cl:gridcell std:sid="gd-cell-dcd5996f" rowindex="0" colindex="10" style="border-bottom-color:red; border-bottom-width:3px; border-bottom-style:dashed;" columnname="column11">
                 <cl:output std:sid="output-6a7c1f0d" class="text-center">
                   <cl:celldata std:sid="c-data-a63804ec"/>
                 </cl:output>
               </cl:gridcell>
-              <cl:gridcell std:sid="gd-cell-bd06242d" rowindex="0" colindex="11" columnname="column12">
+              <cl:gridcell std:sid="gd-cell-bd06242d" rowindex="0" colindex="11" style="border-bottom-color:red; border-bottom-width:3px; border-bottom-style:dashed;" columnname="column12">
                 <cl:output std:sid="output-1aaaa8b9" class="text-center">
                   <cl:celldata std:sid="c-data-8a37dc6e"/>
                 </cl:output>
               </cl:gridcell>
-              <cl:gridcell std:sid="gd-cell-296d249b" rowindex="0" colindex="12" columnname="column13">
+              <cl:gridcell std:sid="gd-cell-296d249b" rowindex="0" colindex="12" style="border-bottom-color:red; border-bottom-width:3px; border-bottom-style:dashed;" columnname="column13">
                 <cl:output std:sid="output-2287ce19" class="text-center">
                   <cl:celldata std:sid="c-data-dc797f7f"/>
                 </cl:output>
               </cl:gridcell>
-              <cl:gridcell std:sid="gd-cell-3ada79cb" rowindex="0" colindex="13" columnname="column14">
+              <cl:gridcell std:sid="gd-cell-3ada79cb" rowindex="0" colindex="13" style="border-bottom-color:red; border-bottom-width:3px; border-bottom-style:dashed;" columnname="column14">
                 <cl:output std:sid="output-57d45042" class="text-center">
                   <cl:celldata std:sid="c-data-5f20d7b4"/>
                 </cl:output>
               </cl:gridcell>
-              <cl:gridcell std:sid="gd-cell-3f24a5b5" rowindex="0" colindex="14" columnname="column15">
+              <cl:gridcell std:sid="gd-cell-3f24a5b5" rowindex="0" colindex="14" style="border-right-style:dashed; border-bottom-color:red; border-right-width:3px; border-bottom-width:3px; border-bottom-style:dashed; border-right-color:red;" columnname="column15">
                 <cl:output std:sid="output-77a95fe7" class="text-center">
                   <cl:celldata std:sid="c-data-2a4ffaf5"/>
                 </cl:output>

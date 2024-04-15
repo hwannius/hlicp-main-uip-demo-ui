@@ -16,7 +16,43 @@
 			 * Created at 2024. 4. 1. 오후 4:44:13.
 			 *
 			 * @author chwec
-			 ************************************************/;
+			 ************************************************/
+
+			/*
+			 * "이전" 버튼에서 click 이벤트 발생 시 호출.
+			 * 사용자가 컨트롤을 클릭할 때 발생하는 이벤트.
+			 */
+			function onButtonClick(e){
+				var button = e.control;
+				//화면이동(현재 화면에서 리로드)
+				var host = app.getHost(); // 부모 임베디드 앱
+				cpr.core.App.load("sfa/영업/SLBA02M0", function(loadedApp) {
+				    if (loadedApp) {
+				        host.app = loadedApp;
+				        host.initValue = {
+				            "param": "param"
+				        }
+				    }
+				});
+			}
+
+			/*
+			 * "다음" 버튼에서 click 이벤트 발생 시 호출.
+			 * 사용자가 컨트롤을 클릭할 때 발생하는 이벤트.
+			 */
+			function onButtonClick2(e){
+				var button = e.control;
+				//화면이동(현재 화면에서 리로드)
+				var host = app.getHost(); // 부모 임베디드 앱
+				cpr.core.App.load("sfa/영업/SLCB01M1", function(loadedApp) {
+				    if (loadedApp) {
+				        host.app = loadedApp;
+				        host.initValue = {
+				            "param": "param"
+				        }
+				    }
+				});
+			};
 			// End - User Script
 			
 			// Header
@@ -31,7 +67,7 @@
 					{"name": "column6"},
 					{"name": "column7"}
 				],
-				"rows": [{"column1": "호남지점", "column2": "0006300647", "column3": "홍*동", "column4": "1996-07", "column5": "02", "column6": "SM(E)", "column7": "50"}]
+				"rows": [{"column1": "호남지점", "column2": "0006300647", "column3": "김*국", "column4": "2005-07", "column5": "02", "column6": "SM(E)", "column7": "50"}]
 			});
 			app.register(dataSet_1);
 			app.supportMedia("all and (min-width: 3160px)", "Hlicp-WIDE");
@@ -89,44 +125,27 @@
 				flowLayout_1.lineWrap = false;
 				group_2.setLayout(flowLayout_1);
 				(function(container){
-					var output_2 = new cpr.controls.Output();
-					output_2.value = "";
-					output_2.style.setClasses(["home"]);
-					container.addChild(output_2, {
-						"width": "20px",
-						"height": "20px"
-					});
-					var output_3 = new cpr.controls.Output();
-					output_3.value = "1Depth";
-					output_3.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_3, {
+					var button_1 = new cpr.controls.Button();
+					button_1.value = "이전";
+					button_1.style.setClasses(["btn-primary04", "btn-md"]);
+					if(typeof onButtonClick == "function") {
+						button_1.addEventListener("click", onButtonClick);
+					}
+					container.addChild(button_1, {
 						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
+						"width": "49px",
+						"height": "26px"
 					});
-					var output_4 = new cpr.controls.Output();
-					output_4.value = "2Depth";
-					output_4.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_4, {
+					var button_2 = new cpr.controls.Button();
+					button_2.value = "다음";
+					button_2.style.setClasses(["btn-primary04", "btn-md"]);
+					if(typeof onButtonClick2 == "function") {
+						button_2.addEventListener("click", onButtonClick2);
+					}
+					container.addChild(button_2, {
 						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
-					});
-					var output_5 = new cpr.controls.Output();
-					output_5.value = "3Depth";
-					output_5.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_5, {
-						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
-					});
-					var output_6 = new cpr.controls.Output();
-					output_6.value = "4Depth";
-					output_6.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_6, {
-						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
+						"width": "49px",
+						"height": "26px"
 					});
 				})(group_2);
 				container.addChild(group_2, {
@@ -164,17 +183,17 @@
 				formLayout_2.setRows(["26px"]);
 				group_4.setLayout(formLayout_2);
 				(function(container){
-					var output_7 = new cpr.controls.Output();
-					output_7.value = "교육과정";
-					output_7.style.setClasses(["label", "required"]);
-					container.addChild(output_7, {
+					var output_2 = new cpr.controls.Output();
+					output_2.value = "교육과정";
+					output_2.style.setClasses(["label", "required"]);
+					container.addChild(output_2, {
 						"colIndex": 0,
 						"rowIndex": 0
 					});
-					var output_8 = new cpr.controls.Output();
-					output_8.value = "입과년월";
-					output_8.style.setClasses(["label"]);
-					container.addChild(output_8, {
+					var output_3 = new cpr.controls.Output();
+					output_3.value = "입과년월";
+					output_3.style.setClasses(["label"]);
+					container.addChild(output_3, {
 						"colIndex": 2,
 						"rowIndex": 0
 					});
@@ -200,6 +219,20 @@
 						});
 						var searchInput_1 = new cpr.controls.SearchInput();
 						searchInput_1.value = "0527";
+						searchInput_1.style.css({
+							"border-right-style" : "dashed",
+							"border-top-width" : "3px",
+							"border-bottom-color" : "red",
+							"border-left-style" : "dashed",
+							"border-right-width" : "3px",
+							"border-bottom-width" : "3px",
+							"border-left-color" : "red",
+							"border-top-color" : "red",
+							"border-bottom-style" : "dashed",
+							"border-right-color" : "red",
+							"border-left-width" : "3px",
+							"border-top-style" : "dashed"
+						});
 						container.addChild(searchInput_1, {
 							"colIndex": 0,
 							"rowIndex": 0
@@ -209,17 +242,17 @@
 						"colIndex": 1,
 						"rowIndex": 0
 					});
-					var output_9 = new cpr.controls.Output();
-					output_9.value = "교육차수";
-					output_9.style.setClasses(["label"]);
-					container.addChild(output_9, {
+					var output_4 = new cpr.controls.Output();
+					output_4.value = "교육차수";
+					output_4.style.setClasses(["label"]);
+					container.addChild(output_4, {
 						"colIndex": 4,
 						"rowIndex": 0
 					});
-					var output_10 = new cpr.controls.Output();
-					output_10.value = "주관조직";
-					output_10.style.setClasses(["label"]);
-					container.addChild(output_10, {
+					var output_5 = new cpr.controls.Output();
+					output_5.value = "주관조직";
+					output_5.style.setClasses(["label"]);
+					container.addChild(output_5, {
 						"colIndex": 6,
 						"rowIndex": 0
 					});
@@ -233,10 +266,10 @@
 					flowLayout_2.leftMargin = 20;
 					group_6.setLayout(flowLayout_2);
 					(function(container){
-						var button_1 = new cpr.controls.Button();
-						button_1.value = "조회";
-						button_1.style.setClasses(["btn-search"]);
-						container.addChild(button_1, {
+						var button_3 = new cpr.controls.Button();
+						button_3.value = "조회";
+						button_3.style.setClasses(["btn-search"]);
+						container.addChild(button_3, {
 							"width": "49px",
 							"height": "26px"
 						});
@@ -265,6 +298,20 @@
 					(function(container){
 						var searchInput_2 = new cpr.controls.SearchInput();
 						searchInput_2.value = "000110";
+						searchInput_2.style.css({
+							"border-right-style" : "dashed",
+							"border-top-width" : "3px",
+							"border-bottom-color" : "red",
+							"border-left-style" : "dashed",
+							"border-right-width" : "3px",
+							"border-bottom-width" : "3px",
+							"border-left-color" : "red",
+							"border-top-color" : "red",
+							"border-bottom-style" : "dashed",
+							"border-right-color" : "red",
+							"border-left-width" : "3px",
+							"border-top-style" : "dashed"
+						});
 						container.addChild(searchInput_2, {
 							"colIndex": 0,
 							"rowIndex": 0
@@ -281,9 +328,23 @@
 						"rowIndex": 0
 					});
 					var dateInput_1 = new cpr.controls.DateInput("dti1");
-					dateInput_1.value = "201503";
+					dateInput_1.value = "202403";
 					dateInput_1.calendarType = "yearmonth";
 					dateInput_1.mask = "YYYY-MM";
+					dateInput_1.style.css({
+						"border-right-style" : "dashed",
+						"border-top-width" : "3px",
+						"border-bottom-color" : "red",
+						"border-left-style" : "dashed",
+						"border-right-width" : "3px",
+						"border-bottom-width" : "3px",
+						"border-left-color" : "red",
+						"border-top-color" : "red",
+						"border-bottom-style" : "dashed",
+						"border-right-color" : "red",
+						"border-left-width" : "3px",
+						"border-top-style" : "dashed"
+					});
 					container.addChild(dateInput_1, {
 						"colIndex": 3,
 						"rowIndex": 0,
@@ -293,6 +354,20 @@
 					var inputBox_3 = new cpr.controls.InputBox("ipb2");
 					inputBox_3.value = "1";
 					inputBox_3.style.setClasses(["text-right"]);
+					inputBox_3.style.css({
+						"border-right-style" : "dashed",
+						"border-top-width" : "3px",
+						"border-bottom-color" : "red",
+						"border-left-style" : "dashed",
+						"border-right-width" : "3px",
+						"border-bottom-width" : "3px",
+						"border-left-color" : "red",
+						"border-top-color" : "red",
+						"border-bottom-style" : "dashed",
+						"border-right-color" : "red",
+						"border-left-width" : "3px",
+						"border-top-style" : "dashed"
+					});
 					container.addChild(inputBox_3, {
 						"colIndex": 5,
 						"rowIndex": 0,
@@ -414,6 +489,7 @@
 									{
 										"constraint": {"rowIndex": 0, "colIndex": 0},
 										"configurator": function(cell){
+											cell.columnName = "";
 											cell.columnType = "checkbox";
 										}
 									},
@@ -422,10 +498,10 @@
 										"configurator": function(cell){
 											cell.columnName = "column1";
 											cell.control = (function(){
-												var output_11 = new cpr.controls.Output();
-												output_11.style.setClasses(["text-center"]);
-												output_11.bind("value").toDataColumn("column1");
-												return output_11;
+												var output_6 = new cpr.controls.Output();
+												output_6.style.setClasses(["text-center"]);
+												output_6.bind("value").toDataColumn("column1");
+												return output_6;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -447,10 +523,10 @@
 										"configurator": function(cell){
 											cell.columnName = "column3";
 											cell.control = (function(){
-												var output_12 = new cpr.controls.Output();
-												output_12.style.setClasses(["text-center"]);
-												output_12.bind("value").toDataColumn("column3");
-												return output_12;
+												var output_7 = new cpr.controls.Output();
+												output_7.style.setClasses(["text-center"]);
+												output_7.bind("value").toDataColumn("column3");
+												return output_7;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -474,10 +550,10 @@
 										"configurator": function(cell){
 											cell.columnName = "column5";
 											cell.control = (function(){
-												var output_13 = new cpr.controls.Output();
-												output_13.style.setClasses(["text-right"]);
-												output_13.bind("value").toDataColumn("column5");
-												return output_13;
+												var output_8 = new cpr.controls.Output();
+												output_8.style.setClasses(["text-right"]);
+												output_8.bind("value").toDataColumn("column5");
+												return output_8;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -487,10 +563,10 @@
 										"configurator": function(cell){
 											cell.columnName = "column6";
 											cell.control = (function(){
-												var output_14 = new cpr.controls.Output();
-												output_14.style.setClasses(["text-center"]);
-												output_14.bind("value").toDataColumn("column6");
-												return output_14;
+												var output_9 = new cpr.controls.Output();
+												output_9.style.setClasses(["text-center"]);
+												output_9.bind("value").toDataColumn("column6");
+												return output_9;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -500,10 +576,10 @@
 										"configurator": function(cell){
 											cell.columnName = "column7";
 											cell.control = (function(){
-												var output_15 = new cpr.controls.Output();
-												output_15.style.setClasses(["text-right"]);
-												output_15.bind("value").toDataColumn("column7");
-												return output_15;
+												var output_10 = new cpr.controls.Output();
+												output_10.style.setClasses(["text-right"]);
+												output_10.bind("value").toDataColumn("column7");
+												return output_10;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -546,24 +622,8 @@
 						flowLayout_3.lineWrap = false;
 						group_12.setLayout(flowLayout_3);
 						(function(container){
-							var button_2 = new cpr.controls.Button();
-							button_2.value = "행추가";
-							button_2.style.setClasses(["btn-secondary01"]);
-							container.addChild(button_2, {
-								"autoSize": "width",
-								"width": "60px",
-								"height": "30px"
-							});
-							var button_3 = new cpr.controls.Button();
-							button_3.value = "행삭제";
-							button_3.style.setClasses(["btn-secondary01"]);
-							container.addChild(button_3, {
-								"autoSize": "width",
-								"width": "60px",
-								"height": "30px"
-							});
 							var button_4 = new cpr.controls.Button();
-							button_4.value = "엑셀업로드";
+							button_4.value = "행추가";
 							button_4.style.setClasses(["btn-secondary01"]);
 							container.addChild(button_4, {
 								"autoSize": "width",
@@ -571,9 +631,25 @@
 								"height": "30px"
 							});
 							var button_5 = new cpr.controls.Button();
-							button_5.value = "초기화";
-							button_5.style.setClasses(["btn-primary04", "btn-md"]);
+							button_5.value = "행삭제";
+							button_5.style.setClasses(["btn-secondary01"]);
 							container.addChild(button_5, {
+								"autoSize": "width",
+								"width": "60px",
+								"height": "30px"
+							});
+							var button_6 = new cpr.controls.Button();
+							button_6.value = "엑셀업로드";
+							button_6.style.setClasses(["btn-secondary01"]);
+							container.addChild(button_6, {
+								"autoSize": "width",
+								"width": "60px",
+								"height": "30px"
+							});
+							var button_7 = new cpr.controls.Button();
+							button_7.value = "초기화";
+							button_7.style.setClasses(["btn-primary04", "btn-md"]);
+							container.addChild(button_7, {
 								"autoSize": "width",
 								"width": "60px",
 								"height": "30px"
@@ -605,10 +681,10 @@
 						flowLayout_5.lineWrap = false;
 						group_14.setLayout(flowLayout_5);
 						(function(container){
-							var button_6 = new cpr.controls.Button();
-							button_6.value = "저장";
-							button_6.style.setClasses(["btn-primary03"]);
-							container.addChild(button_6, {
+							var button_8 = new cpr.controls.Button();
+							button_8.value = "저장";
+							button_8.style.setClasses(["btn-primary03"]);
+							container.addChild(button_8, {
 								"autoSize": "width",
 								"width": "60px",
 								"height": "30px"

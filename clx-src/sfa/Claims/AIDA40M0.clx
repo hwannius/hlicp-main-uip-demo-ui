@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-00cf82c1" version="1.0.4074">
+  <head std:sid="head-3f07acb7">
+    <std:metadata>
+      <std:property key="template-file" value="templates/일반/2.그리드/그리드_수정X.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-3a89bed2" id="Hlicp-WIDE" name="Hlicp-WIDE" width="3160px" height="954px" active="false"/>
+    <screen std:sid="screen-a6f3b061" id="Hlicp-FULL" name="Hlicp-FULL" width="1600px" height="954px" active="true"/>
+    <screen std:sid="screen-17725fb1" id="Hlicp-DIV" name="Hlicp-DIV" width="790px" height="954px"/>
+    <screen std:sid="screen-fc2442ad" id="Hlicp-POP" name="Hlicp-POP" width="767px" height="400px" active="false"/>
+    <cl:model std:sid="model-ba211fda">
+      <cl:dataset std:sid="d-set-c1b76788" id="ds1">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-d00ef090" name="사고자"/>
+          <cl:datacolumn std:sid="d-column-095dcbc2" name="주민등록번호"/>
+          <cl:datacolumn std:sid="d-column-28ec8809" name="접수일자"/>
+          <cl:datacolumn std:sid="d-column-b12ecfe9" name="조사의뢰"/>
+          <cl:datacolumn std:sid="d-column-d7ecdf28" name="조사접수"/>
+          <cl:datacolumn std:sid="d-column-4c2bb9ac" name="조사분배"/>
+          <cl:datacolumn std:sid="d-column-6d59f011" name="조사통보"/>
+          <cl:datacolumn std:sid="d-column-794efe5c" name="지급일자"/>
+          <cl:datacolumn std:sid="d-column-383f388b" name="심사상태"/>
+          <cl:datacolumn std:sid="d-column-64f93e37" name="조사지역"/>
+          <cl:datacolumn std:sid="d-column-9367772e" name="담당자"/>
+          <cl:datacolumn std:sid="d-column-8839b52f" name="자동"/>
+          <cl:datacolumn std:sid="d-column-b7f63dea" name="합동"/>
+          <cl:datacolumn std:sid="d-column-4046ee80" name="추가"/>
+          <cl:datacolumn std:sid="d-column-5aebf621" name="장기미결"/>
+          <cl:datacolumn std:sid="d-column-97838991" name="입력여부"/>
+          <cl:datacolumn std:sid="d-column-9bdb98ef" name="손해사정자"/>
+          <cl:datacolumn std:sid="d-column-225d26ba" name="손해사정상태"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="사고자"><![CDATA[손길동]]></cl:datavalue>
+            <cl:datavalue columnname="주민등록번호"><![CDATA[7412221234567]]></cl:datavalue>
+            <cl:datavalue columnname="접수일자"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사의뢰"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사접수"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사분배"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사통보"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="지급일자"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="심사상태"><![CDATA[조사중]]></cl:datavalue>
+            <cl:datavalue columnname="조사지역"><![CDATA[서울지역]]></cl:datavalue>
+            <cl:datavalue columnname="담당자"><![CDATA[고]]></cl:datavalue>
+            <cl:datavalue columnname="자동"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="합동"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="추가"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="장기미결"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="입력여부"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="손해사정자"><![CDATA[조]]></cl:datavalue>
+            <cl:datavalue columnname="손해사정상태"><![CDATA[심사의뢰]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="사고자"><![CDATA[손길동]]></cl:datavalue>
+            <cl:datavalue columnname="주민등록번호"><![CDATA[7412221234567]]></cl:datavalue>
+            <cl:datavalue columnname="접수일자"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사의뢰"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사접수"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사분배"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사통보"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="지급일자"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="심사상태"><![CDATA[조사중]]></cl:datavalue>
+            <cl:datavalue columnname="조사지역"><![CDATA[서울지역]]></cl:datavalue>
+            <cl:datavalue columnname="담당자"><![CDATA[고]]></cl:datavalue>
+            <cl:datavalue columnname="자동"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="합동"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="추가"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="장기미결"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="입력여부"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="손해사정자"><![CDATA[조]]></cl:datavalue>
+            <cl:datavalue columnname="손해사정상태"><![CDATA[심사의뢰]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="사고자"><![CDATA[손길동]]></cl:datavalue>
+            <cl:datavalue columnname="주민등록번호"><![CDATA[7412221234567]]></cl:datavalue>
+            <cl:datavalue columnname="접수일자"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사의뢰"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사접수"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사분배"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사통보"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="지급일자"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="심사상태"><![CDATA[조사중]]></cl:datavalue>
+            <cl:datavalue columnname="조사지역"><![CDATA[서울지역]]></cl:datavalue>
+            <cl:datavalue columnname="담당자"><![CDATA[고]]></cl:datavalue>
+            <cl:datavalue columnname="자동"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="합동"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="추가"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="장기미결"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="입력여부"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="손해사정자"><![CDATA[조]]></cl:datavalue>
+            <cl:datavalue columnname="손해사정상태"><![CDATA[심사의뢰]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="사고자"><![CDATA[손길동]]></cl:datavalue>
+            <cl:datavalue columnname="주민등록번호"><![CDATA[7412221234567]]></cl:datavalue>
+            <cl:datavalue columnname="접수일자"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사의뢰"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사접수"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사분배"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사통보"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="지급일자"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="심사상태"><![CDATA[조사중]]></cl:datavalue>
+            <cl:datavalue columnname="조사지역"><![CDATA[서울지역]]></cl:datavalue>
+            <cl:datavalue columnname="담당자"><![CDATA[고]]></cl:datavalue>
+            <cl:datavalue columnname="자동"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="합동"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="추가"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="장기미결"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="입력여부"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="손해사정자"><![CDATA[조]]></cl:datavalue>
+            <cl:datavalue columnname="손해사정상태"><![CDATA[심사의뢰]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="사고자"><![CDATA[손길동]]></cl:datavalue>
+            <cl:datavalue columnname="주민등록번호"><![CDATA[7412221234567]]></cl:datavalue>
+            <cl:datavalue columnname="접수일자"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사의뢰"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사접수"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사분배"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사통보"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="지급일자"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="심사상태"><![CDATA[조사중]]></cl:datavalue>
+            <cl:datavalue columnname="조사지역"><![CDATA[서울지역]]></cl:datavalue>
+            <cl:datavalue columnname="담당자"><![CDATA[고]]></cl:datavalue>
+            <cl:datavalue columnname="자동"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="합동"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="추가"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="장기미결"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="입력여부"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="손해사정자"><![CDATA[조]]></cl:datavalue>
+            <cl:datavalue columnname="손해사정상태"><![CDATA[심사의뢰]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="사고자"><![CDATA[손길동]]></cl:datavalue>
+            <cl:datavalue columnname="주민등록번호"><![CDATA[7412221234567]]></cl:datavalue>
+            <cl:datavalue columnname="접수일자"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사의뢰"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사접수"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사분배"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사통보"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="지급일자"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="심사상태"><![CDATA[조사중]]></cl:datavalue>
+            <cl:datavalue columnname="조사지역"><![CDATA[서울지역]]></cl:datavalue>
+            <cl:datavalue columnname="담당자"><![CDATA[고]]></cl:datavalue>
+            <cl:datavalue columnname="자동"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="합동"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="추가"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="장기미결"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="입력여부"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="손해사정자"><![CDATA[조]]></cl:datavalue>
+            <cl:datavalue columnname="손해사정상태"><![CDATA[심사의뢰]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="사고자"><![CDATA[손길동]]></cl:datavalue>
+            <cl:datavalue columnname="주민등록번호"><![CDATA[7412221234567]]></cl:datavalue>
+            <cl:datavalue columnname="접수일자"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사의뢰"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사접수"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사분배"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사통보"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="지급일자"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="심사상태"><![CDATA[조사중]]></cl:datavalue>
+            <cl:datavalue columnname="조사지역"><![CDATA[서울지역]]></cl:datavalue>
+            <cl:datavalue columnname="담당자"><![CDATA[고]]></cl:datavalue>
+            <cl:datavalue columnname="자동"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="합동"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="추가"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="장기미결"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="입력여부"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="손해사정자"><![CDATA[조]]></cl:datavalue>
+            <cl:datavalue columnname="손해사정상태"><![CDATA[심사의뢰]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="사고자"><![CDATA[손길동]]></cl:datavalue>
+            <cl:datavalue columnname="주민등록번호"><![CDATA[7412221234567]]></cl:datavalue>
+            <cl:datavalue columnname="접수일자"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사의뢰"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사접수"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사분배"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사통보"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="지급일자"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="심사상태"><![CDATA[조사중]]></cl:datavalue>
+            <cl:datavalue columnname="조사지역"><![CDATA[서울지역]]></cl:datavalue>
+            <cl:datavalue columnname="담당자"><![CDATA[고]]></cl:datavalue>
+            <cl:datavalue columnname="자동"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="합동"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="추가"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="장기미결"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="입력여부"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="손해사정자"><![CDATA[조]]></cl:datavalue>
+            <cl:datavalue columnname="손해사정상태"><![CDATA[심사의뢰]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="사고자"><![CDATA[손길동]]></cl:datavalue>
+            <cl:datavalue columnname="주민등록번호"><![CDATA[7412221234567]]></cl:datavalue>
+            <cl:datavalue columnname="접수일자"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사의뢰"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사접수"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사분배"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사통보"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="지급일자"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="심사상태"><![CDATA[조사중]]></cl:datavalue>
+            <cl:datavalue columnname="조사지역"><![CDATA[서울지역]]></cl:datavalue>
+            <cl:datavalue columnname="담당자"><![CDATA[고]]></cl:datavalue>
+            <cl:datavalue columnname="자동"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="합동"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="추가"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="장기미결"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="입력여부"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="손해사정자"><![CDATA[조]]></cl:datavalue>
+            <cl:datavalue columnname="손해사정상태"><![CDATA[심사의뢰]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="사고자"><![CDATA[손길동]]></cl:datavalue>
+            <cl:datavalue columnname="주민등록번호"><![CDATA[7412221234567]]></cl:datavalue>
+            <cl:datavalue columnname="접수일자"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사의뢰"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사접수"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사분배"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사통보"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="지급일자"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="심사상태"><![CDATA[조사중]]></cl:datavalue>
+            <cl:datavalue columnname="조사지역"><![CDATA[서울지역]]></cl:datavalue>
+            <cl:datavalue columnname="담당자"><![CDATA[고]]></cl:datavalue>
+            <cl:datavalue columnname="자동"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="합동"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="추가"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="장기미결"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="입력여부"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="손해사정자"><![CDATA[조]]></cl:datavalue>
+            <cl:datavalue columnname="손해사정상태"><![CDATA[심사의뢰]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="사고자"><![CDATA[손길동]]></cl:datavalue>
+            <cl:datavalue columnname="주민등록번호"><![CDATA[7412221234567]]></cl:datavalue>
+            <cl:datavalue columnname="접수일자"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사의뢰"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사접수"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사분배"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="조사통보"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="지급일자"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="심사상태"><![CDATA[조사중]]></cl:datavalue>
+            <cl:datavalue columnname="조사지역"><![CDATA[서울지역]]></cl:datavalue>
+            <cl:datavalue columnname="담당자"><![CDATA[고]]></cl:datavalue>
+            <cl:datavalue columnname="자동"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="합동"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="추가"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="장기미결"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="입력여부"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="손해사정자"><![CDATA[조]]></cl:datavalue>
+            <cl:datavalue columnname="손해사정상태"><![CDATA[심사의뢰]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="조사건 총괄조회"/>
+  </head>
+  <body std:sid="body-89c09349" class="grid-window-body">
+    <cl:group std:sid="group-7cd9f0bd" id="grpAppTitle" class="app-title">
+      <cl:verticaldata std:sid="v-data-bc56bcc0" width="1560px" height="35px" autosize="height"/>
+      <cl:output std:sid="output-bde4fa50" id="optTitle2" class="navi-left" value="조사건 총괄조회">
+        <cl:formdata std:sid="f-data-54c51bb5" row="0" col="0"/>
+      </cl:output>
+      <cl:group std:sid="group-373b0678" id="grpNavi2" class="breadcrumbs">
+        <cl:formdata std:sid="f-data-417ee0ad" row="0" col="1"/>
+        <cl:output std:sid="output-8cb44099" class="home" value="">
+          <cl:flowlayoutdata std:sid="f-data-b950fad1" width="20px" height="20px"/>
+        </cl:output>
+        <cl:output std:sid="output-cc397308" class="breadcrumb-item" value="1Depth">
+          <cl:flowlayoutdata std:sid="f-data-d4de9799" width="45px" height="17px" autosize="width"/>
+        </cl:output>
+        <cl:output std:sid="output-27f5a6e6" class="breadcrumb-item" value="2Depth">
+          <cl:flowlayoutdata std:sid="f-data-f36ef822" width="45px" height="17px" autosize="width"/>
+        </cl:output>
+        <cl:output std:sid="output-781b1a9d" class="breadcrumb-item" value="3Depth">
+          <cl:flowlayoutdata std:sid="f-data-6f6b68cb" width="45px" height="17px" autosize="width"/>
+        </cl:output>
+        <cl:output std:sid="output-db593407" class="breadcrumb-item" value="4Depth">
+          <cl:flowlayoutdata std:sid="f-data-6fd1cf71" width="45px" height="17px" autosize="width"/>
+        </cl:output>
+        <cl:flowlayout std:sid="f-layout-dc9e6e8d" scrollable="false" hspacing="5" vspacing="0" halign="right" valign="middle" linewrap="false"/>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-7b3b9f0b" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-7203aded" id="grpBody" class="grid-content-body">
+      <cl:verticaldata std:sid="v-data-cdb52e8c" width="1884px" height="652px" autosize="height"/>
+      <cl:group std:sid="group-e1e74342">
+        <cl:verticaldata std:sid="v-data-61e2ae90" width="1884px" height="40px" autosize="height"/>
+        <cl:group std:sid="group-2f692740" id="grpTopSearchBox" class="search-box">
+          <cl:verticaldata std:sid="v-data-4fe95d7a" width="1884px" height="40px" autosize="height"/>
+          <cl:output std:sid="output-92c04caf" class="label" value="조회구분">
+            <cl:formdata std:sid="f-data-19aaf57d" row="0" col="0"/>
+          </cl:output>
+          <cl:combobox std:sid="c-box-19cdaf61" id="cmb1" value="1">
+            <cl:formdata std:sid="f-data-27f071dc" row="0" col="1"/>
+            <cl:item std:sid="t-item-21d33b4b" label="전체" value="1"/>
+          </cl:combobox>
+          <cl:output std:sid="output-57db873a" class="label" value="조사지역">
+            <cl:formdata std:sid="f-data-705ae905" row="0" col="2"/>
+          </cl:output>
+          <cl:combobox std:sid="c-box-8f62e9dd" id="cmb2" value="1">
+            <cl:formdata std:sid="f-data-33f14eeb" row="0" col="3"/>
+            <cl:item std:sid="t-item-126c011e" label="전체" value="1"/>
+          </cl:combobox>
+          <cl:output std:sid="output-31932a6c" class="label" value="조사자">
+            <cl:formdata std:sid="f-data-08d0b4e9" row="0" col="4"/>
+          </cl:output>
+          <cl:group std:sid="group-0b77768d" class="form-inside">
+            <cl:formdata std:sid="f-data-06d5df29" width="236" height="25" row="0" col="5"/>
+            <cl:group std:sid="group-f956950c" class="form-inside">
+              <cl:formdata std:sid="f-data-263127b1" row="0" col="1"/>
+              <cl:dateinput std:sid="d-input-5c22d468" id="dti1" value="20150220">
+                <cl:formdata std:sid="f-data-ccb24630" row="0" col="0"/>
+              </cl:dateinput>
+              <cl:output std:sid="output-6b157d01" class="text-center" value="-">
+                <cl:formdata std:sid="f-data-1758e23a" row="0" col="1"/>
+              </cl:output>
+              <cl:dateinput std:sid="d-input-808c22a5" id="dti2" value="20150320">
+                <cl:formdata std:sid="f-data-f605550b" row="0" col="2"/>
+              </cl:dateinput>
+              <cl:formlayout std:sid="f-layout-31e892c9" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="10" unit="PIXEL"/>
+                <cl:columns length="1" unit="FRACTION"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:group std:sid="group-dd5a70a7" class="form-inside">
+              <cl:formdata std:sid="f-data-fec797f5" row="0" col="0"/>
+              <cl:output std:sid="output-f193d55e" class="text-center" value="">
+                <cl:formdata std:sid="f-data-2572c856" row="0" col="1"/>
+              </cl:output>
+              <cl:combobox std:sid="c-box-bcfdaaf3" id="cmb3" value="1">
+                <cl:formdata std:sid="f-data-312a96bc" row="0" col="2"/>
+                <cl:item std:sid="t-item-a378ddab" label="접수일자" value="1"/>
+              </cl:combobox>
+              <cl:combobox std:sid="c-box-ac3aea6c" id="cmb4" value="1">
+                <cl:formdata std:sid="f-data-7abe8dde" row="0" col="0"/>
+                <cl:item std:sid="t-item-c15c2a84" label="전체" value="1"/>
+              </cl:combobox>
+              <cl:formlayout std:sid="f-layout-4ca84418" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="10" unit="PIXEL"/>
+                <cl:columns length="1" unit="FRACTION"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-c0fb0584" scrollable="false" hspace="5px" vspace="5px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:output std:sid="output-3165e87d" class="label" value="조사상태">
+            <cl:formdata std:sid="f-data-5be4e9d7" row="0" col="6"/>
+          </cl:output>
+          <cl:combobox std:sid="c-box-02fb6be0" id="cmb5" value="1">
+            <cl:formdata std:sid="f-data-eee5e599" row="0" col="7"/>
+            <cl:item std:sid="t-item-41e914cf" label="전체" value="1"/>
+          </cl:combobox>
+          <cl:output std:sid="output-92feb764" class="label" value="손사상태">
+            <cl:formdata std:sid="f-data-f946c164" row="0" col="8"/>
+          </cl:output>
+          <cl:combobox std:sid="c-box-0c8564f6" id="cmb6" value="1">
+            <cl:formdata std:sid="f-data-78e6903e" row="0" col="9"/>
+            <cl:item std:sid="t-item-c7eb58d5" label="전체" value="1"/>
+          </cl:combobox>
+          <cl:group std:sid="group-267e4d47" class="btn-flow-area">
+            <cl:formdata std:sid="f-data-78a5e07d" valign="CENTER" height="26" row="0" col="10" rowspan="1" colspan="1"/>
+            <cl:button std:sid="button-24adc0e2" class="btn-search" value="조회">
+              <cl:flowlayoutdata std:sid="f-data-1ff3f887" width="49px" height="26px"/>
+            </cl:button>
+            <cl:button std:sid="button-1319e8c2" class="btn-reset" value="">
+              <cl:flowlayoutdata std:sid="f-data-b478e1c3" width="26px" height="26px"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-3d6526c0" scrollable="false" vspacing="0" halign="right" linewrap="false" leftmargin="20"/>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-04e336ab" scrollable="false" hspace="20px" vspace="8px" top-margin="6px" right-margin="20px" bottom-margin="6px" left-margin="20px">
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:columns length="50" unit="PIXEL" autoSizing="true"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="50" autoSizing="true"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="50" autoSizing="true"/>
+            <cl:columns length="4" unit="FRACTION"/>
+            <cl:columns length="50" autoSizing="true"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="50" autoSizing="true"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="101" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" minlength="63" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-28a66f41" spacing="10"/>
+      </cl:group>
+      <cl:group std:sid="group-4335e437" class="tab-box">
+        <cl:verticaldata std:sid="v-data-6dec5a0f" width="1560px" height="605px" autosize="height"/>
+        <cl:tabfolder std:sid="t-folder-7194ae88">
+          <cl:verticaldata std:sid="v-data-99474ddc" width="767px" height="600px" autosize="height"/>
+          <cl:tabitem std:sid="t-item-eee7b9c9" selected="true" text="전체">
+            <cl:group std:sid="group-598ef3e6" class="tab-area">
+              <std:metadata>
+                <std:property key="locked" value="true"/>
+              </std:metadata>
+              <cl:group std:sid="group-fc5077ee" id="grp5">
+                <cl:verticaldata std:sid="v-data-455de489" width="1538px" height="536px" autosize="height"/>
+                <cl:group std:sid="group-9bf65007" id="grpBodyGroundGrid" class="grid-box box-spacing-free">
+                  <cl:verticaldata std:sid="v-data-df642346" width="1560px" height="498px" autosize="height"/>
+                  <cl:grid std:sid="grid-a1f930f1" id="grd1" class="list-normal" readonly="true" datasetid="ds1" resizablecolumns="all" columnMovable="true">
+                    <cl:datasetbind property="caption" datacontrolid="ds1" columnname="사고자" rowindex="0"/>
+                    <cl:verticaldata std:sid="v-data-b0a4b4c7" width="400px" height="498px"/>
+                    <cl:gridcolumn std:sid="g-column-43cb03c6"/>
+                    <cl:gridcolumn std:sid="g-column-a172668c"/>
+                    <cl:gridcolumn std:sid="g-column-2d4f1a96"/>
+                    <cl:gridcolumn std:sid="g-column-141e734f"/>
+                    <cl:gridcolumn std:sid="g-column-b6d96b8c"/>
+                    <cl:gridcolumn std:sid="g-column-4aaccb32"/>
+                    <cl:gridcolumn std:sid="g-column-5aa76564"/>
+                    <cl:gridcolumn std:sid="g-column-5a13dc87"/>
+                    <cl:gridcolumn std:sid="g-column-9b3dc1d6"/>
+                    <cl:gridcolumn std:sid="g-column-cbe23816"/>
+                    <cl:gridcolumn std:sid="g-column-463e49b7"/>
+                    <cl:gridcolumn std:sid="g-column-3938c932"/>
+                    <cl:gridcolumn std:sid="g-column-68da9701"/>
+                    <cl:gridcolumn std:sid="g-column-b2887ffe"/>
+                    <cl:gridcolumn std:sid="g-column-4af61574"/>
+                    <cl:gridcolumn std:sid="g-column-ddcfe56f"/>
+                    <cl:gridcolumn std:sid="g-column-6afa56a5"/>
+                    <cl:gridcolumn std:sid="g-column-7950efd6"/>
+                    <cl:gridheader std:sid="gh-band-1b725cb7">
+                      <cl:gridrow std:sid="g-row-7bfe7ff4" height="31px"/>
+                      <cl:gridcell std:sid="gh-cell-f143571a" rowindex="0" colindex="0" targetcolumnname="사고자" sortable="false" filterable="false" text="사고자"/>
+                      <cl:gridcell std:sid="gh-cell-6bb381e6" rowindex="0" colindex="1" targetcolumnname="주민등록번호" sortable="false" filterable="false" text="주민등록번호"/>
+                      <cl:gridcell std:sid="gh-cell-004d7ef7" rowindex="0" colindex="2" targetcolumnname="접수일자" sortable="false" filterable="false" text="접수일자"/>
+                      <cl:gridcell std:sid="gh-cell-d7649269" rowindex="0" colindex="3" targetcolumnname="조사의뢰" sortable="false" filterable="false" text="조사의뢰"/>
+                      <cl:gridcell std:sid="gh-cell-285edd3d" rowindex="0" colindex="4" targetcolumnname="조사접수" sortable="false" filterable="false" text="조사접수"/>
+                      <cl:gridcell std:sid="gh-cell-631d9047" rowindex="0" colindex="5" targetcolumnname="조사분배" sortable="false" filterable="false" text="조사분배"/>
+                      <cl:gridcell std:sid="gh-cell-743eda67" rowindex="0" colindex="6" targetcolumnname="조사통보" sortable="false" filterable="false" text="조사통보"/>
+                      <cl:gridcell std:sid="gh-cell-29bc7af3" rowindex="0" colindex="7" targetcolumnname="지급일자" sortable="false" filterable="false" text="지급일자"/>
+                      <cl:gridcell std:sid="gh-cell-39261873" rowindex="0" colindex="8" targetcolumnname="심사상태" sortable="false" filterable="false" text="심사상태"/>
+                      <cl:gridcell std:sid="gh-cell-4334ba93" rowindex="0" colindex="9" targetcolumnname="조사지역" sortable="false" filterable="false" text="조사지역"/>
+                      <cl:gridcell std:sid="gh-cell-00e6519f" rowindex="0" colindex="10" targetcolumnname="담당자" sortable="false" filterable="false" text="담당자"/>
+                      <cl:gridcell std:sid="gh-cell-6ac43b0e" rowindex="0" colindex="11" targetcolumnname="자동" sortable="false" filterable="false" text="자동"/>
+                      <cl:gridcell std:sid="gh-cell-38d45aed" rowindex="0" colindex="12" targetcolumnname="합동" sortable="false" filterable="false" text="합동"/>
+                      <cl:gridcell std:sid="gh-cell-3475f2db" rowindex="0" colindex="13" targetcolumnname="추가" sortable="false" filterable="false" text="추가"/>
+                      <cl:gridcell std:sid="gh-cell-a318077b" rowindex="0" colindex="14" targetcolumnname="장기미결" sortable="false" filterable="false" text="장기미결"/>
+                      <cl:gridcell std:sid="gh-cell-fd7b4f9f" rowindex="0" colindex="15" targetcolumnname="입력여부" sortable="false" filterable="false" text="입력여부"/>
+                      <cl:gridcell std:sid="gh-cell-06ee122d" rowindex="0" colindex="16" targetcolumnname="손해사정자" sortable="false" filterable="false" text="손해사정자"/>
+                      <cl:gridcell std:sid="gh-cell-3483e5dd" rowindex="0" colindex="17" targetcolumnname="손해사정상태" sortable="false" filterable="false" text="손해사정상태"/>
+                    </cl:gridheader>
+                    <cl:griddetail std:sid="gd-band-d5cd7543">
+                      <cl:gridrow std:sid="g-row-93dd7649" height="31px"/>
+                      <cl:gridcell std:sid="gd-cell-d28043c9" rowindex="0" colindex="0" columnname="사고자">
+                        <cl:output std:sid="output-d8f73276" class="text-center">
+                          <cl:celldata std:sid="c-data-6aa3ca4c"/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-4d8f3f0c" rowindex="0" colindex="1" columnname="주민등록번호">
+                        <cl:output std:sid="output-93f3f3fe" format="000000-*******">
+                          <cl:celldata std:sid="c-data-5b656a29"/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-1054926f" rowindex="0" colindex="2" columnname="접수일자">
+                        <cl:output std:sid="output-f7b62455" datatype="date" format="YYYY-MM-DD">
+                          <cl:celldata std:sid="c-data-7547f354"/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-ad7d6a5d" rowindex="0" colindex="3" columnname="조사의뢰">
+                        <cl:output std:sid="output-8d81112c" datatype="date" format="YYYY-MM-DD">
+                          <cl:celldata std:sid="c-data-88a179b6"/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-daf20f28" rowindex="0" colindex="4" columnname="조사접수">
+                        <cl:output std:sid="output-8443b153" datatype="date" format="YYYY-MM-DD">
+                          <cl:celldata std:sid="c-data-2f0e7b6a"/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-3951db14" rowindex="0" colindex="5" columnname="조사분배">
+                        <cl:output std:sid="output-bc8596dc" datatype="date" format="YYYY-MM-DD">
+                          <cl:celldata std:sid="c-data-2c5c01e3"/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-34035ae0" rowindex="0" colindex="6" columnname="조사통보">
+                        <cl:output std:sid="output-837734c8" datatype="date" format="YYYY-MM-DD">
+                          <cl:celldata std:sid="c-data-5373e39d"/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-07133a8a" rowindex="0" colindex="7" columnname="지급일자">
+                        <cl:output std:sid="output-77b1b6c8" datatype="date" format="YYYY-MM-DD">
+                          <cl:celldata std:sid="c-data-b8c53406"/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-613edc25" rowindex="0" colindex="8" columnname="심사상태">
+                        <cl:output std:sid="output-54452a98" class="text-center">
+                          <cl:celldata std:sid="c-data-48334068"/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-25ecacf5" rowindex="0" colindex="9" columnname="조사지역">
+                        <cl:output std:sid="output-8201add3" class="text-center">
+                          <cl:celldata std:sid="c-data-db971363"/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-9d760d2f" rowindex="0" colindex="10" columnname="담당자">
+                        <cl:output std:sid="output-c3cf738a" class="text-center">
+                          <cl:celldata std:sid="c-data-463e6de2"/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-e800f90e" rowindex="0" colindex="11" columnname="자동">
+                        <cl:output std:sid="output-7f333b1f" class="text-center">
+                          <cl:celldata std:sid="c-data-af6abee6"/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-cd3d2620" rowindex="0" colindex="12" columnname="합동">
+                        <cl:output std:sid="output-265f7ead" class="text-center">
+                          <cl:celldata std:sid="c-data-942d6f43"/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-315605f3" rowindex="0" colindex="13" columnname="추가">
+                        <cl:output std:sid="output-9a7714b6" class="text-center">
+                          <cl:celldata std:sid="c-data-35fd0d8e"/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-95eca78c" rowindex="0" colindex="14" columnname="장기미결">
+                        <cl:output std:sid="output-6e9e4368" class="text-center">
+                          <cl:celldata std:sid="c-data-c23150be"/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-b85fd34d" rowindex="0" colindex="15" columnname="입력여부">
+                        <cl:output std:sid="output-cc083bf6" class="text-center">
+                          <cl:celldata std:sid="c-data-37180915"/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-a1d2893a" rowindex="0" colindex="16" columnname="손해사정자">
+                        <cl:output std:sid="output-a87c6be3" class="text-center">
+                          <cl:celldata std:sid="c-data-6386b2c7"/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-43804fb5" rowindex="0" colindex="17" columnname="손해사정상태">
+                        <cl:output std:sid="output-b83d7b2c" class="text-center">
+                          <cl:celldata std:sid="c-data-3939e960"/>
+                        </cl:output>
+                      </cl:gridcell>
+                    </cl:griddetail>
+                  </cl:grid>
+                  <cl:verticallayout std:sid="v-layout-3a454f14" spacing="4"/>
+                </cl:group>
+                <cl:group std:sid="group-f5a9fdc0" id="grp1" class="button-table-area">
+                  <cl:verticaldata std:sid="v-data-8cd14901" width="1538px" height="30px" autosize="height"/>
+                  <cl:group std:sid="group-20b8d0aa" id="grp2" class="button-table-bottom-left-area">
+                    <cl:formdata std:sid="f-data-7f575d86" row="0" col="0"/>
+                    <cl:button std:sid="button-5eb0676a" id="btn1" class="btn-secondary01 btn-md" value="엑셀다운로드">
+                      <cl:flowlayoutdata std:sid="f-data-d4ef97fd" width="60px" height="30px" autosize="width"/>
+                    </cl:button>
+                    <cl:flowlayout std:sid="f-layout-5fb1d0db" scrollable="false" hspacing="10" vspacing="0" linewrap="false"/>
+                  </cl:group>
+                  <cl:group std:sid="group-9d84ea4c" id="grp3" class="button-table-bottom-center-area">
+                    <cl:formdata std:sid="f-data-71b9d8fa" row="0" col="1"/>
+                    <cl:flowlayout std:sid="f-layout-60c2852b" scrollable="false" hspacing="10" vspacing="0" halign="center"/>
+                  </cl:group>
+                  <cl:group std:sid="group-5aa6c261" id="grp4" class="button-table-bottom-right-area">
+                    <cl:formdata std:sid="f-data-811afdad" row="0" col="2"/>
+                    <cl:button std:sid="button-6561a753" id="btn2" class="btn-primary04 btn-md" value="장기미결">
+                      <cl:flowlayoutdata std:sid="f-data-b5dd94f4" width="60px" height="30px" autosize="width"/>
+                    </cl:button>
+                    <cl:button std:sid="button-81887ebc" id="btn3" class="btn-primary04 btn-md" value="조사보고서">
+                      <cl:flowlayoutdata std:sid="f-data-7b7f7b8c" width="60px" height="30px" autosize="width"/>
+                    </cl:button>
+                    <cl:button std:sid="button-c67fd309" id="btn4" class="btn-primary04 btn-md" value="조사자분배">
+                      <cl:flowlayoutdata std:sid="f-data-ffae77db" width="60px" height="30px" autosize="width"/>
+                    </cl:button>
+                    <cl:button std:sid="button-3579307e" id="btn5" class="btn-primary04 btn-md" value="조사건조회">
+                      <cl:flowlayoutdata std:sid="f-data-a5c00e08" width="60px" height="30px" autosize="width"/>
+                    </cl:button>
+                    <cl:button std:sid="button-73e40d00" id="btn6" class="btn-primary04 btn-md" value="다음">
+                      <cl:flowlayoutdata std:sid="f-data-1fa06943" width="60px" height="30px" autosize="width"/>
+                    </cl:button>
+                    <cl:flowlayout std:sid="f-layout-872f1d8d" scrollable="false" hspacing="10" vspacing="0" halign="right" linewrap="false"/>
+                  </cl:group>
+                  <cl:formlayout std:sid="f-layout-c22db278" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                    <cl:rows length="1" unit="FRACTION"/>
+                    <cl:columns length="1" unit="FRACTION"/>
+                    <cl:columns length="100" unit="PIXEL" autoSizing="true" minlength="43" syncminlength="false"/>
+                    <cl:columns length="1" unit="FRACTION"/>
+                  </cl:formlayout>
+                </cl:group>
+                <cl:verticallayout std:sid="v-layout-84130e31" spacing="8"/>
+              </cl:group>
+              <cl:verticallayout std:sid="v-layout-e860783b" spacing="12"/>
+            </cl:group>
+          </cl:tabitem>
+          <cl:tabitem std:sid="t-item-6a7313f9" text="합동">
+            <cl:group std:sid="group-8541ddc2" class="tab-area">
+              <std:metadata>
+                <std:property key="locked" value="true"/>
+              </std:metadata>
+              <cl:embeddedapp std:sid="e-app-a6f47276" id="ea2">
+                <cl:verticaldata std:sid="v-data-83f91028" width="1538px" height="539px" autosize="height"/>
+              </cl:embeddedapp>
+              <cl:verticallayout std:sid="v-layout-9c8458b2" spacing="12"/>
+            </cl:group>
+          </cl:tabitem>
+          <cl:tabitem std:sid="t-item-2fe18c34" text="합동반려">
+            <std:metadata>
+              <std:property key="is-active-item" value="true"/>
+            </std:metadata>
+            <cl:group std:sid="group-7df570e4" class="tab-area">
+              <std:metadata>
+                <std:property key="locked" value="true"/>
+              </std:metadata>
+              <cl:embeddedapp std:sid="e-app-76a9d4e2" id="ea1">
+                <cl:verticaldata std:sid="v-data-c6cb50e9" width="1538px" height="539px" autosize="height"/>
+              </cl:embeddedapp>
+              <cl:verticallayout std:sid="v-layout-8311068e" spacing="12"/>
+            </cl:group>
+          </cl:tabitem>
+          <cl:group std:sid="group-046ae11e" class="button-table-top-area">
+            <cl:headercontroldata std:sid="thc-data-9ef77517" width="227" position="right"/>
+            <cl:checkboxgroup std:sid="cb-group-888443e0" id="cbg1">
+              <cl:flowlayoutdata std:sid="f-data-17cea832" width="227px" height="26px" autosize="width"/>
+              <cl:item std:sid="item-1d27faa9" label="통보후 지급대기" value="value1"/>
+              <cl:item std:sid="item-fc45464a" label="장기미결" value="value2"/>
+            </cl:checkboxgroup>
+            <cl:flowlayout std:sid="f-layout-4e4e0911" scrollable="false" hspacing="5" vspacing="0" halign="right" linewrap="false" leftmargin="0" rightmargin="0" topmargin="10" bottommargin="0"/>
+          </cl:group>
+        </cl:tabfolder>
+        <cl:verticallayout std:sid="v-layout-8c6568e8" spacing="8"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-6bed78a8" scrollable="false" spacing="7"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-aba164b4" spacing="12" leftmargin="20" rightmargin="20" topmargin="20" bottommargin="10"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

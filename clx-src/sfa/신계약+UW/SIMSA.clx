@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-00cf82c1" version="1.0.4074">
+  <head std:sid="head-3f07acb7">
+    <screen std:sid="screen-3a89bed2" id="Hlicp-WIDE" name="Hlicp-WIDE" width="3160px" height="954px" active="false"/>
+    <screen std:sid="screen-a6f3b061" id="Hlicp-FULL" name="Hlicp-FULL" width="1600px" height="954px" active="true"/>
+    <screen std:sid="screen-17725fb1" id="Hlicp-DIV" name="Hlicp-DIV" width="790px" height="954px"/>
+    <screen std:sid="screen-fc2442ad" id="Hlicp-POP" name="Hlicp-POP" width="767px" height="400px"/>
+    <cl:model std:sid="model-ba211fda">
+      <cl:dataset std:sid="d-set-ab072085" id="ds1">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-f7ae4945" name="피보험자명"/>
+          <cl:datacolumn std:sid="d-column-a5e85938" name="등록구분"/>
+          <cl:datacolumn std:sid="d-column-68920826" name="조건부계약유형"/>
+          <cl:datacolumn std:sid="d-column-6cb420af" name="명칭"/>
+          <cl:datacolumn std:sid="d-column-0422effa" name="면책기간"/>
+          <cl:datacolumn std:sid="d-column-05a966ab" name="보험금삭감기간"/>
+          <cl:datacolumn std:sid="d-column-1129d6c4" name="명칭1"/>
+          <cl:datacolumn std:sid="d-column-378440b0" name="비율"/>
+          <cl:datacolumn std:sid="d-column-4ab88cf6" name="비고"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist/>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="기본계약사항"/>
+  </head>
+  <body std:sid="body-89c09349" class="grid-window-body">
+    <cl:group std:sid="group-aff2fa45" id="grpBody" style="background-image:url('심사자분배기준예시.png');" class="grid-content-body">
+      <cl:listener std:sid="listener-571c6d40" name="click" handler="onGrpBodyClick"/>
+      <cl:verticaldata std:sid="v-data-8b536d24" width="1374px" height="524px" autosize="none"/>
+      <cl:xylayout std:sid="xylayout-d5c621fe"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-aba164b4" spacing="0" leftmargin="20" rightmargin="20" topmargin="20" bottommargin="10"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

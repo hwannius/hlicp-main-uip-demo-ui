@@ -16,7 +16,43 @@
 			 * Created at 2024. 4. 2. 오전 10:59:48.
 			 *
 			 * @author User
-			 ************************************************/;
+			 ************************************************/
+
+			/*
+			 * "이전" 버튼에서 click 이벤트 발생 시 호출.
+			 * 사용자가 컨트롤을 클릭할 때 발생하는 이벤트.
+			 */
+			function onButtonClick(e){
+				var button = e.control;
+				//화면이동(현재 화면에서 리로드)
+				var host = app.getHost(); // 부모 임베디드 앱
+				cpr.core.App.load("sfa/영업/SLGD01M0_1", function(loadedApp) {
+				    if (loadedApp) {
+				        host.app = loadedApp;
+				        host.initValue = {
+				            "param": "param"
+				        }
+				    }
+				});
+			}
+
+			/*
+			 * "다음" 버튼에서 click 이벤트 발생 시 호출.
+			 * 사용자가 컨트롤을 클릭할 때 발생하는 이벤트.
+			 */
+			function onButtonClick2(e){
+				var button = e.control;
+				//화면이동(현재 화면에서 리로드)
+				var host = app.getHost(); // 부모 임베디드 앱
+				cpr.core.App.load("sfa/영업/SLGA30M0_1", function(loadedApp) {
+				    if (loadedApp) {
+				        host.app = loadedApp;
+				        host.initValue = {
+				            "param": "param"
+				        }
+				    }
+				});
+			};
 			// End - User Script
 			
 			// Header
@@ -27,26 +63,25 @@
 					{"name": "column3"}
 				],
 				"rows": [
-					{"column1": "신계약건수", "column3": "4"},
 					{"column1": "월납초회", "column3": "3235000"},
-					{"column1": "비월납", "column3": "0"},
-					{"column1": "일시납", "column3": "0"},
-					{"column1": "환산월초", "column3": "0"},
-					{"column1": "월납", "column3": "0"},
-					{"column1": "일시납", "column3": "0"},
-					{"column1": "환수월초", "column3": "0"},
-					{"column1": "미유지환수월초", "column3": "0"},
-					{"column1": "해지환수월초", "column3": "0"},
-					{"column1": "부활월초", "column3": "0"},
-					{"column1": "정산월초", "column3": "0"},
-					{"column1": "환산월초 - 전월", "column3": "0"},
-					{"column1": "2~1 3확정모집", "column3": "0"},
-					{"column1": "2~1 3확정유지", "column3": "0"},
-					{"column1": "2~1 3유지율", "column3": "0"},
-					{"column1": "2~1 2해당모집", "column3": "0"},
-					{"column1": "2~1 2해당유지", "column3": "0"},
-					{"column1": "2~1 2유지율", "column3": "0"},
-					{"column1": "RM항목달성수", "column3": "0"}
+					{"column1": " -비월납", "column3": "0"},
+					{"column1": " -일시납", "column3": "0"},
+					{"column1": "ⓞ 환산월초", "column3": "2336250"},
+					{"column1": " -월납", "column3": "2336250"},
+					{"column1": " -일시납", "column3": "0"},
+					{"column1": "ⓞ 환수월초", "column3": "0"},
+					{"column1": " 미유지환수월초", "column3": "0"},
+					{"column1": " 해지환수월초", "column3": "0"},
+					{"column1": " 부활월초", "column3": "0"},
+					{"column1": " 정산월초", "column3": "2336250"},
+					{"column1": " 환산월초 - 전월", "column3": "4550000"},
+					{"column1": " 2~1 3확정모집", "column3": "14145070"},
+					{"column1": " 2~1 3확정유지", "column3": "14145070"},
+					{"column1": " 2~1 3유지율", "column3": "100"},
+					{"column1": " 2~1 2해당모집", "column3": "18695070"},
+					{"column1": " 2~1 2해당유지", "column3": "15818670"},
+					{"column1": " 2~1 2유지율", "column3": "84.6"},
+					{"column1": " RM항목달성수", "column3": "3"}
 				]
 			});
 			app.register(dataSet_1);
@@ -58,25 +93,27 @@
 					{"name": "column3"}
 				],
 				"rows": [
-					{"column1": "과세표준액", "column3": "16,203,107"},
-					{"column1": "비월납", "column3": "3,235,000"},
-					{"column1": "일시납", "column3": "0"},
-					{"column1": "환산월초", "column3": "0"},
-					{"column1": "월납", "column3": "0"},
-					{"column1": "일시납", "column3": "0"},
-					{"column1": "환수월초", "column3": "0"},
-					{"column1": "미유지환수월초", "column3": "0"},
-					{"column1": "해지환수월초", "column3": "0"},
-					{"column1": "부활월초", "column3": "0"},
-					{"column1": "정산월초", "column3": "0"},
-					{"column1": "환산월초 - 전월", "column3": "0"},
-					{"column1": "2~1 3확정모집", "column3": "0"},
-					{"column1": "2~1 3확정유지", "column3": "0"},
-					{"column1": "2~1 3유지율", "column3": "0"},
-					{"column1": "2~1 2해당모집", "column3": "0"},
-					{"column1": "2~1 2해당유지", "column3": "0"},
-					{"column1": "2~1 2유지율", "column3": "0"},
-					{"column1": "RM항목달성수", "column3": "0"}
+					{"column1": "▣ 비례성지급", "column3": " "},
+					{"column1": " 모집수수료(1)", "column3": "4906125"},
+					{"column1": " 모집수수료(2)", "column3": "1593067"},
+					{"column1": " 정학수수료(2)", "column3": "467250"},
+					{"column1": "▣ 지원성지급", "column3": ""},
+					{"column1": " 리크루팅수수료", "column3": "1100000"},
+					{"column1": " 정착수수료_후지급", "column3": "6500000"},
+					{"column1": "▣ 복리후생", "column3": ""},
+					{"column1": " 노트북구입지원비", "column3": "100000"},
+					{"column1": "▣ 기타정산", "column3": ""},
+					{"column1": "▣ 당월환수", "column3": ""},
+					{"column1": " 비례성환수", "column3": ""},
+					{"column1": " 지원성환수", "column3": ""},
+					{"column1": "", "column3": ""},
+					{"column1": "▣ 기초수수료1", "column3": "14666442"},
+					{"column1": " 간부수수료", "column3": "0"},
+					{"column1": " 간부환수", "column3": "0"},
+					{"column1": " 간부최저보장", "column3": "0"},
+					{"column1": " 간부지급계", "column3": "0"},
+					{"column1": " 개인환수", "column3": "0"},
+					{"column1": " 개인수수료", "column3": "0"}
 				]
 			});
 			app.register(dataSet_2);
@@ -88,25 +125,24 @@
 					{"name": "column3"}
 				],
 				"rows": [
-					{"column1": "비례성지급", "column3": ""},
-					{"column1": "비월납", "column3": "3,235,000"},
-					{"column1": "일시납", "column3": "0"},
-					{"column1": "환산월초", "column3": "0"},
-					{"column1": "월납", "column3": "0"},
-					{"column1": "일시납", "column3": "0"},
-					{"column1": "환수월초", "column3": "0"},
-					{"column1": "미유지환수월초", "column3": "0"},
-					{"column1": "해지환수월초", "column3": "0"},
-					{"column1": "부활월초", "column3": "0"},
-					{"column1": "정산월초", "column3": "0"},
-					{"column1": "환산월초 - 전월", "column3": "0"},
-					{"column1": "2~1 3확정모집", "column3": "0"},
-					{"column1": "2~1 3확정유지", "column3": "0"},
-					{"column1": "2~1 3유지율", "column3": "0"},
-					{"column1": "2~1 2해당모집", "column3": "0"},
-					{"column1": "2~1 2해당유지", "column3": "0"},
-					{"column1": "2~1 2유지율", "column3": "0"},
-					{"column1": "RM항목달성수", "column3": "0"}
+					{"column1": "▣ 과세표준액", "column3": "16203407"},
+					{"column1": " 비례수입계", "column3": "14666442"},
+					{"column1": " 유사수수료", "column3": "1536965"},
+					{"column1": "  판촉비", "column3": "1536965"},
+					{"column1": "  과표취소", "column3": "0"},
+					{"column1": "▣ 공제계", "column3": "882550"},
+					{"column1": " 사업소득세", "column3": "486100"},
+					{"column1": " 사업주민세", "column3": "48610"},
+					{"column1": " 신원보증보험료공제", "column3": "0"},
+					{"column1": " 이행보증-수당", "column3": "0"},
+					{"column1": "이행보증-지원", "column3": "0"},
+					{"column1": " 개인보험료공제", "column3": "347840"},
+					{"column1": "", "column3": ""},
+					{"column1": "▣ 실지급액", "column3": "13783892"},
+					{"column1": " 수수료이체여부", "column3": "1"},
+					{"column1": "", "column3": ""},
+					{"column1": "▣ 적립금잔액", "column3": "2688805"},
+					{"column1": "▣ 미환수잔액", "column3": "0"}
 				]
 			});
 			app.register(dataSet_3);
@@ -181,44 +217,27 @@
 				flowLayout_1.lineWrap = false;
 				group_2.setLayout(flowLayout_1);
 				(function(container){
-					var output_2 = new cpr.controls.Output();
-					output_2.value = "";
-					output_2.style.setClasses(["home"]);
-					container.addChild(output_2, {
-						"width": "20px",
-						"height": "20px"
-					});
-					var output_3 = new cpr.controls.Output();
-					output_3.value = "1Depth";
-					output_3.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_3, {
+					var button_1 = new cpr.controls.Button();
+					button_1.value = "이전";
+					button_1.style.setClasses(["btn-primary04", "btn-md"]);
+					if(typeof onButtonClick == "function") {
+						button_1.addEventListener("click", onButtonClick);
+					}
+					container.addChild(button_1, {
 						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
+						"width": "49px",
+						"height": "26px"
 					});
-					var output_4 = new cpr.controls.Output();
-					output_4.value = "2Depth";
-					output_4.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_4, {
+					var button_2 = new cpr.controls.Button();
+					button_2.value = "다음";
+					button_2.style.setClasses(["btn-primary04", "btn-md"]);
+					if(typeof onButtonClick2 == "function") {
+						button_2.addEventListener("click", onButtonClick2);
+					}
+					container.addChild(button_2, {
 						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
-					});
-					var output_5 = new cpr.controls.Output();
-					output_5.value = "3Depth";
-					output_5.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_5, {
-						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
-					});
-					var output_6 = new cpr.controls.Output();
-					output_6.value = "4Depth";
-					output_6.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_6, {
-						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
+						"width": "49px",
+						"height": "26px"
 					});
 				})(group_2);
 				container.addChild(group_2, {
@@ -262,10 +281,10 @@
 					formLayout_2.setRows(["26px"]);
 					group_5.setLayout(formLayout_2);
 					(function(container){
-						var output_7 = new cpr.controls.Output();
-						output_7.value = "사원번호";
-						output_7.style.setClasses(["label"]);
-						container.addChild(output_7, {
+						var output_2 = new cpr.controls.Output();
+						output_2.value = "사원번호";
+						output_2.style.setClasses(["label"]);
+						container.addChild(output_2, {
 							"colIndex": 0,
 							"rowIndex": 0
 						});
@@ -285,13 +304,27 @@
 						(function(container){
 							var searchInput_1 = new cpr.controls.SearchInput();
 							searchInput_1.value = "0001120372";
+							searchInput_1.style.css({
+								"border-right-style" : "dashed",
+								"border-top-width" : "3px",
+								"border-bottom-color" : "red",
+								"border-left-style" : "dashed",
+								"border-right-width" : "3px",
+								"border-bottom-width" : "3px",
+								"border-left-color" : "red",
+								"border-top-color" : "red",
+								"border-bottom-style" : "dashed",
+								"border-right-color" : "red",
+								"border-left-width" : "3px",
+								"border-top-style" : "dashed"
+							});
 							container.addChild(searchInput_1, {
 								"colIndex": 0,
 								"rowIndex": 0
 							});
 							var inputBox_1 = new cpr.controls.InputBox("ipb3");
 							inputBox_1.enabled = false;
-							inputBox_1.value = "홍길동";
+							inputBox_1.value = "김*국";
 							container.addChild(inputBox_1, {
 								"colIndex": 1,
 								"rowIndex": 0
@@ -301,28 +334,42 @@
 							"colIndex": 1,
 							"rowIndex": 0
 						});
-						var output_8 = new cpr.controls.Output();
-						output_8.value = "마감년월";
-						output_8.style.setClasses(["label", "required"]);
-						container.addChild(output_8, {
+						var output_3 = new cpr.controls.Output();
+						output_3.value = "마감년월";
+						output_3.style.setClasses(["label", "required"]);
+						container.addChild(output_3, {
 							"colIndex": 2,
 							"rowIndex": 0
 						});
 						var dateInput_1 = new cpr.controls.DateInput("dti1");
-						dateInput_1.value = "201411";
+						dateInput_1.value = "202311";
 						dateInput_1.calendarType = "yearmonth";
 						dateInput_1.mask = "YYYY-MM";
 						dateInput_1.format = "YYYYMM";
+						dateInput_1.style.css({
+							"border-right-style" : "dashed",
+							"border-top-width" : "3px",
+							"border-bottom-color" : "red",
+							"border-left-style" : "dashed",
+							"border-right-width" : "3px",
+							"border-bottom-width" : "3px",
+							"border-left-color" : "red",
+							"border-top-color" : "red",
+							"border-bottom-style" : "dashed",
+							"border-right-color" : "red",
+							"border-left-width" : "3px",
+							"border-top-style" : "dashed"
+						});
 						container.addChild(dateInput_1, {
 							"colIndex": 3,
 							"rowIndex": 0,
 							"horizontalAlign": "left",
 							"width": 100
 						});
-						var output_9 = new cpr.controls.Output();
-						output_9.value = "GA조직번호";
-						output_9.style.setClasses(["label"]);
-						container.addChild(output_9, {
+						var output_4 = new cpr.controls.Output();
+						output_4.value = "GA조직번호";
+						output_4.style.setClasses(["label"]);
+						container.addChild(output_4, {
 							"colIndex": 4,
 							"rowIndex": 0
 						});
@@ -342,6 +389,20 @@
 						(function(container){
 							var searchInput_2 = new cpr.controls.SearchInput();
 							searchInput_2.value = "";
+							searchInput_2.style.css({
+								"border-right-style" : "dashed",
+								"border-top-width" : "3px",
+								"border-bottom-color" : "red",
+								"border-left-style" : "dashed",
+								"border-right-width" : "3px",
+								"border-bottom-width" : "3px",
+								"border-left-color" : "red",
+								"border-top-color" : "red",
+								"border-bottom-style" : "dashed",
+								"border-right-color" : "red",
+								"border-left-width" : "3px",
+								"border-top-style" : "dashed"
+							});
 							container.addChild(searchInput_2, {
 								"colIndex": 0,
 								"rowIndex": 0
@@ -368,17 +429,17 @@
 						flowLayout_2.leftMargin = 20;
 						group_8.setLayout(flowLayout_2);
 						(function(container){
-							var button_1 = new cpr.controls.Button("btn1");
-							button_1.value = "조회";
-							button_1.style.setClasses(["btn-search"]);
-							container.addChild(button_1, {
+							var button_3 = new cpr.controls.Button("btn1");
+							button_3.value = "조회";
+							button_3.style.setClasses(["btn-search"]);
+							container.addChild(button_3, {
 								"width": "49px",
 								"height": "26px"
 							});
-							var button_2 = new cpr.controls.Button("btn2");
-							button_2.value = "";
-							button_2.style.setClasses(["btn-reset"]);
-							container.addChild(button_2, {
+							var button_4 = new cpr.controls.Button("btn2");
+							button_4.value = "";
+							button_4.style.setClasses(["btn-reset"]);
+							container.addChild(button_4, {
 								"width": "26px",
 								"height": "26px"
 							});
@@ -517,10 +578,10 @@
 										"configurator": function(cell){
 											cell.columnName = "column1";
 											cell.control = (function(){
-												var output_10 = new cpr.controls.Output();
-												output_10.style.setClasses(["text-center"]);
-												output_10.bind("value").toDataColumn("column1");
-												return output_10;
+												var output_5 = new cpr.controls.Output();
+												output_5.style.setClasses(["text-center"]);
+												output_5.bind("value").toDataColumn("column1");
+												return output_5;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -530,9 +591,9 @@
 										"configurator": function(cell){
 											cell.columnName = "column2";
 											cell.control = (function(){
-												var output_11 = new cpr.controls.Output();
-												output_11.bind("value").toDataColumn("column2");
-												return output_11;
+												var output_6 = new cpr.controls.Output();
+												output_6.bind("value").toDataColumn("column2");
+												return output_6;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -542,12 +603,12 @@
 										"configurator": function(cell){
 											cell.columnName = "column3";
 											cell.control = (function(){
-												var output_12 = new cpr.controls.Output("opt28");
-												output_12.value = "20241231";
-												output_12.dataType = "date";
-												output_12.format = "YYYY-MM-DD";
-												output_12.bind("value").toDataColumn("column3");
-												return output_12;
+												var output_7 = new cpr.controls.Output("opt28");
+												output_7.value = "20241231";
+												output_7.dataType = "date";
+												output_7.format = "YYYY-MM-DD";
+												output_7.bind("value").toDataColumn("column3");
+												return output_7;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -557,10 +618,10 @@
 										"configurator": function(cell){
 											cell.columnName = "column4";
 											cell.control = (function(){
-												var output_13 = new cpr.controls.Output();
-												output_13.style.setClasses(["text-center"]);
-												output_13.bind("value").toDataColumn("column4");
-												return output_13;
+												var output_8 = new cpr.controls.Output();
+												output_8.style.setClasses(["text-center"]);
+												output_8.bind("value").toDataColumn("column4");
+												return output_8;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -570,10 +631,10 @@
 										"configurator": function(cell){
 											cell.columnName = "column5";
 											cell.control = (function(){
-												var output_14 = new cpr.controls.Output();
-												output_14.style.setClasses(["text-center"]);
-												output_14.bind("value").toDataColumn("column5");
-												return output_14;
+												var output_9 = new cpr.controls.Output();
+												output_9.style.setClasses(["text-center"]);
+												output_9.bind("value").toDataColumn("column5");
+												return output_9;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -583,10 +644,10 @@
 										"configurator": function(cell){
 											cell.columnName = "column6";
 											cell.control = (function(){
-												var output_15 = new cpr.controls.Output();
-												output_15.style.setClasses(["text-center"]);
-												output_15.bind("value").toDataColumn("column6");
-												return output_15;
+												var output_10 = new cpr.controls.Output();
+												output_10.style.setClasses(["text-center"]);
+												output_10.bind("value").toDataColumn("column6");
+												return output_10;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -596,10 +657,10 @@
 										"configurator": function(cell){
 											cell.columnName = "column7";
 											cell.control = (function(){
-												var output_16 = new cpr.controls.Output();
-												output_16.style.setClasses(["text-center"]);
-												output_16.bind("value").toDataColumn("column7");
-												return output_16;
+												var output_11 = new cpr.controls.Output();
+												output_11.style.setClasses(["text-center"]);
+												output_11.bind("value").toDataColumn("column7");
+												return output_11;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -609,10 +670,10 @@
 										"configurator": function(cell){
 											cell.columnName = "column8";
 											cell.control = (function(){
-												var output_17 = new cpr.controls.Output();
-												output_17.style.setClasses(["text-center"]);
-												output_17.bind("value").toDataColumn("column8");
-												return output_17;
+												var output_12 = new cpr.controls.Output();
+												output_12.style.setClasses(["text-center"]);
+												output_12.bind("value").toDataColumn("column8");
+												return output_12;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -622,10 +683,10 @@
 										"configurator": function(cell){
 											cell.columnName = "column9";
 											cell.control = (function(){
-												var output_18 = new cpr.controls.Output();
-												output_18.style.setClasses(["text-center"]);
-												output_18.bind("value").toDataColumn("column9");
-												return output_18;
+												var output_13 = new cpr.controls.Output();
+												output_13.style.setClasses(["text-center"]);
+												output_13.bind("value").toDataColumn("column9");
+												return output_13;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -635,10 +696,10 @@
 										"configurator": function(cell){
 											cell.columnName = "column10";
 											cell.control = (function(){
-												var output_19 = new cpr.controls.Output();
-												output_19.style.setClasses(["text-center"]);
-												output_19.bind("value").toDataColumn("column10");
-												return output_19;
+												var output_14 = new cpr.controls.Output();
+												output_14.style.setClasses(["text-center"]);
+												output_14.bind("value").toDataColumn("column10");
+												return output_14;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -689,16 +750,43 @@
 									{"width": "100px"}
 								],
 								"header": {
-									"rows": [{"height": "31px"}],
-									"cells": [{
-										"constraint": {"rowIndex": 0, "colIndex": 0, "rowSpan": 1, "colSpan": 2},
-										"configurator": function(cell){
-											cell.filterable = false;
-											cell.sortable = false;
-											cell.targetColumnName = "column1";
-											cell.text = "기초실적";
+									"rows": [
+										{"height": "31px"},
+										{"height": "31px"}
+									],
+									"cells": [
+										{
+											"constraint": {"rowIndex": 0, "colIndex": 0, "rowSpan": 1, "colSpan": 2},
+											"configurator": function(cell){
+												cell.filterable = false;
+												cell.sortable = false;
+												cell.targetColumnName = "column1";
+												cell.text = "기초실적";
+											}
+										},
+										{
+											"constraint": {"rowIndex": 1, "colIndex": 0},
+											"configurator": function(cell){
+												cell.text = "  ⓞ 신계약건수";
+												cell.style.css({
+													"background-color" : "#ffffff",
+													"font-weight" : "bold",
+													"text-align" : "left"
+												});
+											}
+										},
+										{
+											"constraint": {"rowIndex": 1, "colIndex": 1},
+											"configurator": function(cell){
+												cell.text = "4　";
+												cell.style.css({
+													"background-color" : "#ffffff",
+													"font-weight" : "bold",
+													"text-align" : "right"
+												});
+											}
 										}
-									}]
+									]
 								},
 								"detail": {
 									"rows": [{"height": "31px"}],
@@ -708,10 +796,12 @@
 											"configurator": function(cell){
 												cell.columnName = "column1";
 												cell.control = (function(){
-													var output_20 = new cpr.controls.Output();
-													output_20.bind("value").toDataColumn("column1");
-													return output_20;
+													var searchInput_3 = new cpr.controls.SearchInput();
+													searchInput_3.searchPosition = "left";
+													searchInput_3.bind("value").toDataColumn("column1");
+													return searchInput_3;
 												})();
+												cell.controlConstraint = {};
 											}
 										},
 										{
@@ -719,19 +809,34 @@
 											"configurator": function(cell){
 												cell.columnName = "column3";
 												cell.control = (function(){
-													var output_21 = new cpr.controls.Output();
-													output_21.dataType = "number";
-													output_21.format = "s#,##0";
-													output_21.style.setClasses(["text-right"]);
-													output_21.bind("value").toDataColumn("column3");
-													return output_21;
+													var output_15 = new cpr.controls.Output();
+													output_15.dataType = "number";
+													output_15.format = "s#,##0";
+													output_15.style.setClasses(["text-right"]);
+													output_15.bind("value").toDataColumn("column3");
+													return output_15;
 												})();
+												cell.controlConstraint = {};
 											}
 										}
 									]
 								}
 							});
 							grid_2.style.setClasses(["list-normal"]);
+							grid_2.style.css({
+								"border-right-style" : "dashed",
+								"border-top-width" : "3px",
+								"border-bottom-color" : "red",
+								"border-left-style" : "dashed",
+								"border-right-width" : "3px",
+								"border-bottom-width" : "3px",
+								"border-left-color" : "red",
+								"border-top-color" : "red",
+								"border-bottom-style" : "dashed",
+								"border-right-color" : "red",
+								"border-left-width" : "3px",
+								"border-top-style" : "dashed"
+							});
 							container.addChild(grid_2, {
 								"width": "400px",
 								"height": "498px"
@@ -777,10 +882,11 @@
 											"configurator": function(cell){
 												cell.columnName = "column1";
 												cell.control = (function(){
-													var output_22 = new cpr.controls.Output();
-													output_22.bind("value").toDataColumn("column1");
-													return output_22;
+													var output_16 = new cpr.controls.Output();
+													output_16.bind("value").toDataColumn("column1");
+													return output_16;
 												})();
+												cell.controlConstraint = {};
 											}
 										},
 										{
@@ -788,12 +894,12 @@
 											"configurator": function(cell){
 												cell.columnName = "column3";
 												cell.control = (function(){
-													var output_23 = new cpr.controls.Output();
-													output_23.dataType = "number";
-													output_23.format = "s#,##0";
-													output_23.style.setClasses(["text-right"]);
-													output_23.bind("value").toDataColumn("column3");
-													return output_23;
+													var output_17 = new cpr.controls.Output();
+													output_17.dataType = "number";
+													output_17.format = "s#,##0";
+													output_17.style.setClasses(["text-right"]);
+													output_17.bind("value").toDataColumn("column3");
+													return output_17;
 												})();
 												cell.controlConstraint = {};
 											}
@@ -802,6 +908,20 @@
 								}
 							});
 							grid_3.style.setClasses(["list-normal"]);
+							grid_3.style.css({
+								"border-right-style" : "dashed",
+								"border-top-width" : "3px",
+								"border-bottom-color" : "red",
+								"border-left-style" : "dashed",
+								"border-right-width" : "3px",
+								"border-bottom-width" : "3px",
+								"border-left-color" : "red",
+								"border-top-color" : "red",
+								"border-bottom-style" : "dashed",
+								"border-right-color" : "red",
+								"border-left-width" : "3px",
+								"border-top-style" : "dashed"
+							});
 							container.addChild(grid_3, {
 								"autoSize": "none",
 								"width": "400px",
@@ -848,10 +968,11 @@
 											"configurator": function(cell){
 												cell.columnName = "column1";
 												cell.control = (function(){
-													var output_24 = new cpr.controls.Output();
-													output_24.bind("value").toDataColumn("column1");
-													return output_24;
+													var output_18 = new cpr.controls.Output();
+													output_18.bind("value").toDataColumn("column1");
+													return output_18;
 												})();
+												cell.controlConstraint = {};
 											}
 										},
 										{
@@ -859,12 +980,12 @@
 											"configurator": function(cell){
 												cell.columnName = "column3";
 												cell.control = (function(){
-													var output_25 = new cpr.controls.Output();
-													output_25.dataType = "number";
-													output_25.format = "s#,##0";
-													output_25.style.setClasses(["text-right"]);
-													output_25.bind("value").toDataColumn("column3");
-													return output_25;
+													var output_19 = new cpr.controls.Output();
+													output_19.dataType = "number";
+													output_19.format = "s#,##0";
+													output_19.style.setClasses(["text-right"]);
+													output_19.bind("value").toDataColumn("column3");
+													return output_19;
 												})();
 												cell.controlConstraint = {};
 											}
@@ -873,6 +994,20 @@
 								}
 							});
 							grid_4.style.setClasses(["list-normal"]);
+							grid_4.style.css({
+								"border-right-style" : "dashed",
+								"border-top-width" : "3px",
+								"border-bottom-color" : "red",
+								"border-left-style" : "dashed",
+								"border-right-width" : "3px",
+								"border-bottom-width" : "3px",
+								"border-left-color" : "red",
+								"border-top-color" : "red",
+								"border-bottom-style" : "dashed",
+								"border-right-color" : "red",
+								"border-left-width" : "3px",
+								"border-top-style" : "dashed"
+							});
 							container.addChild(grid_4, {
 								"autoSize": "none",
 								"width": "400px",
@@ -900,9 +1035,9 @@
 					verticalLayout_9.bottomMargin = 10;
 					group_15.setLayout(verticalLayout_9);
 					(function(container){
-						var output_26 = new cpr.controls.Output();
-						output_26.value = "- 대리점 수수료는 GA조직번호에 대리점번호(6자리) 입력 후 조회하세요.";
-						container.addChild(output_26, {
+						var output_20 = new cpr.controls.Output();
+						output_20.value = "- 대리점 수수료는 GA조직번호에 대리점번호(6자리) 입력 후 조회하세요.";
+						container.addChild(output_20, {
 							"autoSize": "height",
 							"width": "904px",
 							"height": "24px"
@@ -962,18 +1097,32 @@
 						flowLayout_5.lineWrap = false;
 						group_19.setLayout(flowLayout_5);
 						(function(container){
-							var button_3 = new cpr.controls.Button("btn11");
-							button_3.value = "수수료명세서발행";
-							button_3.style.setClasses(["btn-primary04", "btn-md"]);
-							container.addChild(button_3, {
+							var button_5 = new cpr.controls.Button("btn11");
+							button_5.value = "수수료명세서발행";
+							button_5.style.setClasses(["btn-primary04", "btn-md"]);
+							button_5.style.css({
+								"border-right-style" : "dashed",
+								"border-top-width" : "3px",
+								"border-bottom-color" : "red",
+								"border-left-style" : "dashed",
+								"border-right-width" : "3px",
+								"border-bottom-width" : "3px",
+								"border-left-color" : "red",
+								"border-top-color" : "red",
+								"border-bottom-style" : "dashed",
+								"border-right-color" : "red",
+								"border-left-width" : "3px",
+								"border-top-style" : "dashed"
+							});
+							container.addChild(button_5, {
 								"autoSize": "width",
 								"width": "120px",
 								"height": "30px"
 							});
-							var button_4 = new cpr.controls.Button("btn10");
-							button_4.value = "수수료계산서발행";
-							button_4.style.setClasses(["btn-primary04", "btn-md"]);
-							container.addChild(button_4, {
+							var button_6 = new cpr.controls.Button("btn10");
+							button_6.value = "수수료계산서발행";
+							button_6.style.setClasses(["btn-primary04", "btn-md"]);
+							container.addChild(button_6, {
 								"autoSize": "width",
 								"width": "120px",
 								"height": "30px"

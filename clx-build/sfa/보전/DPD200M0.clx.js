@@ -17,6 +17,54 @@
 			 *
 			 * @author ${user}
 			 ************************************************/
+
+			var count = 0;
+
+			/*
+			 * "다음" 버튼에서 click 이벤트 발생 시 호출.
+			 * 사용자가 컨트롤을 클릭할 때 발생하는 이벤트.
+			 */
+			function onButtonClick(e){
+				var button = e.control;
+
+				if (count == 0){
+					app.openDialog("sfa/보전/CSBE00P1", {width : 1200, height : 550}, function(dialog){
+				    dialog.ready(function(dialogApp){
+				        // 필요한 경우, 다이얼로그의 앱이 초기화 된 후, 앱 속성을 전달하십시오.
+				    });
+					}).then(function(returnValue){
+					    ;
+					});			
+				}else{
+					var host = app.getHost(); // 부모 임베디드 앱
+						cpr.core.App.load("sfa/보전/****", function(loadedApp) {
+					    if (loadedApp) {
+					        host.app = loadedApp;
+					        host.initValue = {
+					            "param": "param"
+					        }
+					    }
+					});			
+				}
+			}
+
+			/*
+			 * "이전" 버튼에서 click 이벤트 발생 시 호출.
+			 * 사용자가 컨트롤을 클릭할 때 발생하는 이벤트.
+			 */
+			function onButtonClick2(e){
+				var button = e.control;
+
+				var host = app.getHost(); // 부모 임베디드 앱
+					cpr.core.App.load("sfa/보전/DPD010M0", function(loadedApp) {
+				    if (loadedApp) {
+				        host.app = loadedApp;
+				        host.initValue = {
+				            "param": "param"
+				        }
+				    }
+				});	
+			};
 			// End - User Script
 			
 			// Header
@@ -34,7 +82,10 @@
 					{"name": "유지회차"},
 					{"name": "합계보험료"}
 				],
-				"rows": [{"계약번호": "1580449123", "피보험자": "박순자", "상품명": "(무)Standby신통방통건강보험1종", "계약일자": "20090516", "계약상태": "정상", "입금상태": "정상", "납입방법": "카드납입", "유지년월": "201502", "유지회차": "70", "합계보험료": "32700"}]
+				"rows": [
+					{"계약번호": "1580449123", "피보험자": "김흥국", "상품명": "(무)흥국생명 온라인정기보험", "계약일자": "20210516", "계약상태": "정상", "입금상태": "정상", "납입방법": "카드납입", "유지년월": "202402", "유지회차": "70", "합계보험료": "32700"},
+					{"계약번호": "1580449123", "피보험자": "김흥국", "상품명": "(무)흥국생명 온라인정기보험", "계약일자": "20210516", "계약상태": "정상", "입금상태": "정상", "납입방법": "카드납입", "유지년월": "202402", "유지회차": "70", "합계보험료": "32700"}
+				]
 			});
 			app.register(dataSet_1);
 			
@@ -48,7 +99,7 @@
 					{"name": "유효기간"},
 					{"name": "관계"}
 				],
-				"rows": [{"소유자명": "양태희", "주민등록번호": "6204291234567", "카드사": "국민카드", "카드번호": "409216017261", "유효기간": "201908", "관계": "본인"}]
+				"rows": [{"소유자명": "김흥국", "주민등록번호": "620429-1234567", "카드사": "국민카드", "카드번호": "4092-1601-7261-****", "유효기간": "202508", "관계": "본인"}]
 			});
 			app.register(dataSet_2);
 			
@@ -67,7 +118,7 @@
 					{"name": "신청결과"},
 					{"name": "할부개월수"}
 				],
-				"rows": [{"구분": "조회", "계약번호": "48011234", "카드사": "국민카드", "카드번호": "409216011234", "소유자명": "양태형", "주민등록번호": "6721011234567", "유효기간": "201908", "게시월": "201411", "신청일자": "20141113", "신청결과": "", "할부개월수": "0"}]
+				"rows": [{"구분": "조회", "계약번호": "4801-1234-1245-****", "카드사": "국민카드", "카드번호": "4801-1234-1245-****", "소유자명": "김흥국", "주민등록번호": "672101-1******", "유효기간": "202508", "게시월": "202111", "신청일자": "20211113", "신청결과": "", "할부개월수": "0"}]
 			});
 			app.register(dataSet_3);
 			app.supportMedia("all and (min-width: 3160px)", "Hlicp-WIDE");
@@ -125,44 +176,27 @@
 				flowLayout_1.lineWrap = false;
 				group_2.setLayout(flowLayout_1);
 				(function(container){
-					var output_2 = new cpr.controls.Output();
-					output_2.value = "";
-					output_2.style.setClasses(["home"]);
-					container.addChild(output_2, {
-						"width": "20px",
-						"height": "20px"
-					});
-					var output_3 = new cpr.controls.Output();
-					output_3.value = "1Depth";
-					output_3.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_3, {
+					var button_1 = new cpr.controls.Button();
+					button_1.value = "이전";
+					button_1.style.setClasses(["btn-primary04", "btn-md"]);
+					if(typeof onButtonClick2 == "function") {
+						button_1.addEventListener("click", onButtonClick2);
+					}
+					container.addChild(button_1, {
 						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
+						"width": "60px",
+						"height": "30px"
 					});
-					var output_4 = new cpr.controls.Output();
-					output_4.value = "2Depth";
-					output_4.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_4, {
+					var button_2 = new cpr.controls.Button();
+					button_2.value = "다음";
+					button_2.style.setClasses(["btn-primary04", "btn-md"]);
+					if(typeof onButtonClick == "function") {
+						button_2.addEventListener("click", onButtonClick);
+					}
+					container.addChild(button_2, {
 						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
-					});
-					var output_5 = new cpr.controls.Output();
-					output_5.value = "3Depth";
-					output_5.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_5, {
-						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
-					});
-					var output_6 = new cpr.controls.Output();
-					output_6.value = "4Depth";
-					output_6.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_6, {
-						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
+						"width": "60px",
+						"height": "30px"
 					});
 				})(group_2);
 				container.addChild(group_2, {
@@ -205,10 +239,10 @@
 					formLayout_2.setRows(["26px"]);
 					group_5.setLayout(formLayout_2);
 					(function(container){
-						var output_7 = new cpr.controls.Output();
-						output_7.value = "계약자";
-						output_7.style.setClasses(["label", "required"]);
-						container.addChild(output_7, {
+						var output_2 = new cpr.controls.Output();
+						output_2.value = "계약자";
+						output_2.style.setClasses(["label", "required"]);
+						container.addChild(output_2, {
 							"colIndex": 0,
 							"rowIndex": 0
 						});
@@ -227,13 +261,27 @@
 						group_6.setLayout(formLayout_3);
 						(function(container){
 							var inputBox_1 = new cpr.controls.InputBox("ipb2");
-							inputBox_1.value = "앙태현";
+							inputBox_1.value = "김흥국";
 							container.addChild(inputBox_1, {
 								"colIndex": 1,
 								"rowIndex": 0
 							});
 							var inputBox_2 = new cpr.controls.InputBox("ipb3");
-							inputBox_2.value = "6204212";
+							inputBox_2.value = "6204212-1******";
+							inputBox_2.style.css({
+								"border-right-style" : "dashed",
+								"border-top-width" : "3px",
+								"border-bottom-color" : "red",
+								"border-left-style" : "dashed",
+								"border-right-width" : "3px",
+								"border-bottom-width" : "3px",
+								"border-left-color" : "red",
+								"border-top-color" : "red",
+								"border-bottom-style" : "dashed",
+								"border-right-color" : "red",
+								"border-left-width" : "3px",
+								"border-top-style" : "dashed"
+							});
 							container.addChild(inputBox_2, {
 								"colIndex": 0,
 								"rowIndex": 0
@@ -243,15 +291,29 @@
 							"colIndex": 1,
 							"rowIndex": 0
 						});
-						var output_8 = new cpr.controls.Output();
-						output_8.value = "계약번호";
-						output_8.style.setClasses(["label", "required"]);
-						container.addChild(output_8, {
+						var output_3 = new cpr.controls.Output();
+						output_3.value = "계약번호";
+						output_3.style.setClasses(["label", "required"]);
+						container.addChild(output_3, {
 							"colIndex": 2,
 							"rowIndex": 0
 						});
 						var searchInput_1 = new cpr.controls.SearchInput();
 						searchInput_1.value = "";
+						searchInput_1.style.css({
+							"border-right-style" : "dashed",
+							"border-top-width" : "3px",
+							"border-bottom-color" : "red",
+							"border-left-style" : "dashed",
+							"border-right-width" : "3px",
+							"border-bottom-width" : "3px",
+							"border-left-color" : "red",
+							"border-top-color" : "red",
+							"border-bottom-style" : "dashed",
+							"border-right-color" : "red",
+							"border-left-width" : "3px",
+							"border-top-style" : "dashed"
+						});
 						container.addChild(searchInput_1, {
 							"colIndex": 3,
 							"rowIndex": 0
@@ -266,10 +328,10 @@
 						flowLayout_2.leftMargin = 20;
 						group_7.setLayout(flowLayout_2);
 						(function(container){
-							var button_1 = new cpr.controls.Button();
-							button_1.value = "조회";
-							button_1.style.setClasses(["btn-search"]);
-							container.addChild(button_1, {
+							var button_3 = new cpr.controls.Button();
+							button_3.value = "조회";
+							button_3.style.setClasses(["btn-search"]);
+							container.addChild(button_3, {
 								"width": "49px",
 								"height": "26px"
 							});
@@ -442,10 +504,10 @@
 										"configurator": function(cell){
 											cell.columnName = "계약번호";
 											cell.control = (function(){
-												var output_9 = new cpr.controls.Output();
-												output_9.style.setClasses(["text-center"]);
-												output_9.bind("value").toDataColumn("계약번호");
-												return output_9;
+												var output_4 = new cpr.controls.Output();
+												output_4.style.setClasses(["text-center"]);
+												output_4.bind("value").toDataColumn("계약번호");
+												return output_4;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -455,10 +517,10 @@
 										"configurator": function(cell){
 											cell.columnName = "피보험자";
 											cell.control = (function(){
-												var output_10 = new cpr.controls.Output();
-												output_10.style.setClasses(["text-center"]);
-												output_10.bind("value").toDataColumn("피보험자");
-												return output_10;
+												var output_5 = new cpr.controls.Output();
+												output_5.style.setClasses(["text-center"]);
+												output_5.bind("value").toDataColumn("피보험자");
+												return output_5;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -468,9 +530,9 @@
 										"configurator": function(cell){
 											cell.columnName = "상품명";
 											cell.control = (function(){
-												var output_11 = new cpr.controls.Output();
-												output_11.bind("value").toDataColumn("상품명");
-												return output_11;
+												var output_6 = new cpr.controls.Output();
+												output_6.bind("value").toDataColumn("상품명");
+												return output_6;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -480,11 +542,11 @@
 										"configurator": function(cell){
 											cell.columnName = "계약일자";
 											cell.control = (function(){
-												var output_12 = new cpr.controls.Output();
-												output_12.dataType = "date";
-												output_12.format = "YYYY-MM-DD";
-												output_12.bind("value").toDataColumn("계약일자");
-												return output_12;
+												var output_7 = new cpr.controls.Output();
+												output_7.dataType = "date";
+												output_7.format = "YYYY-MM-DD";
+												output_7.bind("value").toDataColumn("계약일자");
+												return output_7;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -494,10 +556,10 @@
 										"configurator": function(cell){
 											cell.columnName = "계약상태";
 											cell.control = (function(){
-												var output_13 = new cpr.controls.Output();
-												output_13.style.setClasses(["text-center"]);
-												output_13.bind("value").toDataColumn("계약상태");
-												return output_13;
+												var output_8 = new cpr.controls.Output();
+												output_8.style.setClasses(["text-center"]);
+												output_8.bind("value").toDataColumn("계약상태");
+												return output_8;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -507,10 +569,10 @@
 										"configurator": function(cell){
 											cell.columnName = "입금상태";
 											cell.control = (function(){
-												var output_14 = new cpr.controls.Output();
-												output_14.style.setClasses(["text-center"]);
-												output_14.bind("value").toDataColumn("입금상태");
-												return output_14;
+												var output_9 = new cpr.controls.Output();
+												output_9.style.setClasses(["text-center"]);
+												output_9.bind("value").toDataColumn("입금상태");
+												return output_9;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -520,10 +582,10 @@
 										"configurator": function(cell){
 											cell.columnName = "납입방법";
 											cell.control = (function(){
-												var output_15 = new cpr.controls.Output();
-												output_15.style.setClasses(["text-center"]);
-												output_15.bind("value").toDataColumn("납입방법");
-												return output_15;
+												var output_10 = new cpr.controls.Output();
+												output_10.style.setClasses(["text-center"]);
+												output_10.bind("value").toDataColumn("납입방법");
+												return output_10;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -533,11 +595,11 @@
 										"configurator": function(cell){
 											cell.columnName = "유지년월";
 											cell.control = (function(){
-												var output_16 = new cpr.controls.Output();
-												output_16.dataType = "date";
-												output_16.format = "YYYY-MM-DD";
-												output_16.bind("value").toDataColumn("유지년월");
-												return output_16;
+												var output_11 = new cpr.controls.Output();
+												output_11.dataType = "date";
+												output_11.format = "YYYY-MM-DD";
+												output_11.bind("value").toDataColumn("유지년월");
+												return output_11;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -559,13 +621,13 @@
 										"configurator": function(cell){
 											cell.columnName = "합계보험료";
 											cell.control = (function(){
-												var output_17 = new cpr.controls.Output();
-												output_17.value = "Output";
-												output_17.dataType = "number";
-												output_17.format = "s#,##0";
-												output_17.style.setClasses(["text-right"]);
-												output_17.bind("value").toDataColumn("합계보험료");
-												return output_17;
+												var output_12 = new cpr.controls.Output();
+												output_12.value = "Output";
+												output_12.dataType = "number";
+												output_12.format = "s#,##0";
+												output_12.style.setClasses(["text-right"]);
+												output_12.bind("value").toDataColumn("합계보험료");
+												return output_12;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -577,19 +639,19 @@
 						container.addChild(grid_1, {
 							"autoSize": "none",
 							"width": "1052px",
-							"height": "343px"
+							"height": "127px"
 						});
 					})(group_9);
 					container.addChild(group_9, {
 						"autoSize": "height",
 						"width": "1538px",
-						"height": "348px"
+						"height": "142px"
 					});
 				})(group_8);
 				container.addChild(group_8, {
 					"autoSize": "height",
 					"width": "1538px",
-					"height": "348px"
+					"height": "152px"
 				});
 				var group_10 = new cpr.controls.Container();
 				var verticalLayout_6 = new cpr.controls.layouts.VerticalLayout();
@@ -623,10 +685,10 @@
 							verticalLayout_8.spacing = 0;
 							group_13.setLayout(verticalLayout_8);
 							(function(container){
-								var output_18 = new cpr.controls.Output();
-								output_18.value = "카드선택";
-								output_18.style.setClasses(["grid-title"]);
-								container.addChild(output_18, {
+								var output_13 = new cpr.controls.Output();
+								output_13.value = "카드선택";
+								output_13.style.setClasses(["grid-title"]);
+								container.addChild(output_13, {
 									"autoSize": "height",
 									"width": "300px",
 									"height": "26px"
@@ -740,10 +802,10 @@
 										"configurator": function(cell){
 											cell.columnName = "소유자명";
 											cell.control = (function(){
-												var output_19 = new cpr.controls.Output();
-												output_19.style.setClasses(["text-center"]);
-												output_19.bind("value").toDataColumn("소유자명");
-												return output_19;
+												var output_14 = new cpr.controls.Output();
+												output_14.style.setClasses(["text-center"]);
+												output_14.bind("value").toDataColumn("소유자명");
+												return output_14;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -753,11 +815,11 @@
 										"configurator": function(cell){
 											cell.columnName = "주민등록번호";
 											cell.control = (function(){
-												var output_20 = new cpr.controls.Output();
-												output_20.format = "000000-0000000";
-												output_20.style.setClasses(["text-center"]);
-												output_20.bind("value").toDataColumn("주민등록번호");
-												return output_20;
+												var output_15 = new cpr.controls.Output();
+												output_15.format = "000000-0000000";
+												output_15.style.setClasses(["text-center"]);
+												output_15.bind("value").toDataColumn("주민등록번호");
+												return output_15;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -767,10 +829,10 @@
 										"configurator": function(cell){
 											cell.columnName = "카드사";
 											cell.control = (function(){
-												var output_21 = new cpr.controls.Output();
-												output_21.style.setClasses(["text-center"]);
-												output_21.bind("value").toDataColumn("카드사");
-												return output_21;
+												var output_16 = new cpr.controls.Output();
+												output_16.style.setClasses(["text-center"]);
+												output_16.bind("value").toDataColumn("카드사");
+												return output_16;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -780,11 +842,11 @@
 										"configurator": function(cell){
 											cell.columnName = "카드번호";
 											cell.control = (function(){
-												var output_22 = new cpr.controls.Output();
-												output_22.format = "0000-0000-0000";
-												output_22.style.setClasses(["text-center"]);
-												output_22.bind("value").toDataColumn("카드번호");
-												return output_22;
+												var output_17 = new cpr.controls.Output();
+												output_17.format = "0000-0000-0000";
+												output_17.style.setClasses(["text-center"]);
+												output_17.bind("value").toDataColumn("카드번호");
+												return output_17;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -794,12 +856,12 @@
 										"configurator": function(cell){
 											cell.columnName = "유효기간";
 											cell.control = (function(){
-												var output_23 = new cpr.controls.Output();
-												output_23.dataType = "date";
-												output_23.format = "YYYY-MM";
-												output_23.style.setClasses(["text-center"]);
-												output_23.bind("value").toDataColumn("유효기간");
-												return output_23;
+												var output_18 = new cpr.controls.Output();
+												output_18.dataType = "date";
+												output_18.format = "YYYY-MM";
+												output_18.style.setClasses(["text-center"]);
+												output_18.bind("value").toDataColumn("유효기간");
+												return output_18;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -809,10 +871,10 @@
 										"configurator": function(cell){
 											cell.columnName = "관계";
 											cell.control = (function(){
-												var output_24 = new cpr.controls.Output();
-												output_24.style.setClasses(["text-center"]);
-												output_24.bind("value").toDataColumn("관계");
-												return output_24;
+												var output_19 = new cpr.controls.Output();
+												output_19.style.setClasses(["text-center"]);
+												output_19.bind("value").toDataColumn("관계");
+												return output_19;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -820,16 +882,30 @@
 								]
 							}
 						});
+						grid_2.style.css({
+							"border-right-style" : "dashed",
+							"border-top-width" : "3px",
+							"border-bottom-color" : "red",
+							"border-left-style" : "dashed",
+							"border-right-width" : "3px",
+							"border-bottom-width" : "3px",
+							"border-left-color" : "red",
+							"border-top-color" : "red",
+							"border-bottom-style" : "dashed",
+							"border-right-color" : "red",
+							"border-left-width" : "3px",
+							"border-top-style" : "dashed"
+						});
 						container.addChild(grid_2, {
 							"autoSize": "none",
 							"width": "1052px",
-							"height": "343px"
+							"height": "74px"
 						});
 					})(group_11);
 					container.addChild(group_11, {
 						"autoSize": "height",
 						"width": "1600px",
-						"height": "420px"
+						"height": "127px"
 					});
 					var group_14 = new cpr.controls.Container("grp1");
 					group_14.style.setClasses(["button-table-area"]);
@@ -880,10 +956,24 @@
 						flowLayout_5.lineWrap = false;
 						group_17.setLayout(flowLayout_5);
 						(function(container){
-							var button_2 = new cpr.controls.Button("btn1");
-							button_2.value = "카드등록";
-							button_2.style.setClasses(["btn-primary04"]);
-							container.addChild(button_2, {
+							var button_4 = new cpr.controls.Button("btn1");
+							button_4.value = "카드등록";
+							button_4.style.setClasses(["btn-primary04"]);
+							button_4.style.css({
+								"border-right-style" : "dashed",
+								"border-top-width" : "3px",
+								"border-bottom-color" : "red",
+								"border-left-style" : "dashed",
+								"border-right-width" : "3px",
+								"border-bottom-width" : "3px",
+								"border-left-color" : "red",
+								"border-top-color" : "red",
+								"border-bottom-style" : "dashed",
+								"border-right-color" : "red",
+								"border-left-width" : "3px",
+								"border-top-style" : "dashed"
+							});
+							container.addChild(button_4, {
 								"autoSize": "width",
 								"width": "60px",
 								"height": "30px"
@@ -903,7 +993,7 @@
 				container.addChild(group_10, {
 					"autoSize": "height",
 					"width": "1538px",
-					"height": "458px"
+					"height": "147px"
 				});
 				var group_18 = new cpr.controls.Container();
 				group_18.style.setClasses(["form-box"]);
@@ -935,15 +1025,29 @@
 						formLayout_6.setRowAutoSizing(0, true);
 						group_20.setLayout(formLayout_6);
 						(function(container){
-							var output_25 = new cpr.controls.Output();
-							output_25.value = "신청구분";
-							output_25.style.setClasses(["label"]);
-							container.addChild(output_25, {
+							var output_20 = new cpr.controls.Output();
+							output_20.value = "신청구분";
+							output_20.style.setClasses(["label"]);
+							container.addChild(output_20, {
 								"colIndex": 0,
 								"rowIndex": 0
 							});
 							var radioButton_1 = new cpr.controls.RadioButton("rdb2");
 							radioButton_1.value = "value4";
+							radioButton_1.style.css({
+								"border-right-style" : "dashed",
+								"border-top-width" : "3px",
+								"border-bottom-color" : "red",
+								"border-left-style" : "dashed",
+								"border-right-width" : "3px",
+								"border-bottom-width" : "3px",
+								"border-left-color" : "red",
+								"border-top-color" : "red",
+								"border-bottom-style" : "dashed",
+								"border-right-color" : "red",
+								"border-left-width" : "3px",
+								"border-top-style" : "dashed"
+							});
 							(function(radioButton_1){
 								radioButton_1.addItem(new cpr.controls.Item("신청", "value1"));
 								radioButton_1.addItem(new cpr.controls.Item("변경", "value2"));
@@ -1005,10 +1109,10 @@
 							verticalLayout_13.spacing = 0;
 							group_24.setLayout(verticalLayout_13);
 							(function(container){
-								var output_26 = new cpr.controls.Output();
-								output_26.value = "선택계약";
-								output_26.style.setClasses(["grid-title"]);
-								container.addChild(output_26, {
+								var output_21 = new cpr.controls.Output();
+								output_21.value = "선택계약";
+								output_21.style.setClasses(["grid-title"]);
+								container.addChild(output_21, {
 									"autoSize": "height",
 									"width": "300px",
 									"height": "26px"
@@ -1052,6 +1156,20 @@
 											cell.sortable = false;
 											cell.targetColumnName = "구분";
 											cell.text = "구분";
+											cell.style.css({
+												"border-right-style" : "dashed",
+												"border-top-width" : "3px",
+												"border-bottom-color" : "red",
+												"border-left-style" : "dashed",
+												"border-right-width" : "3px",
+												"border-bottom-width" : "3px",
+												"border-left-color" : "red",
+												"border-top-color" : "red",
+												"border-bottom-style" : "dashed",
+												"border-right-color" : "red",
+												"border-left-width" : "3px",
+												"border-top-style" : "dashed"
+											});
 										}
 									},
 									{
@@ -1115,6 +1233,20 @@
 											cell.sortable = false;
 											cell.targetColumnName = "게시월";
 											cell.text = "게시월";
+											cell.style.css({
+												"border-right-style" : "dashed",
+												"border-top-width" : "3px",
+												"border-bottom-color" : "red",
+												"border-left-style" : "dashed",
+												"border-right-width" : "3px",
+												"border-bottom-width" : "3px",
+												"border-left-color" : "red",
+												"border-top-color" : "red",
+												"border-bottom-style" : "dashed",
+												"border-right-color" : "red",
+												"border-left-width" : "3px",
+												"border-top-style" : "dashed"
+											});
 										}
 									},
 									{
@@ -1170,10 +1302,10 @@
 										"configurator": function(cell){
 											cell.columnName = "계약번호";
 											cell.control = (function(){
-												var output_27 = new cpr.controls.Output();
-												output_27.style.setClasses(["text-center"]);
-												output_27.bind("value").toDataColumn("계약번호");
-												return output_27;
+												var output_22 = new cpr.controls.Output();
+												output_22.style.setClasses(["text-center"]);
+												output_22.bind("value").toDataColumn("계약번호");
+												return output_22;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -1183,10 +1315,10 @@
 										"configurator": function(cell){
 											cell.columnName = "카드사";
 											cell.control = (function(){
-												var output_28 = new cpr.controls.Output();
-												output_28.style.setClasses(["text-center"]);
-												output_28.bind("value").toDataColumn("카드사");
-												return output_28;
+												var output_23 = new cpr.controls.Output();
+												output_23.style.setClasses(["text-center"]);
+												output_23.bind("value").toDataColumn("카드사");
+												return output_23;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -1196,11 +1328,11 @@
 										"configurator": function(cell){
 											cell.columnName = "카드번호";
 											cell.control = (function(){
-												var output_29 = new cpr.controls.Output();
-												output_29.format = "0000-0000-0000";
-												output_29.style.setClasses(["text-center"]);
-												output_29.bind("value").toDataColumn("카드번호");
-												return output_29;
+												var output_24 = new cpr.controls.Output();
+												output_24.format = "0000-0000-0000";
+												output_24.style.setClasses(["text-center"]);
+												output_24.bind("value").toDataColumn("카드번호");
+												return output_24;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -1210,10 +1342,10 @@
 										"configurator": function(cell){
 											cell.columnName = "소유자명";
 											cell.control = (function(){
-												var output_30 = new cpr.controls.Output();
-												output_30.style.setClasses(["text-center"]);
-												output_30.bind("value").toDataColumn("소유자명");
-												return output_30;
+												var output_25 = new cpr.controls.Output();
+												output_25.style.setClasses(["text-center"]);
+												output_25.bind("value").toDataColumn("소유자명");
+												return output_25;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -1223,11 +1355,11 @@
 										"configurator": function(cell){
 											cell.columnName = "주민등록번호";
 											cell.control = (function(){
-												var output_31 = new cpr.controls.Output();
-												output_31.format = "000000-0000000";
-												output_31.style.setClasses(["text-center"]);
-												output_31.bind("value").toDataColumn("주민등록번호");
-												return output_31;
+												var output_26 = new cpr.controls.Output();
+												output_26.format = "000000-0000000";
+												output_26.style.setClasses(["text-center"]);
+												output_26.bind("value").toDataColumn("주민등록번호");
+												return output_26;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -1237,11 +1369,11 @@
 										"configurator": function(cell){
 											cell.columnName = "유효기간";
 											cell.control = (function(){
-												var output_32 = new cpr.controls.Output();
-												output_32.dataType = "date";
-												output_32.format = "YYYY-MM";
-												output_32.bind("value").toDataColumn("유효기간");
-												return output_32;
+												var output_27 = new cpr.controls.Output();
+												output_27.dataType = "date";
+												output_27.format = "YYYY-MM";
+												output_27.bind("value").toDataColumn("유효기간");
+												return output_27;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -1269,11 +1401,11 @@
 										"configurator": function(cell){
 											cell.columnName = "신청일자";
 											cell.control = (function(){
-												var output_33 = new cpr.controls.Output();
-												output_33.dataType = "date";
-												output_33.format = "YYYY-MM-DD";
-												output_33.bind("value").toDataColumn("신청일자");
-												return output_33;
+												var output_28 = new cpr.controls.Output();
+												output_28.dataType = "date";
+												output_28.format = "YYYY-MM-DD";
+												output_28.bind("value").toDataColumn("신청일자");
+												return output_28;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -1283,10 +1415,10 @@
 										"configurator": function(cell){
 											cell.columnName = "신청결과";
 											cell.control = (function(){
-												var output_34 = new cpr.controls.Output();
-												output_34.style.setClasses(["text-center"]);
-												output_34.bind("value").toDataColumn("신청결과");
-												return output_34;
+												var output_29 = new cpr.controls.Output();
+												output_29.style.setClasses(["text-center"]);
+												output_29.bind("value").toDataColumn("신청결과");
+												return output_29;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -1296,10 +1428,10 @@
 										"configurator": function(cell){
 											cell.columnName = "할부개월수";
 											cell.control = (function(){
-												var output_35 = new cpr.controls.Output();
-												output_35.style.setClasses(["text-center"]);
-												output_35.bind("value").toDataColumn("할부개월수");
-												return output_35;
+												var output_30 = new cpr.controls.Output();
+												output_30.style.setClasses(["text-center"]);
+												output_30.bind("value").toDataColumn("할부개월수");
+												return output_30;
 											})();
 											cell.controlConstraint = {};
 										}
@@ -1310,13 +1442,13 @@
 						container.addChild(grid_3, {
 							"autoSize": "none",
 							"width": "1052px",
-							"height": "343px"
+							"height": "114px"
 						});
 					})(group_22);
 					container.addChild(group_22, {
 						"autoSize": "height",
 						"width": "1600px",
-						"height": "382px"
+						"height": "165px"
 					});
 					var group_25 = new cpr.controls.Container();
 					group_25.style.setClasses(["button-table-area"]);
@@ -1367,10 +1499,10 @@
 						flowLayout_8.lineWrap = false;
 						group_28.setLayout(flowLayout_8);
 						(function(container){
-							var button_3 = new cpr.controls.Button();
-							button_3.value = "반영";
-							button_3.style.setClasses(["btn-primary03"]);
-							container.addChild(button_3, {
+							var button_5 = new cpr.controls.Button();
+							button_5.value = "반영";
+							button_5.style.setClasses(["btn-primary03"]);
+							container.addChild(button_5, {
 								"autoSize": "width",
 								"width": "60px",
 								"height": "30px"
@@ -1390,7 +1522,7 @@
 				container.addChild(group_21, {
 					"autoSize": "height",
 					"width": "1538px",
-					"height": "420px"
+					"height": "211px"
 				});
 			})(group_3);
 			container.addChild(group_3, {

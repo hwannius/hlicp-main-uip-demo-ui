@@ -33,7 +33,7 @@
 					{"name": "처리사원번호"},
 					{"name": "처리사원명"}
 				],
-				"rows": [{"카드회사": "국민카드", "카드번호": "40921601234", "유효년월": "201908", "카드상태": "정상", "소유자명": "양태형", "소유자주민등록번호": "6204291234567", "처리일자": "20241113", "처리사원번호": "100700811", "처리사원명": "김은경"}]
+				"rows": [{"카드회사": "국민카드", "카드번호": "40921601234", "유효년월": "202508", "카드상태": "정상", "소유자명": "김흥국", "소유자주민등록번호": "6204291234567", "처리일자": "20241113", "처리사원번호": "100700811", "처리사원명": "김은경"}]
 			});
 			app.register(dataSet_1);
 			app.supportMedia("all and (min-width: 3160px)", "Hlicp-WIDE");
@@ -90,7 +90,7 @@
 							"rowIndex": 0
 						});
 						var inputBox_1 = new cpr.controls.InputBox("ipb2");
-						inputBox_1.value = "앙태형";
+						inputBox_1.value = "김흥국";
 						container.addChild(inputBox_1, {
 							"colIndex": 1,
 							"rowIndex": 0
@@ -104,7 +104,21 @@
 						});
 						var maskEditor_1 = new cpr.controls.MaskEditor("mse2");
 						maskEditor_1.value = "6204291234567";
-						maskEditor_1.mask = "000000-0000000";
+						maskEditor_1.mask = "000000-0******";
+						maskEditor_1.style.css({
+							"border-right-style" : "dashed",
+							"border-top-width" : "3px",
+							"border-bottom-color" : "red",
+							"border-left-style" : "dashed",
+							"border-right-width" : "3px",
+							"border-bottom-width" : "3px",
+							"border-left-color" : "red",
+							"border-top-color" : "red",
+							"border-bottom-style" : "dashed",
+							"border-right-color" : "red",
+							"border-left-width" : "3px",
+							"border-top-style" : "dashed"
+						});
 						container.addChild(maskEditor_1, {
 							"colIndex": 3,
 							"rowIndex": 0
@@ -154,6 +168,20 @@
 						(function(container){
 							var searchInput_1 = new cpr.controls.SearchInput();
 							searchInput_1.placeholder = "____-____-______";
+							searchInput_1.style.css({
+								"border-right-style" : "dashed",
+								"border-top-width" : "3px",
+								"border-bottom-color" : "red",
+								"border-left-style" : "dashed",
+								"border-right-width" : "3px",
+								"border-bottom-width" : "3px",
+								"border-left-color" : "red",
+								"border-top-color" : "red",
+								"border-bottom-style" : "dashed",
+								"border-right-color" : "red",
+								"border-left-width" : "3px",
+								"border-top-style" : "dashed"
+							});
 							container.addChild(searchInput_1, {
 								"autoSize": "none",
 								"width": "140px",
@@ -480,20 +508,47 @@
 				flowLayout_3.lineWrap = false;
 				group_8.setLayout(flowLayout_3);
 				(function(container){
-					var button_2 = new cpr.controls.Button();
-					button_2.value = "행추가";
-					button_2.style.setClasses(["btn-secondary01", "btn-md"]);
-					container.addChild(button_2, {
-						"autoSize": "width",
-						"width": "60px",
-						"height": "30px"
+					var group_9 = new cpr.controls.Container();
+					group_9.style.css({
+						"border-right-style" : "dashed",
+						"border-top-width" : "3px",
+						"border-bottom-color" : "red",
+						"border-left-style" : "dashed",
+						"border-right-width" : "3px",
+						"border-bottom-width" : "3px",
+						"border-left-color" : "red",
+						"border-top-color" : "red",
+						"border-bottom-style" : "dashed",
+						"border-right-color" : "red",
+						"border-left-width" : "3px",
+						"border-top-style" : "dashed"
 					});
-					var button_3 = new cpr.controls.Button();
-					button_3.value = "행삭제";
-					button_3.style.setClasses(["btn-secondary01", "btn-md"]);
-					container.addChild(button_3, {
-						"autoSize": "width",
-						"width": "60px",
+					var flowLayout_4 = new cpr.controls.layouts.FlowLayout();
+					flowLayout_4.scrollable = false;
+					flowLayout_4.horizontalSpacing = 10;
+					flowLayout_4.verticalSpacing = 0;
+					flowLayout_4.lineWrap = false;
+					group_9.setLayout(flowLayout_4);
+					(function(container){
+						var button_2 = new cpr.controls.Button();
+						button_2.value = "행추가";
+						button_2.style.setClasses(["btn-secondary01", "btn-md"]);
+						container.addChild(button_2, {
+							"autoSize": "width",
+							"width": "60px",
+							"height": "30px"
+						});
+						var button_3 = new cpr.controls.Button();
+						button_3.value = "행삭제";
+						button_3.style.setClasses(["btn-secondary01", "btn-md"]);
+						container.addChild(button_3, {
+							"autoSize": "width",
+							"width": "60px",
+							"height": "30px"
+						});
+					})(group_9);
+					container.addChild(group_9, {
+						"width": "147px",
 						"height": "30px"
 					});
 				})(group_8);
@@ -501,31 +556,45 @@
 					"colIndex": 0,
 					"rowIndex": 0
 				});
-				var group_9 = new cpr.controls.Container();
-				group_9.style.setClasses(["button-table-bottom-center-area"]);
-				var flowLayout_4 = new cpr.controls.layouts.FlowLayout();
-				flowLayout_4.scrollable = false;
-				flowLayout_4.horizontalSpacing = 10;
-				flowLayout_4.verticalSpacing = 0;
-				flowLayout_4.horizontalAlign = "center";
-				group_9.setLayout(flowLayout_4);
-				container.addChild(group_9, {
-					"colIndex": 1,
-					"rowIndex": 0
-				});
 				var group_10 = new cpr.controls.Container();
-				group_10.style.setClasses(["button-table-bottom-right-area"]);
+				group_10.style.setClasses(["button-table-bottom-center-area"]);
 				var flowLayout_5 = new cpr.controls.layouts.FlowLayout();
 				flowLayout_5.scrollable = false;
 				flowLayout_5.horizontalSpacing = 10;
 				flowLayout_5.verticalSpacing = 0;
-				flowLayout_5.horizontalAlign = "right";
-				flowLayout_5.lineWrap = false;
+				flowLayout_5.horizontalAlign = "center";
 				group_10.setLayout(flowLayout_5);
+				container.addChild(group_10, {
+					"colIndex": 1,
+					"rowIndex": 0
+				});
+				var group_11 = new cpr.controls.Container();
+				group_11.style.setClasses(["button-table-bottom-right-area"]);
+				var flowLayout_6 = new cpr.controls.layouts.FlowLayout();
+				flowLayout_6.scrollable = false;
+				flowLayout_6.horizontalSpacing = 10;
+				flowLayout_6.verticalSpacing = 0;
+				flowLayout_6.horizontalAlign = "right";
+				flowLayout_6.lineWrap = false;
+				group_11.setLayout(flowLayout_6);
 				(function(container){
 					var button_4 = new cpr.controls.Button();
 					button_4.value = "실시간 카드확인";
 					button_4.style.setClasses(["btn-primary04", "btn-md"]);
+					button_4.style.css({
+						"border-right-style" : "dashed",
+						"border-top-width" : "3px",
+						"border-bottom-color" : "red",
+						"border-left-style" : "dashed",
+						"border-right-width" : "3px",
+						"border-bottom-width" : "3px",
+						"border-left-color" : "red",
+						"border-top-color" : "red",
+						"border-bottom-style" : "dashed",
+						"border-right-color" : "red",
+						"border-left-width" : "3px",
+						"border-top-style" : "dashed"
+					});
 					container.addChild(button_4, {
 						"autoSize": "width",
 						"width": "60px",
@@ -555,8 +624,8 @@
 						"width": "60px",
 						"height": "30px"
 					});
-				})(group_10);
-				container.addChild(group_10, {
+				})(group_11);
+				container.addChild(group_11, {
 					"colIndex": 2,
 					"rowIndex": 0
 				});

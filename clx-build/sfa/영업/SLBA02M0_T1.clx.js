@@ -226,6 +226,7 @@
 											output_1.bind("value").toDataColumn("column1");
 											return output_1;
 										})();
+										cell.controlConstraint = {};
 									}
 								},
 								{
@@ -237,6 +238,7 @@
 											output_2.bind("value").toDataColumn("column2");
 											return output_2;
 										})();
+										cell.controlConstraint = {};
 									}
 								},
 								{
@@ -248,6 +250,7 @@
 											output_3.bind("value").toDataColumn("column3");
 											return output_3;
 										})();
+										cell.controlConstraint = {};
 									}
 								},
 								{
@@ -259,6 +262,7 @@
 											output_4.bind("value").toDataColumn("column4");
 											return output_4;
 										})();
+										cell.controlConstraint = {};
 									}
 								},
 								{
@@ -270,6 +274,7 @@
 											output_5.bind("value").toDataColumn("column5");
 											return output_5;
 										})();
+										cell.controlConstraint = {};
 									}
 								},
 								{
@@ -281,6 +286,7 @@
 											output_6.bind("value").toDataColumn("column6");
 											return output_6;
 										})();
+										cell.controlConstraint = {};
 									}
 								},
 								{
@@ -292,6 +298,7 @@
 											output_7.bind("value").toDataColumn("column7");
 											return output_7;
 										})();
+										cell.controlConstraint = {};
 									}
 								},
 								{
@@ -303,6 +310,7 @@
 											output_8.bind("value").toDataColumn("column8");
 											return output_8;
 										})();
+										cell.controlConstraint = {};
 									}
 								},
 								{
@@ -314,6 +322,7 @@
 											output_9.bind("value").toDataColumn("column9");
 											return output_9;
 										})();
+										cell.controlConstraint = {};
 									}
 								},
 								{
@@ -325,6 +334,7 @@
 											output_10.bind("value").toDataColumn("column10");
 											return output_10;
 										})();
+										cell.controlConstraint = {};
 									}
 								}
 							]
@@ -333,7 +343,7 @@
 					grid_1.style.setClasses(["list-normal"]);
 					container.addChild(grid_1, {
 						"width": "400px",
-						"height": "498px"
+						"height": "185px"
 					});
 				})(group_2);
 				container.addChild(group_2, {

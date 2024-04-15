@@ -321,10 +321,6 @@
       </cl:output>
       <cl:group std:sid="group-799c377d" id="grpNavi" class="breadcrumbs">
         <cl:formdata std:sid="f-data-b5509d70" row="0" col="1"/>
-        <cl:button std:sid="button-981d5f38" class="btn-primary04 btn-md" value="이전">
-          <cl:listener std:sid="listener-16b38d68" name="click" handler="onButtonClick"/>
-          <cl:flowlayoutdata std:sid="f-data-98a5fd4b" width="49px" height="26px" autosize="width"/>
-        </cl:button>
         <cl:button std:sid="button-9ca2d62f" class="btn-primary04 btn-md" value="다음">
           <cl:listener std:sid="listener-2cdffdf7" name="click" handler="onButtonClick2"/>
           <cl:flowlayoutdata std:sid="f-data-63680882" width="49px" height="26px" autosize="width"/>

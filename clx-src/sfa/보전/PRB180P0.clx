@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-b429b55c" version="1.0.4074">
+  <head std:sid="head-a800836a">
+    <std:metadata>
+      <std:property key="template-file" value="templates/팝업/2.그리드/그리드_수정X.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-6bf010b9" id="Hlicp-WIDE" name="Hlicp-WIDE" width="3160px" height="954px" active="false"/>
+    <screen std:sid="screen-28000a28" id="Hlicp-FULL" name="Hlicp-FULL" width="1600px" height="954px"/>
+    <screen std:sid="screen-c8d72ab0" id="Hlicp-DIV" name="Hlicp-DIV" width="790px" height="954px"/>
+    <screen std:sid="screen-b396d4d6" id="Hlicp-POP" name="Hlicp-POP" width="767px" height="400px" active="true"/>
+    <cl:model std:sid="model-790c9e9a">
+      <cl:dataset std:sid="d-set-6e5d5334" id="ds1">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-13aad1ed" name="피보험자명"/>
+          <cl:datacolumn std:sid="d-column-c7655f0d" name="계약상세번호"/>
+          <cl:datacolumn std:sid="d-column-3e46462a" name="보험코드"/>
+          <cl:datacolumn std:sid="d-column-a6c7fac0" name="보험코드(명)"/>
+          <cl:datacolumn std:sid="d-column-92ed4c2b" name="구분2" datatype="string" displayonly="false"/>
+          <cl:datacolumn std:sid="d-column-e9fcf4f0" name="해약환급금2" datatype="string" displayonly="false"/>
+          <cl:datacolumn std:sid="d-column-c1bb2d70" name="가산이자2" datatype="string" displayonly="false"/>
+          <cl:datacolumn std:sid="d-column-0e10d80c" name="선납보험료2" datatype="string" displayonly="false"/>
+          <cl:datacolumn std:sid="d-column-08437f3f" name="미경과보험료2" datatype="string" displayonly="false"/>
+          <cl:datacolumn std:sid="d-column-c9487a4f" name="분할선/미지급금2" datatype="string" displayonly="false"/>
+          <cl:datacolumn std:sid="d-column-c7319035" name="순보식환급금2" datatype="string" displayonly="false"/>
+          <cl:datacolumn std:sid="d-column-46f09a2f" name="미상각신계약비2" datatype="string" displayonly="false"/>
+          <cl:datacolumn std:sid="d-column-8ea09596" name="구분"/>
+          <cl:datacolumn std:sid="d-column-11dde7a1" name="해약환급금"/>
+          <cl:datacolumn std:sid="d-column-a652dbfc" name="가산이자"/>
+          <cl:datacolumn std:sid="d-column-b83bb036" name="선납보험료"/>
+          <cl:datacolumn std:sid="d-column-965d3e30" name="미경과보험료"/>
+          <cl:datacolumn std:sid="d-column-b924b66f" name="미경과위험보험료"/>
+          <cl:datacolumn std:sid="d-column-22923393" name="미경과위험보험료2" datatype="string" displayonly="false"/>
+          <cl:datacolumn std:sid="d-column-7e87f621" name="분할선/미지급금"/>
+          <cl:datacolumn std:sid="d-column-e869ad96" name="순보식환급금"/>
+          <cl:datacolumn std:sid="d-column-0dea3a9b" name="미상각신계약비"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="피보험자명"><![CDATA[변복민]]></cl:datavalue>
+            <cl:datavalue columnname="계약상세번호"><![CDATA[00001237784]]></cl:datavalue>
+            <cl:datavalue columnname="보험코드(명)"><![CDATA[(무)풀코스종신보험(표준체)]]></cl:datavalue>
+            <cl:datavalue columnname="구분"><![CDATA[변경전]]></cl:datavalue>
+            <cl:datavalue columnname="해약환급금"><![CDATA[11467000]]></cl:datavalue>
+            <cl:datavalue columnname="가산이자"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="선납보험료"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="미경과보험료"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="분할선/미지급금"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="순보식환급금"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="미상각신계약비"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="보험코드"><![CDATA[I05377]]></cl:datavalue>
+            <cl:datavalue columnname="구분2"><![CDATA[변경후]]></cl:datavalue>
+            <cl:datavalue columnname="해약환급금2"><![CDATA[11467000]]></cl:datavalue>
+            <cl:datavalue columnname="미경과위험보험료"><![CDATA[0]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="환급금산출내역"/>
+  </head>
+  <body std:sid="body-fa1d7607" class="pop-content-body">
+    <cl:group std:sid="group-ed88a8c7">
+      <cl:verticaldata std:sid="v-data-47c1e6a7" width="729px" height="430px" autosize="height"/>
+      <cl:group std:sid="group-c79da711" class="form-box box-spacing-free">
+        <cl:verticaldata std:sid="v-data-7944feb3" width="729px" height="33px" autosize="height"/>
+        <cl:group std:sid="group-f7ffb71c" id="grp2" class="form-normal">
+          <std:metadata>
+            <std:property key="template-uuid" value="e126bdd5-75df-4bfb-b731-3554d4c945d6"/>
+            <std:property key="template-rev" value="3"/>
+          </std:metadata>
+          <cl:verticaldata std:sid="v-data-818b9047" width="1150px" height="33px" autosize="height"/>
+          <cl:output std:sid="output-3ab05fa6" class="label required" value="계약번호">
+            <cl:formdata std:sid="f-data-c3eb0fab" row="0" col="0"/>
+          </cl:output>
+          <cl:inputbox std:sid="i-box-52ba6915" id="ipb1" value="85566320101">
+            <cl:formdata std:sid="f-data-2927b91d" row="0" col="1"/>
+          </cl:inputbox>
+          <cl:output std:sid="output-2679fdb0" class="label" value="처리일자">
+            <cl:formdata std:sid="f-data-b511cdd1" row="0" col="2"/>
+          </cl:output>
+          <cl:dateinput std:sid="d-input-9530ad9d" id="dti1" value="20150319">
+            <std:metadata>
+              <std:property key="template-uuid" value="fee3a3c9-7931-4d21-b4da-b3a6d6af44c6"/>
+              <std:property key="template-rev" value="1"/>
+            </std:metadata>
+            <cl:formdata std:sid="f-data-1efbfe2c" halign="LEFT" width="120" row="0" col="3"/>
+          </cl:dateinput>
+          <cl:formlayout std:sid="f-layout-1e4cfaa9" scrollable="false" hspace="11px" vspace="5px" top-margin="2px" right-margin="5px" bottom-margin="2px" left-margin="5px" hseparatorwidth="1" hseparatortype="BY_CLASS" vseparatorwidth="1" vseparatortype="BY_CLASS">
+            <cl:rows length="26" unit="PIXEL"/>
+            <cl:columns length="80" unit="PIXEL" autoSizing="true" shadetype="BY_CLASS" shadecolor="transparent"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="80" unit="PIXEL" autoSizing="true" shadetype="BY_CLASS"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-e5e171cc" spacing="8"/>
+      </cl:group>
+      <cl:group std:sid="group-9bf65007" class="grid-box">
+        <cl:verticaldata std:sid="v-data-df642346" width="729px" height="382px" autosize="height"/>
+        <cl:group std:sid="group-e93f6f18" id="grpGridTitle" class="button-table-area">
+          <cl:verticaldata std:sid="v-data-6ed4a6bb" width="729px" height="26px" autosize="height"/>
+          <cl:group std:sid="group-ed4c20fe" class="grid-title-box">
+            <cl:formdata std:sid="f-data-ec09d8f3" row="0" col="0"/>
+            <cl:output std:sid="output-8e2d5e05" id="optGrildTitle" class="grid-title" value="환급금 산출내역">
+              <cl:verticaldata std:sid="v-data-768afa92" width="300px" height="26px" autosize="height"/>
+            </cl:output>
+            <cl:verticallayout std:sid="v-layout-c2a87a07" spacing="0"/>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-06ce0b3a" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION" autoSizing="true"/>
+            <cl:columns length="300" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:grid std:sid="grid-a1f930f1" id="grd1" class="list-normal" readonly="true" datasetid="ds1" resizablecolumns="all" columnMovable="true">
+          <cl:verticaldata std:sid="v-data-b0a4b4c7" width="400px" height="343px"/>
+          <cl:gridcolumn std:sid="g-column-0a13439f" width="70px"/>
+          <cl:gridcolumn std:sid="g-column-62141394"/>
+          <cl:gridcolumn std:sid="g-column-1fbde6eb"/>
+          <cl:gridcolumn std:sid="g-column-ae149069" width="200px"/>
+          <cl:gridcolumn std:sid="g-column-9becbba1" width="70px"/>
+          <cl:gridcolumn std:sid="g-column-afb79735"/>
+          <cl:gridcolumn std:sid="g-column-e404075d"/>
+          <cl:gridcolumn std:sid="g-column-27695bfc"/>
+          <cl:gridcolumn std:sid="g-column-23eac9e4"/>
+          <cl:gridcolumn std:sid="g-column-acd05ac9"/>
+          <cl:gridcolumn std:sid="g-column-49591652"/>
+          <cl:gridcolumn std:sid="g-column-1ca9a2ea"/>
+          <cl:gridcolumn std:sid="g-column-b4059748"/>
+          <cl:gridheader std:sid="gh-band-488c7f7d">
+            <cl:gridrow std:sid="g-row-e40debb0" height="31px"/>
+            <cl:gridcell std:sid="gh-cell-84151910" rowindex="0" colindex="0" targetcolumnname="피보험자명" sortable="false" filterable="false" text="피보험자명"/>
+            <cl:gridcell std:sid="gh-cell-b846b287" rowindex="0" colindex="1" targetcolumnname="계약상세번호" sortable="false" filterable="false" text="계약상세번호"/>
+            <cl:gridcell std:sid="gh-cell-e2e6c895" rowindex="0" colindex="2" rowspan="1" colspan="2" targetcolumnname="보험코드(명)" sortable="false" filterable="false" text="보험코드(명)"/>
+            <cl:gridcell std:sid="gh-cell-cd0fbdd3" rowindex="0" colindex="4" targetcolumnname="구분" sortable="false" filterable="false" text="구분"/>
+            <cl:gridcell std:sid="gh-cell-1779a573" rowindex="0" colindex="5" targetcolumnname="해약환급금" sortable="false" filterable="false" text="해약환급금"/>
+            <cl:gridcell std:sid="gh-cell-973ca667" rowindex="0" colindex="6" targetcolumnname="가산이자" sortable="false" filterable="false" text="가산이자"/>
+            <cl:gridcell std:sid="gh-cell-2eb6139d" rowindex="0" colindex="7" targetcolumnname="선납보험료" sortable="false" filterable="false" text="선납보험료"/>
+            <cl:gridcell std:sid="gh-cell-fedeb204" rowindex="0" colindex="8" targetcolumnname="미경과보험료" sortable="false" filterable="false" text="미경과보험료"/>
+            <cl:gridcell std:sid="gh-cell-136c1c3d" rowindex="0" colindex="10" targetcolumnname="분할선/미지급금" sortable="false" filterable="false" text="분할선/미지급금"/>
+            <cl:gridcell std:sid="gh-cell-1cc4626b" rowindex="0" colindex="11" targetcolumnname="순보식환급금" sortable="false" filterable="false" text="순보식환급금"/>
+            <cl:gridcell std:sid="gh-cell-ffdce0cd" rowindex="0" colindex="12" targetcolumnname="미상각신계약비" sortable="false" filterable="false" text="미상각신계약비"/>
+            <cl:gridcell std:sid="gh-cell-0a783666" rowindex="0" colindex="9" targetcolumnname="미경과보험료" sortable="false" filterable="false" text="미경과위험보험료"/>
+          </cl:gridheader>
+          <cl:griddetail std:sid="gd-band-92da7bc5">
+            <cl:gridrow std:sid="g-row-2aaeffc4" height="31px"/>
+            <cl:gridrow std:sid="g-row-289516af" height="31px"/>
+            <cl:gridcell std:sid="gd-cell-aea86d34" rowindex="0" colindex="0" rowspan="2" colspan="1" columnname="피보험자명">
+              <cl:output std:sid="output-4466d6e8" class="text-center">
+                <cl:celldata std:sid="c-data-61f43806"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-3fc9234b" rowindex="0" colindex="1" rowspan="2" colspan="1" columnname="계약상세번호">
+              <cl:output std:sid="output-207ccd03" class="text-center">
+                <cl:celldata std:sid="c-data-5a437a2c"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-626dbe79" rowindex="0" colindex="2" rowspan="2" colspan="1" columnname="보험코드">
+              <cl:output std:sid="output-386e9601" class="text-center">
+                <cl:celldata std:sid="c-data-44f243e8"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-f936d7e5" rowindex="0" colindex="3" rowspan="2" colspan="1" columnname="보험코드(명)">
+              <cl:output std:sid="output-f1696fca">
+                <cl:celldata std:sid="c-data-2ce2857a"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-ae7e495f" rowindex="0" colindex="4" columnname="구분">
+              <cl:output std:sid="output-34497351" class="text-center">
+                <cl:celldata std:sid="c-data-33da5dc9"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-0245613d" rowindex="0" colindex="5" columnname="해약환급금">
+              <cl:numbereditor std:sid="n-editor-e5e565eb" id="nbe1">
+                <cl:celldata std:sid="c-data-6da4329f"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-852b1966" rowindex="0" colindex="6" columnname="가산이자">
+              <cl:numbereditor std:sid="n-editor-65602fd3" id="nbe2">
+                <cl:celldata std:sid="c-data-790ec2e8"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-3c2ae0de" rowindex="0" colindex="7" columnname="선납보험료">
+              <cl:numbereditor std:sid="n-editor-2cfdc547" id="nbe3">
+                <cl:celldata std:sid="c-data-f43122e6"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-dbb8d986" rowindex="0" colindex="8" columnname="미경과보험료">
+              <cl:numbereditor std:sid="n-editor-edc13090" id="nbe4">
+                <cl:celldata std:sid="c-data-4156acb8"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-051ca7f6" rowindex="0" colindex="10" columnname="분할선/미지급금">
+              <cl:numbereditor std:sid="n-editor-b189f0f4" id="nbe5">
+                <cl:celldata std:sid="c-data-130148a7"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-3e8b2995" rowindex="0" colindex="11" columnname="순보식환급금">
+              <cl:numbereditor std:sid="n-editor-ceeaf1f9" id="nbe6">
+                <cl:celldata std:sid="c-data-7ae84368"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-04eb255c" rowindex="0" colindex="12" columnname="미상각신계약비">
+              <cl:numbereditor std:sid="n-editor-7aba7b27" id="nbe7">
+                <cl:celldata std:sid="c-data-44e8d94f"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-fd0d33bb" rowindex="1" colindex="4" columnname="구분2">
+              <cl:output std:sid="output-9650a231" class="text-center">
+                <cl:celldata std:sid="c-data-ceaf14d0"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-24b1babf" rowindex="1" colindex="5" columnname="해약환급금2">
+              <cl:numbereditor std:sid="n-editor-1503cd7a" id="nbe14">
+                <cl:celldata std:sid="c-data-30e77421"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-93f083fd" rowindex="1" colindex="6" columnname="가산이자2">
+              <cl:numbereditor std:sid="n-editor-1d810133" id="nbe8">
+                <cl:celldata std:sid="c-data-77248e67"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-336c1173" rowindex="1" colindex="7" columnname="선납보험료2">
+              <cl:numbereditor std:sid="n-editor-3ef96199" id="nbe9">
+                <cl:celldata std:sid="c-data-5d24e037"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-b731783a" rowindex="1" colindex="8" columnname="미경과보험료2">
+              <cl:numbereditor std:sid="n-editor-37b28ae6" id="nbe10">
+                <cl:celldata std:sid="c-data-23455958"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-a7c0023e" rowindex="1" colindex="10" columnname="분할선/미지급금2">
+              <cl:numbereditor std:sid="n-editor-cd4e8a8c" id="nbe11">
+                <cl:celldata std:sid="c-data-b088a8fd"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-81bc9647" rowindex="1" colindex="11" columnname="순보식환급금2">
+              <cl:numbereditor std:sid="n-editor-d873ed5f" id="nbe12">
+                <cl:celldata std:sid="c-data-ace37695"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-570bd87e" rowindex="1" colindex="12" columnname="미상각신계약비2">
+              <cl:numbereditor std:sid="n-editor-43374b09" id="nbe13">
+                <cl:celldata std:sid="c-data-3997a66f"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-6ffa97ce" rowindex="0" colindex="9" columnname="미경과위험보험료">
+              <cl:numbereditor std:sid="n-editor-64cd0d37" id="nbe39">
+                <cl:celldata std:sid="c-data-0ff84226"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-ba5c776a" rowindex="1" colindex="9" columnname="미경과위험보험료2">
+              <cl:numbereditor std:sid="n-editor-c81a8a66" id="nbe40">
+                <cl:celldata std:sid="c-data-5458c4f1"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+          </cl:griddetail>
+          <cl:gridfooter std:sid="gf-band-95659fc5">
+            <cl:gridrow std:sid="g-row-2c3b320a" height="31px"/>
+            <cl:gridrow std:sid="g-row-58b928c7" height="31px"/>
+            <cl:gridrow std:sid="g-row-41ecaa38" height="31px"/>
+            <cl:gridcell std:sid="gf-cell-aa46672a" rowindex="0" colindex="0" rowspan="3" colspan="4" expr="&quot;계&quot;"/>
+            <cl:gridcell std:sid="gf-cell-0591bc35" rowindex="0" colindex="4" expr="&quot;변경전&quot;"/>
+            <cl:gridcell std:sid="gf-cell-2d0ba5a0" rowindex="0" colindex="5" expr="getSum(&quot;해약환급금&quot;)">
+              <cl:numbereditor std:sid="n-editor-201d3726" id="nbe15">
+                <cl:celldata std:sid="c-data-3d607bbe"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-6542f19b" rowindex="0" colindex="6" expr="getSum(&quot;가산이자&quot;)">
+              <cl:numbereditor std:sid="n-editor-de92519c" id="nbe18">
+                <cl:celldata std:sid="c-data-f52de39b"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-51b85fdd" rowindex="0" colindex="7" expr="getSum(&quot;선납보험료&quot;)">
+              <cl:numbereditor std:sid="n-editor-73ea60c4" id="nbe23">
+                <cl:celldata std:sid="c-data-2207b31a"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-92431f00" rowindex="0" colindex="8" expr="getSum(&quot;미경과보험료&quot;)">
+              <cl:numbereditor std:sid="n-editor-dc5fe0d1" id="nbe24">
+                <cl:celldata std:sid="c-data-c3e3c687"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-dda50b94" rowindex="0" colindex="10" expr="getSum(&quot;분할선/미지급금&quot;)">
+              <cl:numbereditor std:sid="n-editor-c89e409a" id="nbe28">
+                <cl:celldata std:sid="c-data-a31aa91a"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-23974f95" rowindex="0" colindex="11" expr="getSum(&quot;순보식환급금&quot;)">
+              <cl:numbereditor std:sid="n-editor-02d8ca28" id="nbe30">
+                <cl:celldata std:sid="c-data-52e03c52"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-b0afb641" rowindex="0" colindex="12" expr="getSum(&quot;미상각신계약비&quot;)">
+              <cl:numbereditor std:sid="n-editor-c5b28374" id="nbe34">
+                <cl:celldata std:sid="c-data-eb27ad90"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-5a05eeb2" rowindex="2" colindex="4" expr="&quot;차액금액&quot;"/>
+            <cl:gridcell std:sid="gf-cell-455d1b89" rowindex="2" colindex="5" expr="getSum(&quot;해약환급금&quot;)-getSum(&quot;해약환급금2&quot;)">
+              <cl:numbereditor std:sid="n-editor-961cbef9" id="nbe17">
+                <cl:celldata std:sid="c-data-73b0973d"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-2d39cf9c" rowindex="2" colindex="6" expr="getSum(&quot;가산이자&quot;)-getSum(&quot;가산이자2&quot;)">
+              <cl:numbereditor std:sid="n-editor-f5069f45" id="nbe20">
+                <cl:celldata std:sid="c-data-3a6987fd"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-67ef77eb" rowindex="2" colindex="7" expr="getSum(&quot;선납보험료&quot;)-getSum(&quot;선납보험료2&quot;)">
+              <cl:numbereditor std:sid="n-editor-2daeca3d" id="nbe21">
+                <cl:celldata std:sid="c-data-3e55099f"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-f68e6030" rowindex="2" colindex="8" expr="getSum(&quot;미경과보험료&quot;)-getSum(&quot;미경과보험료2&quot;)">
+              <cl:numbereditor std:sid="n-editor-5fbfb124" id="nbe26">
+                <cl:celldata std:sid="c-data-12d62e3b"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-8a389562" rowindex="2" colindex="10" expr="getSum(&quot;분할선/미지급금&quot;)-getSum(&quot;분할선/미지급금2&quot;)">
+              <cl:numbereditor std:sid="n-editor-29203492" id="nbe29">
+                <cl:celldata std:sid="c-data-2556af90"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-ca06fe87" rowindex="2" colindex="11" expr="getSum(&quot;순보식환급금&quot;)-getSum(&quot;순보식환급금2&quot;)">
+              <cl:numbereditor std:sid="n-editor-619791ef" id="nbe32">
+                <cl:celldata std:sid="c-data-1e2ad25f"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-d30d507d" rowindex="2" colindex="12" expr="getSum(&quot;미상각신계약비&quot;)-getSum(&quot;미상각신계약비2&quot;)">
+              <cl:numbereditor std:sid="n-editor-41f2f5d6" id="nbe35">
+                <cl:celldata std:sid="c-data-a4d3fdf1"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-c2295d2d" rowindex="1" colindex="4" expr="&quot;변경후&quot;"/>
+            <cl:gridcell std:sid="gf-cell-6e3eec12" rowindex="1" colindex="5" expr="getSum(&quot;해약환급금2&quot;)">
+              <cl:numbereditor std:sid="n-editor-6ba2984f" id="nbe16">
+                <cl:celldata std:sid="c-data-d7dc4e6d"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-06138a4f" rowindex="1" colindex="6" expr="getSum(&quot;가산이자2&quot;)&#xD;&#xA;">
+              <cl:numbereditor std:sid="n-editor-a1d1b813" id="nbe19">
+                <cl:celldata std:sid="c-data-323e3231"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-b141ca71" rowindex="1" colindex="7" expr="getSum(&quot;선납보험료2&quot;)&#xD;&#xA;">
+              <cl:numbereditor std:sid="n-editor-3a2d8ace" id="nbe22">
+                <cl:celldata std:sid="c-data-0deb3577"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-1a695f75" rowindex="1" colindex="8" expr="getSum(&quot;미경과보험료2&quot;)&#xD;&#xA;">
+              <cl:numbereditor std:sid="n-editor-528db192" id="nbe25">
+                <cl:celldata std:sid="c-data-5e38446b"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-a548ef21" rowindex="1" colindex="10" expr="getSum(&quot;분할선/미지급금2&quot;)&#xD;&#xA;">
+              <cl:numbereditor std:sid="n-editor-97d03db1" id="nbe27">
+                <cl:celldata std:sid="c-data-478124ab"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-b56e6a8a" rowindex="1" colindex="11" expr="getSum(&quot;순보식환급금2&quot;)&#xD;&#xA;">
+              <cl:numbereditor std:sid="n-editor-2ee79225" id="nbe31">
+                <cl:celldata std:sid="c-data-95dd9993"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-3df300c8" rowindex="1" colindex="12" expr="getSum(&quot;미상각신계약비2&quot;)">
+              <cl:numbereditor std:sid="n-editor-96216f44" id="nbe33">
+                <cl:celldata std:sid="c-data-ae684f46"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-d4662c33" rowindex="0" colindex="9" expr="getSum(&quot;미경과위험보험료&quot;)">
+              <cl:numbereditor std:sid="n-editor-db197630" id="nbe36">
+                <cl:celldata std:sid="c-data-02a29b72"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-c496679c" rowindex="1" colindex="9" expr="getSum(&quot;미경과위험보험료2&quot;)">
+              <cl:numbereditor std:sid="n-editor-537057e8" id="nbe37">
+                <cl:celldata std:sid="c-data-3748c051"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-289b7850" rowindex="2" colindex="9" expr="getSum(&quot;미경과위험보험료&quot;)-getSum(&quot;미경과위험보험료2&quot;)">
+              <cl:numbereditor std:sid="n-editor-e1a8a824" id="nbe38">
+                <cl:celldata std:sid="c-data-2082dfdd"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+          </cl:gridfooter>
+        </cl:grid>
+        <cl:verticallayout std:sid="v-layout-3a454f14" spacing="8"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-619f69ba" spacing="15"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-ebd8bb2c" spacing="10"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler>
+      <std:guide position="380"/>
+    </std:vruler>
+  </std:studiosetting>
+</html>

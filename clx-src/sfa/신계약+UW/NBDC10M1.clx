@@ -23,7 +23,7 @@
         <cl:datarowlist>
           <cl:datarow>
             <cl:datavalue columnname="column1"><![CDATA[주보험]]></cl:datavalue>
-            <cl:datavalue columnname="column2"><![CDATA[I06790 (무)KDB파워플랜저축보험]]></cl:datavalue>
+            <cl:datavalue columnname="column2"><![CDATA[I06790 (무)흥국생명 OK연금보험]]></cl:datavalue>
             <cl:datavalue columnname="column3"><![CDATA[12000]]></cl:datavalue>
             <cl:datavalue columnname="column4"><![CDATA[1000000]]></cl:datavalue>
             <cl:datavalue columnname="column5"><![CDATA[피보험자세형]]></cl:datavalue>
@@ -32,22 +32,22 @@
             <cl:datavalue columnname="column8"><![CDATA[월납]]></cl:datavalue>
           </cl:datarow>
           <cl:datarow>
-            <cl:datavalue columnname="column1"><![CDATA[주보험]]></cl:datavalue>
-            <cl:datavalue columnname="column2"><![CDATA[I06790 (무)KDB파워플랜저축보험]]></cl:datavalue>
-            <cl:datavalue columnname="column3"><![CDATA[12000]]></cl:datavalue>
-            <cl:datavalue columnname="column4"><![CDATA[1000000]]></cl:datavalue>
-            <cl:datavalue columnname="column5"><![CDATA[피보험자세형]]></cl:datavalue>
-            <cl:datavalue columnname="column6"><![CDATA[44]]></cl:datavalue>
+            <cl:datavalue columnname="column1"><![CDATA[선택특약]]></cl:datavalue>
+            <cl:datavalue columnname="column2"><![CDATA[I70328 (무)흥국생명 프리미엄드림저축보험]]></cl:datavalue>
+            <cl:datavalue columnname="column3"><![CDATA[100]]></cl:datavalue>
+            <cl:datavalue columnname="column4"><![CDATA[1790]]></cl:datavalue>
+            <cl:datavalue columnname="column5"><![CDATA[종신형만기]]></cl:datavalue>
+            <cl:datavalue columnname="column6"><![CDATA[999]]></cl:datavalue>
             <cl:datavalue columnname="column7"><![CDATA[20]]></cl:datavalue>
             <cl:datavalue columnname="column8"><![CDATA[월납]]></cl:datavalue>
           </cl:datarow>
           <cl:datarow>
-            <cl:datavalue columnname="column1"><![CDATA[주보험]]></cl:datavalue>
-            <cl:datavalue columnname="column2"><![CDATA[I06790 (무)KDB파워플랜저축보험]]></cl:datavalue>
-            <cl:datavalue columnname="column3"><![CDATA[12000]]></cl:datavalue>
-            <cl:datavalue columnname="column4"><![CDATA[1000000]]></cl:datavalue>
-            <cl:datavalue columnname="column5"><![CDATA[피보험자세형]]></cl:datavalue>
-            <cl:datavalue columnname="column6"><![CDATA[44]]></cl:datavalue>
+            <cl:datavalue columnname="column1"><![CDATA[선택특약]]></cl:datavalue>
+            <cl:datavalue columnname="column2"><![CDATA[I70306 (무)흥국생명 실손의료비보험(갱신형)]]></cl:datavalue>
+            <cl:datavalue columnname="column3"><![CDATA[100]]></cl:datavalue>
+            <cl:datavalue columnname="column4"><![CDATA[5700]]></cl:datavalue>
+            <cl:datavalue columnname="column5"><![CDATA[연형]]></cl:datavalue>
+            <cl:datavalue columnname="column6"><![CDATA[20]]></cl:datavalue>
             <cl:datavalue columnname="column7"><![CDATA[20]]></cl:datavalue>
             <cl:datavalue columnname="column8"><![CDATA[월납]]></cl:datavalue>
           </cl:datarow>
@@ -64,21 +64,14 @@
       </cl:output>
       <cl:group std:sid="group-799c377d" id="grpNavi" class="breadcrumbs">
         <cl:formdata std:sid="f-data-b5509d70" row="0" col="1"/>
-        <cl:output std:sid="output-dbbcce1a" class="home" value="">
-          <cl:flowlayoutdata std:sid="f-data-1cd87bb6" width="20px" height="20px"/>
-        </cl:output>
-        <cl:output std:sid="output-d5e11268" class="breadcrumb-item" value="1Depth">
-          <cl:flowlayoutdata std:sid="f-data-3beb2f65" width="45px" height="17px" autosize="width"/>
-        </cl:output>
-        <cl:output std:sid="output-6e79a920" class="breadcrumb-item" value="2Depth">
-          <cl:flowlayoutdata std:sid="f-data-e5e89842" width="45px" height="17px" autosize="width"/>
-        </cl:output>
-        <cl:output std:sid="output-a3f90a9b" class="breadcrumb-item" value="3Depth">
-          <cl:flowlayoutdata std:sid="f-data-81618497" width="45px" height="17px" autosize="width"/>
-        </cl:output>
-        <cl:output std:sid="output-6a18b375" class="breadcrumb-item" value="4Depth">
-          <cl:flowlayoutdata std:sid="f-data-94258ced" width="45px" height="17px" autosize="width"/>
-        </cl:output>
+        <cl:button std:sid="button-bd6b1abf" class="btn-primary04 btn-md" value="이전">
+          <cl:listener std:sid="listener-ec308601" name="click" handler="onButtonClick"/>
+          <cl:flowlayoutdata std:sid="f-data-91d735bc" width="50px" height="26px" autosize="none"/>
+        </cl:button>
+        <cl:button std:sid="button-adfb4ec5" class="btn-primary04 btn-md" value="다음">
+          <cl:listener std:sid="listener-de610f09" name="click" handler="onButtonClick2"/>
+          <cl:flowlayoutdata std:sid="f-data-eef561e8" width="50px" height="26px" autosize="none"/>
+        </cl:button>
         <cl:flowlayout std:sid="f-layout-ce38801e" scrollable="false" hspacing="5" vspacing="0" halign="right" valign="middle" linewrap="false"/>
       </cl:group>
       <cl:formlayout std:sid="f-layout-2de29e5a" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
@@ -152,7 +145,7 @@
             <cl:inputbox std:sid="i-box-dfefc175" id="ipb2" value="P06790">
               <cl:formdata std:sid="f-data-22f77b9e" row="0" col="0"/>
             </cl:inputbox>
-            <cl:inputbox std:sid="i-box-45af43d1" id="ipb4" value="(무)KDB파워플랜저축보험">
+            <cl:inputbox std:sid="i-box-45af43d1" id="ipb4" value="(무)흥국생명 프리미엄드림연금보험">
               <cl:formdata std:sid="f-data-1ae842e3" row="0" col="1"/>
             </cl:inputbox>
             <cl:formlayout std:sid="f-layout-29574836" scrollable="false" hspace="5px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
@@ -176,7 +169,7 @@
           <cl:output std:sid="output-f678fe5c" class="label" value="계약자">
             <cl:formdata std:sid="f-data-03f0ae1c" row="1" col="0"/>
           </cl:output>
-          <cl:inputbox std:sid="i-box-ad3593c4" id="ipb12" value="홍길동">
+          <cl:inputbox std:sid="i-box-ad3593c4" id="ipb12" value="김흥국">
             <cl:formdata std:sid="f-data-a4a01711" row="1" col="1"/>
           </cl:inputbox>
           <cl:output std:sid="output-0e0b32d4" class="label" value="모집설계사">
@@ -187,7 +180,7 @@
             <cl:inputbox std:sid="i-box-fb3a82af" id="ipb8" value="1000">
               <cl:formdata std:sid="f-data-83384d12" row="0" col="0"/>
             </cl:inputbox>
-            <cl:inputbox std:sid="i-box-e5ff891e" id="ipb9" value="홍길동">
+            <cl:inputbox std:sid="i-box-e5ff891e" id="ipb9" value="정이현">
               <cl:formdata std:sid="f-data-5be043d4" row="0" col="1"/>
             </cl:inputbox>
             <cl:formlayout std:sid="f-layout-cf72fc0f" scrollable="false" hspace="5px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
@@ -231,7 +224,7 @@
           </cl:output>
           <cl:group std:sid="group-2a8755e9" id="grp5" class="form-inside">
             <cl:formdata std:sid="f-data-55cabb64" row="2" col="7"/>
-            <cl:dateinput std:sid="d-input-b9647840" id="dti2" value="201503" calendartype="yearmonth" mask="YYYY-MM" format="YYYYMM">
+            <cl:dateinput std:sid="d-input-b9647840" id="dti2" value="202403" calendartype="yearmonth" mask="YYYY-MM" format="YYYYMM">
               <cl:formdata std:sid="f-data-298ff059" row="0" col="0"/>
             </cl:dateinput>
             <cl:output std:sid="output-827991c1" class="text-center" value="/">
@@ -250,7 +243,7 @@
           <cl:output std:sid="output-581e0ad5" class="label" value="계약일자">
             <cl:formdata std:sid="f-data-7e72580b" row="3" col="0"/>
           </cl:output>
-          <cl:dateinput std:sid="d-input-da628eab" id="dti3" value="20150319">
+          <cl:dateinput std:sid="d-input-da628eab" id="dti3" value="20240319">
             <cl:formdata std:sid="f-data-126ed690" halign="LEFT" width="120" row="3" col="1"/>
           </cl:dateinput>
           <cl:output std:sid="output-adac657f" class="label" value="중도부가여부">
@@ -274,7 +267,7 @@
           <cl:output std:sid="output-d081bbbc" class="label" value="계약상태">
             <cl:formdata std:sid="f-data-20a54d5b" row="4" col="0"/>
           </cl:output>
-          <cl:inputbox std:sid="i-box-81266fbb" id="ipb14" value="청약소멸">
+          <cl:inputbox std:sid="i-box-81266fbb" id="ipb14" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" value="청약소멸">
             <cl:formdata std:sid="f-data-cd425491" row="4" col="1"/>
           </cl:inputbox>
           <cl:output std:sid="output-d91cb67c" class="label" value="주보험 가입금액">
@@ -397,7 +390,7 @@
         </cl:grid>
         <cl:verticallayout std:sid="v-layout-3a454f14" spacing="8"/>
       </cl:group>
-      <cl:group std:sid="group-ec35db98" class="form-box">
+      <cl:group std:sid="group-ec35db98" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" class="form-box">
         <cl:verticaldata std:sid="v-data-e0b07215" width="1386px" height="125px" autosize="height"/>
         <cl:group std:sid="group-0342a7cb" id="grp9" class="form-title-box">
           <cl:verticaldata std:sid="v-data-35873577" width="300px" height="17px" autosize="height"/>
@@ -442,13 +435,13 @@
           <cl:output std:sid="output-e3f58535" class="label" value="처리일">
             <cl:formdata std:sid="f-data-33535649" row="0" col="6"/>
           </cl:output>
-          <cl:dateinput std:sid="d-input-a910fc24" id="dti4" value="20150315">
+          <cl:dateinput std:sid="d-input-a910fc24" id="dti4" value="20240315">
             <cl:formdata std:sid="f-data-c1c24578" halign="LEFT" width="120" row="0" col="7"/>
           </cl:dateinput>
           <cl:output std:sid="output-13b2f008" class="label" value="접수일자">
             <cl:formdata std:sid="f-data-44b0f396" row="1" col="0"/>
           </cl:output>
-          <cl:dateinput std:sid="d-input-9aca48a7" id="dti5" value="20150315">
+          <cl:dateinput std:sid="d-input-9aca48a7" id="dti5" value="20240315">
             <cl:formdata std:sid="f-data-a09dfec1" halign="LEFT" width="120" row="1" col="1"/>
           </cl:dateinput>
           <cl:output std:sid="output-dc69d838" class="label" value="계좌번호">
@@ -478,7 +471,7 @@
           <cl:output std:sid="output-ff78de48" class="label" value="처리자">
             <cl:formdata std:sid="f-data-f1cbcec6" row="2" col="6"/>
           </cl:output>
-          <cl:inputbox std:sid="i-box-894c632d" id="ipb17" value="홍길동">
+          <cl:inputbox std:sid="i-box-894c632d" id="ipb17" value="정이현">
             <cl:formdata std:sid="f-data-86072fb8" row="2" col="7"/>
           </cl:inputbox>
           <cl:formlayout std:sid="f-layout-4841b4c4" scrollable="false" hspace="11px" vspace="5px" top-margin="2px" right-margin="5px" bottom-margin="2px" left-margin="5px" hseparatorwidth="1" hseparatortype="BY_CLASS" vseparatorwidth="1" vseparatortype="BY_CLASS">
@@ -511,7 +504,7 @@
           <cl:output std:sid="output-712b4039" class="label" value="지급일자">
             <cl:formdata std:sid="f-data-6b6e3605" row="0" col="0"/>
           </cl:output>
-          <cl:dateinput std:sid="d-input-fd5e9847" id="dti6" value="20150315">
+          <cl:dateinput std:sid="d-input-fd5e9847" id="dti6" value="20240315">
             <cl:formdata std:sid="f-data-4ec0bd25" halign="LEFT" width="120" row="0" col="1"/>
           </cl:dateinput>
           <cl:output std:sid="output-ef91ed8c" class="label" value="반송금액">
@@ -577,7 +570,7 @@
             <cl:output std:sid="output-2472f8e9" class="label required" value="비밀번호">
               <cl:formdata std:sid="f-data-d0644d01" row="0" col="2"/>
             </cl:output>
-            <cl:inputbox std:sid="i-box-e6983d1b" id="ipb18" secret="true">
+            <cl:inputbox std:sid="i-box-e6983d1b" id="ipb18" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" secret="true">
               <cl:formdata std:sid="f-data-de416b25" row="0" col="3"/>
             </cl:inputbox>
             <cl:formlayout std:sid="f-layout-5438c996" scrollable="false" hspace="11px" vspace="5px" top-margin="2px" right-margin="5px" bottom-margin="2px" left-margin="5px" hseparatorwidth="1" hseparatortype="BY_CLASS" vseparatorwidth="1" vseparatortype="BY_CLASS">

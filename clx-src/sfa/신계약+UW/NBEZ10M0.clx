@@ -31,12 +31,12 @@
         </cl:datacolumnlist>
         <cl:datarowlist>
           <cl:datarow>
-            <cl:datavalue columnname="입력일자"><![CDATA[20150319]]></cl:datavalue>
+            <cl:datavalue columnname="입력일자"><![CDATA[20240319]]></cl:datavalue>
             <cl:datavalue columnname="지점"><![CDATA[본사]]></cl:datavalue>
             <cl:datavalue columnname="영업소"><![CDATA[보험시스템팀]]></cl:datavalue>
             <cl:datavalue columnname="계약번호"><![CDATA[0481245]]></cl:datavalue>
             <cl:datavalue columnname="청약번호"><![CDATA[100151234]]></cl:datavalue>
-            <cl:datavalue columnname="계약자명"><![CDATA[조]]></cl:datavalue>
+            <cl:datavalue columnname="계약자명"><![CDATA[조**]]></cl:datavalue>
             <cl:datavalue columnname="심사상태"><![CDATA[미심사]]></cl:datavalue>
             <cl:datavalue columnname="진단종류"><![CDATA[]]></cl:datavalue>
             <cl:datavalue columnname="전산심사"><![CDATA[비정상건]]></cl:datavalue>
@@ -44,7 +44,7 @@
             <cl:datavalue columnname="사무심사"><![CDATA[비정상]]></cl:datavalue>
             <cl:datavalue columnname="재정심사"><![CDATA[정상]]></cl:datavalue>
             <cl:datavalue columnname="적부발췌"><![CDATA[무]]></cl:datavalue>
-            <cl:datavalue columnname="심사자"><![CDATA[장]]></cl:datavalue>
+            <cl:datavalue columnname="심사자"><![CDATA[장**]]></cl:datavalue>
             <cl:datavalue columnname="스캔도착"><![CDATA[]]></cl:datavalue>
             <cl:datavalue columnname="스캔보완"><![CDATA[]]></cl:datavalue>
             <cl:datavalue columnname="보완시간"><![CDATA[]]></cl:datavalue>
@@ -62,21 +62,14 @@
       </cl:output>
       <cl:group std:sid="group-799c377d" id="grpNavi" class="breadcrumbs">
         <cl:formdata std:sid="f-data-b5509d70" row="0" col="1"/>
-        <cl:output std:sid="output-dbbcce1a" class="home" value="">
-          <cl:flowlayoutdata std:sid="f-data-1cd87bb6" width="20px" height="20px"/>
-        </cl:output>
-        <cl:output std:sid="output-d5e11268" class="breadcrumb-item" value="1Depth">
-          <cl:flowlayoutdata std:sid="f-data-3beb2f65" width="45px" height="17px" autosize="width"/>
-        </cl:output>
-        <cl:output std:sid="output-6e79a920" class="breadcrumb-item" value="2Depth">
-          <cl:flowlayoutdata std:sid="f-data-e5e89842" width="45px" height="17px" autosize="width"/>
-        </cl:output>
-        <cl:output std:sid="output-a3f90a9b" class="breadcrumb-item" value="3Depth">
-          <cl:flowlayoutdata std:sid="f-data-81618497" width="45px" height="17px" autosize="width"/>
-        </cl:output>
-        <cl:output std:sid="output-6a18b375" class="breadcrumb-item" value="4Depth">
-          <cl:flowlayoutdata std:sid="f-data-94258ced" width="45px" height="17px" autosize="width"/>
-        </cl:output>
+        <cl:button std:sid="button-bd6b1abf" class="btn-primary04 btn-md" value="이전">
+          <cl:listener std:sid="listener-49a0a94b" name="click" handler="onButtonClick2"/>
+          <cl:flowlayoutdata std:sid="f-data-91d735bc" width="50px" height="26px" autosize="none"/>
+        </cl:button>
+        <cl:button std:sid="button-adfb4ec5" class="btn-primary04 btn-md" value="다음">
+          <cl:listener std:sid="listener-813196f4" name="click" handler="onButtonClick3"/>
+          <cl:flowlayoutdata std:sid="f-data-eef561e8" width="50px" height="26px" autosize="none"/>
+        </cl:button>
         <cl:flowlayout std:sid="f-layout-ce38801e" scrollable="false" hspacing="5" vspacing="0" halign="right" valign="middle" linewrap="false"/>
       </cl:group>
       <cl:formlayout std:sid="f-layout-2de29e5a" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
@@ -250,7 +243,7 @@
                 </cl:output>
               </cl:gridcell>
               <cl:gridcell std:sid="gd-cell-3b498471" rowindex="1" colindex="5" columnname="심사자">
-                <cl:output std:sid="output-99abca17" class="text-center">
+                <cl:output std:sid="output-99abca17" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" class="text-center">
                   <cl:celldata std:sid="c-data-fa11d70c"/>
                 </cl:output>
               </cl:gridcell>
@@ -285,6 +278,7 @@
           </std:metadata>
           <cl:verticaldata std:sid="v-data-363aa76e" width="1560px" height="42px" autosize="height"/>
           <cl:output std:sid="output-e30029e0" value="- 리스트를 더블클릭 하시면 [청약서심사] 화면으로 이동합니다.">
+            <cl:listener std:sid="listener-0772b244" name="value-change" handler="onOutputValueChange"/>
             <cl:verticaldata std:sid="v-data-8c49ed4f" width="904px" height="20px" autosize="height"/>
           </cl:output>
           <cl:verticallayout std:sid="v-layout-24f1377e" scrollable="false" spacing="8" leftmargin="10" rightmargin="10" topmargin="10" bottommargin="10"/>
@@ -305,6 +299,7 @@
           <cl:group std:sid="group-5aa6c261" class="button-table-bottom-right-area">
             <cl:formdata std:sid="f-data-811afdad" row="0" col="2"/>
             <cl:button std:sid="button-b0d4f6fa" class="btn-primary04" value="다음">
+              <cl:listener std:sid="listener-09777ae0" name="click" handler="onButtonClick"/>
               <cl:flowlayoutdata std:sid="f-data-b991b03b" width="60px" height="30px" autosize="width"/>
             </cl:button>
             <cl:flowlayout std:sid="f-layout-872f1d8d" scrollable="false" hspacing="10" vspacing="0" halign="right" linewrap="false"/>

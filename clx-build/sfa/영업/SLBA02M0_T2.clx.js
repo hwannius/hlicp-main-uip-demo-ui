@@ -35,7 +35,16 @@
 					{"name": "column1"},
 					{"name": "column2"}
 				],
-				"rows": [{"column1": "변액보험판매력강화교", "column2": "200509"}]
+				"rows": [
+					{"column1": "변액보험판매력강화교", "column2": "201409"},
+					{"column1": "KFP보수", "column2": "201303"},
+					{"column1": "이동KFP센터", "column2": "201208"},
+					{"column1": "재점설계순회", "column2": "201107"},
+					{"column1": "팀장능력개발(합숙)", "column2": "201105"},
+					{"column1": "순회교육", "column2": "201010"},
+					{"column1": "순회교육", "column2": "201006"},
+					{"column1": "순회교육", "column2": "200908"}
+				]
 			});
 			app.register(dataSet_2);
 			
@@ -46,7 +55,15 @@
 					{"name": "column2"},
 					{"name": "column3"}
 				],
-				"rows": [{"column1": "보장성보험판매자격", "column2": "해당없음", "column3": "201503"}]
+				"rows": [
+					{"column1": "보장성보험판매자격", "column2": "해당없음", "column3": "202403"},
+					{"column1": "연금저축성보험판매자격", "column2": "해당없음", "column3": "202403"},
+					{"column1": "변액보험판매자격", "column2": "변액보험판매", "column3": "201409"},
+					{"column1": "계약전환자격", "column2": "계약전환자격인증", "column3": "201310"},
+					{"column1": "트레이너자격", "column2": "트레이너", "column3": "201302"},
+					{"column1": "KFP인증자격", "column2": "KFP인증", "column3": "201210"},
+					{"column1": "KSP인증자격", "column2": "KSP인증", "column3": "201011"}
+				]
 			});
 			app.register(dataSet_3);
 			app.supportMedia("all and (min-width: 3160px)", "Hlicp-WIDE");
@@ -202,7 +219,7 @@
 							grid_1.style.setClasses(["list-normal"]);
 							container.addChild(grid_1, {
 								"width": "400px",
-								"height": "498px"
+								"height": "185px"
 							});
 						})(group_4);
 						container.addChild(group_4, {
@@ -303,7 +320,7 @@
 							grid_2.style.setClasses(["list-normal"]);
 							container.addChild(grid_2, {
 								"width": "400px",
-								"height": "498px"
+								"height": "185px"
 							});
 						})(group_6);
 						container.addChild(group_6, {
@@ -399,7 +416,7 @@
 							grid_3.style.setClasses(["list-normal"]);
 							container.addChild(grid_3, {
 								"width": "400px",
-								"height": "498px"
+								"height": "185px"
 							});
 						})(group_8);
 						container.addChild(group_8, {

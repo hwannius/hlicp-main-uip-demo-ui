@@ -16,7 +16,43 @@
 			 * Created at 2024. 4. 2. 오후 1:44:29.
 			 *
 			 * @author User
-			 ************************************************/;
+			 ************************************************/
+
+			/*
+			 * "이전" 버튼에서 click 이벤트 발생 시 호출.
+			 * 사용자가 컨트롤을 클릭할 때 발생하는 이벤트.
+			 */
+			function onButtonClick(e){
+				var button = e.control;
+				//화면이동(현재 화면에서 리로드)
+				var host = app.getHost(); // 부모 임베디드 앱
+				cpr.core.App.load("sfa/영업/SLEA02M1_3", function(loadedApp) {
+				    if (loadedApp) {
+				        host.app = loadedApp;
+				        host.initValue = {
+				            "param": "param"
+				        }
+				    }
+				});
+			}
+
+			/*
+			 * "다음" 버튼에서 click 이벤트 발생 시 호출.
+			 * 사용자가 컨트롤을 클릭할 때 발생하는 이벤트.
+			 */
+			function onButtonClick2(e){
+				var button = e.control;
+				//화면이동(현재 화면에서 리로드)
+				var host = app.getHost(); // 부모 임베디드 앱
+				cpr.core.App.load("sfa/영업/SLFC01M0", function(loadedApp) {
+				    if (loadedApp) {
+				        host.app = loadedApp;
+				        host.initValue = {
+				            "param": "param"
+				        }
+				    }
+				});
+			};
 			// End - User Script
 			
 			// Header
@@ -75,44 +111,27 @@
 				flowLayout_1.lineWrap = false;
 				group_2.setLayout(flowLayout_1);
 				(function(container){
-					var output_2 = new cpr.controls.Output();
-					output_2.value = "";
-					output_2.style.setClasses(["home"]);
-					container.addChild(output_2, {
-						"width": "20px",
-						"height": "20px"
-					});
-					var output_3 = new cpr.controls.Output();
-					output_3.value = "1Depth";
-					output_3.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_3, {
+					var button_1 = new cpr.controls.Button();
+					button_1.value = "이전";
+					button_1.style.setClasses(["btn-primary04", "btn-md"]);
+					if(typeof onButtonClick == "function") {
+						button_1.addEventListener("click", onButtonClick);
+					}
+					container.addChild(button_1, {
 						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
+						"width": "49px",
+						"height": "26px"
 					});
-					var output_4 = new cpr.controls.Output();
-					output_4.value = "2Depth";
-					output_4.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_4, {
+					var button_2 = new cpr.controls.Button();
+					button_2.value = "다음";
+					button_2.style.setClasses(["btn-primary04", "btn-md"]);
+					if(typeof onButtonClick2 == "function") {
+						button_2.addEventListener("click", onButtonClick2);
+					}
+					container.addChild(button_2, {
 						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
-					});
-					var output_5 = new cpr.controls.Output();
-					output_5.value = "3Depth";
-					output_5.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_5, {
-						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
-					});
-					var output_6 = new cpr.controls.Output();
-					output_6.value = "4Depth";
-					output_6.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_6, {
-						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
+						"width": "49px",
+						"height": "26px"
 					});
 				})(group_2);
 				container.addChild(group_2, {
@@ -156,15 +175,48 @@
 					formLayout_2.setRows(["26px"]);
 					group_5.setLayout(formLayout_2);
 					(function(container){
-						var output_7 = new cpr.controls.Output();
-						output_7.value = "조직번호";
-						output_7.style.setClasses(["label", "required"]);
-						container.addChild(output_7, {
-							"colIndex": 2,
+						var output_2 = new cpr.controls.Output();
+						output_2.value = "조직번호";
+						output_2.style.setClasses(["label", "required"]);
+						container.addChild(output_2, {
+							"colIndex": 0,
 							"rowIndex": 0
 						});
-						var group_6 = new cpr.controls.Container("grp1");
-						group_6.style.setClasses(["form-inside"]);
+						var group_6 = new cpr.controls.Container();
+						group_6.style.setClasses(["btn-flow-area"]);
+						var flowLayout_2 = new cpr.controls.layouts.FlowLayout();
+						flowLayout_2.scrollable = false;
+						flowLayout_2.verticalSpacing = 0;
+						flowLayout_2.horizontalAlign = "right";
+						flowLayout_2.lineWrap = false;
+						flowLayout_2.leftMargin = 20;
+						group_6.setLayout(flowLayout_2);
+						(function(container){
+							var button_3 = new cpr.controls.Button();
+							button_3.value = "조회";
+							button_3.style.setClasses(["btn-search"]);
+							container.addChild(button_3, {
+								"width": "49px",
+								"height": "26px"
+							});
+							var button_4 = new cpr.controls.Button();
+							button_4.value = "";
+							button_4.style.setClasses(["btn-reset"]);
+							container.addChild(button_4, {
+								"width": "26px",
+								"height": "26px"
+							});
+						})(group_6);
+						container.addChild(group_6, {
+							"colIndex": 6,
+							"rowIndex": 0,
+							"colSpan": 1,
+							"rowSpan": 1,
+							"verticalAlign": "center",
+							"height": 26
+						});
+						var group_7 = new cpr.controls.Container("grp17");
+						group_7.style.setClasses(["form-inside"]);
 						var formLayout_3 = new cpr.controls.layouts.FormLayout();
 						formLayout_3.scrollable = false;
 						formLayout_3.topMargin = "0px";
@@ -173,60 +225,41 @@
 						formLayout_3.leftMargin = "0px";
 						formLayout_3.horizontalSpacing = "5px";
 						formLayout_3.verticalSpacing = "5px";
-						formLayout_3.setColumns(["80px", "1fr"]);
+						formLayout_3.setColumns(["120px", "1fr"]);
 						formLayout_3.setRows(["1fr"]);
-						group_6.setLayout(formLayout_3);
+						group_7.setLayout(formLayout_3);
 						(function(container){
-							var inputBox_1 = new cpr.controls.InputBox("ipb1");
-							inputBox_1.value = "008001";
-							container.addChild(inputBox_1, {
+							var searchInput_1 = new cpr.controls.SearchInput();
+							searchInput_1.value = "008001";
+							searchInput_1.style.css({
+								"border-right-style" : "dashed",
+								"border-top-width" : "3px",
+								"border-bottom-color" : "red",
+								"border-left-style" : "dashed",
+								"border-right-width" : "3px",
+								"border-bottom-width" : "3px",
+								"border-left-color" : "red",
+								"border-top-color" : "red",
+								"border-bottom-style" : "dashed",
+								"border-right-color" : "red",
+								"border-left-width" : "3px",
+								"border-top-style" : "dashed"
+							});
+							container.addChild(searchInput_1, {
 								"colIndex": 0,
 								"rowIndex": 0
 							});
-							var searchInput_1 = new cpr.controls.SearchInput();
-							searchInput_1.enabled = false;
-							searchInput_1.value = "노원지점";
-							container.addChild(searchInput_1, {
+							var inputBox_1 = new cpr.controls.InputBox("ipb44");
+							inputBox_1.enabled = false;
+							inputBox_1.value = "노*지점";
+							container.addChild(inputBox_1, {
 								"colIndex": 1,
 								"rowIndex": 0
 							});
-						})(group_6);
-						container.addChild(group_6, {
-							"colIndex": 3,
-							"rowIndex": 0
-						});
-						var group_7 = new cpr.controls.Container();
-						group_7.style.setClasses(["btn-flow-area"]);
-						var flowLayout_2 = new cpr.controls.layouts.FlowLayout();
-						flowLayout_2.scrollable = false;
-						flowLayout_2.verticalSpacing = 0;
-						flowLayout_2.horizontalAlign = "right";
-						flowLayout_2.lineWrap = false;
-						flowLayout_2.leftMargin = 20;
-						group_7.setLayout(flowLayout_2);
-						(function(container){
-							var button_1 = new cpr.controls.Button();
-							button_1.value = "조회";
-							button_1.style.setClasses(["btn-search"]);
-							container.addChild(button_1, {
-								"width": "49px",
-								"height": "26px"
-							});
-							var button_2 = new cpr.controls.Button();
-							button_2.value = "";
-							button_2.style.setClasses(["btn-reset"]);
-							container.addChild(button_2, {
-								"width": "26px",
-								"height": "26px"
-							});
 						})(group_7);
 						container.addChild(group_7, {
-							"colIndex": 6,
-							"rowIndex": 0,
-							"colSpan": 1,
-							"rowSpan": 1,
-							"verticalAlign": "center",
-							"height": 26
+							"colIndex": 1,
+							"rowIndex": 0
 						});
 					})(group_5);
 					container.addChild(group_5, {
@@ -252,10 +285,10 @@
 					var verticalLayout_5 = new cpr.controls.layouts.VerticalLayout();
 					group_9.setLayout(verticalLayout_5);
 					(function(container){
-						var output_8 = new cpr.controls.Output();
-						output_8.value = "조직속성";
-						output_8.style.setClasses(["form-title"]);
-						container.addChild(output_8, {
+						var output_3 = new cpr.controls.Output();
+						output_3.value = "조직속성";
+						output_3.style.setClasses(["form-title"]);
+						container.addChild(output_3, {
 							"autoSize": "height",
 							"width": "300px",
 							"height": "17px"
@@ -285,61 +318,61 @@
 					formLayout_4.setUseRowShade(0, true);
 					group_10.setLayout(formLayout_4);
 					(function(container){
-						var output_9 = new cpr.controls.Output();
-						output_9.value = "속성";
-						output_9.style.setClasses(["label"]);
-						container.addChild(output_9, {
+						var output_4 = new cpr.controls.Output();
+						output_4.value = "속성";
+						output_4.style.setClasses(["label"]);
+						container.addChild(output_4, {
 							"colIndex": 0,
 							"rowIndex": 0,
 							"colSpan": 1,
 							"rowSpan": 2
 						});
-						var output_10 = new cpr.controls.Output();
-						output_10.value = "조직유형";
-						output_10.style.setClasses(["label"]);
-						container.addChild(output_10, {
+						var output_5 = new cpr.controls.Output();
+						output_5.value = "조직유형";
+						output_5.style.setClasses(["label"]);
+						container.addChild(output_5, {
 							"colIndex": 1,
 							"rowIndex": 0
 						});
-						var output_11 = new cpr.controls.Output();
-						output_11.value = "조직종류";
-						output_11.style.setClasses(["label"]);
-						container.addChild(output_11, {
+						var output_6 = new cpr.controls.Output();
+						output_6.value = "조직종류";
+						output_6.style.setClasses(["label"]);
+						container.addChild(output_6, {
 							"colIndex": 2,
 							"rowIndex": 0
 						});
-						var output_12 = new cpr.controls.Output();
-						output_12.value = "조직속성";
-						output_12.style.setClasses(["label"]);
-						container.addChild(output_12, {
+						var output_7 = new cpr.controls.Output();
+						output_7.value = "조직속성";
+						output_7.style.setClasses(["label"]);
+						container.addChild(output_7, {
 							"colIndex": 3,
 							"rowIndex": 0
 						});
-						var output_13 = new cpr.controls.Output();
-						output_13.value = "조직특성";
-						output_13.style.setClasses(["label"]);
-						container.addChild(output_13, {
+						var output_8 = new cpr.controls.Output();
+						output_8.value = "조직특성";
+						output_8.style.setClasses(["label"]);
+						container.addChild(output_8, {
 							"colIndex": 4,
 							"rowIndex": 0
 						});
-						var output_14 = new cpr.controls.Output();
-						output_14.value = "조직등급";
-						output_14.style.setClasses(["label"]);
-						container.addChild(output_14, {
+						var output_9 = new cpr.controls.Output();
+						output_9.value = "조직등급";
+						output_9.style.setClasses(["label"]);
+						container.addChild(output_9, {
 							"colIndex": 5,
 							"rowIndex": 0
 						});
-						var output_15 = new cpr.controls.Output();
-						output_15.value = "창구여부";
-						output_15.style.setClasses(["label"]);
-						container.addChild(output_15, {
+						var output_10 = new cpr.controls.Output();
+						output_10.value = "창구여부";
+						output_10.style.setClasses(["label"]);
+						container.addChild(output_10, {
 							"colIndex": 6,
 							"rowIndex": 0
 						});
-						var output_16 = new cpr.controls.Output();
-						output_16.value = "육성실운영";
-						output_16.style.setClasses(["label"]);
-						container.addChild(output_16, {
+						var output_11 = new cpr.controls.Output();
+						output_11.value = "육성실운영";
+						output_11.style.setClasses(["label"]);
+						container.addChild(output_11, {
 							"colIndex": 7,
 							"rowIndex": 0
 						});
@@ -408,10 +441,10 @@
 					var verticalLayout_7 = new cpr.controls.layouts.VerticalLayout();
 					group_12.setLayout(verticalLayout_7);
 					(function(container){
-						var output_17 = new cpr.controls.Output();
-						output_17.value = "기본정보";
-						output_17.style.setClasses(["form-title"]);
-						container.addChild(output_17, {
+						var output_12 = new cpr.controls.Output();
+						output_12.value = "기본정보";
+						output_12.style.setClasses(["form-title"]);
+						container.addChild(output_12, {
 							"autoSize": "height",
 							"width": "300px",
 							"height": "17px"
@@ -446,17 +479,17 @@
 					formLayout_5.setRows(["26px", "26px", "26px", "26px", "26px", "26px", "26px", "26px", "26px", "26px", "26px", "26px"]);
 					group_13.setLayout(formLayout_5);
 					(function(container){
-						var output_18 = new cpr.controls.Output();
-						output_18.value = "소속";
-						output_18.style.setClasses(["label"]);
-						container.addChild(output_18, {
+						var output_13 = new cpr.controls.Output();
+						output_13.value = "소속";
+						output_13.style.setClasses(["label"]);
+						container.addChild(output_13, {
 							"colIndex": 0,
 							"rowIndex": 0
 						});
-						var output_19 = new cpr.controls.Output();
-						output_19.value = "지원단(본부)";
-						output_19.style.setClasses(["label"]);
-						container.addChild(output_19, {
+						var output_14 = new cpr.controls.Output();
+						output_14.value = "지원단(본부)";
+						output_14.style.setClasses(["label"]);
+						container.addChild(output_14, {
 							"colIndex": 1,
 							"rowIndex": 0
 						});
@@ -466,32 +499,32 @@
 							"colIndex": 2,
 							"rowIndex": 0
 						});
-						var output_20 = new cpr.controls.Output();
-						output_20.value = "지점";
-						output_20.style.setClasses(["label"]);
-						container.addChild(output_20, {
+						var output_15 = new cpr.controls.Output();
+						output_15.value = "지점";
+						output_15.style.setClasses(["label"]);
+						container.addChild(output_15, {
 							"colIndex": 3,
 							"rowIndex": 0
 						});
 						var inputBox_10 = new cpr.controls.InputBox("ipb10");
-						inputBox_10.value = "000111(노원지점)";
+						inputBox_10.value = "000111(노*지점)";
 						container.addChild(inputBox_10, {
 							"colIndex": 4,
 							"rowIndex": 0,
 							"colSpan": 3,
 							"rowSpan": 1
 						});
-						var output_21 = new cpr.controls.Output();
-						output_21.value = "지역";
-						output_21.style.setClasses(["label"]);
-						container.addChild(output_21, {
+						var output_16 = new cpr.controls.Output();
+						output_16.value = "지역";
+						output_16.style.setClasses(["label"]);
+						container.addChild(output_16, {
 							"colIndex": 0,
 							"rowIndex": 1
 						});
-						var output_22 = new cpr.controls.Output();
-						output_22.value = "시도구분";
-						output_22.style.setClasses(["label"]);
-						container.addChild(output_22, {
+						var output_17 = new cpr.controls.Output();
+						output_17.value = "시도구분";
+						output_17.style.setClasses(["label"]);
+						container.addChild(output_17, {
 							"colIndex": 1,
 							"rowIndex": 1
 						});
@@ -501,45 +534,45 @@
 							"colIndex": 2,
 							"rowIndex": 1
 						});
-						var output_23 = new cpr.controls.Output();
-						output_23.value = "지역구분";
-						output_23.style.setClasses(["label"]);
-						container.addChild(output_23, {
+						var output_18 = new cpr.controls.Output();
+						output_18.value = "지역구분";
+						output_18.style.setClasses(["label"]);
+						container.addChild(output_18, {
 							"colIndex": 3,
 							"rowIndex": 1
 						});
 						var inputBox_12 = new cpr.controls.InputBox("ipb11");
-						inputBox_12.value = "000111(노원지점)";
+						inputBox_12.value = "000111(노*지점)";
 						container.addChild(inputBox_12, {
 							"colIndex": 4,
 							"rowIndex": 1,
 							"colSpan": 3,
 							"rowSpan": 1
 						});
-						var output_24 = new cpr.controls.Output();
-						output_24.value = "소속장";
-						output_24.style.setClasses(["label"]);
-						container.addChild(output_24, {
+						var output_19 = new cpr.controls.Output();
+						output_19.value = "소속장";
+						output_19.style.setClasses(["label"]);
+						container.addChild(output_19, {
 							"colIndex": 0,
 							"rowIndex": 2
 						});
-						var output_25 = new cpr.controls.Output();
-						output_25.value = "부임년월";
-						output_25.style.setClasses(["label"]);
-						container.addChild(output_25, {
+						var output_20 = new cpr.controls.Output();
+						output_20.value = "부임년월";
+						output_20.style.setClasses(["label"]);
+						container.addChild(output_20, {
 							"colIndex": 1,
 							"rowIndex": 2
 						});
 						var inputBox_13 = new cpr.controls.InputBox("ipb27");
-						inputBox_13.value = "2012-12";
+						inputBox_13.value = "2023-12";
 						container.addChild(inputBox_13, {
 							"colIndex": 2,
 							"rowIndex": 2
 						});
-						var output_26 = new cpr.controls.Output();
-						output_26.value = "소속장명";
-						output_26.style.setClasses(["label"]);
-						container.addChild(output_26, {
+						var output_21 = new cpr.controls.Output();
+						output_21.value = "소속장명";
+						output_21.style.setClasses(["label"]);
+						container.addChild(output_21, {
 							"colIndex": 3,
 							"rowIndex": 2
 						});
@@ -564,7 +597,7 @@
 								"rowIndex": 0
 							});
 							var inputBox_15 = new cpr.controls.InputBox("ipb13");
-							inputBox_15.value = "홍길동";
+							inputBox_15.value = "김*국";
 							container.addChild(inputBox_15, {
 								"colIndex": 1,
 								"rowIndex": 0
@@ -576,30 +609,30 @@
 							"colSpan": 3,
 							"rowSpan": 1
 						});
-						var output_27 = new cpr.controls.Output();
-						output_27.value = "개소";
-						output_27.style.setClasses(["label"]);
-						container.addChild(output_27, {
+						var output_22 = new cpr.controls.Output();
+						output_22.value = "개소";
+						output_22.style.setClasses(["label"]);
+						container.addChild(output_22, {
 							"colIndex": 0,
 							"rowIndex": 3
 						});
-						var output_28 = new cpr.controls.Output();
-						output_28.value = "설치년월";
-						output_28.style.setClasses(["label"]);
-						container.addChild(output_28, {
+						var output_23 = new cpr.controls.Output();
+						output_23.value = "설치년월";
+						output_23.style.setClasses(["label"]);
+						container.addChild(output_23, {
 							"colIndex": 1,
 							"rowIndex": 3
 						});
 						var inputBox_16 = new cpr.controls.InputBox("ipb28");
-						inputBox_16.value = "2012-12";
+						inputBox_16.value = "2013-01";
 						container.addChild(inputBox_16, {
 							"colIndex": 2,
 							"rowIndex": 3
 						});
-						var output_29 = new cpr.controls.Output();
-						output_29.value = "모조직";
-						output_29.style.setClasses(["label"]);
-						container.addChild(output_29, {
+						var output_24 = new cpr.controls.Output();
+						output_24.value = "모조직";
+						output_24.style.setClasses(["label"]);
+						container.addChild(output_24, {
 							"colIndex": 3,
 							"rowIndex": 3
 						});
@@ -611,30 +644,30 @@
 							"colSpan": 3,
 							"rowSpan": 1
 						});
-						var output_30 = new cpr.controls.Output();
-						output_30.value = "분할";
-						output_30.style.setClasses(["label"]);
-						container.addChild(output_30, {
+						var output_25 = new cpr.controls.Output();
+						output_25.value = "분할";
+						output_25.style.setClasses(["label"]);
+						container.addChild(output_25, {
 							"colIndex": 0,
 							"rowIndex": 4
 						});
-						var output_31 = new cpr.controls.Output();
-						output_31.value = "분할년월";
-						output_31.style.setClasses(["label"]);
-						container.addChild(output_31, {
+						var output_26 = new cpr.controls.Output();
+						output_26.value = "분할년월";
+						output_26.style.setClasses(["label"]);
+						container.addChild(output_26, {
 							"colIndex": 1,
 							"rowIndex": 4
 						});
 						var inputBox_18 = new cpr.controls.InputBox("ipb29");
-						inputBox_18.value = "2012-12";
+						inputBox_18.value = "";
 						container.addChild(inputBox_18, {
 							"colIndex": 2,
 							"rowIndex": 4
 						});
-						var output_32 = new cpr.controls.Output();
-						output_32.value = "자조직";
-						output_32.style.setClasses(["label"]);
-						container.addChild(output_32, {
+						var output_27 = new cpr.controls.Output();
+						output_27.value = "자조직";
+						output_27.style.setClasses(["label"]);
+						container.addChild(output_27, {
 							"colIndex": 3,
 							"rowIndex": 4
 						});
@@ -646,30 +679,30 @@
 							"colSpan": 3,
 							"rowSpan": 1
 						});
-						var output_33 = new cpr.controls.Output();
-						output_33.value = "흡수";
-						output_33.style.setClasses(["label"]);
-						container.addChild(output_33, {
+						var output_28 = new cpr.controls.Output();
+						output_28.value = "흡수";
+						output_28.style.setClasses(["label"]);
+						container.addChild(output_28, {
 							"colIndex": 0,
 							"rowIndex": 5
 						});
-						var output_34 = new cpr.controls.Output();
-						output_34.value = "흡수년월";
-						output_34.style.setClasses(["label"]);
-						container.addChild(output_34, {
+						var output_29 = new cpr.controls.Output();
+						output_29.value = "흡수년월";
+						output_29.style.setClasses(["label"]);
+						container.addChild(output_29, {
 							"colIndex": 1,
 							"rowIndex": 5
 						});
 						var inputBox_20 = new cpr.controls.InputBox("ipb30");
-						inputBox_20.value = "2012-12";
+						inputBox_20.value = "2021-10";
 						container.addChild(inputBox_20, {
 							"colIndex": 2,
 							"rowIndex": 5
 						});
-						var output_35 = new cpr.controls.Output();
-						output_35.value = "흡수조직";
-						output_35.style.setClasses(["label"]);
-						container.addChild(output_35, {
+						var output_30 = new cpr.controls.Output();
+						output_30.value = "흡수조직";
+						output_30.style.setClasses(["label"]);
+						container.addChild(output_30, {
 							"colIndex": 3,
 							"rowIndex": 5
 						});
@@ -679,67 +712,67 @@
 							"colIndex": 4,
 							"rowIndex": 5
 						});
-						var output_36 = new cpr.controls.Output();
-						output_36.value = "발의부서";
-						output_36.style.setClasses(["label"]);
-						container.addChild(output_36, {
+						var output_31 = new cpr.controls.Output();
+						output_31.value = "발의부서";
+						output_31.style.setClasses(["label"]);
+						container.addChild(output_31, {
 							"colIndex": 5,
 							"rowIndex": 5
 						});
 						var inputBox_22 = new cpr.controls.InputBox("ipb17");
-						inputBox_22.value = "노원지점(008001)";
+						inputBox_22.value = "노*지점(008001)";
 						container.addChild(inputBox_22, {
 							"colIndex": 6,
 							"rowIndex": 5
 						});
-						var output_37 = new cpr.controls.Output();
-						output_37.value = "폐쇄";
-						output_37.style.setClasses(["label"]);
-						container.addChild(output_37, {
+						var output_32 = new cpr.controls.Output();
+						output_32.value = "폐쇄";
+						output_32.style.setClasses(["label"]);
+						container.addChild(output_32, {
 							"colIndex": 0,
 							"rowIndex": 6
 						});
-						var output_38 = new cpr.controls.Output();
-						output_38.value = "폐쇄년월";
-						output_38.style.setClasses(["label"]);
-						container.addChild(output_38, {
+						var output_33 = new cpr.controls.Output();
+						output_33.value = "폐쇄년월";
+						output_33.style.setClasses(["label"]);
+						container.addChild(output_33, {
 							"colIndex": 1,
 							"rowIndex": 6
 						});
 						var inputBox_23 = new cpr.controls.InputBox("ipb31");
-						inputBox_23.value = "2012-12";
+						inputBox_23.value = "";
 						container.addChild(inputBox_23, {
 							"colIndex": 2,
 							"rowIndex": 6
 						});
-						var output_39 = new cpr.controls.Output();
-						output_39.value = "폐쇄조직";
-						output_39.style.setClasses(["label"]);
-						container.addChild(output_39, {
+						var output_34 = new cpr.controls.Output();
+						output_34.value = "폐쇄조직";
+						output_34.style.setClasses(["label"]);
+						container.addChild(output_34, {
 							"colIndex": 3,
 							"rowIndex": 6
 						});
 						var inputBox_24 = new cpr.controls.InputBox("ipb18");
-						inputBox_24.value = "장안지점(008001)";
+						inputBox_24.value = "장*지점(008001)";
 						container.addChild(inputBox_24, {
 							"colIndex": 4,
 							"rowIndex": 6,
 							"colSpan": 3,
 							"rowSpan": 1
 						});
-						var output_40 = new cpr.controls.Output();
-						output_40.value = "기타";
-						output_40.style.setClasses(["label"]);
-						container.addChild(output_40, {
+						var output_35 = new cpr.controls.Output();
+						output_35.value = "기타";
+						output_35.style.setClasses(["label"]);
+						container.addChild(output_35, {
 							"colIndex": 0,
 							"rowIndex": 7,
 							"colSpan": 1,
 							"rowSpan": 3
 						});
-						var output_41 = new cpr.controls.Output();
-						output_41.value = "외곽구분";
-						output_41.style.setClasses(["label"]);
-						container.addChild(output_41, {
+						var output_36 = new cpr.controls.Output();
+						output_36.value = "외곽구분";
+						output_36.style.setClasses(["label"]);
+						container.addChild(output_36, {
 							"colIndex": 1,
 							"rowIndex": 7
 						});
@@ -749,10 +782,10 @@
 							"colIndex": 2,
 							"rowIndex": 7
 						});
-						var output_42 = new cpr.controls.Output();
-						output_42.value = "사업부문구분";
-						output_42.style.setClasses(["label"]);
-						container.addChild(output_42, {
+						var output_37 = new cpr.controls.Output();
+						output_37.value = "사업부문구분";
+						output_37.style.setClasses(["label"]);
+						container.addChild(output_37, {
 							"colIndex": 3,
 							"rowIndex": 7
 						});
@@ -762,10 +795,10 @@
 							"colIndex": 4,
 							"rowIndex": 7
 						});
-						var output_43 = new cpr.controls.Output();
-						output_43.value = "사업자등록번호";
-						output_43.style.setClasses(["label"]);
-						container.addChild(output_43, {
+						var output_38 = new cpr.controls.Output();
+						output_38.value = "사업자등록번호";
+						output_38.style.setClasses(["label"]);
+						container.addChild(output_38, {
 							"colIndex": 5,
 							"rowIndex": 7
 						});
@@ -775,10 +808,10 @@
 							"colIndex": 6,
 							"rowIndex": 7
 						});
-						var output_44 = new cpr.controls.Output();
-						output_44.value = "대리점관계";
-						output_44.style.setClasses(["label"]);
-						container.addChild(output_44, {
+						var output_39 = new cpr.controls.Output();
+						output_39.value = "대리점관계";
+						output_39.style.setClasses(["label"]);
+						container.addChild(output_39, {
 							"colIndex": 1,
 							"rowIndex": 8
 						});
@@ -788,10 +821,10 @@
 							"colIndex": 2,
 							"rowIndex": 8
 						});
-						var output_45 = new cpr.controls.Output();
-						output_45.value = "제휴BM";
-						output_45.style.setClasses(["label"]);
-						container.addChild(output_45, {
+						var output_40 = new cpr.controls.Output();
+						output_40.value = "제휴BM";
+						output_40.style.setClasses(["label"]);
+						container.addChild(output_40, {
 							"colIndex": 3,
 							"rowIndex": 8
 						});
@@ -826,10 +859,10 @@
 							"colIndex": 4,
 							"rowIndex": 8
 						});
-						var output_46 = new cpr.controls.Output();
-						output_46.value = "출장소명";
-						output_46.style.setClasses(["label"]);
-						container.addChild(output_46, {
+						var output_41 = new cpr.controls.Output();
+						output_41.value = "출장소명";
+						output_41.style.setClasses(["label"]);
+						container.addChild(output_41, {
 							"colIndex": 5,
 							"rowIndex": 8
 						});
@@ -839,10 +872,10 @@
 							"colIndex": 6,
 							"rowIndex": 8
 						});
-						var output_47 = new cpr.controls.Output();
-						output_47.value = "대리점등록번호";
-						output_47.style.setClasses(["label"]);
-						container.addChild(output_47, {
+						var output_42 = new cpr.controls.Output();
+						output_42.value = "대리점등록번호";
+						output_42.style.setClasses(["label"]);
+						container.addChild(output_42, {
 							"colIndex": 1,
 							"rowIndex": 9
 						});
@@ -852,10 +885,10 @@
 							"colIndex": 2,
 							"rowIndex": 9
 						});
-						var output_48 = new cpr.controls.Output();
-						output_48.value = "관리BM";
-						output_48.style.setClasses(["label"]);
-						container.addChild(output_48, {
+						var output_43 = new cpr.controls.Output();
+						output_43.value = "관리BM";
+						output_43.style.setClasses(["label"]);
+						container.addChild(output_43, {
 							"colIndex": 3,
 							"rowIndex": 9
 						});
@@ -892,19 +925,19 @@
 							"colSpan": 3,
 							"rowSpan": 1
 						});
-						var output_49 = new cpr.controls.Output();
-						output_49.value = "주소정보";
-						output_49.style.setClasses(["label"]);
-						container.addChild(output_49, {
+						var output_44 = new cpr.controls.Output();
+						output_44.value = "주소정보";
+						output_44.style.setClasses(["label"]);
+						container.addChild(output_44, {
 							"colIndex": 0,
 							"rowIndex": 10,
 							"colSpan": 1,
 							"rowSpan": 2
 						});
-						var output_50 = new cpr.controls.Output();
-						output_50.value = "전화번호";
-						output_50.style.setClasses(["label"]);
-						container.addChild(output_50, {
+						var output_45 = new cpr.controls.Output();
+						output_45.value = "전화번호";
+						output_45.style.setClasses(["label"]);
+						container.addChild(output_45, {
 							"colIndex": 1,
 							"rowIndex": 10
 						});
@@ -928,10 +961,10 @@
 								"colIndex": 0,
 								"rowIndex": 0
 							});
-							var output_51 = new cpr.controls.Output();
-							output_51.value = "-";
-							output_51.style.setClasses(["text-center"]);
-							container.addChild(output_51, {
+							var output_46 = new cpr.controls.Output();
+							output_46.value = "-";
+							output_46.style.setClasses(["text-center"]);
+							container.addChild(output_46, {
 								"colIndex": 1,
 								"rowIndex": 0
 							});
@@ -941,10 +974,10 @@
 								"colIndex": 2,
 								"rowIndex": 0
 							});
-							var output_52 = new cpr.controls.Output();
-							output_52.value = "-";
-							output_52.style.setClasses(["text-center"]);
-							container.addChild(output_52, {
+							var output_47 = new cpr.controls.Output();
+							output_47.value = "-";
+							output_47.style.setClasses(["text-center"]);
+							container.addChild(output_47, {
 								"colIndex": 3,
 								"rowIndex": 0
 							});
@@ -959,10 +992,10 @@
 							"colIndex": 2,
 							"rowIndex": 10
 						});
-						var output_53 = new cpr.controls.Output();
-						output_53.value = "팩스번호";
-						output_53.style.setClasses(["label"]);
-						container.addChild(output_53, {
+						var output_48 = new cpr.controls.Output();
+						output_48.value = "팩스번호";
+						output_48.style.setClasses(["label"]);
+						container.addChild(output_48, {
 							"colIndex": 3,
 							"rowIndex": 10
 						});
@@ -986,10 +1019,10 @@
 								"colIndex": 0,
 								"rowIndex": 0
 							});
-							var output_54 = new cpr.controls.Output();
-							output_54.value = "-";
-							output_54.style.setClasses(["text-center"]);
-							container.addChild(output_54, {
+							var output_49 = new cpr.controls.Output();
+							output_49.value = "-";
+							output_49.style.setClasses(["text-center"]);
+							container.addChild(output_49, {
 								"colIndex": 1,
 								"rowIndex": 0
 							});
@@ -999,10 +1032,10 @@
 								"colIndex": 2,
 								"rowIndex": 0
 							});
-							var output_55 = new cpr.controls.Output();
-							output_55.value = "-";
-							output_55.style.setClasses(["text-center"]);
-							container.addChild(output_55, {
+							var output_50 = new cpr.controls.Output();
+							output_50.value = "-";
+							output_50.style.setClasses(["text-center"]);
+							container.addChild(output_50, {
 								"colIndex": 3,
 								"rowIndex": 0
 							});
@@ -1019,10 +1052,10 @@
 							"colSpan": 3,
 							"rowSpan": 1
 						});
-						var output_56 = new cpr.controls.Output();
-						output_56.value = "우편번호";
-						output_56.style.setClasses(["label"]);
-						container.addChild(output_56, {
+						var output_51 = new cpr.controls.Output();
+						output_51.value = "우편번호";
+						output_51.style.setClasses(["label"]);
+						container.addChild(output_51, {
 							"colIndex": 1,
 							"rowIndex": 11
 						});
@@ -1061,15 +1094,15 @@
 									"colIndex": 0,
 									"rowIndex": 0
 								});
-								var output_57 = new cpr.controls.Output();
-								output_57.value = "-";
-								output_57.style.setClasses(["text-center"]);
-								container.addChild(output_57, {
+								var output_52 = new cpr.controls.Output();
+								output_52.value = "-";
+								output_52.style.setClasses(["text-center"]);
+								container.addChild(output_52, {
 									"colIndex": 1,
 									"rowIndex": 0
 								});
 								var inputBox_42 = new cpr.controls.InputBox("ipb42");
-								inputBox_42.value = "123";
+								inputBox_42.value = "***";
 								container.addChild(inputBox_42, {
 									"colIndex": 2,
 									"rowIndex": 0
@@ -1080,15 +1113,15 @@
 								"rowIndex": 0
 							});
 							var inputBox_43 = new cpr.controls.InputBox("ipb43");
-							inputBox_43.value = "서울 강북구 빌딩 8층";
+							inputBox_43.value = "서울 **로 **빌딩";
 							container.addChild(inputBox_43, {
 								"colIndex": 1,
 								"rowIndex": 0
 							});
-							var button_3 = new cpr.controls.Button("btn1");
-							button_3.value = "주소관리";
-							button_3.style.setClasses(["btn-primary04"]);
-							container.addChild(button_3, {
+							var button_5 = new cpr.controls.Button("btn1");
+							button_5.value = "주소관리";
+							button_5.style.setClasses(["btn-primary04"]);
+							container.addChild(button_5, {
 								"colIndex": 2,
 								"rowIndex": 0
 							});

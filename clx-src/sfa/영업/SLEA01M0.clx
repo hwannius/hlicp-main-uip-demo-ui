@@ -19,21 +19,14 @@
       </cl:output>
       <cl:group std:sid="group-799c377d" id="grpNavi" class="breadcrumbs">
         <cl:formdata std:sid="f-data-b5509d70" row="0" col="1"/>
-        <cl:output std:sid="output-dbbcce1a" class="home" value="">
-          <cl:flowlayoutdata std:sid="f-data-1cd87bb6" width="20px" height="20px"/>
-        </cl:output>
-        <cl:output std:sid="output-d5e11268" class="breadcrumb-item" value="1Depth">
-          <cl:flowlayoutdata std:sid="f-data-3beb2f65" width="45px" height="17px" autosize="width"/>
-        </cl:output>
-        <cl:output std:sid="output-6e79a920" class="breadcrumb-item" value="2Depth">
-          <cl:flowlayoutdata std:sid="f-data-e5e89842" width="45px" height="17px" autosize="width"/>
-        </cl:output>
-        <cl:output std:sid="output-a3f90a9b" class="breadcrumb-item" value="3Depth">
-          <cl:flowlayoutdata std:sid="f-data-81618497" width="45px" height="17px" autosize="width"/>
-        </cl:output>
-        <cl:output std:sid="output-6a18b375" class="breadcrumb-item" value="4Depth">
-          <cl:flowlayoutdata std:sid="f-data-94258ced" width="45px" height="17px" autosize="width"/>
-        </cl:output>
+        <cl:button std:sid="button-cf1d1def" class="btn-primary04 btn-md" value="이전">
+          <cl:listener std:sid="listener-cef93a2f" name="click" handler="onButtonClick"/>
+          <cl:flowlayoutdata std:sid="f-data-e00902d9" width="49px" height="26px" autosize="width"/>
+        </cl:button>
+        <cl:button std:sid="button-496c49da" class="btn-primary04 btn-md" value="다음">
+          <cl:listener std:sid="listener-6e340f37" name="click" handler="onButtonClick2"/>
+          <cl:flowlayoutdata std:sid="f-data-66881adc" width="49px" height="26px" autosize="width"/>
+        </cl:button>
         <cl:flowlayout std:sid="f-layout-ce38801e" scrollable="false" hspacing="5" vspacing="0" halign="right" valign="middle" linewrap="false"/>
       </cl:group>
       <cl:formlayout std:sid="f-layout-2de29e5a" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
@@ -49,22 +42,8 @@
         <cl:group std:sid="group-2f692740" id="grpTopSearchBox" class="search-box">
           <cl:verticaldata std:sid="v-data-4fe95d7a" width="2774px" height="40px" autosize="height"/>
           <cl:output std:sid="output-92c04caf" class="label required" value="조직번호">
-            <cl:formdata std:sid="f-data-19aaf57d" row="0" col="2"/>
+            <cl:formdata std:sid="f-data-2f7de18f" row="0" col="0"/>
           </cl:output>
-          <cl:group std:sid="group-9fd001fc" id="grp1" class="form-inside">
-            <cl:formdata std:sid="f-data-e0a25804" row="0" col="3"/>
-            <cl:inputbox std:sid="i-box-81e767e7" id="ipb1" value="008001">
-              <cl:formdata std:sid="f-data-1cc30a6b" row="0" col="0"/>
-            </cl:inputbox>
-            <cl:searchinput std:sid="s-input-a086d380" enabled="false" value="노원지점">
-              <cl:formdata std:sid="f-data-1cecb0f9" row="0" col="1"/>
-            </cl:searchinput>
-            <cl:formlayout std:sid="f-layout-ca36af88" scrollable="false" hspace="5px" vspace="5px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
-              <cl:rows length="1" unit="FRACTION"/>
-              <cl:columns length="80" unit="PIXEL"/>
-              <cl:columns length="1" unit="FRACTION"/>
-            </cl:formlayout>
-          </cl:group>
           <cl:group std:sid="group-267e4d47" class="btn-flow-area">
             <cl:formdata std:sid="f-data-78a5e07d" valign="CENTER" height="26" row="0" col="6" rowspan="1" colspan="1"/>
             <cl:button std:sid="button-24adc0e2" class="btn-search" value="조회">
@@ -74,6 +53,20 @@
               <cl:flowlayoutdata std:sid="f-data-b478e1c3" width="26px" height="26px"/>
             </cl:button>
             <cl:flowlayout std:sid="f-layout-3d6526c0" scrollable="false" vspacing="0" halign="right" linewrap="false" leftmargin="20"/>
+          </cl:group>
+          <cl:group std:sid="group-403cc0b5" id="grp17" class="form-inside">
+            <cl:formdata std:sid="f-data-9305fb45" row="0" col="1"/>
+            <cl:searchinput std:sid="s-input-5f046140" style="border-right-style:dashed; border-top-width:3px; border-bottom-color:red; border-left-style:dashed; border-right-width:3px; border-bottom-width:3px; border-left-color:red; border-top-color:red; border-bottom-style:dashed; border-right-color:red; border-left-width:3px; border-top-style:dashed;" value="008001">
+              <cl:formdata std:sid="f-data-5c5c8507" row="0" col="0"/>
+            </cl:searchinput>
+            <cl:inputbox std:sid="i-box-19eb7866" id="ipb44" enabled="false" value="노*지점">
+              <cl:formdata std:sid="f-data-eca73db2" row="0" col="1"/>
+            </cl:inputbox>
+            <cl:formlayout std:sid="f-layout-c6b95a68" scrollable="false" hspace="5px" vspace="5px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:columns length="120" unit="PIXEL"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
           </cl:group>
           <cl:formlayout std:sid="f-layout-04e336ab" scrollable="false" hspace="20px" vspace="8px" top-margin="6px" right-margin="20px" bottom-margin="6px" left-margin="20px">
             <cl:rows length="26" unit="PIXEL"/>
@@ -182,7 +175,7 @@
           <cl:output std:sid="output-5b827683" class="label" value="지점">
             <cl:formdata std:sid="f-data-5e38bddb" row="0" col="3"/>
           </cl:output>
-          <cl:inputbox std:sid="i-box-195ccfbd" id="ipb10" value="000111(노원지점)">
+          <cl:inputbox std:sid="i-box-195ccfbd" id="ipb10" value="000111(노*지점)">
             <cl:formdata std:sid="f-data-8af04508" row="0" col="4" rowspan="1" colspan="3"/>
           </cl:inputbox>
           <cl:output std:sid="output-be793b0c" class="label" value="지역">
@@ -197,7 +190,7 @@
           <cl:output std:sid="output-78c19023" class="label" value="지역구분">
             <cl:formdata std:sid="f-data-8a92288b" row="1" col="3"/>
           </cl:output>
-          <cl:inputbox std:sid="i-box-2f559095" id="ipb11" value="000111(노원지점)">
+          <cl:inputbox std:sid="i-box-2f559095" id="ipb11" value="000111(노*지점)">
             <cl:formdata std:sid="f-data-8ebd9e6e" row="1" col="4" rowspan="1" colspan="3"/>
           </cl:inputbox>
           <cl:output std:sid="output-549e2f94" class="label" value="소속장">
@@ -206,7 +199,7 @@
           <cl:output std:sid="output-290da8ab" class="label" value="부임년월">
             <cl:formdata std:sid="f-data-f6aa7906" row="2" col="1"/>
           </cl:output>
-          <cl:inputbox std:sid="i-box-4a64c9e6" id="ipb27" value="2012-12">
+          <cl:inputbox std:sid="i-box-4a64c9e6" id="ipb27" value="2023-12">
             <cl:formdata std:sid="f-data-46bb8488" row="2" col="2"/>
           </cl:inputbox>
           <cl:output std:sid="output-19557f7d" class="label" value="소속장명">
@@ -217,7 +210,7 @@
             <cl:inputbox std:sid="i-box-7de0fe8e" id="ipb12" value="1000102449">
               <cl:formdata std:sid="f-data-5e377724" row="0" col="0"/>
             </cl:inputbox>
-            <cl:inputbox std:sid="i-box-eebb848b" id="ipb13" value="홍길동">
+            <cl:inputbox std:sid="i-box-eebb848b" id="ipb13" value="김*국">
               <cl:formdata std:sid="f-data-ac3f99ab" row="0" col="1"/>
             </cl:inputbox>
             <cl:formlayout std:sid="f-layout-29574836" scrollable="false" hspace="5px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
@@ -232,7 +225,7 @@
           <cl:output std:sid="output-2a389d4a" class="label" value="설치년월">
             <cl:formdata std:sid="f-data-a24f8949" row="3" col="1"/>
           </cl:output>
-          <cl:inputbox std:sid="i-box-1a2d1fb2" id="ipb28" value="2012-12">
+          <cl:inputbox std:sid="i-box-1a2d1fb2" id="ipb28" value="2013-01">
             <cl:formdata std:sid="f-data-f0246e96" row="3" col="2"/>
           </cl:inputbox>
           <cl:output std:sid="output-aed54c8f" class="label" value="모조직">
@@ -247,7 +240,7 @@
           <cl:output std:sid="output-adc569d7" class="label" value="분할년월">
             <cl:formdata std:sid="f-data-67a84e88" row="4" col="1"/>
           </cl:output>
-          <cl:inputbox std:sid="i-box-ab549b79" id="ipb29" value="2012-12">
+          <cl:inputbox std:sid="i-box-ab549b79" id="ipb29" value="">
             <cl:formdata std:sid="f-data-f5033f8d" row="4" col="2"/>
           </cl:inputbox>
           <cl:output std:sid="output-03ab5368" class="label" value="자조직">
@@ -262,7 +255,7 @@
           <cl:output std:sid="output-350c2379" class="label" value="흡수년월">
             <cl:formdata std:sid="f-data-d45d1d84" row="5" col="1"/>
           </cl:output>
-          <cl:inputbox std:sid="i-box-5907e6a3" id="ipb30" value="2012-12">
+          <cl:inputbox std:sid="i-box-5907e6a3" id="ipb30" value="2021-10">
             <cl:formdata std:sid="f-data-375e4ea5" row="5" col="2"/>
           </cl:inputbox>
           <cl:output std:sid="output-f4172410" class="label" value="흡수조직">
@@ -274,7 +267,7 @@
           <cl:output std:sid="output-9474bc23" class="label" value="발의부서">
             <cl:formdata std:sid="f-data-6f626d37" row="5" col="5"/>
           </cl:output>
-          <cl:inputbox std:sid="i-box-898da1b0" id="ipb17" value="노원지점(008001)">
+          <cl:inputbox std:sid="i-box-898da1b0" id="ipb17" value="노*지점(008001)">
             <cl:formdata std:sid="f-data-58cbf1c7" row="5" col="6"/>
           </cl:inputbox>
           <cl:output std:sid="output-83b9947c" class="label" value="폐쇄">
@@ -283,13 +276,13 @@
           <cl:output std:sid="output-a0297c15" class="label" value="폐쇄년월">
             <cl:formdata std:sid="f-data-6aa07c02" row="6" col="1"/>
           </cl:output>
-          <cl:inputbox std:sid="i-box-7daefd47" id="ipb31" value="2012-12">
+          <cl:inputbox std:sid="i-box-7daefd47" id="ipb31" value="">
             <cl:formdata std:sid="f-data-a0a83f17" row="6" col="2"/>
           </cl:inputbox>
           <cl:output std:sid="output-afe017d8" class="label" value="폐쇄조직">
             <cl:formdata std:sid="f-data-c74c0955" row="6" col="3"/>
           </cl:output>
-          <cl:inputbox std:sid="i-box-2ef1e740" id="ipb18" value="장안지점(008001)">
+          <cl:inputbox std:sid="i-box-2ef1e740" id="ipb18" value="장*지점(008001)">
             <cl:formdata std:sid="f-data-343ace97" row="6" col="4" rowspan="1" colspan="3"/>
           </cl:inputbox>
           <cl:output std:sid="output-de571eea" class="label" value="기타">
@@ -439,7 +432,7 @@
               <cl:output std:sid="output-03c09ffc" class="text-center" value="-">
                 <cl:formdata std:sid="f-data-688fbc92" row="0" col="1"/>
               </cl:output>
-              <cl:inputbox std:sid="i-box-919be387" id="ipb42" value="123">
+              <cl:inputbox std:sid="i-box-919be387" id="ipb42" value="***">
                 <cl:formdata std:sid="f-data-b8e99222" row="0" col="2"/>
               </cl:inputbox>
               <cl:formlayout std:sid="f-layout-56b255a6" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
@@ -449,7 +442,7 @@
                 <cl:columns length="1" unit="FRACTION" autoSizing="false" hidden="false" minlength="0"/>
               </cl:formlayout>
             </cl:group>
-            <cl:inputbox std:sid="i-box-9a3b43d5" id="ipb43" value="서울 강북구 빌딩 8층">
+            <cl:inputbox std:sid="i-box-9a3b43d5" id="ipb43" value="서울 **로 **빌딩">
               <cl:formdata std:sid="f-data-26a6ac82" row="0" col="1"/>
             </cl:inputbox>
             <cl:button std:sid="button-ce1aa945" id="btn1" class="btn-primary04" value="주소관리">

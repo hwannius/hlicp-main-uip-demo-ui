@@ -27,7 +27,16 @@
 					{"name": "column2"},
 					{"name": "column3"}
 				],
-				"rows": [{"column1": "우수인증설계사", "column2": "우수인증설계사", "column3": "20130610"}]
+				"rows": [
+					{"column1": "우수인증설계사", "column2": "우수인증설계사", "column3": "20220610"},
+					{"column1": "우수인증설계사", "column2": "2022년 우수인증설계사", "column3": "20220601"},
+					{"column1": "연도상금(**멤버쉽)", "column2": "**멤버쉽루비", "column3": "20140513"},
+					{"column1": "연도상(본상:OLD)", "column2": "본상 루비", "column3": "20130519"},
+					{"column1": "연도상(본상:OLD)", "column2": "본상 장려상", "column3": "20120313"},
+					{"column1": "연도상(본상:OLD)", "column2": "본장 장려상", "column3": "20110313"},
+					{"column1": "연도상(특별공로)", "column2": "특별공로상", "column3": "20090517"},
+					{"column1": "연도상(본상:OLD)", "column2": "본장 장려상", "column3": "20090517"}
+				]
 			});
 			app.register(dataSet_1);
 			
@@ -192,7 +201,7 @@
 							grid_1.style.setClasses(["list-normal"]);
 							container.addChild(grid_1, {
 								"width": "400px",
-								"height": "498px"
+								"height": "185px"
 							});
 						})(group_4);
 						container.addChild(group_4, {
@@ -332,7 +341,7 @@
 							grid_2.style.setClasses(["list-normal"]);
 							container.addChild(grid_2, {
 								"width": "400px",
-								"height": "498px"
+								"height": "185px"
 							});
 						})(group_6);
 						container.addChild(group_6, {

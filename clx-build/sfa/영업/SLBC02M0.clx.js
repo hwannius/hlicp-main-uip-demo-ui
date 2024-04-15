@@ -17,6 +17,42 @@
 			 *
 			 * @author ${user}
 			 ************************************************/
+
+			/*
+			 * "이전" 버튼에서 click 이벤트 발생 시 호출.
+			 * 사용자가 컨트롤을 클릭할 때 발생하는 이벤트.
+			 */
+			function onButtonClick(e){
+				var button = e.control;
+				//화면이동(현재 화면에서 리로드)
+				var host = app.getHost(); // 부모 임베디드 앱
+				cpr.core.App.load("sfa/영업/SLAB02M1", function(loadedApp) {
+				    if (loadedApp) {
+				        host.app = loadedApp;
+				        host.initValue = {
+				            "param": "param"
+				        }
+				    }
+				});
+			}
+
+			/*
+			 * "다음" 버튼에서 click 이벤트 발생 시 호출.
+			 * 사용자가 컨트롤을 클릭할 때 발생하는 이벤트.
+			 */
+			function onButtonClick2(e){
+				var button = e.control;
+				//화면이동(현재 화면에서 리로드)
+				var host = app.getHost(); // 부모 임베디드 앱
+				cpr.core.App.load("sfa/영업/SLBC02M0_1", function(loadedApp) {
+				    if (loadedApp) {
+				        host.app = loadedApp;
+				        host.initValue = {
+				            "param": "param"
+				        }
+				    }
+				});
+			};
 			// End - User Script
 			
 			// Header
@@ -91,44 +127,27 @@
 				flowLayout_1.lineWrap = false;
 				group_2.setLayout(flowLayout_1);
 				(function(container){
-					var output_2 = new cpr.controls.Output();
-					output_2.value = "";
-					output_2.style.setClasses(["home"]);
-					container.addChild(output_2, {
-						"width": "20px",
-						"height": "20px"
-					});
-					var output_3 = new cpr.controls.Output();
-					output_3.value = "1Depth";
-					output_3.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_3, {
+					var button_1 = new cpr.controls.Button();
+					button_1.value = "이전";
+					button_1.style.setClasses(["btn-primary04", "btn-md"]);
+					if(typeof onButtonClick == "function") {
+						button_1.addEventListener("click", onButtonClick);
+					}
+					container.addChild(button_1, {
 						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
+						"width": "49px",
+						"height": "26px"
 					});
-					var output_4 = new cpr.controls.Output();
-					output_4.value = "2Depth";
-					output_4.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_4, {
+					var button_2 = new cpr.controls.Button();
+					button_2.value = "다음";
+					button_2.style.setClasses(["btn-primary04", "btn-md"]);
+					if(typeof onButtonClick2 == "function") {
+						button_2.addEventListener("click", onButtonClick2);
+					}
+					container.addChild(button_2, {
 						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
-					});
-					var output_5 = new cpr.controls.Output();
-					output_5.value = "3Depth";
-					output_5.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_5, {
-						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
-					});
-					var output_6 = new cpr.controls.Output();
-					output_6.value = "4Depth";
-					output_6.style.setClasses(["breadcrumb-item"]);
-					container.addChild(output_6, {
-						"autoSize": "width",
-						"width": "45px",
-						"height": "17px"
+						"width": "49px",
+						"height": "26px"
 					});
 				})(group_2);
 				container.addChild(group_2, {
@@ -171,15 +190,29 @@
 					formLayout_2.setRows(["26px"]);
 					group_5.setLayout(formLayout_2);
 					(function(container){
-						var output_7 = new cpr.controls.Output();
-						output_7.value = "업무구분";
-						output_7.style.setClasses(["label", "required"]);
-						container.addChild(output_7, {
+						var output_2 = new cpr.controls.Output();
+						output_2.value = "업무구분";
+						output_2.style.setClasses(["label", "required"]);
+						container.addChild(output_2, {
 							"colIndex": 0,
 							"rowIndex": 0
 						});
 						var comboBox_1 = new cpr.controls.ComboBox("cmb1");
 						comboBox_1.value = "1";
+						comboBox_1.style.css({
+							"border-right-style" : "dashed",
+							"border-top-width" : "3px",
+							"border-bottom-color" : "red",
+							"border-left-style" : "dashed",
+							"border-right-width" : "3px",
+							"border-bottom-width" : "3px",
+							"border-left-color" : "red",
+							"border-top-color" : "red",
+							"border-bottom-style" : "dashed",
+							"border-right-color" : "red",
+							"border-left-width" : "3px",
+							"border-top-style" : "dashed"
+						});
 						(function(comboBox_1){
 							comboBox_1.addItem(new cpr.controls.Item("조  회", "1"));
 						})(comboBox_1);
@@ -187,10 +220,10 @@
 							"colIndex": 1,
 							"rowIndex": 0
 						});
-						var output_8 = new cpr.controls.Output();
-						output_8.value = "사원번호";
-						output_8.style.setClasses(["label", "required"]);
-						container.addChild(output_8, {
+						var output_3 = new cpr.controls.Output();
+						output_3.value = "사원번호";
+						output_3.style.setClasses(["label", "required"]);
+						container.addChild(output_3, {
 							"colIndex": 2,
 							"rowIndex": 0
 						});
@@ -209,13 +242,27 @@
 						group_6.setLayout(formLayout_3);
 						(function(container){
 							var inputBox_1 = new cpr.controls.InputBox("ipb30");
-							inputBox_1.value = "김경";
+							inputBox_1.value = "김*국";
 							container.addChild(inputBox_1, {
 								"colIndex": 1,
 								"rowIndex": 0
 							});
 							var searchInput_1 = new cpr.controls.SearchInput();
 							searchInput_1.value = "0006300647";
+							searchInput_1.style.css({
+								"border-right-style" : "dashed",
+								"border-top-width" : "3px",
+								"border-bottom-color" : "red",
+								"border-left-style" : "dashed",
+								"border-right-width" : "3px",
+								"border-bottom-width" : "3px",
+								"border-left-color" : "red",
+								"border-top-color" : "red",
+								"border-bottom-style" : "dashed",
+								"border-right-color" : "red",
+								"border-left-width" : "3px",
+								"border-top-style" : "dashed"
+							});
 							container.addChild(searchInput_1, {
 								"colIndex": 0,
 								"rowIndex": 0
@@ -235,17 +282,17 @@
 						flowLayout_2.leftMargin = 20;
 						group_7.setLayout(flowLayout_2);
 						(function(container){
-							var button_1 = new cpr.controls.Button();
-							button_1.value = "조회";
-							button_1.style.setClasses(["btn-search"]);
-							container.addChild(button_1, {
+							var button_3 = new cpr.controls.Button();
+							button_3.value = "조회";
+							button_3.style.setClasses(["btn-search"]);
+							container.addChild(button_3, {
 								"width": "49px",
 								"height": "26px"
 							});
-							var button_2 = new cpr.controls.Button();
-							button_2.value = "";
-							button_2.style.setClasses(["btn-reset"]);
-							container.addChild(button_2, {
+							var button_4 = new cpr.controls.Button();
+							button_4.value = "";
+							button_4.style.setClasses(["btn-reset"]);
+							container.addChild(button_4, {
 								"width": "26px",
 								"height": "26px"
 							});
@@ -299,23 +346,23 @@
 					formLayout_4.setRows(["26px", "26px", "26px"]);
 					group_9.setLayout(formLayout_4);
 					(function(container){
-						var output_9 = new cpr.controls.Output();
-						output_9.value = "성명";
-						output_9.style.setClasses(["label"]);
-						container.addChild(output_9, {
+						var output_4 = new cpr.controls.Output();
+						output_4.value = "성명";
+						output_4.style.setClasses(["label"]);
+						container.addChild(output_4, {
 							"colIndex": 0,
 							"rowIndex": 0
 						});
 						var inputBox_2 = new cpr.controls.InputBox("ipb7");
-						inputBox_2.value = "김경현";
+						inputBox_2.value = "김흥국";
 						container.addChild(inputBox_2, {
 							"colIndex": 1,
 							"rowIndex": 0
 						});
-						var output_10 = new cpr.controls.Output();
-						output_10.value = "주민등록번호";
-						output_10.style.setClasses(["label"]);
-						container.addChild(output_10, {
+						var output_5 = new cpr.controls.Output();
+						output_5.value = "주민등록번호";
+						output_5.style.setClasses(["label"]);
+						container.addChild(output_5, {
 							"colIndex": 2,
 							"rowIndex": 0
 						});
@@ -326,10 +373,10 @@
 							"colIndex": 3,
 							"rowIndex": 0
 						});
-						var output_11 = new cpr.controls.Output();
-						output_11.value = "유치자";
-						output_11.style.setClasses(["label"]);
-						container.addChild(output_11, {
+						var output_6 = new cpr.controls.Output();
+						output_6.value = "유치자";
+						output_6.style.setClasses(["label"]);
+						container.addChild(output_6, {
 							"colIndex": 4,
 							"rowIndex": 0
 						});
@@ -364,10 +411,10 @@
 							"colIndex": 5,
 							"rowIndex": 0
 						});
-						var output_12 = new cpr.controls.Output();
-						output_12.value = "소속";
-						output_12.style.setClasses(["label"]);
-						container.addChild(output_12, {
+						var output_7 = new cpr.controls.Output();
+						output_7.value = "소속";
+						output_7.style.setClasses(["label"]);
+						container.addChild(output_7, {
 							"colIndex": 0,
 							"rowIndex": 1
 						});
@@ -402,10 +449,10 @@
 							"colIndex": 1,
 							"rowIndex": 1
 						});
-						var output_13 = new cpr.controls.Output();
-						output_13.value = "본부";
-						output_13.style.setClasses(["label"]);
-						container.addChild(output_13, {
+						var output_8 = new cpr.controls.Output();
+						output_8.value = "본부";
+						output_8.style.setClasses(["label"]);
+						container.addChild(output_8, {
 							"colIndex": 2,
 							"rowIndex": 1
 						});
@@ -440,10 +487,10 @@
 							"colIndex": 3,
 							"rowIndex": 1
 						});
-						var output_14 = new cpr.controls.Output();
-						output_14.value = "지점";
-						output_14.style.setClasses(["label"]);
-						container.addChild(output_14, {
+						var output_9 = new cpr.controls.Output();
+						output_9.value = "지점";
+						output_9.style.setClasses(["label"]);
+						container.addChild(output_9, {
 							"colIndex": 4,
 							"rowIndex": 1
 						});
@@ -478,10 +525,10 @@
 							"colIndex": 5,
 							"rowIndex": 1
 						});
-						var output_15 = new cpr.controls.Output();
-						output_15.value = "점포";
-						output_15.style.setClasses(["label"]);
-						container.addChild(output_15, {
+						var output_10 = new cpr.controls.Output();
+						output_10.value = "점포";
+						output_10.style.setClasses(["label"]);
+						container.addChild(output_10, {
 							"colIndex": 0,
 							"rowIndex": 2
 						});
@@ -516,10 +563,10 @@
 							"colIndex": 1,
 							"rowIndex": 2
 						});
-						var output_16 = new cpr.controls.Output();
-						output_16.value = "점포변경일자";
-						output_16.style.setClasses(["label"]);
-						container.addChild(output_16, {
+						var output_11 = new cpr.controls.Output();
+						output_11.value = "점포변경일자";
+						output_11.style.setClasses(["label"]);
+						container.addChild(output_11, {
 							"colIndex": 2,
 							"rowIndex": 2
 						});
@@ -578,16 +625,38 @@
 							(function(container){
 								var group_19 = new cpr.controls.Container("grp11");
 								group_19.style.setClasses(["form-title-box"]);
-								var verticalLayout_8 = new cpr.controls.layouts.VerticalLayout();
-								group_19.setLayout(verticalLayout_8);
+								var formLayout_11 = new cpr.controls.layouts.FormLayout();
+								formLayout_11.scrollable = false;
+								formLayout_11.topMargin = "0px";
+								formLayout_11.rightMargin = "0px";
+								formLayout_11.bottomMargin = "0px";
+								formLayout_11.leftMargin = "0px";
+								formLayout_11.horizontalSpacing = "0px";
+								formLayout_11.verticalSpacing = "0px";
+								formLayout_11.setColumns(["110px", "1fr"]);
+								formLayout_11.setRows(["1fr"]);
+								group_19.setLayout(formLayout_11);
 								(function(container){
-									var output_17 = new cpr.controls.Output();
-									output_17.value = "위해촉사항";
-									output_17.style.setClasses(["form-title"]);
-									container.addChild(output_17, {
-										"autoSize": "height",
-										"width": "300px",
-										"height": "17px"
+									var output_12 = new cpr.controls.Output();
+									output_12.value = "위해촉사항";
+									output_12.style.setClasses(["form-title"]);
+									output_12.style.css({
+										"border-right-style" : "dashed",
+										"border-top-width" : "3px",
+										"border-bottom-color" : "red",
+										"border-left-style" : "dashed",
+										"border-right-width" : "3px",
+										"border-bottom-width" : "3px",
+										"border-left-color" : "red",
+										"border-top-color" : "red",
+										"border-bottom-style" : "dashed",
+										"border-right-color" : "red",
+										"border-left-width" : "3px",
+										"border-top-style" : "dashed"
+									});
+									container.addChild(output_12, {
+										"colIndex": 0,
+										"rowIndex": 0
 									});
 								})(group_19);
 								container.addChild(group_19, {
@@ -597,28 +666,28 @@
 								});
 								var group_20 = new cpr.controls.Container("grp12");
 								group_20.style.setClasses(["form-normal"]);
-								var formLayout_11 = new cpr.controls.layouts.FormLayout();
-								formLayout_11.scrollable = false;
-								formLayout_11.topMargin = "2px";
-								formLayout_11.rightMargin = "5px";
-								formLayout_11.bottomMargin = "2px";
-								formLayout_11.leftMargin = "5px";
-								formLayout_11.horizontalSpacing = "11px";
-								formLayout_11.verticalSpacing = "5px";
-								formLayout_11.horizontalSeparatorWidth = 1;
-								formLayout_11.verticalSeparatorWidth = 1;
-								formLayout_11.setColumns(["110px", "1fr", "110px", "1fr"]);
-								formLayout_11.setUseColumnShade(0, true);
-								formLayout_11.setUseColumnShade(2, true);
-								formLayout_11.setColumnAutoSizing(0, true);
-								formLayout_11.setColumnAutoSizing(2, true);
-								formLayout_11.setRows(["26px", "26px", "26px", "26px", "26px"]);
-								group_20.setLayout(formLayout_11);
+								var formLayout_12 = new cpr.controls.layouts.FormLayout();
+								formLayout_12.scrollable = false;
+								formLayout_12.topMargin = "2px";
+								formLayout_12.rightMargin = "5px";
+								formLayout_12.bottomMargin = "2px";
+								formLayout_12.leftMargin = "5px";
+								formLayout_12.horizontalSpacing = "11px";
+								formLayout_12.verticalSpacing = "5px";
+								formLayout_12.horizontalSeparatorWidth = 1;
+								formLayout_12.verticalSeparatorWidth = 1;
+								formLayout_12.setColumns(["110px", "1fr", "110px", "1fr"]);
+								formLayout_12.setUseColumnShade(0, true);
+								formLayout_12.setUseColumnShade(2, true);
+								formLayout_12.setColumnAutoSizing(0, true);
+								formLayout_12.setColumnAutoSizing(2, true);
+								formLayout_12.setRows(["26px", "26px", "26px", "26px", "26px"]);
+								group_20.setLayout(formLayout_12);
 								(function(container){
-									var output_18 = new cpr.controls.Output();
-									output_18.value = "위촉일자";
-									output_18.style.setClasses(["label"]);
-									container.addChild(output_18, {
+									var output_13 = new cpr.controls.Output();
+									output_13.value = "위촉일자";
+									output_13.style.setClasses(["label"]);
+									container.addChild(output_13, {
 										"colIndex": 0,
 										"rowIndex": 0
 									});
@@ -630,10 +699,10 @@
 										"horizontalAlign": "left",
 										"width": 120
 									});
-									var output_19 = new cpr.controls.Output();
-									output_19.value = "증원후보일자";
-									output_19.style.setClasses(["label"]);
-									container.addChild(output_19, {
+									var output_14 = new cpr.controls.Output();
+									output_14.value = "증원후보일자";
+									output_14.style.setClasses(["label"]);
+									container.addChild(output_14, {
 										"colIndex": 2,
 										"rowIndex": 0
 									});
@@ -645,10 +714,10 @@
 										"horizontalAlign": "left",
 										"width": 120
 									});
-									var output_20 = new cpr.controls.Output();
-									output_20.value = "해촉일자";
-									output_20.style.setClasses(["label"]);
-									container.addChild(output_20, {
+									var output_15 = new cpr.controls.Output();
+									output_15.value = "해촉일자";
+									output_15.style.setClasses(["label"]);
+									container.addChild(output_15, {
 										"colIndex": 0,
 										"rowIndex": 1
 									});
@@ -660,10 +729,10 @@
 										"horizontalAlign": "left",
 										"width": 120
 									});
-									var output_21 = new cpr.controls.Output();
-									output_21.value = "해촉사유";
-									output_21.style.setClasses(["label"]);
-									container.addChild(output_21, {
+									var output_16 = new cpr.controls.Output();
+									output_16.value = "해촉사유";
+									output_16.style.setClasses(["label"]);
+									container.addChild(output_16, {
 										"colIndex": 2,
 										"rowIndex": 1
 									});
@@ -674,10 +743,10 @@
 										"colIndex": 3,
 										"rowIndex": 1
 									});
-									var output_22 = new cpr.controls.Output();
-									output_22.value = "재위촉일자";
-									output_22.style.setClasses(["label"]);
-									container.addChild(output_22, {
+									var output_17 = new cpr.controls.Output();
+									output_17.value = "재위촉일자";
+									output_17.style.setClasses(["label"]);
+									container.addChild(output_17, {
 										"colIndex": 0,
 										"rowIndex": 2
 									});
@@ -689,10 +758,10 @@
 										"horizontalAlign": "left",
 										"width": 120
 									});
-									var output_23 = new cpr.controls.Output();
-									output_23.value = "재위촉횟수";
-									output_23.style.setClasses(["label"]);
-									container.addChild(output_23, {
+									var output_18 = new cpr.controls.Output();
+									output_18.value = "재위촉횟수";
+									output_18.style.setClasses(["label"]);
+									container.addChild(output_18, {
 										"colIndex": 2,
 										"rowIndex": 2
 									});
@@ -702,10 +771,10 @@
 										"colIndex": 3,
 										"rowIndex": 2
 									});
-									var output_24 = new cpr.controls.Output();
-									output_24.value = "특별위촉유형";
-									output_24.style.setClasses(["label"]);
-									container.addChild(output_24, {
+									var output_19 = new cpr.controls.Output();
+									output_19.value = "특별위촉유형";
+									output_19.style.setClasses(["label"]);
+									container.addChild(output_19, {
 										"colIndex": 0,
 										"rowIndex": 3
 									});
@@ -716,10 +785,10 @@
 										"colIndex": 1,
 										"rowIndex": 3
 									});
-									var output_25 = new cpr.controls.Output();
-									output_25.value = "특별위촉일자";
-									output_25.style.setClasses(["label"]);
-									container.addChild(output_25, {
+									var output_20 = new cpr.controls.Output();
+									output_20.value = "특별위촉일자";
+									output_20.style.setClasses(["label"]);
+									container.addChild(output_20, {
 										"colIndex": 2,
 										"rowIndex": 3
 									});
@@ -731,10 +800,10 @@
 										"horizontalAlign": "left",
 										"width": 120
 									});
-									var output_26 = new cpr.controls.Output();
-									output_26.value = "설계사유입경로";
-									output_26.style.setClasses(["label"]);
-									container.addChild(output_26, {
+									var output_21 = new cpr.controls.Output();
+									output_21.value = "설계사유입경로";
+									output_21.style.setClasses(["label"]);
+									container.addChild(output_21, {
 										"colIndex": 0,
 										"rowIndex": 4
 									});
@@ -765,23 +834,45 @@
 							});
 							var group_21 = new cpr.controls.Container("grp13");
 							group_21.style.setClasses(["form-box"]);
-							var verticalLayout_9 = new cpr.controls.layouts.VerticalLayout();
-							verticalLayout_9.scrollable = false;
-							verticalLayout_9.spacing = 8;
-							group_21.setLayout(verticalLayout_9);
+							var verticalLayout_8 = new cpr.controls.layouts.VerticalLayout();
+							verticalLayout_8.scrollable = false;
+							verticalLayout_8.spacing = 8;
+							group_21.setLayout(verticalLayout_8);
 							(function(container){
 								var group_22 = new cpr.controls.Container("grp14");
 								group_22.style.setClasses(["form-title-box"]);
-								var verticalLayout_10 = new cpr.controls.layouts.VerticalLayout();
-								group_22.setLayout(verticalLayout_10);
+								var formLayout_13 = new cpr.controls.layouts.FormLayout();
+								formLayout_13.scrollable = false;
+								formLayout_13.topMargin = "0px";
+								formLayout_13.rightMargin = "0px";
+								formLayout_13.bottomMargin = "0px";
+								formLayout_13.leftMargin = "0px";
+								formLayout_13.horizontalSpacing = "0px";
+								formLayout_13.verticalSpacing = "0px";
+								formLayout_13.setColumns(["120px", "1fr"]);
+								formLayout_13.setRows(["1fr"]);
+								group_22.setLayout(formLayout_13);
 								(function(container){
-									var output_27 = new cpr.controls.Output();
-									output_27.value = "팀, 직책등 변경사항";
-									output_27.style.setClasses(["form-title"]);
-									container.addChild(output_27, {
-										"autoSize": "height",
-										"width": "300px",
-										"height": "17px"
+									var output_22 = new cpr.controls.Output();
+									output_22.value = "팀,직책등 변경사항";
+									output_22.style.setClasses(["form-title"]);
+									output_22.style.css({
+										"border-right-style" : "dashed",
+										"border-top-width" : "3px",
+										"border-bottom-color" : "red",
+										"border-left-style" : "dashed",
+										"border-right-width" : "3px",
+										"border-bottom-width" : "3px",
+										"border-left-color" : "red",
+										"border-top-color" : "red",
+										"border-bottom-style" : "dashed",
+										"border-right-color" : "red",
+										"border-left-width" : "3px",
+										"border-top-style" : "dashed"
+									});
+									container.addChild(output_22, {
+										"colIndex": 0,
+										"rowIndex": 0
 									});
 								})(group_22);
 								container.addChild(group_22, {
@@ -791,28 +882,28 @@
 								});
 								var group_23 = new cpr.controls.Container("grp15");
 								group_23.style.setClasses(["form-normal"]);
-								var formLayout_12 = new cpr.controls.layouts.FormLayout();
-								formLayout_12.scrollable = false;
-								formLayout_12.topMargin = "2px";
-								formLayout_12.rightMargin = "5px";
-								formLayout_12.bottomMargin = "2px";
-								formLayout_12.leftMargin = "5px";
-								formLayout_12.horizontalSpacing = "11px";
-								formLayout_12.verticalSpacing = "5px";
-								formLayout_12.horizontalSeparatorWidth = 1;
-								formLayout_12.verticalSeparatorWidth = 1;
-								formLayout_12.setColumns(["110px", "1fr", "110px", "1fr"]);
-								formLayout_12.setUseColumnShade(0, true);
-								formLayout_12.setUseColumnShade(2, true);
-								formLayout_12.setColumnAutoSizing(0, true);
-								formLayout_12.setColumnAutoSizing(2, true);
-								formLayout_12.setRows(["26px", "26px", "26px", "26px", "26px", "26px", "26px"]);
-								group_23.setLayout(formLayout_12);
+								var formLayout_14 = new cpr.controls.layouts.FormLayout();
+								formLayout_14.scrollable = false;
+								formLayout_14.topMargin = "2px";
+								formLayout_14.rightMargin = "5px";
+								formLayout_14.bottomMargin = "2px";
+								formLayout_14.leftMargin = "5px";
+								formLayout_14.horizontalSpacing = "11px";
+								formLayout_14.verticalSpacing = "5px";
+								formLayout_14.horizontalSeparatorWidth = 1;
+								formLayout_14.verticalSeparatorWidth = 1;
+								formLayout_14.setColumns(["110px", "1fr", "110px", "1fr"]);
+								formLayout_14.setUseColumnShade(0, true);
+								formLayout_14.setUseColumnShade(2, true);
+								formLayout_14.setColumnAutoSizing(0, true);
+								formLayout_14.setColumnAutoSizing(2, true);
+								formLayout_14.setRows(["26px", "26px", "26px", "26px", "26px", "26px", "26px"]);
+								group_23.setLayout(formLayout_14);
 								(function(container){
-									var output_28 = new cpr.controls.Output();
-									output_28.value = "팀";
-									output_28.style.setClasses(["label"]);
-									container.addChild(output_28, {
+									var output_23 = new cpr.controls.Output();
+									output_23.value = "팀";
+									output_23.style.setClasses(["label"]);
+									container.addChild(output_23, {
 										"colIndex": 0,
 										"rowIndex": 0
 									});
@@ -822,10 +913,10 @@
 										"colIndex": 1,
 										"rowIndex": 0
 									});
-									var output_29 = new cpr.controls.Output();
-									output_29.value = "팀변경일자";
-									output_29.style.setClasses(["label"]);
-									container.addChild(output_29, {
+									var output_24 = new cpr.controls.Output();
+									output_24.value = "팀변경일자";
+									output_24.style.setClasses(["label"]);
+									container.addChild(output_24, {
 										"colIndex": 2,
 										"rowIndex": 0
 									});
@@ -835,10 +926,10 @@
 										"colIndex": 3,
 										"rowIndex": 0
 									});
-									var output_30 = new cpr.controls.Output();
-									output_30.value = "직책";
-									output_30.style.setClasses(["label"]);
-									container.addChild(output_30, {
+									var output_25 = new cpr.controls.Output();
+									output_25.value = "직책";
+									output_25.style.setClasses(["label"]);
+									container.addChild(output_25, {
 										"colIndex": 0,
 										"rowIndex": 1
 									});
@@ -851,10 +942,10 @@
 										"colIndex": 1,
 										"rowIndex": 1
 									});
-									var output_31 = new cpr.controls.Output();
-									output_31.value = "직책변경일자";
-									output_31.style.setClasses(["label"]);
-									container.addChild(output_31, {
+									var output_26 = new cpr.controls.Output();
+									output_26.value = "직책변경일자";
+									output_26.style.setClasses(["label"]);
+									container.addChild(output_26, {
 										"colIndex": 2,
 										"rowIndex": 1
 									});
@@ -864,10 +955,10 @@
 										"colIndex": 3,
 										"rowIndex": 1
 									});
-									var output_32 = new cpr.controls.Output();
-									output_32.value = "직책등급";
-									output_32.style.setClasses(["label"]);
-									container.addChild(output_32, {
+									var output_27 = new cpr.controls.Output();
+									output_27.value = "직책등급";
+									output_27.style.setClasses(["label"]);
+									container.addChild(output_27, {
 										"colIndex": 0,
 										"rowIndex": 2
 									});
@@ -880,23 +971,23 @@
 										"colIndex": 1,
 										"rowIndex": 2
 									});
-									var output_33 = new cpr.controls.Output();
-									output_33.value = "직책등급변경일자";
-									output_33.style.setClasses(["label"]);
-									container.addChild(output_33, {
+									var output_28 = new cpr.controls.Output();
+									output_28.value = "직책등급변경일자";
+									output_28.style.setClasses(["label"]);
+									container.addChild(output_28, {
 										"colIndex": 2,
 										"rowIndex": 2
 									});
 									var dateInput_9 = new cpr.controls.DateInput("dti9");
-									dateInput_9.value = "20131001";
+									dateInput_9.value = "20241001";
 									container.addChild(dateInput_9, {
 										"colIndex": 3,
 										"rowIndex": 2
 									});
-									var output_34 = new cpr.controls.Output();
-									output_34.value = "인사종류";
-									output_34.style.setClasses(["label"]);
-									container.addChild(output_34, {
+									var output_29 = new cpr.controls.Output();
+									output_29.value = "인사종류";
+									output_29.style.setClasses(["label"]);
+									container.addChild(output_29, {
 										"colIndex": 0,
 										"rowIndex": 3
 									});
@@ -909,10 +1000,10 @@
 										"colIndex": 1,
 										"rowIndex": 3
 									});
-									var output_35 = new cpr.controls.Output();
-									output_35.value = "협회번호";
-									output_35.style.setClasses(["label"]);
-									container.addChild(output_35, {
+									var output_30 = new cpr.controls.Output();
+									output_30.value = "협회번호";
+									output_30.style.setClasses(["label"]);
+									container.addChild(output_30, {
 										"colIndex": 2,
 										"rowIndex": 3
 									});
@@ -922,10 +1013,10 @@
 										"colIndex": 3,
 										"rowIndex": 3
 									});
-									var output_36 = new cpr.controls.Output();
-									output_36.value = "기타사항";
-									output_36.style.setClasses(["label"]);
-									container.addChild(output_36, {
+									var output_31 = new cpr.controls.Output();
+									output_31.value = "기타사항";
+									output_31.style.setClasses(["label"]);
+									container.addChild(output_31, {
 										"colIndex": 0,
 										"rowIndex": 4
 									});
@@ -936,10 +1027,10 @@
 										"colIndex": 1,
 										"rowIndex": 4
 									});
-									var output_37 = new cpr.controls.Output();
-									output_37.value = "기타사항적용월";
-									output_37.style.setClasses(["label"]);
-									container.addChild(output_37, {
+									var output_32 = new cpr.controls.Output();
+									output_32.value = "기타사항적용월";
+									output_32.style.setClasses(["label"]);
+									container.addChild(output_32, {
 										"colIndex": 2,
 										"rowIndex": 4
 									});
@@ -950,10 +1041,10 @@
 										"colIndex": 3,
 										"rowIndex": 4
 									});
-									var output_38 = new cpr.controls.Output();
-									output_38.value = "대리점사원유형";
-									output_38.style.setClasses(["label"]);
-									container.addChild(output_38, {
+									var output_33 = new cpr.controls.Output();
+									output_33.value = "대리점사원유형";
+									output_33.style.setClasses(["label"]);
+									container.addChild(output_33, {
 										"colIndex": 0,
 										"rowIndex": 5
 									});
@@ -965,10 +1056,10 @@
 										"colSpan": 3,
 										"rowSpan": 1
 									});
-									var output_39 = new cpr.controls.Output();
-									output_39.value = "사업자등록번호";
-									output_39.style.setClasses(["label"]);
-									container.addChild(output_39, {
+									var output_34 = new cpr.controls.Output();
+									output_34.value = "사업자등록번호";
+									output_34.style.setClasses(["label"]);
+									container.addChild(output_34, {
 										"colIndex": 0,
 										"rowIndex": 6
 									});
@@ -978,10 +1069,10 @@
 										"colIndex": 1,
 										"rowIndex": 6
 									});
-									var output_40 = new cpr.controls.Output();
-									output_40.value = "사업자명(법인명)";
-									output_40.style.setClasses(["label"]);
-									container.addChild(output_40, {
+									var output_35 = new cpr.controls.Output();
+									output_35.value = "사업자명(법인명)";
+									output_35.style.setClasses(["label"]);
+									container.addChild(output_35, {
 										"colIndex": 2,
 										"rowIndex": 6
 									});
@@ -1011,30 +1102,51 @@
 							"height": 25
 						});
 						var group_24 = new cpr.controls.Container("grp16");
-						var verticalLayout_11 = new cpr.controls.layouts.VerticalLayout();
-						verticalLayout_11.spacing = 8;
-						group_24.setLayout(verticalLayout_11);
+						var verticalLayout_9 = new cpr.controls.layouts.VerticalLayout();
+						verticalLayout_9.spacing = 8;
+						group_24.setLayout(verticalLayout_9);
 						(function(container){
 							var group_25 = new cpr.controls.Container("grp17");
 							group_25.style.setClasses(["form-box"]);
-							var verticalLayout_12 = new cpr.controls.layouts.VerticalLayout();
-							verticalLayout_12.scrollable = false;
-							verticalLayout_12.spacing = 8;
-							group_25.setLayout(verticalLayout_12);
+							var verticalLayout_10 = new cpr.controls.layouts.VerticalLayout();
+							verticalLayout_10.scrollable = false;
+							verticalLayout_10.spacing = 8;
+							group_25.setLayout(verticalLayout_10);
 							(function(container){
 								var group_26 = new cpr.controls.Container("grp33");
 								group_26.style.setClasses(["form-title-box"]);
-								var verticalLayout_13 = new cpr.controls.layouts.VerticalLayout();
-								verticalLayout_13.spacing = 8;
-								group_26.setLayout(verticalLayout_13);
+								var formLayout_15 = new cpr.controls.layouts.FormLayout();
+								formLayout_15.scrollable = false;
+								formLayout_15.topMargin = "0px";
+								formLayout_15.rightMargin = "0px";
+								formLayout_15.bottomMargin = "0px";
+								formLayout_15.leftMargin = "0px";
+								formLayout_15.horizontalSpacing = "0px";
+								formLayout_15.verticalSpacing = "0px";
+								formLayout_15.setColumns(["110px", "1fr"]);
+								formLayout_15.setRows(["1fr"]);
+								group_26.setLayout(formLayout_15);
 								(function(container){
-									var output_41 = new cpr.controls.Output();
-									output_41.value = "수수료적용사항";
-									output_41.style.setClasses(["form-title"]);
-									container.addChild(output_41, {
-										"autoSize": "height",
-										"width": "800px",
-										"height": "17px"
+									var output_36 = new cpr.controls.Output();
+									output_36.value = "수수료적용사항";
+									output_36.style.setClasses(["form-title"]);
+									output_36.style.css({
+										"border-right-style" : "dashed",
+										"border-top-width" : "3px",
+										"border-bottom-color" : "red",
+										"border-left-style" : "dashed",
+										"border-right-width" : "3px",
+										"border-bottom-width" : "3px",
+										"border-left-color" : "red",
+										"border-top-color" : "red",
+										"border-bottom-style" : "dashed",
+										"border-right-color" : "red",
+										"border-left-width" : "3px",
+										"border-top-style" : "dashed"
+									});
+									container.addChild(output_36, {
+										"colIndex": 0,
+										"rowIndex": 0
 									});
 								})(group_26);
 								container.addChild(group_26, {
@@ -1044,20 +1156,20 @@
 								});
 								var group_27 = new cpr.controls.Container("grp18");
 								group_27.style.setClasses(["form-box"]);
-								var verticalLayout_14 = new cpr.controls.layouts.VerticalLayout();
-								verticalLayout_14.scrollable = false;
-								verticalLayout_14.spacing = 8;
-								group_27.setLayout(verticalLayout_14);
+								var verticalLayout_11 = new cpr.controls.layouts.VerticalLayout();
+								verticalLayout_11.scrollable = false;
+								verticalLayout_11.spacing = 8;
+								group_27.setLayout(verticalLayout_11);
 								(function(container){
 									var group_28 = new cpr.controls.Container("grp19");
 									group_28.style.setClasses(["form-title-box"]);
-									var verticalLayout_15 = new cpr.controls.layouts.VerticalLayout();
-									group_28.setLayout(verticalLayout_15);
+									var verticalLayout_12 = new cpr.controls.layouts.VerticalLayout();
+									group_28.setLayout(verticalLayout_12);
 									(function(container){
-										var output_42 = new cpr.controls.Output();
-										output_42.value = "FP";
-										output_42.style.setClasses(["form-title"]);
-										container.addChild(output_42, {
+										var output_37 = new cpr.controls.Output();
+										output_37.value = "FP";
+										output_37.style.setClasses(["form-title"]);
+										container.addChild(output_37, {
 											"autoSize": "height",
 											"width": "300px",
 											"height": "17px"
@@ -1070,28 +1182,28 @@
 									});
 									var group_29 = new cpr.controls.Container("grp20");
 									group_29.style.setClasses(["form-normal"]);
-									var formLayout_13 = new cpr.controls.layouts.FormLayout();
-									formLayout_13.scrollable = false;
-									formLayout_13.topMargin = "2px";
-									formLayout_13.rightMargin = "5px";
-									formLayout_13.bottomMargin = "2px";
-									formLayout_13.leftMargin = "5px";
-									formLayout_13.horizontalSpacing = "11px";
-									formLayout_13.verticalSpacing = "5px";
-									formLayout_13.horizontalSeparatorWidth = 1;
-									formLayout_13.verticalSeparatorWidth = 1;
-									formLayout_13.setColumns(["110px", "1fr", "110px", "1fr"]);
-									formLayout_13.setUseColumnShade(0, true);
-									formLayout_13.setUseColumnShade(2, true);
-									formLayout_13.setColumnAutoSizing(0, true);
-									formLayout_13.setColumnAutoSizing(2, true);
-									formLayout_13.setRows(["26px", "26px", "26px", "26px"]);
-									group_29.setLayout(formLayout_13);
+									var formLayout_16 = new cpr.controls.layouts.FormLayout();
+									formLayout_16.scrollable = false;
+									formLayout_16.topMargin = "2px";
+									formLayout_16.rightMargin = "5px";
+									formLayout_16.bottomMargin = "2px";
+									formLayout_16.leftMargin = "5px";
+									formLayout_16.horizontalSpacing = "11px";
+									formLayout_16.verticalSpacing = "5px";
+									formLayout_16.horizontalSeparatorWidth = 1;
+									formLayout_16.verticalSeparatorWidth = 1;
+									formLayout_16.setColumns(["110px", "1fr", "110px", "1fr"]);
+									formLayout_16.setUseColumnShade(0, true);
+									formLayout_16.setUseColumnShade(2, true);
+									formLayout_16.setColumnAutoSizing(0, true);
+									formLayout_16.setColumnAutoSizing(2, true);
+									formLayout_16.setRows(["26px", "26px", "26px", "26px"]);
+									group_29.setLayout(formLayout_16);
 									(function(container){
-										var output_43 = new cpr.controls.Output();
-										output_43.value = "신인정착수수료";
-										output_43.style.setClasses(["label"]);
-										container.addChild(output_43, {
+										var output_38 = new cpr.controls.Output();
+										output_38.value = "신인정착수수료";
+										output_38.style.setClasses(["label"]);
+										container.addChild(output_38, {
 											"colIndex": 0,
 											"rowIndex": 0
 										});
@@ -1104,10 +1216,10 @@
 											"colIndex": 1,
 											"rowIndex": 0
 										});
-										var output_44 = new cpr.controls.Output();
-										output_44.value = "정착촉진수수료";
-										output_44.style.setClasses(["label"]);
-										container.addChild(output_44, {
+										var output_39 = new cpr.controls.Output();
+										output_39.value = "정착촉진수수료";
+										output_39.style.setClasses(["label"]);
+										container.addChild(output_39, {
 											"colIndex": 2,
 											"rowIndex": 0
 										});
@@ -1120,10 +1232,10 @@
 											"colIndex": 3,
 											"rowIndex": 0
 										});
-										var output_45 = new cpr.controls.Output();
-										output_45.value = "은퇴지원수수료";
-										output_45.style.setClasses(["label"]);
-										container.addChild(output_45, {
+										var output_40 = new cpr.controls.Output();
+										output_40.value = "은퇴지원수수료";
+										output_40.style.setClasses(["label"]);
+										container.addChild(output_40, {
 											"colIndex": 0,
 											"rowIndex": 1
 										});
@@ -1136,10 +1248,10 @@
 											"colIndex": 1,
 											"rowIndex": 1
 										});
-										var output_46 = new cpr.controls.Output();
-										output_46.value = "간부설계사CORE";
-										output_46.style.setClasses(["label"]);
-										container.addChild(output_46, {
+										var output_41 = new cpr.controls.Output();
+										output_41.value = "간부설계사CORE";
+										output_41.style.setClasses(["label"]);
+										container.addChild(output_41, {
 											"colIndex": 2,
 											"rowIndex": 1
 										});
@@ -1152,10 +1264,10 @@
 											"colIndex": 3,
 											"rowIndex": 1
 										});
-										var output_47 = new cpr.controls.Output();
-										output_47.value = "홈커밍여부";
-										output_47.style.setClasses(["label"]);
-										container.addChild(output_47, {
+										var output_42 = new cpr.controls.Output();
+										output_42.value = "홈커밍여부";
+										output_42.style.setClasses(["label"]);
+										container.addChild(output_42, {
 											"colIndex": 0,
 											"rowIndex": 2
 										});
@@ -1168,26 +1280,26 @@
 											"colIndex": 1,
 											"rowIndex": 2
 										});
-										var output_48 = new cpr.controls.Output();
-										output_48.value = "승계자";
-										output_48.style.setClasses(["label"]);
-										container.addChild(output_48, {
+										var output_43 = new cpr.controls.Output();
+										output_43.value = "승계자";
+										output_43.style.setClasses(["label"]);
+										container.addChild(output_43, {
 											"colIndex": 2,
 											"rowIndex": 2
 										});
 										var group_30 = new cpr.controls.Container("grp21");
 										group_30.style.setClasses(["form-inside"]);
-										var formLayout_14 = new cpr.controls.layouts.FormLayout();
-										formLayout_14.scrollable = false;
-										formLayout_14.topMargin = "0px";
-										formLayout_14.rightMargin = "0px";
-										formLayout_14.bottomMargin = "0px";
-										formLayout_14.leftMargin = "0px";
-										formLayout_14.horizontalSpacing = "5px";
-										formLayout_14.verticalSpacing = "5px";
-										formLayout_14.setColumns(["1fr", "2fr"]);
-										formLayout_14.setRows(["1fr"]);
-										group_30.setLayout(formLayout_14);
+										var formLayout_17 = new cpr.controls.layouts.FormLayout();
+										formLayout_17.scrollable = false;
+										formLayout_17.topMargin = "0px";
+										formLayout_17.rightMargin = "0px";
+										formLayout_17.bottomMargin = "0px";
+										formLayout_17.leftMargin = "0px";
+										formLayout_17.horizontalSpacing = "5px";
+										formLayout_17.verticalSpacing = "5px";
+										formLayout_17.setColumns(["1fr", "2fr"]);
+										formLayout_17.setRows(["1fr"]);
+										group_30.setLayout(formLayout_17);
 										(function(container){
 											var inputBox_16 = new cpr.controls.InputBox("ipb11");
 											inputBox_16.value = "대면채널(FP)";
@@ -1206,26 +1318,26 @@
 											"colIndex": 3,
 											"rowIndex": 2
 										});
-										var output_49 = new cpr.controls.Output();
-										output_49.value = "도입SM";
-										output_49.style.setClasses(["label"]);
-										container.addChild(output_49, {
+										var output_44 = new cpr.controls.Output();
+										output_44.value = "도입SM";
+										output_44.style.setClasses(["label"]);
+										container.addChild(output_44, {
 											"colIndex": 0,
 											"rowIndex": 3
 										});
 										var group_31 = new cpr.controls.Container("grp22");
 										group_31.style.setClasses(["form-inside"]);
-										var formLayout_15 = new cpr.controls.layouts.FormLayout();
-										formLayout_15.scrollable = false;
-										formLayout_15.topMargin = "0px";
-										formLayout_15.rightMargin = "0px";
-										formLayout_15.bottomMargin = "0px";
-										formLayout_15.leftMargin = "0px";
-										formLayout_15.horizontalSpacing = "5px";
-										formLayout_15.verticalSpacing = "5px";
-										formLayout_15.setColumns(["1fr", "2fr"]);
-										formLayout_15.setRows(["1fr"]);
-										group_31.setLayout(formLayout_15);
+										var formLayout_18 = new cpr.controls.layouts.FormLayout();
+										formLayout_18.scrollable = false;
+										formLayout_18.topMargin = "0px";
+										formLayout_18.rightMargin = "0px";
+										formLayout_18.bottomMargin = "0px";
+										formLayout_18.leftMargin = "0px";
+										formLayout_18.horizontalSpacing = "5px";
+										formLayout_18.verticalSpacing = "5px";
+										formLayout_18.setColumns(["1fr", "2fr"]);
+										formLayout_18.setRows(["1fr"]);
+										group_31.setLayout(formLayout_18);
 										(function(container){
 											var inputBox_17 = new cpr.controls.InputBox("ipb10");
 											inputBox_17.value = "";
@@ -1260,20 +1372,20 @@
 								});
 								var group_32 = new cpr.controls.Container("grp23");
 								group_32.style.setClasses(["form-box"]);
-								var verticalLayout_16 = new cpr.controls.layouts.VerticalLayout();
-								verticalLayout_16.scrollable = false;
-								verticalLayout_16.spacing = 8;
-								group_32.setLayout(verticalLayout_16);
+								var verticalLayout_13 = new cpr.controls.layouts.VerticalLayout();
+								verticalLayout_13.scrollable = false;
+								verticalLayout_13.spacing = 8;
+								group_32.setLayout(verticalLayout_13);
 								(function(container){
 									var group_33 = new cpr.controls.Container("grp24");
 									group_33.style.setClasses(["form-title-box"]);
-									var verticalLayout_17 = new cpr.controls.layouts.VerticalLayout();
-									group_33.setLayout(verticalLayout_17);
+									var verticalLayout_14 = new cpr.controls.layouts.VerticalLayout();
+									group_33.setLayout(verticalLayout_14);
 									(function(container){
-										var output_50 = new cpr.controls.Output();
-										output_50.value = "FC";
-										output_50.style.setClasses(["form-title"]);
-										container.addChild(output_50, {
+										var output_45 = new cpr.controls.Output();
+										output_45.value = "FC";
+										output_45.style.setClasses(["form-title"]);
+										container.addChild(output_45, {
 											"autoSize": "height",
 											"width": "300px",
 											"height": "17px"
@@ -1286,28 +1398,28 @@
 									});
 									var group_34 = new cpr.controls.Container("grp25");
 									group_34.style.setClasses(["form-normal"]);
-									var formLayout_16 = new cpr.controls.layouts.FormLayout();
-									formLayout_16.scrollable = false;
-									formLayout_16.topMargin = "2px";
-									formLayout_16.rightMargin = "5px";
-									formLayout_16.bottomMargin = "2px";
-									formLayout_16.leftMargin = "5px";
-									formLayout_16.horizontalSpacing = "11px";
-									formLayout_16.verticalSpacing = "5px";
-									formLayout_16.horizontalSeparatorWidth = 1;
-									formLayout_16.verticalSeparatorWidth = 1;
-									formLayout_16.setColumns(["110px", "1fr", "110px", "1fr"]);
-									formLayout_16.setUseColumnShade(0, true);
-									formLayout_16.setUseColumnShade(2, true);
-									formLayout_16.setColumnAutoSizing(0, true);
-									formLayout_16.setColumnAutoSizing(2, true);
-									formLayout_16.setRows(["26px", "26px", "26px"]);
-									group_34.setLayout(formLayout_16);
+									var formLayout_19 = new cpr.controls.layouts.FormLayout();
+									formLayout_19.scrollable = false;
+									formLayout_19.topMargin = "2px";
+									formLayout_19.rightMargin = "5px";
+									formLayout_19.bottomMargin = "2px";
+									formLayout_19.leftMargin = "5px";
+									formLayout_19.horizontalSpacing = "11px";
+									formLayout_19.verticalSpacing = "5px";
+									formLayout_19.horizontalSeparatorWidth = 1;
+									formLayout_19.verticalSeparatorWidth = 1;
+									formLayout_19.setColumns(["110px", "1fr", "110px", "1fr"]);
+									formLayout_19.setUseColumnShade(0, true);
+									formLayout_19.setUseColumnShade(2, true);
+									formLayout_19.setColumnAutoSizing(0, true);
+									formLayout_19.setColumnAutoSizing(2, true);
+									formLayout_19.setRows(["26px", "26px", "26px"]);
+									group_34.setLayout(formLayout_19);
 									(function(container){
-										var output_51 = new cpr.controls.Output();
-										output_51.value = "CORE TARGET";
-										output_51.style.setClasses(["label"]);
-										container.addChild(output_51, {
+										var output_46 = new cpr.controls.Output();
+										output_46.value = "CORE TARGET";
+										output_46.style.setClasses(["label"]);
+										container.addChild(output_46, {
 											"colIndex": 0,
 											"rowIndex": 0
 										});
@@ -1320,10 +1432,10 @@
 											"colIndex": 1,
 											"rowIndex": 0
 										});
-										var output_52 = new cpr.controls.Output();
-										output_52.value = "해촉신청서제출";
-										output_52.style.setClasses(["label"]);
-										container.addChild(output_52, {
+										var output_47 = new cpr.controls.Output();
+										output_47.value = "해촉신청서제출";
+										output_47.style.setClasses(["label"]);
+										container.addChild(output_47, {
 											"colIndex": 2,
 											"rowIndex": 0
 										});
@@ -1336,10 +1448,10 @@
 											"colIndex": 3,
 											"rowIndex": 0
 										});
-										var output_53 = new cpr.controls.Output();
-										output_53.value = "건강관리비지원";
-										output_53.style.setClasses(["label"]);
-										container.addChild(output_53, {
+										var output_48 = new cpr.controls.Output();
+										output_48.value = "건강관리비지원";
+										output_48.style.setClasses(["label"]);
+										container.addChild(output_48, {
 											"colIndex": 0,
 											"rowIndex": 1
 										});
@@ -1352,10 +1464,10 @@
 											"colIndex": 1,
 											"rowIndex": 1
 										});
-										var output_54 = new cpr.controls.Output();
-										output_54.value = "지점속성변경";
-										output_54.style.setClasses(["label"]);
-										container.addChild(output_54, {
+										var output_49 = new cpr.controls.Output();
+										output_49.value = "지점속성변경";
+										output_49.style.setClasses(["label"]);
+										container.addChild(output_49, {
 											"colIndex": 2,
 											"rowIndex": 1
 										});
@@ -1365,10 +1477,10 @@
 											"colIndex": 3,
 											"rowIndex": 1
 										});
-										var output_55 = new cpr.controls.Output();
-										output_55.value = "팀속성변경";
-										output_55.style.setClasses(["label"]);
-										container.addChild(output_55, {
+										var output_50 = new cpr.controls.Output();
+										output_50.value = "팀속성변경";
+										output_50.style.setClasses(["label"]);
+										container.addChild(output_50, {
 											"colIndex": 0,
 											"rowIndex": 2
 										});
@@ -1394,20 +1506,20 @@
 								});
 								var group_35 = new cpr.controls.Container("grp26");
 								group_35.style.setClasses(["form-box"]);
-								var verticalLayout_18 = new cpr.controls.layouts.VerticalLayout();
-								verticalLayout_18.scrollable = false;
-								verticalLayout_18.spacing = 8;
-								group_35.setLayout(verticalLayout_18);
+								var verticalLayout_15 = new cpr.controls.layouts.VerticalLayout();
+								verticalLayout_15.scrollable = false;
+								verticalLayout_15.spacing = 8;
+								group_35.setLayout(verticalLayout_15);
 								(function(container){
 									var group_36 = new cpr.controls.Container("grp27");
 									group_36.style.setClasses(["form-title-box"]);
-									var verticalLayout_19 = new cpr.controls.layouts.VerticalLayout();
-									group_36.setLayout(verticalLayout_19);
+									var verticalLayout_16 = new cpr.controls.layouts.VerticalLayout();
+									group_36.setLayout(verticalLayout_16);
 									(function(container){
-										var output_56 = new cpr.controls.Output();
-										output_56.value = "TM";
-										output_56.style.setClasses(["form-title"]);
-										container.addChild(output_56, {
+										var output_51 = new cpr.controls.Output();
+										output_51.value = "TM";
+										output_51.style.setClasses(["form-title"]);
+										container.addChild(output_51, {
 											"autoSize": "height",
 											"width": "300px",
 											"height": "17px"
@@ -1420,28 +1532,28 @@
 									});
 									var group_37 = new cpr.controls.Container("grp28");
 									group_37.style.setClasses(["form-normal"]);
-									var formLayout_17 = new cpr.controls.layouts.FormLayout();
-									formLayout_17.scrollable = false;
-									formLayout_17.topMargin = "2px";
-									formLayout_17.rightMargin = "5px";
-									formLayout_17.bottomMargin = "2px";
-									formLayout_17.leftMargin = "5px";
-									formLayout_17.horizontalSpacing = "11px";
-									formLayout_17.verticalSpacing = "5px";
-									formLayout_17.horizontalSeparatorWidth = 1;
-									formLayout_17.verticalSeparatorWidth = 1;
-									formLayout_17.setColumns(["110px", "1fr", "110px", "1fr"]);
-									formLayout_17.setUseColumnShade(0, true);
-									formLayout_17.setUseColumnShade(2, true);
-									formLayout_17.setColumnAutoSizing(0, true);
-									formLayout_17.setColumnAutoSizing(2, true);
-									formLayout_17.setRows(["26px", "26px", "26px"]);
-									group_37.setLayout(formLayout_17);
+									var formLayout_20 = new cpr.controls.layouts.FormLayout();
+									formLayout_20.scrollable = false;
+									formLayout_20.topMargin = "2px";
+									formLayout_20.rightMargin = "5px";
+									formLayout_20.bottomMargin = "2px";
+									formLayout_20.leftMargin = "5px";
+									formLayout_20.horizontalSpacing = "11px";
+									formLayout_20.verticalSpacing = "5px";
+									formLayout_20.horizontalSeparatorWidth = 1;
+									formLayout_20.verticalSeparatorWidth = 1;
+									formLayout_20.setColumns(["110px", "1fr", "110px", "1fr"]);
+									formLayout_20.setUseColumnShade(0, true);
+									formLayout_20.setUseColumnShade(2, true);
+									formLayout_20.setColumnAutoSizing(0, true);
+									formLayout_20.setColumnAutoSizing(2, true);
+									formLayout_20.setRows(["26px", "26px", "26px"]);
+									group_37.setLayout(formLayout_20);
 									(function(container){
-										var output_57 = new cpr.controls.Output();
-										output_57.value = "신인정착수수료";
-										output_57.style.setClasses(["label"]);
-										container.addChild(output_57, {
+										var output_52 = new cpr.controls.Output();
+										output_52.value = "신인정착수수료";
+										output_52.style.setClasses(["label"]);
+										container.addChild(output_52, {
 											"colIndex": 0,
 											"rowIndex": 0
 										});
@@ -1454,10 +1566,10 @@
 											"colIndex": 1,
 											"rowIndex": 0
 										});
-										var output_58 = new cpr.controls.Output();
-										output_58.value = "은퇴지원수수료";
-										output_58.style.setClasses(["label"]);
-										container.addChild(output_58, {
+										var output_53 = new cpr.controls.Output();
+										output_53.value = "은퇴지원수수료";
+										output_53.style.setClasses(["label"]);
+										container.addChild(output_53, {
 											"colIndex": 2,
 											"rowIndex": 0
 										});
@@ -1470,10 +1582,10 @@
 											"colIndex": 3,
 											"rowIndex": 0
 										});
-										var output_59 = new cpr.controls.Output();
-										output_59.value = "TM영업패턴";
-										output_59.style.setClasses(["label"]);
-										container.addChild(output_59, {
+										var output_54 = new cpr.controls.Output();
+										output_54.value = "TM영업패턴";
+										output_54.style.setClasses(["label"]);
+										container.addChild(output_54, {
 											"colIndex": 0,
 											"rowIndex": 1
 										});
@@ -1483,10 +1595,10 @@
 											"colIndex": 1,
 											"rowIndex": 1
 										});
-										var output_60 = new cpr.controls.Output();
-										output_60.value = "TM영업유형";
-										output_60.style.setClasses(["label"]);
-										container.addChild(output_60, {
+										var output_55 = new cpr.controls.Output();
+										output_55.value = "TM영업유형";
+										output_55.style.setClasses(["label"]);
+										container.addChild(output_55, {
 											"colIndex": 2,
 											"rowIndex": 1
 										});
@@ -1496,10 +1608,10 @@
 											"colIndex": 3,
 											"rowIndex": 1
 										});
-										var output_61 = new cpr.controls.Output();
-										output_61.value = "TM경력사항";
-										output_61.style.setClasses(["label"]);
-										container.addChild(output_61, {
+										var output_56 = new cpr.controls.Output();
+										output_56.value = "TM경력사항";
+										output_56.style.setClasses(["label"]);
+										container.addChild(output_56, {
 											"colIndex": 0,
 											"rowIndex": 2
 										});
@@ -1509,10 +1621,10 @@
 											"colIndex": 1,
 											"rowIndex": 2
 										});
-										var output_62 = new cpr.controls.Output();
-										output_62.value = "홈커밍여부";
-										output_62.style.setClasses(["label"]);
-										container.addChild(output_62, {
+										var output_57 = new cpr.controls.Output();
+										output_57.value = "홈커밍여부";
+										output_57.style.setClasses(["label"]);
+										container.addChild(output_57, {
 											"colIndex": 2,
 											"rowIndex": 2
 										});
@@ -1560,18 +1672,18 @@
 					});
 					var group_38 = new cpr.controls.Container("grp29");
 					group_38.style.setClasses(["button-table-area"]);
-					var formLayout_18 = new cpr.controls.layouts.FormLayout();
-					formLayout_18.scrollable = false;
-					formLayout_18.topMargin = "0px";
-					formLayout_18.rightMargin = "0px";
-					formLayout_18.bottomMargin = "0px";
-					formLayout_18.leftMargin = "0px";
-					formLayout_18.horizontalSpacing = "0px";
-					formLayout_18.verticalSpacing = "0px";
-					formLayout_18.setColumns(["1fr", "43px", "1fr"]);
-					formLayout_18.setColumnAutoSizing(1, true);
-					formLayout_18.setRows(["1fr"]);
-					group_38.setLayout(formLayout_18);
+					var formLayout_21 = new cpr.controls.layouts.FormLayout();
+					formLayout_21.scrollable = false;
+					formLayout_21.topMargin = "0px";
+					formLayout_21.rightMargin = "0px";
+					formLayout_21.bottomMargin = "0px";
+					formLayout_21.leftMargin = "0px";
+					formLayout_21.horizontalSpacing = "0px";
+					formLayout_21.verticalSpacing = "0px";
+					formLayout_21.setColumns(["1fr", "43px", "1fr"]);
+					formLayout_21.setColumnAutoSizing(1, true);
+					formLayout_21.setRows(["1fr"]);
+					group_38.setLayout(formLayout_21);
 					(function(container){
 						var group_39 = new cpr.controls.Container("grp30");
 						group_39.style.setClasses(["button-table-bottom-left-area"]);
@@ -1607,10 +1719,24 @@
 						flowLayout_5.lineWrap = false;
 						group_41.setLayout(flowLayout_5);
 						(function(container){
-							var button_3 = new cpr.controls.Button("btn1");
-							button_3.value = "저장";
-							button_3.style.setClasses(["btn-primary03", "btn-md"]);
-							container.addChild(button_3, {
+							var button_5 = new cpr.controls.Button("btn1");
+							button_5.value = "저장";
+							button_5.style.setClasses(["btn-primary03", "btn-md"]);
+							button_5.style.css({
+								"border-right-style" : "dashed",
+								"border-top-width" : "3px",
+								"border-bottom-color" : "red",
+								"border-left-style" : "dashed",
+								"border-right-width" : "3px",
+								"border-bottom-width" : "3px",
+								"border-left-color" : "red",
+								"border-top-color" : "red",
+								"border-bottom-style" : "dashed",
+								"border-right-color" : "red",
+								"border-left-width" : "3px",
+								"border-top-style" : "dashed"
+							});
+							container.addChild(button_5, {
 								"autoSize": "width",
 								"width": "60px",
 								"height": "30px"

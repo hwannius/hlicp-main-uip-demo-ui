@@ -95,9 +95,9 @@
 					{"name": "column5"}
 				],
 				"rows": [
-					{"column1": "P04950", "column2": "\t(무)흥국생명 온라인어린이재해보험", "column3": "20240423165637472", "column4": "납입중지 대상상품LIST.xls", "column5": "김흥국"},
+					{"column1": "P04950", "column2": "(무)흥국생명 온라인어린이재해보험", "column3": "20240423165637472", "column4": "납입중지 대상상품LIST.xls", "column5": "김흥국"},
 					{"column1": "P04950", "column2": "(무)흥국생명 온라인어린이질병보험", "column3": "20240423165637472", "column4": "납입중지 대상상품LIST.xls", "column5": "김흥국"},
-					{"column1": "P04950", "column2": "\t(무)다시만난흥국생명보험", "column3": "20240423165637472", "column4": "납입중지 대상상품LIST.xls", "column5": "김흥국"}
+					{"column1": "P04950", "column2": "(무)다시만난흥국생명보험", "column3": "20240423165637472", "column4": "납입중지 대상상품LIST.xls", "column5": "김흥국"}
 				]
 			});
 			app.register(dataSet_2);
